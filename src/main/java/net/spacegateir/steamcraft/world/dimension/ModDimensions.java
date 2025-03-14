@@ -15,16 +15,23 @@ import net.minecraft.world.dimension.DimensionTypes;
 import java.util.OptionalLong;
 
 public class ModDimensions {
-    public static final RegistryKey<DimensionOptions> STEAMDIM_KEY = RegistryKey.of(RegistryKeys.DIMENSION,
-            new Identifier(Steamcraft.MOD_ID, "steamdim"));
-    public static final RegistryKey<World> STEAMDIM_LEVEL_KEY = RegistryKey.of(RegistryKeys.WORLD,
-            new Identifier(Steamcraft.MOD_ID, "steamdim"));
+    public static final RegistryKey<DimensionOptions> STEAMDIM_OVERWORLD_KEY = RegistryKey.of(RegistryKeys.DIMENSION,
+            new Identifier(Steamcraft.MOD_ID, "steamdim_overworld"));
+    public static final RegistryKey<World> STEAMDIM_OVERWORLD_LEVEL_KEY = RegistryKey.of(RegistryKeys.WORLD,
+            new Identifier(Steamcraft.MOD_ID, "steamdim_overworld"));
     public static final RegistryKey<DimensionType> STEAM_DIM_TYPE = RegistryKey.of(RegistryKeys.DIMENSION_TYPE,
-            new Identifier(Steamcraft.MOD_ID, "steamdim_type"));
+            new Identifier(Steamcraft.MOD_ID, "steamdim_overworld_type"));
+
+    public static final RegistryKey<DimensionOptions> STEAMDIM_VOID_KEY = RegistryKey.of(RegistryKeys.DIMENSION,
+            new Identifier(Steamcraft.MOD_ID, "steamdim_void"));
+    public static final RegistryKey<World> STEAMDIM_VOID_LEVEL_KEY = RegistryKey.of(RegistryKeys.WORLD,
+            new Identifier(Steamcraft.MOD_ID, "steamdim_void"));
+    public static final RegistryKey<DimensionType> STEAM_DIM_VOID_TYPE = RegistryKey.of(RegistryKeys.DIMENSION_TYPE,
+            new Identifier(Steamcraft.MOD_ID, "steamdim_void_type"));
 
     public static void bootstrapType(Registerable<DimensionType> context) {
         context.register(STEAM_DIM_TYPE, new DimensionType(
-                OptionalLong.of(12000), // fixedTime
+                OptionalLong.empty(), // fixedTime
                 true, // hasSkylight
                 false, // hasCeiling
                 false, // ultraWarm
@@ -39,5 +46,22 @@ public class ModDimensions {
                 DimensionTypes.OVERWORLD_ID, // effectsLocation
                 0.0f, // ambientLight
                 new DimensionType.MonsterSettings(false, true, UniformIntProvider.create(0, 7), 0)));
+
+        context.register(STEAM_DIM_VOID_TYPE, new DimensionType(
+                OptionalLong.empty(), // fixedTime
+                true, // hasSkylight
+                false, // hasCeiling
+                false, // ultraWarm
+                true, // natural
+                1.0, // coordinateScale
+                true, // bedWorks
+                true, // respawnAnchorWorks
+                -64, // minY
+                384, // height
+                384, // logicalHeight
+                BlockTags.INFINIBURN_OVERWORLD, // infiniburn
+                DimensionTypes.OVERWORLD_ID, // effectsLocation
+                0.0f, // ambientLight
+                new DimensionType.MonsterSettings(true, true, UniformIntProvider.create(0, 15), 0)));
     }
 }

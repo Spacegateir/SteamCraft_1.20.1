@@ -18,8 +18,15 @@ public class ModRegistries {
         CustomPortalBuilder.beginPortal()
                 .frameBlock(ModBlocks.TEST_BLOCK_ITEM)
                 .lightWithItem(ModItems.TEST_ITEM)
-                .destDimID(new Identifier(Steamcraft.MOD_ID, "steamdim"))
-                .tintColor(0xc76efa)
+                .destDimID(new Identifier(Steamcraft.MOD_ID, "steamdim_overworld"))
+                .tintColor(0x009300)
+                .registerPortal();
+
+        CustomPortalBuilder.beginPortal()
+                .frameBlock(ModBlocks.TEST_BLOCK)
+                .lightWithItem(ModItems.TEST_ITEM)
+                .destDimID(new Identifier(Steamcraft.MOD_ID, "steamdim_void"))
+                .tintColor(0x000000)
                 .registerPortal();
     }
 

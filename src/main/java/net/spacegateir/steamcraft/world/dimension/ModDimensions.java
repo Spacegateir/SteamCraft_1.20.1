@@ -48,7 +48,7 @@ public class ModDimensions {
                 new DimensionType.MonsterSettings(false, true, UniformIntProvider.create(0, 7), 0)));
 
         context.register(STEAM_DIM_VOID_TYPE, new DimensionType(
-                OptionalLong.empty(), // fixedTime
+                OptionalLong.of(6000), // fixedTime
                 true, // hasSkylight
                 false, // hasCeiling
                 false, // ultraWarm
@@ -62,6 +62,6 @@ public class ModDimensions {
                 BlockTags.INFINIBURN_OVERWORLD, // infiniburn
                 DimensionTypes.OVERWORLD_ID, // effectsLocation
                 0.0f, // ambientLight
-                new DimensionType.MonsterSettings(true, true, UniformIntProvider.create(0, 15), 0)));
+                new DimensionType.MonsterSettings(true, true, UniformIntProvider.create(0, 7), 0)));
     }
 }

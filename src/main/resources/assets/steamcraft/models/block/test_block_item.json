@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/orientable",
   "textures": {
-    "bottom": "steamcraft:block/test_block",
-    "side": "steamcraft:block/test_block",
-    "front": "steamcraft:block/test_block",
-    "top": "steamcraft:block/test_block"
+    "bottom": "steamcraft:block/test_blockitem",
+    "side": "steamcraft:block/test_blockitem",
+    "front": "steamcraft:block/test_blockitem",
+    "top": "steamcraft:block/test_blockitem"
   }
 }

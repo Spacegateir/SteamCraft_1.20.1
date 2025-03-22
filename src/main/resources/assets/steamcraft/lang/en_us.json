@@ -1,8 +1,10 @@
 {
   "item.steamcraft.test_item": "Test Item",
+  "item.steamcraft.pattern_recompiler": "Pattern Recompiler",
 
 
   "block.steamcraft.test_block": "Test Block",
+  "block.steamcraft.test_block_1": "Test Block 1",
 
 
   "block.steamcraft.test_block_item": "Test BlockItem"

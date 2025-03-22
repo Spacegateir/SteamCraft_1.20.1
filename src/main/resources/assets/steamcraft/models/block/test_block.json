@@ -1,6 +1,7 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "steamcraft:block/test_block"
+    "all": "steamcraft:block/test_block",
+    "particle": "steamcraft:block/test_block"
   }
 }

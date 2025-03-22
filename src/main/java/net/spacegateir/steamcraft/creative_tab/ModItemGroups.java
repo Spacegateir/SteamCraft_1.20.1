@@ -19,6 +19,7 @@ public class ModItemGroups {
 
                         //Items
                         entries.add(ModItems.TEST_ITEM);
+                        entries.add(ModItems.PATTERN_RECOMPILER);
 
                         //Blocks
                         entries.add(ModBlocks.TEST_BLOCK);

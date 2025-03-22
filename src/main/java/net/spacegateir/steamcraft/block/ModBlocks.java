@@ -10,11 +10,12 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.spacegateir.steamcraft.Steamcraft;
+import net.spacegateir.steamcraft.block.custom.TestBlock;
 
 public class ModBlocks {
 
     public static final Block TEST_BLOCK = registerBlock("test_block",
-            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+            new TestBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
 
     public static final Block TEST_BLOCK_ITEM = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "test_block_item"),

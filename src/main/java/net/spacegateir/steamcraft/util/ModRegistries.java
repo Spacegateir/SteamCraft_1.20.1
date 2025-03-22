@@ -1,8 +1,6 @@
 package net.spacegateir.steamcraft.util;
 
 import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
-import net.minecraft.block.Blocks;
-import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 import net.spacegateir.steamcraft.Steamcraft;
 import net.spacegateir.steamcraft.block.ModBlocks;

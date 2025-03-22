@@ -2,6 +2,8 @@ package net.spacegateir.steamcraft;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.minecraft.registry.Registry;
+import net.minecraft.util.Identifier;
 import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.creative_tab.ModItemGroups;
 import net.spacegateir.steamcraft.item.ModItems;
@@ -19,6 +21,7 @@ public class Steamcraft implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModItemGroups.registerItemGroups();
+
 
 		ModRegistries.registerModStuff();
 

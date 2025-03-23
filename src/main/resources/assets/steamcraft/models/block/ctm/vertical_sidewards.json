@@ -1,14 +1,14 @@
 {
   "parent": "block/cube",
   "textures": {
-    "north": "steamcraft:block/ctm/diagonal",
-    "south": "steamcraft:block/ctm/diagonal",
-    "east": "steamcraft:block/ctm/diagonal",
-    "west": "steamcraft:block/ctm/diagonal",
-    "up": "steamcraft:block/ctm/test_block",
-    "down": "steamcraft:block/ctm/test_block",
+    "north": "steamcraft:block/ctm/portal_diagonal",
+    "south": "steamcraft:block/ctm/portal_diagonal",
+    "east": "steamcraft:block/ctm/portal_diagonal",
+    "west": "steamcraft:block/ctm/portal_diagonal",
+    "up": "steamcraft:block/ctm/portal_block",
+    "down": "steamcraft:block/ctm/portal_block",
 
-    "particle": "steamcraft:block/ctm/test_block"
+    "particle": "steamcraft:block/ctm/portal_block"
   },
   "elements": [
     {

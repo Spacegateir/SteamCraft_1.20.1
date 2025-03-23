@@ -18,13 +18,13 @@ import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 import net.minecraft.nbt.NbtCompound;
 import net.spacegateir.steamcraft.block.ModBlocks;
-import net.spacegateir.steamcraft.block.custom.TestBlock;
+import net.spacegateir.steamcraft.block.custom.AetherBlock;
 
 public class SwapItem extends Item {
 
     // Array to hold model names based on switch_state value
     private static final String[] MODEL_NAMES = {
-            "test_block #0",
+            "aether_coil #0",
 
             "horizontal_ns #1", "horizontal_ew #2", "vertical_upwards #3", "vertical_sidewards #4",
 
@@ -83,14 +83,14 @@ public class SwapItem extends Item {
         ItemStack stack = context.getStack();
 
         // Ensure we're only interacting with the TEST_BLOCK
-        if (state.getBlock() == ModBlocks.TEST_BLOCK) {
+        if (state.getBlock() == ModBlocks.AETHER_COIL) {
             NbtCompound nbt = stack.getOrCreateNbt();
             int selectedModel = nbt.getInt("SelectedModel");
             int maxModels = MODEL_NAMES.length;
 
             if (selectedModel >= maxModels) selectedModel = 0; // Safety check
 
-            BlockState newState = state.with(TestBlock.SWITCH_STATE, selectedModel);
+            BlockState newState = state.with(AetherBlock.SWITCH_STATE, selectedModel);
 
             // Play sound
             world.playSound(player, pos, SoundEvents.BLOCK_STONE_PLACE, SoundCategory.BLOCKS, 1.0F, 1.0F);

@@ -23,6 +23,7 @@ public class ModItemGroups {
 
                         //Blocks
                         entries.add(ModBlocks.TEST_BLOCK);
+                        entries.add(ModBlocks.AETHER_COIL);
 
                         //BlockItems
                         entries.add(ModItems.TEST_ITEM_BLOCK);

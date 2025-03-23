@@ -15,7 +15,7 @@ public class ModRegistries {
 
     private static void createPortal() {
         CustomPortalBuilder.beginPortal()
-                .frameBlock(ModBlocks.TEST_BLOCK_ITEM)
+                .frameBlock(ModBlocks.AETHER_COIL)
                 .lightWithItem(Items.DIAMOND)
                 .destDimID(new Identifier(Steamcraft.MOD_ID, "steamdim_overworld"))
                 .setPortalSearchYRange(60, 100)
@@ -24,7 +24,7 @@ public class ModRegistries {
 
         CustomPortalBuilder.beginPortal()
                 .frameBlock(ModBlocks.TEST_BLOCK)
-                .lightWithItem(Items.DIAMOND)
+                .lightWithItem(ModItems.TEST_ITEM)
                 .destDimID(new Identifier(Steamcraft.MOD_ID, "steamdim_void"))
                 .setPortalSearchYRange(64, 64)
                 .tintColor(0x000000)

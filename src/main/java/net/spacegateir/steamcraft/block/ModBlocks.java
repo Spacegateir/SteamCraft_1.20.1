@@ -10,12 +10,15 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.spacegateir.steamcraft.Steamcraft;
-import net.spacegateir.steamcraft.block.custom.TestBlock;
+import net.spacegateir.steamcraft.block.custom.AetherBlock;
 
 public class ModBlocks {
 
     public static final Block TEST_BLOCK = registerBlock("test_block",
-            new TestBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+
+    public static final Block AETHER_COIL = registerBlock("aether_coil",
+            new AetherBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
 
     public static final Block TEST_BLOCK_ITEM = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "test_block_item"),

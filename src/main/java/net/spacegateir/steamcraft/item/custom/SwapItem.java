@@ -82,32 +82,28 @@ public class SwapItem extends Item {
         BlockState state = world.getBlockState(pos);
         ItemStack stack = context.getStack();
 
-        // Ensure we're only interacting with the TEST_BLOCK
-        if (state.getBlock() == ModBlocks.AETHER_COIL) {
+        // Check if the block is ANY AetherBlock variant
+        if (state.getBlock() instanceof AetherBlock) {
             NbtCompound nbt = stack.getOrCreateNbt();
             int selectedModel = nbt.getInt("SelectedModel");
             int maxModels = MODEL_NAMES.length;
 
             if (selectedModel >= maxModels) selectedModel = 0; // Safety check
 
+            // Apply the switch_state
             BlockState newState = state.with(AetherBlock.SWITCH_STATE, selectedModel);
 
-            // Play sound
             world.playSound(player, pos, SoundEvents.BLOCK_STONE_PLACE, SoundCategory.BLOCKS, 1.0F, 1.0F);
 
-            // Trigger advancement criteria if server player
             if (player instanceof ServerPlayerEntity serverPlayer) {
                 Criteria.ITEM_USED_ON_BLOCK.trigger(serverPlayer, pos, stack);
             }
 
-            // Update block state
             world.setBlockState(pos, newState, 11);
             world.emitGameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Emitter.of(player, newState));
 
-            // Damage the item
             stack.damage(1, player, (p) -> p.sendToolBreakStatus(context.getHand()));
 
-            // Send action bar message to player showing selected model
             if (!world.isClient && player instanceof ServerPlayerEntity serverPlayer) {
                 String modelName = MODEL_NAMES[selectedModel];
                 serverPlayer.sendMessage(Text.literal("Applied Model: " + modelName), true);
@@ -118,4 +114,5 @@ public class SwapItem extends Item {
 
         return ActionResult.PASS;
     }
+
 }

@@ -19,6 +19,18 @@ public class ModBlocks {
 
     public static final Block AETHER_COIL = registerBlock("aether_coil",
             new AetherBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+    public static final Block AETHER_COIL_GREEN = registerBlock("aether_coil_green",
+            new AetherBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+    public static final Block AETHER_COIL_BLUE = registerBlock("aether_coil_blue",
+            new AetherBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+    public static final Block AETHER_COIL_RED = registerBlock("aether_coil_red",
+            new AetherBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+    public static final Block AETHER_COIL_YELLOW = registerBlock("aether_coil_yellow",
+            new AetherBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+    public static final Block AETHER_COIL_WHITE = registerBlock("aether_coil_white",
+            new AetherBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+    public static final Block AETHER_COIL_BLACK = registerBlock("aether_coil_black",
+            new AetherBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
 
     public static final Block TEST_BLOCK_ITEM = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "test_block_item"),

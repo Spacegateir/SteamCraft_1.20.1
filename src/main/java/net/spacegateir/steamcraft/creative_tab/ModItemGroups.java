@@ -19,11 +19,19 @@ public class ModItemGroups {
 
                         //Items
                         entries.add(ModItems.TEST_ITEM);
+
                         entries.add(ModItems.PATTERN_RECOMPILER);
 
                         //Blocks
                         entries.add(ModBlocks.TEST_BLOCK);
+
                         entries.add(ModBlocks.AETHER_COIL);
+                        entries.add(ModBlocks.AETHER_COIL_GREEN);
+                        entries.add(ModBlocks.AETHER_COIL_BLUE);
+                        entries.add(ModBlocks.AETHER_COIL_RED);
+                        entries.add(ModBlocks.AETHER_COIL_YELLOW);
+                        entries.add(ModBlocks.AETHER_COIL_WHITE);
+                        entries.add(ModBlocks.AETHER_COIL_BLACK);
 
                         //BlockItems
                         entries.add(ModItems.TEST_ITEM_BLOCK);

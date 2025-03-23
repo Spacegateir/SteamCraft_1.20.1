@@ -5,6 +5,12 @@
 
   "block.steamcraft.test_block": "Test Block",
   "block.steamcraft.aether_coil": "Aether Coil",
+  "block.steamcraft.aether_coil_green": "Aether Coil Green",
+  "block.steamcraft.aether_coil_blue": "Aether Coil Blue",
+  "block.steamcraft.aether_coil_red": "Aether Coil Red",
+  "block.steamcraft.aether_coil_yellow": "Aether Coil Yellow",
+  "block.steamcraft.aether_coil_white": "Aether Coil White",
+  "block.steamcraft.aether_coil_black": "Aether Coil Black",
 
 
   "block.steamcraft.test_block_item": "Test BlockItem"

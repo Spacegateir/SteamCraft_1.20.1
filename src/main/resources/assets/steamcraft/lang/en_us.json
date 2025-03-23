@@ -1,9 +1,17 @@
 {
   "item.steamcraft.test_item": "Test Item",
+
   "item.steamcraft.pattern_recompiler": "Pattern Recompiler",
+  "item.steamcraft.ferrite_heartstone": "Ferrite Heartstone",
+  "item.steamcraft.aetherium_prism": "Aetherium Prism",
+  "item.steamcraft.aquarion_shard": "Aquarion Shard",
+  "item.steamcraft.pyrocite_core": "Pyrocite Core",
+  "item.steamcraft.luminite_spark": "Luminite Spark",
+  "item.steamcraft.obscurium_crystal": "Obscurium Crystal",
 
 
   "block.steamcraft.test_block": "Test Block",
+
   "block.steamcraft.aether_coil": "Aether Coil",
   "block.steamcraft.aether_coil_green": "Aether Coil Green",
   "block.steamcraft.aether_coil_blue": "Aether Coil Blue",

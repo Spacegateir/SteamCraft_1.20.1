@@ -1,0 +1,12 @@
+{
+  "type": "steamcraft:steamdim_black_type",
+  "generator": {
+  "type": "minecraft:flat",
+  "settings": {
+    "biome": "steamcraft:VoidBiome",
+    "lakes": false,
+    "features": false,
+    "layers": []
+  }
+}
+}

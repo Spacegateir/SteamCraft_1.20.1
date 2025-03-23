@@ -21,6 +21,12 @@ public class ModItemGroups {
                         entries.add(ModItems.TEST_ITEM);
 
                         entries.add(ModItems.PATTERN_RECOMPILER);
+                        entries.add(ModItems.FERRITE_HEARTSTONE);
+                        entries.add(ModItems.AETHERIUM_PRISM);
+                        entries.add(ModItems.AQUARION_SHARD);
+                        entries.add(ModItems.PYROCITE_CORE);
+                        entries.add(ModItems.LUMINITE_SPARK);
+                        entries.add(ModItems.OBSCURIUM_CRYSTAL);
 
                         //Blocks
                         entries.add(ModBlocks.TEST_BLOCK);

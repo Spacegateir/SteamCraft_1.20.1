@@ -2,6 +2,8 @@ package net.spacegateir.steamcraft.item.custom;
 
 import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.block.BlockState;
+import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -19,24 +21,43 @@ import net.minecraft.world.event.GameEvent;
 import net.minecraft.nbt.NbtCompound;
 import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.block.custom.AetherBlock;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.List;
 
 public class SwapItem extends Item {
+
+    @Override
+    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+        if(Screen.hasShiftDown()) {
+            tooltip.add(Text.translatable("tooltip.steamcraft.pattern_recompiler.tooltip.shift_1"));
+            tooltip.add(Text.translatable("tooltip.steamcraft.pattern_recompiler.tooltip.shift_2"));
+        } else {
+            tooltip.add(Text.translatable("tooltip.steamcraft.pattern_recompiler.tooltip"));
+        }
+
+    }
 
     // Array to hold model names based on switch_state value
     private static final String[] MODEL_NAMES = {
             "aether_coil #0",
 
+            //Diagonals
             "horizontal_ns #1", "horizontal_ew #2", "vertical_upwards #3", "vertical_sidewards #4",
 
+            //Angles
             "up_east #5", "up_west #6", "down_east #7", "down_west #8",
             "up_north #9", "up_south #10", "down_north #11", "down_south #12",
-            "north_east #13", "north_west #14", "south_east #15", "south_west #16"
+            "north_east #13", "north_west #14", "south_east #15", "south_west #16",
 
-//            "north_cap #17", "east_cap #18", "south_cap #19", "west_cap #20", "up_cap #21", "down_cap #22",
+            //Ends with one Entrance point
+            "north_cap #17", "east_cap #18", "south_cap #19", "west_cap #20", "up_cap #21", "down_cap #22",
 
-//            "north_tri #23", "east_tri #24", "south_tri #25", "west_tri #26", "up_tri #27", "down_tri #28",
+            //3 Sides like a T
+            "north_tri #23", "east_tri #24", "south_tri #25", "west_tri #26", "up_tri #27", "down_tri #28",
 
-//            "ns_all #29", "ew_all #30", "td_all #31",
+            //All 4 Sides
+            "ns_all #29", "ew_all #30", "td_all #31",
 
     };
 

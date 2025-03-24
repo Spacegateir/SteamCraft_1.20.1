@@ -35,6 +35,10 @@
 
 
 
+  "tooltip.steamcraft.pattern_recompiler.tooltip.shift_1": "§eShift Right§r or §eRight Click§r to Cycle Different States",
+  "tooltip.steamcraft.pattern_recompiler.tooltip.shift_2": "§eRight Click§r on Aether Coil Blocks to Change their BlockState!",
+  "tooltip.steamcraft.pattern_recompiler.tooltip": "Press §eSHIFT§r for more Information",
+
   "tooltip.steamcraft.ferrite_heartstone.tooltip.shift": "Right Click on §2Aether Coil Green§r to Open a Portal!",
   "tooltip.steamcraft.ferrite_heartstone.tooltip": "Press §eSHIFT§r for more Information",
 

@@ -9,6 +9,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.spacegateir.steamcraft.Steamcraft;
 import net.spacegateir.steamcraft.block.ModBlocks;
+import net.spacegateir.steamcraft.item.custom.ToolTipItem;
 import net.spacegateir.steamcraft.item.custom.SwapItem;
 
 public class ModItems {
@@ -20,17 +21,17 @@ public class ModItems {
             new SwapItem(new FabricItemSettings()));
 
     public static final Item FERRITE_HEARTSTONE = registerItem("ferrite_heartstone",
-            new Item(new FabricItemSettings()));
+            new ToolTipItem(new FabricItemSettings()));
     public static final Item AETHERIUM_PRISM = registerItem("aetherium_prism",
-            new Item(new FabricItemSettings()));
+            new ToolTipItem(new FabricItemSettings()));
     public static final Item AQUARION_SHARD = registerItem("aquarion_shard",
-            new Item(new FabricItemSettings()));
+            new ToolTipItem(new FabricItemSettings()));
     public static final Item PYROCITE_CORE = registerItem("pyrocite_core",
-            new Item(new FabricItemSettings()));
+            new ToolTipItem(new FabricItemSettings()));
     public static final Item LUMINITE_SPARK = registerItem("luminite_spark",
-            new Item(new FabricItemSettings()));
+            new ToolTipItem(new FabricItemSettings()));
     public static final Item OBSCURIUM_CRYSTAL = registerItem("obscurium_crystal",
-            new Item(new FabricItemSettings()));
+            new ToolTipItem(new FabricItemSettings()));
 
     public static final Item TEST_ITEM_BLOCK = Registry.register(Registries.ITEM,
             new Identifier(Steamcraft.MOD_ID, "test_item_block"),

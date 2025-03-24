@@ -31,5 +31,26 @@
   "block.steamcraft.aether_coil_pink": "Aether Coil Pink",
 
 
-  "block.steamcraft.test_block_item": "Test BlockItem"
+  "block.steamcraft.test_block_item": "Test BlockItem",
+
+
+
+  "tooltip.steamcraft.ferrite_heartstone.tooltip.shift": "Right Click on §2Aether Coil Green§r to Open a Portal!",
+  "tooltip.steamcraft.ferrite_heartstone.tooltip": "Press §eSHIFT§r for more Information",
+
+  "tooltip.steamcraft.aetherium_prism.tooltip.shift": "Right Click on §6Aether Coil Yellow§r to Open a Portal!",
+  "tooltip.steamcraft.aetherium_prism.tooltip": "Press §eSHIFT§r for more Information",
+
+  "tooltip.steamcraft.aquarion_shard.tooltip.shift": "Right Click on §1Aether Coil Blue§r to Open a Portal!",
+  "tooltip.steamcraft.aquarion_shard.tooltip": "Press §eSHIFT§r for more Information",
+
+  "tooltip.steamcraft.pyrocite_core.tooltip.shift": "Right Click on §4Aether Coil Red§r to Open a Portal!",
+  "tooltip.steamcraft.pyrocite_core.tooltip": "Press §eSHIFT§r for more Information",
+
+  "tooltip.steamcraft.luminite_spark.tooltip.shift": "Right Click on §7Aether Coil White§r to Open a Portal!",
+  "tooltip.steamcraft.luminite_spark.tooltip": "Press §eSHIFT§r for more Information",
+
+  "tooltip.steamcraft.obscurium_crystal.tooltip.shift": "Right Click on §8Aether Coil Black§r to Open a Portal!",
+  "tooltip.steamcraft.obscurium_crystal.tooltip": "Press §eSHIFT§r for more Information"
+
 }

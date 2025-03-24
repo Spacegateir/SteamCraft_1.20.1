@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "minecraft:iron_block"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "pattern": [
+    "III",
+    "IOI",
+    "III"
+  ],
+  "result": {
+    "count": 8,
+    "item": "steamcraft:aether_coil"
+  },
+  "show_notification": true
+}

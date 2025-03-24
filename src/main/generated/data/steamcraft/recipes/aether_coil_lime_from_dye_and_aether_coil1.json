@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:lime_dye"
+    },
+    {
+      "item": "steamcraft:aether_coil"
+    }
+  ],
+  "result": {
+    "item": "steamcraft:aether_coil_lime"
+  }
+}

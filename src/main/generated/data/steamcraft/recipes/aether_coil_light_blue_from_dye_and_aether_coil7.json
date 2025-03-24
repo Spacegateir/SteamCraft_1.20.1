@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:light_blue_dye"
+    },
+    {
+      "item": "steamcraft:aether_coil"
+    },
+    {
+      "item": "steamcraft:aether_coil"
+    },
+    {
+      "item": "steamcraft:aether_coil"
+    },
+    {
+      "item": "steamcraft:aether_coil"
+    },
+    {
+      "item": "steamcraft:aether_coil"
+    },
+    {
+      "item": "steamcraft:aether_coil"
+    },
+    {
+      "item": "steamcraft:aether_coil"
+    }
+  ],
+  "result": {
+    "count": 7,
+    "item": "steamcraft:aether_coil_light_blue"
+  }
+}

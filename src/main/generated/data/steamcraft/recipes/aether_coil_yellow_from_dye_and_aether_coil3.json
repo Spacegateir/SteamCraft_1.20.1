@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:yellow_dye"
+    },
+    {
+      "item": "steamcraft:aether_coil"
+    },
+    {
+      "item": "steamcraft:aether_coil"
+    },
+    {
+      "item": "steamcraft:aether_coil"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "item": "steamcraft:aether_coil_yellow"
+  }
+}

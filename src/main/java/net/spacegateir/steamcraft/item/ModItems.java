@@ -4,8 +4,10 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.spacegateir.steamcraft.Steamcraft;
 import net.spacegateir.steamcraft.block.ModBlocks;
@@ -36,6 +38,8 @@ public class ModItems {
     public static final Item TEST_ITEM_BLOCK = Registry.register(Registries.ITEM,
             new Identifier(Steamcraft.MOD_ID, "test_item_block"),
             new BlockItem(ModBlocks.TEST_BLOCK_ITEM, new FabricItemSettings()));
+
+
 
 
 

@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:cyan_dye"
+    },
+    {
+      "item": "steamcraft:aether_coil"
+    },
+    {
+      "item": "steamcraft:aether_coil"
+    },
+    {
+      "item": "steamcraft:aether_coil"
+    },
+    {
+      "item": "steamcraft:aether_coil"
+    },
+    {
+      "item": "steamcraft:aether_coil"
+    }
+  ],
+  "result": {
+    "count": 5,
+    "item": "steamcraft:aether_coil_cyan"
+  }
+}

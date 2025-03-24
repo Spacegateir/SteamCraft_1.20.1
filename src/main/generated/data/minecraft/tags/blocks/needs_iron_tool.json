@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "steamcraft:aether_coil",
+    "steamcraft:aether_coil_white",
+    "steamcraft:aether_coil_light_gray",
+    "steamcraft:aether_coil_gray",
+    "steamcraft:aether_coil_black",
+    "steamcraft:aether_coil_brown",
+    "steamcraft:aether_coil_red",
+    "steamcraft:aether_coil_orange",
+    "steamcraft:aether_coil_yellow",
+    "steamcraft:aether_coil_lime",
+    "steamcraft:aether_coil_green",
+    "steamcraft:aether_coil_cyan",
+    "steamcraft:aether_coil_light_blue",
+    "steamcraft:aether_coil_blue",
+    "steamcraft:aether_coil_purple",
+    "steamcraft:aether_coil_magenta",
+    "steamcraft:aether_coil_pink"
+  ]
+}

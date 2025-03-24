@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:black_dye"
+    },
+    {
+      "item": "steamcraft:aether_coil"
+    },
+    {
+      "item": "steamcraft:aether_coil"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "steamcraft:aether_coil_black"
+  }
+}

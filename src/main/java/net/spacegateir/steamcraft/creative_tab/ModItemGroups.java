@@ -32,12 +32,22 @@ public class ModItemGroups {
                         entries.add(ModBlocks.TEST_BLOCK);
 
                         entries.add(ModBlocks.AETHER_COIL);
-                        entries.add(ModBlocks.AETHER_COIL_GREEN);
-                        entries.add(ModBlocks.AETHER_COIL_BLUE);
-                        entries.add(ModBlocks.AETHER_COIL_RED);
-                        entries.add(ModBlocks.AETHER_COIL_YELLOW);
                         entries.add(ModBlocks.AETHER_COIL_WHITE);
+                        entries.add(ModBlocks.AETHER_COIL_LIGHT_GRAY);
+                        entries.add(ModBlocks.AETHER_COIL_GRAY);
                         entries.add(ModBlocks.AETHER_COIL_BLACK);
+                        entries.add(ModBlocks.AETHER_COIL_BROWN);
+                        entries.add(ModBlocks.AETHER_COIL_RED);
+                        entries.add(ModBlocks.AETHER_COIL_ORANGE);
+                        entries.add(ModBlocks.AETHER_COIL_YELLOW);
+                        entries.add(ModBlocks.AETHER_COIL_LIME);
+                        entries.add(ModBlocks.AETHER_COIL_GREEN);
+                        entries.add(ModBlocks.AETHER_COIL_CYAN);
+                        entries.add(ModBlocks.AETHER_COIL_LIGHT_BLUE);
+                        entries.add(ModBlocks.AETHER_COIL_BLUE);
+                        entries.add(ModBlocks.AETHER_COIL_PURPLE);
+                        entries.add(ModBlocks.AETHER_COIL_MAGENTA);
+                        entries.add(ModBlocks.AETHER_COIL_PINK);
 
                         //BlockItems
                         entries.add(ModItems.TEST_ITEM_BLOCK);

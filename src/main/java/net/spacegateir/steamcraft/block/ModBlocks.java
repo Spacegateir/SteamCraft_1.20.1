@@ -19,17 +19,37 @@ public class ModBlocks {
 
     public static final Block AETHER_COIL = registerBlock("aether_coil",
             new AetherBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
-    public static final Block AETHER_COIL_GREEN = registerBlock("aether_coil_green",
+    public static final Block AETHER_COIL_WHITE = registerBlock("aether_coil_white",
             new AetherBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
-    public static final Block AETHER_COIL_BLUE = registerBlock("aether_coil_blue",
+    public static final Block AETHER_COIL_LIGHT_GRAY = registerBlock("aether_coil_light_gray",
+            new AetherBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+    public static final Block AETHER_COIL_GRAY = registerBlock("aether_coil_gray",
+            new AetherBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+    public static final Block AETHER_COIL_BLACK = registerBlock("aether_coil_black",
+            new AetherBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+    public static final Block AETHER_COIL_BROWN = registerBlock("aether_coil_brown",
             new AetherBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
     public static final Block AETHER_COIL_RED = registerBlock("aether_coil_red",
             new AetherBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+    public static final Block AETHER_COIL_ORANGE = registerBlock("aether_coil_orange",
+            new AetherBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
     public static final Block AETHER_COIL_YELLOW = registerBlock("aether_coil_yellow",
             new AetherBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
-    public static final Block AETHER_COIL_WHITE = registerBlock("aether_coil_white",
+    public static final Block AETHER_COIL_LIME = registerBlock("aether_coil_lime",
             new AetherBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
-    public static final Block AETHER_COIL_BLACK = registerBlock("aether_coil_black",
+    public static final Block AETHER_COIL_GREEN = registerBlock("aether_coil_green",
+            new AetherBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+    public static final Block AETHER_COIL_CYAN = registerBlock("aether_coil_cyan",
+            new AetherBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+    public static final Block AETHER_COIL_LIGHT_BLUE = registerBlock("aether_coil_light_blue",
+            new AetherBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+    public static final Block AETHER_COIL_BLUE = registerBlock("aether_coil_blue",
+            new AetherBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+    public static final Block AETHER_COIL_PURPLE = registerBlock("aether_coil_purple",
+            new AetherBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+    public static final Block AETHER_COIL_MAGENTA = registerBlock("aether_coil_magenta",
+            new AetherBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+    public static final Block AETHER_COIL_PINK = registerBlock("aether_coil_pink",
             new AetherBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
 
     public static final Block TEST_BLOCK_ITEM = Registry.register(Registries.BLOCK,

@@ -13,12 +13,22 @@
   "block.steamcraft.test_block": "Test Block",
 
   "block.steamcraft.aether_coil": "Aether Coil",
-  "block.steamcraft.aether_coil_green": "Aether Coil Green",
-  "block.steamcraft.aether_coil_blue": "Aether Coil Blue",
-  "block.steamcraft.aether_coil_red": "Aether Coil Red",
-  "block.steamcraft.aether_coil_yellow": "Aether Coil Yellow",
   "block.steamcraft.aether_coil_white": "Aether Coil White",
+  "block.steamcraft.aether_coil_light_gray": "Aether Coil Light Gray",
+  "block.steamcraft.aether_coil_gray": "Aether Coil Gray",
   "block.steamcraft.aether_coil_black": "Aether Coil Black",
+  "block.steamcraft.aether_coil_brown": "Aether Coil Brown",
+  "block.steamcraft.aether_coil_red": "Aether Coil Red",
+  "block.steamcraft.aether_coil_orange": "Aether Coil Orange",
+  "block.steamcraft.aether_coil_yellow": "Aether Coil Yellow",
+  "block.steamcraft.aether_coil_lime": "Aether Coil Lime",
+  "block.steamcraft.aether_coil_green": "Aether Coil Green",
+  "block.steamcraft.aether_coil_cyan": "Aether Coil Cyan",
+  "block.steamcraft.aether_coil_light_blue": "Aether Coil Light Blue",
+  "block.steamcraft.aether_coil_blue": "Aether Coil Blue",
+  "block.steamcraft.aether_coil_purple": "Aether Coil Purple",
+  "block.steamcraft.aether_coil_magenta": "Aether Coil Magenta",
+  "block.steamcraft.aether_coil_pink": "Aether Coil Pink",
 
 
   "block.steamcraft.test_block_item": "Test BlockItem"

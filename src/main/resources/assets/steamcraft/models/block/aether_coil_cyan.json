@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "steamcraft:block/ctm/aether_coil_cyan/portal_block",
+    "particle": "steamcraft:block/ctm/aether_coil_cyan/portal_block"
+  }
+}

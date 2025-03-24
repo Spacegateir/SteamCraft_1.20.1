@@ -1,0 +1,26 @@
+{
+  "variants": {
+    "switch_state=0": { "model": "steamcraft:block/aether_coil_cyan" },
+
+    "switch_state=1": { "model": "steamcraft:block/ctm/aether_coil_cyan/horizontal_ns" },
+    "switch_state=2": { "model": "steamcraft:block/ctm/aether_coil_cyan/horizontal_ew" },
+    "switch_state=3": { "model": "steamcraft:block/ctm/aether_coil_cyan/vertical_upwards" },
+    "switch_state=4": { "model": "steamcraft:block/ctm/aether_coil_cyan/vertical_sidewards" },
+
+    "switch_state=5": { "model": "steamcraft:block/ctm/aether_coil_cyan/up_east" },
+    "switch_state=6": { "model": "steamcraft:block/ctm/aether_coil_cyan/up_west" },
+    "switch_state=7": { "model": "steamcraft:block/ctm/aether_coil_cyan/down_east" },
+    "switch_state=8": { "model": "steamcraft:block/ctm/aether_coil_cyan/down_west" },
+
+    "switch_state=9": { "model": "steamcraft:block/ctm/aether_coil_cyan/up_north" },
+    "switch_state=10": { "model": "steamcraft:block/ctm/aether_coil_cyan/up_south" },
+    "switch_state=11": { "model": "steamcraft:block/ctm/aether_coil_cyan/down_north" },
+    "switch_state=12": { "model": "steamcraft:block/ctm/aether_coil_cyan/down_south" },
+
+    "switch_state=13": { "model": "steamcraft:block/ctm/aether_coil_cyan/north_east" },
+    "switch_state=14": { "model": "steamcraft:block/ctm/aether_coil_cyan/north_west" },
+    "switch_state=15": { "model": "steamcraft:block/ctm/aether_coil_cyan/south_east" },
+    "switch_state=16": { "model": "steamcraft:block/ctm/aether_coil_cyan/south_west" }
+
+  }
+}

@@ -54,10 +54,13 @@ public class SwapItem extends Item {
             "north_cap #17", "east_cap #18", "south_cap #19", "west_cap #20", "up_cap #21", "down_cap #22",
 
             //3 Sides like a T
-            "north_tri #23", "east_tri #24", "south_tri #25", "west_tri #26", "up_tri #27", "down_tri #28",
+            "north_tri #23", "east_tri #24", "south_tri #25", "west_tri #26",
+
+            "uew_tri #27", "ued_tri #28", "edw_tri #29", "dwu_tri #30",
+            "und_tri #31", "nds_tri #32", "dsu_tri #33", "nsu_tri #34",
 
             //All 4 Sides
-            "ns_all #29", "ew_all #30", "td_all #31",
+            "ns_all #35", "ew_all #36", "ud_all #37",
 
     };
 

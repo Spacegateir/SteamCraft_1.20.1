@@ -20,7 +20,33 @@
     "switch_state=13": { "model": "steamcraft:block/ctm/aether_coil_yellow/north_east" },
     "switch_state=14": { "model": "steamcraft:block/ctm/aether_coil_yellow/north_west" },
     "switch_state=15": { "model": "steamcraft:block/ctm/aether_coil_yellow/south_east" },
-    "switch_state=16": { "model": "steamcraft:block/ctm/aether_coil_yellow/south_west" }
+    "switch_state=16": { "model": "steamcraft:block/ctm/aether_coil_yellow/south_west" },
+
+    "switch_state=17": { "model": "steamcraft:block/ctm/aether_coil_yellow/north_cap" },
+    "switch_state=18": { "model": "steamcraft:block/ctm/aether_coil_yellow/east_cap" },
+    "switch_state=19": { "model": "steamcraft:block/ctm/aether_coil_yellow/south_cap" },
+    "switch_state=20": { "model": "steamcraft:block/ctm/aether_coil_yellow/west_cap" },
+    "switch_state=21": { "model": "steamcraft:block/ctm/aether_coil_yellow/up_cap" },
+    "switch_state=22": { "model": "steamcraft:block/ctm/aether_coil_yellow/down_cap" },
+
+    "switch_state=23": { "model": "steamcraft:block/ctm/aether_coil_yellow/north_tri" },
+    "switch_state=24": { "model": "steamcraft:block/ctm/aether_coil_yellow/east_tri" },
+    "switch_state=25": { "model": "steamcraft:block/ctm/aether_coil_yellow/south_tri" },
+    "switch_state=26": { "model": "steamcraft:block/ctm/aether_coil_yellow/west_tri" },
+
+    "switch_state=27": { "model": "steamcraft:block/ctm/aether_coil_yellow/uew_tri" },
+    "switch_state=28": { "model": "steamcraft:block/ctm/aether_coil_yellow/ued_tri" },
+    "switch_state=29": { "model": "steamcraft:block/ctm/aether_coil_yellow/edw_tri" },
+    "switch_state=30": { "model": "steamcraft:block/ctm/aether_coil_yellow/dwu_tri" },
+
+    "switch_state=31": { "model": "steamcraft:block/ctm/aether_coil_yellow/und_tri" },
+    "switch_state=32": { "model": "steamcraft:block/ctm/aether_coil_yellow/nds_tri" },
+    "switch_state=33": { "model": "steamcraft:block/ctm/aether_coil_yellow/dsu_tri" },
+    "switch_state=34": { "model": "steamcraft:block/ctm/aether_coil_yellow/nsu_tri" },
+
+    "switch_state=35": { "model": "steamcraft:block/ctm/aether_coil_yellow/ns_all" },
+    "switch_state=36": { "model": "steamcraft:block/ctm/aether_coil_yellow/ew_all" },
+    "switch_state=37": { "model": "steamcraft:block/ctm/aether_coil_yellow/ud_all" }
 
   }
 }

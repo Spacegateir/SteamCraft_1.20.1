@@ -1,0 +1,27 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "north": "steamcraft:block/ctm/aether_coil_brown/portal_block",
+    "south": "steamcraft:block/ctm/aether_coil_brown/portal_block",
+    "east": "steamcraft:block/ctm/aether_coil_brown/portal_3way",
+    "west": "steamcraft:block/ctm/aether_coil_brown/portal_3way",
+    "up": "steamcraft:block/ctm/aether_coil_brown/portal_block",
+    "down": "steamcraft:block/ctm/aether_coil_brown/portal_diagonal",
+
+    "particle": "steamcraft:block/ctm/aether_coil_brown/portal_block"
+  },
+  "elements": [
+    {
+      "from": [0, 0, 0],
+      "to": [16, 16, 16],
+      "faces": {
+        "north": { "texture": "#north", "uv": [0, 0, 16, 16], "rotation": 0 },
+        "south": { "texture": "#south", "uv": [0, 0, 16, 16], "rotation": 0 },
+        "east":  { "texture": "#east",  "uv": [0, 0, 16, 16], "rotation": 0 },
+        "west":  { "texture": "#west",  "uv": [0, 0, 16, 16], "rotation": 0 },
+        "up":    { "texture": "#up",    "uv": [0, 0, 16, 16], "rotation": 0 },
+        "down":  { "texture": "#down",  "uv": [0, 0, 16, 16], "rotation": 90 }
+      }
+    }
+  ]
+}

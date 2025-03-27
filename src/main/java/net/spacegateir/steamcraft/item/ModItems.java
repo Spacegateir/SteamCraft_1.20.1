@@ -9,6 +9,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 import net.spacegateir.steamcraft.Steamcraft;
 import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.item.custom.ToolTipItem;
@@ -18,6 +19,13 @@ public class ModItems {
 
     public static final Item TEST_ITEM = registerItem("test_item",
             new Item(new FabricItemSettings()));
+
+    public static final Item COPPER_COIN = registerItem("copper_coin",
+            new Item(new FabricItemSettings().rarity(Rarity.UNCOMMON)));
+    public static final Item SILVER_COIN = registerItem("silver_coin",
+            new Item(new FabricItemSettings().rarity(Rarity.UNCOMMON)));
+    public static final Item GOLD_COIN = registerItem("gold_coin",
+            new Item(new FabricItemSettings().rarity(Rarity.UNCOMMON)));
 
     public static final Item PATTERN_RECOMPILER = registerItem("pattern_recompiler",
             new SwapItem(new FabricItemSettings()));

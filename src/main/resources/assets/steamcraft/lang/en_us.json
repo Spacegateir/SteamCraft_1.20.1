@@ -1,6 +1,10 @@
 {
   "item.steamcraft.test_item": "Test Item",
 
+  "item.steamcraft.copper_coin": "Copper Coin",
+  "item.steamcraft.silver_coin": "Silver Coin",
+  "item.steamcraft.gold_coin": "Gold Coin",
+
   "item.steamcraft.pattern_recompiler": "Pattern Recompiler",
   "item.steamcraft.ferrite_heartstone": "Ferrite Heartstone",
   "item.steamcraft.aetherium_prism": "Aetherium Prism",

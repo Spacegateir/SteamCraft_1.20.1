@@ -32,6 +32,16 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.TEST_ITEM, RecipeCategory.MISC, ModBlocks.TEST_BLOCK);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.PATTERN_RECOMPILER)
+                .pattern(" N ")
+                .pattern("NGN")
+                .pattern("IGI")
+                .input('G', Blocks.GOLD_BLOCK)
+                .input('N', Items.NETHERITE_INGOT)
+                .input('I', Items.IRON_INGOT)
+                .criterion(hasItem(Items.NETHERITE_INGOT), conditionsFromItem(Items.NETHERITE_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.PATTERN_RECOMPILER)));
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.AETHER_COIL, 8)
                 .pattern("III")
                 .pattern("IOI")

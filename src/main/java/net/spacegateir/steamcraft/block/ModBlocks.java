@@ -22,52 +22,52 @@ public class ModBlocks {
             new AetherBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN)));
     public static final Block AETHER_COIL_WHITE = registerBlock("aether_coil_white",
             new AetherBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(50,2400)
-                    .nonOpaque().velocityMultiplier(1.5F).mapColor(MapColor.WHITE)));
+                    .nonOpaque().velocityMultiplier(1.25F).mapColor(MapColor.WHITE)));
     public static final Block AETHER_COIL_LIGHT_GRAY = registerBlock("aether_coil_light_gray",
             new AetherBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(50,2400)
-                    .nonOpaque().velocityMultiplier(1.5F).mapColor(MapColor.LIGHT_GRAY)));
+                    .nonOpaque().velocityMultiplier(1.25F).mapColor(MapColor.LIGHT_GRAY)));
     public static final Block AETHER_COIL_GRAY = registerBlock("aether_coil_gray",
             new AetherBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(50,2400)
-                    .nonOpaque().velocityMultiplier(1.5F).mapColor(MapColor.GRAY)));
+                    .nonOpaque().velocityMultiplier(1.25F).mapColor(MapColor.GRAY)));
     public static final Block AETHER_COIL_BLACK = registerBlock("aether_coil_black",
             new AetherBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(50,2400)
-                    .nonOpaque().velocityMultiplier(1.5F).mapColor(MapColor.BLACK)));
+                    .nonOpaque().velocityMultiplier(1.25F).mapColor(MapColor.BLACK)));
     public static final Block AETHER_COIL_BROWN = registerBlock("aether_coil_brown",
             new AetherBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(50,2400)
-                    .nonOpaque().velocityMultiplier(1.5F).mapColor(MapColor.BROWN)));
+                    .nonOpaque().velocityMultiplier(1.25F).mapColor(MapColor.BROWN)));
     public static final Block AETHER_COIL_RED = registerBlock("aether_coil_red",
             new AetherBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(50,2400)
-                    .nonOpaque().velocityMultiplier(1.5F).mapColor(MapColor.RED)));
+                    .nonOpaque().velocityMultiplier(1.25F).mapColor(MapColor.RED)));
     public static final Block AETHER_COIL_ORANGE = registerBlock("aether_coil_orange",
             new AetherBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(50,2400)
-                    .nonOpaque().velocityMultiplier(1.5F).mapColor(MapColor.ORANGE)));
+                    .nonOpaque().velocityMultiplier(1.25F).mapColor(MapColor.ORANGE)));
     public static final Block AETHER_COIL_YELLOW = registerBlock("aether_coil_yellow",
             new AetherBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(50,2400)
-                    .nonOpaque().velocityMultiplier(1.5F).mapColor(MapColor.YELLOW)));
+                    .nonOpaque().velocityMultiplier(1.25F).mapColor(MapColor.YELLOW)));
     public static final Block AETHER_COIL_LIME = registerBlock("aether_coil_lime",
             new AetherBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(50,2400)
-                    .nonOpaque().velocityMultiplier(1.5F).mapColor(MapColor.LIME)));
+                    .nonOpaque().velocityMultiplier(1.25F).mapColor(MapColor.LIME)));
     public static final Block AETHER_COIL_GREEN = registerBlock("aether_coil_green",
             new AetherBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(50,2400)
-                    .nonOpaque().velocityMultiplier(1.5F).mapColor(MapColor.GREEN)));
+                    .nonOpaque().velocityMultiplier(1.25F).mapColor(MapColor.GREEN)));
     public static final Block AETHER_COIL_CYAN = registerBlock("aether_coil_cyan",
             new AetherBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(50,2400)
-                    .nonOpaque().velocityMultiplier(1.5F).mapColor(MapColor.CYAN)));
+                    .nonOpaque().velocityMultiplier(1.25F).mapColor(MapColor.CYAN)));
     public static final Block AETHER_COIL_LIGHT_BLUE = registerBlock("aether_coil_light_blue",
             new AetherBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(50,2400)
-                    .nonOpaque().velocityMultiplier(1.5F).mapColor(MapColor.LIGHT_BLUE)));
+                    .nonOpaque().velocityMultiplier(1.25F).mapColor(MapColor.LIGHT_BLUE)));
     public static final Block AETHER_COIL_BLUE = registerBlock("aether_coil_blue",
             new AetherBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(50,2400)
-                    .nonOpaque().velocityMultiplier(1.5F).mapColor(MapColor.BLUE)));
+                    .nonOpaque().velocityMultiplier(1.25F).mapColor(MapColor.BLUE)));
     public static final Block AETHER_COIL_PURPLE = registerBlock("aether_coil_purple",
             new AetherBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(50,2400)
-                    .nonOpaque().velocityMultiplier(1.5F).mapColor(MapColor.PURPLE)));
+                    .nonOpaque().velocityMultiplier(1.25F).mapColor(MapColor.PURPLE)));
     public static final Block AETHER_COIL_MAGENTA = registerBlock("aether_coil_magenta",
             new AetherBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(50,2400)
-                    .nonOpaque().velocityMultiplier(1.5F).mapColor(MapColor.MAGENTA)));
+                    .nonOpaque().velocityMultiplier(1.25F).mapColor(MapColor.MAGENTA)));
     public static final Block AETHER_COIL_PINK = registerBlock("aether_coil_pink",
             new AetherBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(50,2400)
-                    .nonOpaque().velocityMultiplier(1.5F).mapColor(MapColor.PINK)));
+                    .nonOpaque().velocityMultiplier(1.25F).mapColor(MapColor.PINK)));
 
     public static final Block TEST_BLOCK_ITEM = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "test_block_item"),

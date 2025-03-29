@@ -6,6 +6,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 import net.spacegateir.steamcraft.block.ModBlocks;
@@ -34,6 +35,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
+        getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
+                .add(ModItems.FOOLS_GOLD_HELMET,ModItems.FOOLS_GOLD_CHESTPLATE,ModItems.FOOLS_GOLD_LEGGINGS,ModItems.FOOLS_GOLD_BOOTS);
 
         getOrCreateTagBuilder(ModTags.Items.AETHER_COIL)
                 .add(ModBlocks.AETHER_COIL.asItem())

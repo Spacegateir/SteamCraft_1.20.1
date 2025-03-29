@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "steamcraft:copper_coin"
+    },
+    {
+      "item": "steamcraft:copper_coin"
+    },
+    {
+      "item": "steamcraft:copper_coin"
+    },
+    {
+      "item": "steamcraft:copper_coin"
+    },
+    {
+      "item": "steamcraft:copper_coin"
+    },
+    {
+      "item": "steamcraft:copper_coin"
+    },
+    {
+      "item": "steamcraft:copper_coin"
+    },
+    {
+      "item": "steamcraft:copper_coin"
+    },
+    {
+      "item": "steamcraft:copper_coin"
+    }
+  ],
+  "result": {
+    "item": "steamcraft:silver_coin"
+  }
+}

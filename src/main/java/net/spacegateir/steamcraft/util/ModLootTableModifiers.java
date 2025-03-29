@@ -59,7 +59,7 @@ public class ModLootTableModifiers {
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.001f)) // Drops 0.10% of the time
                         .conditionally(KilledByPlayerLootCondition.builder().build()) // Only drops when killed by player
-                        .with(ItemEntry.builder(ModItems.TEST_ITEM))
+                        .with(ItemEntry.builder(ModItems.FOOLS_GOLD_HELMET_1))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
 
                 tableBuilder.pool(poolBuilder.build());
@@ -99,7 +99,7 @@ public class ModLootTableModifiers {
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.001f)) // Drops 0.10% of the time
                         .conditionally(KilledByPlayerLootCondition.builder().build()) // Only drops when killed by player
-                        .with(ItemEntry.builder(ModItems.TEST_ITEM))
+                        .with(ItemEntry.builder(ModItems.FOOLS_GOLD_CHESTPLATE_1))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
 
                 tableBuilder.pool(poolBuilder.build());
@@ -110,7 +110,7 @@ public class ModLootTableModifiers {
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.001f)) // Drops 0.10% of the time
                         .conditionally(KilledByPlayerLootCondition.builder().build()) // Only when killed by player
-                        .with(ItemEntry.builder(ModItems.TEST_ITEM))
+                        .with(ItemEntry.builder(ModItems.FOOLS_GOLD_LEGGINGS_1))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
 
                 tableBuilder.pool(poolBuilder.build());
@@ -121,7 +121,7 @@ public class ModLootTableModifiers {
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.001f)) // Drops 0.10% of the time
                         .conditionally(KilledByPlayerLootCondition.builder().build()) // Only when killed by player
-                        .with(ItemEntry.builder(ModItems.TEST_ITEM))
+                        .with(ItemEntry.builder(ModItems.FOOLS_GOLD_BOOTS_1))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
 
                 tableBuilder.pool(poolBuilder.build());
@@ -132,7 +132,7 @@ public class ModLootTableModifiers {
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.001f)) // Drops 0.10% of the time
                         .conditionally(KilledByPlayerLootCondition.builder().build()) // Only when killed by player
-                        .with(ItemEntry.builder(ModItems.TEST_ITEM))
+                        .with(ItemEntry.builder(ModItems.FOOLS_GOLD_HELMET_2))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
 
                 tableBuilder.pool(poolBuilder.build());
@@ -143,7 +143,7 @@ public class ModLootTableModifiers {
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.001f)) // Drops 0.10% of the time
                         .conditionally(KilledByPlayerLootCondition.builder().build()) // Only when killed by player
-                        .with(ItemEntry.builder(ModItems.TEST_ITEM))
+                        .with(ItemEntry.builder(ModItems.FOOLS_GOLD_CHESTPLATE_2))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
 
                 tableBuilder.pool(poolBuilder.build());
@@ -154,7 +154,7 @@ public class ModLootTableModifiers {
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.001f)) // Drops 0.10% of the time
                         .conditionally(KilledByPlayerLootCondition.builder().build()) // Only when killed by player
-                        .with(ItemEntry.builder(ModItems.TEST_ITEM))
+                        .with(ItemEntry.builder(ModItems.FOOLS_GOLD_LEGGINGS_2))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
 
                 tableBuilder.pool(poolBuilder.build());
@@ -165,7 +165,7 @@ public class ModLootTableModifiers {
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.001f)) // Drops 0.10% of the time
                         .conditionally(KilledByPlayerLootCondition.builder().build()) // Only when killed by player
-                        .with(ItemEntry.builder(ModItems.TEST_ITEM))
+                        .with(ItemEntry.builder(ModItems.FOOLS_GOLD_BOOTS_2))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
 
                 tableBuilder.pool(poolBuilder.build());
@@ -176,7 +176,7 @@ public class ModLootTableModifiers {
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.001f)) // Drops 0.10% of the time
                         .conditionally(KilledByPlayerLootCondition.builder().build()) // Only when killed by player
-                        .with(ItemEntry.builder(ModItems.TEST_ITEM))
+                        .with(ItemEntry.builder(ModItems.FOOLS_GOLD_HELMET_3))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
 
                 tableBuilder.pool(poolBuilder.build());
@@ -188,7 +188,7 @@ public class ModLootTableModifiers {
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.001f)) // Drops 0.10% of the time
                         .conditionally(KilledByPlayerLootCondition.builder().build()) // Only when killed by player
-                        .with(ItemEntry.builder(ModItems.TEST_ITEM))
+                        .with(ItemEntry.builder(ModItems.FOOLS_GOLD_CHESTPLATE_3))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
 
                 tableBuilder.pool(poolBuilder.build());
@@ -200,7 +200,7 @@ public class ModLootTableModifiers {
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.001f)) // Drops 0.10% of the time
                         .conditionally(KilledByPlayerLootCondition.builder().build()) // Only when killed by player
-                        .with(ItemEntry.builder(ModItems.TEST_ITEM))
+                        .with(ItemEntry.builder(ModItems.FOOLS_GOLD_LEGGINGS_3))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
 
                 tableBuilder.pool(poolBuilder.build());
@@ -212,7 +212,7 @@ public class ModLootTableModifiers {
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.001f)) // Drops 0.10% of the time
                         .conditionally(KilledByPlayerLootCondition.builder().build()) // Only when killed by player
-                        .with(ItemEntry.builder(ModItems.TEST_ITEM))
+                        .with(ItemEntry.builder(ModItems.FOOLS_GOLD_BOOTS_3))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
 
                 tableBuilder.pool(poolBuilder.build());
@@ -311,6 +311,10 @@ public class ModLootTableModifiers {
                 .conditionally(RandomChanceLootCondition.builder(0.01f)) // Drops 1% of the time
                 .with(ItemEntry.builder(ModItems.LUMINITE_SPARK))
                 .with(ItemEntry.builder(ModItems.OBSCURIUM_CRYSTAL))
+                .with(ItemEntry.builder(ModItems.FOOLS_GOLD_HELMET_4))
+                .with(ItemEntry.builder(ModItems.FOOLS_GOLD_CHESTPLATE_4))
+                .with(ItemEntry.builder(ModItems.FOOLS_GOLD_LEGGINGS_4))
+                .with(ItemEntry.builder(ModItems.FOOLS_GOLD_BOOTS_4))
 
                 .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
 

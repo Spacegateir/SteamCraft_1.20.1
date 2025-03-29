@@ -1,12 +1,17 @@
 {
-  "type": "steamcraft:steamdim_black_type",
+  "type": "steamcraft:steamdim_white_type",
   "generator": {
-  "type": "minecraft:flat",
-  "settings": {
-    "biome": "steamcraft:VoidBiome",
-    "lakes": false,
-    "features": false,
-    "layers": []
+    "type": "minecraft:flat",
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "minecraft:the_void"
+    },
+    "settings": {
+      "biome": "minecraft:the_void",
+      "lakes": false,
+      "features": false,
+      "layers": [],
+      "structure_overrides": ""
+    }
   }
-}
 }

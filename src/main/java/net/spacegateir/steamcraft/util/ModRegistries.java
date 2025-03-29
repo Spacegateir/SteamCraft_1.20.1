@@ -21,37 +21,37 @@ public class ModRegistries {
                 .tintColor(0x009300)
                 .registerPortal();
 
-        CustomPortalBuilder.beginPortal()
-                .frameBlock(ModBlocks.AETHER_COIL_BLUE)
-                .lightWithItem(ModItems.AQUARION_SHARD)
-                .destDimID(new Identifier(Steamcraft.MOD_ID, "steamdim_blue"))
-                .setPortalSearchYRange(64, 64)
-                .tintColor(0x0000ff)
-                .registerPortal();
+//        CustomPortalBuilder.beginPortal()
+//                .frameBlock(ModBlocks.AETHER_COIL_BLUE)
+//                .lightWithItem(ModItems.AQUARION_SHARD)
+//                .destDimID(new Identifier(Steamcraft.MOD_ID, "steamdim_blue"))
+//                .setPortalSearchYRange(64, 64)
+//                .tintColor(0x0000ff)
+//                .registerPortal();
 
-        CustomPortalBuilder.beginPortal()
-                .frameBlock(ModBlocks.AETHER_COIL_RED)
-                .lightWithItem(ModItems.PYROCITE_CORE)
-                .destDimID(new Identifier(Steamcraft.MOD_ID, "steamdim_red"))
-                .setPortalSearchYRange(50, 150)
-                .tintColor(0xff0000)
-                .registerPortal();
+//        CustomPortalBuilder.beginPortal()
+//                .frameBlock(ModBlocks.AETHER_COIL_RED)
+//                .lightWithItem(ModItems.PYROCITE_CORE)
+//                .destDimID(new Identifier(Steamcraft.MOD_ID, "steamdim_red"))
+//                .setPortalSearchYRange(50, 150)
+//                .tintColor(0xff0000)
+//                .registerPortal();
 
-        CustomPortalBuilder.beginPortal()
-                .frameBlock(ModBlocks.AETHER_COIL_YELLOW)
-                .lightWithItem(ModItems.AETHERIUM_PRISM)
-                .destDimID(new Identifier(Steamcraft.MOD_ID, "steamdim_yellow"))
-                .setPortalSearchYRange(64, 64)
-                .tintColor(0xffa500)
-                .registerPortal();
+//        CustomPortalBuilder.beginPortal()
+//                .frameBlock(ModBlocks.AETHER_COIL_YELLOW)
+//                .lightWithItem(ModItems.AETHERIUM_PRISM)
+//                .destDimID(new Identifier(Steamcraft.MOD_ID, "steamdim_yellow"))
+//                .setPortalSearchYRange(64, 64)
+//                .tintColor(0xffa500)
+//                .registerPortal();
 
-        CustomPortalBuilder.beginPortal()
-                .frameBlock(ModBlocks.AETHER_COIL_WHITE)
-                .lightWithItem(ModItems.LUMINITE_SPARK)
-                .destDimID(new Identifier(Steamcraft.MOD_ID, "steamdim_white"))
-                .setPortalSearchYRange(64, 64)
-                .tintColor(0xffffff)
-                .registerPortal();
+//        CustomPortalBuilder.beginPortal()
+//                .frameBlock(ModBlocks.AETHER_COIL_WHITE)
+//                .lightWithItem(ModItems.LUMINITE_SPARK)
+//                .destDimID(new Identifier(Steamcraft.MOD_ID, "steamdim_white"))
+//                .setPortalSearchYRange(64, 64)
+//                .tintColor(0xffffff)
+//                .registerPortal();
 
         CustomPortalBuilder.beginPortal()
                 .frameBlock(ModBlocks.AETHER_COIL_BLACK)

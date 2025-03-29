@@ -15,10 +15,10 @@ public class ModItemGroups {
     public static final ItemGroup STEAMCRAFT = Registry.register(Registries.ITEM_GROUP,
             new Identifier(Steamcraft.MOD_ID,"test"),
             FabricItemGroup.builder().displayName(Text.translatable("SteamCraft"))
-                    .icon(() -> new ItemStack(ModItems.TEST_ITEM)).entries((displayContext, entries) -> {
+                    .icon(() -> new ItemStack(ModItems.PATTERN_RECOMPILER)).entries((displayContext, entries) -> {
 
                         //Items
-                        entries.add(ModItems.TEST_ITEM);
+//                        entries.add(ModItems.TEST_ITEM);
 
                         entries.add(ModItems.PATTERN_RECOMPILER);
                         entries.add(ModItems.FERRITE_HEARTSTONE);
@@ -28,8 +28,31 @@ public class ModItemGroups {
                         entries.add(ModItems.LUMINITE_SPARK);
                         entries.add(ModItems.OBSCURIUM_CRYSTAL);
 
+                        entries.add(ModItems.FOOLS_GOLD_HELMET);
+                        entries.add(ModItems.FOOLS_GOLD_CHESTPLATE);
+                        entries.add(ModItems.FOOLS_GOLD_LEGGINGS);
+                        entries.add(ModItems.FOOLS_GOLD_BOOTS);
+
+
+                        entries.add(ModItems.FOOLS_GOLD_HELMET_1);
+                        entries.add(ModItems.FOOLS_GOLD_HELMET_2);
+                        entries.add(ModItems.FOOLS_GOLD_HELMET_3);
+                        entries.add(ModItems.FOOLS_GOLD_HELMET_4);
+                        entries.add(ModItems.FOOLS_GOLD_CHESTPLATE_1);
+                        entries.add(ModItems.FOOLS_GOLD_CHESTPLATE_2);
+                        entries.add(ModItems.FOOLS_GOLD_CHESTPLATE_3);
+                        entries.add(ModItems.FOOLS_GOLD_CHESTPLATE_4);
+                        entries.add(ModItems.FOOLS_GOLD_LEGGINGS_1);
+                        entries.add(ModItems.FOOLS_GOLD_LEGGINGS_2);
+                        entries.add(ModItems.FOOLS_GOLD_LEGGINGS_3);
+                        entries.add(ModItems.FOOLS_GOLD_LEGGINGS_4);
+                        entries.add(ModItems.FOOLS_GOLD_BOOTS_1);
+                        entries.add(ModItems.FOOLS_GOLD_BOOTS_2);
+                        entries.add(ModItems.FOOLS_GOLD_BOOTS_3);
+                        entries.add(ModItems.FOOLS_GOLD_BOOTS_4);
+
                         //Blocks
-                        entries.add(ModBlocks.TEST_BLOCK);
+//                        entries.add(ModBlocks.TEST_BLOCK);
 
                         entries.add(ModBlocks.AETHER_COIL);
                         entries.add(ModBlocks.AETHER_COIL_WHITE);
@@ -50,7 +73,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.AETHER_COIL_PINK);
 
                         //BlockItems
-                        entries.add(ModItems.TEST_ITEM_BLOCK);
+//                        entries.add(ModItems.TEST_ITEM_BLOCK);
 
 
 

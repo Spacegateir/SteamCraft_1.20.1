@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "steamcraft:fools_gold_helmet",
+    "steamcraft:fools_gold_chestplate",
+    "steamcraft:fools_gold_leggings",
+    "steamcraft:fools_gold_boots"
+  ]
+}

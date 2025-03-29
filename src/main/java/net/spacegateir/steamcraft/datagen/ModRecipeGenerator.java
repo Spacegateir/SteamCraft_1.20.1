@@ -1,20 +1,15 @@
 package net.spacegateir.steamcraft.datagen;
 
-import com.google.gson.JsonObject;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.RecipeProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
-import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
-import net.minecraft.registry.Registries;
-import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.item.ModItems;
@@ -31,6 +26,29 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
     public void generate(Consumer<RecipeJsonProvider> exporter) {
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.TEST_ITEM, RecipeCategory.MISC, ModBlocks.TEST_BLOCK);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SILVER_COIN, 1)
+                .input(ModItems.COPPER_COIN, 9)
+                .criterion("has_copper_coin", conditionsFromItem(ModItems.COPPER_COIN))
+                .offerTo(exporter, new Identifier("steamcraft", "copper_to_silver"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.GOLD_COIN, 1)
+                .input(ModItems.SILVER_COIN, 9)
+                .criterion("has_silver_coin", conditionsFromItem(ModItems.SILVER_COIN))
+                .offerTo(exporter, new Identifier("steamcraft", "silver_to_gold"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.COPPER_COIN, 9)
+                .input(ModItems.SILVER_COIN, 1)
+                .criterion("has_copper_coin", conditionsFromItem(ModItems.COPPER_COIN))
+                .offerTo(exporter, new Identifier("steamcraft", "silver_to_copper"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SILVER_COIN, 9)
+                .input(ModItems.GOLD_COIN, 1)
+                .criterion("has_silver_coin", conditionsFromItem(ModItems.SILVER_COIN))
+                .offerTo(exporter, new Identifier("steamcraft", "gold_to_silver"));
+
+
+
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.PATTERN_RECOMPILER)
                 .pattern(" N ")
@@ -163,6 +181,58 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                     .criterion("has_aether_coil", RecipeProvider.conditionsFromItem(ModBlocks.AETHER_COIL))
                     .offerTo(exporter, new Identifier("steamcraft", "aether_coil_pink_from_dye_and_aether_coil" + i));
         }
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.FOOLS_GOLD_HELMET)
+                .pattern("12")
+                .pattern("34")
+                .input('1', ModItems.FOOLS_GOLD_HELMET_1)
+                .input('2', ModItems.FOOLS_GOLD_HELMET_2)
+                .input('3', ModItems.FOOLS_GOLD_HELMET_3)
+                .input('4', ModItems.FOOLS_GOLD_HELMET_4)
+                .criterion(hasItem(ModItems.FOOLS_GOLD_HELMET_1), conditionsFromItem(ModItems.FOOLS_GOLD_HELMET_1))
+                .criterion(hasItem(ModItems.FOOLS_GOLD_HELMET_2), conditionsFromItem(ModItems.FOOLS_GOLD_HELMET_2))
+                .criterion(hasItem(ModItems.FOOLS_GOLD_HELMET_3), conditionsFromItem(ModItems.FOOLS_GOLD_HELMET_3))
+                .criterion(hasItem(ModItems.FOOLS_GOLD_HELMET_4), conditionsFromItem(ModItems.FOOLS_GOLD_HELMET_4))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.FOOLS_GOLD_HELMET)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.FOOLS_GOLD_CHESTPLATE)
+                .pattern("12")
+                .pattern("34")
+                .input('1', ModItems.FOOLS_GOLD_CHESTPLATE_1)
+                .input('2', ModItems.FOOLS_GOLD_CHESTPLATE_2)
+                .input('3', ModItems.FOOLS_GOLD_CHESTPLATE_3)
+                .input('4', ModItems.FOOLS_GOLD_CHESTPLATE_4)
+                .criterion(hasItem(ModItems.FOOLS_GOLD_CHESTPLATE_1), conditionsFromItem(ModItems.FOOLS_GOLD_CHESTPLATE_1))
+                .criterion(hasItem(ModItems.FOOLS_GOLD_CHESTPLATE_2), conditionsFromItem(ModItems.FOOLS_GOLD_CHESTPLATE_2))
+                .criterion(hasItem(ModItems.FOOLS_GOLD_CHESTPLATE_3), conditionsFromItem(ModItems.FOOLS_GOLD_CHESTPLATE_3))
+                .criterion(hasItem(ModItems.FOOLS_GOLD_CHESTPLATE_4), conditionsFromItem(ModItems.FOOLS_GOLD_CHESTPLATE_4))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.FOOLS_GOLD_CHESTPLATE)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.FOOLS_GOLD_LEGGINGS)
+                .pattern("12")
+                .pattern("34")
+                .input('1', ModItems.FOOLS_GOLD_LEGGINGS_1)
+                .input('2', ModItems.FOOLS_GOLD_LEGGINGS_2)
+                .input('3', ModItems.FOOLS_GOLD_LEGGINGS_3)
+                .input('4', ModItems.FOOLS_GOLD_LEGGINGS_4)
+                .criterion(hasItem(ModItems.FOOLS_GOLD_LEGGINGS_1), conditionsFromItem(ModItems.FOOLS_GOLD_LEGGINGS_1))
+                .criterion(hasItem(ModItems.FOOLS_GOLD_LEGGINGS_2), conditionsFromItem(ModItems.FOOLS_GOLD_LEGGINGS_2))
+                .criterion(hasItem(ModItems.FOOLS_GOLD_LEGGINGS_3), conditionsFromItem(ModItems.FOOLS_GOLD_LEGGINGS_3))
+                .criterion(hasItem(ModItems.FOOLS_GOLD_LEGGINGS_4), conditionsFromItem(ModItems.FOOLS_GOLD_LEGGINGS_4))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.FOOLS_GOLD_LEGGINGS)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.FOOLS_GOLD_BOOTS)
+                .pattern("12")
+                .pattern("34")
+                .input('1', ModItems.FOOLS_GOLD_BOOTS_1)
+                .input('2', ModItems.FOOLS_GOLD_BOOTS_2)
+                .input('3', ModItems.FOOLS_GOLD_BOOTS_3)
+                .input('4', ModItems.FOOLS_GOLD_BOOTS_4)
+                .criterion(hasItem(ModItems.FOOLS_GOLD_BOOTS_1), conditionsFromItem(ModItems.FOOLS_GOLD_BOOTS_1))
+                .criterion(hasItem(ModItems.FOOLS_GOLD_BOOTS_2), conditionsFromItem(ModItems.FOOLS_GOLD_BOOTS_2))
+                .criterion(hasItem(ModItems.FOOLS_GOLD_BOOTS_3), conditionsFromItem(ModItems.FOOLS_GOLD_BOOTS_3))
+                .criterion(hasItem(ModItems.FOOLS_GOLD_BOOTS_4), conditionsFromItem(ModItems.FOOLS_GOLD_BOOTS_4))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.FOOLS_GOLD_BOOTS)));
 
 
     }

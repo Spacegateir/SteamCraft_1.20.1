@@ -73,7 +73,7 @@ public class ModDimensions {
                 BlockTags.INFINIBURN_OVERWORLD, // infiniburn
                 DimensionTypes.OVERWORLD_ID, // effectsLocation
                 0.0f, // ambientLight
-                new DimensionType.MonsterSettings(false, true, UniformIntProvider.create(0, 7), 0)));
+                new DimensionType.MonsterSettings(true, true, UniformIntProvider.create(0, 7), 0)));
 
         context.register(STEAM_DIM_BLUE_TYPE, new DimensionType(
                 OptionalLong.empty(), // fixedTime
@@ -90,7 +90,7 @@ public class ModDimensions {
                 BlockTags.INFINIBURN_OVERWORLD, // infiniburn
                 DimensionTypes.OVERWORLD_ID, // effectsLocation
                 0.0f, // ambientLight
-                new DimensionType.MonsterSettings(false, true, UniformIntProvider.create(0, 7), 0)));
+                new DimensionType.MonsterSettings(true, true, UniformIntProvider.create(0, 7), 0)));
 
         context.register(STEAM_DIM_RED_TYPE, new DimensionType(
                 OptionalLong.empty(), // fixedTime
@@ -99,15 +99,15 @@ public class ModDimensions {
                 false, // ultraWarm
                 true, // natural
                 1.0, // coordinateScale
-                true, // bedWorks
-                false, // respawnAnchorWorks
+                false, // bedWorks
+                true, // respawnAnchorWorks
                 -64, // minY
                 384, // height
                 384, // logicalHeight
                 BlockTags.INFINIBURN_OVERWORLD, // infiniburn
                 DimensionTypes.OVERWORLD_ID, // effectsLocation
                 0.0f, // ambientLight
-                new DimensionType.MonsterSettings(false, true, UniformIntProvider.create(0, 7), 0)));
+                new DimensionType.MonsterSettings(true, true, UniformIntProvider.create(0, 7), 0)));
 
         context.register(STEAM_DIM_YELLOW_TYPE, new DimensionType(
                 OptionalLong.empty(), // fixedTime
@@ -124,7 +124,7 @@ public class ModDimensions {
                 BlockTags.INFINIBURN_OVERWORLD, // infiniburn
                 DimensionTypes.OVERWORLD_ID, // effectsLocation
                 0.0f, // ambientLight
-                new DimensionType.MonsterSettings(false, true, UniformIntProvider.create(0, 7), 0)));
+                new DimensionType.MonsterSettings(true, true, UniformIntProvider.create(0, 7), 0)));
 
         context.register(STEAM_DIM_WHITE_TYPE, new DimensionType(
                 OptionalLong.empty(), // fixedTime
@@ -141,7 +141,7 @@ public class ModDimensions {
                 BlockTags.INFINIBURN_OVERWORLD, // infiniburn
                 DimensionTypes.OVERWORLD_ID, // effectsLocation
                 0.0f, // ambientLight
-                new DimensionType.MonsterSettings(false, true, UniformIntProvider.create(0, 7), 0)));
+                new DimensionType.MonsterSettings(true, true, UniformIntProvider.create(0, 7), 0)));
 
         context.register(STEAM_DIM_BLACK_TYPE, new DimensionType(
                 OptionalLong.of(6000), // fixedTime

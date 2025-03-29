@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "steamcraft:silver_coin"
+    },
+    {
+      "item": "steamcraft:silver_coin"
+    },
+    {
+      "item": "steamcraft:silver_coin"
+    },
+    {
+      "item": "steamcraft:silver_coin"
+    },
+    {
+      "item": "steamcraft:silver_coin"
+    },
+    {
+      "item": "steamcraft:silver_coin"
+    },
+    {
+      "item": "steamcraft:silver_coin"
+    },
+    {
+      "item": "steamcraft:silver_coin"
+    },
+    {
+      "item": "steamcraft:silver_coin"
+    }
+  ],
+  "result": {
+    "item": "steamcraft:gold_coin"
+  }
+}

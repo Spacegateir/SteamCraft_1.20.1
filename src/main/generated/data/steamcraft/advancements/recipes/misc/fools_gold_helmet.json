@@ -1,0 +1,74 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_fools_gold_helmet_1-4": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "steamcraft:fools_gold_helmet_1-4"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_fools_gold_helmet_2-4": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "steamcraft:fools_gold_helmet_2-4"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_fools_gold_helmet_3-4": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "steamcraft:fools_gold_helmet_3-4"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_fools_gold_helmet_4-4": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "steamcraft:fools_gold_helmet_4-4"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:fools_gold_helmet"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_fools_gold_helmet_1-4",
+      "has_fools_gold_helmet_2-4",
+      "has_fools_gold_helmet_3-4",
+      "has_fools_gold_helmet_4-4",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:fools_gold_helmet"
+    ]
+  },
+  "sends_telemetry_event": false
+}

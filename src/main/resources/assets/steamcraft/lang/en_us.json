@@ -13,6 +13,32 @@
   "item.steamcraft.luminite_spark": "Luminite Spark",
   "item.steamcraft.obscurium_crystal": "Obscurium Crystal",
 
+  "item.steamcraft.fools_gold_helmet_1-4": "Helmet Shard 1/4",
+  "item.steamcraft.fools_gold_helmet_2-4": "Helmet Shard 2/4",
+  "item.steamcraft.fools_gold_helmet_3-4": "Helmet Shard 3/4",
+  "item.steamcraft.fools_gold_helmet_4-4": "Helmet Shard 4/4",
+
+  "item.steamcraft.fools_gold_chestplate_1-4": "Chestplate Shard 1/4",
+  "item.steamcraft.fools_gold_chestplate_2-4": "Chestplate Shard 2/4",
+  "item.steamcraft.fools_gold_chestplate_3-4": "Chestplate Shard 3/4",
+  "item.steamcraft.fools_gold_chestplate_4-4": "Chestplate Shard 4/4",
+
+  "item.steamcraft.fools_gold_leggings_1-4": "Leggings Shard 1/4",
+  "item.steamcraft.fools_gold_leggings_2-4": "Leggings Shard 2/4",
+  "item.steamcraft.fools_gold_leggings_3-4": "Leggings Shard 3/4",
+  "item.steamcraft.fools_gold_leggings_4-4": "Leggings Shard 4/4",
+
+  "item.steamcraft.fools_gold_boots_1-4": "Boots Shard 1/4",
+  "item.steamcraft.fools_gold_boots_2-4": "Boots Shard 2/4",
+  "item.steamcraft.fools_gold_boots_3-4": "Boots Shard 3/4",
+  "item.steamcraft.fools_gold_boots_4-4": "Boots Shard 4/4",
+
+
+  "item.steamcraft.fools_gold_helmet": "§6Fools Gold Helmet§r",
+  "item.steamcraft.fools_gold_chestplate": "§6Fools Gold Chestplate§r",
+  "item.steamcraft.fools_gold_leggings": "§6Fools Gold Leggings§r",
+  "item.steamcraft.fools_gold_boots": "§6Fools Gold Boots§r",
+
 
   "block.steamcraft.test_block": "Test Block",
 
@@ -46,19 +72,22 @@
   "tooltip.steamcraft.ferrite_heartstone.tooltip.shift": "Right Click on §2Aether Coil Green§r to Open a Portal!",
   "tooltip.steamcraft.ferrite_heartstone.tooltip": "Press §eSHIFT§r for more Information",
 
-  "tooltip.steamcraft.aetherium_prism.tooltip.shift": "Right Click on §6Aether Coil Yellow§r to Open a Portal!",
+  "tooltip.steamcraft.aetherium_prism.tooltip.shift": "Right Click on §6Aether Coil Yellow§r to Open a Portal §e(WIP)§r!",
   "tooltip.steamcraft.aetherium_prism.tooltip": "Press §eSHIFT§r for more Information",
 
-  "tooltip.steamcraft.aquarion_shard.tooltip.shift": "Right Click on §1Aether Coil Blue§r to Open a Portal!",
+  "tooltip.steamcraft.aquarion_shard.tooltip.shift": "Right Click on §1Aether Coil Blue§r to Open a Portal §e(WIP)§r!",
   "tooltip.steamcraft.aquarion_shard.tooltip": "Press §eSHIFT§r for more Information",
 
-  "tooltip.steamcraft.pyrocite_core.tooltip.shift": "Right Click on §4Aether Coil Red§r to Open a Portal!",
+  "tooltip.steamcraft.pyrocite_core.tooltip.shift": "Right Click on §4Aether Coil Red§r to Open a Portal §e(WIP)§r!",
   "tooltip.steamcraft.pyrocite_core.tooltip": "Press §eSHIFT§r for more Information",
 
-  "tooltip.steamcraft.luminite_spark.tooltip.shift": "Right Click on §7Aether Coil White§r to Open a Portal!",
+  "tooltip.steamcraft.luminite_spark.tooltip.shift": "Right Click on §7Aether Coil White§r to Open a Portal §e(WIP)§r!",
   "tooltip.steamcraft.luminite_spark.tooltip": "Press §eSHIFT§r for more Information",
 
   "tooltip.steamcraft.obscurium_crystal.tooltip.shift": "Right Click on §8Aether Coil Black§r to Open a Portal!",
-  "tooltip.steamcraft.obscurium_crystal.tooltip": "Press §eSHIFT§r for more Information"
+  "tooltip.steamcraft.obscurium_crystal.tooltip": "Press §eSHIFT§r for more Information",
+
+
+  "block.customportalapi.customportalblock": "SteamCraft Dimensions"
 
 }

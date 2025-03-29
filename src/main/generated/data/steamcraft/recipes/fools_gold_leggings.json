@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "steamcraft:fools_gold_leggings_1-4"
+    },
+    "2": {
+      "item": "steamcraft:fools_gold_leggings_2-4"
+    },
+    "3": {
+      "item": "steamcraft:fools_gold_leggings_3-4"
+    },
+    "4": {
+      "item": "steamcraft:fools_gold_leggings_4-4"
+    }
+  },
+  "pattern": [
+    "12",
+    "34"
+  ],
+  "result": {
+    "item": "steamcraft:fools_gold_leggings"
+  },
+  "show_notification": true
+}

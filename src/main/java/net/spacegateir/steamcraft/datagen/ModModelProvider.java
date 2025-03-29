@@ -53,5 +53,10 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.FOOLS_GOLD_LEGGINGS));
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.FOOLS_GOLD_BOOTS));
 
+        itemModelGenerator.register(ModItems.AMETHYST_HELMET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.AMETHYST_CHESTPLATE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.AMETHYST_LEGGINGS, Models.GENERATED);
+        itemModelGenerator.register(ModItems.AMETHYST_BOOTS, Models.GENERATED);
+
     }
 }

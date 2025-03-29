@@ -23,7 +23,14 @@ public enum ModArmorMaterials implements ArmorMaterial
         map.put(ArmorItem.Type.LEGGINGS, 6);
         map.put(ArmorItem.Type.CHESTPLATE, 8);
         map.put(ArmorItem.Type.HELMET, 3);
-    }), 25, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 2.0F, 0.0F, () -> Ingredient.ofItems(Items.GOLD_INGOT));
+    }), 25, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 2.0F, 0.0F, () -> Ingredient.ofItems(Items.GOLD_INGOT)),
+
+    AMETHYST("amethyst", 15, Util.make(new EnumMap(ArmorItem.Type.class), map -> {
+        map.put(ArmorItem.Type.BOOTS, 2);
+        map.put(ArmorItem.Type.LEGGINGS, 5);
+        map.put(ArmorItem.Type.CHESTPLATE, 6);
+        map.put(ArmorItem.Type.HELMET, 2);
+    }), 9, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0.0F, 0.0F, () -> Ingredient.ofItems(Items.AMETHYST_SHARD));
 
 
 

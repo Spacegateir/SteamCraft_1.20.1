@@ -5,14 +5,13 @@ import net.minecraft.block.Block;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.spacegateir.steamcraft.Steamcraft;
 import net.spacegateir.steamcraft.block.ModBlocks;
+import net.spacegateir.steamcraft.item.armor.AmethystArmorItem;
 import net.spacegateir.steamcraft.item.custom.ToolTipItem;
 import net.spacegateir.steamcraft.item.custom.SwapItem;
 
@@ -52,7 +51,6 @@ public class ModItems {
             new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
     public static final Item FOOLS_GOLD_HELMET_4 = registerItem("fools_gold_helmet_4-4",
             new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
-
     public static final Item FOOLS_GOLD_CHESTPLATE_1 = registerItem("fools_gold_chestplate_1-4",
             new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
     public static final Item FOOLS_GOLD_CHESTPLATE_2 = registerItem("fools_gold_chestplate_2-4",
@@ -61,7 +59,6 @@ public class ModItems {
             new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
     public static final Item FOOLS_GOLD_CHESTPLATE_4 = registerItem("fools_gold_chestplate_4-4",
             new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
-
     public static final Item FOOLS_GOLD_LEGGINGS_1 = registerItem("fools_gold_leggings_1-4",
             new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
     public static final Item FOOLS_GOLD_LEGGINGS_2 = registerItem("fools_gold_leggings_2-4",
@@ -70,7 +67,6 @@ public class ModItems {
             new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
     public static final Item FOOLS_GOLD_LEGGINGS_4 = registerItem("fools_gold_leggings_4-4",
             new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
-
     public static final Item FOOLS_GOLD_BOOTS_1 = registerItem("fools_gold_boots_1-4",
             new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
     public static final Item FOOLS_GOLD_BOOTS_2 = registerItem("fools_gold_boots_2-4",
@@ -88,6 +84,15 @@ public class ModItems {
             new ArmorItem(ModArmorMaterials.FOOLS_GOLD, ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
     public static final Item FOOLS_GOLD_BOOTS = registerItem("fools_gold_boots",
             new ArmorItem(ModArmorMaterials.FOOLS_GOLD, ArmorItem.Type.BOOTS, new FabricItemSettings()));
+
+    public static final Item AMETHYST_HELMET = registerItem("amethyst_helmet",
+            new AmethystArmorItem(ModArmorMaterials.AMETHYST, ArmorItem.Type.HELMET, new FabricItemSettings()));
+    public static final Item AMETHYST_CHESTPLATE = registerItem("amethyst_chestplate",
+            new AmethystArmorItem(ModArmorMaterials.AMETHYST, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
+    public static final Item AMETHYST_LEGGINGS = registerItem("amethyst_leggings",
+            new AmethystArmorItem(ModArmorMaterials.AMETHYST, ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
+    public static final Item AMETHYST_BOOTS = registerItem("amethyst_boots",
+            new AmethystArmorItem(ModArmorMaterials.AMETHYST, ArmorItem.Type.BOOTS, new FabricItemSettings()));
 
     public static final Item TEST_ITEM_BLOCK = Registry.register(Registries.ITEM,
             new Identifier(Steamcraft.MOD_ID, "test_item_block"),

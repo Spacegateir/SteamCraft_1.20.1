@@ -4,11 +4,13 @@ import net.fabricmc.api.ModInitializer;
 
 import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.creative_tab.ModItemGroups;
+import net.spacegateir.steamcraft.creative_tab.ModItemRewardsGroups;
 import net.spacegateir.steamcraft.item.ModItems;
 import net.spacegateir.steamcraft.util.ModLootTableModifiers;
 import net.spacegateir.steamcraft.util.ModRegistries;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import software.bernie.geckolib.GeckoLib;
 
 public class Steamcraft implements ModInitializer {
 	public static final String MOD_ID = "steamcraft";
@@ -19,11 +21,15 @@ public class Steamcraft implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+
 		ModItemGroups.registerItemGroups();
+		ModItemRewardsGroups.registerItemGroups();
 
 
 		ModRegistries.registerModStuff();
 		ModLootTableModifiers.modifyLootTables();
+
+		GeckoLib.initialize();
 
 
 

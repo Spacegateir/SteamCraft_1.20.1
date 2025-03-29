@@ -13,7 +13,7 @@ import net.spacegateir.steamcraft.item.ModItems;
 
 public class ModItemGroups {
     public static final ItemGroup STEAMCRAFT = Registry.register(Registries.ITEM_GROUP,
-            new Identifier(Steamcraft.MOD_ID,"test"),
+            new Identifier(Steamcraft.MOD_ID,"sc"),
             FabricItemGroup.builder().displayName(Text.translatable("SteamCraft"))
                     .icon(() -> new ItemStack(ModItems.PATTERN_RECOMPILER)).entries((displayContext, entries) -> {
 

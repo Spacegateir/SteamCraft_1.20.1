@@ -1,15 +1,5 @@
 package net.spacegateir.steamcraft.effect.effects;
 
-import net.minecraft.block.Blocks;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.option.KeyBinding;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.LightningEntity;
-import net.minecraft.entity.attribute.EntityAttributes;
-import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.entity.data.DataTracker;
-import net.minecraft.entity.data.TrackedData;
-import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -22,10 +12,8 @@ import net.minecraft.entity.passive.IronGolemEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
-import net.spacegateir.steamcraft.effect.ModEffects;
 
 import java.util.HashSet;
-import java.util.Random;
 import java.util.Set;
 import java.util.UUID;
 
@@ -53,27 +41,17 @@ public class CelestialGearforgedEffect extends StatusEffect {
                         !BLACKLISTED_EFFECTS.contains(effect.getClass())
         );
 
-        // Jump Boost
-//        if (entity.getWorld().isClient && entity instanceof PlayerEntity player) {
-//            UUID uuid = player.getUuid();
-//
-//            // Skip the jump boost if the player has less than 1/3 of their health
-//            if (player.getHealth() < player.getMaxHealth()) {
-//                return; // Skip the boost if the player has less than 1/3 health
-//            }
-//
-//            // Check if the player is attempting to jump (in the air)
-//            if (player.fallDistance == 0 && player.getVelocity().y > 0) {
-//                if (!boostedPlayers.contains(uuid)) {
-//                    player.addVelocity(0, 0.4, 0); // Boost jump height (~3 blocks)
-//                    player.velocityDirty = true;
-//                    boostedPlayers.add(uuid);
-//                }
-//            } else if (player.isOnGround()) {
-//                boostedPlayers.remove(uuid);
-//            }
-//        }
+        // step up 1 block
+        if (entity instanceof PlayerEntity player) {
+            if (player.isOnGround()) {
+                BlockPos playerPos = player.getBlockPos();
+                BlockPos blockInFront = playerPos.offset(player.getMovementDirection());
 
+                if (player.getWorld().getBlockState(blockInFront.up()).isAir() && player.getWorld().getBlockState(blockInFront).isSolidBlock(player.getWorld(), blockInFront)) {
+                    player.setVelocity(player.getVelocity().add(0, 0.5D, 0));
+                }
+            }
+        }
 
         // Frozen Immunity
         if (entity.isFrozen()) {entity.isOnFire();
@@ -87,39 +65,6 @@ public class CelestialGearforgedEffect extends StatusEffect {
         if (entity.isSubmergedInWater()) {
             entity.setAir(entity.getMaxAir());
         }
-
-//        // Swimming Speed Boost
-//        if (entity.isInSwimmingPose() && entity.isSubmergedInWater()) {
-//            double fixedSwimmingSpeed = 1.0D; // Base swimming speed
-//            double turnSpeedMultiplier = 1.5D; // Multiplier to increase turn speed
-//
-//            Vec3d currentVelocity = entity.getVelocity();
-//
-//            // Calculate the horizontal speed (X and Z components)
-//            double horizontalSpeed = Math.sqrt(currentVelocity.x * currentVelocity.x + currentVelocity.z * currentVelocity.z);
-//
-//            // Normalize the velocity vector and scale it by the fixed swimming speed
-//            if (horizontalSpeed > 0) {
-//                // Apply fixed swimming speed and allow for quicker turning
-//                currentVelocity = new Vec3d(
-//                        currentVelocity.x / horizontalSpeed * fixedSwimmingSpeed * turnSpeedMultiplier,  // Increase turning speed
-//                        currentVelocity.y,  // Maintain the vertical velocity
-//                        currentVelocity.z / horizontalSpeed * fixedSwimmingSpeed * turnSpeedMultiplier
-//                );
-//            } else {
-//                // If there's no horizontal movement, just set the fixed speed for all directions
-//                currentVelocity = new Vec3d(fixedSwimmingSpeed, currentVelocity.y, 0);
-//            }
-//
-//            // Apply the new velocity to the entity
-//            entity.setVelocity(currentVelocity);
-//        }
-
-
-
-
-
-
 
         // Stick to wall
 //        if (entity.horizontalCollision) {
@@ -142,7 +87,7 @@ public class CelestialGearforgedEffect extends StatusEffect {
                                     false, false, false));
                             e.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 2400, 2,
                                     false, false, false));
-                            e.addStatusEffect(new StatusEffectInstance(StatusEffects.LUCK, 2400, 2,
+                            e.addStatusEffect(new StatusEffectInstance(StatusEffects.LUCK, 2400, 1024,
                                     false, false, false));
                             e.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 2400, 0,
                                     false, false, false));
@@ -151,8 +96,8 @@ public class CelestialGearforgedEffect extends StatusEffect {
 
             // Reapply effects every 1000 ticks
             if (entity.age % tickInterval == 0) {
-                entity.addStatusEffect(new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE, 1200, 2,
-                        false, false, false));
+//                entity.addStatusEffect(new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE, 1200, 2,
+//                        false, false, false));
             }
         }
 

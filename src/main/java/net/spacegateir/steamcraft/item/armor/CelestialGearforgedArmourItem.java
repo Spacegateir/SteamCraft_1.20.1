@@ -48,10 +48,6 @@ public class CelestialGearforgedArmourItem extends ArmorItem implements GeoItem 
     private static final UUID HEALTH_BOOST_UUID = UUID.fromString("89041fef-396a-48cc-8a13-86d58c1610c8");
     private static final UUID LUCK_BOOST_UUID = UUID.fromString("f429eb46-071c-42cf-bc51-687c85c1c113");
 
-    private static final UUID ARMOR_UUID = UUID.fromString("e91e84b1-bd46-4cd2-8b35-df9a5942a1e1");
-    private static final UUID TOUGHNESS_UUID = UUID.fromString("05f55ae2-9f6d-44f4-bb50-6a0a41835438");
-    private static final UUID KNOCKBACK_RESISTANCE_UUID = UUID.fromString("9e29de15-7a4b-4f24-b55c-7b5a9c8f0e4e");
-
     private static final UUID HELMENT_UUID = UUID.fromString("a1f4bb3c-75cb-4c7b-8ee6-9e6caa1d1550");
     private static final UUID CHESTPLATE_UUID = UUID.fromString("e2037a43-21a3-4f32-8cb1-c12e60b22370");
     private static final UUID LEGGINGS_UUID = UUID.fromString("4de3db2f-9f6b-4e71-baf2-614d34fa9c6b");
@@ -180,7 +176,7 @@ public class CelestialGearforgedArmourItem extends ArmorItem implements GeoItem 
                     new EntityAttributeModifier(HELMENT_UUID, "Toughness", 8.0, EntityAttributeModifier.Operation.ADDITION));
             builder.put(
                     EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE,
-                    new EntityAttributeModifier(HELMENT_UUID, "Knockback Resistance", 1.0, EntityAttributeModifier.Operation.MULTIPLY_BASE));
+                    new EntityAttributeModifier(HELMENT_UUID, "Knockback Resistance", 10.0, EntityAttributeModifier.Operation.MULTIPLY_BASE));
 
             builder.put(
                     EntityAttributes.GENERIC_LUCK,
@@ -196,7 +192,7 @@ public class CelestialGearforgedArmourItem extends ArmorItem implements GeoItem 
                     new EntityAttributeModifier(CHESTPLATE_UUID, "Toughness", 8.0, EntityAttributeModifier.Operation.ADDITION));
             builder.put(
                     EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE,
-                    new EntityAttributeModifier(CHESTPLATE_UUID, "Knockback Resistance", 1.0, EntityAttributeModifier.Operation.MULTIPLY_BASE));
+                    new EntityAttributeModifier(CHESTPLATE_UUID, "Knockback Resistance", 10.0, EntityAttributeModifier.Operation.MULTIPLY_BASE));
 
 
             builder.put(
@@ -216,7 +212,7 @@ public class CelestialGearforgedArmourItem extends ArmorItem implements GeoItem 
                     new EntityAttributeModifier(LEGGINGS_UUID, "Toughness", 8.0, EntityAttributeModifier.Operation.ADDITION));
             builder.put(
                     EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE,
-                    new EntityAttributeModifier(LEGGINGS_UUID, "Knockback Resistance", 1.0, EntityAttributeModifier.Operation.MULTIPLY_BASE));
+                    new EntityAttributeModifier(LEGGINGS_UUID, "Knockback Resistance", 10.0, EntityAttributeModifier.Operation.MULTIPLY_BASE));
 
 
             builder.put(
@@ -233,7 +229,7 @@ public class CelestialGearforgedArmourItem extends ArmorItem implements GeoItem 
                     new EntityAttributeModifier(BOOTS_UUID, "Toughness", 8.0, EntityAttributeModifier.Operation.ADDITION));
             builder.put(
                     EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE,
-                    new EntityAttributeModifier(BOOTS_UUID, "Knockback Resistance", 1.0, EntityAttributeModifier.Operation.MULTIPLY_BASE));
+                    new EntityAttributeModifier(BOOTS_UUID, "Knockback Resistance", 10.0, EntityAttributeModifier.Operation.MULTIPLY_BASE));
 
 
             builder.put(

@@ -5,6 +5,7 @@ import net.fabricmc.api.ModInitializer;
 import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.creative_tab.ModItemGroups;
 import net.spacegateir.steamcraft.creative_tab.ModItemRewardsGroups;
+import net.spacegateir.steamcraft.effect.ModEffects;
 import net.spacegateir.steamcraft.item.ModItems;
 import net.spacegateir.steamcraft.util.ModLootTableModifiers;
 import net.spacegateir.steamcraft.util.ModRegistries;
@@ -25,6 +26,7 @@ public class Steamcraft implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 		ModItemRewardsGroups.registerItemGroups();
 
+		ModEffects.registerEffects();
 
 		ModRegistries.registerModStuff();
 		ModLootTableModifiers.modifyLootTables();

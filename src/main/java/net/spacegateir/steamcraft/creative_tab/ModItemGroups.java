@@ -33,6 +33,11 @@ public class ModItemGroups {
                         entries.add(ModItems.FOOLS_GOLD_LEGGINGS);
                         entries.add(ModItems.FOOLS_GOLD_BOOTS);
 
+                        entries.add(ModItems.CELESTIAL_GEARFORGED_HELMET);
+                        entries.add(ModItems.CELESTIAL_GEARFORGED_CHESTPLATE);
+                        entries.add(ModItems.CELESTIAL_GEARFORGED_LEGGINGS);
+                        entries.add(ModItems.CELESTIAL_GEARFORGED_BOOTS);
+
 
                         entries.add(ModItems.FOOLS_GOLD_HELMET_1);
                         entries.add(ModItems.FOOLS_GOLD_HELMET_2);

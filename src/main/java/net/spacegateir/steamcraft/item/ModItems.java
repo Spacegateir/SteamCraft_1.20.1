@@ -12,6 +12,9 @@ import net.minecraft.util.Rarity;
 import net.spacegateir.steamcraft.Steamcraft;
 import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.item.armor.AmethystArmorItem;
+import net.spacegateir.steamcraft.item.armor.CelestialGearforgedArmourItem;
+import net.spacegateir.steamcraft.item.custom.FoolsGoldArmourItem;
+import net.spacegateir.steamcraft.item.custom.ModArmorItem;
 import net.spacegateir.steamcraft.item.custom.ToolTipItem;
 import net.spacegateir.steamcraft.item.custom.SwapItem;
 
@@ -77,13 +80,22 @@ public class ModItems {
             new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
 
     public static final Item FOOLS_GOLD_HELMET = registerItem("fools_gold_helmet",
-            new ArmorItem(ModArmorMaterials.FOOLS_GOLD, ArmorItem.Type.HELMET, new FabricItemSettings()));
+            new FoolsGoldArmourItem(ModArmorMaterials.FOOLS_GOLD, ArmorItem.Type.HELMET, new FabricItemSettings()));
     public static final Item FOOLS_GOLD_CHESTPLATE = registerItem("fools_gold_chestplate",
-            new ArmorItem(ModArmorMaterials.FOOLS_GOLD, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
+            new FoolsGoldArmourItem(ModArmorMaterials.FOOLS_GOLD, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
     public static final Item FOOLS_GOLD_LEGGINGS = registerItem("fools_gold_leggings",
-            new ArmorItem(ModArmorMaterials.FOOLS_GOLD, ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
+            new FoolsGoldArmourItem(ModArmorMaterials.FOOLS_GOLD, ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
     public static final Item FOOLS_GOLD_BOOTS = registerItem("fools_gold_boots",
-            new ArmorItem(ModArmorMaterials.FOOLS_GOLD, ArmorItem.Type.BOOTS, new FabricItemSettings()));
+            new FoolsGoldArmourItem(ModArmorMaterials.FOOLS_GOLD, ArmorItem.Type.BOOTS, new FabricItemSettings()));
+
+    public static final Item CELESTIAL_GEARFORGED_HELMET = registerItem("celestial_gearforged_helmet",
+            new CelestialGearforgedArmourItem(ModArmorMaterials.CELESTIAL_GEARFORGED, ArmorItem.Type.HELMET, new FabricItemSettings()));
+    public static final Item CELESTIAL_GEARFORGED_CHESTPLATE = registerItem("celestial_gearforged_chestplate",
+            new CelestialGearforgedArmourItem(ModArmorMaterials.CELESTIAL_GEARFORGED, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
+    public static final Item CELESTIAL_GEARFORGED_LEGGINGS = registerItem("celestial_gearforged_leggings",
+            new CelestialGearforgedArmourItem(ModArmorMaterials.CELESTIAL_GEARFORGED, ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
+    public static final Item CELESTIAL_GEARFORGED_BOOTS = registerItem("celestial_gearforged_boots",
+            new CelestialGearforgedArmourItem(ModArmorMaterials.CELESTIAL_GEARFORGED, ArmorItem.Type.BOOTS, new FabricItemSettings()));
 
     public static final Item AMETHYST_HELMET = registerItem("amethyst_helmet",
             new AmethystArmorItem(ModArmorMaterials.AMETHYST, ArmorItem.Type.HELMET, new FabricItemSettings()));

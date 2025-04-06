@@ -39,6 +39,11 @@
   "item.steamcraft.fools_gold_leggings": "§6Fools Gold Leggings§r",
   "item.steamcraft.fools_gold_boots": "§6Fools Gold Boots§r",
 
+  "item.steamcraft.celestial_gearforged_helmet": "§6Celestial Gearforged Helmet§r",
+  "item.steamcraft.celestial_gearforged_chestplate": "§6Celestial Gearforged Chestplate§r",
+  "item.steamcraft.celestial_gearforged_leggings": "§6Celestial Gearforged Leggings§r",
+  "item.steamcraft.celestial_gearforged_boots": "§6Celestial Gearforged Boots§r",
+
   "item.steamcraft.amethyst_helmet": "Amethyst Helmet",
   "item.steamcraft.amethyst_chestplate": "Amethyst Chestplate",
   "item.steamcraft.amethyst_leggings": "Amethyst Leggings",
@@ -68,6 +73,13 @@
 
   "block.steamcraft.test_block_item": "Test BlockItem",
 
+
+  "effect.steamcraft.celestial_gearforged_effect": "Celestial Gearforged",
+  "effect.steamcraft.sticky_feat": "Sticky Feat",
+  "effect.steamcraft.disorient": "Disorient",
+  "effect.steamcraft.clear_positive_effect": "Positive Clear",
+  "effect.steamcraft.clear_negative_effect": "Negative Clear",
+  "effect.steamcraft.clear_neutral_effect": "Neutral Clear",
 
 
   "tooltip.steamcraft.pattern_recompiler.tooltip.shift_1": "§eShift Right§r or §eRight Click§r to Cycle Different States",

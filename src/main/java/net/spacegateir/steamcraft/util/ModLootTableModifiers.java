@@ -198,7 +198,7 @@ public class ModLootTableModifiers {
             if (TRADE_LLAMA_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.001f)) // Drops 0.10% of the time
+                        .conditionally(RandomChanceLootCondition.builder(0.1f)) // Drops 10% of the time
                         .conditionally(KilledByPlayerLootCondition.builder().build()) // Only when killed by player
                         .with(ItemEntry.builder(ModItems.FOOLS_GOLD_LEGGINGS_3))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
@@ -308,7 +308,7 @@ public class ModLootTableModifiers {
     private static void addLootToChests(LootTable.Builder tableBuilder) {
         LootPool.Builder poolBuilder = LootPool.builder()
                 .rolls(ConstantLootNumberProvider.create(1))
-                .conditionally(RandomChanceLootCondition.builder(0.01f)) // Drops 1% of the time
+                .conditionally(RandomChanceLootCondition.builder(0.10f)) // Drops 10% of the time
                 .with(ItemEntry.builder(ModItems.LUMINITE_SPARK))
                 .with(ItemEntry.builder(ModItems.OBSCURIUM_CRYSTAL))
                 .with(ItemEntry.builder(ModItems.FOOLS_GOLD_HELMET_4))

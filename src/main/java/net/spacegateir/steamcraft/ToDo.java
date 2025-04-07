@@ -16,4 +16,6 @@ public class ToDo {
 
     // add fools gold armor 1/4 collectabled to be converted to Ingots and make the Ingots repaire the steamcraft armor
 
+    // Finalise freaky bunny effect (art work)
+
 }

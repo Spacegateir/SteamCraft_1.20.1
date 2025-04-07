@@ -23,6 +23,12 @@ public class ModEffects {
     public static final StatusEffect DISORIENT = registerStatusEffect("disorient",
             new DisorientEffect(StatusEffectCategory.HARMFUL, 0x7140C5));
 
+    public static final StatusEffect FREAKY_BUNNY = registerStatusEffect("freaky_bunny",
+            new FreakyBunnyEffect(StatusEffectCategory.HARMFUL, 0xff6600));
+
+
+
+
     public static final StatusEffect CLEAR_POSITIVE_EFFECT = registerStatusEffect("clear_positive_effect",
             new ClearPositiveStatusEffect(StatusEffectCategory.HARMFUL, 0xA875F7));
 

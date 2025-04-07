@@ -11,7 +11,6 @@ import net.minecraft.entity.passive.VillagerEntity;
 import net.minecraft.entity.passive.IronGolemEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Vec3d;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -112,4 +111,6 @@ public class CelestialGearforgedEffect extends StatusEffect {
     public boolean canApplyUpdateEffect(int duration, int amplifier) {
         return true;
     }
+
+
 }

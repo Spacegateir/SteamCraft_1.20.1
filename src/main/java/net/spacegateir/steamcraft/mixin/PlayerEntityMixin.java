@@ -3,6 +3,8 @@ package net.spacegateir.steamcraft.mixin;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.particle.ParticleTypes;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.Vec3d;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -16,18 +18,39 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class PlayerEntityMixin {
 
     // Boost Swim Speed
-    @Inject(method = "tick", at = @At("HEAD"))
+    @Inject(method = "tick", at = @At("TAIL"))
     private void onTick(CallbackInfo ci) {
         PlayerEntity player = (PlayerEntity)(Object)this;
 
-        if (player.hasStatusEffect(ModEffects.CELESTIAL_GEARFORGES_EFFECT) && player.isSwimming()) {
-            MinecraftClient client = MinecraftClient.getInstance();
-            if (client.player != null && (client.player.input.movementForward != 0 || client.player.input.movementSideways != 0)) {
-                Vec3d direction = player.getRotationVec(1.0F).normalize();
-                double swimBoost = 0.1;
+        if (!player.getWorld().isClient() &&
+                player.hasStatusEffect(ModEffects.CELESTIAL_GEARFORGES_EFFECT) &&
+                player.isSwimming()) {
 
-                Vec3d newVelocity = player.getVelocity().add(direction.x * swimBoost, 0, direction.z * swimBoost);
-                player.setVelocity(newVelocity);
+            Vec3d direction = player.getRotationVec(1.0F).normalize();
+            double swimBoost = 0.15;
+
+            Vec3d newVelocity = player.getVelocity().add(direction.x * swimBoost, 0, direction.z * swimBoost);
+            player.setVelocity(newVelocity);
+            player.velocityModified = true;
+
+            ServerWorld serverWorld = (ServerWorld)player.getWorld();
+
+            for (int i = 0; i < 4; i++) {
+                double offsetX = -direction.x * i * 0.3;
+                double offsetY = player.getHeight() / 2.0;
+                double offsetZ = -direction.z * i * 0.3;
+
+                double px = player.getX() + offsetX;
+                double py = player.getY() + offsetY;
+                double pz = player.getZ() + offsetZ;
+
+                serverWorld.spawnParticles(
+                        ParticleTypes.BUBBLE_COLUMN_UP,
+                        px, py, pz,
+                        1,
+                        0, 0, 0,
+                        0.01
+                );
             }
         }
     }
@@ -40,9 +63,26 @@ public class PlayerEntityMixin {
         if (player.hasStatusEffect(ModEffects.CELESTIAL_GEARFORGES_EFFECT)) {
             Vec3d velocity = player.getVelocity();
             player.setVelocity(velocity.x, 0.8, velocity.z);
-            ci.cancel();
+
+            // Add particle burst at feet
+            if (!player.getWorld().isClient()) {
+                ServerWorld serverWorld = (ServerWorld) player.getWorld();
+
+                serverWorld.spawnParticles(
+                        ParticleTypes.CLOUD,     // You can change this to FLAME, FIREWORK, etc.
+                        player.getX(),
+                        player.getY(),
+                        player.getZ(),
+                        30,      // count
+                        0.2, 0.1, 0.2, // spread (X, Y, Z)
+                        0.02     // speed
+                );
+            }
+
+            ci.cancel(); // prevent vanilla jump
         }
     }
+
 
     // Modify fall damage 10 Blocks
     @Inject(method = "handleFallDamage", at = @At("HEAD"), cancellable = true)

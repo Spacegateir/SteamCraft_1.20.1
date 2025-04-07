@@ -39,8 +39,11 @@ public class CelestialGearforgedArmourItem extends ArmorItem implements GeoItem 
     private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
     private static final Map<ArmorMaterial, StatusEffectInstance> MATERIAL_TO_EFFECT_MAP =
             new ImmutableMap.Builder<ArmorMaterial, StatusEffectInstance>()
-                    .put(ModArmorMaterials.CELESTIAL_GEARFORGED, new StatusEffectInstance(ModEffects.CELESTIAL_GEARFORGES_EFFECT, 1000, 0))
+                    .put(ModArmorMaterials.CELESTIAL_GEARFORGED, new StatusEffectInstance(ModEffects.CELESTIAL_GEARFORGES_EFFECT, 1000, 0,
+                            false, false, false))
                     .build();
+
+
 
     private static final UUID SPEED_BOOST_UUID = UUID.fromString("e94b5c2e-6a6f-4f1e-9048-6d5f84a16b36");
     private static final UUID ATTACK_BOOST_UUID = UUID.fromString("c47d1a2e-6b2a-4d5b-9dbe-2e7f92f8364f");
@@ -95,6 +98,7 @@ public class CelestialGearforgedArmourItem extends ArmorItem implements GeoItem 
     public AnimatableInstanceCache getAnimatableInstanceCache() {
         return this.cache;
     }
+
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
         if (!world.isClient() && entity instanceof PlayerEntity player) {
@@ -105,6 +109,7 @@ public class CelestialGearforgedArmourItem extends ArmorItem implements GeoItem 
 
         super.inventoryTick(stack, world, entity, slot, selected);
     }
+
 
     private void evaluateArmorEffect(PlayerEntity player) {
         for (Map.Entry<ArmorMaterial, StatusEffectInstance> entry : MATERIAL_TO_EFFECT_MAP.entrySet()) {

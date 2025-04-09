@@ -86,13 +86,14 @@ public class CelestialGearforgedArmourItem extends ArmorItem implements GeoItem 
 
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-        controllers.add(new AnimationController(this, "controller", 0, this::predicate));
+        controllers.add(new AnimationController(this, "controller", 40, this::predicate));
     }
 
     private PlayState predicate(AnimationState animationState) {
-        animationState.getController().setAnimation(RawAnimation.begin().then("idle", Animation.LoopType.LOOP));
+        animationState.getController().setAnimation(RawAnimation.begin().then("animation.model.Idel", Animation.LoopType.LOOP));
         return PlayState.CONTINUE;
     }
+
 
     @Override
     public AnimatableInstanceCache getAnimatableInstanceCache() {

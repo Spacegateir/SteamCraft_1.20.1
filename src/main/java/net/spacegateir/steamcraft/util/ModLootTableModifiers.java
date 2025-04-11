@@ -262,7 +262,7 @@ public class ModLootTableModifiers {
                         .conditionally(RandomChanceLootCondition.builder(0.1f)) // 10% drop chance
                         .conditionally(KilledByPlayerLootCondition.builder().build()) // Only when killed by player
                         .with(ItemEntry.builder(ModItems.AQUARION_SHARD))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 3.0f)).build());
 
                 tableBuilder.pool(poolBuilder.build());
             }
@@ -306,19 +306,43 @@ public class ModLootTableModifiers {
     }
 
     private static void addLootToChests(LootTable.Builder tableBuilder) {
-        LootPool.Builder poolBuilder = LootPool.builder()
+        LootPool.Builder poolBuilder_gem = LootPool.builder()
                 .rolls(ConstantLootNumberProvider.create(1))
                 .conditionally(RandomChanceLootCondition.builder(0.10f)) // Drops 10% of the time
                 .with(ItemEntry.builder(ModItems.LUMINITE_SPARK))
                 .with(ItemEntry.builder(ModItems.OBSCURIUM_CRYSTAL))
-                .with(ItemEntry.builder(ModItems.FOOLS_GOLD_HELMET_4))
-                .with(ItemEntry.builder(ModItems.FOOLS_GOLD_CHESTPLATE_4))
-                .with(ItemEntry.builder(ModItems.FOOLS_GOLD_LEGGINGS_4))
-                .with(ItemEntry.builder(ModItems.FOOLS_GOLD_BOOTS_4))
-
                 .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
 
-        tableBuilder.pool(poolBuilder.build());
+        LootPool.Builder poolBuilder_helmet = LootPool.builder()
+                .rolls(ConstantLootNumberProvider.create(1))
+                .conditionally(RandomChanceLootCondition.builder(0.01f)) // Drops 1% of the time
+                .with(ItemEntry.builder(ModItems.FOOLS_GOLD_HELMET_4))
+                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+
+        LootPool.Builder poolBuilder_chestplate = LootPool.builder()
+                .rolls(ConstantLootNumberProvider.create(1))
+                .conditionally(RandomChanceLootCondition.builder(0.01f)) // Drops 1% of the time
+                .with(ItemEntry.builder(ModItems.FOOLS_GOLD_CHESTPLATE_4))
+                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+
+        LootPool.Builder poolBuilder_leggings = LootPool.builder()
+                .rolls(ConstantLootNumberProvider.create(1))
+                .conditionally(RandomChanceLootCondition.builder(0.01f)) // Drops 1% of the time
+                .with(ItemEntry.builder(ModItems.FOOLS_GOLD_LEGGINGS_4))
+                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+
+        LootPool.Builder poolBuilder_boots = LootPool.builder()
+                .rolls(ConstantLootNumberProvider.create(1))
+                .conditionally(RandomChanceLootCondition.builder(0.01f)) // Drops 1% of the time
+                .with(ItemEntry.builder(ModItems.FOOLS_GOLD_BOOTS_4))
+                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+
+
+        tableBuilder.pool(poolBuilder_gem.build());
+        tableBuilder.pool(poolBuilder_helmet.build());
+        tableBuilder.pool(poolBuilder_chestplate.build());
+        tableBuilder.pool(poolBuilder_leggings.build());
+        tableBuilder.pool(poolBuilder_boots.build());
     }
 
 

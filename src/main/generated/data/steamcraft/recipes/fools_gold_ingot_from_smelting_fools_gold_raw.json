@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "group": "fools_gold",
+  "ingredient": {
+    "item": "steamcraft:fools_gold_raw"
+  },
+  "result": "steamcraft:fools_gold_ingot"
+}

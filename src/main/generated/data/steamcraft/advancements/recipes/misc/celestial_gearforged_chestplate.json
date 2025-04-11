@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_test_item": {
+    "has_fools_gold_chestplate": {
       "conditions": {
         "items": [
           {
             "items": [
-              "steamcraft:test_item"
+              "steamcraft:fools_gold_chestplate"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:test_block"
+        "recipe": "minecraft:celestial_gearforged_chestplate"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_test_item",
+      "has_fools_gold_chestplate",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:test_block"
+      "minecraft:celestial_gearforged_chestplate"
     ]
   },
   "sends_telemetry_event": false

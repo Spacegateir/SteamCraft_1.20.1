@@ -28,6 +28,10 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.SILVER_COIN, Models.GENERATED);
         itemModelGenerator.register(ModItems.GOLD_COIN, Models.GENERATED);
 
+        itemModelGenerator.register(ModItems.FOOLS_GOLD_SCRAP, Models.GENERATED);
+        itemModelGenerator.register(ModItems.FOOLS_GOLD_RAW, Models.GENERATED);
+        itemModelGenerator.register(ModItems.FOOLS_GOLD_INGOT, Models.GENERATED);
+
         itemModelGenerator.register(ModItems.FOOLS_GOLD_HELMET_1, Models.GENERATED);
         itemModelGenerator.register(ModItems.FOOLS_GOLD_HELMET_2, Models.GENERATED);
         itemModelGenerator.register(ModItems.FOOLS_GOLD_HELMET_3, Models.GENERATED);

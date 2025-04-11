@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "steamcraft:fools_gold_boots"
+    },
+    "3": {
+      "item": "steamcraft:divinitite_alloy_ingot"
+    }
+  },
+  "pattern": [
+    "313",
+    "3 3"
+  ],
+  "result": {
+    "item": "steamcraft:celestial_gearforged_boots"
+  },
+  "show_notification": true
+}

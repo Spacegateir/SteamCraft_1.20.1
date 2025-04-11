@@ -18,19 +18,19 @@ import java.util.function.Supplier;
 public enum ModArmorMaterials implements ArmorMaterial
 {
 
-    FOOLS_GOLD("fools_gold", 33, Util.make(new EnumMap(ArmorItem.Type.class), map -> {
+    FOOLS_GOLD("fools_gold", 100, Util.make(new EnumMap(ArmorItem.Type.class), map -> {
         map.put(ArmorItem.Type.BOOTS, 3);
         map.put(ArmorItem.Type.LEGGINGS, 6);
         map.put(ArmorItem.Type.CHESTPLATE, 8);
         map.put(ArmorItem.Type.HELMET, 3);
-    }), 25, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 2.0F, 0.0F, () -> Ingredient.ofItems(Items.GOLD_INGOT)),
+    }), 25, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 2.0F, 0.0F, () -> Ingredient.ofItems(ModItems.FOOLS_GOLD_INGOT)),
 
     CELESTIAL_GEARFORGED("celestial_gearforged", 200, Util.make(new EnumMap(ArmorItem.Type.class), map -> {
         map.put(ArmorItem.Type.BOOTS, 8);
         map.put(ArmorItem.Type.LEGGINGS, 14);
         map.put(ArmorItem.Type.CHESTPLATE, 18);
         map.put(ArmorItem.Type.HELMET, 8);
-    }), 1000, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 8.0F, 1.0F, () -> Ingredient.ofItems(Items.NETHER_STAR)),
+    }), 1000, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 8.0F, 1.0F, () -> Ingredient.ofItems(ModItems.DIVINITITE_ALLOY_INGOT)),
 
     AMETHYST("amethyst", 15, Util.make(new EnumMap(ArmorItem.Type.class), map -> {
         map.put(ArmorItem.Type.BOOTS, 2);

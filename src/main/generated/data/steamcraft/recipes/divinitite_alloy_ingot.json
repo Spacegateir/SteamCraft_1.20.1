@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "steamcraft:fools_gold_ingot"
+    },
+    "2": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "pattern": [
+    "222",
+    "212",
+    "222"
+  ],
+  "result": {
+    "item": "steamcraft:divinitite_alloy_ingot"
+  },
+  "show_notification": true
+}

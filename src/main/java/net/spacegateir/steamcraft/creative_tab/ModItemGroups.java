@@ -28,6 +28,11 @@ public class ModItemGroups {
                         entries.add(ModItems.LUMINITE_SPARK);
                         entries.add(ModItems.OBSCURIUM_CRYSTAL);
 
+                        entries.add(ModItems.FOOLS_GOLD_SCRAP);
+                        entries.add(ModItems.FOOLS_GOLD_RAW);
+                        entries.add(ModItems.FOOLS_GOLD_INGOT);
+                        entries.add(ModItems.DIVINITITE_ALLOY_INGOT);
+
                         entries.add(ModItems.FOOLS_GOLD_HELMET);
                         entries.add(ModItems.FOOLS_GOLD_CHESTPLATE);
                         entries.add(ModItems.FOOLS_GOLD_LEGGINGS);

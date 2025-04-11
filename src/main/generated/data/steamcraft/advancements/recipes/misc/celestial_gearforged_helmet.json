@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_test_block": {
+    "has_fools_gold_helmet": {
       "conditions": {
         "items": [
           {
             "items": [
-              "steamcraft:test_block"
+              "steamcraft:fools_gold_helmet"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:test_item"
+        "recipe": "minecraft:celestial_gearforged_helmet"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_test_block",
+      "has_fools_gold_helmet",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:test_item"
+      "minecraft:celestial_gearforged_helmet"
     ]
   },
   "sends_telemetry_event": false

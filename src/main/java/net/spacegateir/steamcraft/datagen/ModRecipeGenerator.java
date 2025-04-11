@@ -14,6 +14,7 @@ import net.minecraft.util.Identifier;
 import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.item.ModItems;
 
+import java.util.List;
 import java.util.Map;
 import java.util.function.Consumer;
 
@@ -25,7 +26,12 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
 
-        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.TEST_ITEM, RecipeCategory.MISC, ModBlocks.TEST_BLOCK);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.FOOLS_GOLD_SCRAP, RecipeCategory.MISC, ModItems.FOOLS_GOLD_RAW);
+
+        offerSmelting(exporter, List.of(ModItems.FOOLS_GOLD_RAW), RecipeCategory.MISC, ModItems.FOOLS_GOLD_INGOT,
+                1.00f, 200, "fools_gold");
+        offerBlasting(exporter, List.of(ModItems.FOOLS_GOLD_RAW), RecipeCategory.MISC, ModItems.FOOLS_GOLD_INGOT,
+                1.00f, 100, "fools_gold");
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SILVER_COIN, 1)
                 .input(ModItems.COPPER_COIN, 9)
@@ -233,6 +239,52 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.FOOLS_GOLD_BOOTS_3), conditionsFromItem(ModItems.FOOLS_GOLD_BOOTS_3))
                 .criterion(hasItem(ModItems.FOOLS_GOLD_BOOTS_4), conditionsFromItem(ModItems.FOOLS_GOLD_BOOTS_4))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.FOOLS_GOLD_BOOTS)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CELESTIAL_GEARFORGED_HELMET)
+                .pattern("323")
+                .pattern("313")
+                .input('1', ModItems.FOOLS_GOLD_HELMET)
+                .input('2', ModItems.OBSCURIUM_CRYSTAL)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .criterion(hasItem(ModItems.FOOLS_GOLD_HELMET), conditionsFromItem(ModItems.FOOLS_GOLD_HELMET))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.CELESTIAL_GEARFORGED_HELMET)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CELESTIAL_GEARFORGED_CHESTPLATE)
+                .pattern("313")
+                .pattern("323")
+                .pattern("232")
+                .input('1', ModItems.FOOLS_GOLD_CHESTPLATE)
+                .input('2', ModItems.OBSCURIUM_CRYSTAL)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .criterion(hasItem(ModItems.FOOLS_GOLD_CHESTPLATE), conditionsFromItem(ModItems.FOOLS_GOLD_CHESTPLATE))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.CELESTIAL_GEARFORGED_CHESTPLATE)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CELESTIAL_GEARFORGED_LEGGINGS)
+                .pattern("333")
+                .pattern("212")
+                .pattern("3 3")
+                .input('1', ModItems.FOOLS_GOLD_LEGGINGS)
+                .input('2', ModItems.OBSCURIUM_CRYSTAL)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .criterion(hasItem(ModItems.FOOLS_GOLD_LEGGINGS), conditionsFromItem(ModItems.FOOLS_GOLD_LEGGINGS))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.CELESTIAL_GEARFORGED_LEGGINGS)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CELESTIAL_GEARFORGED_BOOTS)
+                .pattern("313")
+                .pattern("3 3")
+                .input('1', ModItems.FOOLS_GOLD_BOOTS)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .criterion(hasItem(ModItems.FOOLS_GOLD_BOOTS), conditionsFromItem(ModItems.FOOLS_GOLD_BOOTS))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.CELESTIAL_GEARFORGED_BOOTS)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.DIVINITITE_ALLOY_INGOT)
+                .pattern("222")
+                .pattern("212")
+                .pattern("222")
+                .input('1', ModItems.FOOLS_GOLD_INGOT)
+                .input('2', Items.NETHERITE_INGOT)
+                .criterion(hasItem(ModItems.FOOLS_GOLD_INGOT), conditionsFromItem(ModItems.FOOLS_GOLD_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.DIVINITITE_ALLOY_INGOT)));
 
 
     }

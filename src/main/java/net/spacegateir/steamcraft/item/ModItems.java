@@ -13,8 +13,7 @@ import net.spacegateir.steamcraft.Steamcraft;
 import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.item.armor.AmethystArmorItem;
 import net.spacegateir.steamcraft.item.armor.CelestialGearforgedArmourItem;
-import net.spacegateir.steamcraft.item.custom.FoolsGoldArmourItem;
-import net.spacegateir.steamcraft.item.custom.ModArmorItem;
+import net.spacegateir.steamcraft.item.armor.FoolsGoldArmourItem;
 import net.spacegateir.steamcraft.item.custom.ToolTipItem;
 import net.spacegateir.steamcraft.item.custom.SwapItem;
 
@@ -29,6 +28,15 @@ public class ModItems {
             new Item(new FabricItemSettings().rarity(Rarity.UNCOMMON)));
     public static final Item GOLD_COIN = registerItem("gold_coin",
             new Item(new FabricItemSettings().rarity(Rarity.UNCOMMON)));
+
+    public static final Item FOOLS_GOLD_SCRAP = registerItem("fools_gold_scrap",
+            new Item(new FabricItemSettings().rarity(Rarity.RARE)));
+    public static final Item FOOLS_GOLD_RAW = registerItem("fools_gold_raw",
+            new Item(new FabricItemSettings().rarity(Rarity.RARE)));
+    public static final Item FOOLS_GOLD_INGOT = registerItem("fools_gold_ingot",
+            new Item(new FabricItemSettings()));
+    public static final Item DIVINITITE_ALLOY_INGOT = registerItem("divinitite_alloy_ingot",
+            new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
 
     public static final Item PATTERN_RECOMPILER = registerItem("pattern_recompiler",
             new SwapItem(new FabricItemSettings()));

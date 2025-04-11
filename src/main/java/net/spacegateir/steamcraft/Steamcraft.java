@@ -2,6 +2,7 @@ package net.spacegateir.steamcraft;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.creative_tab.ModItemGroups;
 import net.spacegateir.steamcraft.creative_tab.ModItemRewardsGroups;
@@ -32,6 +33,7 @@ public class Steamcraft implements ModInitializer {
 		ModLootTableModifiers.modifyLootTables();
 
 		GeckoLib.initialize();
+
 
 
 

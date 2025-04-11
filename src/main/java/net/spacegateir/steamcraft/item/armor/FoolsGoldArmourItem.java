@@ -16,12 +16,18 @@ import java.util.Map;
 public class FoolsGoldArmourItem extends ArmorItem {
     private static final Map<ArmorMaterial, StatusEffectInstance> MATERIAL_TO_EFFECT_MAP =
             new ImmutableMap.Builder<ArmorMaterial, StatusEffectInstance>()
-                    .put(ModArmorMaterials.FOOLS_GOLD, new StatusEffectInstance(StatusEffects.REGENERATION, 1000, 2))
+                    .put(ModArmorMaterials.FOOLS_GOLD, new StatusEffectInstance(StatusEffects.REGENERATION, 100, 2))
                     .build();
+
+
 
     public FoolsGoldArmourItem(ArmorMaterial material, Type type, Settings settings) {
         super(material, type, settings);
     }
+
+    public static boolean isUsable(ItemStack stack) {return stack.getDamage() < stack.getMaxDamage() - 1;
+    }
+
 
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {

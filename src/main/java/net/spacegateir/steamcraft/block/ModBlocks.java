@@ -69,6 +69,11 @@ public class ModBlocks {
             new AetherBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(50,2400)
                     .nonOpaque().velocityMultiplier(1.25F).mapColor(MapColor.PINK)));
 
+    public static final Block FOOLS_GOLD_BLOCK = registerBlock("fools_gold_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK)));
+    public static final Block FOOLS_GOLD_RAW_BLOCK = registerBlock("fools_gold_raw_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK)));
+
     public static final Block TEST_BLOCK_ITEM = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "test_block_item"),
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).resistance(50.0F).hardness(50.0F)));

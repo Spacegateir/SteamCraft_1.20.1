@@ -7,12 +7,18 @@
     },
     "2": {
       "item": "minecraft:netherite_ingot"
+    },
+    "3": {
+      "item": "minecraft:nether_star"
+    },
+    "4": {
+      "item": "minecraft:gold_block"
     }
   },
   "pattern": [
-    "222",
-    "212",
-    "222"
+    "424",
+    "313",
+    "424"
   ],
   "result": {
     "item": "steamcraft:divinitite_alloy_ingot"

@@ -15,6 +15,7 @@ import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.item.armor.AmethystArmorItem;
 import net.spacegateir.steamcraft.item.armor.CelestialGearforgedArmourItem;
 import net.spacegateir.steamcraft.item.armor.FoolsGoldArmourItem;
+import net.spacegateir.steamcraft.item.custom.GlintItem;
 import net.spacegateir.steamcraft.item.custom.ToolTipItem;
 import net.spacegateir.steamcraft.item.custom.SwapItem;
 
@@ -24,11 +25,11 @@ public class ModItems {
             new Item(new FabricItemSettings()));
 
     public static final Item COPPER_COIN = registerItem("copper_coin",
-            new Item(new FabricItemSettings().rarity(Rarity.UNCOMMON)));
+            new GlintItem(new FabricItemSettings().rarity(Rarity.UNCOMMON)));
     public static final Item SILVER_COIN = registerItem("silver_coin",
-            new Item(new FabricItemSettings().rarity(Rarity.UNCOMMON)));
+            new GlintItem(new FabricItemSettings().rarity(Rarity.UNCOMMON)));
     public static final Item GOLD_COIN = registerItem("gold_coin",
-            new Item(new FabricItemSettings().rarity(Rarity.UNCOMMON)));
+            new GlintItem(new FabricItemSettings().rarity(Rarity.UNCOMMON)));
 
     public static final Item FOOLS_GOLD_SCRAP = registerItem("fools_gold_scrap",
             new Item(new FabricItemSettings().rarity(Rarity.RARE)));

@@ -2,6 +2,9 @@ package net.spacegateir.steamcraft;
 
 public class ToDo {
 
+    // Keep a record for the mods Update Log
+    // Keep a Wiki Record so people know how to play the mod
+
     // MODIFY THE CRAFTTING RECIPE FOR THE GOD ARMOR
 
     //ON THE CURSED FORGE SITE EXPALIN HOW TO PLAY THE MOD
@@ -21,6 +24,12 @@ public class ToDo {
     // add loot box for amathest armor
 
     // ADDINONAL CRAFTING RECIPIES FOR (Tuff)
+
+    // Add armor mould template to make copies of the fools gold armor
+    // add moulds to chest loot table
+
+    // make dragon egg with 8 netherstars craft divine egg
+    // make divine egg drop halo when placed on the ground slowly cracks over 1hr then turns into a halo
 
     
 

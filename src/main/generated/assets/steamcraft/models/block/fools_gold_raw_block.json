@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "steamcraft:block/fools_gold_raw_block"
+  }
+}

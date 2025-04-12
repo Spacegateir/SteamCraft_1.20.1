@@ -18,7 +18,7 @@ import java.util.function.Supplier;
 public enum ModArmorMaterials implements ArmorMaterial
 {
 
-    FOOLS_GOLD("fools_gold", 100, Util.make(new EnumMap(ArmorItem.Type.class), map -> {
+    FOOLS_GOLD("fools_gold", 133, Util.make(new EnumMap(ArmorItem.Type.class), map -> {
         map.put(ArmorItem.Type.BOOTS, 3);
         map.put(ArmorItem.Type.LEGGINGS, 6);
         map.put(ArmorItem.Type.CHESTPLATE, 8);

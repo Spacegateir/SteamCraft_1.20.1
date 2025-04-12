@@ -60,12 +60,6 @@
       "predicate": {
         "trim_type": 1.0
       }
-    },
-    {
-      "predicate": {
-        "broken": 1.0
-      },
-      "model": "steamcraft:item/fools_gold_boots_broken"
     }
   ],
   "textures": {

@@ -8,33 +8,53 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NbtCompound;
+import net.minecraft.text.Text;
 import net.minecraft.world.World;
 import net.spacegateir.steamcraft.item.ModArmorMaterials;
 
 import java.util.Map;
 
 public class FoolsGoldArmourItem extends ArmorItem {
+    private static final int[] WARNING_THRESHOLDS = {75, 50, 25, 20, 15, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
     private static final Map<ArmorMaterial, StatusEffectInstance> MATERIAL_TO_EFFECT_MAP =
             new ImmutableMap.Builder<ArmorMaterial, StatusEffectInstance>()
-                    .put(ModArmorMaterials.FOOLS_GOLD, new StatusEffectInstance(StatusEffects.REGENERATION, 100, 2))
+                    .put(ModArmorMaterials.FOOLS_GOLD, new StatusEffectInstance(StatusEffects.REGENERATION, 100, 1))
                     .build();
-
-
 
     public FoolsGoldArmourItem(ArmorMaterial material, Type type, Settings settings) {
         super(material, type, settings);
     }
 
-    public static boolean isUsable(ItemStack stack) {return stack.getDamage() < stack.getMaxDamage() - 1;
-    }
-
-
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
-        if (!world.isClient() && entity instanceof PlayerEntity player) {
-            if(hasFullSuitOfArmorOn(player)) {
-                evaluateArmorEffect(player);
+        if (!world.isClient && entity instanceof PlayerEntity player) {
+            NbtCompound nbt = stack.getOrCreateNbt();
+            int maxDamage = stack.getMaxDamage();
+            int currentDamage = stack.getDamage();
+            int remainingDurability = maxDamage - currentDamage;
+            int percent = (int) ((remainingDurability / (float) maxDamage) * 100);
+
+            for (int threshold : WARNING_THRESHOLDS) {
+                String key = "warned_" + threshold;
+                if (percent <= threshold && !nbt.getBoolean(key)) {
+                    nbt.putBoolean(key, true);
+
+                    Text warning = Text.literal("⚠ Your Armor is at " + percent + "% — repair it before it breaks. ⚠");
+                    player.sendMessage(warning, true); // popup
+                    player.sendMessage(warning);       // chat
+                }
             }
+
+            // Reset warnings if durability is restored
+            if (percent > 75) {
+                for (int threshold : WARNING_THRESHOLDS) {
+                    nbt.remove("warned_" + threshold);
+                }
+            }
+
+            // Apply effects if full set is worn
+            evaluateArmorEffect(player);
         }
 
         super.inventoryTick(stack, world, entity, slot, selected);
@@ -45,10 +65,9 @@ public class FoolsGoldArmourItem extends ArmorItem {
             ArmorMaterial mapArmorMaterial = entry.getKey();
             StatusEffectInstance mapStatusEffect = entry.getValue();
 
-            if (hasCorrectArmorOn(mapArmorMaterial, player)) {
+            if (hasFullSuitOfArmorOn(player) && hasCorrectArmorOn(mapArmorMaterial, player)) {
                 addStatusEffectForMaterial(player, mapStatusEffect);
                 break;
-
             }
         }
     }
@@ -57,33 +76,26 @@ public class FoolsGoldArmourItem extends ArmorItem {
         boolean hasPlayerEffectAlready = player.hasStatusEffect(mapStatusEffect.getEffectType());
 
         if (!hasPlayerEffectAlready) {
-            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect.getEffectType(),
-                    mapStatusEffect.getDuration(), mapStatusEffect.getAmplifier()));
+            player.addStatusEffect(new StatusEffectInstance(
+                    mapStatusEffect.getEffectType(),
+                    mapStatusEffect.getDuration(),
+                    mapStatusEffect.getAmplifier()));
         }
     }
 
-    private boolean hasCorrectArmorOn(ArmorMaterial mapArmorMaterial, PlayerEntity player) {
+    private boolean hasCorrectArmorOn(ArmorMaterial material, PlayerEntity player) {
         for (ItemStack armorStack : player.getArmorItems()) {
-            if(!(armorStack.getItem() instanceof ArmorItem)) {
+            if (!(armorStack.getItem() instanceof ArmorItem armorItem) || armorItem.getMaterial() != material) {
                 return false;
             }
         }
-
-        ArmorItem boots = ((ArmorItem) player.getInventory().getArmorStack(0).getItem());
-        ArmorItem leggings = ((ArmorItem) player.getInventory().getArmorStack(1).getItem());
-        ArmorItem chestplate = ((ArmorItem) player.getInventory().getArmorStack(2).getItem());
-        ArmorItem helmet = ((ArmorItem) player.getInventory().getArmorStack(3).getItem());
-
-        return helmet.getMaterial() == mapArmorMaterial && leggings.getMaterial() == mapArmorMaterial &&
-                chestplate.getMaterial() == mapArmorMaterial && boots.getMaterial() == mapArmorMaterial;
+        return true;
     }
 
     private boolean hasFullSuitOfArmorOn(PlayerEntity player) {
-        ItemStack boots = player.getInventory().getArmorStack(0);
-        ItemStack leggings = player.getInventory().getArmorStack(1);
-        ItemStack chestplate = player.getInventory().getArmorStack(2);
-        ItemStack helmet = player.getInventory().getArmorStack(3);
-
-        return !boots.isEmpty() &&!leggings.isEmpty() &&!chestplate.isEmpty() &&!helmet.isEmpty();
+        return !player.getInventory().getArmorStack(0).isEmpty() &&
+                !player.getInventory().getArmorStack(1).isEmpty() &&
+                !player.getInventory().getArmorStack(2).isEmpty() &&
+                !player.getInventory().getArmorStack(3).isEmpty();
     }
 }

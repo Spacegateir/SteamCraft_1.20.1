@@ -2,6 +2,7 @@ package net.spacegateir.steamcraft.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.block.Block;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -55,55 +56,57 @@ public class ModItems {
             new ToolTipItem(new FabricItemSettings()));
 
     public static final Item FOOLS_GOLD_HELMET_1 = registerItem("fools_gold_helmet_1-4",
-            new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
+            new Item(new FabricItemSettings().rarity(Rarity.EPIC).fireproof()));
     public static final Item FOOLS_GOLD_HELMET_2 = registerItem("fools_gold_helmet_2-4",
-            new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
+            new Item(new FabricItemSettings().rarity(Rarity.EPIC).fireproof()));
     public static final Item FOOLS_GOLD_HELMET_3 = registerItem("fools_gold_helmet_3-4",
-            new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
+            new Item(new FabricItemSettings().rarity(Rarity.EPIC).fireproof()));
     public static final Item FOOLS_GOLD_HELMET_4 = registerItem("fools_gold_helmet_4-4",
-            new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
+            new Item(new FabricItemSettings().rarity(Rarity.EPIC).fireproof()));
     public static final Item FOOLS_GOLD_CHESTPLATE_1 = registerItem("fools_gold_chestplate_1-4",
-            new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
+            new Item(new FabricItemSettings().rarity(Rarity.EPIC).fireproof()));
     public static final Item FOOLS_GOLD_CHESTPLATE_2 = registerItem("fools_gold_chestplate_2-4",
-            new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
+            new Item(new FabricItemSettings().rarity(Rarity.EPIC).fireproof()));
     public static final Item FOOLS_GOLD_CHESTPLATE_3 = registerItem("fools_gold_chestplate_3-4",
-            new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
+            new Item(new FabricItemSettings().rarity(Rarity.EPIC).fireproof()));
     public static final Item FOOLS_GOLD_CHESTPLATE_4 = registerItem("fools_gold_chestplate_4-4",
-            new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
+            new Item(new FabricItemSettings().rarity(Rarity.EPIC).fireproof()));
     public static final Item FOOLS_GOLD_LEGGINGS_1 = registerItem("fools_gold_leggings_1-4",
-            new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
+            new Item(new FabricItemSettings().rarity(Rarity.EPIC).fireproof()));
     public static final Item FOOLS_GOLD_LEGGINGS_2 = registerItem("fools_gold_leggings_2-4",
-            new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
+            new Item(new FabricItemSettings().rarity(Rarity.EPIC).fireproof()));
     public static final Item FOOLS_GOLD_LEGGINGS_3 = registerItem("fools_gold_leggings_3-4",
-            new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
+            new Item(new FabricItemSettings().rarity(Rarity.EPIC).fireproof()));
     public static final Item FOOLS_GOLD_LEGGINGS_4 = registerItem("fools_gold_leggings_4-4",
-            new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
+            new Item(new FabricItemSettings().rarity(Rarity.EPIC).fireproof()));
     public static final Item FOOLS_GOLD_BOOTS_1 = registerItem("fools_gold_boots_1-4",
-            new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
+            new Item(new FabricItemSettings().rarity(Rarity.EPIC).fireproof()));
     public static final Item FOOLS_GOLD_BOOTS_2 = registerItem("fools_gold_boots_2-4",
-            new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
+            new Item(new FabricItemSettings().rarity(Rarity.EPIC).fireproof()));
     public static final Item FOOLS_GOLD_BOOTS_3 = registerItem("fools_gold_boots_3-4",
-            new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
+            new Item(new FabricItemSettings().rarity(Rarity.EPIC).fireproof()));
     public static final Item FOOLS_GOLD_BOOTS_4 = registerItem("fools_gold_boots_4-4",
-            new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
+            new Item(new FabricItemSettings().rarity(Rarity.EPIC).fireproof()));
 
     public static final Item FOOLS_GOLD_HELMET = registerItem("fools_gold_helmet",
-            new FoolsGoldArmourItem(ModArmorMaterials.FOOLS_GOLD, ArmorItem.Type.HELMET, new FabricItemSettings()));
+            new FoolsGoldArmourItem(ModArmorMaterials.FOOLS_GOLD, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof()));
     public static final Item FOOLS_GOLD_CHESTPLATE = registerItem("fools_gold_chestplate",
-            new FoolsGoldArmourItem(ModArmorMaterials.FOOLS_GOLD, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
+            new FoolsGoldArmourItem(ModArmorMaterials.FOOLS_GOLD, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().fireproof()));
     public static final Item FOOLS_GOLD_LEGGINGS = registerItem("fools_gold_leggings",
-            new FoolsGoldArmourItem(ModArmorMaterials.FOOLS_GOLD, ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
+            new FoolsGoldArmourItem(ModArmorMaterials.FOOLS_GOLD, ArmorItem.Type.LEGGINGS, new FabricItemSettings().fireproof()));
     public static final Item FOOLS_GOLD_BOOTS = registerItem("fools_gold_boots",
-            new FoolsGoldArmourItem(ModArmorMaterials.FOOLS_GOLD, ArmorItem.Type.BOOTS, new FabricItemSettings()));
+            new FoolsGoldArmourItem(ModArmorMaterials.FOOLS_GOLD, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof()));
+
+
 
     public static final Item CELESTIAL_GEARFORGED_HELMET = registerItem("celestial_gearforged_helmet",
-            new CelestialGearforgedArmourItem(ModArmorMaterials.CELESTIAL_GEARFORGED, ArmorItem.Type.HELMET, new FabricItemSettings()));
+            new CelestialGearforgedArmourItem(ModArmorMaterials.CELESTIAL_GEARFORGED, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof()));
     public static final Item CELESTIAL_GEARFORGED_CHESTPLATE = registerItem("celestial_gearforged_chestplate",
-            new CelestialGearforgedArmourItem(ModArmorMaterials.CELESTIAL_GEARFORGED, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
+            new CelestialGearforgedArmourItem(ModArmorMaterials.CELESTIAL_GEARFORGED, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().fireproof()));
     public static final Item CELESTIAL_GEARFORGED_LEGGINGS = registerItem("celestial_gearforged_leggings",
-            new CelestialGearforgedArmourItem(ModArmorMaterials.CELESTIAL_GEARFORGED, ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
+            new CelestialGearforgedArmourItem(ModArmorMaterials.CELESTIAL_GEARFORGED, ArmorItem.Type.LEGGINGS, new FabricItemSettings().fireproof()));
     public static final Item CELESTIAL_GEARFORGED_BOOTS = registerItem("celestial_gearforged_boots",
-            new CelestialGearforgedArmourItem(ModArmorMaterials.CELESTIAL_GEARFORGED, ArmorItem.Type.BOOTS, new FabricItemSettings()));
+            new CelestialGearforgedArmourItem(ModArmorMaterials.CELESTIAL_GEARFORGED, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof()));
 
     public static final Item AMETHYST_HELMET = registerItem("amethyst_helmet",
             new AmethystArmorItem(ModArmorMaterials.AMETHYST, ArmorItem.Type.HELMET, new FabricItemSettings()));

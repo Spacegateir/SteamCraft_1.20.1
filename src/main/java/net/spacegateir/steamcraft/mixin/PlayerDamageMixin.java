@@ -3,7 +3,6 @@ package net.spacegateir.steamcraft.mixin;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.sound.SoundCategory;
@@ -25,9 +24,9 @@ public class PlayerDamageMixin {
         if (!player.getWorld().isClient && isWearingFullFoolsGold(player)) {
             float rng = player.getRandom().nextFloat();
 
-            if (rng < 0.001f) { // 0.10% for raw
+            if (rng < 0.003f) { // 0.10% for raw
                 flingScrap(player, ModItems.FOOLS_GOLD_RAW);
-            } else if (rng < 0.01f) { // 1% for scrap
+            } else if (rng < 0.05f) { // 1% for scrap
                 flingScrap(player, ModItems.FOOLS_GOLD_SCRAP);
             }
         }

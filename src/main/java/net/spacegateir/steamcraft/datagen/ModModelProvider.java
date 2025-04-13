@@ -8,6 +8,7 @@ import net.minecraft.data.client.Models;
 import net.minecraft.item.ArmorItem;
 import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.item.ModItems;
+import net.spacegateir.steamcraft.item.ModRewardItems;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -64,20 +65,15 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CELESTIAL_GEARFORGED_LEGGINGS, Models.GENERATED);
         itemModelGenerator.register(ModItems.CELESTIAL_GEARFORGED_BOOTS, Models.GENERATED);
 
-        itemModelGenerator.register(ModItems.AMETHYST_HELMET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.AMETHYST_CHESTPLATE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.AMETHYST_LEGGINGS, Models.GENERATED);
-        itemModelGenerator.register(ModItems.AMETHYST_BOOTS, Models.GENERATED);
+        itemModelGenerator.register(ModRewardItems.AMETHYST_HELMET, Models.GENERATED);
+        itemModelGenerator.register(ModRewardItems.AMETHYST_CHESTPLATE, Models.GENERATED);
+        itemModelGenerator.register(ModRewardItems.AMETHYST_LEGGINGS, Models.GENERATED);
+        itemModelGenerator.register(ModRewardItems.AMETHYST_BOOTS, Models.GENERATED);
 
-        itemModelGenerator.register(ModItems.WOLF_HELMET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.WOLF_CHESTPLATE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.WOLF_LEGGINGS, Models.GENERATED);
-        itemModelGenerator.register(ModItems.WOLF_BOOTS, Models.GENERATED);
-
-        itemModelGenerator.register(ModItems.WOLF_FURY_HELMET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.WOLF_FURY_CHESTPLATE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.WOLF_FURY_LEGGINGS, Models.GENERATED);
-        itemModelGenerator.register(ModItems.WOLF_FURY_BOOTS, Models.GENERATED);
+        itemModelGenerator.register(ModRewardItems.WOLF_FURY_HELMET, Models.GENERATED);
+        itemModelGenerator.register(ModRewardItems.WOLF_FURY_CHESTPLATE, Models.GENERATED);
+        itemModelGenerator.register(ModRewardItems.WOLF_FURY_LEGGINGS, Models.GENERATED);
+        itemModelGenerator.register(ModRewardItems.WOLF_FURY_BOOTS, Models.GENERATED);
 
 
 

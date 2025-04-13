@@ -5,7 +5,11 @@ public class ToDo {
     // Keep a record for the mods Update Log
     // Keep a Wiki Record so people know how to play the mod
 
+    // fix the wold fury armor textures
+    // wolf armor test on server
+
     // MODIFY THE CRAFTTING RECIPE FOR THE GOD ARMOR
+    // God armor items texture
 
     //ON THE CURSED FORGE SITE EXPALIN HOW TO PLAY THE MOD
 

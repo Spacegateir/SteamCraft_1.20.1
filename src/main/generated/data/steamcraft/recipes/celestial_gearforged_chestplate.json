@@ -9,13 +9,19 @@
       "item": "steamcraft:obscurium_crystal"
     },
     "3": {
+      "item": "steamcraft:pyrocite_core"
+    },
+    "4": {
+      "item": "steamcraft:aquarion_shard"
+    },
+    "5": {
       "item": "steamcraft:divinitite_alloy_ingot"
     }
   },
   "pattern": [
-    "313",
-    "323",
-    "232"
+    "515",
+    "525",
+    "354"
   ],
   "result": {
     "item": "steamcraft:celestial_gearforged_chestplate"

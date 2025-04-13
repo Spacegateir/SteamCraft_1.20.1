@@ -7,7 +7,6 @@ import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.spacegateir.steamcraft.item.client.wolf_fury_armor.WolfFuryArmorRenderer;
-import software.bernie.example.client.renderer.armor.WolfArmorRenderer;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.RenderProvider;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;

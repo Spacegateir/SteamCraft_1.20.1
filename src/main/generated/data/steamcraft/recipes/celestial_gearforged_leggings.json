@@ -6,16 +6,19 @@
       "item": "steamcraft:fools_gold_leggings"
     },
     "2": {
-      "item": "steamcraft:obscurium_crystal"
+      "item": "steamcraft:ferrite_heartstone"
     },
     "3": {
+      "item": "steamcraft:aetherium_prism"
+    },
+    "4": {
       "item": "steamcraft:divinitite_alloy_ingot"
     }
   },
   "pattern": [
-    "333",
-    "212",
-    "3 3"
+    "444",
+    "213",
+    "4 4"
   ],
   "result": {
     "item": "steamcraft:celestial_gearforged_leggings"

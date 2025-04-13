@@ -5,6 +5,14 @@
   "item.steamcraft.silver_coin": "Silver Coin",
   "item.steamcraft.gold_coin": "Gold Coin",
 
+  "item.steamcraft.winged_sandals": "Winged Sandals",
+
+  "item.steamcraft.blank_mould": "Blank Mould",
+  "item.steamcraft.helmet_mould": "Helmet Mould",
+  "item.steamcraft.chestplate_mould": "Chestplate Mould",
+  "item.steamcraft.leggings_mould": "Leggings Mould",
+  "item.steamcraft.boots_mould": "Boots Mould",
+
   "item.steamcraft.pattern_recompiler": "Pattern Recompiler",
   "item.steamcraft.ferrite_heartstone": "Ferrite Heartstone",
   "item.steamcraft.aetherium_prism": "Aetherium Prism",

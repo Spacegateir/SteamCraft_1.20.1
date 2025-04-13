@@ -30,6 +30,11 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                     net.minecraft.registry.Registries.ITEM.getKey(),
                     new Identifier("steamcraft", "aether_coil")
             );
+
+            public static final TagKey<Item> ANCIENT_GEMS = TagKey.of(
+                    net.minecraft.registry.Registries.ITEM.getKey(),
+                    new Identifier("steamcraft", "ancient_gems")
+            );
         }
     }
 
@@ -56,6 +61,14 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.AETHER_COIL_PURPLE.asItem())
                 .add(ModBlocks.AETHER_COIL_MAGENTA.asItem())
                 .add(ModBlocks.AETHER_COIL_PINK.asItem());
+
+        getOrCreateTagBuilder(ModTags.Items.ANCIENT_GEMS)
+                .add(ModItems.FERRITE_HEARTSTONE.asItem())
+                .add(ModItems.AETHERIUM_PRISM.asItem())
+                .add(ModItems.AQUARION_SHARD.asItem())
+                .add(ModItems.PYROCITE_CORE.asItem())
+                .add(ModItems.LUMINITE_SPARK.asItem())
+                .add(ModItems.OBSCURIUM_CRYSTAL.asItem());
 
     }
 }

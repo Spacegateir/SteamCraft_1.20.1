@@ -5,11 +5,15 @@
     "1": {
       "item": "steamcraft:fools_gold_boots"
     },
+    "2": {
+      "item": "steamcraft:winged_sandals"
+    },
     "3": {
       "item": "steamcraft:divinitite_alloy_ingot"
     }
   },
   "pattern": [
+    "2 2",
     "313",
     "3 3"
   ],

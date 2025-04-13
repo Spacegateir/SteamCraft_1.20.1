@@ -9,6 +9,7 @@ import net.spacegateir.steamcraft.creative_tab.ModItemRewardsGroups;
 import net.spacegateir.steamcraft.effect.ModEffects;
 import net.spacegateir.steamcraft.item.ModItems;
 import net.spacegateir.steamcraft.item.ModRewardItems;
+import net.spacegateir.steamcraft.util.ModCustomTrades;
 import net.spacegateir.steamcraft.util.ModLootTableModifiers;
 import net.spacegateir.steamcraft.util.ModRegistries;
 import org.slf4j.Logger;
@@ -29,9 +30,12 @@ public class Steamcraft implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 		ModItemRewardsGroups.registerItemGroups();
 
+
+
 		ModEffects.registerEffects();
 
 		ModRegistries.registerModStuff();
+		ModCustomTrades.registerCustomTrades();
 		ModLootTableModifiers.modifyLootTables();
 
 		GeckoLib.initialize();

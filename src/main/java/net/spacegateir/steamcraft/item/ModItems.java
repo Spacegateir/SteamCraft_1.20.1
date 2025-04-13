@@ -44,6 +44,19 @@ public class ModItems {
 
     public static final Item PATTERN_RECOMPILER = registerItem("pattern_recompiler",
             new SwapItem(new FabricItemSettings()));
+    public static final Item WINGED_SANDALS = registerItem("winged_sandals",
+            new Item(new FabricItemSettings()));
+
+    public static final Item BLANK_MOULD = registerItem("blank_mould",
+            new Item(new FabricItemSettings()));
+    public static final Item HELMET_MOULD = registerItem("helmet_mould",
+            new Item(new FabricItemSettings()));
+    public static final Item CHESTPLATE_MOULD = registerItem("chestplate_mould",
+            new Item(new FabricItemSettings()));
+    public static final Item LEGGINGS_MOULD = registerItem("leggings_mould",
+            new Item(new FabricItemSettings()));
+    public static final Item BOOTS_MOULD = registerItem("boots_mould",
+            new Item(new FabricItemSettings()));
 
     public static final Item FERRITE_HEARTSTONE = registerItem("ferrite_heartstone",
             new ToolTipItem(new FabricItemSettings()));

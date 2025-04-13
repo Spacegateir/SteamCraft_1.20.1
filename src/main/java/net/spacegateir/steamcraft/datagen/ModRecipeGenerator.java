@@ -3,10 +3,7 @@ package net.spacegateir.steamcraft.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Blocks;
-import net.minecraft.data.server.recipe.RecipeJsonProvider;
-import net.minecraft.data.server.recipe.RecipeProvider;
-import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
-import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.*;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
@@ -294,9 +291,11 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.CELESTIAL_GEARFORGED_LEGGINGS)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CELESTIAL_GEARFORGED_BOOTS)
+                .pattern("2 2")
                 .pattern("313")
                 .pattern("3 3")
                 .input('1', ModItems.FOOLS_GOLD_BOOTS)
+                .input('2', ModItems.WINGED_SANDALS)
                 .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
                 .criterion(hasItem(ModItems.FOOLS_GOLD_BOOTS), conditionsFromItem(ModItems.FOOLS_GOLD_BOOTS))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.CELESTIAL_GEARFORGED_BOOTS)));
@@ -311,6 +310,125 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('4', Blocks.GOLD_BLOCK)
                 .criterion(hasItem(ModItems.FOOLS_GOLD_INGOT), conditionsFromItem(ModItems.FOOLS_GOLD_INGOT))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.DIVINITITE_ALLOY_INGOT)));
+
+//Tuff Crafting
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items.TUFF, 8)
+                .pattern("111")
+                .pattern("121")
+                .pattern("111")
+                .input('1', Items.DEEPSLATE)
+                .input('2', Items.OBSIDIAN)
+                .criterion(hasItem(Items.TUFF), conditionsFromItem(Items.TUFF))
+                .offerTo(exporter, new Identifier(getRecipeName(Items.TUFF) + "deepslate"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items.TUFF, 8)
+                .pattern("111")
+                .pattern("121")
+                .pattern("111")
+                .input('1', Items.COBBLED_DEEPSLATE)
+                .input('2', Items.OBSIDIAN)
+                .criterion(hasItem(Items.TUFF), conditionsFromItem(Items.TUFF))
+                .offerTo(exporter, new Identifier(getRecipeName(Items.TUFF) + "cobbled_deepslate"));
+
+//Mould Duplicating
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.HELMET_MOULD, 2)
+                .pattern("121")
+                .pattern("131")
+                .pattern("111")
+                .input('1', ModItems.BLANK_MOULD)
+                .input('2', ModItems.HELMET_MOULD)
+                .input('3', Items.NETHERITE_INGOT)
+                .criterion(hasItem(ModItems.HELMET_MOULD), conditionsFromItem(ModItems.HELMET_MOULD))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.HELMET_MOULD)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CHESTPLATE_MOULD, 2)
+                .pattern("121")
+                .pattern("131")
+                .pattern("111")
+                .input('1', ModItems.BLANK_MOULD)
+                .input('2', ModItems.CHESTPLATE_MOULD)
+                .input('3', Items.NETHERITE_INGOT)
+                .criterion(hasItem(ModItems.CHESTPLATE_MOULD), conditionsFromItem(ModItems.CHESTPLATE_MOULD))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.CHESTPLATE_MOULD)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.LEGGINGS_MOULD, 2)
+                .pattern("121")
+                .pattern("131")
+                .pattern("111")
+                .input('1', ModItems.BLANK_MOULD)
+                .input('2', ModItems.LEGGINGS_MOULD)
+                .input('3', Items.NETHERITE_INGOT)
+                .criterion(hasItem(ModItems.LEGGINGS_MOULD), conditionsFromItem(ModItems.LEGGINGS_MOULD))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.LEGGINGS_MOULD)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BOOTS_MOULD, 2)
+                .pattern("121")
+                .pattern("131")
+                .pattern("111")
+                .input('1', ModItems.BLANK_MOULD)
+                .input('2', ModItems.BOOTS_MOULD)
+                .input('3', Items.NETHERITE_INGOT)
+                .criterion(hasItem(ModItems.BOOTS_MOULD), conditionsFromItem(ModItems.BOOTS_MOULD))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.BOOTS_MOULD)));
+
+//Smithing Table Recipies
+//Fools Gold Helmet
+        SmithingTransformRecipeJsonBuilder.create(
+                        Ingredient.ofItems(ModItems.HELMET_MOULD),
+                        Ingredient.ofItems(ModBlocks.FOOLS_GOLD_BLOCK.asItem()),
+                        Ingredient.ofItems(ModItems.DIVINITITE_ALLOY_INGOT),
+                        RecipeCategory.COMBAT,
+                        ModItems.FOOLS_GOLD_HELMET
+                )
+                .criterion("has_helmet_mould", conditionsFromItem(ModItems.HELMET_MOULD))
+                .criterion("has_fools_gold_block", conditionsFromItem(ModBlocks.FOOLS_GOLD_BLOCK.asItem()))
+                .criterion("has_ancient_gem", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier("steamcraft", "fools_gold_helmet_smithing"));
+
+//Fools Gold Chestplate
+        SmithingTransformRecipeJsonBuilder.create(
+                        Ingredient.ofItems(ModItems.CHESTPLATE_MOULD),
+                        Ingredient.ofItems(ModBlocks.FOOLS_GOLD_BLOCK.asItem()),
+                        Ingredient.ofItems(ModItems.DIVINITITE_ALLOY_INGOT),
+                        RecipeCategory.COMBAT,
+                        ModItems.FOOLS_GOLD_CHESTPLATE
+                )
+                .criterion("has_chestplate_mould", conditionsFromItem(ModItems.CHESTPLATE_MOULD))
+                .criterion("has_fools_gold_block", conditionsFromItem(ModBlocks.FOOLS_GOLD_BLOCK.asItem()))
+                .criterion("has_ancient_gem", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier("steamcraft", "fools_gold_chestplate_smithing"));
+
+//Fools Gold Leggings
+        SmithingTransformRecipeJsonBuilder.create(
+                        Ingredient.ofItems(ModItems.LEGGINGS_MOULD),
+                        Ingredient.ofItems(ModBlocks.FOOLS_GOLD_BLOCK.asItem()),
+                        Ingredient.ofItems(ModItems.DIVINITITE_ALLOY_INGOT),
+                        RecipeCategory.COMBAT,
+                        ModItems.FOOLS_GOLD_LEGGINGS
+                )
+                .criterion("has_leggings_mould", conditionsFromItem(ModItems.LEGGINGS_MOULD))
+                .criterion("has_fools_gold_block", conditionsFromItem(ModBlocks.FOOLS_GOLD_BLOCK.asItem()))
+                .criterion("has_ancient_gem", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier("steamcraft", "fools_gold_leggings_smithing"));
+
+//Fools Gold Boots
+        SmithingTransformRecipeJsonBuilder.create(
+                        Ingredient.ofItems(ModItems.BOOTS_MOULD),
+                        Ingredient.ofItems(ModBlocks.FOOLS_GOLD_BLOCK.asItem()),
+                        Ingredient.ofItems(ModItems.DIVINITITE_ALLOY_INGOT),
+                        RecipeCategory.COMBAT,
+                        ModItems.FOOLS_GOLD_BOOTS
+                )
+                .criterion("has_boots_mould", conditionsFromItem(ModItems.BOOTS_MOULD))
+                .criterion("has_fools_gold_block", conditionsFromItem(ModBlocks.FOOLS_GOLD_BLOCK.asItem()))
+                .criterion("has_ancient_gem", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier("steamcraft", "fools_gold_boots_smithing"));
+
+
+
+
+
+
 
 
     }

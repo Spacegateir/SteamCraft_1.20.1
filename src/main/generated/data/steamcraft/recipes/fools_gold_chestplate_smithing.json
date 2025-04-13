@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "steamcraft:divinitite_alloy_ingot"
+  },
+  "base": {
+    "item": "steamcraft:fools_gold_block"
+  },
+  "result": {
+    "item": "steamcraft:fools_gold_chestplate"
+  },
+  "template": {
+    "item": "steamcraft:chestplate_mould"
+  }
+}

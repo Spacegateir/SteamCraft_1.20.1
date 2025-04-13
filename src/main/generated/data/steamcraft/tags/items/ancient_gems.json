@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "steamcraft:ferrite_heartstone",
+    "steamcraft:aetherium_prism",
+    "steamcraft:aquarion_shard",
+    "steamcraft:pyrocite_core",
+    "steamcraft:luminite_spark",
+    "steamcraft:obscurium_crystal"
+  ]
+}

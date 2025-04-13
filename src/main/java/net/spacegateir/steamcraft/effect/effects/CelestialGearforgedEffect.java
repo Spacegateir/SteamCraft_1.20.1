@@ -95,7 +95,7 @@ public class CelestialGearforgedEffect extends StatusEffect {
 
             // Reapply effects every 1000 ticks
             if (entity.age % tickInterval == 0) {
-//                entity.addStatusEffect(new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE, 1200, 2,
+//                entity.addStatusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 1200, 2,
 //                        false, false, false));
             }
         }

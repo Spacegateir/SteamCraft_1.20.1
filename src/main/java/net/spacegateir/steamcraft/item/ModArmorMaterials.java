@@ -25,7 +25,7 @@ public enum ModArmorMaterials implements ArmorMaterial
         map.put(ArmorItem.Type.HELMET, 3);
     }), 25, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 2.0F, 0.0F, () -> Ingredient.ofItems(ModItems.FOOLS_GOLD_INGOT)),
 
-    CELESTIAL_GEARFORGED("celestial_gearforged", 200, Util.make(new EnumMap(ArmorItem.Type.class), map -> {
+    CELESTIAL_GEARFORGED("celestial_gearforged", -1, Util.make(new EnumMap(ArmorItem.Type.class), map -> {
         map.put(ArmorItem.Type.BOOTS, 8);
         map.put(ArmorItem.Type.LEGGINGS, 14);
         map.put(ArmorItem.Type.CHESTPLATE, 18);
@@ -37,7 +37,14 @@ public enum ModArmorMaterials implements ArmorMaterial
         map.put(ArmorItem.Type.LEGGINGS, 5);
         map.put(ArmorItem.Type.CHESTPLATE, 6);
         map.put(ArmorItem.Type.HELMET, 2);
-    }), 9, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0.0F, 0.0F, () -> Ingredient.ofItems(Items.AMETHYST_SHARD));
+    }), 9, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0.0F, 0.0F, () -> Ingredient.ofItems(Items.AMETHYST_SHARD)),
+
+    WOLF("wolf", 37, Util.make(new EnumMap(ArmorItem.Type.class), map -> {
+        map.put(ArmorItem.Type.BOOTS, 3);
+        map.put(ArmorItem.Type.LEGGINGS, 6);
+        map.put(ArmorItem.Type.CHESTPLATE, 8);
+        map.put(ArmorItem.Type.HELMET, 3);
+    }), 15, SoundEvents.ENTITY_WOLF_HOWL, 3.0F, 0.1F, () -> Ingredient.ofItems(Items.NETHERITE_INGOT));
 
 
 

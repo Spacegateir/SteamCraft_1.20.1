@@ -15,9 +15,11 @@ import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.item.armor.AmethystArmorItem;
 import net.spacegateir.steamcraft.item.armor.CelestialGearforgedArmourItem;
 import net.spacegateir.steamcraft.item.armor.FoolsGoldArmourItem;
+import net.spacegateir.steamcraft.item.armor.WolfFuryArmorItem;
 import net.spacegateir.steamcraft.item.custom.GlintItem;
 import net.spacegateir.steamcraft.item.custom.ToolTipItem;
 import net.spacegateir.steamcraft.item.custom.SwapItem;
+import software.bernie.example.item.WolfArmorItem;
 
 public class ModItems {
 
@@ -117,6 +119,24 @@ public class ModItems {
             new AmethystArmorItem(ModArmorMaterials.AMETHYST, ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
     public static final Item AMETHYST_BOOTS = registerItem("amethyst_boots",
             new AmethystArmorItem(ModArmorMaterials.AMETHYST, ArmorItem.Type.BOOTS, new FabricItemSettings()));
+
+    public static final Item WOLF_HELMET = registerItem("wolf_helmet",
+            new WolfArmorItem(ModArmorMaterials.WOLF, ArmorItem.Type.HELMET, new FabricItemSettings()));
+    public static final Item WOLF_CHESTPLATE = registerItem("wolf_chestplate",
+            new WolfArmorItem(ModArmorMaterials.WOLF, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
+    public static final Item WOLF_LEGGINGS = registerItem("wolf_leggings",
+            new WolfArmorItem(ModArmorMaterials.WOLF, ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
+    public static final Item WOLF_BOOTS = registerItem("wolf_boots",
+            new WolfArmorItem(ModArmorMaterials.WOLF, ArmorItem.Type.BOOTS, new FabricItemSettings()));
+
+    public static final Item WOLF_FURY_HELMET = registerItem("wolf_fury_helmet",
+            new WolfFuryArmorItem(ModArmorMaterials.WOLF, ArmorItem.Type.HELMET, new FabricItemSettings()));
+    public static final Item WOLF_FURY_CHESTPLATE = registerItem("wolf_fury_chestplate",
+            new WolfFuryArmorItem(ModArmorMaterials.WOLF, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
+    public static final Item WOLF_FURY_LEGGINGS = registerItem("wolf_fury_leggings",
+            new WolfFuryArmorItem(ModArmorMaterials.WOLF, ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
+    public static final Item WOLF_FURY_BOOTS = registerItem("wolf_fury_boots",
+            new WolfFuryArmorItem(ModArmorMaterials.WOLF, ArmorItem.Type.BOOTS, new FabricItemSettings()));
 
     public static final Item TEST_ITEM_BLOCK = Registry.register(Registries.ITEM,
             new Identifier(Steamcraft.MOD_ID, "test_item_block"),

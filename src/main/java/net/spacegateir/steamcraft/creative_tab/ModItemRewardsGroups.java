@@ -22,6 +22,16 @@ public class ModItemRewardsGroups {
                         entries.add(ModItems.AMETHYST_LEGGINGS);
                         entries.add(ModItems.AMETHYST_BOOTS);
 
+                        entries.add(ModItems.WOLF_HELMET);
+                        entries.add(ModItems.WOLF_CHESTPLATE);
+                        entries.add(ModItems.WOLF_LEGGINGS);
+                        entries.add(ModItems.WOLF_BOOTS);
+
+                        entries.add(ModItems.WOLF_FURY_HELMET);
+                        entries.add(ModItems.WOLF_FURY_CHESTPLATE);
+                        entries.add(ModItems.WOLF_FURY_LEGGINGS);
+                        entries.add(ModItems.WOLF_FURY_BOOTS);
+
 
 
 

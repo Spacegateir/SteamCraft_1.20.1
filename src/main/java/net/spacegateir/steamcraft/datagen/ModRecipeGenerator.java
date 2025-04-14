@@ -337,7 +337,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .pattern("111")
                 .input('1', ModItems.BLANK_MOULD)
                 .input('2', ModItems.HELMET_MOULD)
-                .input('3', Items.NETHERITE_INGOT)
+                .input('3', Items.NETHERITE_HELMET)
                 .criterion(hasItem(ModItems.HELMET_MOULD), conditionsFromItem(ModItems.HELMET_MOULD))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.HELMET_MOULD)));
 
@@ -347,7 +347,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .pattern("111")
                 .input('1', ModItems.BLANK_MOULD)
                 .input('2', ModItems.CHESTPLATE_MOULD)
-                .input('3', Items.NETHERITE_INGOT)
+                .input('3', Items.NETHERITE_CHESTPLATE)
                 .criterion(hasItem(ModItems.CHESTPLATE_MOULD), conditionsFromItem(ModItems.CHESTPLATE_MOULD))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.CHESTPLATE_MOULD)));
 
@@ -357,7 +357,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .pattern("111")
                 .input('1', ModItems.BLANK_MOULD)
                 .input('2', ModItems.LEGGINGS_MOULD)
-                .input('3', Items.NETHERITE_INGOT)
+                .input('3', Items.NETHERITE_LEGGINGS)
                 .criterion(hasItem(ModItems.LEGGINGS_MOULD), conditionsFromItem(ModItems.LEGGINGS_MOULD))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.LEGGINGS_MOULD)));
 
@@ -367,7 +367,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .pattern("111")
                 .input('1', ModItems.BLANK_MOULD)
                 .input('2', ModItems.BOOTS_MOULD)
-                .input('3', Items.NETHERITE_INGOT)
+                .input('3', Items.NETHERITE_BOOTS)
                 .criterion(hasItem(ModItems.BOOTS_MOULD), conditionsFromItem(ModItems.BOOTS_MOULD))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.BOOTS_MOULD)));
 

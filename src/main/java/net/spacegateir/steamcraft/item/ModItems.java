@@ -45,7 +45,7 @@ public class ModItems {
     public static final Item PATTERN_RECOMPILER = registerItem("pattern_recompiler",
             new SwapItem(new FabricItemSettings()));
     public static final Item WINGED_SANDALS = registerItem("winged_sandals",
-            new Item(new FabricItemSettings()));
+            new Item(new FabricItemSettings().maxCount(1)));
 
     public static final Item BLANK_MOULD = registerItem("blank_mould",
             new Item(new FabricItemSettings()));

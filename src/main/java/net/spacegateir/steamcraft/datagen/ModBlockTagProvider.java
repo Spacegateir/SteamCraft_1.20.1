@@ -34,7 +34,10 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.AETHER_COIL_BLUE,
                         ModBlocks.AETHER_COIL_PURPLE,
                         ModBlocks.AETHER_COIL_MAGENTA,
-                        ModBlocks.AETHER_COIL_PINK
+                        ModBlocks.AETHER_COIL_PINK,
+
+                        ModBlocks.FOOLS_GOLD_BLOCK,
+                        ModBlocks.FOOLS_GOLD_RAW_BLOCK
 
                 );
 
@@ -56,7 +59,10 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.AETHER_COIL_BLUE,
                         ModBlocks.AETHER_COIL_PURPLE,
                         ModBlocks.AETHER_COIL_MAGENTA,
-                        ModBlocks.AETHER_COIL_PINK
+                        ModBlocks.AETHER_COIL_PINK,
+
+                        ModBlocks.FOOLS_GOLD_BLOCK,
+                        ModBlocks.FOOLS_GOLD_RAW_BLOCK
 
                 );
 

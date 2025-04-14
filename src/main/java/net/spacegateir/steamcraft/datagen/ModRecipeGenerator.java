@@ -291,7 +291,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.CELESTIAL_GEARFORGED_LEGGINGS)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CELESTIAL_GEARFORGED_BOOTS)
-                .pattern("2 2")
+                .pattern(" 2 ")
                 .pattern("313")
                 .pattern("3 3")
                 .input('1', ModItems.FOOLS_GOLD_BOOTS)

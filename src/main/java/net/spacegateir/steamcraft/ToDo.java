@@ -7,14 +7,17 @@ public class ToDo {
     // ON THE CURSED FORGE SITE EXPALIN HOW TO PLAY THE MOD
 
     // fix the wolf fury armor textures
+    // fix the god armor textures shading and shaping
 
     // MODIFY THE CRAFTTING RECIPE FOR THE GOD ARMOR (halo)
 
     //create dimentions (earth copy, void, waterworld, skulk, overworld neather type, sky dimention)
 
-    //add path blocks with valocity 25% (dirt, course dirt, rooted dirt, gravel, sand, ect.) (use shovel to path the blocks)
+    // add path blocks with valocity 25% (dirt, course dirt, rooted dirt, gravel, sand, ect.) (use shovel to path the blocks)
+    // Make sure when you break the path block you get the original block even with silk
+    // when the path is covered by another block revert back to its original block (DirtPathBlock)
 
-    //Skelleton parts loot as is
+    // Skelleton parts loot as is
 
     // Finalise freaky bunny effect potions
     // Finalise disoriant effect potions

@@ -9,7 +9,6 @@ public class ToDo {
     // fix the wolf fury armor textures
 
     // MODIFY THE CRAFTTING RECIPE FOR THE GOD ARMOR (halo)
-    // test wondering villager sells winged sandals
 
     //create dimentions (earth copy, void, waterworld, skulk, overworld neather type, sky dimention)
 

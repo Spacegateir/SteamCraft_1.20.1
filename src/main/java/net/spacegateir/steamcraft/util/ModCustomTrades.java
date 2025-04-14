@@ -10,7 +10,7 @@ import net.spacegateir.steamcraft.item.ModItems;
 public class ModCustomTrades {
     public static void registerCustomTrades() {
 
-        TradeOfferHelper.registerWanderingTraderOffers(0,
+        TradeOfferHelper.registerWanderingTraderOffers(1,
                 factories -> {
                     factories.add((entity, random) -> new TradeOffer(
                             new ItemStack(Items.DIAMOND,48),

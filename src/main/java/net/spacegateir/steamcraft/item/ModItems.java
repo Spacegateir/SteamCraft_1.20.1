@@ -12,10 +12,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.spacegateir.steamcraft.Steamcraft;
 import net.spacegateir.steamcraft.block.ModBlocks;
-import net.spacegateir.steamcraft.item.armor.AmethystArmorItem;
-import net.spacegateir.steamcraft.item.armor.CelestialGearforgedArmourItem;
-import net.spacegateir.steamcraft.item.armor.FoolsGoldArmourItem;
-import net.spacegateir.steamcraft.item.armor.WolfFuryArmorItem;
+import net.spacegateir.steamcraft.item.armor.*;
 import net.spacegateir.steamcraft.item.custom.GlintItem;
 import net.spacegateir.steamcraft.item.custom.ToolTipItem;
 import net.spacegateir.steamcraft.item.custom.SwapItem;
@@ -44,8 +41,6 @@ public class ModItems {
 
     public static final Item PATTERN_RECOMPILER = registerItem("pattern_recompiler",
             new SwapItem(new FabricItemSettings()));
-    public static final Item WINGED_SANDALS = registerItem("winged_sandals",
-            new Item(new FabricItemSettings().maxCount(1)));
 
     public static final Item BLANK_MOULD = registerItem("blank_mould",
             new Item(new FabricItemSettings()));
@@ -113,8 +108,6 @@ public class ModItems {
     public static final Item FOOLS_GOLD_BOOTS = registerItem("fools_gold_boots",
             new FoolsGoldArmourItem(ModArmorMaterials.FOOLS_GOLD, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof()));
 
-
-
     public static final Item CELESTIAL_GEARFORGED_HELMET = registerItem("celestial_gearforged_helmet",
             new CelestialGearforgedArmourItem(ModArmorMaterials.CELESTIAL_GEARFORGED, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof()));
     public static final Item CELESTIAL_GEARFORGED_CHESTPLATE = registerItem("celestial_gearforged_chestplate",
@@ -123,6 +116,9 @@ public class ModItems {
             new CelestialGearforgedArmourItem(ModArmorMaterials.CELESTIAL_GEARFORGED, ArmorItem.Type.LEGGINGS, new FabricItemSettings().fireproof()));
     public static final Item CELESTIAL_GEARFORGED_BOOTS = registerItem("celestial_gearforged_boots",
             new CelestialGearforgedArmourItem(ModArmorMaterials.CELESTIAL_GEARFORGED, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof()));
+
+    public static final Item WINGED_SANDALS = registerItem("winged_sandals",
+            new WingedSandalsCosmeticItem(ModArmorMaterials.UNBREAKING, ArmorItem.Type.BOOTS, new FabricItemSettings()));
 
     public static final Item TEST_ITEM_BLOCK = Registry.register(Registries.ITEM,
             new Identifier(Steamcraft.MOD_ID, "test_item_block"),

@@ -37,8 +37,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.LEGGINGS_MOULD, Models.GENERATED);
         itemModelGenerator.register(ModItems.BOOTS_MOULD, Models.GENERATED);
 
-        itemModelGenerator.register(ModItems.WINGED_SANDALS, Models.GENERATED);
-
         itemModelGenerator.register(ModItems.FOOLS_GOLD_SCRAP, Models.GENERATED);
         itemModelGenerator.register(ModItems.FOOLS_GOLD_RAW, Models.GENERATED);
         itemModelGenerator.register(ModItems.FOOLS_GOLD_INGOT, Models.GENERATED);
@@ -72,6 +70,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CELESTIAL_GEARFORGED_CHESTPLATE, Models.GENERATED);
         itemModelGenerator.register(ModItems.CELESTIAL_GEARFORGED_LEGGINGS, Models.GENERATED);
         itemModelGenerator.register(ModItems.CELESTIAL_GEARFORGED_BOOTS, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.WINGED_SANDALS, Models.GENERATED);
 
         itemModelGenerator.register(ModRewardItems.AMETHYST_HELMET, Models.GENERATED);
         itemModelGenerator.register(ModRewardItems.AMETHYST_CHESTPLATE, Models.GENERATED);

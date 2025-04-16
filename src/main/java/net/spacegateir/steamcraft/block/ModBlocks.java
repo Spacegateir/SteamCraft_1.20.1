@@ -91,6 +91,44 @@ public class ModBlocks {
     public static final Block SAND_PATH = registerBlock("sand_path",
             new SandPathBlock(FabricBlockSettings.copyOf(Blocks.SAND).velocityMultiplier(1.25F)));
 
+    public static final Block SKELETON_SITTING = registerBlock("skeleton_sitting",
+            new SkeletonParts(FabricBlockSettings.copyOf(Blocks.BONE_BLOCK).allowsSpawning(Blocks::never).nonOpaque()));
+    public static final Block SKELETON_HEAD = registerBlock("skeleton_head",
+            new SkeletonHalfParts(FabricBlockSettings.copyOf(Blocks.BONE_BLOCK).allowsSpawning(Blocks::never).nonOpaque()));
+    public static final Block SKELETON_CHEST = registerBlock("skeleton_chest",
+            new SkeletonBoneParts(FabricBlockSettings.copyOf(Blocks.BONE_BLOCK).allowsSpawning(Blocks::never).nonOpaque()));
+    public static final Block SKELETON_ARM = registerBlock("skeleton_arm",
+            new SkeletonBoneParts(FabricBlockSettings.copyOf(Blocks.BONE_BLOCK).allowsSpawning(Blocks::never).nonOpaque()));
+    public static final Block SKELETON_LEG = registerBlock("skeleton_leg",
+            new SkeletonBoneParts(FabricBlockSettings.copyOf(Blocks.BONE_BLOCK).allowsSpawning(Blocks::never).nonOpaque()));
+    public static final Block SKELETON_PELVIS = registerBlock("skeleton_pelvis",
+            new SkeletonBoneParts(FabricBlockSettings.copyOf(Blocks.BONE_BLOCK).allowsSpawning(Blocks::never).nonOpaque()));
+    public static final Block SKELETON_SPINE = registerBlock("skeleton_spine",
+            new SkeletonBoneParts(FabricBlockSettings.copyOf(Blocks.BONE_BLOCK).allowsSpawning(Blocks::never).nonOpaque()));
+    public static final Block SKELETON_TORSO = registerBlock("skeleton_torso",
+            new SkeletonParts(FabricBlockSettings.copyOf(Blocks.BONE_BLOCK).allowsSpawning(Blocks::never).nonOpaque()));
+    public static final Block SKELETON_HALF_BODY = registerBlock("skeleton_half_body",
+            new SkeletonHalfParts(FabricBlockSettings.copyOf(Blocks.BONE_BLOCK).allowsSpawning(Blocks::never).nonOpaque()));
+    public static final Block SKELETON_HEAD_STACK = registerBlock("skeleton_head_stack",
+            new SkeletonParts(FabricBlockSettings.copyOf(Blocks.BONE_BLOCK).allowsSpawning(Blocks::never).nonOpaque()));
+    public static final Block SKELETON_ARMS_CROSS = registerBlock("skeleton_arms_cross",
+            new SkeletonBoneParts(FabricBlockSettings.copyOf(Blocks.BONE_BLOCK).allowsSpawning(Blocks::never).nonOpaque()));
+    public static final Block SKELETON_LEGS_CROSS = registerBlock("skeleton_legs_cross",
+            new SkeletonBoneParts(FabricBlockSettings.copyOf(Blocks.BONE_BLOCK).allowsSpawning(Blocks::never).nonOpaque()));
+    public static final Block SKELETON_LAYING = registerBlock("skeleton_laying",
+            new SkeletonHalfParts(FabricBlockSettings.copyOf(Blocks.BONE_BLOCK).allowsSpawning(Blocks::never).nonOpaque()));
+
+
+
+
+
+
+
+
+
+
+
+
     public static final Block TEST_BLOCK_ITEM = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "test_block_item"),
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).resistance(50.0F).hardness(50.0F)));

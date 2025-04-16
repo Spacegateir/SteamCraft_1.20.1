@@ -1,0 +1,163 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"1": "steamcraft:block/body",
+		"particle": "steamcraft:block/head"
+	},
+	"elements": [
+		{
+			"name": "pelvis",
+			"from": [5, 1, 14],
+			"to": [11, 2, 15],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 1, 13]},
+			"faces": {
+				"north": {"uv": [2.5, 7.5, 5.5, 8], "rotation": 180, "texture": "#1"},
+				"east": {"uv": [0, 0, 0.5, 0.5], "rotation": 180, "texture": "#1"},
+				"south": {"uv": [2.5, 7.5, 5.5, 8], "rotation": 180, "texture": "#1"},
+				"west": {"uv": [0, 0, 0.5, 0.5], "rotation": 180, "texture": "#1"},
+				"up": {"uv": [10, 4, 10.5, 6], "rotation": 90, "texture": "#1"},
+				"down": {"uv": [10, 4, 10.5, 6], "rotation": 270, "texture": "#1"}
+			}
+		},
+		{
+			"name": "pelvis",
+			"from": [7, 1, 12],
+			"to": [9, 2, 14],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 1, 13]},
+			"faces": {
+				"north": {"uv": [0, 0, 1, 0.5], "rotation": 180, "texture": "#1"},
+				"east": {"uv": [0, 0, 1, 0.5], "rotation": 180, "texture": "#1"},
+				"south": {"uv": [0, 0, 1, 0.5], "rotation": 180, "texture": "#1"},
+				"west": {"uv": [0, 0, 1, 0.5], "rotation": 180, "texture": "#1"},
+				"up": {"uv": [3.5, 3.5, 4.5, 4.5], "rotation": 90, "texture": "#1"},
+				"down": {"uv": [3.5, 3.5, 4.5, 4.5], "rotation": 270, "texture": "#1"}
+			}
+		},
+		{
+			"name": "pelvis",
+			"from": [5, 1, 11],
+			"to": [11, 2, 12],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 1, 13]},
+			"faces": {
+				"north": {"uv": [6.5, 7.5, 9, 8], "rotation": 180, "texture": "#1"},
+				"east": {"uv": [0, 0, 0.5, 0.5], "rotation": 180, "texture": "#1"},
+				"south": {"uv": [6.5, 7.5, 9, 8], "rotation": 180, "texture": "#1"},
+				"west": {"uv": [0, 0, 0.5, 0.5], "rotation": 180, "texture": "#1"},
+				"up": {"uv": [0, 0, 0.5, 2.5], "rotation": 90, "texture": "#1"},
+				"down": {"uv": [0, 0, 0.5, 2.5], "rotation": 270, "texture": "#1"}
+			}
+		},
+		{
+			"name": "pelvis",
+			"from": [11, 1, 11],
+			"to": [12, 2, 15],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 1, 13]},
+			"faces": {
+				"north": {"uv": [0, 0, 0.5, 0.5], "rotation": 180, "texture": "#1"},
+				"east": {"uv": [0, 7.5, 2, 8], "rotation": 180, "texture": "#1"},
+				"south": {"uv": [0, 0, 0.5, 0.5], "rotation": 180, "texture": "#1"},
+				"west": {"uv": [0, 7.5, 2, 8], "rotation": 180, "texture": "#1"},
+				"up": {"uv": [9.5, 6, 10, 8], "texture": "#1"},
+				"down": {"uv": [9.5, 6, 10, 8], "texture": "#1"}
+			}
+		},
+		{
+			"name": "pelvis",
+			"from": [4, 1, 11],
+			"to": [5, 2, 15],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 1, 13]},
+			"faces": {
+				"north": {"uv": [0, 0, 0.5, 0.5], "rotation": 180, "texture": "#1"},
+				"east": {"uv": [0, 7.5, 2, 8], "rotation": 180, "texture": "#1"},
+				"south": {"uv": [0, 0, 0.5, 0.5], "rotation": 180, "texture": "#1"},
+				"west": {"uv": [0, 7.5, 2, 8], "rotation": 180, "texture": "#1"},
+				"up": {"uv": [9.5, 6, 10, 8], "texture": "#1"},
+				"down": {"uv": [9.5, 6, 10, 8], "texture": "#1"}
+			}
+		},
+		{
+			"name": "pelvis",
+			"from": [4, 0, 11],
+			"to": [7, 1, 15],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 1, 13]},
+			"faces": {
+				"north": {"uv": [6, 0, 7.5, 0.5], "rotation": 180, "texture": "#1"},
+				"east": {"uv": [8, 0, 10, 0.5], "rotation": 180, "texture": "#1"},
+				"south": {"uv": [6, 0, 7.5, 0.5], "rotation": 180, "texture": "#1"},
+				"west": {"uv": [8, 0, 10, 0.5], "rotation": 180, "texture": "#1"},
+				"up": {"uv": [0, 0, 1.5, 2], "texture": "#1"},
+				"down": {"uv": [0, 0, 1.5, 2], "texture": "#1"}
+			}
+		},
+		{
+			"name": "pelvis",
+			"from": [9, 0, 11],
+			"to": [12, 1, 15],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 1, 13]},
+			"faces": {
+				"north": {"uv": [6, 0, 7.5, 0.5], "rotation": 180, "texture": "#1"},
+				"east": {"uv": [8, 0, 10, 0.5], "rotation": 180, "texture": "#1"},
+				"south": {"uv": [6, 0, 7.5, 0.5], "rotation": 180, "texture": "#1"},
+				"west": {"uv": [8, 0, 10, 0.5], "rotation": 180, "texture": "#1"},
+				"up": {"uv": [0, 0, 1.5, 2], "texture": "#1"},
+				"down": {"uv": [0, 0, 1.5, 2], "texture": "#1"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.25, 2.25],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.25, 2.25],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"firstperson_righthand": {
+			"rotation": [-180, 56, -180],
+			"translation": [-2.25, 5.5, -1]
+		},
+		"firstperson_lefthand": {
+			"rotation": [-180, 56, -180],
+			"translation": [-2.25, 5.5, -1]
+		},
+		"ground": {
+			"translation": [0, 7.75, 0]
+		},
+		"gui": {
+			"rotation": [-144.36, 29.59, -160.85],
+			"translation": [-0.5, 2.25, 0]
+		},
+		"head": {
+			"translation": [0, 7.75, -4]
+		},
+		"fixed": {
+			"rotation": [94.5, 0, 0],
+			"translation": [0, 4, 7.5]
+		}
+	},
+	"groups": [
+		{
+			"name": "Skelleton",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [
+				{
+					"name": "Body",
+					"origin": [8, 8, 8],
+					"color": 0,
+					"children": [
+						{
+							"name": "Pelvis",
+							"origin": [8, 17, 5],
+							"color": 0,
+							"children": [0, 1, 2, 3, 4, 5, 6]
+						}
+					]
+				}
+			]
+		}
+	]
+}

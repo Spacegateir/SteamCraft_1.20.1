@@ -91,6 +91,20 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
                 dropsWithSilkTouch(ModBlocks.SAND_PATH, ItemEntry.builder(Blocks.SAND))
         );
 
+        addDrop(ModBlocks.SKELETON_ARM);
+        addDrop(ModBlocks.SKELETON_CHEST);
+        addDrop(ModBlocks.SKELETON_HEAD);
+        addDrop(ModBlocks.SKELETON_LEG);
+        addDrop(ModBlocks.SKELETON_PELVIS);
+        addDrop(ModBlocks.SKELETON_ARMS_CROSS);
+        addDrop(ModBlocks.SKELETON_HALF_BODY);
+        addDrop(ModBlocks.SKELETON_HEAD_STACK);
+        addDrop(ModBlocks.SKELETON_LAYING);
+        addDrop(ModBlocks.SKELETON_LEGS_CROSS);
+        addDrop(ModBlocks.SKELETON_TORSO);
+        addDrop(ModBlocks.SKELETON_SITTING);
+        addDrop(ModBlocks.SKELETON_SPINE);
+
 
 
     }

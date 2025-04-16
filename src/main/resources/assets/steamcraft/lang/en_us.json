@@ -103,6 +103,20 @@
   "block.steamcraft.rooted_dirt_path": "Rooted Dirt Path",
   "block.steamcraft.sand_path": "Sand Path",
 
+  "block.steamcraft.skeleton_sitting": "Skeleton Sitting",
+  "block.steamcraft.skeleton_laying": "Skeleton Laying",
+  "block.steamcraft.skeleton_arm": "Skeleton Arm",
+  "block.steamcraft.skeleton_arms_cross": "Skeleton Arms",
+  "block.steamcraft.skeleton_leg": "Skeleton Leg",
+  "block.steamcraft.skeleton_legs_cross": "Skeleton Legs",
+  "block.steamcraft.skeleton_head": "Skeleton Head",
+  "block.steamcraft.skeleton_head_stack": "Skeleton Stack of Heads",
+  "block.steamcraft.skeleton_chest": "Skeleton Chest",
+  "block.steamcraft.skeleton_pelvis": "Skeleton Pelvis",
+  "block.steamcraft.skeleton_spine": "Skeleton spine",
+  "block.steamcraft.skeleton_torso": "Skeleton Torso",
+  "block.steamcraft.skeleton_half_body": "Skeleton Half Body",
+
 
   "block.steamcraft.test_block_item": "Test BlockItem",
 

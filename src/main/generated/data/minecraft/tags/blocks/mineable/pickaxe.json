@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "#steamcraft:skeleton",
     "steamcraft:aether_coil",
     "steamcraft:aether_coil_white",
     "steamcraft:aether_coil_light_gray",

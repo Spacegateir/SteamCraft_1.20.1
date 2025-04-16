@@ -100,6 +100,20 @@ public class ModItemGroups {
                         entries.add(ModBlocks.ROOTED_DIRT_PATH);
                         entries.add(ModBlocks.SAND_PATH);
 
+                        entries.add(ModBlocks.SKELETON_SITTING);
+                        entries.add(ModBlocks.SKELETON_LAYING);
+                        entries.add(ModBlocks.SKELETON_HEAD);
+                        entries.add(ModBlocks.SKELETON_TORSO);
+                        entries.add(ModBlocks.SKELETON_ARM);
+                        entries.add(ModBlocks.SKELETON_ARMS_CROSS);
+                        entries.add(ModBlocks.SKELETON_LEG);
+                        entries.add(ModBlocks.SKELETON_LEGS_CROSS);
+                        entries.add(ModBlocks.SKELETON_HEAD_STACK);
+                        entries.add(ModBlocks.SKELETON_HALF_BODY);
+                        entries.add(ModBlocks.SKELETON_CHEST);
+                        entries.add(ModBlocks.SKELETON_PELVIS);
+                        entries.add(ModBlocks.SKELETON_SPINE);
+
                         //BlockItems
 //                        entries.add(ModItems.TEST_ITEM_BLOCK);
 

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "steamcraft:block/skeleton_half_body" },
+    "facing=east": { "model": "steamcraft:block/skeleton_half_body", "y": 90  },
+    "facing=south": { "model": "steamcraft:block/skeleton_half_body", "y": 180 },
+    "facing=west": { "model": "steamcraft:block/skeleton_half_body", "y": 270 }
+  }
+}

@@ -424,6 +424,138 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion("has_ancient_gem", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
                 .offerTo(exporter, new Identifier("steamcraft", "fools_gold_boots_smithing"));
 
+// Skeleton BoneMeal Recipes
+        offerShapelessRecipe(
+                exporter,
+                Items.BONE_MEAL,
+                ModBlocks.SKELETON_HEAD,
+                "misc",
+                3
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.BONE_MEAL,
+                ModBlocks.SKELETON_ARM,
+                "misc",
+                3
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.BONE_MEAL,
+                ModBlocks.SKELETON_LEG,
+                "misc",
+                3
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.BONE_MEAL,
+                ModBlocks.SKELETON_CHEST,
+                "misc",
+                3
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.BONE_MEAL,
+                ModBlocks.SKELETON_PELVIS,
+                "misc",
+                3
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.BONE_MEAL,
+                ModBlocks.SKELETON_SPINE,
+                "misc",
+                3
+        );
+
+        // Skeleton Sitting
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.SKELETON_SITTING, 1)
+                .pattern(" H ")
+                .pattern("ATA")
+                .pattern("L L")
+                .input('H', ModBlocks.SKELETON_HEAD)
+                .input('T', ModBlocks.SKELETON_TORSO)
+                .input('A', ModBlocks.SKELETON_ARM)
+                .input('L', ModBlocks.SKELETON_LEG)
+                .criterion("has_skeleton_head", conditionsFromItem(ModBlocks.SKELETON_HEAD))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.SKELETON_SITTING)));
+
+        // Skeleton Laying
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.SKELETON_LAYING, 1)
+                .pattern(" A ")
+                .pattern("HTL")
+                .input('H', ModBlocks.SKELETON_HEAD)
+                .input('T', ModBlocks.SKELETON_TORSO)
+                .input('A', ModBlocks.SKELETON_ARMS_CROSS)
+                .input('L', ModBlocks.SKELETON_LEGS_CROSS)
+                .criterion("has_skeleton_head", conditionsFromItem(ModBlocks.SKELETON_HEAD))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.SKELETON_LAYING)));
+
+        // Skeleton Torso
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.SKELETON_TORSO, 1)
+                .pattern(" C ")
+                .pattern(" S ")
+                .pattern(" P ")
+                .input('C', ModBlocks.SKELETON_CHEST)
+                .input('S', ModBlocks.SKELETON_SPINE)
+                .input('P', ModBlocks.SKELETON_PELVIS)
+                .criterion("has_skeleton_head", conditionsFromItem(ModBlocks.SKELETON_HEAD))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.SKELETON_TORSO)));
+
+        // Skeleton Arms Cross
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.SKELETON_ARMS_CROSS, 1)
+                .pattern("AA")
+                .input('A', ModBlocks.SKELETON_ARM)
+                .criterion("has_skeleton_head", conditionsFromItem(ModBlocks.SKELETON_HEAD))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.SKELETON_ARMS_CROSS)));
+
+        // Skeleton Legs Cross
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.SKELETON_LEGS_CROSS, 1)
+                .pattern("AA")
+                .input('A', ModBlocks.SKELETON_LEG)
+                .criterion("has_skeleton_head", conditionsFromItem(ModBlocks.SKELETON_HEAD))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.SKELETON_LEGS_CROSS)));
+
+        // Skeleton Arms Cross
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.SKELETON_HEAD_STACK, 1)
+                .pattern("HHH")
+                .input('H', ModBlocks.SKELETON_HEAD)
+                .criterion("has_skeleton_head", conditionsFromItem(ModBlocks.SKELETON_HEAD))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.SKELETON_HEAD_STACK)));
+
+        // Skeleton Half Body
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.SKELETON_HALF_BODY, 1)
+                .pattern("HAL")
+                .input('H', ModBlocks.SKELETON_HEAD)
+                .input('A', ModBlocks.SKELETON_ARM)
+                .input('L', ModBlocks.SKELETON_LEG)
+                .criterion("has_skeleton_head", conditionsFromItem(ModBlocks.SKELETON_HEAD))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.SKELETON_HALF_BODY)));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

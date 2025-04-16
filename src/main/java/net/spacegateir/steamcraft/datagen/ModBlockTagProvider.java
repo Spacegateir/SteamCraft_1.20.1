@@ -2,8 +2,13 @@ package net.spacegateir.steamcraft.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.minecraft.block.Block;
+import net.minecraft.item.Item;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.TagKey;
+import net.minecraft.util.Identifier;
 import net.spacegateir.steamcraft.block.ModBlocks;
 
 import java.util.concurrent.CompletableFuture;
@@ -13,10 +18,38 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         super(output, registriesFuture);
     }
 
+    public static class ModTags {
+        public static class Blocks {
+            public static final TagKey<Block> SKELETON = TagKey.of(
+                    RegistryKeys.BLOCK,
+                    new Identifier("steamcraft", "skeleton")
+            );
+        }
+    }
+
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
 
+        getOrCreateTagBuilder(ModBlockTagProvider.ModTags.Blocks.SKELETON)
+                .add(
+                        ModBlocks.SKELETON_ARM,
+                        ModBlocks.SKELETON_CHEST,
+                        ModBlocks.SKELETON_HEAD,
+                        ModBlocks.SKELETON_LEG,
+                        ModBlocks.SKELETON_PELVIS,
+                        ModBlocks.SKELETON_ARMS_CROSS,
+                        ModBlocks.SKELETON_HALF_BODY,
+                        ModBlocks.SKELETON_HEAD_STACK,
+                        ModBlocks.SKELETON_LAYING,
+                        ModBlocks.SKELETON_LEGS_CROSS,
+                        ModBlocks.SKELETON_TORSO,
+                        ModBlocks.SKELETON_SITTING,
+                        ModBlocks.SKELETON_SPINE
+                        );
+
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+                .addTag(ModTags.Blocks.SKELETON)
+
                 .add(
                         ModBlocks.AETHER_COIL,
                         ModBlocks.AETHER_COIL_WHITE,
@@ -35,10 +68,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.AETHER_COIL_PURPLE,
                         ModBlocks.AETHER_COIL_MAGENTA,
                         ModBlocks.AETHER_COIL_PINK,
-
                         ModBlocks.FOOLS_GOLD_BLOCK,
                         ModBlocks.FOOLS_GOLD_RAW_BLOCK
-
                 );
 
         getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE)

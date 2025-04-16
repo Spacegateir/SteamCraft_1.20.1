@@ -10,6 +10,7 @@ import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.util.Identifier;
+import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.item.ModItems;
 import net.minecraft.loot.function.SetCountLootFunction;
 
@@ -65,34 +66,34 @@ public class ModLootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
-//            if (SKELETON_ID.equals(id)) {
-//                LootPool.Builder poolBuilder = LootPool.builder()
-//                        .rolls(ConstantLootNumberProvider.create(1))
-//                        .conditionally(RandomChanceLootCondition.builder(0.1f)) // Drops 10% of the time
-//                        .conditionally(KilledByPlayerLootCondition.builder().build()) // Only drops when killed by player
-//                        .with(ItemEntry.builder(ModBlocks.SKELETON_HEAD))
-//                        .with(ItemEntry.builder(ModBlocks.SKELETON_ARM))
-//                        .with(ItemEntry.builder(ModBlocks.SKELETON_LEG))
-//                        .with(ItemEntry.builder(ModBlocks.SKELETON_SPINE))
-//                        .with(ItemEntry.builder(ModBlocks.SKELETON_PELVIS))
-//                        .with(ItemEntry.builder(ModBlocks.SKELETON_CHEST))
-//                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-//
-//                tableBuilder.pool(poolBuilder.build());
-//            }
-//
-//            if (SKELETON_ID.equals(id)) {
-//                LootPool.Builder poolBuilder = LootPool.builder()
-//                        .rolls(ConstantLootNumberProvider.create(1))
-//                        .conditionally(RandomChanceLootCondition.builder(0.01f)) // Drops 1% of the time
-//                        .conditionally(KilledByPlayerLootCondition.builder().build()) // Only drops when killed by player
-//                        .with(ItemEntry.builder(ModBlocks.SKELETON_TORSO))
-//                        .with(ItemEntry.builder(ModBlocks.SKELETON_ARMS_CROSS))
-//                        .with(ItemEntry.builder(ModBlocks.SKELETON_LEGS_CROSS))
-//                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-//
-//                tableBuilder.pool(poolBuilder.build());
-//            }
+            if (SKELETON_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(0.1f)) // Drops 10% of the time
+                        .conditionally(KilledByPlayerLootCondition.builder().build()) // Only drops when killed by player
+                        .with(ItemEntry.builder(ModBlocks.SKELETON_HEAD))
+                        .with(ItemEntry.builder(ModBlocks.SKELETON_ARM))
+                        .with(ItemEntry.builder(ModBlocks.SKELETON_LEG))
+                        .with(ItemEntry.builder(ModBlocks.SKELETON_SPINE))
+                        .with(ItemEntry.builder(ModBlocks.SKELETON_PELVIS))
+                        .with(ItemEntry.builder(ModBlocks.SKELETON_CHEST))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+
+                tableBuilder.pool(poolBuilder.build());
+            }
+
+            if (SKELETON_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(0.01f)) // Drops 1% of the time
+                        .conditionally(KilledByPlayerLootCondition.builder().build()) // Only drops when killed by player
+                        .with(ItemEntry.builder(ModBlocks.SKELETON_TORSO))
+                        .with(ItemEntry.builder(ModBlocks.SKELETON_ARMS_CROSS))
+                        .with(ItemEntry.builder(ModBlocks.SKELETON_LEGS_CROSS))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+
+                tableBuilder.pool(poolBuilder.build());
+            }
 
             if (SKELETON_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "steamcraft:skeleton_arm"
+    },
+    "H": {
+      "item": "steamcraft:skeleton_head"
+    },
+    "L": {
+      "item": "steamcraft:skeleton_leg"
+    }
+  },
+  "pattern": [
+    "HAL"
+  ],
+  "result": {
+    "item": "steamcraft:skeleton_half_body"
+  },
+  "show_notification": true
+}

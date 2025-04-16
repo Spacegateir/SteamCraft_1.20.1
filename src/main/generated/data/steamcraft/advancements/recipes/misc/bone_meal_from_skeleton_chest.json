@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_skeleton_chest": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "steamcraft:skeleton_chest"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:bone_meal_from_skeleton_chest"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_skeleton_chest",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:bone_meal_from_skeleton_chest"
+    ]
+  },
+  "sends_telemetry_event": false
+}

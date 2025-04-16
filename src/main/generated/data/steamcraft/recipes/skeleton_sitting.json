@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "steamcraft:skeleton_arm"
+    },
+    "H": {
+      "item": "steamcraft:skeleton_head"
+    },
+    "L": {
+      "item": "steamcraft:skeleton_leg"
+    },
+    "T": {
+      "item": "steamcraft:skeleton_torso"
+    }
+  },
+  "pattern": [
+    " H ",
+    "ATA",
+    "L L"
+  ],
+  "result": {
+    "item": "steamcraft:skeleton_sitting"
+  },
+  "show_notification": true
+}

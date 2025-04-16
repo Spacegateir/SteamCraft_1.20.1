@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "steamcraft:skeleton_arm"
+    }
+  },
+  "pattern": [
+    "AA"
+  ],
+  "result": {
+    "item": "steamcraft:skeleton_arms_cross"
+  },
+  "show_notification": true
+}

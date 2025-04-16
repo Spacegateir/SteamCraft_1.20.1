@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "steamcraft:skeleton_leg"
+    }
+  },
+  "pattern": [
+    "AA"
+  ],
+  "result": {
+    "item": "steamcraft:skeleton_legs_cross"
+  },
+  "show_notification": true
+}

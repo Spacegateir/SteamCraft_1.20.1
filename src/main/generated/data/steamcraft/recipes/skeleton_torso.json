@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "steamcraft:skeleton_chest"
+    },
+    "P": {
+      "item": "steamcraft:skeleton_pelvis"
+    },
+    "S": {
+      "item": "steamcraft:skeleton_spine"
+    }
+  },
+  "pattern": [
+    " C ",
+    " S ",
+    " P "
+  ],
+  "result": {
+    "item": "steamcraft:skeleton_torso"
+  },
+  "show_notification": true
+}

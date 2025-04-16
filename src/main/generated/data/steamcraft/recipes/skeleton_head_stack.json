@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": {
+      "item": "steamcraft:skeleton_head"
+    }
+  },
+  "pattern": [
+    "HHH"
+  ],
+  "result": {
+    "item": "steamcraft:skeleton_head_stack"
+  },
+  "show_notification": true
+}

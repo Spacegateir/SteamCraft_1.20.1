@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "steamcraft:skeleton_arm",
+    "steamcraft:skeleton_chest",
+    "steamcraft:skeleton_head",
+    "steamcraft:skeleton_leg",
+    "steamcraft:skeleton_pelvis",
+    "steamcraft:skeleton_arms_cross",
+    "steamcraft:skeleton_half_body",
+    "steamcraft:skeleton_head_stack",
+    "steamcraft:skeleton_laying",
+    "steamcraft:skeleton_legs_cross",
+    "steamcraft:skeleton_torso",
+    "steamcraft:skeleton_sitting",
+    "steamcraft:skeleton_spine"
+  ]
+}

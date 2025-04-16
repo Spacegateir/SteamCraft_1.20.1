@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "steamcraft:skeleton_arms_cross"
+    },
+    "H": {
+      "item": "steamcraft:skeleton_head"
+    },
+    "L": {
+      "item": "steamcraft:skeleton_legs_cross"
+    },
+    "T": {
+      "item": "steamcraft:skeleton_torso"
+    }
+  },
+  "pattern": [
+    " A ",
+    "HTL"
+  ],
+  "result": {
+    "item": "steamcraft:skeleton_laying"
+  },
+  "show_notification": true
+}

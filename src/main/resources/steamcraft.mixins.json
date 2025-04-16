@@ -5,7 +5,8 @@
 	"mixins": [
 		"ExampleMixin",
 		"PlayerEntityMixin",
-		"PlayerDamageMixin"
+		"PlayerDamageMixin",
+		"BrewingRecipeRegistryMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

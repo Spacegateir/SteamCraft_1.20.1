@@ -12,6 +12,7 @@ import net.spacegateir.steamcraft.creative_tab.ModItemRewardsGroups;
 import net.spacegateir.steamcraft.effect.ModEffects;
 import net.spacegateir.steamcraft.item.ModItems;
 import net.spacegateir.steamcraft.item.ModRewardItems;
+import net.spacegateir.steamcraft.potion.ModPotions;
 import net.spacegateir.steamcraft.util.ModCustomTrades;
 import net.spacegateir.steamcraft.util.ModLootTableModifiers;
 import net.spacegateir.steamcraft.util.ModRegistries;
@@ -40,6 +41,7 @@ public class Steamcraft implements ModInitializer {
 		ModItemRewardsGroups.registerItemGroups();
 
 		ModEffects.registerEffects();
+		ModPotions.registerPotions();
 
 		ModRegistries.registerModStuff();
 		ModCustomTrades.registerCustomTrades();

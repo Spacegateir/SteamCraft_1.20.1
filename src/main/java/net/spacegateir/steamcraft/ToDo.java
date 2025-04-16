@@ -15,10 +15,6 @@ public class ToDo {
 
     // Skelleton parts loot as is
 
-    // Finalise freaky bunny effect potions (item: carrot)
-    // Finalise disoriant effect potions (item: poisonous potato)
-    // Finalise sticky feat potions (item: slime)
-
     // add 48 flowers, spawn in the world, recipies for dye, compostable, recipies for light sorces
 
     // add loot box for amathest armor

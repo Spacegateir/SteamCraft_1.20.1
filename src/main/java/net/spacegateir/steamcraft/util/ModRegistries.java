@@ -72,21 +72,21 @@ public class ModRegistries {
     }
 
     private static void registerPotionRecipes() {
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.AWKWARD, Items.SLIME_BALL, ModPotions.STICKY_FEAT_POTION);
+        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.SLOW_FALLING, Items.SLIME_BALL, ModPotions.STICKY_FEAT_POTION);
         BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(ModPotions.STICKY_FEAT_POTION, Items.REDSTONE, ModPotions.STICKY_FEAT_POTION_1); // 8 min
         BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(ModPotions.STICKY_FEAT_POTION, Items.GLOWSTONE_DUST, ModPotions.STICKY_FEAT_POTION_2); // lvl 2
 
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.AWKWARD, Items.POISONOUS_POTATO, ModPotions.DISORIENT_POTION);
+        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.HARMING, Items.POISONOUS_POTATO, ModPotions.DISORIENT_POTION);
         BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(ModPotions.DISORIENT_POTION, Items.REDSTONE, ModPotions.DISORIENT_POTION_1); // 8 min
         BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(ModPotions.DISORIENT_POTION, Items.GLOWSTONE_DUST, ModPotions.DISORIENT_POTION_2); // lvl 2
 
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.AWKWARD, Items.CARROT, ModPotions.FREAKY_BUNNY_POTION);
+        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.LEAPING, Items.CARROT, ModPotions.FREAKY_BUNNY_POTION);
         BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(ModPotions.FREAKY_BUNNY_POTION, Items.REDSTONE, ModPotions.FREAKY_BUNNY_POTION_1); // 8 min
         BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(ModPotions.FREAKY_BUNNY_POTION, Items.GLOWSTONE_DUST, ModPotions.FREAKY_BUNNY_POTION_2); // lvl 2
 
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.AWKWARD, Items.NETHER_STAR, ModPotions.CLEAR_NEGATIVE_EFFECT_POTION);
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.AWKWARD, Items.HEART_OF_THE_SEA, ModPotions.CLEAR_NEUTRAL_EFFECT_POTION);
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.AWKWARD, Items.ECHO_SHARD, ModPotions.CLEAR_POSITIVE_EFFECT_POTION);
+        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.REGENERATION, Items.NETHER_STAR, ModPotions.CLEAR_NEGATIVE_EFFECT_POTION);
+        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.REGENERATION, Items.HEART_OF_THE_SEA, ModPotions.CLEAR_NEUTRAL_EFFECT_POTION);
+        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.REGENERATION, Items.ECHO_SHARD, ModPotions.CLEAR_POSITIVE_EFFECT_POTION);
     }
 
 

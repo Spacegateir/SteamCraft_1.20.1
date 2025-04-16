@@ -11,10 +11,18 @@ import net.minecraft.util.Identifier;
 import net.spacegateir.steamcraft.Steamcraft;
 import net.spacegateir.steamcraft.item.armor.AmethystArmorItem;
 import net.spacegateir.steamcraft.item.armor.WolfFuryArmorItem;
+import net.spacegateir.steamcraft.item.loot_chests.AmethystItem;
+import net.spacegateir.steamcraft.item.loot_chests.LootChestItem;
+import net.spacegateir.steamcraft.item.loot_chests.WolfFuryItem;
 
 public class ModRewardItems {
 
 
+    public static final Item LOOT_CHEST = registerItem("loot_chest",
+            new LootChestItem(new FabricItemSettings().maxCount(1)));
+
+    public static final Item AMETHYST_LOOT_CHEST = registerItem("amethyst_loot_chest",
+            new AmethystItem(new FabricItemSettings().maxCount(1)));
     public static final Item AMETHYST_HELMET = registerItem("amethyst_helmet",
             new AmethystArmorItem(ModArmorMaterials.AMETHYST, ArmorItem.Type.HELMET, new FabricItemSettings()));
     public static final Item AMETHYST_CHESTPLATE = registerItem("amethyst_chestplate",
@@ -24,6 +32,8 @@ public class ModRewardItems {
     public static final Item AMETHYST_BOOTS = registerItem("amethyst_boots",
             new AmethystArmorItem(ModArmorMaterials.AMETHYST, ArmorItem.Type.BOOTS, new FabricItemSettings()));
 
+    public static final Item WOLF_FURY_LOOT_CHEST = registerItem("wolf_fury_loot_chest",
+            new WolfFuryItem(new FabricItemSettings().maxCount(1)));
     public static final Item WOLF_FURY_HELMET = registerItem("wolf_fury_helmet",
             new WolfFuryArmorItem(ModArmorMaterials.WOLF, ArmorItem.Type.HELMET, new FabricItemSettings()));
     public static final Item WOLF_FURY_CHESTPLATE = registerItem("wolf_fury_chestplate",

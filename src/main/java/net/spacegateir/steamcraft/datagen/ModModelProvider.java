@@ -73,11 +73,15 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.WINGED_SANDALS, Models.GENERATED);
 
+        itemModelGenerator.register(ModRewardItems.LOOT_CHEST, Models.GENERATED);
+
+        itemModelGenerator.register(ModRewardItems.AMETHYST_LOOT_CHEST, Models.GENERATED);
         itemModelGenerator.register(ModRewardItems.AMETHYST_HELMET, Models.GENERATED);
         itemModelGenerator.register(ModRewardItems.AMETHYST_CHESTPLATE, Models.GENERATED);
         itemModelGenerator.register(ModRewardItems.AMETHYST_LEGGINGS, Models.GENERATED);
         itemModelGenerator.register(ModRewardItems.AMETHYST_BOOTS, Models.GENERATED);
 
+        itemModelGenerator.register(ModRewardItems.WOLF_FURY_LOOT_CHEST, Models.GENERATED);
         itemModelGenerator.register(ModRewardItems.WOLF_FURY_HELMET, Models.GENERATED);
         itemModelGenerator.register(ModRewardItems.WOLF_FURY_CHESTPLATE, Models.GENERATED);
         itemModelGenerator.register(ModRewardItems.WOLF_FURY_LEGGINGS, Models.GENERATED);

@@ -11,7 +11,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.spacegateir.steamcraft.Steamcraft;
-import net.spacegateir.steamcraft.block.custom.AetherBlock;
+import net.spacegateir.steamcraft.block.custom.*;
 
 public class ModBlocks {
 
@@ -73,6 +73,23 @@ public class ModBlocks {
             new Block(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK)));
     public static final Block FOOLS_GOLD_RAW_BLOCK = registerBlock("fools_gold_raw_block",
             new Block(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK)));
+
+    public static final Block CLAY_PATH = registerBlock("clay_path",
+            new ClayPathBlock(FabricBlockSettings.copyOf(Blocks.CLAY).velocityMultiplier(1.25F)));
+    public static final Block COARSE_DIRT_PATH = registerBlock("coarse_dirt_path",
+            new CoarsePathBlock(FabricBlockSettings.copyOf(Blocks.COARSE_DIRT).velocityMultiplier(1.25F)));
+    public static final Block DIRT_PATH = registerBlock("dirt_path",
+            new DirtYPathBlock(FabricBlockSettings.copyOf(Blocks.DIRT).velocityMultiplier(1.25F)));
+    public static final Block GRAVEL_PATH = registerBlock("gravel_path",
+            new GravelPathBlock(FabricBlockSettings.copyOf(Blocks.GRAVEL).velocityMultiplier(1.25F)));
+    public static final Block MUD_PATH = registerBlock("mud_path",
+            new MudPathBlock(FabricBlockSettings.copyOf(Blocks.MUD).velocityMultiplier(1.25F)));
+    public static final Block RED_SAND_PATH = registerBlock("red_sand_path",
+            new RedSandPathBlock(FabricBlockSettings.copyOf(Blocks.RED_SAND).velocityMultiplier(1.25F)));
+    public static final Block ROOTED_DIRT_PATH = registerBlock("rooted_dirt_path",
+            new RootedDirtPathBlock(FabricBlockSettings.copyOf(Blocks.ROOTED_DIRT).velocityMultiplier(1.25F)));
+    public static final Block SAND_PATH = registerBlock("sand_path",
+            new SandPathBlock(FabricBlockSettings.copyOf(Blocks.SAND).velocityMultiplier(1.25F)));
 
     public static final Block TEST_BLOCK_ITEM = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "test_block_item"),

@@ -90,6 +90,15 @@
   "block.steamcraft.aether_coil_magenta": "Aether Coil Magenta",
   "block.steamcraft.aether_coil_pink": "Aether Coil Pink",
 
+  "block.steamcraft.clay_path": "Clay Path",
+  "block.steamcraft.coarse_dirt_path": "Coarse Dirt Path",
+  "block.steamcraft.dirt_path": "Dirt Path",
+  "block.steamcraft.gravel_path": "Gravel Path",
+  "block.steamcraft.mud_path": "Mud Path",
+  "block.steamcraft.red_sand_path": "Red Sand Path",
+  "block.steamcraft.rooted_dirt_path": "Rooted Dirt Path",
+  "block.steamcraft.sand_path": "Sand Path",
+
 
   "block.steamcraft.test_block_item": "Test BlockItem",
 

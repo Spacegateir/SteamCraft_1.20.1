@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "steamcraft:clay_path",
+    "steamcraft:coarse_dirt_path",
+    "steamcraft:dirt_path",
+    "steamcraft:gravel_path",
+    "steamcraft:mud_path",
+    "steamcraft:red_sand_path",
+    "steamcraft:rooted_dirt_path",
+    "steamcraft:sand_path"
+  ]
+}

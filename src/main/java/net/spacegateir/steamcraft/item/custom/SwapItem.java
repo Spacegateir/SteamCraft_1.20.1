@@ -19,7 +19,6 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 import net.minecraft.nbt.NbtCompound;
-import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.block.custom.AetherBlock;
 import org.jetbrains.annotations.Nullable;
 

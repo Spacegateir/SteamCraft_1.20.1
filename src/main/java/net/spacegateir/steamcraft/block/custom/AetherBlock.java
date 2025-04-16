@@ -7,7 +7,7 @@ import net.minecraft.state.property.IntProperty;
 
 public class AetherBlock extends Block {
     // modify when the json file gets more models
-    public static final IntProperty SWITCH_STATE = IntProperty.of("switch_state", 0, 37);   //16
+    public static final IntProperty SWITCH_STATE = IntProperty.of("switch_state", 0, 37);   //37
 
 
     public AetherBlock(Settings settings) {

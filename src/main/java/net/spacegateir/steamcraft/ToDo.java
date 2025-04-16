@@ -31,6 +31,8 @@ public class ToDo {
     // make dragon egg with 8 netherstars craft divine egg
     // make divine egg drop halo when placed on the ground slowly cracks over 1hr then turns into a halo
 
+    //Blue lava called soul lava
+
     
 
 }

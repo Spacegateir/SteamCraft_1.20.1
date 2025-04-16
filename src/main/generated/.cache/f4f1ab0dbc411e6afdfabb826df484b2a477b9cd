@@ -1,3 +1,4 @@
-// 1.20.1	2025-04-15T09:18:30.4780109	Steamcraft/Tags for minecraft:block
+// 1.20.1	2025-04-15T10:46:28.8401754	Steamcraft/Tags for minecraft:block
 bfb0e92c3e08f5b966994fd2b906d883fc236c4f data\minecraft\tags\blocks\mineable\pickaxe.json
 bfb0e92c3e08f5b966994fd2b906d883fc236c4f data\minecraft\tags\blocks\needs_iron_tool.json
+e9cd32a981c44cba9eaeba438706e893c1c5556b data\minecraft\tags\blocks\mineable\shovel.json

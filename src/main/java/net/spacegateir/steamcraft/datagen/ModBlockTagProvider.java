@@ -41,6 +41,20 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
                 );
 
+        getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE)
+                .add(
+
+                        ModBlocks.CLAY_PATH,
+                        ModBlocks.COARSE_DIRT_PATH,
+                        ModBlocks.DIRT_PATH,
+                        ModBlocks.GRAVEL_PATH,
+                        ModBlocks.MUD_PATH,
+                        ModBlocks.RED_SAND_PATH,
+                        ModBlocks.ROOTED_DIRT_PATH,
+                        ModBlocks.SAND_PATH
+
+                );
+
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(
                         ModBlocks.AETHER_COIL,

@@ -91,6 +91,15 @@ public class ModItemGroups {
                         entries.add(ModBlocks.AETHER_COIL_MAGENTA);
                         entries.add(ModBlocks.AETHER_COIL_PINK);
 
+                        entries.add(ModBlocks.CLAY_PATH);
+                        entries.add(ModBlocks.COARSE_DIRT_PATH);
+                        entries.add(ModBlocks.DIRT_PATH);
+                        entries.add(ModBlocks.GRAVEL_PATH);
+                        entries.add(ModBlocks.MUD_PATH);
+                        entries.add(ModBlocks.RED_SAND_PATH);
+                        entries.add(ModBlocks.ROOTED_DIRT_PATH);
+                        entries.add(ModBlocks.SAND_PATH);
+
                         //BlockItems
 //                        entries.add(ModItems.TEST_ITEM_BLOCK);
 

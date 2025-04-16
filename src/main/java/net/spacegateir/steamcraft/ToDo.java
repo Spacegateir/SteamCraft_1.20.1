@@ -17,9 +17,6 @@ public class ToDo {
 
     // add 48 flowers, spawn in the world, recipies for dye, compostable, recipies for light sorces
 
-    // add loot box for amathest armor
-    // add loot box for Wolf Fury armor
-
     // make dragon egg with 8 netherstars craft divine egg
     // make divine egg drop halo when placed on the ground slowly cracks over 1hr then turns into a halo
 

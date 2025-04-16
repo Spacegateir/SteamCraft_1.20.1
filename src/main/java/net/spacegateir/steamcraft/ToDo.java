@@ -13,15 +13,11 @@ public class ToDo {
 
     //create dimentions (earth copy, void, waterworld, skulk, overworld neather type, sky dimention)
 
-    // add path blocks with valocity 25% (dirt, course dirt, rooted dirt, gravel, sand, ect.) (use shovel to path the blocks)
-    // Make sure when you break the path block you get the original block even with silk
-    // when the path is covered by another block revert back to its original block (DirtPathBlock)
-
     // Skelleton parts loot as is
 
-    // Finalise freaky bunny effect potions
-    // Finalise disoriant effect potions
-    // Finalise sticky feat potions
+    // Finalise freaky bunny effect potions (item: carrot)
+    // Finalise disoriant effect potions (item: poisonous potato)
+    // Finalise sticky feat potions (item: slime)
 
     // add 48 flowers, spawn in the world, recipies for dye, compostable, recipies for light sorces
 

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "steamcraft:block/snow_drop_flower"
+  }
+}

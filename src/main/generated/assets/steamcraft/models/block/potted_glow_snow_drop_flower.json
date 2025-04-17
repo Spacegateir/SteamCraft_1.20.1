@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/flower_pot_cross",
+  "textures": {
+    "plant": "steamcraft:block/glow_snow_drop_flower"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "steamcraft:block/glow_iris_flower"
+  }
+}

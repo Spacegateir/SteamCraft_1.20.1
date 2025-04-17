@@ -12,11 +12,11 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 
-public class DirtYPathBlock extends Block {
+public class DirtyPathBlock extends Block {
 
     protected static final VoxelShape SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 15.0, 16.0);
 
-    public DirtYPathBlock(Settings settings) {
+    public DirtyPathBlock(Settings settings) {
         super(settings);
     }
 

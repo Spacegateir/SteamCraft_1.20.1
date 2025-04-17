@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "steamcraft:block/glow_lush_daffodil_flower"
+  }
+}

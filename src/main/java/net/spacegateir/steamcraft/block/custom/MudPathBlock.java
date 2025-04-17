@@ -18,9 +18,7 @@ public class MudPathBlock extends Block {
 
     public MudPathBlock(Settings settings) {
         super(settings);
-    }
-
-    @Override
+    }@Override
     public boolean hasSidedTransparency(BlockState state) {
         return true;
     }

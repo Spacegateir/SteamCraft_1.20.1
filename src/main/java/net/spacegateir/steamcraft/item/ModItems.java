@@ -124,6 +124,345 @@ public class ModItems {
             new Identifier(Steamcraft.MOD_ID, "test_item_block"),
             new BlockItem(ModBlocks.TEST_BLOCK_ITEM, new FabricItemSettings()));
 
+// Normal Flowers
+    public static final Item AGAPANTHUS_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "agapanthus_flower_item"),
+            new BlockItem(ModBlocks.AGAPANTHUS_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_AGAPANTHUS_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_agapanthus_flower_item"),
+            new BlockItem(ModBlocks.GLOW_AGAPANTHUS_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item BLUE_COSMOS_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "blue_cosmos_flower_item"),
+            new BlockItem(ModBlocks.BLUE_COSMOS_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_BLUE_COSMOS_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_blue_cosmos_flower_item"),
+            new BlockItem(ModBlocks.GLOW_BLUE_COSMOS_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item BONSAI_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "bonsai_flower_item"),
+            new BlockItem(ModBlocks.BONSAI_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_BONSAI_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_bonsai_flower_item"),
+            new BlockItem(ModBlocks.GLOW_BONSAI_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item CARNATION_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "carnation_flower_item"),
+            new BlockItem(ModBlocks.CARNATION_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_CARNATION_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_carnation_flower_item"),
+            new BlockItem(ModBlocks.GLOW_CARNATION_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item DAFFODIL_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "daffodil_flower_item"),
+            new BlockItem(ModBlocks.DAFFODIL_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_DAFFODIL_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_daffodil_flower_item"),
+            new BlockItem(ModBlocks.GLOW_DAFFODIL_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item DAHLIA_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "dahlia_flower_item"),
+            new BlockItem(ModBlocks.DAHLIA_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_DAHLIA_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_dahlia_flower_item"),
+            new BlockItem(ModBlocks.GLOW_DAHLIA_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item DELPHINIUM_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "delphinium_flower_item"),
+            new BlockItem(ModBlocks.DELPHINIUM_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_DELPHINIUM_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_delphinium_flower_item"),
+            new BlockItem(ModBlocks.GLOW_DELPHINIUM_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item HAWTHORN_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "hawthorn_flower_item"),
+            new BlockItem(ModBlocks.HAWTHORN_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_HAWTHORN_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_hawthorn_flower_item"),
+            new BlockItem(ModBlocks.GLOW_HAWTHORN_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item HYDRANGEA_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "hydrangea_flower_item"),
+            new BlockItem(ModBlocks.HYDRANGEA_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_HYDRANGEA_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_hydrangea_flower_item"),
+            new BlockItem(ModBlocks.GLOW_HYDRANGEA_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item IRIS_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "iris_flower_item"),
+            new BlockItem(ModBlocks.IRIS_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_IRIS_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_iris_flower_item"),
+            new BlockItem(ModBlocks.GLOW_IRIS_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item LARKSPUR_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "larkspur_flower_item"),
+            new BlockItem(ModBlocks.LARKSPUR_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_LARKSPUR_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_larkspur_flower_item"),
+            new BlockItem(ModBlocks.GLOW_LARKSPUR_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item MIDNIGHT_MYSTIC_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "midnight_mystic_flower_item"),
+            new BlockItem(ModBlocks.MIDNIGHT_MYSTIC_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_MIDNIGHT_MYSTIC_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_midnight_mystic_flower_item"),
+            new BlockItem(ModBlocks.GLOW_MIDNIGHT_MYSTIC_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item PRIMROSE_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "primrose_flower_item"),
+            new BlockItem(ModBlocks.PRIMROSE_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_PRIMROSE_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_primrose_flower_item"),
+            new BlockItem(ModBlocks.GLOW_PRIMROSE_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item SNOW_DROP_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "snow_drop_flower_item"),
+            new BlockItem(ModBlocks.SNOW_DROP_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_SNOW_DROP_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_snow_drop_flower_item"),
+            new BlockItem(ModBlocks.GLOW_SNOW_DROP_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item SPIDERLILY_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "spiderlily_flower_item"),
+            new BlockItem(ModBlocks.SPIDERLILY_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_SPIDERLILY_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_spiderlily_flower_item"),
+            new BlockItem(ModBlocks.GLOW_SPIDERLILY_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item VIOLET_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "violet_flower_item"),
+            new BlockItem(ModBlocks.VIOLET_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_VIOLET_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_violet_flower_item"),
+            new BlockItem(ModBlocks.GLOW_VIOLET_FLOWER_BLOCK, new FabricItemSettings()));
+
+// Thorned Flowers
+    public static final Item THORNED_AGAPANTHUS_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "thorned_agapanthus_flower_item"),
+            new BlockItem(ModBlocks.THORNED_AGAPANTHUS_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_THORNED_AGAPANTHUS_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_thorned_agapanthus_flower_item"),
+            new BlockItem(ModBlocks.GLOW_THORNED_AGAPANTHUS_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item THORNED_BLUE_COSMOS_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "thorned_blue_cosmos_flower_item"),
+            new BlockItem(ModBlocks.THORNED_BLUE_COSMOS_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_THORNED_BLUE_COSMOS_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_thorned_blue_cosmos_flower_item"),
+            new BlockItem(ModBlocks.GLOW_THORNED_BLUE_COSMOS_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item THORNED_BONSAI_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "thorned_bonsai_flower_item"),
+            new BlockItem(ModBlocks.THORNED_BONSAI_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_THORNED_BONSAI_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_thorned_bonsai_flower_item"),
+            new BlockItem(ModBlocks.GLOW_THORNED_BONSAI_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item THORNED_CARNATION_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "thorned_carnation_flower_item"),
+            new BlockItem(ModBlocks.THORNED_CARNATION_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_THORNED_CARNATION_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_thorned_carnation_flower_item"),
+            new BlockItem(ModBlocks.GLOW_THORNED_CARNATION_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item THORNED_DAFFODIL_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "thorned_daffodil_flower_item"),
+            new BlockItem(ModBlocks.THORNED_DAFFODIL_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_THORNED_DAFFODIL_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_thorned_daffodil_flower_item"),
+            new BlockItem(ModBlocks.GLOW_THORNED_DAFFODIL_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item THORNED_DAHLIA_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "thorned_dahlia_flower_item"),
+            new BlockItem(ModBlocks.THORNED_DAHLIA_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_THORNED_DAHLIA_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_thorned_dahlia_flower_item"),
+            new BlockItem(ModBlocks.GLOW_THORNED_DAHLIA_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item THORNED_DELPHINIUM_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "thorned_delphinium_flower_item"),
+            new BlockItem(ModBlocks.THORNED_DELPHINIUM_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_THORNED_DELPHINIUM_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_thorned_delphinium_flower_item"),
+            new BlockItem(ModBlocks.GLOW_THORNED_DELPHINIUM_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item THORNED_HAWTHORN_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "thorned_hawthorn_flower_item"),
+            new BlockItem(ModBlocks.THORNED_HAWTHORN_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_THORNED_HAWTHORN_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_thorned_hawthorn_flower_item"),
+            new BlockItem(ModBlocks.GLOW_THORNED_HAWTHORN_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item THORNED_HYDRANGEA_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "thorned_hydrangea_flower_item"),
+            new BlockItem(ModBlocks.THORNED_HYDRANGEA_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_THORNED_HYDRANGEA_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_thorned_hydrangea_flower_item"),
+            new BlockItem(ModBlocks.GLOW_THORNED_HYDRANGEA_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item THORNED_IRIS_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "thorned_iris_flower_item"),
+            new BlockItem(ModBlocks.THORNED_IRIS_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_THORNED_IRIS_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_thorned_iris_flower_item"),
+            new BlockItem(ModBlocks.GLOW_THORNED_IRIS_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item THORNED_LARKSPUR_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "thorned_larkspur_flower_item"),
+            new BlockItem(ModBlocks.THORNED_LARKSPUR_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_THORNED_LARKSPUR_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_thorned_larkspur_flower_item"),
+            new BlockItem(ModBlocks.GLOW_THORNED_LARKSPUR_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item THORNED_MIDNIGHT_MYSTIC_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "thorned_midnight_mystic_flower_item"),
+            new BlockItem(ModBlocks.THORNED_MIDNIGHT_MYSTIC_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_THORNED_MIDNIGHT_MYSTIC_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_thorned_midnight_mystic_flower_item"),
+            new BlockItem(ModBlocks.GLOW_THORNED_MIDNIGHT_MYSTIC_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item THORNED_PRIMROSE_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "thorned_primrose_flower_item"),
+            new BlockItem(ModBlocks.THORNED_PRIMROSE_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_THORNED_PRIMROSE_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_thorned_primrose_flower_item"),
+            new BlockItem(ModBlocks.GLOW_THORNED_PRIMROSE_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item THORNED_SNOW_DROP_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "thorned_snow_drop_flower_item"),
+            new BlockItem(ModBlocks.THORNED_SNOW_DROP_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_THORNED_SNOW_DROP_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_thorned_snow_drop_flower_item"),
+            new BlockItem(ModBlocks.GLOW_THORNED_SNOW_DROP_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item THORNED_SPIDERLILY_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "thorned_spiderlily_flower_item"),
+            new BlockItem(ModBlocks.THORNED_SPIDERLILY_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_THORNED_SPIDERLILY_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_thorned_spiderlily_flower_item"),
+            new BlockItem(ModBlocks.GLOW_THORNED_SPIDERLILY_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item THORNED_VIOLET_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "thorned_violet_flower_item"),
+            new BlockItem(ModBlocks.THORNED_VIOLET_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_THORNED_VIOLET_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_thorned_violet_flower_item"),
+            new BlockItem(ModBlocks.GLOW_THORNED_VIOLET_FLOWER_BLOCK, new FabricItemSettings()));
+
+// Lush Flowers
+    public static final Item LUSH_AGAPANTHUS_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "lush_agapanthus_flower_item"),
+            new BlockItem(ModBlocks.LUSH_AGAPANTHUS_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_LUSH_AGAPANTHUS_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_lush_agapanthus_flower_item"),
+            new BlockItem(ModBlocks.GLOW_LUSH_AGAPANTHUS_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item LUSH_BLUE_COSMOS_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "lush_blue_cosmos_flower_item"),
+            new BlockItem(ModBlocks.LUSH_BLUE_COSMOS_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_LUSH_BLUE_COSMOS_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_lush_blue_cosmos_flower_item"),
+            new BlockItem(ModBlocks.GLOW_LUSH_BLUE_COSMOS_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item LUSH_BONSAI_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "lush_bonsai_flower_item"),
+            new BlockItem(ModBlocks.LUSH_BONSAI_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_LUSH_BONSAI_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_lush_bonsai_flower_item"),
+            new BlockItem(ModBlocks.GLOW_LUSH_BONSAI_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item LUSH_CARNATION_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "lush_carnation_flower_item"),
+            new BlockItem(ModBlocks.LUSH_CARNATION_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_LUSH_CARNATION_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_lush_carnation_flower_item"),
+            new BlockItem(ModBlocks.GLOW_LUSH_CARNATION_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item LUSH_DAFFODIL_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "lush_daffodil_flower_item"),
+            new BlockItem(ModBlocks.LUSH_DAFFODIL_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_LUSH_DAFFODIL_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_lush_daffodil_flower_item"),
+            new BlockItem(ModBlocks.GLOW_LUSH_DAFFODIL_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item LUSH_DAHLIA_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "lush_dahlia_flower_item"),
+            new BlockItem(ModBlocks.LUSH_DAHLIA_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_LUSH_DAHLIA_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_lush_dahlia_flower_item"),
+            new BlockItem(ModBlocks.GLOW_LUSH_DAHLIA_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item LUSH_DELPHINIUM_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "lush_delphinium_flower_item"),
+            new BlockItem(ModBlocks.LUSH_DELPHINIUM_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_LUSH_DELPHINIUM_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_lush_delphinium_flower_item"),
+            new BlockItem(ModBlocks.GLOW_LUSH_DELPHINIUM_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item LUSH_HAWTHORN_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "lush_hawthorn_flower_item"),
+            new BlockItem(ModBlocks.LUSH_HAWTHORN_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_LUSH_HAWTHORN_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_lush_hawthorn_flower_item"),
+            new BlockItem(ModBlocks.GLOW_LUSH_HAWTHORN_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item LUSH_HYDRANGEA_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "lush_hydrangea_flower_item"),
+            new BlockItem(ModBlocks.LUSH_HYDRANGEA_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_LUSH_HYDRANGEA_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_lush_hydrangea_flower_item"),
+            new BlockItem(ModBlocks.GLOW_LUSH_HYDRANGEA_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item LUSH_IRIS_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "lush_iris_flower_item"),
+            new BlockItem(ModBlocks.LUSH_IRIS_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_LUSH_IRIS_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_lush_iris_flower_item"),
+            new BlockItem(ModBlocks.GLOW_LUSH_IRIS_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item LUSH_LARKSPUR_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "lush_larkspur_flower_item"),
+            new BlockItem(ModBlocks.LUSH_LARKSPUR_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_LUSH_LARKSPUR_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_lush_larkspur_flower_item"),
+            new BlockItem(ModBlocks.GLOW_LUSH_LARKSPUR_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item LUSH_MIDNIGHT_MYSTIC_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "lush_midnight_mystic_flower_item"),
+            new BlockItem(ModBlocks.LUSH_MIDNIGHT_MYSTIC_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_LUSH_MIDNIGHT_MYSTIC_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_lush_midnight_mystic_flower_item"),
+            new BlockItem(ModBlocks.GLOW_LUSH_MIDNIGHT_MYSTIC_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item LUSH_PRIMROSE_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "lush_primrose_flower_item"),
+            new BlockItem(ModBlocks.LUSH_PRIMROSE_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_LUSH_PRIMROSE_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_lush_primrose_flower_item"),
+            new BlockItem(ModBlocks.GLOW_LUSH_PRIMROSE_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item LUSH_SNOW_DROP_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "lush_snow_drop_flower_item"),
+            new BlockItem(ModBlocks.LUSH_SNOW_DROP_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_LUSH_SNOW_DROP_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_lush_snow_drop_flower_item"),
+            new BlockItem(ModBlocks.GLOW_LUSH_SNOW_DROP_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item LUSH_SPIDERLILY_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "lush_spiderlily_flower_item"),
+            new BlockItem(ModBlocks.LUSH_SPIDERLILY_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_LUSH_SPIDERLILY_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_lush_spiderlily_flower_item"),
+            new BlockItem(ModBlocks.GLOW_LUSH_SPIDERLILY_FLOWER_BLOCK, new FabricItemSettings()));
+
+    public static final Item LUSH_VIOLET_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "lush_violet_flower_item"),
+            new BlockItem(ModBlocks.LUSH_VIOLET_FLOWER_BLOCK, new FabricItemSettings()));
+    public static final Item GLOW_LUSH_VIOLET_FLOWER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glow_lush_violet_flower_item"),
+            new BlockItem(ModBlocks.GLOW_LUSH_VIOLET_FLOWER_BLOCK, new FabricItemSettings()));
+
 
 
 

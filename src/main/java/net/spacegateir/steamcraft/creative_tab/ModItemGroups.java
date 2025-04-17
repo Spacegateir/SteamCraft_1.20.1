@@ -117,6 +117,118 @@ public class ModItemGroups {
                         //BlockItems
 //                        entries.add(ModItems.TEST_ITEM_BLOCK);
 
+                        entries.add(ModItems.AGAPANTHUS_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_AGAPANTHUS_FLOWER_ITEM);
+                        entries.add(ModItems.THORNED_AGAPANTHUS_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_THORNED_AGAPANTHUS_FLOWER_ITEM);
+                        entries.add(ModItems.LUSH_AGAPANTHUS_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_LUSH_AGAPANTHUS_FLOWER_ITEM);
+
+                        entries.add(ModItems.BLUE_COSMOS_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_BLUE_COSMOS_FLOWER_ITEM);
+                        entries.add(ModItems.THORNED_BLUE_COSMOS_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_THORNED_BLUE_COSMOS_FLOWER_ITEM);
+                        entries.add(ModItems.LUSH_BLUE_COSMOS_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_LUSH_BLUE_COSMOS_FLOWER_ITEM);
+
+                        entries.add(ModItems.BONSAI_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_BONSAI_FLOWER_ITEM);
+                        entries.add(ModItems.THORNED_BONSAI_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_THORNED_BONSAI_FLOWER_ITEM);
+                        entries.add(ModItems.LUSH_BONSAI_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_LUSH_BONSAI_FLOWER_ITEM);
+
+                        entries.add(ModItems.CARNATION_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_CARNATION_FLOWER_ITEM);
+                        entries.add(ModItems.THORNED_CARNATION_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_THORNED_CARNATION_FLOWER_ITEM);
+                        entries.add(ModItems.LUSH_CARNATION_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_LUSH_CARNATION_FLOWER_ITEM);
+
+                        entries.add(ModItems.DAFFODIL_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_DAFFODIL_FLOWER_ITEM);
+                        entries.add(ModItems.THORNED_DAFFODIL_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_THORNED_DAFFODIL_FLOWER_ITEM);
+                        entries.add(ModItems.LUSH_DAFFODIL_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_LUSH_DAFFODIL_FLOWER_ITEM);
+
+                        entries.add(ModItems.DAHLIA_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_DAHLIA_FLOWER_ITEM);
+                        entries.add(ModItems.THORNED_DAHLIA_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_THORNED_DAHLIA_FLOWER_ITEM);
+                        entries.add(ModItems.LUSH_DAHLIA_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_LUSH_DAHLIA_FLOWER_ITEM);
+
+                        entries.add(ModItems.DELPHINIUM_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_DELPHINIUM_FLOWER_ITEM);
+                        entries.add(ModItems.THORNED_DELPHINIUM_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_THORNED_DELPHINIUM_FLOWER_ITEM);
+                        entries.add(ModItems.LUSH_DELPHINIUM_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_LUSH_DELPHINIUM_FLOWER_ITEM);
+
+                        entries.add(ModItems.HAWTHORN_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_HAWTHORN_FLOWER_ITEM);
+                        entries.add(ModItems.THORNED_HAWTHORN_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_THORNED_HAWTHORN_FLOWER_ITEM);
+                        entries.add(ModItems.LUSH_HAWTHORN_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_LUSH_HAWTHORN_FLOWER_ITEM);
+
+                        entries.add(ModItems.HYDRANGEA_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_HYDRANGEA_FLOWER_ITEM);
+                        entries.add(ModItems.THORNED_HYDRANGEA_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_THORNED_HYDRANGEA_FLOWER_ITEM);
+                        entries.add(ModItems.LUSH_HYDRANGEA_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_LUSH_HYDRANGEA_FLOWER_ITEM);
+
+                        entries.add(ModItems.IRIS_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_IRIS_FLOWER_ITEM);
+                        entries.add(ModItems.THORNED_IRIS_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_THORNED_IRIS_FLOWER_ITEM);
+                        entries.add(ModItems.LUSH_IRIS_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_LUSH_IRIS_FLOWER_ITEM);
+
+                        entries.add(ModItems.LARKSPUR_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_LARKSPUR_FLOWER_ITEM);
+                        entries.add(ModItems.THORNED_LARKSPUR_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_THORNED_LARKSPUR_FLOWER_ITEM);
+                        entries.add(ModItems.LUSH_LARKSPUR_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_LUSH_LARKSPUR_FLOWER_ITEM);
+
+                        entries.add(ModItems.MIDNIGHT_MYSTIC_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_MIDNIGHT_MYSTIC_FLOWER_ITEM);
+                        entries.add(ModItems.THORNED_MIDNIGHT_MYSTIC_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_THORNED_MIDNIGHT_MYSTIC_FLOWER_ITEM);
+                        entries.add(ModItems.LUSH_MIDNIGHT_MYSTIC_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_LUSH_MIDNIGHT_MYSTIC_FLOWER_ITEM);
+
+                        entries.add(ModItems.PRIMROSE_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_PRIMROSE_FLOWER_ITEM);
+                        entries.add(ModItems.THORNED_PRIMROSE_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_THORNED_PRIMROSE_FLOWER_ITEM);
+                        entries.add(ModItems.LUSH_PRIMROSE_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_LUSH_PRIMROSE_FLOWER_ITEM);
+
+                        entries.add(ModItems.SNOW_DROP_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_SNOW_DROP_FLOWER_ITEM);
+                        entries.add(ModItems.THORNED_SNOW_DROP_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_THORNED_SNOW_DROP_FLOWER_ITEM);
+                        entries.add(ModItems.LUSH_SNOW_DROP_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_LUSH_SNOW_DROP_FLOWER_ITEM);
+
+                        entries.add(ModItems.SPIDERLILY_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_SPIDERLILY_FLOWER_ITEM);
+                        entries.add(ModItems.THORNED_SPIDERLILY_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_THORNED_SPIDERLILY_FLOWER_ITEM);
+                        entries.add(ModItems.LUSH_SPIDERLILY_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_LUSH_SPIDERLILY_FLOWER_ITEM);
+
+                        entries.add(ModItems.VIOLET_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_VIOLET_FLOWER_ITEM);
+                        entries.add(ModItems.THORNED_VIOLET_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_THORNED_VIOLET_FLOWER_ITEM);
+                        entries.add(ModItems.LUSH_VIOLET_FLOWER_ITEM);
+                        entries.add(ModItems.GLOW_LUSH_VIOLET_FLOWER_ITEM);
+
 
 
 

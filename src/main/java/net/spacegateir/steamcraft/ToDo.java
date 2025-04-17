@@ -11,11 +11,11 @@ public class ToDo {
 
     // MODIFY THE CRAFTTING RECIPE FOR THE GOD ARMOR (halo)
 
-    //create dimentions (earth copy, void, waterworld, skulk, overworld neather type, sky dimention)
-
-    // Skelleton parts loot as is
+    // create dimentions (earth copy, void, waterworld, skulk, overworld neather type, sky dimention)
 
     // add 48 flowers, spawn in the world, recipies for dye, compostable, recipies for light sorces
+    // add suspisus stew recipies for the flowers
+    // give glow flowers a partical effect or a flim strip
 
     // make dragon egg with 8 netherstars craft divine egg
     // make divine egg drop halo when placed on the ground slowly cracks over 1hr then turns into a halo

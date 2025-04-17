@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "steamcraft:block/thorned_delphinium_flower"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "steamcraft:block/lush_bonsai_flower"
+  }
+}

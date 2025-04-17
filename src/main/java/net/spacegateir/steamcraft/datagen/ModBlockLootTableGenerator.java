@@ -105,6 +105,102 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.SKELETON_SITTING);
         addDrop(ModBlocks.SKELETON_SPINE);
 
+        addDrop(ModBlocks.AGAPANTHUS_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_AGAPANTHUS_FLOWER_BLOCK);
+
+        addDrop(ModBlocks.BLUE_COSMOS_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_BLUE_COSMOS_FLOWER_BLOCK);
+
+        // Normal Flowers
+        addDrop(ModBlocks.BONSAI_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_BONSAI_FLOWER_BLOCK);
+        addDrop(ModBlocks.CARNATION_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_CARNATION_FLOWER_BLOCK);
+        addDrop(ModBlocks.DAFFODIL_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_DAFFODIL_FLOWER_BLOCK);
+        addDrop(ModBlocks.DAHLIA_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_DAHLIA_FLOWER_BLOCK);
+        addDrop(ModBlocks.DELPHINIUM_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_DELPHINIUM_FLOWER_BLOCK);
+        addDrop(ModBlocks.HAWTHORN_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_HAWTHORN_FLOWER_BLOCK);
+        addDrop(ModBlocks.HYDRANGEA_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_HYDRANGEA_FLOWER_BLOCK);
+        addDrop(ModBlocks.IRIS_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_IRIS_FLOWER_BLOCK);
+        addDrop(ModBlocks.LARKSPUR_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_LARKSPUR_FLOWER_BLOCK);
+        addDrop(ModBlocks.MIDNIGHT_MYSTIC_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_MIDNIGHT_MYSTIC_FLOWER_BLOCK);
+        addDrop(ModBlocks.PRIMROSE_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_PRIMROSE_FLOWER_BLOCK);
+        addDrop(ModBlocks.SNOW_DROP_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_SNOW_DROP_FLOWER_BLOCK);
+        addDrop(ModBlocks.SPIDERLILY_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_SPIDERLILY_FLOWER_BLOCK);
+        addDrop(ModBlocks.VIOLET_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_VIOLET_FLOWER_BLOCK);
+
+        // Thorned Flowers
+        addDrop(ModBlocks.THORNED_BONSAI_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_THORNED_BONSAI_FLOWER_BLOCK);
+        addDrop(ModBlocks.THORNED_CARNATION_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_THORNED_CARNATION_FLOWER_BLOCK);
+        addDrop(ModBlocks.THORNED_DAFFODIL_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_THORNED_DAFFODIL_FLOWER_BLOCK);
+        addDrop(ModBlocks.THORNED_DAHLIA_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_THORNED_DAHLIA_FLOWER_BLOCK);
+        addDrop(ModBlocks.THORNED_DELPHINIUM_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_THORNED_DELPHINIUM_FLOWER_BLOCK);
+        addDrop(ModBlocks.THORNED_HAWTHORN_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_THORNED_HAWTHORN_FLOWER_BLOCK);
+        addDrop(ModBlocks.THORNED_HYDRANGEA_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_THORNED_HYDRANGEA_FLOWER_BLOCK);
+        addDrop(ModBlocks.THORNED_IRIS_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_THORNED_IRIS_FLOWER_BLOCK);
+        addDrop(ModBlocks.THORNED_LARKSPUR_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_THORNED_LARKSPUR_FLOWER_BLOCK);
+        addDrop(ModBlocks.THORNED_MIDNIGHT_MYSTIC_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_THORNED_MIDNIGHT_MYSTIC_FLOWER_BLOCK);
+        addDrop(ModBlocks.THORNED_PRIMROSE_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_THORNED_PRIMROSE_FLOWER_BLOCK);
+        addDrop(ModBlocks.THORNED_SNOW_DROP_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_THORNED_SNOW_DROP_FLOWER_BLOCK);
+        addDrop(ModBlocks.THORNED_SPIDERLILY_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_THORNED_SPIDERLILY_FLOWER_BLOCK);
+        addDrop(ModBlocks.THORNED_VIOLET_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_THORNED_VIOLET_FLOWER_BLOCK);
+
+        // Lush Flowers
+        addDrop(ModBlocks.LUSH_BONSAI_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_LUSH_BONSAI_FLOWER_BLOCK);
+        addDrop(ModBlocks.LUSH_CARNATION_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_LUSH_CARNATION_FLOWER_BLOCK);
+        addDrop(ModBlocks.LUSH_DAFFODIL_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_LUSH_DAFFODIL_FLOWER_BLOCK);
+        addDrop(ModBlocks.LUSH_DAHLIA_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_LUSH_DAHLIA_FLOWER_BLOCK);
+        addDrop(ModBlocks.LUSH_DELPHINIUM_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_LUSH_DELPHINIUM_FLOWER_BLOCK);
+        addDrop(ModBlocks.LUSH_HAWTHORN_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_LUSH_HAWTHORN_FLOWER_BLOCK);
+        addDrop(ModBlocks.LUSH_HYDRANGEA_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_LUSH_HYDRANGEA_FLOWER_BLOCK);
+        addDrop(ModBlocks.LUSH_IRIS_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_LUSH_IRIS_FLOWER_BLOCK);
+        addDrop(ModBlocks.LUSH_LARKSPUR_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_LUSH_LARKSPUR_FLOWER_BLOCK);
+        addDrop(ModBlocks.LUSH_MIDNIGHT_MYSTIC_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_LUSH_MIDNIGHT_MYSTIC_FLOWER_BLOCK);
+        addDrop(ModBlocks.LUSH_PRIMROSE_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_LUSH_PRIMROSE_FLOWER_BLOCK);
+        addDrop(ModBlocks.LUSH_SNOW_DROP_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_LUSH_SNOW_DROP_FLOWER_BLOCK);
+        addDrop(ModBlocks.LUSH_SPIDERLILY_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_LUSH_SPIDERLILY_FLOWER_BLOCK);
+        addDrop(ModBlocks.LUSH_VIOLET_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_LUSH_VIOLET_FLOWER_BLOCK);
+
 
 
     }

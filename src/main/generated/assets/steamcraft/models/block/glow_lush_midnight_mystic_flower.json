@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "steamcraft:block/glow_lush_midnight_mystic_flower"
+  }
+}

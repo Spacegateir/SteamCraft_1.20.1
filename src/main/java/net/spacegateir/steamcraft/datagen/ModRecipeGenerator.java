@@ -4,19 +4,31 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.*;
+import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
+import net.minecraft.nbt.NbtCompound;
+import net.minecraft.nbt.NbtList;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
 import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.item.ModItems;
+import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.RecipeJsonProvider;
+import org.spongepowered.include.com.google.gson.JsonObject;
+
 
 import java.util.List;
+import java.util.Objects;
 import java.util.function.Consumer;
 
 public class ModRecipeGenerator extends FabricRecipeProvider {
+
+    private static final int STEW_EFFECT_DURATION = 160;
+
     public ModRecipeGenerator(FabricDataOutput output) {
         super(output);
     }
@@ -70,8 +82,6 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input(ModItems.GOLD_COIN, 1)
                 .criterion("has_silver_coin", conditionsFromItem(ModItems.SILVER_COIN))
                 .offerTo(exporter, new Identifier("steamcraft", "gold_to_silver"));
-
-
 
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.PATTERN_RECOMPILER)
@@ -538,35 +548,5 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.SKELETON_HALF_BODY)));
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
-
-
 }
-
-
-

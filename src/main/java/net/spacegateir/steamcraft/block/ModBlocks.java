@@ -136,208 +136,208 @@ public class ModBlocks {
 // Normal Flowers
     public static final Block AGAPANTHUS_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "agapanthus_flower"),
-            new FlowerBlock(StatusEffects.RESISTANCE, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.RESISTANCE, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_AGAPANTHUS_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_agapanthus_flower"),
             new FlowerPotBlock(AGAPANTHUS_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_AGAPANTHUS_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_agapanthus_flower"),
-            new FlowerBlock(StatusEffects.RESISTANCE, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.RESISTANCE, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_AGAPANTHUS_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_agapanthus_flower"),
             new FlowerPotBlock(GLOW_AGAPANTHUS_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block BLUE_COSMOS_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "blue_cosmos_flower"),
-            new FlowerBlock(StatusEffects.SPEED, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.SPEED, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_BLUE_COSMOS_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_blue_cosmos_flower"),
             new FlowerPotBlock(BLUE_COSMOS_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_BLUE_COSMOS_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_blue_cosmos_flower"),
-            new FlowerBlock(StatusEffects.SPEED, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.SPEED, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_BLUE_COSMOS_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_blue_cosmos_flower"),
             new FlowerPotBlock(GLOW_BLUE_COSMOS_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block BONSAI_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "bonsai_flower"),
-            new FlowerBlock(ModEffects.CLEAR_POSITIVE_EFFECT, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(ModEffects.CLEAR_POSITIVE_EFFECT, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_BONSAI_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_bonsai_flower"),
             new FlowerPotBlock(BONSAI_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_BONSAI_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_bonsai_flower"),
-            new FlowerBlock(ModEffects.CLEAR_POSITIVE_EFFECT, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(ModEffects.CLEAR_POSITIVE_EFFECT, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_BONSAI_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_bonsai_flower"),
             new FlowerPotBlock(GLOW_BONSAI_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block CARNATION_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "carnation_flower"),
-            new FlowerBlock(StatusEffects.BAD_OMEN, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.BAD_OMEN, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_CARNATION_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_carnation_flower"),
             new FlowerPotBlock(CARNATION_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_CARNATION_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_carnation_flower"),
-            new FlowerBlock(StatusEffects.BAD_OMEN, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.BAD_OMEN, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_CARNATION_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_carnation_flower"),
             new FlowerPotBlock(GLOW_CARNATION_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block DAFFODIL_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "daffodil_flower"),
-            new FlowerBlock(StatusEffects.LUCK, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.LUCK, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_DAFFODIL_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_daffodil_flower"),
             new FlowerPotBlock(DAFFODIL_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_DAFFODIL_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_daffodil_flower"),
-            new FlowerBlock(StatusEffects.LUCK, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.LUCK, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_DAFFODIL_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_daffodil_flower"),
             new FlowerPotBlock(GLOW_DAFFODIL_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block DAHLIA_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "dahlia_flower"),
-            new FlowerBlock(StatusEffects.WITHER, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.WITHER, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_DAHLIA_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_dahlia_flower"),
             new FlowerPotBlock(DAHLIA_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_DAHLIA_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_dahlia_flower"),
-            new FlowerBlock(StatusEffects.WITHER, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.WITHER, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_DAHLIA_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_dahlia_flower"),
             new FlowerPotBlock(GLOW_DAHLIA_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block DELPHINIUM_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "delphinium_flower"),
-            new FlowerBlock(StatusEffects.LEVITATION, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.LEVITATION, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_DELPHINIUM_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_delphinium_flower"),
             new FlowerPotBlock(DELPHINIUM_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_DELPHINIUM_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_delphinium_flower"),
-            new FlowerBlock(StatusEffects.LEVITATION, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.LEVITATION, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_DELPHINIUM_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_delphinium_flower"),
             new FlowerPotBlock(GLOW_DELPHINIUM_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block HAWTHORN_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "hawthorn_flower"),
-            new FlowerBlock(ModEffects.CLEAR_NEGATIVE_EFFECT, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(ModEffects.CLEAR_NEGATIVE_EFFECT, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_HAWTHORN_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_hawthorn_flower"),
             new FlowerPotBlock(HAWTHORN_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_HAWTHORN_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_hawthorn_flower"),
-            new FlowerBlock(ModEffects.CLEAR_NEGATIVE_EFFECT, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(ModEffects.CLEAR_NEGATIVE_EFFECT, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_HAWTHORN_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_hawthorn_flower"),
             new FlowerPotBlock(GLOW_HAWTHORN_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block HYDRANGEA_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "hydrangea_flower"),
-            new FlowerBlock(StatusEffects.NAUSEA, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.NAUSEA, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_HYDRANGEA_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_hydrangea_flower"),
             new FlowerPotBlock(HYDRANGEA_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_HYDRANGEA_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_hydrangea_flower"),
-            new FlowerBlock(StatusEffects.NAUSEA, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.NAUSEA, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_HYDRANGEA_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_hydrangea_flower"),
             new FlowerPotBlock(GLOW_HYDRANGEA_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block IRIS_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "iris_flower"),
-            new FlowerBlock(StatusEffects.GLOWING, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.GLOWING, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_IRIS_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_iris_flower"),
             new FlowerPotBlock(IRIS_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_IRIS_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_iris_flower"),
-            new FlowerBlock(StatusEffects.GLOWING, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.GLOWING, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_IRIS_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_iris_flower"),
             new FlowerPotBlock(GLOW_IRIS_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block LARKSPUR_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "larkspur_flower"),
-            new FlowerBlock(StatusEffects.REGENERATION, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.REGENERATION, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_LARKSPUR_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_larkspur_flower"),
             new FlowerPotBlock(LARKSPUR_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_LARKSPUR_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_larkspur_flower"),
-            new FlowerBlock(StatusEffects.REGENERATION, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.REGENERATION, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_LARKSPUR_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_larkspur_flower"),
             new FlowerPotBlock(GLOW_LARKSPUR_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block MIDNIGHT_MYSTIC_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "midnight_mystic_flower"),
-            new FlowerBlock(ModEffects.DISORIENT, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(ModEffects.DISORIENT, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_MIDNIGHT_MYSTIC_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_midnight_mystic_flower"),
             new FlowerPotBlock(MIDNIGHT_MYSTIC_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_MIDNIGHT_MYSTIC_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_midnight_mystic_flower"),
-            new FlowerBlock(ModEffects.DISORIENT, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(ModEffects.DISORIENT, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_MIDNIGHT_MYSTIC_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_midnight_mystic_flower"),
             new FlowerPotBlock(GLOW_MIDNIGHT_MYSTIC_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block PRIMROSE_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "primrose_flower"),
-            new FlowerBlock(StatusEffects.HASTE, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.HASTE, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_PRIMROSE_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_primrose_flower"),
             new FlowerPotBlock(PRIMROSE_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_PRIMROSE_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_primrose_flower"),
-            new FlowerBlock(StatusEffects.HASTE, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.HASTE, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_PRIMROSE_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_primrose_flower"),
             new FlowerPotBlock(GLOW_PRIMROSE_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block SNOW_DROP_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "snow_drop_flower"),
-            new FlowerBlock(ModEffects.FREAKY_BUNNY, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(ModEffects.FREAKY_BUNNY, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_SNOW_DROP_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_snow_drop_flower"),
             new FlowerPotBlock(SNOW_DROP_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_SNOW_DROP_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_snow_drop_flower"),
-            new FlowerBlock(ModEffects.FREAKY_BUNNY, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(ModEffects.FREAKY_BUNNY, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_SNOW_DROP_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_snow_drop_flower"),
             new FlowerPotBlock(GLOW_SNOW_DROP_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block SPIDERLILY_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "spiderlily_flower"),
-            new FlowerBlock(ModEffects.STICKY_FEAT, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(ModEffects.STICKY_FEAT, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_SPIDERLILY_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_spiderlily_flower"),
             new FlowerPotBlock(SPIDERLILY_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_SPIDERLILY_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_spiderlily_flower"),
-            new FlowerBlock(ModEffects.STICKY_FEAT, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(ModEffects.STICKY_FEAT, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_SPIDERLILY_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_spiderlily_flower"),
             new FlowerPotBlock(GLOW_SPIDERLILY_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block VIOLET_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "violet_flower"),
-            new FlowerBlock(StatusEffects.POISON, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.POISON, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_VIOLET_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_violet_flower"),
             new FlowerPotBlock(VIOLET_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_VIOLET_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_violet_flower"),
-            new FlowerBlock(StatusEffects.POISON, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.POISON, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_VIOLET_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_violet_flower"),
             new FlowerPotBlock(GLOW_VIOLET_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
@@ -345,210 +345,208 @@ public class ModBlocks {
 // Thorned Flowers
     public static final Block THORNED_AGAPANTHUS_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "thorned_agapanthus_flower"),
-            new FlowerBlock(StatusEffects.RESISTANCE, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.RESISTANCE, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_THORNED_AGAPANTHUS_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_thorned_agapanthus_flower"),
             new FlowerPotBlock(THORNED_AGAPANTHUS_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_THORNED_AGAPANTHUS_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_thorned_agapanthus_flower"),
-            new FlowerBlock(StatusEffects.RESISTANCE, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.RESISTANCE, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_THORNED_AGAPANTHUS_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_thorned_agapanthus_flower"),
             new FlowerPotBlock(GLOW_THORNED_AGAPANTHUS_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block THORNED_BLUE_COSMOS_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "thorned_blue_cosmos_flower"),
-            new FlowerBlock(StatusEffects.SLOW_FALLING, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.SLOW_FALLING, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_THORNED_BLUE_COSMOS_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_thorned_blue_cosmos_flower"),
             new FlowerPotBlock(THORNED_BLUE_COSMOS_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_THORNED_BLUE_COSMOS_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_thorned_blue_cosmos_flower"),
-            new FlowerBlock(StatusEffects.SLOW_FALLING, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.SLOW_FALLING, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_THORNED_BLUE_COSMOS_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_thorned_blue_cosmos_flower"),
             new FlowerPotBlock(GLOW_THORNED_BLUE_COSMOS_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block THORNED_BONSAI_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "thorned_bonsai_flower"),
-            new FlowerBlock(ModEffects.CLEAR_POSITIVE_EFFECT
-                    , 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(ModEffects.CLEAR_POSITIVE_EFFECT, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_THORNED_BONSAI_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_thorned_bonsai_flower"),
             new FlowerPotBlock(THORNED_BONSAI_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_THORNED_BONSAI_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_thorned_bonsai_flower"),
-            new FlowerBlock(ModEffects.CLEAR_POSITIVE_EFFECT
-                    , 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(ModEffects.CLEAR_POSITIVE_EFFECT, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_THORNED_BONSAI_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_thorned_bonsai_flower"),
             new FlowerPotBlock(GLOW_THORNED_BONSAI_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block THORNED_CARNATION_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "thorned_carnation_flower"),
-            new FlowerBlock(StatusEffects.BAD_OMEN, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.BAD_OMEN, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_THORNED_CARNATION_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_thorned_carnation_flower"),
             new FlowerPotBlock(THORNED_CARNATION_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_THORNED_CARNATION_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_thorned_carnation_flower"),
-            new FlowerBlock(StatusEffects.BAD_OMEN, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.BAD_OMEN, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_THORNED_CARNATION_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_thorned_carnation_flower"),
             new FlowerPotBlock(GLOW_THORNED_CARNATION_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block THORNED_DAFFODIL_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "thorned_daffodil_flower"),
-            new FlowerBlock(StatusEffects.UNLUCK, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.UNLUCK, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_THORNED_DAFFODIL_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_thorned_daffodil_flower"),
             new FlowerPotBlock(THORNED_DAFFODIL_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_THORNED_DAFFODIL_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_thorned_daffodil_flower"),
-            new FlowerBlock(StatusEffects.UNLUCK, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.UNLUCK, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_THORNED_DAFFODIL_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_thorned_daffodil_flower"),
             new FlowerPotBlock(GLOW_THORNED_DAFFODIL_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block THORNED_DAHLIA_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "thorned_dahlia_flower"),
-            new FlowerBlock(StatusEffects.WITHER, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.WITHER, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_THORNED_DAHLIA_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_thorned_dahlia_flower"),
             new FlowerPotBlock(THORNED_DAHLIA_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_THORNED_DAHLIA_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_thorned_dahlia_flower"),
-            new FlowerBlock(StatusEffects.WITHER, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.WITHER, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_THORNED_DAHLIA_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_thorned_dahlia_flower"),
             new FlowerPotBlock(GLOW_THORNED_DAHLIA_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block THORNED_DELPHINIUM_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "thorned_delphinium_flower"),
-            new FlowerBlock(StatusEffects.LEVITATION, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.LEVITATION, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_THORNED_DELPHINIUM_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_thorned_delphinium_flower"),
             new FlowerPotBlock(THORNED_DELPHINIUM_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_THORNED_DELPHINIUM_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_thorned_delphinium_flower"),
-            new FlowerBlock(StatusEffects.LEVITATION, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.LEVITATION, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_THORNED_DELPHINIUM_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_thorned_delphinium_flower"),
             new FlowerPotBlock(GLOW_THORNED_DELPHINIUM_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block THORNED_HAWTHORN_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "thorned_hawthorn_flower"),
-            new FlowerBlock(ModEffects.DISORIENT, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(ModEffects.DISORIENT, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_THORNED_HAWTHORN_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_thorned_hawthorn_flower"),
             new FlowerPotBlock(THORNED_HAWTHORN_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_THORNED_HAWTHORN_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_thorned_hawthorn_flower"),
-            new FlowerBlock(ModEffects.DISORIENT, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(ModEffects.DISORIENT, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_THORNED_HAWTHORN_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_thorned_hawthorn_flower"),
             new FlowerPotBlock(GLOW_THORNED_HAWTHORN_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block THORNED_HYDRANGEA_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "thorned_hydrangea_flower"),
-            new FlowerBlock(StatusEffects.NAUSEA, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.NAUSEA, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_THORNED_HYDRANGEA_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_thorned_hydrangea_flower"),
             new FlowerPotBlock(THORNED_HYDRANGEA_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_THORNED_HYDRANGEA_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_thorned_hydrangea_flower"),
-            new FlowerBlock(StatusEffects.NAUSEA, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.NAUSEA, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_THORNED_HYDRANGEA_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_thorned_hydrangea_flower"),
             new FlowerPotBlock(GLOW_THORNED_HYDRANGEA_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block THORNED_IRIS_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "thorned_iris_flower"),
-            new FlowerBlock(StatusEffects.BLINDNESS, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.BLINDNESS, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_THORNED_IRIS_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_thorned_iris_flower"),
             new FlowerPotBlock(THORNED_IRIS_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_THORNED_IRIS_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_thorned_iris_flower"),
-            new FlowerBlock(StatusEffects.BLINDNESS, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.BLINDNESS, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_THORNED_IRIS_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_thorned_iris_flower"),
             new FlowerPotBlock(GLOW_THORNED_IRIS_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block THORNED_LARKSPUR_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "thorned_larkspur_flower"),
-            new FlowerBlock(StatusEffects.REGENERATION, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.REGENERATION, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_THORNED_LARKSPUR_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_thorned_larkspur_flower"),
             new FlowerPotBlock(THORNED_LARKSPUR_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_THORNED_LARKSPUR_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_thorned_larkspur_flower"),
-            new FlowerBlock(StatusEffects.REGENERATION, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.REGENERATION, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_THORNED_LARKSPUR_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_thorned_larkspur_flower"),
             new FlowerPotBlock(GLOW_THORNED_LARKSPUR_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block THORNED_MIDNIGHT_MYSTIC_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "thorned_midnight_mystic_flower"),
-            new FlowerBlock(ModEffects.DISORIENT, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(ModEffects.DISORIENT, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_THORNED_MIDNIGHT_MYSTIC_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_thorned_midnight_mystic_flower"),
             new FlowerPotBlock(THORNED_MIDNIGHT_MYSTIC_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_THORNED_MIDNIGHT_MYSTIC_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_thorned_midnight_mystic_flower"),
-            new FlowerBlock(ModEffects.DISORIENT, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(ModEffects.DISORIENT, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_THORNED_MIDNIGHT_MYSTIC_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_thorned_midnight_mystic_flower"),
             new FlowerPotBlock(GLOW_THORNED_MIDNIGHT_MYSTIC_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block THORNED_PRIMROSE_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "thorned_primrose_flower"),
-            new FlowerBlock(StatusEffects.SLOWNESS, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.SLOWNESS, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_THORNED_PRIMROSE_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_thorned_primrose_flower"),
             new FlowerPotBlock(THORNED_PRIMROSE_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_THORNED_PRIMROSE_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_thorned_primrose_flower"),
-            new FlowerBlock(StatusEffects.SLOWNESS, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.SLOWNESS, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_THORNED_PRIMROSE_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_thorned_primrose_flower"),
             new FlowerPotBlock(GLOW_THORNED_PRIMROSE_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block THORNED_SNOW_DROP_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "thorned_snow_drop_flower"),
-            new FlowerBlock(StatusEffects.WEAKNESS, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.WEAKNESS, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_THORNED_SNOW_DROP_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_thorned_snow_drop_flower"),
             new FlowerPotBlock(THORNED_SNOW_DROP_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_THORNED_SNOW_DROP_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_thorned_snow_drop_flower"),
-            new FlowerBlock(StatusEffects.WEAKNESS, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.WEAKNESS, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_THORNED_SNOW_DROP_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_thorned_snow_drop_flower"),
             new FlowerPotBlock(GLOW_THORNED_SNOW_DROP_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block THORNED_SPIDERLILY_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "thorned_spiderlily_flower"),
-            new FlowerBlock(ModEffects.STICKY_FEAT, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(ModEffects.STICKY_FEAT, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_THORNED_SPIDERLILY_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_thorned_spiderlily_flower"),
             new FlowerPotBlock(THORNED_SPIDERLILY_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_THORNED_SPIDERLILY_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_thorned_spiderlily_flower"),
-            new FlowerBlock(ModEffects.STICKY_FEAT, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(ModEffects.STICKY_FEAT, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_THORNED_SPIDERLILY_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_thorned_spiderlily_flower"),
             new FlowerPotBlock(GLOW_THORNED_SPIDERLILY_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block THORNED_VIOLET_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "thorned_violet_flower"),
-            new FlowerBlock(StatusEffects.HUNGER, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.HUNGER, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_THORNED_VIOLET_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_thorned_violet_flower"),
             new FlowerPotBlock(THORNED_VIOLET_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_THORNED_VIOLET_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_thorned_violet_flower"),
-            new FlowerBlock(StatusEffects.HUNGER, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.HUNGER, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_THORNED_VIOLET_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_thorned_violet_flower"),
             new FlowerPotBlock(GLOW_THORNED_VIOLET_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
@@ -556,208 +554,208 @@ public class ModBlocks {
 // Lush Flowers
     public static final Block LUSH_AGAPANTHUS_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "lush_agapanthus_flower"),
-            new FlowerBlock(StatusEffects.STRENGTH, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.STRENGTH, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_LUSH_AGAPANTHUS_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_lush_agapanthus_flower"),
             new FlowerPotBlock(LUSH_AGAPANTHUS_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_LUSH_AGAPANTHUS_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_lush_agapanthus_flower"),
-            new FlowerBlock(StatusEffects.STRENGTH, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.STRENGTH, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_LUSH_AGAPANTHUS_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_lush_agapanthus_flower"),
             new FlowerPotBlock(GLOW_LUSH_AGAPANTHUS_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block LUSH_BLUE_COSMOS_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "lush_blue_cosmos_flower"),
-            new FlowerBlock(StatusEffects.SPEED, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.SPEED, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_LUSH_BLUE_COSMOS_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_lush_blue_cosmos_flower"),
             new FlowerPotBlock(LUSH_BLUE_COSMOS_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_LUSH_BLUE_COSMOS_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_lush_blue_cosmos_flower"),
-            new FlowerBlock(StatusEffects.SPEED, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.SPEED, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_LUSH_BLUE_COSMOS_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_lush_blue_cosmos_flower"),
             new FlowerPotBlock(GLOW_LUSH_BLUE_COSMOS_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block LUSH_BONSAI_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "lush_bonsai_flower"),
-            new FlowerBlock(ModEffects.CLEAR_NEGATIVE_EFFECT, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(ModEffects.CLEAR_NEGATIVE_EFFECT, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_LUSH_BONSAI_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_lush_bonsai_flower"),
             new FlowerPotBlock(LUSH_BONSAI_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_LUSH_BONSAI_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_lush_bonsai_flower"),
-            new FlowerBlock(ModEffects.CLEAR_NEGATIVE_EFFECT, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(ModEffects.CLEAR_NEGATIVE_EFFECT, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_LUSH_BONSAI_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_lush_bonsai_flower"),
             new FlowerPotBlock(GLOW_LUSH_BONSAI_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block LUSH_CARNATION_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "lush_carnation_flower"),
-            new FlowerBlock(StatusEffects.HERO_OF_THE_VILLAGE, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.HERO_OF_THE_VILLAGE, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_LUSH_CARNATION_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_lush_carnation_flower"),
             new FlowerPotBlock(LUSH_CARNATION_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_LUSH_CARNATION_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_lush_carnation_flower"),
-            new FlowerBlock(StatusEffects.HERO_OF_THE_VILLAGE, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.HERO_OF_THE_VILLAGE, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_LUSH_CARNATION_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_lush_carnation_flower"),
             new FlowerPotBlock(GLOW_LUSH_CARNATION_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block LUSH_DAFFODIL_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "lush_daffodil_flower"),
-            new FlowerBlock(StatusEffects.LUCK, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.LUCK, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_LUSH_DAFFODIL_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_lush_daffodil_flower"),
             new FlowerPotBlock(LUSH_DAFFODIL_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_LUSH_DAFFODIL_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_lush_daffodil_flower"),
-            new FlowerBlock(StatusEffects.LUCK, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.LUCK, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_LUSH_DAFFODIL_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_lush_daffodil_flower"),
             new FlowerPotBlock(GLOW_LUSH_DAFFODIL_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block LUSH_DAHLIA_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "lush_dahlia_flower"),
-            new FlowerBlock(StatusEffects.REGENERATION, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.REGENERATION, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_LUSH_DAHLIA_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_lush_dahlia_flower"),
             new FlowerPotBlock(LUSH_DAHLIA_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_LUSH_DAHLIA_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_lush_dahlia_flower"),
-            new FlowerBlock(StatusEffects.REGENERATION, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.REGENERATION, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_LUSH_DAHLIA_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_lush_dahlia_flower"),
             new FlowerPotBlock(GLOW_LUSH_DAHLIA_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block LUSH_DELPHINIUM_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "lush_delphinium_flower"),
-            new FlowerBlock(StatusEffects.SLOW_FALLING, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.SLOW_FALLING, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_LUSH_DELPHINIUM_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_lush_delphinium_flower"),
             new FlowerPotBlock(LUSH_DELPHINIUM_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_LUSH_DELPHINIUM_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_lush_delphinium_flower"),
-            new FlowerBlock(StatusEffects.SLOW_FALLING, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.SLOW_FALLING, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_LUSH_DELPHINIUM_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_lush_delphinium_flower"),
             new FlowerPotBlock(GLOW_LUSH_DELPHINIUM_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block LUSH_HAWTHORN_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "lush_hawthorn_flower"),
-            new FlowerBlock(ModEffects.CLEAR_POSITIVE_EFFECT, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(ModEffects.CLEAR_POSITIVE_EFFECT, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_LUSH_HAWTHORN_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_lush_hawthorn_flower"),
             new FlowerPotBlock(LUSH_HAWTHORN_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_LUSH_HAWTHORN_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_lush_hawthorn_flower"),
-            new FlowerBlock(ModEffects.CLEAR_POSITIVE_EFFECT, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(ModEffects.CLEAR_POSITIVE_EFFECT, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_LUSH_HAWTHORN_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_lush_hawthorn_flower"),
             new FlowerPotBlock(GLOW_LUSH_HAWTHORN_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block LUSH_HYDRANGEA_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "lush_hydrangea_flower"),
-            new FlowerBlock(StatusEffects.WATER_BREATHING, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.WATER_BREATHING, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_LUSH_HYDRANGEA_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_lush_hydrangea_flower"),
             new FlowerPotBlock(LUSH_HYDRANGEA_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_LUSH_HYDRANGEA_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_lush_hydrangea_flower"),
-            new FlowerBlock(StatusEffects.WATER_BREATHING, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.WATER_BREATHING, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_LUSH_HYDRANGEA_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_lush_hydrangea_flower"),
             new FlowerPotBlock(GLOW_LUSH_HYDRANGEA_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block LUSH_IRIS_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "lush_iris_flower"),
-            new FlowerBlock(StatusEffects.GLOWING, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.GLOWING, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_LUSH_IRIS_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_lush_iris_flower"),
             new FlowerPotBlock(LUSH_IRIS_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_LUSH_IRIS_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_lush_iris_flower"),
-            new FlowerBlock(StatusEffects.GLOWING, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.GLOWING, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_LUSH_IRIS_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_lush_iris_flower"),
             new FlowerPotBlock(GLOW_LUSH_IRIS_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block LUSH_LARKSPUR_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "lush_larkspur_flower"),
-            new FlowerBlock(StatusEffects.RESISTANCE, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.RESISTANCE, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_LUSH_LARKSPUR_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_lush_larkspur_flower"),
             new FlowerPotBlock(LUSH_LARKSPUR_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_LUSH_LARKSPUR_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_lush_larkspur_flower"),
-            new FlowerBlock(StatusEffects.RESISTANCE, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.RESISTANCE, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_LUSH_LARKSPUR_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_lush_larkspur_flower"),
             new FlowerPotBlock(GLOW_LUSH_LARKSPUR_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block LUSH_MIDNIGHT_MYSTIC_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "lush_midnight_mystic_flower"),
-            new FlowerBlock(ModEffects.FREAKY_BUNNY, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(ModEffects.FREAKY_BUNNY, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_LUSH_MIDNIGHT_MYSTIC_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_lush_midnight_mystic_flower"),
             new FlowerPotBlock(LUSH_MIDNIGHT_MYSTIC_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_LUSH_MIDNIGHT_MYSTIC_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_lush_midnight_mystic_flower"),
-            new FlowerBlock(ModEffects.FREAKY_BUNNY, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(ModEffects.FREAKY_BUNNY, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_LUSH_MIDNIGHT_MYSTIC_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_lush_midnight_mystic_flower"),
             new FlowerPotBlock(GLOW_LUSH_MIDNIGHT_MYSTIC_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block LUSH_PRIMROSE_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "lush_primrose_flower"),
-            new FlowerBlock(StatusEffects.JUMP_BOOST, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.JUMP_BOOST, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_LUSH_PRIMROSE_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_lush_primrose_flower"),
             new FlowerPotBlock(LUSH_PRIMROSE_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_LUSH_PRIMROSE_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_lush_primrose_flower"),
-            new FlowerBlock(StatusEffects.JUMP_BOOST, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.JUMP_BOOST, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_LUSH_PRIMROSE_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_lush_primrose_flower"),
             new FlowerPotBlock(GLOW_LUSH_PRIMROSE_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block LUSH_SNOW_DROP_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "lush_snow_drop_flower"),
-            new FlowerBlock(StatusEffects.ABSORPTION, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.ABSORPTION, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_LUSH_SNOW_DROP_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_lush_snow_drop_flower"),
             new FlowerPotBlock(LUSH_SNOW_DROP_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_LUSH_SNOW_DROP_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_lush_snow_drop_flower"),
-            new FlowerBlock(StatusEffects.ABSORPTION, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.ABSORPTION, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_LUSH_SNOW_DROP_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_lush_snow_drop_flower"),
             new FlowerPotBlock(GLOW_LUSH_SNOW_DROP_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block LUSH_SPIDERLILY_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "lush_spiderlily_flower"),
-            new FlowerBlock(ModEffects.STICKY_FEAT, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(ModEffects.STICKY_FEAT, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_LUSH_SPIDERLILY_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_lush_spiderlily_flower"),
             new FlowerPotBlock(LUSH_SPIDERLILY_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_LUSH_SPIDERLILY_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_lush_spiderlily_flower"),
-            new FlowerBlock(ModEffects.STICKY_FEAT, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(ModEffects.STICKY_FEAT, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_LUSH_SPIDERLILY_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_lush_spiderlily_flower"),
             new FlowerPotBlock(GLOW_LUSH_SPIDERLILY_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
     public static final Block LUSH_VIOLET_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "lush_violet_flower"),
-            new FlowerBlock(StatusEffects.NIGHT_VISION, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.NIGHT_VISION, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
     public static final Block POTTED_LUSH_VIOLET_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_lush_violet_flower"),
             new FlowerPotBlock(LUSH_VIOLET_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
     public static final Block GLOW_LUSH_VIOLET_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glow_lush_violet_flower"),
-            new FlowerBlock(StatusEffects.NIGHT_VISION, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
+            new FlowerBlock(StatusEffects.NIGHT_VISION, 160, FabricBlockSettings.copyOf(Blocks.ALLIUM).luminance(15).nonOpaque().noCollision()));
     public static final Block POTTED_GLOW_LUSH_VIOLET_FLOWER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "potted_glow_lush_violet_flower"),
             new FlowerPotBlock(GLOW_LUSH_VIOLET_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));

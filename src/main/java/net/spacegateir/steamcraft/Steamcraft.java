@@ -17,6 +17,7 @@ import net.spacegateir.steamcraft.util.ModCustomTrades;
 import net.spacegateir.steamcraft.util.ModLootTableModifiers;
 import net.spacegateir.steamcraft.util.ModRegistries;
 import net.spacegateir.steamcraft.util.ShovelPathStateInjector;
+import net.spacegateir.steamcraft.world.gen.ModWorldGeneration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import software.bernie.geckolib.GeckoLib;
@@ -48,6 +49,8 @@ public class Steamcraft implements ModInitializer {
 		ModLootTableModifiers.modifyLootTables();
 
 		GeckoLib.initialize();
+
+		ModWorldGeneration.generateModWorldGeneration();
 
 
 

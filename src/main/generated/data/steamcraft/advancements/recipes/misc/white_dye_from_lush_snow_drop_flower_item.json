@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_lush_snow_drop_flower_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "steamcraft:lush_snow_drop_flower_item"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:white_dye_from_lush_snow_drop_flower_item"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_lush_snow_drop_flower_item",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:white_dye_from_lush_snow_drop_flower_item"
+    ]
+  },
+  "sends_telemetry_event": false
+}

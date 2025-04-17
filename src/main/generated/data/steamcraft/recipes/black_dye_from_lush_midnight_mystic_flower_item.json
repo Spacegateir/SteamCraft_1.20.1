@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "dye_recipes",
+  "ingredients": [
+    {
+      "item": "steamcraft:lush_midnight_mystic_flower_item"
+    }
+  ],
+  "result": {
+    "item": "minecraft:black_dye"
+  }
+}

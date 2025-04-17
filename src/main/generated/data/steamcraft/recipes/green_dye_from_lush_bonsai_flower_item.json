@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "dye_recipes",
+  "ingredients": [
+    {
+      "item": "steamcraft:lush_bonsai_flower_item"
+    }
+  ],
+  "result": {
+    "item": "minecraft:green_dye"
+  }
+}

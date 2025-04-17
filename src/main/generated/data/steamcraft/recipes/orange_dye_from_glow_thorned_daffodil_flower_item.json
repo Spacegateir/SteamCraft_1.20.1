@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "dye_recipes",
+  "ingredients": [
+    {
+      "item": "steamcraft:glow_thorned_daffodil_flower_item"
+    }
+  ],
+  "result": {
+    "item": "minecraft:orange_dye"
+  }
+}

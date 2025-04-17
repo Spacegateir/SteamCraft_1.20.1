@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "dye_recipes",
+  "ingredients": [
+    {
+      "item": "steamcraft:thorned_dahlia_flower_item"
+    }
+  ],
+  "result": {
+    "item": "minecraft:brown_dye"
+  }
+}

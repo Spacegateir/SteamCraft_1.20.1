@@ -2,15 +2,12 @@ package net.spacegateir.steamcraft.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.*;
-import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
-import net.minecraft.nbt.NbtCompound;
-import net.minecraft.nbt.NbtList;
 import net.minecraft.recipe.Ingredient;
-import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
@@ -18,16 +15,12 @@ import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.item.ModItems;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
-import org.spongepowered.include.com.google.gson.JsonObject;
 
 
 import java.util.List;
-import java.util.Objects;
 import java.util.function.Consumer;
 
 public class ModRecipeGenerator extends FabricRecipeProvider {
-
-    private static final int STEW_EFFECT_DURATION = 160;
 
     public ModRecipeGenerator(FabricDataOutput output) {
         super(output);
@@ -547,6 +540,839 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion("has_skeleton_head", conditionsFromItem(ModBlocks.SKELETON_HEAD))
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.SKELETON_HALF_BODY)));
 
+        // Normal Flowers
+        offerShapelessRecipe(
+                exporter,
+                Items.LIGHT_BLUE_DYE,
+                ModBlocks.BLUE_COSMOS_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+        offerShapelessRecipe(
+                exporter,
+                Items.WHITE_DYE,
+                ModBlocks.SNOW_DROP_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
 
+        offerShapelessRecipe(
+                exporter,
+                Items.MAGENTA_DYE,
+                ModBlocks.CARNATION_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.PURPLE_DYE,
+                ModBlocks.VIOLET_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.PINK_DYE,
+                ModBlocks.IRIS_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.YELLOW_DYE,
+                ModBlocks.PRIMROSE_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.ORANGE_DYE,
+                ModBlocks.DAFFODIL_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.BLUE_DYE,
+                ModBlocks.DELPHINIUM_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.BROWN_DYE,
+                ModBlocks.DAHLIA_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.LIME_DYE,
+                ModBlocks.HYDRANGEA_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.BLACK_DYE,
+                ModBlocks.MIDNIGHT_MYSTIC_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.LIGHT_GRAY_DYE,
+                ModBlocks.HAWTHORN_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.GREEN_DYE,
+                ModBlocks.BONSAI_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.RED_DYE,
+                ModBlocks.SPIDERLILY_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.CYAN_DYE,
+                ModBlocks.LARKSPUR_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.GRAY_DYE,
+                ModBlocks.AGAPANTHUS_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        // Glow Normal Flowers
+        offerShapelessRecipe(
+                exporter,
+                Items.LIGHT_BLUE_DYE,
+                ModBlocks.GLOW_BLUE_COSMOS_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+        offerShapelessRecipe(
+                exporter,
+                Items.WHITE_DYE,
+                ModBlocks.GLOW_SNOW_DROP_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.MAGENTA_DYE,
+                ModBlocks.GLOW_CARNATION_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.PURPLE_DYE,
+                ModBlocks.GLOW_VIOLET_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.PINK_DYE,
+                ModBlocks.GLOW_IRIS_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.YELLOW_DYE,
+                ModBlocks.GLOW_PRIMROSE_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.ORANGE_DYE,
+                ModBlocks.GLOW_DAFFODIL_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.BLUE_DYE,
+                ModBlocks.GLOW_DELPHINIUM_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.BROWN_DYE,
+                ModBlocks.GLOW_DAHLIA_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.LIME_DYE,
+                ModBlocks.GLOW_HYDRANGEA_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.BLACK_DYE,
+                ModBlocks.GLOW_MIDNIGHT_MYSTIC_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.LIGHT_GRAY_DYE,
+                ModBlocks.GLOW_HAWTHORN_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.GREEN_DYE,
+                ModBlocks.GLOW_BONSAI_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.RED_DYE,
+                ModBlocks.GLOW_SPIDERLILY_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.CYAN_DYE,
+                ModBlocks.GLOW_LARKSPUR_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.GRAY_DYE,
+                ModBlocks.GLOW_AGAPANTHUS_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        // Thorned Flowers
+        offerShapelessRecipe(
+                exporter,
+                Items.LIGHT_BLUE_DYE,
+                ModBlocks.THORNED_BLUE_COSMOS_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+        offerShapelessRecipe(
+                exporter,
+                Items.WHITE_DYE,
+                ModBlocks.THORNED_SNOW_DROP_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.MAGENTA_DYE,
+                ModBlocks.THORNED_CARNATION_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.PURPLE_DYE,
+                ModBlocks.THORNED_VIOLET_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.PINK_DYE,
+                ModBlocks.THORNED_IRIS_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.YELLOW_DYE,
+                ModBlocks.THORNED_PRIMROSE_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.ORANGE_DYE,
+                ModBlocks.THORNED_DAFFODIL_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.BLUE_DYE,
+                ModBlocks.THORNED_DELPHINIUM_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.BROWN_DYE,
+                ModBlocks.THORNED_DAHLIA_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.LIME_DYE,
+                ModBlocks.THORNED_HYDRANGEA_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.BLACK_DYE,
+                ModBlocks.THORNED_MIDNIGHT_MYSTIC_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.LIGHT_GRAY_DYE,
+                ModBlocks.THORNED_HAWTHORN_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.GREEN_DYE,
+                ModBlocks.THORNED_BONSAI_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.RED_DYE,
+                ModBlocks.THORNED_SPIDERLILY_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.CYAN_DYE,
+                ModBlocks.THORNED_LARKSPUR_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.GRAY_DYE,
+                ModBlocks.THORNED_AGAPANTHUS_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        // Glow Thorned Flowers
+        offerShapelessRecipe(
+                exporter,
+                Items.LIGHT_BLUE_DYE,
+                ModBlocks.GLOW_THORNED_BLUE_COSMOS_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+        offerShapelessRecipe(
+                exporter,
+                Items.WHITE_DYE,
+                ModBlocks.GLOW_THORNED_SNOW_DROP_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.MAGENTA_DYE,
+                ModBlocks.GLOW_THORNED_CARNATION_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.PURPLE_DYE,
+                ModBlocks.GLOW_THORNED_VIOLET_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.PINK_DYE,
+                ModBlocks.GLOW_THORNED_IRIS_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.YELLOW_DYE,
+                ModBlocks.GLOW_THORNED_PRIMROSE_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.ORANGE_DYE,
+                ModBlocks.GLOW_THORNED_DAFFODIL_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.BLUE_DYE,
+                ModBlocks.GLOW_THORNED_DELPHINIUM_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.BROWN_DYE,
+                ModBlocks.GLOW_THORNED_DAHLIA_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.LIME_DYE,
+                ModBlocks.GLOW_THORNED_HYDRANGEA_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.BLACK_DYE,
+                ModBlocks.GLOW_THORNED_MIDNIGHT_MYSTIC_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.LIGHT_GRAY_DYE,
+                ModBlocks.GLOW_THORNED_HAWTHORN_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.GREEN_DYE,
+                ModBlocks.GLOW_THORNED_BONSAI_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.RED_DYE,
+                ModBlocks.GLOW_THORNED_SPIDERLILY_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.CYAN_DYE,
+                ModBlocks.GLOW_THORNED_LARKSPUR_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.GRAY_DYE,
+                ModBlocks.GLOW_THORNED_AGAPANTHUS_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        // Lush Flowers
+        offerShapelessRecipe(
+                exporter,
+                Items.LIGHT_BLUE_DYE,
+                ModBlocks.LUSH_BLUE_COSMOS_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+        offerShapelessRecipe(
+                exporter,
+                Items.WHITE_DYE,
+                ModBlocks.LUSH_SNOW_DROP_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.MAGENTA_DYE,
+                ModBlocks.LUSH_CARNATION_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.PURPLE_DYE,
+                ModBlocks.LUSH_VIOLET_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.PINK_DYE,
+                ModBlocks.LUSH_IRIS_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.YELLOW_DYE,
+                ModBlocks.LUSH_PRIMROSE_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.ORANGE_DYE,
+                ModBlocks.LUSH_DAFFODIL_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.BLUE_DYE,
+                ModBlocks.LUSH_DELPHINIUM_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.BROWN_DYE,
+                ModBlocks.LUSH_DAHLIA_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.LIME_DYE,
+                ModBlocks.LUSH_HYDRANGEA_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.BLACK_DYE,
+                ModBlocks.LUSH_MIDNIGHT_MYSTIC_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.LIGHT_GRAY_DYE,
+                ModBlocks.LUSH_HAWTHORN_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.GREEN_DYE,
+                ModBlocks.LUSH_BONSAI_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.RED_DYE,
+                ModBlocks.LUSH_SPIDERLILY_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.CYAN_DYE,
+                ModBlocks.LUSH_LARKSPUR_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.GRAY_DYE,
+                ModBlocks.LUSH_AGAPANTHUS_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        // Glow Lush Flowers
+        offerShapelessRecipe(
+                exporter,
+                Items.LIGHT_BLUE_DYE,
+                ModBlocks.GLOW_LUSH_BLUE_COSMOS_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+        offerShapelessRecipe(
+                exporter,
+                Items.WHITE_DYE,
+                ModBlocks.GLOW_LUSH_SNOW_DROP_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.MAGENTA_DYE,
+                ModBlocks.GLOW_LUSH_CARNATION_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.PURPLE_DYE,
+                ModBlocks.GLOW_LUSH_VIOLET_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.PINK_DYE,
+                ModBlocks.GLOW_LUSH_IRIS_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.YELLOW_DYE,
+                ModBlocks.GLOW_LUSH_PRIMROSE_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.ORANGE_DYE,
+                ModBlocks.GLOW_LUSH_DAFFODIL_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.BLUE_DYE,
+                ModBlocks.GLOW_LUSH_DELPHINIUM_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.BROWN_DYE,
+                ModBlocks.GLOW_LUSH_DAHLIA_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.LIME_DYE,
+                ModBlocks.GLOW_LUSH_HYDRANGEA_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.BLACK_DYE,
+                ModBlocks.GLOW_LUSH_MIDNIGHT_MYSTIC_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.LIGHT_GRAY_DYE,
+                ModBlocks.GLOW_LUSH_HAWTHORN_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.GREEN_DYE,
+                ModBlocks.GLOW_LUSH_BONSAI_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.RED_DYE,
+                ModBlocks.GLOW_LUSH_SPIDERLILY_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.CYAN_DYE,
+                ModBlocks.GLOW_LUSH_LARKSPUR_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+        offerShapelessRecipe(
+                exporter,
+                Items.GRAY_DYE,
+                ModBlocks.GLOW_LUSH_AGAPANTHUS_FLOWER_BLOCK,
+                "dye_recipes",
+                1
+        );
+
+//        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GLOW_BLUE_COSMOS_FLOWER_BLOCK.asItem())
+//                .input(ModBlocks.BLUE_COSMOS_FLOWER_BLOCK.asItem())
+//                .input(Items.GLOWSTONE_DUST) // Glowstone Dust
+//                .criterion("has_flower", conditionsFromItem(ModBlocks.BLUE_COSMOS_FLOWER_BLOCK.asItem()))
+//                .criterion("has_glowstone_dust", conditionsFromItem(Items.GLOWSTONE_DUST))
+//                .offerTo(exporter);
+
+        registerGlowRecipe(exporter, ModBlocks.SNOW_DROP_FLOWER_BLOCK, ModBlocks.GLOW_SNOW_DROP_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.CARNATION_FLOWER_BLOCK, ModBlocks.GLOW_CARNATION_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.VIOLET_FLOWER_BLOCK, ModBlocks.GLOW_VIOLET_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.IRIS_FLOWER_BLOCK, ModBlocks.GLOW_IRIS_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.PRIMROSE_FLOWER_BLOCK, ModBlocks.GLOW_PRIMROSE_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.DAFFODIL_FLOWER_BLOCK, ModBlocks.GLOW_DAFFODIL_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.DELPHINIUM_FLOWER_BLOCK, ModBlocks.GLOW_DELPHINIUM_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.DAHLIA_FLOWER_BLOCK, ModBlocks.GLOW_DAHLIA_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.HYDRANGEA_FLOWER_BLOCK, ModBlocks.GLOW_HYDRANGEA_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.MIDNIGHT_MYSTIC_FLOWER_BLOCK, ModBlocks.GLOW_MIDNIGHT_MYSTIC_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.HAWTHORN_FLOWER_BLOCK, ModBlocks.GLOW_HAWTHORN_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.BONSAI_FLOWER_BLOCK, ModBlocks.GLOW_BONSAI_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.SPIDERLILY_FLOWER_BLOCK, ModBlocks.GLOW_SPIDERLILY_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.LARKSPUR_FLOWER_BLOCK, ModBlocks.GLOW_LARKSPUR_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.AGAPANTHUS_FLOWER_BLOCK, ModBlocks.GLOW_AGAPANTHUS_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.BLUE_COSMOS_FLOWER_BLOCK, ModBlocks.GLOW_BLUE_COSMOS_FLOWER_BLOCK);
+
+        registerGlowRecipe(exporter, ModBlocks.THORNED_SNOW_DROP_FLOWER_BLOCK, ModBlocks.GLOW_THORNED_SNOW_DROP_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.THORNED_CARNATION_FLOWER_BLOCK, ModBlocks.GLOW_THORNED_CARNATION_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.THORNED_VIOLET_FLOWER_BLOCK, ModBlocks.GLOW_THORNED_VIOLET_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.THORNED_IRIS_FLOWER_BLOCK, ModBlocks.GLOW_THORNED_IRIS_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.THORNED_PRIMROSE_FLOWER_BLOCK, ModBlocks.GLOW_THORNED_PRIMROSE_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.THORNED_DAFFODIL_FLOWER_BLOCK, ModBlocks.GLOW_THORNED_DAFFODIL_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.THORNED_DELPHINIUM_FLOWER_BLOCK, ModBlocks.GLOW_THORNED_DELPHINIUM_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.THORNED_DAHLIA_FLOWER_BLOCK, ModBlocks.GLOW_THORNED_DAHLIA_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.THORNED_HYDRANGEA_FLOWER_BLOCK, ModBlocks.GLOW_THORNED_HYDRANGEA_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.THORNED_MIDNIGHT_MYSTIC_FLOWER_BLOCK, ModBlocks.GLOW_THORNED_MIDNIGHT_MYSTIC_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.THORNED_HAWTHORN_FLOWER_BLOCK, ModBlocks.GLOW_THORNED_HAWTHORN_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.THORNED_BONSAI_FLOWER_BLOCK, ModBlocks.GLOW_THORNED_BONSAI_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.THORNED_SPIDERLILY_FLOWER_BLOCK, ModBlocks.GLOW_THORNED_SPIDERLILY_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.THORNED_LARKSPUR_FLOWER_BLOCK, ModBlocks.GLOW_THORNED_LARKSPUR_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.THORNED_AGAPANTHUS_FLOWER_BLOCK, ModBlocks.GLOW_THORNED_AGAPANTHUS_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.THORNED_BLUE_COSMOS_FLOWER_BLOCK, ModBlocks.GLOW_THORNED_BLUE_COSMOS_FLOWER_BLOCK);
+
+        registerGlowRecipe(exporter, ModBlocks.LUSH_SNOW_DROP_FLOWER_BLOCK, ModBlocks.GLOW_LUSH_SNOW_DROP_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.LUSH_CARNATION_FLOWER_BLOCK, ModBlocks.GLOW_LUSH_CARNATION_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.LUSH_VIOLET_FLOWER_BLOCK, ModBlocks.GLOW_LUSH_VIOLET_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.LUSH_IRIS_FLOWER_BLOCK, ModBlocks.GLOW_LUSH_IRIS_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.LUSH_PRIMROSE_FLOWER_BLOCK, ModBlocks.GLOW_LUSH_PRIMROSE_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.LUSH_DAFFODIL_FLOWER_BLOCK, ModBlocks.GLOW_LUSH_DAFFODIL_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.LUSH_DELPHINIUM_FLOWER_BLOCK, ModBlocks.GLOW_LUSH_DELPHINIUM_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.LUSH_DAHLIA_FLOWER_BLOCK, ModBlocks.GLOW_LUSH_DAHLIA_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.LUSH_HYDRANGEA_FLOWER_BLOCK, ModBlocks.GLOW_LUSH_HYDRANGEA_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.LUSH_MIDNIGHT_MYSTIC_FLOWER_BLOCK, ModBlocks.GLOW_LUSH_MIDNIGHT_MYSTIC_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.LUSH_HAWTHORN_FLOWER_BLOCK, ModBlocks.GLOW_LUSH_HAWTHORN_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.LUSH_BONSAI_FLOWER_BLOCK, ModBlocks.GLOW_LUSH_BONSAI_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.LUSH_SPIDERLILY_FLOWER_BLOCK, ModBlocks.GLOW_LUSH_SPIDERLILY_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.LUSH_LARKSPUR_FLOWER_BLOCK, ModBlocks.GLOW_LUSH_LARKSPUR_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.LUSH_AGAPANTHUS_FLOWER_BLOCK, ModBlocks.GLOW_LUSH_AGAPANTHUS_FLOWER_BLOCK);
+        registerGlowRecipe(exporter, ModBlocks.LUSH_BLUE_COSMOS_FLOWER_BLOCK, ModBlocks.GLOW_LUSH_BLUE_COSMOS_FLOWER_BLOCK);
+    }
+
+    private void registerGlowRecipe(Consumer<RecipeJsonProvider> exporter, Block baseFlower, Block glowFlower) {
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, glowFlower.asItem())
+                .input(baseFlower.asItem())
+                .input(Items.GLOWSTONE_DUST)
+                .criterion("has_flower", conditionsFromItem(baseFlower.asItem()))
+                .criterion("has_glowstone_dust", conditionsFromItem(Items.GLOWSTONE_DUST))
+                .offerTo(exporter);
     }
 }

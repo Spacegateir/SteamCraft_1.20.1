@@ -13,8 +13,7 @@ public class ToDo {
 
     // create dimentions (earth copy, void, waterworld, skulk, overworld neather type, sky dimention)
 
-    // add 48 flowers, spawn in the world, recipies for dye, compostable, recipies for light sorces
-    // add suspisus stew recipies for the flowers
+    // add 48 flowers, spawn in the world
     // give glow flowers a partical effect or a flim strip
 
     // make dragon egg with 8 netherstars craft divine egg

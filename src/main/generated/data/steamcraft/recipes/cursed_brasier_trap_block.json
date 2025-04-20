@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "steamcraft:skeleton_sitting"
+    },
+    "2": {
+      "item": "steamcraft:arcane_starving_block"
+    },
+    "3": {
+      "item": "steamcraft:arcane_mining_fatigue_block"
+    },
+    "4": {
+      "item": "steamcraft:power_precision_block_0"
+    },
+    "5": {
+      "item": "steamcraft:empty_brasier"
+    }
+  },
+  "pattern": [
+    "121",
+    "131",
+    "545"
+  ],
+  "result": {
+    "item": "steamcraft:cursed_brasier_trap_block"
+  },
+  "show_notification": true
+}

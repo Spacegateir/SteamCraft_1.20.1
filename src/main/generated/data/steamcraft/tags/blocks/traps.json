@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "steamcraft:cursed_block",
+    "steamcraft:course_dirt_trap_block",
+    "steamcraft:stone_trap_block",
+    "steamcraft:deepslate_trap_block",
+    "steamcraft:flareforge",
+    "steamcraft:nether_steam_vent",
+    "steamcraft:spirit_jump_trap",
+    "steamcraft:frost_bite_trap_block",
+    "steamcraft:cursed_nausea_trap_block",
+    "steamcraft:cursed_poison_spore_trap_block",
+    "steamcraft:cursed_brasier_trap_block",
+    "steamcraft:empty_brasier",
+    "steamcraft:cursed_totem_block",
+    "steamcraft:teleport_trap_block"
+  ]
+}

@@ -11,6 +11,8 @@ public class ToDo {
 
     // MODIFY THE CRAFTTING RECIPE FOR THE GOD ARMOR (halo)
 
+    //arcane stepping stones needs (crafting recipes, loot drops)
+
     // create dimentions (earth copy, void, waterworld, skulk, overworld neather type, sky dimention)
 
     // give glow flowers a partical effect or a flim strip

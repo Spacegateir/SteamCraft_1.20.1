@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "minecraft:dark_oak_planks"
+    },
+    "2": {
+      "item": "minecraft:piston"
+    },
+    "3": {
+      "item": "minecraft:dark_oak_log"
+    },
+    "4": {
+      "item": "steamcraft:power_precision_block_0"
+    }
+  },
+  "pattern": [
+    "111",
+    "323",
+    "343"
+  ],
+  "result": {
+    "item": "steamcraft:spirit_jump_trap"
+  },
+  "show_notification": true
+}

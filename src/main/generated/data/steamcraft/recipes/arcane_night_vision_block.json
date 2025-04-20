@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "minecraft:golden_carrot"
+    },
+    "2": {
+      "item": "steamcraft:core_of_changing"
+    },
+    "3": {
+      "item": "steamcraft:divinitite_alloy_ingot"
+    },
+    "4": {
+      "item": "minecraft:copper_block"
+    }
+  },
+  "pattern": [
+    "111",
+    "232",
+    "424"
+  ],
+  "result": {
+    "item": "steamcraft:arcane_night_vision_block"
+  },
+  "show_notification": true
+}

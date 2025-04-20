@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "minecraft:campfire"
+    },
+    "2": {
+      "item": "minecraft:iron_bars"
+    },
+    "3": {
+      "item": "minecraft:iron_block"
+    }
+  },
+  "pattern": [
+    "212",
+    "232"
+  ],
+  "result": {
+    "item": "steamcraft:empty_brasier"
+  },
+  "show_notification": true
+}

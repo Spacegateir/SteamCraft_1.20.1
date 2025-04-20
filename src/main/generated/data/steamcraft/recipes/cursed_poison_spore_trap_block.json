@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "minecraft:spore_blossom"
+    },
+    "2": {
+      "item": "steamcraft:arcane_poision_block"
+    },
+    "3": {
+      "item": "steamcraft:arcane_mining_fatigue_block"
+    },
+    "4": {
+      "item": "steamcraft:power_precision_block_0"
+    },
+    "5": {
+      "item": "minecraft:spruce_log"
+    }
+  },
+  "pattern": [
+    "121",
+    "535",
+    "545"
+  ],
+  "result": {
+    "item": "steamcraft:cursed_poison_spore_trap_block"
+  },
+  "show_notification": true
+}

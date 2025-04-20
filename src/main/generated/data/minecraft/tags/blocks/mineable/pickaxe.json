@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "#steamcraft:skeleton",
+    "#steamcraft:arcane_blocks",
+    "#steamcraft:traps",
     "steamcraft:aether_coil",
     "steamcraft:aether_coil_white",
     "steamcraft:aether_coil_light_gray",
@@ -20,6 +22,7 @@
     "steamcraft:aether_coil_magenta",
     "steamcraft:aether_coil_pink",
     "steamcraft:fools_gold_block",
-    "steamcraft:fools_gold_raw_block"
+    "steamcraft:fools_gold_raw_block",
+    "steamcraft:power_precision_block_0"
   ]
 }

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "minecraft:stone"
+    },
+    "2": {
+      "item": "steamcraft:arcane_neausea_block"
+    },
+    "3": {
+      "item": "steamcraft:arcane_mining_fatigue_block"
+    },
+    "4": {
+      "item": "steamcraft:power_precision_block_0"
+    }
+  },
+  "pattern": [
+    "121",
+    "141",
+    "131"
+  ],
+  "result": {
+    "item": "steamcraft:cursed_nausea_trap_block"
+  },
+  "show_notification": true
+}

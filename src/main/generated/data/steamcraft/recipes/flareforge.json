@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "minecraft:blast_furnace"
+    },
+    "2": {
+      "item": "minecraft:soul_campfire"
+    },
+    "3": {
+      "item": "minecraft:bricks"
+    }
+  },
+  "pattern": [
+    "111",
+    "323",
+    "333"
+  ],
+  "result": {
+    "item": "steamcraft:flareforge"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "minecraft:sculk_catalyst"
+    },
+    "2": {
+      "item": "steamcraft:arcane_darkness_block"
+    },
+    "3": {
+      "item": "steamcraft:arcane_weakness_block"
+    },
+    "4": {
+      "item": "steamcraft:arcane_mining_fatigue_block"
+    },
+    "5": {
+      "item": "steamcraft:power_precision_block_0"
+    },
+    "6": {
+      "item": "minecraft:sculk"
+    }
+  },
+  "pattern": [
+    "626",
+    "453",
+    "111"
+  ],
+  "result": {
+    "item": "steamcraft:cursed_block"
+  },
+  "show_notification": true
+}

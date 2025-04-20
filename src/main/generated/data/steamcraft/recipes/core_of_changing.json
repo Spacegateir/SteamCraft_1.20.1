@@ -1,0 +1,42 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "minecraft:stone"
+    },
+    "2": {
+      "item": "minecraft:deepslate"
+    },
+    "3": {
+      "item": "minecraft:bricks"
+    },
+    "4": {
+      "item": "minecraft:andesite"
+    },
+    "5": {
+      "item": "minecraft:diamond_block"
+    },
+    "6": {
+      "item": "minecraft:granite"
+    },
+    "7": {
+      "item": "minecraft:diorite"
+    },
+    "8": {
+      "item": "minecraft:gravel"
+    },
+    "9": {
+      "item": "minecraft:terracotta"
+    }
+  },
+  "pattern": [
+    "123",
+    "456",
+    "789"
+  ],
+  "result": {
+    "item": "steamcraft:core_of_changing"
+  },
+  "show_notification": true
+}

@@ -201,6 +201,70 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.LUSH_VIOLET_FLOWER_BLOCK);
         addDrop(ModBlocks.GLOW_LUSH_VIOLET_FLOWER_BLOCK);
 
+        addDrop(ModBlocks.POWER_PRECISION_BLOCK);
+
+        addDrop(ModBlocks.ARCANE_ABSORPTION_BLOCK);
+        addDrop(ModBlocks.ARCANE_BAD_OMEN_BLOCK);
+        addDrop(ModBlocks.ARCANE_BLINDNESS_BLOCK);
+        addDrop(ModBlocks.ARCANE_CONDUIT_BLOCK);
+        addDrop(ModBlocks.ARCANE_DARKNESS_BLOCK);
+        addDrop(ModBlocks.ARCANE_DOLPHINS_GRACE_BLOCK);
+        addDrop(ModBlocks.ARCANE_FIRE_RESISTANCE_BLOCK);
+        addDrop(ModBlocks.ARCANE_GLOWING_BLOCK);
+        addDrop(ModBlocks.ARCANE_HASTE_BLOCK);
+        addDrop(ModBlocks.ARCANE_HEALTH_BOOST_BLOCK);
+        addDrop(ModBlocks.ARCANE_HERO_OF_THE_VILLAGE_BLOCK);
+        addDrop(ModBlocks.ARCANE_INSTANT_DAMAGE_BLOCK);
+        addDrop(ModBlocks.ARCANE_INSTANT_HEALTH_BLOCK);
+        addDrop(ModBlocks.ARCANE_INVISIBILITY_BLOCK);
+        addDrop(ModBlocks.ARCANE_JUMP_BOOST_BLOCK);
+        addDrop(ModBlocks.ARCANE_LEVITATION_BLOCK);
+        addDrop(ModBlocks.ARCANE_LUCK_BLOCK);
+        addDrop(ModBlocks.ARCANE_MINING_FATIGUE_BLOCK);
+        addDrop(ModBlocks.ARCANE_NEAUSEA_BLOCK);
+        addDrop(ModBlocks.ARCANE_NIGHT_VISION_BLOCK);
+        addDrop(ModBlocks.ARCANE_POISION_BLOCK);
+        addDrop(ModBlocks.ARCANE_REGENERATION_BLOCK);
+        addDrop(ModBlocks.ARCANE_RESISTANCE_BLOCK);
+        addDrop(ModBlocks.ARCANE_SATUATION_BLOCK);
+        addDrop(ModBlocks.ARCANE_SLOW_FALL_BLOCK);
+        addDrop(ModBlocks.ARCANE_SLOWNESS_BLOCK);
+        addDrop(ModBlocks.ARCANE_SPEED_BLOCK);
+        addDrop(ModBlocks.ARCANE_STARVING_BLOCK);
+        addDrop(ModBlocks.ARCANE_STRENGTH_BLOCK);
+        addDrop(ModBlocks.ARCANE_UNLUCK_BLOCK);
+        addDrop(ModBlocks.ARCANE_WATER_BREATHING_BLOCK);
+        addDrop(ModBlocks.ARCANE_WEAKNESS_BLOCK);
+        addDrop(ModBlocks.ARCANE_WITHER_BLOCK);
+        addDrop(ModBlocks.ARCANE_VOID_BLOCK);
+        addDrop(ModBlocks.ARCANE_CLEAR_NEGATIVE_BLOCK);
+        addDrop(ModBlocks.ARCANE_CLEAR_POSITIVE_BLOCK);
+        addDrop(ModBlocks.ARCANE_CLEAR_NEUTRAL_BLOCK);
+        addDrop(ModBlocks.ARCANE_DISORIENT_BLOCK);
+        addDrop(ModBlocks.ARCANE_STICKY_FEAT_BLOCK);
+        addDrop(ModBlocks.ARCANE_FREAKY_BUNNY_BLOCK);
+
+        addDrop(ModBlocks.CURSED_BLOCK);
+        addDrop(ModBlocks.COURSE_DIRT_TRAP_BLOCK);
+        addDrop(ModBlocks.STONE_TRAP_BLOCK);
+        addDrop(ModBlocks.DEEPSLATE_TRAP_BLOCK);
+        addDrop(ModBlocks.FLAREFORGE_BLOCK);
+        addDrop(ModBlocks.NETHER_STEAM_VENT);
+        addDrop(ModBlocks.SPIRIT_JUMP_TRAP);
+        addDrop(ModBlocks.FROST_BITE_TRAP_BLOCK);
+        addDrop(ModBlocks.CURSED_NAUSEA_TRAP_BLOCK);
+        addDrop(ModBlocks.CURSED_POISON_SPORE_TRAP_BLOCK);
+        addDrop(ModBlocks.CURSED_BRASIER_TRAP_BLOCK);
+        addDrop(ModBlocks.EMPTY_BRASIER);
+        addDrop(ModBlocks.CURSED_TOTEM_BLOCK);
+        addDrop(ModBlocks.TELEPORT_TRAP_BLOCK);
+        addDrop(ModBlocks.SAND_QUICKSAND);
+        addDrop(ModBlocks.RED_SAND_QUICKSAND);
+        addDrop(ModBlocks.GRAVEL_SINKSTONE);
+        addDrop(ModBlocks.MUD_SINKING_SLUDGE);
+        addDrop(ModBlocks.SOUL_SAND_PHANTOM_QUICKSAND);
+
+
 
 
     }

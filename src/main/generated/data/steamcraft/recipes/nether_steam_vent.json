@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "minecraft:netherrack"
+    },
+    "2": {
+      "item": "minecraft:soul_campfire"
+    }
+  },
+  "pattern": [
+    "111",
+    "121",
+    "111"
+  ],
+  "result": {
+    "item": "steamcraft:nether_steam_vent"
+  },
+  "show_notification": true
+}

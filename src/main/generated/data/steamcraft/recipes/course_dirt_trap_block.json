@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "steamcraft:power_precision_block_0"
+    },
+    "2": {
+      "item": "minecraft:copper_block"
+    },
+    "3": {
+      "item": "minecraft:coarse_dirt"
+    }
+  },
+  "pattern": [
+    "333",
+    "212",
+    "222"
+  ],
+  "result": {
+    "item": "steamcraft:course_dirt_trap_block"
+  },
+  "show_notification": true
+}

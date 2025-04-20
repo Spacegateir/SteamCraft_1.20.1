@@ -1,5 +1,8 @@
 package net.spacegateir.steamcraft.datagen;
 
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Block;
@@ -8,6 +11,10 @@ import net.minecraft.data.server.recipe.*;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
+import net.minecraft.item.PotionItem;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionUtil;
+import net.minecraft.potion.Potions;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.Registries;
@@ -88,6 +95,17 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('I', Items.IRON_INGOT)
                 .criterion(hasItem(Items.NETHERITE_INGOT), conditionsFromItem(Items.NETHERITE_INGOT))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.PATTERN_RECOMPILER)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TRAP_CONCEALER)
+                .pattern(" N ")
+                .pattern("N1N")
+                .pattern("IGI")
+                .input('G', Blocks.GOLD_BLOCK)
+                .input('N', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('I', Items.COPPER_INGOT)
+                .input('1', ModItems.PATTERN_RECOMPILER)
+                .criterion(hasItem(ModItems.DIVINITITE_ALLOY_INGOT), conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.TRAP_CONCEALER)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.AETHER_COIL, 8)
                 .pattern("III")
@@ -542,6 +560,674 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion("has_skeleton_head", conditionsFromItem(ModBlocks.SKELETON_HEAD))
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.SKELETON_HALF_BODY)));
 
+        // Arcane Blocks
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CORE_OF_CHANGING, 1)
+                .pattern("123")
+                .pattern("456")
+                .pattern("789")
+                .input('1', Blocks.STONE)
+                .input('2', Blocks.DEEPSLATE)
+                .input('3', Blocks.BRICKS)
+                .input('4', Blocks.ANDESITE)
+                .input('5', Blocks.DIAMOND_BLOCK)
+                .input('6', Blocks.GRANITE)
+                .input('7', Blocks.DIORITE)
+                .input('8', Blocks.GRAVEL)
+                .input('9', Blocks.TERRACOTTA)
+                    .criterion("has_diamond_block", conditionsFromItem(Blocks.DIAMOND_BLOCK))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.CORE_OF_CHANGING)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_ABSORPTION_BLOCK, 1)
+                .pattern("111")
+                .pattern("232")
+                .pattern("424")
+                .input('1', Items.HONEY_BOTTLE)
+                .input('2', ModItems.CORE_OF_CHANGING)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', Blocks.COPPER_BLOCK)
+                .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_ABSORPTION_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_BAD_OMEN_BLOCK, 1)
+                .pattern("111")
+                .pattern("232")
+                .pattern("424")
+                .input('1', Items.TOTEM_OF_UNDYING)
+                .input('2', ModItems.CORE_OF_CHANGING)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', Blocks.COPPER_BLOCK)
+                .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_BAD_OMEN_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_BLINDNESS_BLOCK, 1)
+                .pattern("111")
+                .pattern("232")
+                .pattern("424")
+                .input('1', Items.SHULKER_SHELL)
+                .input('2', ModItems.CORE_OF_CHANGING)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', Blocks.COPPER_BLOCK)
+                .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_BLINDNESS_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_CONDUIT_BLOCK, 1)
+                .pattern("111")
+                .pattern("232")
+                .pattern("424")
+                .input('1', Items.CONDUIT)
+                .input('2', ModItems.CORE_OF_CHANGING)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', Blocks.COPPER_BLOCK)
+                .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_CONDUIT_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_DARKNESS_BLOCK, 1)
+                .pattern("111")
+                .pattern("232")
+                .pattern("424")
+                .input('1', Items.BLACK_CANDLE)
+                .input('2', ModItems.CORE_OF_CHANGING)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', Blocks.COPPER_BLOCK)
+                .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_DARKNESS_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_DOLPHINS_GRACE_BLOCK, 1)
+                .pattern("111")
+                .pattern("232")
+                .pattern("424")
+                .input('1', Items.TRIDENT)
+                .input('2', ModItems.CORE_OF_CHANGING)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', Blocks.COPPER_BLOCK)
+                .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_DOLPHINS_GRACE_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_FIRE_RESISTANCE_BLOCK, 1)
+                .pattern("111")
+                .pattern("232")
+                .pattern("424")
+                .input('1', Items.MAGMA_CREAM)
+                .input('2', ModItems.CORE_OF_CHANGING)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', Blocks.COPPER_BLOCK)
+                .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_FIRE_RESISTANCE_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_GLOWING_BLOCK, 1)
+                .pattern("151")
+                .pattern("232")
+                .pattern("424")
+                .input('1', Items.DIAMOND)
+                .input('5', Items.FERMENTED_SPIDER_EYE)
+                .input('2', ModItems.CORE_OF_CHANGING)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', Blocks.COPPER_BLOCK)
+                .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_GLOWING_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_HASTE_BLOCK, 1)
+                .pattern("111")
+                .pattern("232")
+                .pattern("424")
+                .input('1', Items.SADDLE)
+                .input('2', ModItems.CORE_OF_CHANGING)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', Blocks.COPPER_BLOCK)
+                .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_HASTE_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_HEALTH_BOOST_BLOCK, 1)
+                .pattern("111")
+                .pattern("232")
+                .pattern("424")
+                .input('1', Items.GOLDEN_APPLE)
+                .input('2', ModItems.CORE_OF_CHANGING)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', Blocks.COPPER_BLOCK)
+                .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_HEALTH_BOOST_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_HERO_OF_THE_VILLAGE_BLOCK, 1)
+                .pattern("111")
+                .pattern("232")
+                .pattern("424")
+                .input('1', Items.DIAMOND_SWORD)
+                .input('2', ModItems.CORE_OF_CHANGING)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', Blocks.COPPER_BLOCK)
+                .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_HERO_OF_THE_VILLAGE_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_INSTANT_DAMAGE_BLOCK, 1)
+                .pattern("151")
+                .pattern("232")
+                .pattern("424")
+                .input('1', Items.GLISTERING_MELON_SLICE)
+                .input('5', Items.FERMENTED_SPIDER_EYE)
+                .input('2', ModItems.CORE_OF_CHANGING)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', Blocks.COPPER_BLOCK)
+                .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_INSTANT_DAMAGE_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_INSTANT_HEALTH_BLOCK, 1)
+                .pattern("111")
+                .pattern("232")
+                .pattern("424")
+                .input('1', Items.GLISTERING_MELON_SLICE)
+                .input('2', ModItems.CORE_OF_CHANGING)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', Blocks.COPPER_BLOCK)
+                .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_INSTANT_HEALTH_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_INVISIBILITY_BLOCK, 1)
+                .pattern("111")
+                .pattern("232")
+                .pattern("424")
+                .input('1', Items.FERMENTED_SPIDER_EYE)
+                .input('2', ModItems.CORE_OF_CHANGING)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', Blocks.COPPER_BLOCK)
+                .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_INVISIBILITY_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_JUMP_BOOST_BLOCK, 1)
+                .pattern("111")
+                .pattern("232")
+                .pattern("424")
+                .input('1', Items.RABBIT_FOOT)
+                .input('2', ModItems.CORE_OF_CHANGING)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', Blocks.COPPER_BLOCK)
+                .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_JUMP_BOOST_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_LEVITATION_BLOCK, 1)
+                .pattern("151")
+                .pattern("232")
+                .pattern("424")
+                .input('1', Items.PHANTOM_MEMBRANE)
+                .input('5', Items.FERMENTED_SPIDER_EYE)
+                .input('2', ModItems.CORE_OF_CHANGING)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', Blocks.COPPER_BLOCK)
+                .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_LEVITATION_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_LUCK_BLOCK, 1)
+                .pattern("111")
+                .pattern("232")
+                .pattern("424")
+                .input('1', Items.GUNPOWDER)
+                .input('2', ModItems.CORE_OF_CHANGING)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', Blocks.COPPER_BLOCK)
+                .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_LUCK_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_MINING_FATIGUE_BLOCK, 1)
+                .pattern("151")
+                .pattern("232")
+                .pattern("424")
+                .input('1', Items.SADDLE)
+                .input('5', Items.FERMENTED_SPIDER_EYE)
+                .input('2', ModItems.CORE_OF_CHANGING)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', Blocks.COPPER_BLOCK)
+                .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_MINING_FATIGUE_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_NEAUSEA_BLOCK, 1)
+                .pattern("111")
+                .pattern("232")
+                .pattern("424")
+                .input('1', Items.ROTTEN_FLESH)
+                .input('2', ModItems.CORE_OF_CHANGING)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', Blocks.COPPER_BLOCK)
+                .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_NEAUSEA_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_NIGHT_VISION_BLOCK, 1)
+                .pattern("111")
+                .pattern("232")
+                .pattern("424")
+                .input('1', Items.GOLDEN_CARROT)
+                .input('2', ModItems.CORE_OF_CHANGING)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', Blocks.COPPER_BLOCK)
+                .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_NIGHT_VISION_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_POISION_BLOCK, 1)
+                .pattern("111")
+                .pattern("232")
+                .pattern("424")
+                .input('1', Items.SPIDER_EYE)
+                .input('2', ModItems.CORE_OF_CHANGING)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', Blocks.COPPER_BLOCK)
+                .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_POISION_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_REGENERATION_BLOCK, 1)
+                .pattern("111")
+                .pattern("232")
+                .pattern("424")
+                .input('1', Items.GHAST_TEAR)
+                .input('2', ModItems.CORE_OF_CHANGING)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', Blocks.COPPER_BLOCK)
+                .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_REGENERATION_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_RESISTANCE_BLOCK, 1)
+                .pattern("111")
+                .pattern("232")
+                .pattern("424")
+                .input('1', Items.TURTLE_HELMET)
+                .input('2', ModItems.CORE_OF_CHANGING)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', Blocks.COPPER_BLOCK)
+                .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_RESISTANCE_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_SATUATION_BLOCK, 1)
+                .pattern("111")
+                .pattern("232")
+                .pattern("424")
+                .input('1', Items.BEEF)
+                .input('2', ModItems.CORE_OF_CHANGING)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', Blocks.COPPER_BLOCK)
+                .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_SATUATION_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_SLOW_FALL_BLOCK, 1)
+                .pattern("111")
+                .pattern("232")
+                .pattern("424")
+                .input('1', Items.PHANTOM_MEMBRANE)
+                .input('2', ModItems.CORE_OF_CHANGING)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', Blocks.COPPER_BLOCK)
+                .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_SLOW_FALL_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_SLOWNESS_BLOCK, 1)
+                .pattern("151")
+                .pattern("232")
+                .pattern("424")
+                .input('1', Items.SUGAR)
+                .input('5', Items.FERMENTED_SPIDER_EYE)
+                .input('2', ModItems.CORE_OF_CHANGING)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', Blocks.COPPER_BLOCK)
+                .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_SLOWNESS_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_SPEED_BLOCK, 1)
+                .pattern("111")
+                .pattern("232")
+                .pattern("424")
+                .input('1', Items.SUGAR)
+                .input('2', ModItems.CORE_OF_CHANGING)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', Blocks.COPPER_BLOCK)
+                .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_SPEED_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_STARVING_BLOCK, 1)
+                .pattern("151")
+                .pattern("232")
+                .pattern("424")
+                .input('1', Items.BONE)
+                .input('5', Items.FERMENTED_SPIDER_EYE)
+                .input('2', ModItems.CORE_OF_CHANGING)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', Blocks.COPPER_BLOCK)
+                .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_STARVING_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_STRENGTH_BLOCK, 1)
+                .pattern("111")
+                .pattern("232")
+                .pattern("424")
+                .input('1', Items.BLAZE_POWDER)
+                .input('2', ModItems.CORE_OF_CHANGING)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', Blocks.COPPER_BLOCK)
+                .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_STRENGTH_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_UNLUCK_BLOCK, 1)
+                .pattern("151")
+                .pattern("232")
+                .pattern("424")
+                .input('1', Items.GUNPOWDER)
+                .input('5', Items.FERMENTED_SPIDER_EYE)
+                .input('2', ModItems.CORE_OF_CHANGING)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', Blocks.COPPER_BLOCK)
+                .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_UNLUCK_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_WATER_BREATHING_BLOCK, 1)
+                .pattern("111")
+                .pattern("232")
+                .pattern("424")
+                .input('1', Items.PUFFERFISH)
+                .input('2', ModItems.CORE_OF_CHANGING)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', Blocks.COPPER_BLOCK)
+                .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_WATER_BREATHING_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_WEAKNESS_BLOCK, 1)
+                .pattern("151")
+                .pattern("232")
+                .pattern("424")
+                .input('1', Items.BLAZE_POWDER)
+                .input('5', Items.FERMENTED_SPIDER_EYE)
+                .input('2', ModItems.CORE_OF_CHANGING)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', Blocks.COPPER_BLOCK)
+                .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_WEAKNESS_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_WITHER_BLOCK, 1)
+                .pattern("111")
+                .pattern("232")
+                .pattern("424")
+                .input('1', Items.WITHER_SKELETON_SKULL)
+                .input('2', ModItems.CORE_OF_CHANGING)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', Blocks.COPPER_BLOCK)
+                .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_WITHER_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_CLEAR_NEGATIVE_BLOCK, 1)
+                .pattern("111")
+                .pattern("232")
+                .pattern("424")
+                .input('1', Items.NETHER_STAR)
+                .input('2', ModItems.CORE_OF_CHANGING)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', Blocks.COPPER_BLOCK)
+                .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_CLEAR_NEGATIVE_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_CLEAR_POSITIVE_BLOCK, 1)
+                .pattern("111")
+                .pattern("232")
+                .pattern("424")
+                .input('1', Items.ECHO_SHARD)
+                .input('2', ModItems.CORE_OF_CHANGING)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', Blocks.COPPER_BLOCK)
+                .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_CLEAR_POSITIVE_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_CLEAR_NEUTRAL_BLOCK, 1)
+                .pattern("111")
+                .pattern("232")
+                .pattern("424")
+                .input('1', Items.HEART_OF_THE_SEA)
+                .input('2', ModItems.CORE_OF_CHANGING)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', Blocks.COPPER_BLOCK)
+                .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_CLEAR_NEUTRAL_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_DISORIENT_BLOCK, 1)
+                .pattern("111")
+                .pattern("232")
+                .pattern("424")
+                .input('1', Items.POISONOUS_POTATO)
+                .input('2', ModItems.CORE_OF_CHANGING)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', Blocks.COPPER_BLOCK)
+                .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_DISORIENT_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_STICKY_FEAT_BLOCK, 1)
+                .pattern("111")
+                .pattern("232")
+                .pattern("424")
+                .input('1', Items.SLIME_BALL)
+                .input('2', ModItems.CORE_OF_CHANGING)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', Blocks.COPPER_BLOCK)
+                .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_STICKY_FEAT_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_FREAKY_BUNNY_BLOCK, 1)
+                .pattern("111")
+                .pattern("232")
+                .pattern("424")
+                .input('1', Items.CARROT)
+                .input('2', ModItems.CORE_OF_CHANGING)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', Blocks.COPPER_BLOCK)
+                .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_FREAKY_BUNNY_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_VOID_BLOCK, 1)
+                .pattern("123")
+                .input('1', ModBlocks.ARCANE_CLEAR_NEGATIVE_BLOCK)
+                .input('2', ModBlocks.ARCANE_CLEAR_POSITIVE_BLOCK)
+                .input('3', ModBlocks.ARCANE_CLEAR_NEUTRAL_BLOCK)
+                .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_VOID_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.POWER_PRECISION_BLOCK, 1)
+                .pattern("121")
+                .pattern("232")
+                .pattern("121")
+                .input('1', Blocks.COPPER_BLOCK)
+                .input('2', Items.COMPARATOR)
+                .input('3', Blocks.REDSTONE_BLOCK)
+                .criterion("has_copper_block", conditionsFromItem(Blocks.COPPER_BLOCK))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.POWER_PRECISION_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.SAND_QUICKSAND, 8)
+                .pattern("222")
+                .pattern("212")
+                .pattern("222")
+                .input('1', Blocks.SAND)
+                .input('2', Items.WATER_BUCKET)
+                .criterion("has_sand_block", conditionsFromItem(Blocks.SAND))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.SAND_QUICKSAND)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.RED_SAND_QUICKSAND, 8)
+                .pattern("222")
+                .pattern("212")
+                .pattern("222")
+                .input('1', Blocks.RED_SAND)
+                .input('2', Items.WATER_BUCKET)
+                .criterion("has_red_sand_block", conditionsFromItem(Blocks.RED_SAND))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.RED_SAND_QUICKSAND)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GRAVEL_SINKSTONE, 8)
+                .pattern("222")
+                .pattern("212")
+                .pattern("222")
+                .input('1', Blocks.GRAVEL)
+                .input('2', Items.WATER_BUCKET)
+                .criterion("has_gravel_block", conditionsFromItem(Blocks.GRAVEL))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GRAVEL_SINKSTONE)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.MUD_SINKING_SLUDGE, 8)
+                .pattern("222")
+                .pattern("212")
+                .pattern("222")
+                .input('1', Blocks.MUD)
+                .input('2', Items.WATER_BUCKET)
+                .criterion("has_mud_block", conditionsFromItem(Blocks.MUD))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.MUD_SINKING_SLUDGE)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.SOUL_SAND_PHANTOM_QUICKSAND, 8)
+                .pattern("222")
+                .pattern("212")
+                .pattern("222")
+                .input('1', Blocks.SOUL_SAND)
+                .input('2', Items.WATER_BUCKET)
+                .criterion("has_soul_sand", conditionsFromItem(Blocks.SOUL_SAND))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.SOUL_SAND_PHANTOM_QUICKSAND)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.STONE_TRAP_BLOCK, 1)
+                .pattern("333")
+                .pattern("212")
+                .pattern("222")
+                .input('1', ModBlocks.POWER_PRECISION_BLOCK)
+                .input('2', Items.COPPER_BLOCK)
+                .input('3', Blocks.STONE)
+                .criterion("has_power_precision_block", conditionsFromItem(ModBlocks.POWER_PRECISION_BLOCK))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.STONE_TRAP_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.DEEPSLATE_TRAP_BLOCK, 1)
+                .pattern("333")
+                .pattern("212")
+                .pattern("222")
+                .input('1', ModBlocks.POWER_PRECISION_BLOCK)
+                .input('2', Items.COPPER_BLOCK)
+                .input('3', Blocks.COBBLED_DEEPSLATE)
+                .criterion("has_power_precision_block", conditionsFromItem(ModBlocks.POWER_PRECISION_BLOCK))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.DEEPSLATE_TRAP_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.COURSE_DIRT_TRAP_BLOCK, 1)
+                .pattern("333")
+                .pattern("212")
+                .pattern("222")
+                .input('1', ModBlocks.POWER_PRECISION_BLOCK)
+                .input('2', Items.COPPER_BLOCK)
+                .input('3', Blocks.COARSE_DIRT)
+                .criterion("has_power_precision_block", conditionsFromItem(ModBlocks.POWER_PRECISION_BLOCK))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.COURSE_DIRT_TRAP_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.EMPTY_BRASIER, 1)
+                .pattern("212")
+                .pattern("232")
+                .input('1', Blocks.CAMPFIRE)
+                .input('2', Blocks.IRON_BARS)
+                .input('3', Blocks.IRON_BLOCK)
+                .criterion("has_iron_block", conditionsFromItem(Blocks.IRON_BLOCK))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.EMPTY_BRASIER)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.NETHER_STEAM_VENT, 1)
+                .pattern("111")
+                .pattern("121")
+                .pattern("111")
+                .input('1', Blocks.NETHERRACK)
+                .input('2', Blocks.SOUL_CAMPFIRE)
+                .criterion("has_netherrack", conditionsFromItem(Blocks.NETHERRACK))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.NETHER_STEAM_VENT)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.FLAREFORGE_BLOCK, 1)
+                .pattern("111")
+                .pattern("323")
+                .pattern("333")
+                .input('1', Blocks.BLAST_FURNACE)
+                .input('2', Blocks.SOUL_CAMPFIRE)
+                .input('3', Blocks.BRICKS)
+                .criterion("has_bricks", conditionsFromItem(Blocks.BRICKS))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.FLAREFORGE_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.SPIRIT_JUMP_TRAP, 1)
+                .pattern("111")
+                .pattern("323")
+                .pattern("343")
+                .input('1', Blocks.DARK_OAK_PLANKS)
+                .input('2', Blocks.PISTON)
+                .input('3', Blocks.DARK_OAK_LOG)
+                .input('4', ModBlocks.POWER_PRECISION_BLOCK)
+                .criterion("has_power_precision_block", conditionsFromItem(ModBlocks.POWER_PRECISION_BLOCK))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.SPIRIT_JUMP_TRAP)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.CURSED_TOTEM_BLOCK, 1)
+                .pattern("232")
+                .pattern("141")
+                .pattern("151")
+                .input('1', Blocks.STONE)
+                .input('2', Blocks.COBBLED_DEEPSLATE)
+                .input('3', ModBlocks.ARCANE_BLINDNESS_BLOCK)
+                .input('4', ModBlocks.ARCANE_MINING_FATIGUE_BLOCK)
+                .input('5', ModBlocks.POWER_PRECISION_BLOCK)
+                .criterion("has_power_precision_block", conditionsFromItem(ModBlocks.POWER_PRECISION_BLOCK))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.CURSED_TOTEM_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.FROST_BITE_TRAP_BLOCK, 1)
+                .pattern("121")
+                .pattern("141")
+                .pattern("131")
+                .input('1', Blocks.BLUE_ICE)
+                .input('2', ModBlocks.ARCANE_CONDUIT_BLOCK)
+                .input('3', ModBlocks.ARCANE_SLOWNESS_BLOCK)
+                .input('4', ModBlocks.POWER_PRECISION_BLOCK)
+                .criterion("has_power_precision_block", conditionsFromItem(ModBlocks.POWER_PRECISION_BLOCK))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.FROST_BITE_TRAP_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.CURSED_NAUSEA_TRAP_BLOCK, 1)
+                .pattern("121")
+                .pattern("141")
+                .pattern("131")
+                .input('1', Blocks.STONE)
+                .input('2', ModBlocks.ARCANE_NEAUSEA_BLOCK)
+                .input('3', ModBlocks.ARCANE_MINING_FATIGUE_BLOCK)
+                .input('4', ModBlocks.POWER_PRECISION_BLOCK)
+                .criterion("has_power_precision_block", conditionsFromItem(ModBlocks.POWER_PRECISION_BLOCK))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.CURSED_NAUSEA_TRAP_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.CURSED_POISON_SPORE_TRAP_BLOCK, 1)
+                .pattern("121")
+                .pattern("535")
+                .pattern("545")
+                .input('1', Blocks.SPORE_BLOSSOM)
+                .input('2', ModBlocks.ARCANE_POISION_BLOCK)
+                .input('3', ModBlocks.ARCANE_MINING_FATIGUE_BLOCK)
+                .input('4', ModBlocks.POWER_PRECISION_BLOCK)
+                .input('5', Blocks.SPRUCE_LOG)
+                .criterion("has_power_precision_block", conditionsFromItem(ModBlocks.POWER_PRECISION_BLOCK))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.CURSED_POISON_SPORE_TRAP_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.CURSED_BRASIER_TRAP_BLOCK, 1)
+                .pattern("121")
+                .pattern("131")
+                .pattern("545")
+                .input('1', ModBlocks.SKELETON_SITTING)
+                .input('2', ModBlocks.ARCANE_STARVING_BLOCK)
+                .input('3', ModBlocks.ARCANE_MINING_FATIGUE_BLOCK)
+                .input('4', ModBlocks.POWER_PRECISION_BLOCK)
+                .input('5', ModBlocks.EMPTY_BRASIER)
+                .criterion("has_power_precision_block", conditionsFromItem(ModBlocks.POWER_PRECISION_BLOCK))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.CURSED_BRASIER_TRAP_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.CURSED_BLOCK, 1)
+                .pattern("626")
+                .pattern("453")
+                .pattern("111")
+                .input('1', Blocks.SCULK_CATALYST)
+                .input('2', ModBlocks.ARCANE_DARKNESS_BLOCK)
+                .input('3', ModBlocks.ARCANE_WEAKNESS_BLOCK)
+                .input('4', ModBlocks.ARCANE_MINING_FATIGUE_BLOCK)
+                .input('5', ModBlocks.POWER_PRECISION_BLOCK)
+                .input('6', Blocks.SCULK)
+                .criterion("has_power_precision_block", conditionsFromItem(ModBlocks.POWER_PRECISION_BLOCK))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.CURSED_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TELEPORT_TRAP_ITEM, 1)
+                .pattern("313")
+                .pattern("121")
+                .pattern("313")
+                .input('1', Blocks.OBSIDIAN)
+                .input('2', ModBlocks.POWER_PRECISION_BLOCK)
+                .input('3', Blocks.SCULK)
+                .criterion("has_power_precision_block", conditionsFromItem(ModBlocks.POWER_PRECISION_BLOCK))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.TELEPORT_TRAP_ITEM)));
+
         //Flowers
         Map<Item, String> dyeToFlowerMap = Map.ofEntries(
                 Map.entry(Items.LIGHT_BLUE_DYE, "BLUE_COSMOS"),
@@ -646,10 +1332,6 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .offerTo(exporter);
     }
 
-//        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GLOW_BLUE_COSMOS_FLOWER_BLOCK.asItem())
-//                .input(ModBlocks.BLUE_COSMOS_FLOWER_BLOCK.asItem())
-//                .input(Items.GLOWSTONE_DUST) // Glowstone Dust
-//                .criterion("has_flower", conditionsFromItem(ModBlocks.BLUE_COSMOS_FLOWER_BLOCK.asItem()))
-//                .criterion("has_glowstone_dust", conditionsFromItem(Items.GLOWSTONE_DUST))
-//                .offerTo(exporter);
+
+
 }

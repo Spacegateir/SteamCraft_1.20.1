@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "steamcraft:arcane_clear_negative_block"
+    },
+    "2": {
+      "item": "steamcraft:arcane_clear_positive_block"
+    },
+    "3": {
+      "item": "steamcraft:arcane_clear_neutral_block"
+    }
+  },
+  "pattern": [
+    "123"
+  ],
+  "result": {
+    "item": "steamcraft:arcane_void_block"
+  },
+  "show_notification": true
+}

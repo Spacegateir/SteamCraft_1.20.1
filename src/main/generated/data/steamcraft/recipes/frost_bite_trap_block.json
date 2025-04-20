@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "minecraft:blue_ice"
+    },
+    "2": {
+      "item": "steamcraft:arcane_conduit_block"
+    },
+    "3": {
+      "item": "steamcraft:arcane_slowness_block"
+    },
+    "4": {
+      "item": "steamcraft:power_precision_block_0"
+    }
+  },
+  "pattern": [
+    "121",
+    "141",
+    "131"
+  ],
+  "result": {
+    "item": "steamcraft:frost_bite_trap_block"
+  },
+  "show_notification": true
+}

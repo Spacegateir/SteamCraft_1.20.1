@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "minecraft:stone"
+    },
+    "2": {
+      "item": "minecraft:cobbled_deepslate"
+    },
+    "3": {
+      "item": "steamcraft:arcane_blindness_block"
+    },
+    "4": {
+      "item": "steamcraft:arcane_mining_fatigue_block"
+    },
+    "5": {
+      "item": "steamcraft:power_precision_block_0"
+    }
+  },
+  "pattern": [
+    "232",
+    "141",
+    "151"
+  ],
+  "result": {
+    "item": "steamcraft:cursed_totem_block"
+  },
+  "show_notification": true
+}

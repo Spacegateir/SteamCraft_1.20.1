@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "minecraft:copper_block"
+    },
+    "2": {
+      "item": "minecraft:comparator"
+    },
+    "3": {
+      "item": "minecraft:redstone_block"
+    }
+  },
+  "pattern": [
+    "121",
+    "232",
+    "121"
+  ],
+  "result": {
+    "item": "steamcraft:power_precision_block_0"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "steamcraft:pattern_recompiler"
+    },
+    "G": {
+      "item": "minecraft:gold_block"
+    },
+    "I": {
+      "item": "minecraft:copper_ingot"
+    },
+    "N": {
+      "item": "steamcraft:divinitite_alloy_ingot"
+    }
+  },
+  "pattern": [
+    " N ",
+    "N1N",
+    "IGI"
+  ],
+  "result": {
+    "item": "steamcraft:trap_concealer"
+  },
+  "show_notification": true
+}

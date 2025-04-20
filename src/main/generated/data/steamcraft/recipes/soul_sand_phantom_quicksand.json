@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "minecraft:soul_sand"
+    },
+    "2": {
+      "item": "minecraft:water_bucket"
+    }
+  },
+  "pattern": [
+    "222",
+    "212",
+    "222"
+  ],
+  "result": {
+    "count": 8,
+    "item": "steamcraft:soul_sand_phantom_quicksand"
+  },
+  "show_notification": true
+}

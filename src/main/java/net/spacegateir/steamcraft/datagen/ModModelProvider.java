@@ -238,6 +238,66 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModRewardItems.WOLF_FURY_LEGGINGS, Models.GENERATED);
         itemModelGenerator.register(ModRewardItems.WOLF_FURY_BOOTS, Models.GENERATED);
 
+        itemModelGenerator.register(ModRewardItems.ADAMANTITE_LOOT_CHEST, Models.GENERATED);
+        itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.ADAMANTITE_HELMET));
+        itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.ADAMANTITE_CHESTPLATE));
+        itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.ADAMANTITE_LEGGINGS));
+        itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.ADAMANTITE_BOOTS));
+
+        itemModelGenerator.register(ModRewardItems.AER_LOOT_CHEST, Models.GENERATED);
+        itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.AER_HELMET));
+        itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.AER_CHESTPLATE));
+        itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.AER_LEGGINGS));
+        itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.AER_BOOTS));
+
+        itemModelGenerator.register(ModRewardItems.AQUA_LOOT_CHEST, Models.GENERATED);
+        itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.AQUA_HELMET));
+        itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.AQUA_CHESTPLATE));
+        itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.AQUA_LEGGINGS));
+        itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.AQUA_BOOTS));
+
+        itemModelGenerator.register(ModRewardItems.DRAGON_BANE_LOOT_CHEST, Models.GENERATED);
+        itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.DRAGON_BANE_HELMET));
+        itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.DRAGON_BANE_CHESTPLATE));
+        itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.DRAGON_BANE_LEGGINGS));
+        itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.DRAGON_BANE_BOOTS));
+
+        itemModelGenerator.register(ModRewardItems.DWARF_STEEL_LOOT_CHEST, Models.GENERATED);
+        itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.DWARF_STEEL_HELMET));
+        itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.DWARF_STEEL_CHESTPLATE));
+        itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.DWARF_STEEL_LEGGINGS));
+        itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.DWARF_STEEL_BOOTS));
+
+        itemModelGenerator.register(ModRewardItems.IGNIS_LOOT_CHEST, Models.GENERATED);
+        itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.IGNIS_HELMET));
+        itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.IGNIS_CHESTPLATE));
+        itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.IGNIS_LEGGINGS));
+        itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.IGNIS_BOOTS));
+
+        itemModelGenerator.register(ModRewardItems.MAGIRITE_LOOT_CHEST, Models.GENERATED);
+        itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.MAGIRITE_HELMET));
+        itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.MAGIRITE_CHESTPLATE));
+        itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.MAGIRITE_LEGGINGS));
+        itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.MAGIRITE_BOOTS));
+
+        itemModelGenerator.register(ModRewardItems.MYTHRIL_LOOT_CHEST, Models.GENERATED);
+        itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.MYTHRIL_HELMET));
+        itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.MYTHRIL_CHESTPLATE));
+        itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.MYTHRIL_LEGGINGS));
+        itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.MYTHRIL_BOOTS));
+
+        itemModelGenerator.register(ModRewardItems.ORIKALKUM_LOOT_CHEST, Models.GENERATED);
+        itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.ORIKALKUM_HELMET));
+        itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.ORIKALKUM_CHESTPLATE));
+        itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.ORIKALKUM_LEGGINGS));
+        itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.ORIKALKUM_BOOTS));
+
+        itemModelGenerator.register(ModRewardItems.TERA_LOOT_CHEST, Models.GENERATED);
+        itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.TERA_HELMET));
+        itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.TERA_CHESTPLATE));
+        itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.TERA_LEGGINGS));
+        itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.TERA_BOOTS));
+
 
 
 

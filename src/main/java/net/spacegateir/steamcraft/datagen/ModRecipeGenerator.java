@@ -659,7 +659,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .pattern("151")
                 .pattern("232")
                 .pattern("424")
-                .input('1', Items.DIAMOND)
+                .input('1', Items.GLOWSTONE_DUST)
                 .input('5', Items.FERMENTED_SPIDER_EYE)
                 .input('2', ModItems.CORE_OF_CHANGING)
                 .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
@@ -758,10 +758,11 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_LEVITATION_BLOCK)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_LUCK_BLOCK, 1)
-                .pattern("111")
+                .pattern("151")
                 .pattern("232")
                 .pattern("424")
                 .input('1', Items.GUNPOWDER)
+                .input('5', Items.RABBIT_FOOT)
                 .input('2', ModItems.CORE_OF_CHANGING)
                 .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
                 .input('4', Blocks.COPPER_BLOCK)
@@ -1037,8 +1038,8 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .pattern("222")
                 .pattern("212")
                 .pattern("222")
-                .input('1', Blocks.SAND)
-                .input('2', Items.WATER_BUCKET)
+                .input('2', Blocks.SAND)
+                .input('1', Items.WATER_BUCKET)
                 .criterion("has_sand_block", conditionsFromItem(Blocks.SAND))
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.SAND_QUICKSAND)));
 
@@ -1046,8 +1047,8 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .pattern("222")
                 .pattern("212")
                 .pattern("222")
-                .input('1', Blocks.RED_SAND)
-                .input('2', Items.WATER_BUCKET)
+                .input('2', Blocks.RED_SAND)
+                .input('1', Items.WATER_BUCKET)
                 .criterion("has_red_sand_block", conditionsFromItem(Blocks.RED_SAND))
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.RED_SAND_QUICKSAND)));
 
@@ -1055,8 +1056,8 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .pattern("222")
                 .pattern("212")
                 .pattern("222")
-                .input('1', Blocks.GRAVEL)
-                .input('2', Items.WATER_BUCKET)
+                .input('2', Blocks.GRAVEL)
+                .input('1', Items.WATER_BUCKET)
                 .criterion("has_gravel_block", conditionsFromItem(Blocks.GRAVEL))
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GRAVEL_SINKSTONE)));
 
@@ -1064,8 +1065,8 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .pattern("222")
                 .pattern("212")
                 .pattern("222")
-                .input('1', Blocks.MUD)
-                .input('2', Items.WATER_BUCKET)
+                .input('2', Blocks.MUD)
+                .input('1', Items.WATER_BUCKET)
                 .criterion("has_mud_block", conditionsFromItem(Blocks.MUD))
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.MUD_SINKING_SLUDGE)));
 
@@ -1073,8 +1074,8 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .pattern("222")
                 .pattern("212")
                 .pattern("222")
-                .input('1', Blocks.SOUL_SAND)
-                .input('2', Items.WATER_BUCKET)
+                .input('2', Blocks.SOUL_SAND)
+                .input('1', Items.WATER_BUCKET)
                 .criterion("has_soul_sand", conditionsFromItem(Blocks.SOUL_SAND))
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.SOUL_SAND_PHANTOM_QUICKSAND)));
 
@@ -1083,7 +1084,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .pattern("212")
                 .pattern("222")
                 .input('1', ModBlocks.POWER_PRECISION_BLOCK)
-                .input('2', Items.COPPER_BLOCK)
+                .input('2', Items.COPPER_INGOT)
                 .input('3', Blocks.STONE)
                 .criterion("has_power_precision_block", conditionsFromItem(ModBlocks.POWER_PRECISION_BLOCK))
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.STONE_TRAP_BLOCK)));
@@ -1093,7 +1094,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .pattern("212")
                 .pattern("222")
                 .input('1', ModBlocks.POWER_PRECISION_BLOCK)
-                .input('2', Items.COPPER_BLOCK)
+                .input('2', Items.COPPER_INGOT)
                 .input('3', Blocks.COBBLED_DEEPSLATE)
                 .criterion("has_power_precision_block", conditionsFromItem(ModBlocks.POWER_PRECISION_BLOCK))
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.DEEPSLATE_TRAP_BLOCK)));
@@ -1103,7 +1104,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .pattern("212")
                 .pattern("222")
                 .input('1', ModBlocks.POWER_PRECISION_BLOCK)
-                .input('2', Items.COPPER_BLOCK)
+                .input('2', Items.COPPER_INGOT)
                 .input('3', Blocks.COARSE_DIRT)
                 .criterion("has_power_precision_block", conditionsFromItem(ModBlocks.POWER_PRECISION_BLOCK))
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.COURSE_DIRT_TRAP_BLOCK)));

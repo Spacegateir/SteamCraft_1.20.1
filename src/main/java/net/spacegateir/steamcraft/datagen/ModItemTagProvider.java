@@ -11,6 +11,7 @@ import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.item.ModItems;
+import net.spacegateir.steamcraft.item.ModRewardItems;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -41,9 +42,21 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
         getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
-                .add(ModItems.FOOLS_GOLD_HELMET,ModItems.FOOLS_GOLD_CHESTPLATE,ModItems.FOOLS_GOLD_LEGGINGS,ModItems.FOOLS_GOLD_BOOTS);
+                .add(ModItems.FOOLS_GOLD_HELMET, ModItems.FOOLS_GOLD_CHESTPLATE, ModItems.FOOLS_GOLD_LEGGINGS, ModItems.FOOLS_GOLD_BOOTS)
+                .add(ModRewardItems.ADAMANTITE_HELMET, ModRewardItems.ADAMANTITE_CHESTPLATE, ModRewardItems.ADAMANTITE_LEGGINGS, ModRewardItems.ADAMANTITE_BOOTS)
+                .add(ModRewardItems.DRAGON_BANE_HELMET, ModRewardItems.DRAGON_BANE_CHESTPLATE, ModRewardItems.DRAGON_BANE_LEGGINGS, ModRewardItems.DRAGON_BANE_BOOTS)
+                .add(ModRewardItems.ORIKALKUM_HELMET, ModRewardItems.ORIKALKUM_CHESTPLATE, ModRewardItems.ORIKALKUM_LEGGINGS, ModRewardItems.ORIKALKUM_BOOTS)
+                .add(ModRewardItems.DWARF_STEEL_HELMET, ModRewardItems.DWARF_STEEL_CHESTPLATE, ModRewardItems.DWARF_STEEL_LEGGINGS, ModRewardItems.DWARF_STEEL_BOOTS)
+                .add(ModRewardItems.AQUA_HELMET, ModRewardItems.AQUA_CHESTPLATE, ModRewardItems.AQUA_LEGGINGS, ModRewardItems.AQUA_BOOTS)
+                .add(ModRewardItems.AER_HELMET, ModRewardItems.AER_CHESTPLATE, ModRewardItems.AER_LEGGINGS, ModRewardItems.AER_BOOTS)
+                .add(ModRewardItems.TERA_HELMET, ModRewardItems.TERA_CHESTPLATE, ModRewardItems.TERA_LEGGINGS, ModRewardItems.TERA_BOOTS)
+                .add(ModRewardItems.IGNIS_HELMET, ModRewardItems.IGNIS_CHESTPLATE, ModRewardItems.IGNIS_LEGGINGS, ModRewardItems.IGNIS_BOOTS)
+                .add(ModRewardItems.MYTHRIL_HELMET, ModRewardItems.MYTHRIL_CHESTPLATE, ModRewardItems.MYTHRIL_LEGGINGS, ModRewardItems.MYTHRIL_BOOTS)
+                .add(ModRewardItems.MAGIRITE_HELMET, ModRewardItems.MAGIRITE_CHESTPLATE, ModRewardItems.MAGIRITE_LEGGINGS, ModRewardItems.MAGIRITE_BOOTS);
 
-        getOrCreateTagBuilder(ModTags.Items.AETHER_COIL)
+
+
+    getOrCreateTagBuilder(ModTags.Items.AETHER_COIL)
                 .add(ModBlocks.AETHER_COIL.asItem())
                 .add(ModBlocks.AETHER_COIL_WHITE.asItem())
                 .add(ModBlocks.AETHER_COIL_LIGHT_GRAY.asItem())

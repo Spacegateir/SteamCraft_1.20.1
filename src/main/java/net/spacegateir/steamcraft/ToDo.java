@@ -7,11 +7,8 @@ public class ToDo {
     // ON THE CURSED FORGE SITE EXPALIN HOW TO PLAY THE MOD
 
     // fix the wolf fury armor textures
-    // fix the god armor textures shading and shaping
 
     // MODIFY THE CRAFTTING RECIPE FOR THE GOD ARMOR (halo)
-
-    //arcane stepping stones needs (crafting recipes, loot drops)
 
     // create dimentions (earth copy, void, waterworld, skulk, overworld neather type, sky dimention)
 
@@ -41,7 +38,7 @@ public class ToDo {
     //    Pile of books
     //            Food
 
-    //    An invisible block that has smoke particles for a chimney
+    //    An invisible block that has smoke particles for a chimney or flower pot
     //    A half Slab with a wall inside slab at the bottom and wall in the middle (rotatable block)
     //    ( Cobblestone, Stone_bricks, Andesite, Bricks )
     //    Off-center chain

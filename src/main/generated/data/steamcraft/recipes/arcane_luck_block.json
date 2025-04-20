@@ -13,10 +13,13 @@
     },
     "4": {
       "item": "minecraft:copper_block"
+    },
+    "5": {
+      "item": "minecraft:rabbit_foot"
     }
   },
   "pattern": [
-    "111",
+    "151",
     "232",
     "424"
   ],

@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "bottom": "steamcraft:block/traps/spirit_jump_trap_bottom",
+    "side": "steamcraft:block/traps/spirit_jump_trap_side",
+    "front": "steamcraft:block/traps/spirit_jump_trap_side",
+    "top": "steamcraft:block/traps/spirit_jump_trap_top"
+  }
+}

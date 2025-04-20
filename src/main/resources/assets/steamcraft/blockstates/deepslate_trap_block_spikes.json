@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "steamcraft:block/traps/deepslate_trap_block_spikes"
+    }
+  }
+}

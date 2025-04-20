@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "bottom": "steamcraft:block/arcane/trap_block",
+    "side": "steamcraft:block/arcane/status_effect_artifact",
+    "front": "steamcraft:block/arcane/status_effect_artifact",
+    "top": "steamcraft:block/arcane/void_pulse",
+
+    "particle": "steamcraft:block/arcane/status_effect_artifact"
+  }
+}

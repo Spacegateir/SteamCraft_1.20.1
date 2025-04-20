@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "bottom": "steamcraft:block/arcane/trap_block",
+    "side": "steamcraft:block/arcane/heart_beat",
+    "front": "steamcraft:block/arcane/heart_beat",
+    "top": "steamcraft:block/arcane/standing_pulse_top",
+
+    "particle": "steamcraft:block/arcane/heart_beat"
+  }
+}

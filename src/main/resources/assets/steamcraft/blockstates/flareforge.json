@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "steamcraft:block/traps/flareforge" },
+    "facing=east": { "model": "steamcraft:block/traps/flareforge", "y": 90  },
+    "facing=south": { "model": "steamcraft:block/traps/flareforge", "y": 180 },
+    "facing=west": { "model": "steamcraft:block/traps/flareforge", "y": 270 }
+  }
+}

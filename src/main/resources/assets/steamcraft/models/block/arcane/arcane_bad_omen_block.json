@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "bottom": "steamcraft:block/arcane/trap_block",
+    "side": "steamcraft:block/arcane/bad_omen_artifact",
+    "front": "steamcraft:block/arcane/bad_omen_artifact",
+    "top": "steamcraft:block/arcane/neutral_pulse",
+
+    "particle": "steamcraft:block/arcane/bad_omen_artifact"
+  }
+}

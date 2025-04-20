@@ -180,6 +180,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.SILVER_COIN, Models.GENERATED);
         itemModelGenerator.register(ModItems.GOLD_COIN, Models.GENERATED);
 
+        itemModelGenerator.register(ModItems.TRAP_CONCEALER, Models.GENERATED);
+
         itemModelGenerator.register(ModItems.BLANK_MOULD, Models.GENERATED);
         itemModelGenerator.register(ModItems.HELMET_MOULD, Models.GENERATED);
         itemModelGenerator.register(ModItems.CHESTPLATE_MOULD, Models.GENERATED);

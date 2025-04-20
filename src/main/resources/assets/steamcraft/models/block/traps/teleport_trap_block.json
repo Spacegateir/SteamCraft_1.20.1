@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "bottom": "steamcraft:block/traps/teleport_bottom",
+    "side": "steamcraft:block/traps/teleport_side",
+    "front": "steamcraft:block/traps/teleport_side",
+    "top": "steamcraft:block/traps/teleport_top"
+  }
+}

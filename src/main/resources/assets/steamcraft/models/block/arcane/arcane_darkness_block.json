@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "bottom": "steamcraft:block/arcane/trap_block",
+    "side": "steamcraft:block/arcane/darkness_artifact",
+    "front": "steamcraft:block/arcane/darkness_artifact",
+    "top": "steamcraft:block/arcane/negative_pulse",
+
+    "particle": "steamcraft:block/arcane/darkness_artifact"
+  }
+}

@@ -14,9 +14,7 @@ import net.minecraft.util.Rarity;
 import net.spacegateir.steamcraft.Steamcraft;
 import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.item.armor.*;
-import net.spacegateir.steamcraft.item.custom.GlintItem;
-import net.spacegateir.steamcraft.item.custom.ToolTipItem;
-import net.spacegateir.steamcraft.item.custom.SwapItem;
+import net.spacegateir.steamcraft.item.custom.*;
 import software.bernie.example.item.WolfArmorItem;
 
 import java.util.function.Consumer;
@@ -44,6 +42,11 @@ public class ModItems {
 
     public static final Item PATTERN_RECOMPILER = registerItem("pattern_recompiler",
             new SwapItem(new FabricItemSettings()));
+    public static final Item TRAP_CONCEALER = registerItem("trap_concealer",
+            new TrapConcealerItem(new FabricItemSettings()));
+    public static final Item CORE_OF_CHANGING = registerItem("core_of_changing",
+            new Item(new FabricItemSettings()));
+
 
     public static final Item BLANK_MOULD = registerItem("blank_mould",
             new Item(new FabricItemSettings()));
@@ -465,6 +468,13 @@ public class ModItems {
     public static final Item GLOW_LUSH_VIOLET_FLOWER_ITEM = Registry.register(Registries.ITEM,
             new Identifier(Steamcraft.MOD_ID, "glow_lush_violet_flower_item"),
             new BlockItem(ModBlocks.GLOW_LUSH_VIOLET_FLOWER_BLOCK, new FabricItemSettings()));
+
+
+
+    public static final Item TELEPORT_TRAP_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "teleport_trap_item"),
+            new TeleportTrapBlockItem(ModBlocks.TELEPORT_TRAP_BLOCK, new FabricItemSettings()));
+
 
 
 

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "steamcraft:block/traps/spirit_jump_trap" },
+    "facing=east": { "model": "steamcraft:block/traps/spirit_jump_trap", "y": 90  },
+    "facing=south": { "model": "steamcraft:block/traps/spirit_jump_trap", "y": 180 },
+    "facing=west": { "model": "steamcraft:block/traps/spirit_jump_trap", "y": 270 }
+  }
+}

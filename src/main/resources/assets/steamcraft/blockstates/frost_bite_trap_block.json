@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "steamcraft:block/traps/frost_bite_trap_block"
+    }
+  }
+}

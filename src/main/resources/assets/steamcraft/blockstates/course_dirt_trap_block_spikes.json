@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "steamcraft:block/traps/course_dirt_trap_block_spikes"
+    }
+  }
+}

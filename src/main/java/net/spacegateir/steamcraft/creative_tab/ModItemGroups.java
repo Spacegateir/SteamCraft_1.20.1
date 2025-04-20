@@ -21,6 +21,9 @@ public class ModItemGroups {
 //                        entries.add(ModItems.TEST_ITEM);
 
                         entries.add(ModItems.PATTERN_RECOMPILER);
+                        entries.add(ModItems.TRAP_CONCEALER);
+                        entries.add(ModItems.CORE_OF_CHANGING);
+
                         entries.add(ModItems.FERRITE_HEARTSTONE);
                         entries.add(ModItems.AETHERIUM_PRISM);
                         entries.add(ModItems.AQUARION_SHARD);
@@ -113,6 +116,72 @@ public class ModItemGroups {
                         entries.add(ModBlocks.SKELETON_CHEST);
                         entries.add(ModBlocks.SKELETON_PELVIS);
                         entries.add(ModBlocks.SKELETON_SPINE);
+
+                        entries.add(ModBlocks.ARCANE_ABSORPTION_BLOCK);
+                        entries.add(ModBlocks.ARCANE_BAD_OMEN_BLOCK);
+                        entries.add(ModBlocks.ARCANE_BLINDNESS_BLOCK);
+                        entries.add(ModBlocks.ARCANE_CONDUIT_BLOCK);
+                        entries.add(ModBlocks.ARCANE_DARKNESS_BLOCK);
+                        entries.add(ModBlocks.ARCANE_DOLPHINS_GRACE_BLOCK);
+                        entries.add(ModBlocks.ARCANE_FIRE_RESISTANCE_BLOCK);
+                        entries.add(ModBlocks.ARCANE_GLOWING_BLOCK);
+                        entries.add(ModBlocks.ARCANE_HASTE_BLOCK);
+                        entries.add(ModBlocks.ARCANE_HEALTH_BOOST_BLOCK);
+                        entries.add(ModBlocks.ARCANE_HERO_OF_THE_VILLAGE_BLOCK);
+                        entries.add(ModBlocks.ARCANE_INSTANT_DAMAGE_BLOCK);
+                        entries.add(ModBlocks.ARCANE_INSTANT_HEALTH_BLOCK);
+                        entries.add(ModBlocks.ARCANE_INVISIBILITY_BLOCK);
+                        entries.add(ModBlocks.ARCANE_JUMP_BOOST_BLOCK);
+                        entries.add(ModBlocks.ARCANE_LEVITATION_BLOCK);
+                        entries.add(ModBlocks.ARCANE_LUCK_BLOCK);
+                        entries.add(ModBlocks.ARCANE_MINING_FATIGUE_BLOCK);
+                        entries.add(ModBlocks.ARCANE_NEAUSEA_BLOCK);
+                        entries.add(ModBlocks.ARCANE_NIGHT_VISION_BLOCK);
+                        entries.add(ModBlocks.ARCANE_POISION_BLOCK);
+                        entries.add(ModBlocks.ARCANE_REGENERATION_BLOCK);
+                        entries.add(ModBlocks.ARCANE_RESISTANCE_BLOCK);
+                        entries.add(ModBlocks.ARCANE_SATUATION_BLOCK);
+                        entries.add(ModBlocks.ARCANE_SLOW_FALL_BLOCK);
+                        entries.add(ModBlocks.ARCANE_SLOWNESS_BLOCK);
+                        entries.add(ModBlocks.ARCANE_SPEED_BLOCK);
+                        entries.add(ModBlocks.ARCANE_STARVING_BLOCK);
+                        entries.add(ModBlocks.ARCANE_STRENGTH_BLOCK);
+                        entries.add(ModBlocks.ARCANE_UNLUCK_BLOCK);
+                        entries.add(ModBlocks.ARCANE_WATER_BREATHING_BLOCK);
+                        entries.add(ModBlocks.ARCANE_WEAKNESS_BLOCK);
+                        entries.add(ModBlocks.ARCANE_WITHER_BLOCK);
+                        entries.add(ModBlocks.ARCANE_VOID_BLOCK);
+                        entries.add(ModBlocks.ARCANE_CLEAR_NEGATIVE_BLOCK);
+                        entries.add(ModBlocks.ARCANE_CLEAR_POSITIVE_BLOCK);
+                        entries.add(ModBlocks.ARCANE_CLEAR_NEUTRAL_BLOCK);
+                        entries.add(ModBlocks.ARCANE_DISORIENT_BLOCK);
+                        entries.add(ModBlocks.ARCANE_STICKY_FEAT_BLOCK);
+                        entries.add(ModBlocks.ARCANE_FREAKY_BUNNY_BLOCK);
+
+                        entries.add(ModBlocks.POWER_PRECISION_BLOCK);
+
+                        entries.add(ModBlocks.CURSED_BLOCK);
+                        entries.add(ModBlocks.COURSE_DIRT_TRAP_BLOCK);
+                        entries.add(ModBlocks.STONE_TRAP_BLOCK);
+                        entries.add(ModBlocks.DEEPSLATE_TRAP_BLOCK);
+                        entries.add(ModBlocks.SAND_QUICKSAND);
+                        entries.add(ModBlocks.RED_SAND_QUICKSAND);
+                        entries.add(ModBlocks.GRAVEL_SINKSTONE);
+                        entries.add(ModBlocks.MUD_SINKING_SLUDGE);
+                        entries.add(ModBlocks.SOUL_SAND_PHANTOM_QUICKSAND);
+                        entries.add(ModBlocks.FLAREFORGE_BLOCK);
+                        entries.add(ModBlocks.NETHER_STEAM_VENT);
+                        entries.add(ModBlocks.SPIRIT_JUMP_TRAP);
+                        entries.add(ModBlocks.FROST_BITE_TRAP_BLOCK);
+                        entries.add(ModBlocks.CURSED_NAUSEA_TRAP_BLOCK);
+                        entries.add(ModBlocks.CURSED_POISON_SPORE_TRAP_BLOCK);
+                        entries.add(ModBlocks.CURSED_BRASIER_TRAP_BLOCK);
+                        entries.add(ModBlocks.EMPTY_BRASIER);
+                        entries.add(ModBlocks.CURSED_TOTEM_BLOCK);
+                        entries.add(ModItems.TELEPORT_TRAP_ITEM);
+
+
+
 
                         //BlockItems
 //                        entries.add(ModItems.TEST_ITEM_BLOCK);

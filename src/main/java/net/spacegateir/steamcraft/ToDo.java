@@ -13,7 +13,6 @@ public class ToDo {
 
     // create dimentions (earth copy, void, waterworld, skulk, overworld neather type, sky dimention)
 
-    // add 48 flowers, spawn in the world
     // give glow flowers a partical effect or a flim strip
 
     // make dragon egg with 8 netherstars craft divine egg
@@ -21,6 +20,38 @@ public class ToDo {
 
     //Blue lava called soul lava
 
-    
+
+    //    Equipment
+    //	- event prize wearables (pure looks, no special function) (loot box to receive a reward)
+    //            - event prize usable (pure looks, no special function) (loot box to receive a reward)
+    //            - 1 steam craft mod amour (hard to craft) (up to space to make god armor) (can use other mods to craft)
+    //            - no craftable paxel
+    //	- pickaxe (3x3x1 minable area) (crafting difficulty easy)
+    //            - axe (3x3x straight up minable area) (crafting difficulty easy) lumber 2 ability
+    //	- shovel (3x3x1 minable area) (crafting difficulty easy)
+    //            - sword (?)
+    //	- hoe (3x3x1 minable area) (crafting difficulty easy)
+    //            - sheers (3x3x3 minable area) (crafting difficulty easy)
+
+    //    Building Blocks
+    //	- sculk building block variants
+    //	- a block with a shelf on top and shop goodies under the shelf for display
+    //    Pile of books
+    //            Food
+
+    //    An invisible block that has smoke particles for a chimney
+    //    A half Slab with a wall inside slab at the bottom and wall in the middle (rotatable block)
+    //    ( Cobblestone, Stone_bricks, Andesite, Bricks )
+    //    Off-center chain
+    //    Corner and edge
+
+    //    Food
+    //    Loot items
+    //	- Loot boxes (common, uncommon, rare, legendary, unique).
+
+
+
+
+
 
 }

@@ -6,6 +6,7 @@ import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.creative_tab.ModItemGroups;
 import net.spacegateir.steamcraft.creative_tab.ModItemRewardsGroups;
 import net.spacegateir.steamcraft.effect.ModEffects;
+import net.spacegateir.steamcraft.fluid.ModFluids;
 import net.spacegateir.steamcraft.item.ModItems;
 import net.spacegateir.steamcraft.item.ModRewardItems;
 import net.spacegateir.steamcraft.potion.ModPotions;
@@ -28,6 +29,7 @@ public class Steamcraft implements ModInitializer {
 		ModBlocks.registerModBlocks();
 		ModItems.registerModItems();
 		ModRewardItems.registerModRewardItems();
+		ModFluids.registerFluids();
 
 
 		ShovelPathStateInjector.inject();

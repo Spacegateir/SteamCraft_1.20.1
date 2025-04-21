@@ -7,6 +7,7 @@ import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
 import net.minecraft.item.ArmorItem;
 import net.spacegateir.steamcraft.block.ModBlocks;
+import net.spacegateir.steamcraft.fluid.ModFluids;
 import net.spacegateir.steamcraft.item.ModItems;
 import net.spacegateir.steamcraft.item.ModRewardItems;
 
@@ -223,6 +224,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CELESTIAL_GEARFORGED_BOOTS, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.WINGED_SANDALS, Models.GENERATED);
+
+        itemModelGenerator.register(ModFluids.SOAP_WATER_BUCKET, Models.GENERATED);
 
         itemModelGenerator.register(ModRewardItems.LOOT_CHEST, Models.GENERATED);
 

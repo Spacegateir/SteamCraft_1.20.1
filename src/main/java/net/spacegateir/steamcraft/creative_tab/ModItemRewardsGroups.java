@@ -8,8 +8,6 @@ import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.spacegateir.steamcraft.Steamcraft;
-import net.spacegateir.steamcraft.block.ModBlocks;
-import net.spacegateir.steamcraft.item.ModItems;
 import net.spacegateir.steamcraft.item.ModRewardItems;
 
 public class ModItemRewardsGroups {

@@ -2,10 +2,6 @@ package net.spacegateir.steamcraft;
 
 import net.fabricmc.api.ModInitializer;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.item.ShovelItem;
 import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.creative_tab.ModItemGroups;
 import net.spacegateir.steamcraft.creative_tab.ModItemRewardsGroups;

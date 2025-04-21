@@ -2,8 +2,6 @@ package net.spacegateir.steamcraft.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.block.Block;
-import net.minecraft.data.server.recipe.RecipeJsonProvider;
-import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -15,9 +13,6 @@ import net.spacegateir.steamcraft.Steamcraft;
 import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.item.armor.*;
 import net.spacegateir.steamcraft.item.custom.*;
-import software.bernie.example.item.WolfArmorItem;
-
-import java.util.function.Consumer;
 
 public class ModItems {
 
@@ -474,6 +469,7 @@ public class ModItems {
     public static final Item TELEPORT_TRAP_ITEM = Registry.register(Registries.ITEM,
             new Identifier(Steamcraft.MOD_ID, "teleport_trap_item"),
             new TeleportTrapBlockItem(ModBlocks.TELEPORT_TRAP_BLOCK, new FabricItemSettings()));
+
 
 
 

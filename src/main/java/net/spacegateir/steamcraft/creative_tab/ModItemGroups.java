@@ -9,7 +9,6 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.spacegateir.steamcraft.Steamcraft;
 import net.spacegateir.steamcraft.block.ModBlocks;
-import net.spacegateir.steamcraft.fluid.ModFluids;
 import net.spacegateir.steamcraft.item.ModItems;
 
 public class ModItemGroups {
@@ -20,8 +19,6 @@ public class ModItemGroups {
 
                         //Items
 //                        entries.add(ModItems.TEST_ITEM);
-
-                        entries.add(ModFluids.SOAP_WATER_BUCKET);
 
 
                         entries.add(ModItems.PATTERN_RECOMPILER);

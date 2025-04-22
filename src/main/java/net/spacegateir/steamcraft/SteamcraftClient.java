@@ -3,12 +3,9 @@ package net.spacegateir.steamcraft;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
-import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
-import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.item.ItemStack;
 import net.spacegateir.steamcraft.block.ModBlocks;
-import net.spacegateir.steamcraft.fluid.ModFluids;
 import net.spacegateir.steamcraft.item.armor.WingedSandalsCosmeticItem;
 
 public class SteamcraftClient implements ClientModInitializer {
@@ -253,11 +250,6 @@ public class SteamcraftClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_LUSH_VIOLET_FLOWER_BLOCK, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.GLOW_LUSH_VIOLET_FLOWER_BLOCK, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_GLOW_LUSH_VIOLET_FLOWER_BLOCK, RenderLayer.getCutout());
-
-        FluidRenderHandlerRegistry.INSTANCE.register(ModFluids.STILL_SOAP_WATER, ModFluids.FLOWING_SOAP_WATER,
-                SimpleFluidRenderHandler.coloredWater(0xA1E038D0));
-        BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(),
-                ModFluids.STILL_SOAP_WATER, ModFluids.FLOWING_SOAP_WATER);
 
         });
     }

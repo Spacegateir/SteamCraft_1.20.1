@@ -21,6 +21,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FOOLS_GOLD_RAW_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FOOLS_GOLD_BLOCK);
 
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SMOKE_BLOCK);
+
         // Normal Flowers
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.AGAPANTHUS_FLOWER_BLOCK, ModBlocks.POTTED_AGAPANTHUS_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_AGAPANTHUS_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_AGAPANTHUS_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);

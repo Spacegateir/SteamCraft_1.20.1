@@ -143,7 +143,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.FOOLS_GOLD_BLOCK,
                         ModBlocks.FOOLS_GOLD_RAW_BLOCK,
 
-                        ModBlocks.POWER_PRECISION_BLOCK
+                        ModBlocks.POWER_PRECISION_BLOCK,
+                        ModBlocks.SMOKE_BLOCK
 
 
                 );

@@ -65,6 +65,7 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.FOOLS_GOLD_RAW_BLOCK);
         addDrop(ModBlocks.FOOLS_GOLD_BLOCK);
+        addDrop(ModBlocks.SMOKE_BLOCK);
 
         addDrop(ModBlocks.CLAY_PATH,
                 dropsWithSilkTouch(ModBlocks.CLAY_PATH, ItemEntry.builder(Blocks.CLAY))

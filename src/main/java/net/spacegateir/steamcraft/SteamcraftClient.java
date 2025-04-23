@@ -3,14 +3,20 @@ package net.spacegateir.steamcraft;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
+import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.item.ItemStack;
+import net.spacegateir.steamcraft.block.ModBlockEntities;
 import net.spacegateir.steamcraft.block.ModBlocks;
+import net.spacegateir.steamcraft.event.renderers.SmokeBlockRenderer;
 import net.spacegateir.steamcraft.item.armor.WingedSandalsCosmeticItem;
 
 public class SteamcraftClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
+
+        BlockEntityRendererRegistry.register(ModBlockEntities.SMOKE_BLOCK_ENTITY, SmokeBlockRenderer::new);
+
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if (client.player != null) {
@@ -33,6 +39,8 @@ public class SteamcraftClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SKELETON_HEAD_STACK, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SKELETON_HALF_BODY, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SKELETON_TORSO, RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SMOKE_BLOCK, RenderLayer.getCutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.COURSE_DIRT_TRAP_BLOCK_SPIKES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.STONE_TRAP_BLOCK_SPIKES, RenderLayer.getCutout());

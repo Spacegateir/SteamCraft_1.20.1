@@ -105,6 +105,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.SAND_PATH);
                         entries.add(ModBlocks.SNOW_PATH);
 
+                        entries.add(ModBlocks.SMOKE_BLOCK);
+
                         entries.add(ModBlocks.SKELETON_SITTING);
                         entries.add(ModBlocks.SKELETON_LAYING);
                         entries.add(ModBlocks.SKELETON_HEAD);

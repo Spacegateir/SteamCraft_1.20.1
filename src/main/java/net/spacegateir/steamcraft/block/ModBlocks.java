@@ -21,6 +21,10 @@ public class ModBlocks {
     public static final Block TEST_BLOCK = registerBlock("test_block",
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
 
+    public static final Block SMOKE_BLOCK = registerBlock("smoke_block",
+            new SmokeBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque()
+                    .luminance(15).burnable()));
+
     public static final Block AETHER_COIL = registerBlock("aether_coil",
             new AetherBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN)));
     public static final Block AETHER_COIL_WHITE = registerBlock("aether_coil_white",

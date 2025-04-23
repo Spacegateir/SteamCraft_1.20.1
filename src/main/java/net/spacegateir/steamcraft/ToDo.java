@@ -17,6 +17,8 @@ public class ToDo {
 
     //Blue lava called soul lava
 
+    // loot chests (common, rare legenday) witch will drop everywere and have great items in it like god sword
+
 
     //    Equipment
     //	- event prize wearables (pure looks, no special function) (loot box to receive a reward)

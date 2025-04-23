@@ -103,6 +103,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.RED_SAND_PATH);
                         entries.add(ModBlocks.ROOTED_DIRT_PATH);
                         entries.add(ModBlocks.SAND_PATH);
+                        entries.add(ModBlocks.SNOW_PATH);
 
                         entries.add(ModBlocks.SKELETON_SITTING);
                         entries.add(ModBlocks.SKELETON_LAYING);

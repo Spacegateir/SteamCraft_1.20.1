@@ -25,6 +25,7 @@ public class ShovelPathStateInjector {
             pathStates.put(Blocks.RED_SAND, ModBlocks.RED_SAND_PATH.getDefaultState());
             pathStates.put(Blocks.ROOTED_DIRT, ModBlocks.ROOTED_DIRT_PATH.getDefaultState());
             pathStates.put(Blocks.SAND, ModBlocks.SAND_PATH.getDefaultState());
+            pathStates.put(Blocks.SNOW_BLOCK, ModBlocks.SNOW_PATH.getDefaultState());
 
         } catch (NoSuchFieldException | IllegalAccessException e) {
             e.printStackTrace();

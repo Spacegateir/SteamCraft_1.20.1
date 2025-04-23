@@ -90,6 +90,9 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.SAND_PATH,
                 dropsWithSilkTouch(ModBlocks.SAND_PATH, ItemEntry.builder(Blocks.SAND))
         );
+        addDrop(ModBlocks.SNOW_PATH,
+                dropsWithSilkTouch(ModBlocks.SNOW_PATH, ItemEntry.builder(Blocks.SNOW_BLOCK))
+        );
 
         addDrop(ModBlocks.SKELETON_ARM);
         addDrop(ModBlocks.SKELETON_CHEST);

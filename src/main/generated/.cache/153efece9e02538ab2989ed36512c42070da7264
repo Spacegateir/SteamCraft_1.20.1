@@ -1,4 +1,4 @@
-// 1.20.1	2025-04-22T09:57:14.1589295	Steamcraft/Block Loot Tables
+// 1.20.1	2025-04-23T14:42:04.6126208	Steamcraft/Block Loot Tables
 7a8be10899fb8cea504aa2e8834d3de572d67d9d data\steamcraft\loot_tables\blocks\fools_gold_raw_block.json
 4b434f9602c9c2f60246afcd159bc287d5f98c8c data\steamcraft\loot_tables\blocks\aether_coil_magenta.json
 9c855c320756ac44c4dfcc2315132c498b20ac3b data\steamcraft\loot_tables\blocks\glow_lush_spiderlily_flower.json
@@ -31,6 +31,7 @@ a49ca1168c10daf2a6f07b998c4cf421a37c0fdf data\steamcraft\loot_tables\blocks\arca
 11be37d899ba04477e0520fd5592ec7c3f7e9c36 data\steamcraft\loot_tables\blocks\blue_cosmos_flower.json
 3220e74c14208503a374a8f4bf19f3249ffea6d5 data\steamcraft\loot_tables\blocks\arcane_unluck_block.json
 0762dbc199032e05e533e42d3db6bfa011d961d1 data\steamcraft\loot_tables\blocks\glow_daffodil_flower.json
+38c470f6023fe49f6e6d4acada89cf46b4c25fe4 data\steamcraft\loot_tables\blocks\snow_path.json
 5cbc4e578f6a33a9293adb8a8d764526a4225b26 data\steamcraft\loot_tables\blocks\thorned_hydrangea_flower.json
 c77cdd0e26e84ac0b659e57239c1b1f8fab0b127 data\steamcraft\loot_tables\blocks\coarse_dirt_path.json
 f3c43a73de1da492a1d5f18eba2a2c427a609bea data\steamcraft\loot_tables\blocks\course_dirt_trap_block.json

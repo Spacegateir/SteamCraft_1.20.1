@@ -159,6 +159,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.RED_SAND_PATH,
                         ModBlocks.ROOTED_DIRT_PATH,
                         ModBlocks.SAND_PATH,
+                        ModBlocks.SNOW_PATH,
 
                         ModBlocks.SAND_QUICKSAND,
                         ModBlocks.RED_SAND_QUICKSAND,

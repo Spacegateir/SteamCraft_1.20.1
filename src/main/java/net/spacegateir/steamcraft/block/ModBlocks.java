@@ -93,6 +93,8 @@ public class ModBlocks {
             new RootedDirtPathBlock(FabricBlockSettings.copyOf(Blocks.ROOTED_DIRT).velocityMultiplier(1.25F)));
     public static final Block SAND_PATH = registerBlock("sand_path",
             new SandPathBlock(FabricBlockSettings.copyOf(Blocks.SAND).velocityMultiplier(1.25F)));
+    public static final Block SNOW_PATH = registerBlock("snow_path",
+            new SnowPathBlock(FabricBlockSettings.copyOf(Blocks.SNOW_BLOCK).velocityMultiplier(1.25F)));
 
     public static final Block SKELETON_SITTING = registerBlock("skeleton_sitting",
             new SkeletonParts(FabricBlockSettings.copyOf(Blocks.BONE_BLOCK).allowsSpawning(Blocks::never).nonOpaque()));

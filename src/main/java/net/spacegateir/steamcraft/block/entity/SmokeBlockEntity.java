@@ -18,7 +18,7 @@ public class SmokeBlockEntity extends BlockEntity {
 
     public static void tick(World world, BlockPos pos, BlockState state, SmokeBlockEntity blockEntity) {
         if (world.isClient) {
-            if (RANDOM.nextFloat() < 0.4f) { // 20% chance each tick
+            if (RANDOM.nextFloat() < 0.4f) { // 40% chance each tick
                 double x = pos.getX() + 0.5 + (RANDOM.nextDouble() - 0.5) * 0.8;
                 double y = pos.getY() + 0.5;
                 double z = pos.getZ() + 0.5 + (RANDOM.nextDouble() - 0.5) * 0.8;

@@ -21,7 +21,38 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FOOLS_GOLD_RAW_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FOOLS_GOLD_BLOCK);
 
-//        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SMOKE_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_WHITE_CONCRETE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_WHITE_CONCRETE_POWDER);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_LIGHT_GRAY_CONCRETE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_LIGHT_GRAY_CONCRETE_POWDER);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_GRAY_CONCRETE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_GRAY_CONCRETE_POWDER);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_BLACK_CONCRETE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_BLACK_CONCRETE_POWDER);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_BROWN_CONCRETE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_BROWN_CONCRETE_POWDER);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_RED_CONCRETE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_RED_CONCRETE_POWDER);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_ORANGE_CONCRETE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_ORANGE_CONCRETE_POWDER);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_YELLOW_CONCRETE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_YELLOW_CONCRETE_POWDER);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_LIME_CONCRETE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_LIME_CONCRETE_POWDER);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_GREEN_CONCRETE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_GREEN_CONCRETE_POWDER);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_CYAN_CONCRETE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_CYAN_CONCRETE_POWDER);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_LIGHT_BLUE_CONCRETE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_LIGHT_BLUE_CONCRETE_POWDER);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_BLUE_CONCRETE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_BLUE_CONCRETE_POWDER);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_PURPLE_CONCRETE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_PURPLE_CONCRETE_POWDER);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_MAGENTA_CONCRETE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_MAGENTA_CONCRETE_POWDER);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_PINK_CONCRETE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_PINK_CONCRETE_POWDER);
 
         // Normal Flowers
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.AGAPANTHUS_FLOWER_BLOCK, ModBlocks.POTTED_AGAPANTHUS_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);

@@ -184,6 +184,40 @@ public class ModItemGroups {
 
                         entries.add(ModItems.SMOKE_BLOCK_ITEM);
 
+                        entries.add(ModBlocks.COBBLED_WHITE_CONCRETE);
+                        entries.add(ModBlocks.COBBLED_WHITE_CONCRETE_POWDER);
+                        entries.add(ModBlocks.COBBLED_LIGHT_GRAY_CONCRETE);
+                        entries.add(ModBlocks.COBBLED_LIGHT_GRAY_CONCRETE_POWDER);
+                        entries.add(ModBlocks.COBBLED_GRAY_CONCRETE);
+                        entries.add(ModBlocks.COBBLED_GRAY_CONCRETE_POWDER);
+                        entries.add(ModBlocks.COBBLED_BLACK_CONCRETE);
+                        entries.add(ModBlocks.COBBLED_BLACK_CONCRETE_POWDER);
+                        entries.add(ModBlocks.COBBLED_BROWN_CONCRETE);
+                        entries.add(ModBlocks.COBBLED_BROWN_CONCRETE_POWDER);
+                        entries.add(ModBlocks.COBBLED_RED_CONCRETE);
+                        entries.add(ModBlocks.COBBLED_RED_CONCRETE_POWDER);
+                        entries.add(ModBlocks.COBBLED_ORANGE_CONCRETE);
+                        entries.add(ModBlocks.COBBLED_ORANGE_CONCRETE_POWDER);
+                        entries.add(ModBlocks.COBBLED_YELLOW_CONCRETE);
+                        entries.add(ModBlocks.COBBLED_YELLOW_CONCRETE_POWDER);
+                        entries.add(ModBlocks.COBBLED_LIME_CONCRETE);
+                        entries.add(ModBlocks.COBBLED_LIME_CONCRETE_POWDER);
+                        entries.add(ModBlocks.COBBLED_GREEN_CONCRETE);
+                        entries.add(ModBlocks.COBBLED_GREEN_CONCRETE_POWDER);
+                        entries.add(ModBlocks.COBBLED_CYAN_CONCRETE);
+                        entries.add(ModBlocks.COBBLED_CYAN_CONCRETE_POWDER);
+                        entries.add(ModBlocks.COBBLED_LIGHT_BLUE_CONCRETE);
+                        entries.add(ModBlocks.COBBLED_LIGHT_BLUE_CONCRETE_POWDER);
+                        entries.add(ModBlocks.COBBLED_BLUE_CONCRETE);
+                        entries.add(ModBlocks.COBBLED_BLUE_CONCRETE_POWDER);
+                        entries.add(ModBlocks.COBBLED_PURPLE_CONCRETE);
+                        entries.add(ModBlocks.COBBLED_PURPLE_CONCRETE_POWDER);
+                        entries.add(ModBlocks.COBBLED_MAGENTA_CONCRETE);
+                        entries.add(ModBlocks.COBBLED_MAGENTA_CONCRETE_POWDER);
+                        entries.add(ModBlocks.COBBLED_PINK_CONCRETE);
+                        entries.add(ModBlocks.COBBLED_PINK_CONCRETE_POWDER);
+
+
 
 
 

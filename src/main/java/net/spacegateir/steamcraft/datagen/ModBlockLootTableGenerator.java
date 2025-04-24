@@ -269,6 +269,40 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.SMOKE_BLOCK);
 
+        addDrop(ModBlocks.COBBLED_WHITE_CONCRETE);
+        addDrop(ModBlocks.COBBLED_WHITE_CONCRETE_POWDER);
+        addDrop(ModBlocks.COBBLED_LIGHT_GRAY_CONCRETE);
+        addDrop(ModBlocks.COBBLED_LIGHT_GRAY_CONCRETE_POWDER);
+        addDrop(ModBlocks.COBBLED_GRAY_CONCRETE);
+        addDrop(ModBlocks.COBBLED_GRAY_CONCRETE_POWDER);
+        addDrop(ModBlocks.COBBLED_BLACK_CONCRETE);
+        addDrop(ModBlocks.COBBLED_BLACK_CONCRETE_POWDER);
+        addDrop(ModBlocks.COBBLED_BROWN_CONCRETE);
+        addDrop(ModBlocks.COBBLED_BROWN_CONCRETE_POWDER);
+        addDrop(ModBlocks.COBBLED_RED_CONCRETE);
+        addDrop(ModBlocks.COBBLED_RED_CONCRETE_POWDER);
+        addDrop(ModBlocks.COBBLED_ORANGE_CONCRETE);
+        addDrop(ModBlocks.COBBLED_ORANGE_CONCRETE_POWDER);
+        addDrop(ModBlocks.COBBLED_YELLOW_CONCRETE);
+        addDrop(ModBlocks.COBBLED_YELLOW_CONCRETE_POWDER);
+        addDrop(ModBlocks.COBBLED_LIME_CONCRETE);
+        addDrop(ModBlocks.COBBLED_LIME_CONCRETE_POWDER);
+        addDrop(ModBlocks.COBBLED_GREEN_CONCRETE);
+        addDrop(ModBlocks.COBBLED_GREEN_CONCRETE_POWDER);
+        addDrop(ModBlocks.COBBLED_CYAN_CONCRETE);
+        addDrop(ModBlocks.COBBLED_CYAN_CONCRETE_POWDER);
+        addDrop(ModBlocks.COBBLED_LIGHT_BLUE_CONCRETE);
+        addDrop(ModBlocks.COBBLED_LIGHT_BLUE_CONCRETE_POWDER);
+        addDrop(ModBlocks.COBBLED_BLUE_CONCRETE);
+        addDrop(ModBlocks.COBBLED_BLUE_CONCRETE_POWDER);
+        addDrop(ModBlocks.COBBLED_PURPLE_CONCRETE);
+        addDrop(ModBlocks.COBBLED_PURPLE_CONCRETE_POWDER);
+        addDrop(ModBlocks.COBBLED_MAGENTA_CONCRETE);
+        addDrop(ModBlocks.COBBLED_MAGENTA_CONCRETE_POWDER);
+        addDrop(ModBlocks.COBBLED_PINK_CONCRETE);
+        addDrop(ModBlocks.COBBLED_PINK_CONCRETE_POWDER);
+
+
 
 
 

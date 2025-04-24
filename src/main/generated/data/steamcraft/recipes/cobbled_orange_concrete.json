@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "minecraft:orange_concrete"
+    },
+    "2": {
+      "item": "minecraft:cobblestone"
+    }
+  },
+  "pattern": [
+    "111",
+    "121",
+    "111"
+  ],
+  "result": {
+    "count": 8,
+    "item": "steamcraft:cobbled_orange_concrete"
+  },
+  "show_notification": true
+}

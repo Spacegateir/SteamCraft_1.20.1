@@ -21,10 +21,6 @@ public class ModBlocks {
     public static final Block TEST_BLOCK = registerBlock("test_block",
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
 
-//    public static final Block SMOKE_BLOCK = registerBlock("smoke_block",
-//            new SmokeBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque()
-//                    .luminance(15).burnable()));
-
     public static final Block AETHER_COIL = registerBlock("aether_coil",
             new AetherBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN)));
     public static final Block AETHER_COIL_WHITE = registerBlock("aether_coil_white",
@@ -81,6 +77,8 @@ public class ModBlocks {
     public static final Block FOOLS_GOLD_RAW_BLOCK = registerBlock("fools_gold_raw_block",
             new Block(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK)));
 
+    // Path Blocks
+
     public static final Block CLAY_PATH = registerBlock("clay_path",
             new ClayPathBlock(FabricBlockSettings.copyOf(Blocks.CLAY).velocityMultiplier(1.25F)));
     public static final Block COARSE_DIRT_PATH = registerBlock("coarse_dirt_path",
@@ -99,6 +97,8 @@ public class ModBlocks {
             new SandPathBlock(FabricBlockSettings.copyOf(Blocks.SAND).velocityMultiplier(1.25F)));
     public static final Block SNOW_PATH = registerBlock("snow_path",
             new SnowPathBlock(FabricBlockSettings.copyOf(Blocks.SNOW_BLOCK).velocityMultiplier(1.25F)));
+
+    //Mob Parts Blocks
 
     public static final Block SKELETON_SITTING = registerBlock("skeleton_sitting",
             new SkeletonParts(FabricBlockSettings.copyOf(Blocks.BONE_BLOCK).allowsSpawning(Blocks::never).nonOpaque()));
@@ -130,6 +130,8 @@ public class ModBlocks {
 
     public static final Block POWER_PRECISION_BLOCK = registerBlock("power_precision_block_0",
             new PowerPrecisionBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).resistance(50.0F).hardness(50.0F)));
+
+    // Arcane Blocks
 
     public static final Block ARCANE_ABSORPTION_BLOCK = registerBlock("arcane_absorption_block",
             new ArcaneAbsorptionBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
@@ -254,7 +256,7 @@ public class ModBlocks {
             new ArcanFreakyBunnyBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
 
 
-
+    // Trap Blocks
     public static final Block CURSED_BLOCK = registerBlock("cursed_block",
             new CursedBlock(FabricBlockSettings.copyOf(Blocks.SCULK).resistance(50.0F).hardness(50.0F)));
 
@@ -314,6 +316,89 @@ public class ModBlocks {
             new Identifier(Steamcraft.MOD_ID, "smoke_block"),
             new SmokeBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).strength(2f,-1f).nonOpaque()
                     .luminance(5).noCollision().burnable()));
+
+    // Concrete Blocks
+
+    public static final Block COBBLED_WHITE_CONCRETE = registerBlock("cobbled_white_concrete",
+            new Block(FabricBlockSettings.copyOf(Blocks.WHITE_CONCRETE)));
+    public static final Block COBBLED_WHITE_CONCRETE_POWDER = registerBlock("cobbled_white_concrete_powder",
+            new ConcretePowderBlock(COBBLED_WHITE_CONCRETE, FabricBlockSettings.copyOf(Blocks.WHITE_CONCRETE_POWDER)));
+
+    public static final Block COBBLED_LIGHT_GRAY_CONCRETE = registerBlock("cobbled_light_gray_concrete",
+            new Block(FabricBlockSettings.copyOf(Blocks.LIGHT_GRAY_CONCRETE)));
+    public static final Block COBBLED_LIGHT_GRAY_CONCRETE_POWDER = registerBlock("cobbled_light_gray_concrete_powder",
+            new ConcretePowderBlock(COBBLED_LIGHT_GRAY_CONCRETE, FabricBlockSettings.copyOf(Blocks.LIGHT_GRAY_CONCRETE_POWDER)));
+
+    public static final Block COBBLED_GRAY_CONCRETE = registerBlock("cobbled_gray_concrete",
+            new Block(FabricBlockSettings.copyOf(Blocks.GRAY_CONCRETE)));
+    public static final Block COBBLED_GRAY_CONCRETE_POWDER = registerBlock("cobbled_gray_concrete_powder",
+            new ConcretePowderBlock(COBBLED_GRAY_CONCRETE, FabricBlockSettings.copyOf(Blocks.GRAY_CONCRETE_POWDER)));
+
+    public static final Block COBBLED_BLACK_CONCRETE = registerBlock("cobbled_black_concrete",
+            new Block(FabricBlockSettings.copyOf(Blocks.BLACK_CONCRETE)));
+    public static final Block COBBLED_BLACK_CONCRETE_POWDER = registerBlock("cobbled_black_concrete_powder",
+            new ConcretePowderBlock(COBBLED_BLACK_CONCRETE, FabricBlockSettings.copyOf(Blocks.BLACK_CONCRETE_POWDER)));
+
+    public static final Block COBBLED_BROWN_CONCRETE = registerBlock("cobbled_brown_concrete",
+            new Block(FabricBlockSettings.copyOf(Blocks.BROWN_CONCRETE)));
+    public static final Block COBBLED_BROWN_CONCRETE_POWDER = registerBlock("cobbled_brown_concrete_powder",
+            new ConcretePowderBlock(COBBLED_BROWN_CONCRETE, FabricBlockSettings.copyOf(Blocks.BROWN_CONCRETE_POWDER)));
+
+    public static final Block COBBLED_RED_CONCRETE = registerBlock("cobbled_red_concrete",
+            new Block(FabricBlockSettings.copyOf(Blocks.RED_CONCRETE)));
+    public static final Block COBBLED_RED_CONCRETE_POWDER = registerBlock("cobbled_red_concrete_powder",
+            new ConcretePowderBlock(COBBLED_RED_CONCRETE, FabricBlockSettings.copyOf(Blocks.RED_CONCRETE_POWDER)));
+
+    public static final Block COBBLED_ORANGE_CONCRETE = registerBlock("cobbled_orange_concrete",
+            new Block(FabricBlockSettings.copyOf(Blocks.ORANGE_CONCRETE)));
+    public static final Block COBBLED_ORANGE_CONCRETE_POWDER = registerBlock("cobbled_orange_concrete_powder",
+            new ConcretePowderBlock(COBBLED_ORANGE_CONCRETE, FabricBlockSettings.copyOf(Blocks.ORANGE_CONCRETE_POWDER)));
+
+    public static final Block COBBLED_YELLOW_CONCRETE = registerBlock("cobbled_yellow_concrete",
+            new Block(FabricBlockSettings.copyOf(Blocks.YELLOW_CONCRETE)));
+    public static final Block COBBLED_YELLOW_CONCRETE_POWDER = registerBlock("cobbled_yellow_concrete_powder",
+            new ConcretePowderBlock(COBBLED_YELLOW_CONCRETE, FabricBlockSettings.copyOf(Blocks.YELLOW_CONCRETE_POWDER)));
+
+    public static final Block COBBLED_LIME_CONCRETE = registerBlock("cobbled_lime_concrete",
+            new Block(FabricBlockSettings.copyOf(Blocks.LIME_CONCRETE)));
+    public static final Block COBBLED_LIME_CONCRETE_POWDER = registerBlock("cobbled_lime_concrete_powder",
+            new ConcretePowderBlock(COBBLED_LIME_CONCRETE, FabricBlockSettings.copyOf(Blocks.LIME_CONCRETE_POWDER)));
+
+    public static final Block COBBLED_GREEN_CONCRETE = registerBlock("cobbled_green_concrete",
+            new Block(FabricBlockSettings.copyOf(Blocks.GREEN_CONCRETE)));
+    public static final Block COBBLED_GREEN_CONCRETE_POWDER = registerBlock("cobbled_green_concrete_powder",
+            new ConcretePowderBlock(COBBLED_GREEN_CONCRETE, FabricBlockSettings.copyOf(Blocks.GREEN_CONCRETE_POWDER)));
+
+    public static final Block COBBLED_CYAN_CONCRETE = registerBlock("cobbled_cyan_concrete",
+            new Block(FabricBlockSettings.copyOf(Blocks.CYAN_CONCRETE)));
+    public static final Block COBBLED_CYAN_CONCRETE_POWDER = registerBlock("cobbled_cyan_concrete_powder",
+            new ConcretePowderBlock(COBBLED_CYAN_CONCRETE, FabricBlockSettings.copyOf(Blocks.CYAN_CONCRETE_POWDER)));
+
+    public static final Block COBBLED_LIGHT_BLUE_CONCRETE = registerBlock("cobbled_light_blue_concrete",
+            new Block(FabricBlockSettings.copyOf(Blocks.LIGHT_BLUE_CONCRETE)));
+    public static final Block COBBLED_LIGHT_BLUE_CONCRETE_POWDER = registerBlock("cobbled_light_blue_concrete_powder",
+            new ConcretePowderBlock(COBBLED_LIGHT_BLUE_CONCRETE, FabricBlockSettings.copyOf(Blocks.LIGHT_BLUE_CONCRETE_POWDER)));
+
+    public static final Block COBBLED_BLUE_CONCRETE = registerBlock("cobbled_blue_concrete",
+            new Block(FabricBlockSettings.copyOf(Blocks.BLUE_CONCRETE)));
+    public static final Block COBBLED_BLUE_CONCRETE_POWDER = registerBlock("cobbled_blue_concrete_powder",
+            new ConcretePowderBlock(COBBLED_BLUE_CONCRETE, FabricBlockSettings.copyOf(Blocks.BLUE_CONCRETE_POWDER)));
+
+    public static final Block COBBLED_PURPLE_CONCRETE = registerBlock("cobbled_purple_concrete",
+            new Block(FabricBlockSettings.copyOf(Blocks.PURPLE_CONCRETE)));
+    public static final Block COBBLED_PURPLE_CONCRETE_POWDER = registerBlock("cobbled_purple_concrete_powder",
+            new ConcretePowderBlock(COBBLED_PURPLE_CONCRETE, FabricBlockSettings.copyOf(Blocks.PURPLE_CONCRETE_POWDER)));
+
+    public static final Block COBBLED_MAGENTA_CONCRETE = registerBlock("cobbled_magenta_concrete",
+            new Block(FabricBlockSettings.copyOf(Blocks.MAGENTA_CONCRETE)));
+    public static final Block COBBLED_MAGENTA_CONCRETE_POWDER = registerBlock("cobbled_magenta_concrete_powder",
+            new ConcretePowderBlock(COBBLED_MAGENTA_CONCRETE, FabricBlockSettings.copyOf(Blocks.MAGENTA_CONCRETE_POWDER)));
+
+    public static final Block COBBLED_PINK_CONCRETE = registerBlock("cobbled_pink_concrete",
+            new Block(FabricBlockSettings.copyOf(Blocks.PINK_CONCRETE)));
+    public static final Block COBBLED_PINK_CONCRETE_POWDER = registerBlock("cobbled_pink_concrete_powder",
+            new ConcretePowderBlock(COBBLED_PINK_CONCRETE, FabricBlockSettings.copyOf(Blocks.PINK_CONCRETE_POWDER)));
+
 
 
 

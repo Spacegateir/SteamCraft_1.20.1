@@ -32,6 +32,10 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                     RegistryKeys.BLOCK,
                     new Identifier("steamcraft", "traps")
             );
+            public static final TagKey<Block> BUILDING_BLOCKS = TagKey.of(
+                    RegistryKeys.BLOCK,
+                    new Identifier("steamcraft", "building_blocks")
+            );
         }
     }
 
@@ -117,10 +121,48 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.TELEPORT_TRAP_BLOCK
                         );
 
+        getOrCreateTagBuilder(ModTags.Blocks.BUILDING_BLOCKS)
+                .add(
+
+                        ModBlocks.COBBLED_WHITE_CONCRETE,
+                        ModBlocks.COBBLED_WHITE_CONCRETE_POWDER,
+                        ModBlocks.COBBLED_LIGHT_GRAY_CONCRETE,
+                        ModBlocks.COBBLED_LIGHT_GRAY_CONCRETE_POWDER,
+                        ModBlocks.COBBLED_GRAY_CONCRETE,
+                        ModBlocks.COBBLED_GRAY_CONCRETE_POWDER,
+                        ModBlocks.COBBLED_BLACK_CONCRETE,
+                        ModBlocks.COBBLED_BLACK_CONCRETE_POWDER,
+                        ModBlocks.COBBLED_BROWN_CONCRETE,
+                        ModBlocks.COBBLED_BROWN_CONCRETE_POWDER,
+                        ModBlocks.COBBLED_RED_CONCRETE,
+                        ModBlocks.COBBLED_RED_CONCRETE_POWDER,
+                        ModBlocks.COBBLED_ORANGE_CONCRETE,
+                        ModBlocks.COBBLED_ORANGE_CONCRETE_POWDER,
+                        ModBlocks.COBBLED_YELLOW_CONCRETE,
+                        ModBlocks.COBBLED_YELLOW_CONCRETE_POWDER,
+                        ModBlocks.COBBLED_LIME_CONCRETE,
+                        ModBlocks.COBBLED_LIME_CONCRETE_POWDER,
+                        ModBlocks.COBBLED_GREEN_CONCRETE,
+                        ModBlocks.COBBLED_GREEN_CONCRETE_POWDER,
+                        ModBlocks.COBBLED_CYAN_CONCRETE,
+                        ModBlocks.COBBLED_CYAN_CONCRETE_POWDER,
+                        ModBlocks.COBBLED_LIGHT_BLUE_CONCRETE,
+                        ModBlocks.COBBLED_LIGHT_BLUE_CONCRETE_POWDER,
+                        ModBlocks.COBBLED_BLUE_CONCRETE,
+                        ModBlocks.COBBLED_BLUE_CONCRETE_POWDER,
+                        ModBlocks.COBBLED_PURPLE_CONCRETE,
+                        ModBlocks.COBBLED_PURPLE_CONCRETE_POWDER,
+                        ModBlocks.COBBLED_MAGENTA_CONCRETE,
+                        ModBlocks.COBBLED_MAGENTA_CONCRETE_POWDER,
+                        ModBlocks.COBBLED_PINK_CONCRETE,
+                        ModBlocks.COBBLED_PINK_CONCRETE_POWDER
+                        );
+
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .addTag(ModTags.Blocks.SKELETON)
                 .addTag(ModTags.Blocks.ARCANE_BLOCKS)
                 .addTag(ModTags.Blocks.TRAPS)
+                .addTag(ModTags.Blocks.BUILDING_BLOCKS)
 
                 .add(
                         ModBlocks.AETHER_COIL,

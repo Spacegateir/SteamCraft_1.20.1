@@ -15,10 +15,12 @@ public class ToDo {
     // make dragon egg with 8 netherstars craft divine egg
     // make divine egg drop halo when placed on the ground slowly cracks over 1hr then turns into a halo
 
-    //Blue lava called soul lava
+    // Blue lava called soul lava
 
     // loot chests (common, rare legenday) witch will drop everywere and have great items in it like god sword
 
+    // Building Blocks
+    // ICE, SNOW, SCULK (Brikcs, Large Brick, )
 
     //    Equipment
     //	- event prize wearables (pure looks, no special function) (loot box to receive a reward)
@@ -38,7 +40,6 @@ public class ToDo {
     //    Pile of books
     //            Food
 
-    //    An invisible block that has smoke particles for a chimney or flower pot
     //    A half Slab with a wall inside slab at the bottom and wall in the middle (rotatable block)
     //    ( Cobblestone, Stone_bricks, Andesite, Bricks )
     //    Off-center chain

@@ -1,4 +1,4 @@
-// 1.20.1	2025-04-23T15:40:23.8188522	Steamcraft/Block Loot Tables
+// 1.20.1	2025-04-24T13:05:00.6063097	Steamcraft/Block Loot Tables
 7a8be10899fb8cea504aa2e8834d3de572d67d9d data\steamcraft\loot_tables\blocks\fools_gold_raw_block.json
 4b434f9602c9c2f60246afcd159bc287d5f98c8c data\steamcraft\loot_tables\blocks\aether_coil_magenta.json
 9c855c320756ac44c4dfcc2315132c498b20ac3b data\steamcraft\loot_tables\blocks\glow_lush_spiderlily_flower.json
@@ -109,9 +109,9 @@ b65b33aa6c742cff96d3eadbc81e7fb7854252c9 data\steamcraft\loot_tables\blocks\arca
 41ee0031bda17f6bd61a96ced18f8f5e488b541d data\steamcraft\loot_tables\blocks\arcane_freaky_bunny_block.json
 a0ed7e121a08925852157c7489925519ce6a7326 data\steamcraft\loot_tables\blocks\glow_thorned_iris_flower.json
 357579a88d072083654d1fa3b238f7994298c94f data\steamcraft\loot_tables\blocks\dirt_path.json
-a7496ef006c387c3d2c06aae198fd9d14a8f76e0 data\steamcraft\loot_tables\blocks\lush_spiderlily_flower.json
 b40e5c25b79ada31e5db78b6629b178a8bc9a6a9 data\steamcraft\loot_tables\blocks\aether_coil_gray.json
-b584f58c8ab55add362fe130ed4350acca66d6bf data\steamcraft\loot_tables\blocks\smoke_block.json
+a7496ef006c387c3d2c06aae198fd9d14a8f76e0 data\steamcraft\loot_tables\blocks\lush_spiderlily_flower.json
+ab3ca5cec49f11dc5110ba5d45aff6d91984e06e data\steamcraft\loot_tables\blocks\smoke_block.json
 b9f594588da5f2dd6a8b4b8e1a759c18387afed7 data\steamcraft\loot_tables\blocks\soul_sand_phantom_quicksand.json
 74b2c3a5a77ed87f318ca11a4b03c23617a5b09d data\steamcraft\loot_tables\blocks\glow_lush_daffodil_flower.json
 11e50dab67298271cffb171d5493ec70c9a17a8a data\steamcraft\loot_tables\blocks\glow_thorned_snow_drop_flower.json

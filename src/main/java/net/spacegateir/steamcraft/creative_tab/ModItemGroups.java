@@ -105,8 +105,6 @@ public class ModItemGroups {
                         entries.add(ModBlocks.SAND_PATH);
                         entries.add(ModBlocks.SNOW_PATH);
 
-                        entries.add(ModBlocks.SMOKE_BLOCK);
-
                         entries.add(ModBlocks.SKELETON_SITTING);
                         entries.add(ModBlocks.SKELETON_LAYING);
                         entries.add(ModBlocks.SKELETON_HEAD);
@@ -184,11 +182,16 @@ public class ModItemGroups {
                         entries.add(ModBlocks.CURSED_TOTEM_BLOCK);
                         entries.add(ModItems.TELEPORT_TRAP_ITEM);
 
+                        entries.add(ModItems.SMOKE_BLOCK_ITEM);
+
+
+
 
 
 
                         //BlockItems
 //                        entries.add(ModItems.TEST_ITEM_BLOCK);
+
 
                         entries.add(ModItems.AGAPANTHUS_FLOWER_ITEM);
 //                        entries.add(ModItems.GLOW_AGAPANTHUS_FLOWER_ITEM);

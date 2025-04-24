@@ -14,10 +14,10 @@ public class SmokeBlockRenderer implements BlockEntityRenderer<SmokeBlockEntity>
     @Override
     public void render(SmokeBlockEntity entity, float tickDelta, MatrixStack matrices,
                        VertexConsumerProvider vertexConsumers, int light, int overlay) {
-        // Example: just show a log message each frame for testing
-        System.out.println("Rendering SmokeBlockEntity at " + entity.getPos());
 
-        // TODO: Add particle effects, custom models, etc.
+        // Example: just show a log message each frame for testing
+//        System.out.println("Rendering SmokeBlockEntity at " + entity.getPos());
+
     }
 
 

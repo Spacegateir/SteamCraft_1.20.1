@@ -107,6 +107,15 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.DIVINITITE_ALLOY_INGOT), conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.TRAP_CONCEALER)));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SMOKE_BLOCK_ITEM, 16)
+                .pattern("222")
+                .pattern("212")
+                .pattern("222")
+                .input('1', ModItems.CORE_OF_CHANGING)
+                .input('2', Items.CAMPFIRE)
+                .criterion(hasItem(ModItems.CORE_OF_CHANGING), conditionsFromItem(ModItems.CORE_OF_CHANGING))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.SMOKE_BLOCK_ITEM)));
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.AETHER_COIL, 8)
                 .pattern("III")
                 .pattern("IOI")

@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "bottom": "steamcraft:block/smoke_block",
+    "side": "steamcraft:block/smoke_block",
+    "front": "steamcraft:block/smoke_block",
+    "top": "steamcraft:block/smoke_block"
+  }
+}

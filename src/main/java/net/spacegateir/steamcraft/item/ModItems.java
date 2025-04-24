@@ -55,17 +55,17 @@ public class ModItems {
             new Item(new FabricItemSettings()));
 
     public static final Item FERRITE_HEARTSTONE = registerItem("ferrite_heartstone",
-            new ToolTipItem(new FabricItemSettings()));
+            new ToolTipItem(ModBlocks.SMOKE_BLOCK, new FabricItemSettings()));
     public static final Item AETHERIUM_PRISM = registerItem("aetherium_prism",
-            new ToolTipItem(new FabricItemSettings()));
+            new ToolTipItem(ModBlocks.SMOKE_BLOCK, new FabricItemSettings()));
     public static final Item AQUARION_SHARD = registerItem("aquarion_shard",
-            new ToolTipItem(new FabricItemSettings()));
+            new ToolTipItem(ModBlocks.SMOKE_BLOCK, new FabricItemSettings()));
     public static final Item PYROCITE_CORE = registerItem("pyrocite_core",
-            new ToolTipItem(new FabricItemSettings()));
+            new ToolTipItem(ModBlocks.SMOKE_BLOCK, new FabricItemSettings()));
     public static final Item LUMINITE_SPARK = registerItem("luminite_spark",
-            new ToolTipItem(new FabricItemSettings()));
+            new ToolTipItem(ModBlocks.SMOKE_BLOCK, new FabricItemSettings()));
     public static final Item OBSCURIUM_CRYSTAL = registerItem("obscurium_crystal",
-            new ToolTipItem(new FabricItemSettings()));
+            new ToolTipItem(ModBlocks.SMOKE_BLOCK, new FabricItemSettings()));
 
     public static final Item FOOLS_GOLD_HELMET_1 = registerItem("fools_gold_helmet_1-4",
             new Item(new FabricItemSettings().rarity(Rarity.EPIC).fireproof()));
@@ -466,9 +466,14 @@ public class ModItems {
 
 
 
+
     public static final Item TELEPORT_TRAP_ITEM = Registry.register(Registries.ITEM,
             new Identifier(Steamcraft.MOD_ID, "teleport_trap_item"),
             new TeleportTrapBlockItem(ModBlocks.TELEPORT_TRAP_BLOCK, new FabricItemSettings()));
+
+    public static final Item SMOKE_BLOCK_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "smoke_block_item"),
+            new SmokeBlockItem(ModBlocks.SMOKE_BLOCK, new FabricItemSettings()));
 
 
 

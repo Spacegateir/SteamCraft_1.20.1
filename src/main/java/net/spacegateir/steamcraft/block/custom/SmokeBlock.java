@@ -11,6 +11,8 @@ import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.world.World;
 
+import java.util.List;
+
 public class SmokeBlock extends BlockWithEntity {
     public SmokeBlock(Settings settings) {
         super(settings);

@@ -166,14 +166,25 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.RED_SAND_QUICKSAND,
                         ModBlocks.GRAVEL_SINKSTONE,
                         ModBlocks.MUD_SINKING_SLUDGE,
-                        ModBlocks.SOUL_SAND_PHANTOM_QUICKSAND
+                        ModBlocks.SOUL_SAND_PHANTOM_QUICKSAND,
+
+                        ModBlocks.SMOKE_BLOCK
 
                 );
 
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
                 .add(
 
-                        ModBlocks.CURSED_POISON_SPORE_TRAP_BLOCK
+                        ModBlocks.CURSED_POISON_SPORE_TRAP_BLOCK,
+
+                        ModBlocks.SMOKE_BLOCK
+
+                );
+
+        getOrCreateTagBuilder(BlockTags.HOE_MINEABLE)
+                .add(
+
+                        ModBlocks.SMOKE_BLOCK
 
                 );
 

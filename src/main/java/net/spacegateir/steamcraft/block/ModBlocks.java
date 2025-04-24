@@ -21,9 +21,9 @@ public class ModBlocks {
     public static final Block TEST_BLOCK = registerBlock("test_block",
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
 
-    public static final Block SMOKE_BLOCK = registerBlock("smoke_block",
-            new SmokeBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque()
-                    .luminance(15).burnable()));
+//    public static final Block SMOKE_BLOCK = registerBlock("smoke_block",
+//            new SmokeBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque()
+//                    .luminance(15).burnable()));
 
     public static final Block AETHER_COIL = registerBlock("aether_coil",
             new AetherBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN)));
@@ -309,6 +309,13 @@ public class ModBlocks {
     public static final Block TELEPORT_TRAP_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "teleport_trap_block"),
             new TeleportTrapBlock(FabricBlockSettings.copyOf(Blocks.NETHERRACK).resistance(50.0F).hardness(50.0F)));
+
+    public static final Block SMOKE_BLOCK = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "smoke_block"),
+            new SmokeBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).strength(2f,-1f).nonOpaque()
+                    .luminance(5).noCollision().burnable()));
+
+
 
 
 

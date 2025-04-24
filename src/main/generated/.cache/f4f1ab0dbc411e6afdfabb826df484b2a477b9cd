@@ -1,9 +1,10 @@
-// 1.20.1	2025-04-23T15:40:23.8208485	Steamcraft/Tags for minecraft:block
+// 1.20.1	2025-04-24T13:05:00.6093018	Steamcraft/Tags for minecraft:block
 04da1cca3280b6d2d3337e2922dcc193a71a85d4 data\minecraft\tags\blocks\mineable\pickaxe.json
 fd98d0a53654e2bbea1803472c30cb88e82e980d data\steamcraft\tags\blocks\traps.json
 aaf8d2c8f3dc852e65eb3363ba5db838c8b874fb data\fabric\tags\blocks\needs_tool_level_4.json
 77061e43a536b846bdd4843abae5938e7696bdf1 data\steamcraft\tags\blocks\arcane_blocks.json
-86bfc3626f4722889806ee1c5f7f2f355b5fe04a data\minecraft\tags\blocks\mineable\axe.json
 2304dfe8398c3687e8f2c0a9e7552db129d71dad data\minecraft\tags\blocks\needs_iron_tool.json
-537f4bede09b630f5d53a140f0d308ff18a61952 data\minecraft\tags\blocks\mineable\shovel.json
+5eabe78f698f7462e5e1226462b8164c4b9c2589 data\minecraft\tags\blocks\mineable\hoe.json
+6396f25858a3395d476285f24f08ae9614a83dca data\minecraft\tags\blocks\mineable\axe.json
+57c68a7e116a752182e65e59ca2aedb2136b9909 data\minecraft\tags\blocks\mineable\shovel.json
 fa19d22072770a74e8be0f17bf08a69d378dddd4 data\steamcraft\tags\blocks\skeleton.json

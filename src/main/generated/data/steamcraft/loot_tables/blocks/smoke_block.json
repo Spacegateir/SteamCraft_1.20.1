@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "steamcraft:smoke_block"
+          "name": "steamcraft:smoke_block_item"
         }
       ],
       "rolls": 1.0

@@ -136,8 +136,6 @@
 
   "block.steamcraft.test_block": "Test Block",
 
-  "block.steamcraft.smoke_block": "Smoke Block",
-
   "block.steamcraft.aether_coil": "Aether Coil",
   "block.steamcraft.aether_coil_white": "Aether Coil White",
   "block.steamcraft.aether_coil_light_gray": "Aether Coil Light Gray",
@@ -182,6 +180,8 @@
 
 
   "block.steamcraft.test_block_item": "Test BlockItem",
+
+  "block.steamcraft.smoke_block": "Smoke Block",
 
   "block.steamcraft.agapanthus_flower": "Agapanthus Flower",
   "block.steamcraft.glow_agapanthus_flower": "Agapanthus Flower",
@@ -457,6 +457,9 @@
 
   "tooltip.steamcraft.obscurium_crystal.tooltip.shift": "Right Click on §8Aether Coil Black§r to Open a Portal!",
   "tooltip.steamcraft.obscurium_crystal.tooltip": "Press §eSHIFT§r for more Information",
+
+  "tooltip.steamcraft.smoke_block.tooltip.shift_1": "§eSmoke Block§r may be invisible but to generate smoke its pretty cool!",
+  "tooltip.steamcraft.smoke_block.tooltip": "Press §eSHIFT§r for more Information",
 
   "tooltip.steamcraft.trap_concealer.tooltip.shift_1": "§eShift Right§r or §eRight Click§r to Cycle Different States",
   "tooltip.steamcraft.trap_concealer.tooltip.shift_2": "§eRight Click§r on Arcane Blocks to Change their BlockState!",

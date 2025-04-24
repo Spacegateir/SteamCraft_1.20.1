@@ -1,5 +1,6 @@
 package net.spacegateir.steamcraft.item.custom;
 
+import net.minecraft.block.Block;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.Item;
@@ -12,7 +13,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class ToolTipItem extends Item {
-    public ToolTipItem(Settings settings) {
+    public ToolTipItem(Block smokeBlock, Settings settings) {
         super(settings);
     }
     @Override

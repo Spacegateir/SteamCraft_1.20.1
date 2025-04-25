@@ -93,6 +93,63 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.SNOW_PATH,
                 dropsWithSilkTouch(ModBlocks.SNOW_PATH, ItemEntry.builder(Blocks.SNOW_BLOCK))
         );
+        addDrop(ModBlocks.ANDESITE_PATH,
+                dropsWithSilkTouch(ModBlocks.ANDESITE_PATH, ItemEntry.builder(Blocks.ANDESITE))
+        );
+        addDrop(ModBlocks.ANDESITE_MOSSY_PATH,
+                dropsWithSilkTouch(ModBlocks.ANDESITE_MOSSY_PATH, ItemEntry.builder(Blocks.ANDESITE))
+        );
+        addDrop(ModBlocks.ANDESITE_DIRTY_PATH,
+                dropsWithSilkTouch(ModBlocks.ANDESITE_DIRTY_PATH, ItemEntry.builder(Blocks.ANDESITE))
+        );
+        addDrop(ModBlocks.COBBLESTONE_PATH,
+                dropsWithSilkTouch(ModBlocks.COBBLESTONE_PATH, ItemEntry.builder(Blocks.COBBLESTONE))
+        );
+        addDrop(ModBlocks.MOSSY_COBBLESTONE_PATH,
+                dropsWithSilkTouch(ModBlocks.MOSSY_COBBLESTONE_PATH, ItemEntry.builder(Blocks.MOSSY_COBBLESTONE))
+        );
+        addDrop(ModBlocks.COBBLED_DIRTY_PATH,
+                dropsWithSilkTouch(ModBlocks.COBBLED_DIRTY_PATH, ItemEntry.builder(Blocks.COBBLESTONE))
+        );
+        addDrop(ModBlocks.COBBLED_DEEPSLATE_PATH,
+                dropsWithSilkTouch(ModBlocks.COBBLED_DEEPSLATE_PATH, ItemEntry.builder(Blocks.COBBLED_DEEPSLATE))
+        );
+        addDrop(ModBlocks.COBBLED_DEEPSLATE_MOSSY_PATH,
+                dropsWithSilkTouch(ModBlocks.COBBLED_DEEPSLATE_MOSSY_PATH, ItemEntry.builder(Blocks.COBBLED_DEEPSLATE))
+        );
+        addDrop(ModBlocks.COBBLED_DEEPSLATE_DIRTY_PATH,
+                dropsWithSilkTouch(ModBlocks.COBBLED_DEEPSLATE_DIRTY_PATH, ItemEntry.builder(Blocks.COBBLED_DEEPSLATE))
+        );
+        addDrop(ModBlocks.DIORITE_PATH,
+                dropsWithSilkTouch(ModBlocks.DIORITE_PATH, ItemEntry.builder(Blocks.DIORITE))
+        );
+        addDrop(ModBlocks.DIORITE_MOSSY_PATH,
+                dropsWithSilkTouch(ModBlocks.DIORITE_MOSSY_PATH, ItemEntry.builder(Blocks.DIORITE))
+        );
+        addDrop(ModBlocks.DIORITE_DIRTY_PATH,
+                dropsWithSilkTouch(ModBlocks.DIORITE_DIRTY_PATH, ItemEntry.builder(Blocks.DIORITE))
+        );
+        addDrop(ModBlocks.GRANITE_PATH,
+                dropsWithSilkTouch(ModBlocks.GRANITE_PATH, ItemEntry.builder(Blocks.GRANITE))
+        );
+        addDrop(ModBlocks.GRANITE_MOSSY_PATH,
+                dropsWithSilkTouch(ModBlocks.GRANITE_MOSSY_PATH, ItemEntry.builder(Blocks.GRANITE))
+        );
+        addDrop(ModBlocks.GRANITE_DIRTY_PATH,
+                dropsWithSilkTouch(ModBlocks.GRANITE_DIRTY_PATH, ItemEntry.builder(Blocks.GRANITE))
+        );
+        addDrop(ModBlocks.STONE_PATH,
+                dropsWithSilkTouch(ModBlocks.STONE_PATH, ItemEntry.builder(Blocks.STONE))
+        );
+        addDrop(ModBlocks.STONE_MOSSY_PATH,
+                dropsWithSilkTouch(ModBlocks.STONE_MOSSY_PATH, ItemEntry.builder(Blocks.STONE))
+        );
+        addDrop(ModBlocks.STONE_DIRTY_PATH,
+                dropsWithSilkTouch(ModBlocks.STONE_DIRTY_PATH, ItemEntry.builder(Blocks.STONE))
+        );
+        addDrop(ModBlocks.END_STONE_PATH,
+                dropsWithSilkTouch(ModBlocks.END_STONE_PATH, ItemEntry.builder(Blocks.END_STONE))
+        );
 
         addDrop(ModBlocks.SKELETON_ARM);
         addDrop(ModBlocks.SKELETON_CHEST);

@@ -1,0 +1,33 @@
+{
+  "replace": false,
+  "values": [
+    "steamcraft:andesite_path",
+    "steamcraft:andesite_mossy_path",
+    "steamcraft:andesite_dirty_path",
+    "steamcraft:cobblestone_path",
+    "steamcraft:mossy_cobblestone_path",
+    "steamcraft:cobbled_dirty_path",
+    "steamcraft:cobbled_deepslate_path",
+    "steamcraft:cobbled_deepslate_mossy_path",
+    "steamcraft:cobbled_deepslate_dirty_path",
+    "steamcraft:diorite_path",
+    "steamcraft:diorite_mossy_path",
+    "steamcraft:diorite_dirty_path",
+    "steamcraft:granite_path",
+    "steamcraft:granite_mossy_path",
+    "steamcraft:granite_dirty_path",
+    "steamcraft:stone_path",
+    "steamcraft:stone_mossy_path",
+    "steamcraft:stone_dirty_path",
+    "steamcraft:end_stone_path",
+    "steamcraft:clay_path",
+    "steamcraft:coarse_dirt_path",
+    "steamcraft:dirt_path",
+    "steamcraft:gravel_path",
+    "steamcraft:mud_path",
+    "steamcraft:red_sand_path",
+    "steamcraft:rooted_dirt_path",
+    "steamcraft:sand_path",
+    "steamcraft:snow_path"
+  ]
+}

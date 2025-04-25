@@ -105,6 +105,25 @@ public class ModItemGroups {
                         entries.add(ModBlocks.ROOTED_DIRT_PATH);
                         entries.add(ModBlocks.SAND_PATH);
                         entries.add(ModBlocks.SNOW_PATH);
+                        entries.add(ModBlocks.ANDESITE_PATH);
+                        entries.add(ModBlocks.ANDESITE_DIRTY_PATH);
+                        entries.add(ModBlocks.ANDESITE_MOSSY_PATH);
+                        entries.add(ModBlocks.COBBLESTONE_PATH);
+                        entries.add(ModBlocks.COBBLED_DIRTY_PATH);
+                        entries.add(ModBlocks.MOSSY_COBBLESTONE_PATH);
+                        entries.add(ModBlocks.COBBLED_DEEPSLATE_PATH);
+                        entries.add(ModBlocks.COBBLED_DEEPSLATE_DIRTY_PATH);
+                        entries.add(ModBlocks.COBBLED_DEEPSLATE_MOSSY_PATH);
+                        entries.add(ModBlocks.DIORITE_PATH);
+                        entries.add(ModBlocks.DIORITE_DIRTY_PATH);
+                        entries.add(ModBlocks.DIORITE_MOSSY_PATH);
+                        entries.add(ModBlocks.GRANITE_PATH);
+                        entries.add(ModBlocks.GRANITE_DIRTY_PATH);
+                        entries.add(ModBlocks.GRANITE_MOSSY_PATH);
+                        entries.add(ModBlocks.STONE_PATH);
+                        entries.add(ModBlocks.STONE_DIRTY_PATH);
+                        entries.add(ModBlocks.STONE_MOSSY_PATH);
+                        entries.add(ModBlocks.END_STONE_PATH);
 
                         entries.add(ModBlocks.SKELETON_SITTING);
                         entries.add(ModBlocks.SKELETON_LAYING);

@@ -36,6 +36,14 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                     RegistryKeys.BLOCK,
                     new Identifier("steamcraft", "building_blocks")
             );
+            public static final TagKey<Block> STONE_PATH_BLOCKS = TagKey.of(
+                    RegistryKeys.BLOCK,
+                    new Identifier("steamcraft", "path_blocks")
+            );
+            public static final TagKey<Block> SOIL_PATH_BLOCKS = TagKey.of(
+                    RegistryKeys.BLOCK,
+                    new Identifier("steamcraft", "path_blocks")
+            );
         }
     }
 
@@ -158,11 +166,50 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.COBBLED_PINK_CONCRETE_POWDER
                         );
 
+        getOrCreateTagBuilder(ModTags.Blocks.STONE_PATH_BLOCKS)
+                .add(
+
+                        ModBlocks.ANDESITE_PATH,
+                        ModBlocks.ANDESITE_MOSSY_PATH,
+                        ModBlocks.ANDESITE_DIRTY_PATH,
+                        ModBlocks.COBBLESTONE_PATH,
+                        ModBlocks.MOSSY_COBBLESTONE_PATH,
+                        ModBlocks.COBBLED_DIRTY_PATH,
+                        ModBlocks.COBBLED_DEEPSLATE_PATH,
+                        ModBlocks.COBBLED_DEEPSLATE_MOSSY_PATH,
+                        ModBlocks.COBBLED_DEEPSLATE_DIRTY_PATH,
+                        ModBlocks.DIORITE_PATH,
+                        ModBlocks.DIORITE_MOSSY_PATH,
+                        ModBlocks.DIORITE_DIRTY_PATH,
+                        ModBlocks.GRANITE_PATH,
+                        ModBlocks.GRANITE_MOSSY_PATH,
+                        ModBlocks.GRANITE_DIRTY_PATH,
+                        ModBlocks.STONE_PATH,
+                        ModBlocks.STONE_MOSSY_PATH,
+                        ModBlocks.STONE_DIRTY_PATH,
+                        ModBlocks.END_STONE_PATH
+                        );
+
+        getOrCreateTagBuilder(ModTags.Blocks.SOIL_PATH_BLOCKS)
+                .add(
+
+                        ModBlocks.CLAY_PATH,
+                        ModBlocks.COARSE_DIRT_PATH,
+                        ModBlocks.DIRT_PATH,
+                        ModBlocks.GRAVEL_PATH,
+                        ModBlocks.MUD_PATH,
+                        ModBlocks.RED_SAND_PATH,
+                        ModBlocks.ROOTED_DIRT_PATH,
+                        ModBlocks.SAND_PATH,
+                        ModBlocks.SNOW_PATH
+                        );
+
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .addTag(ModTags.Blocks.SKELETON)
                 .addTag(ModTags.Blocks.ARCANE_BLOCKS)
                 .addTag(ModTags.Blocks.TRAPS)
                 .addTag(ModTags.Blocks.BUILDING_BLOCKS)
+                .addTag(ModTags.Blocks.STONE_PATH_BLOCKS)
 
                 .add(
                         ModBlocks.AETHER_COIL,
@@ -198,17 +245,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 );
 
         getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE)
-                .add(
+                .addTag(ModTags.Blocks.SOIL_PATH_BLOCKS)
 
-                        ModBlocks.CLAY_PATH,
-                        ModBlocks.COARSE_DIRT_PATH,
-                        ModBlocks.DIRT_PATH,
-                        ModBlocks.GRAVEL_PATH,
-                        ModBlocks.MUD_PATH,
-                        ModBlocks.RED_SAND_PATH,
-                        ModBlocks.ROOTED_DIRT_PATH,
-                        ModBlocks.SAND_PATH,
-                        ModBlocks.SNOW_PATH,
+                .add(
 
                         ModBlocks.SAND_QUICKSAND,
                         ModBlocks.RED_SAND_QUICKSAND,

@@ -37,6 +37,27 @@ public class TrowelItem extends Item {
                     .put(Blocks.ROOTED_DIRT, ModBlocks.ROOTED_DIRT_PATH.getDefaultState())
                     .put(Blocks.SAND, ModBlocks.SAND_PATH.getDefaultState())
                     .put(Blocks.SNOW_BLOCK, ModBlocks.SNOW_PATH.getDefaultState())
+                    .put(Blocks.ANDESITE, ModBlocks.ANDESITE_PATH.getDefaultState())
+                    .put(ModBlocks.ANDESITE_PATH, ModBlocks.ANDESITE_MOSSY_PATH.getDefaultState())
+                    .put(ModBlocks.ANDESITE_MOSSY_PATH, ModBlocks.ANDESITE_DIRTY_PATH.getDefaultState())
+                    .put(Blocks.COBBLESTONE, ModBlocks.COBBLESTONE_PATH.getDefaultState())
+                    .put(Blocks.MOSSY_COBBLESTONE, ModBlocks.MOSSY_COBBLESTONE_PATH.getDefaultState())
+                    .put(ModBlocks.COBBLESTONE_PATH, ModBlocks.COBBLED_DIRTY_PATH.getDefaultState())
+                    .put(Blocks.COBBLED_DEEPSLATE, ModBlocks.COBBLED_DEEPSLATE_PATH.getDefaultState())
+                    .put(ModBlocks.COBBLED_DEEPSLATE_PATH, ModBlocks.COBBLED_DEEPSLATE_MOSSY_PATH.getDefaultState())
+                    .put(ModBlocks.COBBLED_DEEPSLATE_MOSSY_PATH, ModBlocks.COBBLED_DEEPSLATE_DIRTY_PATH.getDefaultState())
+                    .put(Blocks.DIORITE, ModBlocks.DIORITE_PATH.getDefaultState())
+                    .put(ModBlocks.DIORITE_PATH, ModBlocks.DIORITE_MOSSY_PATH.getDefaultState())
+                    .put(ModBlocks.DIORITE_MOSSY_PATH, ModBlocks.DIORITE_DIRTY_PATH.getDefaultState())
+                    .put(Blocks.GRANITE, ModBlocks.GRANITE_PATH.getDefaultState())
+                    .put(ModBlocks.GRANITE_PATH, ModBlocks.GRANITE_MOSSY_PATH.getDefaultState())
+                    .put(ModBlocks.GRANITE_MOSSY_PATH, ModBlocks.GRANITE_DIRTY_PATH.getDefaultState())
+                    .put(Blocks.STONE, ModBlocks.STONE_PATH.getDefaultState())
+                    .put(ModBlocks.STONE_PATH, ModBlocks.STONE_MOSSY_PATH.getDefaultState())
+                    .put(ModBlocks.STONE_MOSSY_PATH, ModBlocks.STONE_DIRTY_PATH.getDefaultState())
+
+                    .put(Blocks.END_STONE, ModBlocks.END_STONE_PATH.getDefaultState())
+
                     .build()
     );
 

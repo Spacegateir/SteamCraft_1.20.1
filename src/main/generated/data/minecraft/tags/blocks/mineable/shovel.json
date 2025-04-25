@@ -1,15 +1,7 @@
 {
   "replace": false,
   "values": [
-    "steamcraft:clay_path",
-    "steamcraft:coarse_dirt_path",
-    "steamcraft:dirt_path",
-    "steamcraft:gravel_path",
-    "steamcraft:mud_path",
-    "steamcraft:red_sand_path",
-    "steamcraft:rooted_dirt_path",
-    "steamcraft:sand_path",
-    "steamcraft:snow_path",
+    "#steamcraft:path_blocks",
     "steamcraft:sand_quicksand",
     "steamcraft:red_sand_quicksand",
     "steamcraft:gravel_sinkstone",

@@ -14,6 +14,7 @@ import net.spacegateir.steamcraft.Steamcraft;
 import net.spacegateir.steamcraft.block.arcane.*;
 import net.spacegateir.steamcraft.block.arcane_specal.*;
 import net.spacegateir.steamcraft.block.custom.*;
+import net.spacegateir.steamcraft.block.path_blocks.*;
 import net.spacegateir.steamcraft.block.traps.*;
 import net.spacegateir.steamcraft.effect.ModEffects;
 
@@ -98,6 +99,46 @@ public class ModBlocks {
             new SandPathBlock(FabricBlockSettings.copyOf(Blocks.SAND).velocityMultiplier(1.25F)));
     public static final Block SNOW_PATH = registerBlock("snow_path",
             new SnowPathBlock(FabricBlockSettings.copyOf(Blocks.SNOW_BLOCK).velocityMultiplier(1.25F)));
+
+    public static final Block ANDESITE_PATH = registerBlock("andesite_path",
+            new AndesitePathBlock(FabricBlockSettings.copyOf(Blocks.ANDESITE).velocityMultiplier(1.25F)));
+    public static final Block ANDESITE_DIRTY_PATH = registerBlock("andesite_dirty_path",
+            new AndesitePathBlock(FabricBlockSettings.copyOf(Blocks.ANDESITE).velocityMultiplier(1.25F)));
+    public static final Block ANDESITE_MOSSY_PATH = registerBlock("andesite_mossy_path",
+            new AndesitePathBlock(FabricBlockSettings.copyOf(Blocks.ANDESITE).velocityMultiplier(1.25F)));
+    public static final Block COBBLESTONE_PATH = registerBlock("cobblestone_path",
+            new CobbledPathBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE).velocityMultiplier(1.25F)));
+    public static final Block COBBLED_DIRTY_PATH = registerBlock("cobbled_dirty_path",
+            new CobbledPathBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE).velocityMultiplier(1.25F)));
+    public static final Block MOSSY_COBBLESTONE_PATH = registerBlock("mossy_cobblestone_path",
+            new CobbledMossyPathBlock(FabricBlockSettings.copyOf(Blocks.MOSSY_COBBLESTONE).velocityMultiplier(1.25F)));
+    public static final Block COBBLED_DEEPSLATE_PATH = registerBlock("cobbled_deepslate_path",
+            new DeepslatePathBlock(FabricBlockSettings.copyOf(Blocks.COBBLED_DEEPSLATE).velocityMultiplier(1.25F)));
+    public static final Block COBBLED_DEEPSLATE_DIRTY_PATH = registerBlock("cobbled_deepslate_dirty_path",
+            new DeepslatePathBlock(FabricBlockSettings.copyOf(Blocks.COBBLED_DEEPSLATE).velocityMultiplier(1.25F)));
+    public static final Block COBBLED_DEEPSLATE_MOSSY_PATH = registerBlock("cobbled_deepslate_mossy_path",
+            new DeepslatePathBlock(FabricBlockSettings.copyOf(Blocks.COBBLED_DEEPSLATE).velocityMultiplier(1.25F)));
+    public static final Block END_STONE_PATH = registerBlock("end_stone_path",
+            new EndStonePathBlock(FabricBlockSettings.copyOf(Blocks.END_STONE).velocityMultiplier(1.25F)));
+    public static final Block DIORITE_PATH = registerBlock("diorite_path",
+            new DioritePathBlock(FabricBlockSettings.copyOf(Blocks.DIORITE).velocityMultiplier(1.25F)));
+    public static final Block DIORITE_DIRTY_PATH = registerBlock("diorite_dirty_path",
+            new DioritePathBlock(FabricBlockSettings.copyOf(Blocks.DIORITE).velocityMultiplier(1.25F)));
+    public static final Block DIORITE_MOSSY_PATH = registerBlock("diorite_mossy_path",
+            new DioritePathBlock(FabricBlockSettings.copyOf(Blocks.DIORITE).velocityMultiplier(1.25F)));
+    public static final Block GRANITE_PATH = registerBlock("granite_path",
+            new GranitePathBlock(FabricBlockSettings.copyOf(Blocks.GRANITE).velocityMultiplier(1.25F)));
+    public static final Block GRANITE_DIRTY_PATH = registerBlock("granite_dirty_path",
+            new GranitePathBlock(FabricBlockSettings.copyOf(Blocks.GRANITE).velocityMultiplier(1.25F)));
+    public static final Block GRANITE_MOSSY_PATH = registerBlock("granite_mossy_path",
+            new GranitePathBlock(FabricBlockSettings.copyOf(Blocks.GRANITE).velocityMultiplier(1.25F)));
+    public static final Block STONE_PATH = registerBlock("stone_path",
+            new StonePathBlock(FabricBlockSettings.copyOf(Blocks.STONE).velocityMultiplier(1.25F)));
+    public static final Block STONE_DIRTY_PATH = registerBlock("stone_dirty_path",
+            new StonePathBlock(FabricBlockSettings.copyOf(Blocks.STONE).velocityMultiplier(1.25F)));
+    public static final Block STONE_MOSSY_PATH = registerBlock("stone_mossy_path",
+            new StonePathBlock(FabricBlockSettings.copyOf(Blocks.STONE).velocityMultiplier(1.25F)));
+
 
     //Mob Parts Blocks
 

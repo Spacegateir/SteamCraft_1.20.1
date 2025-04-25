@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "minecraft:stick"
+    },
+    "2": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "  1",
+    " 1 ",
+    "2  "
+  ],
+  "result": {
+    "item": "steamcraft:trowel"
+  },
+  "show_notification": true
+}

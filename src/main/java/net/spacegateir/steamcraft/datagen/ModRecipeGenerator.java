@@ -110,6 +110,15 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(hasItem(Items.NETHERITE_INGOT), conditionsFromItem(Items.NETHERITE_INGOT))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.PATTERN_RECOMPILER)));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TROWEL)
+                .pattern("  1")
+                .pattern(" 1 ")
+                .pattern("2  ")
+                .input('1', Items.STICK)
+                .input('2', Items.IRON_INGOT)
+                .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.TROWEL)));
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TRAP_CONCEALER)
                 .pattern(" N ")
                 .pattern("N1N")

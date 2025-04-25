@@ -347,6 +347,7 @@ public class ModLootTableModifiers {
                 .conditionally(RandomChanceLootCondition.builder(0.2f)) // Drops 20% of the time
                 .with(ItemEntry.builder(ModItems.BLANK_MOULD))
                 .with(ItemEntry.builder(ModItems.CORE_OF_CHANGING))
+                .with(ItemEntry.builder(ModItems.TROWEL))
                 .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 3.0f)).build());
 
 

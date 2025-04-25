@@ -536,6 +536,9 @@
   "tooltip.steamcraft.teleport_trap.tooltip.shift_4": "§eTeleporter§r will §eRandomize§r Destinations",
   "tooltip.steamcraft.teleport_trap.tooltip": "Press §eSHIFT§r for more Information",
 
+  "tooltip.steamcraft.trowel.tooltip.shift_1": "§eRight Click§r on some block will make some Fancy Pathways",
+  "tooltip.steamcraft.trowel.tooltip": "Press §eSHIFT§r for more Information",
+
 
   "block.customportalapi.customportalblock": "SteamCraft Dimensions"
 

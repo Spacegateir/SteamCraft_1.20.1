@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "minecraft:snow_block"
+    },
+    "2": {
+      "item": "minecraft:stone_bricks"
+    }
+  },
+  "pattern": [
+    "111",
+    "121",
+    "111"
+  ],
+  "result": {
+    "count": 8,
+    "item": "steamcraft:snow_bricks"
+  },
+  "show_notification": true
+}

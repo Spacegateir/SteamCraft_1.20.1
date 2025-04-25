@@ -25,6 +25,10 @@
     "steamcraft:fools_gold_block",
     "steamcraft:fools_gold_raw_block",
     "steamcraft:power_precision_block_0",
-    "steamcraft:smoke_block"
+    "steamcraft:smoke_block",
+    "steamcraft:packed_ice_bricks",
+    "steamcraft:packed_ice_bricks_cracked",
+    "steamcraft:packed_ice_tiles",
+    "steamcraft:packed_ice_tiles_cracked"
   ]
 }

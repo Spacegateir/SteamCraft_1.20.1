@@ -302,6 +302,15 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.COBBLED_PINK_CONCRETE);
         addDrop(ModBlocks.COBBLED_PINK_CONCRETE_POWDER);
 
+        addDrop(ModBlocks.PACKED_ICE_BRICKS);
+        addDrop(ModBlocks.PACKED_ICE_BRICKS_CRACKED);
+        addDrop(ModBlocks.PACKED_ICE_TILES);
+        addDrop(ModBlocks.PACKED_ICE_TILES_CRACKED);
+        addDrop(ModBlocks.SNOW_BRICKS);
+        addDrop(ModBlocks.SNOW_BRICKS_CRACKED);
+        addDrop(ModBlocks.SNOW_TILES);
+        addDrop(ModBlocks.SNOW_TILES_CRACKED);
+
 
 
 

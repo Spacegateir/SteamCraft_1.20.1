@@ -15,6 +15,10 @@
     "steamcraft:gravel_sinkstone",
     "steamcraft:mud_sinking_sludge",
     "steamcraft:soul_sand_phantom_quicksand",
-    "steamcraft:smoke_block"
+    "steamcraft:smoke_block",
+    "steamcraft:snow_bricks",
+    "steamcraft:snow_bricks_cracked",
+    "steamcraft:snow_tiles",
+    "steamcraft:snow_tiles_cracked"
   ]
 }

@@ -182,11 +182,17 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.AETHER_COIL_PURPLE,
                         ModBlocks.AETHER_COIL_MAGENTA,
                         ModBlocks.AETHER_COIL_PINK,
+
                         ModBlocks.FOOLS_GOLD_BLOCK,
                         ModBlocks.FOOLS_GOLD_RAW_BLOCK,
 
                         ModBlocks.POWER_PRECISION_BLOCK,
-                        ModBlocks.SMOKE_BLOCK
+                        ModBlocks.SMOKE_BLOCK,
+
+                        ModBlocks.PACKED_ICE_BRICKS,
+                        ModBlocks.PACKED_ICE_BRICKS_CRACKED,
+                        ModBlocks.PACKED_ICE_TILES,
+                        ModBlocks.PACKED_ICE_TILES_CRACKED
 
 
                 );
@@ -210,7 +216,12 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.MUD_SINKING_SLUDGE,
                         ModBlocks.SOUL_SAND_PHANTOM_QUICKSAND,
 
-                        ModBlocks.SMOKE_BLOCK
+                        ModBlocks.SMOKE_BLOCK,
+
+                        ModBlocks.SNOW_BRICKS,
+                        ModBlocks.SNOW_BRICKS_CRACKED,
+                        ModBlocks.SNOW_TILES,
+                        ModBlocks.SNOW_TILES_CRACKED
 
                 );
 

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "cookingtime": 50,
+  "experience": 0.1,
+  "group": "snow_bricks",
+  "ingredient": {
+    "item": "steamcraft:snow_bricks"
+  },
+  "result": "steamcraft:snow_bricks_cracked"
+}

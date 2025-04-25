@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "minecraft:packed_ice"
+    },
+    "2": {
+      "item": "minecraft:bricks"
+    }
+  },
+  "pattern": [
+    "111",
+    "121",
+    "111"
+  ],
+  "result": {
+    "count": 8,
+    "item": "steamcraft:packed_ice_tiles"
+  },
+  "show_notification": true
+}

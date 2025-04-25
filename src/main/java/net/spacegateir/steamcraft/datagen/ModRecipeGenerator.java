@@ -61,6 +61,24 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         offerBlasting(exporter, List.of(ModItems.FOOLS_GOLD_RAW), RecipeCategory.MISC, ModItems.FOOLS_GOLD_INGOT,
                 1.00f, 100, "fools_gold");
 
+        offerSmelting(exporter, List.of(ModBlocks.PACKED_ICE_BRICKS), RecipeCategory.MISC, ModBlocks.PACKED_ICE_BRICKS_CRACKED,
+                0.10f, 50, "packed_ice_bricks");
+        offerBlasting(exporter, List.of(ModBlocks.PACKED_ICE_BRICKS), RecipeCategory.MISC, ModBlocks.PACKED_ICE_BRICKS_CRACKED,
+                0.10f, 50, "packed_ice_bricks");
+        offerSmelting(exporter, List.of(ModBlocks.PACKED_ICE_TILES), RecipeCategory.MISC, ModBlocks.PACKED_ICE_TILES_CRACKED,
+                0.10f, 50, "packed_ice_tiles");
+        offerBlasting(exporter, List.of(ModBlocks.PACKED_ICE_TILES), RecipeCategory.MISC, ModBlocks.PACKED_ICE_TILES_CRACKED,
+                0.10f, 50, "packed_ice_tiles");
+
+        offerSmelting(exporter, List.of(ModBlocks.SNOW_BRICKS), RecipeCategory.MISC, ModBlocks.SNOW_BRICKS_CRACKED,
+                0.10f, 50, "snow_bricks");
+        offerBlasting(exporter, List.of(ModBlocks.SNOW_BRICKS), RecipeCategory.MISC, ModBlocks.SNOW_BRICKS_CRACKED,
+                0.10f, 50, "snow_bricks");
+        offerSmelting(exporter, List.of(ModBlocks.SNOW_TILES), RecipeCategory.MISC, ModBlocks.SNOW_TILES_CRACKED,
+                0.10f, 50, "snow_tiles");
+        offerBlasting(exporter, List.of(ModBlocks.SNOW_TILES), RecipeCategory.MISC, ModBlocks.SNOW_TILES_CRACKED,
+                0.10f, 50, "snow_tiles");
+
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SILVER_COIN, 1)
                 .input(ModItems.COPPER_COIN, 9)
                 .criterion("has_copper_coin", conditionsFromItem(ModItems.COPPER_COIN))
@@ -1538,6 +1556,43 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('2', Blocks.COBBLESTONE)
                 .criterion("has_pink_concrete_powder", conditionsFromItem(Blocks.PINK_CONCRETE_POWDER))
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.COBBLED_PINK_CONCRETE_POWDER)));
+
+// Ice and Snow
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.PACKED_ICE_BRICKS, 8)
+                .pattern("111")
+                .pattern("121")
+                .pattern("111")
+                .input('1', Blocks.PACKED_ICE)
+                .input('2', Blocks.STONE_BRICKS)
+                .criterion("has_packed_ice", conditionsFromItem(Blocks.PACKED_ICE))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.PACKED_ICE_BRICKS)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.PACKED_ICE_TILES, 8)
+                .pattern("111")
+                .pattern("121")
+                .pattern("111")
+                .input('1', Blocks.PACKED_ICE)
+                .input('2', Blocks.BRICKS)
+                .criterion("has_packed_ice", conditionsFromItem(Blocks.PACKED_ICE))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.PACKED_ICE_TILES)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.SNOW_BRICKS, 8)
+                .pattern("111")
+                .pattern("121")
+                .pattern("111")
+                .input('1', Blocks.SNOW_BLOCK)
+                .input('2', Blocks.STONE_BRICKS)
+                .criterion("has_snow_block", conditionsFromItem(Blocks.SNOW_BLOCK))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.SNOW_BRICKS)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.SNOW_TILES, 8)
+                .pattern("111")
+                .pattern("121")
+                .pattern("111")
+                .input('1', Blocks.SNOW_BLOCK)
+                .input('2', Blocks.BRICKS)
+                .criterion("has_snow_block", conditionsFromItem(Blocks.SNOW_BLOCK))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.SNOW_TILES)));
 
 
 

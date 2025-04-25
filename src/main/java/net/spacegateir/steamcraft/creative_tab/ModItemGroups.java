@@ -217,6 +217,16 @@ public class ModItemGroups {
                         entries.add(ModBlocks.COBBLED_PINK_CONCRETE);
                         entries.add(ModBlocks.COBBLED_PINK_CONCRETE_POWDER);
 
+                        entries.add(ModBlocks.PACKED_ICE_BRICKS);
+                        entries.add(ModBlocks.PACKED_ICE_BRICKS_CRACKED);
+                        entries.add(ModBlocks.PACKED_ICE_TILES);
+                        entries.add(ModBlocks.PACKED_ICE_TILES_CRACKED);
+
+                        entries.add(ModBlocks.SNOW_BRICKS);
+                        entries.add(ModBlocks.SNOW_BRICKS_CRACKED);
+                        entries.add(ModBlocks.SNOW_TILES);
+                        entries.add(ModBlocks.SNOW_TILES_CRACKED);
+
 
 
 

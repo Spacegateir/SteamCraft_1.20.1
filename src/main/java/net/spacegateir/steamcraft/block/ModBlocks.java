@@ -8,6 +8,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.spacegateir.steamcraft.Steamcraft;
 import net.spacegateir.steamcraft.block.arcane.*;
@@ -398,6 +399,32 @@ public class ModBlocks {
             new Block(FabricBlockSettings.copyOf(Blocks.PINK_CONCRETE)));
     public static final Block COBBLED_PINK_CONCRETE_POWDER = registerBlock("cobbled_pink_concrete_powder",
             new ConcretePowderBlock(COBBLED_PINK_CONCRETE, FabricBlockSettings.copyOf(Blocks.PINK_CONCRETE_POWDER)));
+
+// Snow and Ice Blocks
+
+    public static final Block PACKED_ICE_BRICKS = registerBlock("packed_ice_bricks",
+            new Block(FabricBlockSettings.copyOf(Blocks.PACKED_ICE).slipperiness(0.98F).strength(0.5F).sounds(BlockSoundGroup.GLASS)));
+
+    public static final Block PACKED_ICE_BRICKS_CRACKED = registerBlock("packed_ice_bricks_cracked",
+            new Block(FabricBlockSettings.copyOf(Blocks.PACKED_ICE).slipperiness(0.98F).strength(0.5F).sounds(BlockSoundGroup.GLASS)));
+
+    public static final Block PACKED_ICE_TILES = registerBlock("packed_ice_tiles",
+            new Block(FabricBlockSettings.copyOf(Blocks.PACKED_ICE).slipperiness(0.98F).strength(0.5F).sounds(BlockSoundGroup.GLASS)));
+
+    public static final Block PACKED_ICE_TILES_CRACKED = registerBlock("packed_ice_tiles_cracked",
+            new Block(FabricBlockSettings.copyOf(Blocks.PACKED_ICE).slipperiness(0.98F).strength(0.5F).sounds(BlockSoundGroup.GLASS)));
+
+    public static final Block SNOW_BRICKS = registerBlock("snow_bricks",
+            new Block(FabricBlockSettings.copyOf(Blocks.SNOW_BLOCK).strength(0.2F)));
+
+    public static final Block SNOW_BRICKS_CRACKED = registerBlock("snow_bricks_cracked",
+            new Block(FabricBlockSettings.copyOf(Blocks.SNOW_BLOCK).strength(0.2F)));
+
+    public static final Block SNOW_TILES = registerBlock("snow_tiles",
+            new Block(FabricBlockSettings.copyOf(Blocks.SNOW_BLOCK).strength(0.2F)));
+
+    public static final Block SNOW_TILES_CRACKED = registerBlock("snow_tiles_cracked",
+            new Block(FabricBlockSettings.copyOf(Blocks.SNOW_BLOCK).strength(0.2F)));
 
 
 

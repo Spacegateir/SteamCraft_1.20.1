@@ -54,6 +54,16 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_PINK_CONCRETE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_PINK_CONCRETE_POWDER);
 
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PACKED_ICE_BRICKS);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PACKED_ICE_BRICKS_CRACKED);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PACKED_ICE_TILES);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PACKED_ICE_TILES_CRACKED);
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SNOW_BRICKS);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SNOW_BRICKS_CRACKED);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SNOW_TILES);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SNOW_TILES_CRACKED);
+
         // Normal Flowers
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.AGAPANTHUS_FLOWER_BLOCK, ModBlocks.POTTED_AGAPANTHUS_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_AGAPANTHUS_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_AGAPANTHUS_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);

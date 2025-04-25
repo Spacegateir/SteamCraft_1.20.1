@@ -398,6 +398,17 @@
   "block.steamcraft.cobbled_pink_concrete": "Cobbled Pink Concrete",
   "block.steamcraft.cobbled_pink_concrete_powder": "Cobbled Pink Concrete Powder",
 
+  "block.steamcraft.packed_ice_bricks": "Packed Ice Bricks",
+  "block.steamcraft.packed_ice_bricks_cracked": "Cracked Packed Ice Bricks",
+  "block.steamcraft.packed_ice_tiles": "Packed Ice Tiles",
+  "block.steamcraft.packed_ice_tiles_cracked": "Cracked Packed Ice Tiles",
+
+  "block.steamcraft.snow_bricks": "Snow Bricks",
+  "block.steamcraft.snow_bricks_cracked": "Cracked Snow Bricks",
+  "block.steamcraft.snow_tiles": "Snow Tiles",
+  "block.steamcraft.snow_tiles_cracked": "Cracked Snow Tiles",
+
+
 
 
 

@@ -39,6 +39,8 @@ public class ModItems {
             new SwapItem(new FabricItemSettings()));
     public static final Item TRAP_CONCEALER = registerItem("trap_concealer",
             new TrapConcealerItem(new FabricItemSettings()));
+    public static final Item TROWEL = registerItem("trowel",
+            new TrowelItem(new FabricItemSettings()));
     public static final Item CORE_OF_CHANGING = registerItem("core_of_changing",
             new Item(new FabricItemSettings()));
 

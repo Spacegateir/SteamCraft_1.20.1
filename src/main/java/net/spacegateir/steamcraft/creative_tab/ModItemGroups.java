@@ -21,6 +21,7 @@ public class ModItemGroups {
 //                        entries.add(ModItems.TEST_ITEM);
 
 
+                        entries.add(ModItems.TROWEL);
                         entries.add(ModItems.PATTERN_RECOMPILER);
                         entries.add(ModItems.TRAP_CONCEALER);
                         entries.add(ModItems.CORE_OF_CHANGING);

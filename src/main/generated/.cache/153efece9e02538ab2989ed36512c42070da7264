@@ -1,4 +1,4 @@
-// 1.20.1	2025-04-25T10:14:47.2170034	Steamcraft/Block Loot Tables
+// 1.20.1	2025-04-25T12:50:51.9505618	Steamcraft/Block Loot Tables
 4b434f9602c9c2f60246afcd159bc287d5f98c8c data\steamcraft\loot_tables\blocks\aether_coil_magenta.json
 490ef70f451d3872f02eda59b92dea235effffb9 data\steamcraft\loot_tables\blocks\cursed_totem_block.json
 5d0e986b1c8ba29c83f8ef42daa1d253312f2d1d data\steamcraft\loot_tables\blocks\cobbled_pink_concrete.json
@@ -23,8 +23,8 @@ a0b8f398c7f172102e474f59550bbf31315048e0 data\steamcraft\loot_tables\blocks\snow
 5cbc4e578f6a33a9293adb8a8d764526a4225b26 data\steamcraft\loot_tables\blocks\thorned_hydrangea_flower.json
 c77cdd0e26e84ac0b659e57239c1b1f8fab0b127 data\steamcraft\loot_tables\blocks\coarse_dirt_path.json
 821229c06c9fa5202da9d504757c55db0e629ff6 data\steamcraft\loot_tables\blocks\thorned_hawthorn_flower.json
-6d6b4f7eb686624e18a1b3a2cace8bcd00e1c971 data\steamcraft\loot_tables\blocks\skeleton_chest.json
 3126ca448f08b740cca63adaf8dd60dcbd65aa60 data\steamcraft\loot_tables\blocks\glow_agapanthus_flower.json
+6d6b4f7eb686624e18a1b3a2cace8bcd00e1c971 data\steamcraft\loot_tables\blocks\skeleton_chest.json
 82e8b58c2f711a4726d1bcda901e8c3b70553000 data\steamcraft\loot_tables\blocks\snow_tiles_cracked.json
 b5590da4663a55b7c06b8f858d6f932fc61506fb data\steamcraft\loot_tables\blocks\arcane_speed_block.json
 609efc16107f0561b16d1714323379e954fa73b7 data\steamcraft\loot_tables\blocks\skeleton_half_body.json

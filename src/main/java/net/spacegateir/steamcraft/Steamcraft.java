@@ -29,8 +29,6 @@ public class Steamcraft implements ModInitializer {
 
 		ModBlockEntities.registerAll();
 
-		ShovelPathStateInjector.inject();
-
 		ModItemGroups.registerItemGroups();
 		ModItemRewardsGroups.registerItemGroups();
 

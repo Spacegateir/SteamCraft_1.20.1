@@ -2,9 +2,11 @@ package net.spacegateir.steamcraft.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.block.Block;
+import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.spacegateir.steamcraft.Steamcraft;
@@ -13,7 +15,12 @@ import net.spacegateir.steamcraft.fluid.ModFluids;
 import net.spacegateir.steamcraft.item.armor.*;
 import net.spacegateir.steamcraft.item.custom.*;
 
+import java.util.EnumMap;
+
 public class ModItems {
+
+    public static final EnumMap<DyeColor, Item> COLOR_TO_WATER_BUCKET = new EnumMap<>(DyeColor.class);
+    public static final EnumMap<DyeColor, Item> COLOR_TO_LAVA_BUCKET = new EnumMap<>(DyeColor.class);
 
     public static final Item TEST_ITEM = registerItem("test_item",
             new Item(new FabricItemSettings()));
@@ -468,144 +475,40 @@ public class ModItems {
 
 
 // Water
-
-    public static final Item WHITE_WATER_BUCKET = Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID,
-            "white_water_bucket"), new BucketItem(ModFluids.STILL_WHITE_WATER,
-            new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
-
-    public static final Item LIGHT_GRAY_WATER_BUCKET = Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID,
-            "light_gray_water_bucket"), new BucketItem(ModFluids.STILL_LIGHT_GRAY_WATER,
-            new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
-
-    public static final Item GRAY_WATER_BUCKET = Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID,
-            "gray_water_bucket"), new BucketItem(ModFluids.STILL_GRAY_WATER,
-            new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
-
-    public static final Item BLACK_WATER_BUCKET = Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID,
-            "black_water_bucket"), new BucketItem(ModFluids.STILL_BLACK_WATER,
-            new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
-
-    public static final Item BROWN_WATER_BUCKET = Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID,
-            "brown_water_bucket"), new BucketItem(ModFluids.STILL_BROWN_WATER,
-            new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
-
-    public static final Item RED_WATER_BUCKET = Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID,
-            "red_water_bucket"), new BucketItem(ModFluids.STILL_RED_WATER,
-            new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
-
-    public static final Item ORANGE_WATER_BUCKET = Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID,
-            "orange_water_bucket"), new BucketItem(ModFluids.STILL_ORANGE_WATER,
-            new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
-
-    public static final Item YELLOW_WATER_BUCKET = Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID,
-            "yellow_water_bucket"), new BucketItem(ModFluids.STILL_YELLOW_WATER,
-            new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
-
-    public static final Item LIME_WATER_BUCKET = Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID,
-            "lime_water_bucket"), new BucketItem(ModFluids.STILL_LIME_WATER,
-            new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
-
-    public static final Item GREEN_WATER_BUCKET = Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID,
-            "green_water_bucket"), new BucketItem(ModFluids.STILL_GREEN_WATER,
-            new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
-
-    public static final Item CYAN_WATER_BUCKET = Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID,
-            "cyan_water_bucket"), new BucketItem(ModFluids.STILL_CYAN_WATER,
-            new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
-
-    public static final Item LIGHT_BLUE_WATER_BUCKET = Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID,
-            "light_blue_water_bucket"), new BucketItem(ModFluids.STILL_LIGHT_BLUE_WATER,
-            new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
-
-    public static final Item BLUE_WATER_BUCKET = Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID,
-            "blue_water_bucket"), new BucketItem(ModFluids.STILL_BLUE_WATER,
-            new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
-
-    public static final Item PURPLE_WATER_BUCKET = Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID,
-            "purple_water_bucket"), new BucketItem(ModFluids.STILL_PURPLE_WATER,
-            new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
-
-    public static final Item MAGENTA_WATER_BUCKET = Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID,
-            "magenta_water_bucket"), new BucketItem(ModFluids.STILL_MAGENTA_WATER,
-            new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
-
-    public static final Item PINK_WATER_BUCKET = Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID,
-            "pink_water_bucket"), new BucketItem(ModFluids.STILL_PINK_WATER,
-            new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
-
-
-
+    public static final Item WHITE_WATER_BUCKET = registerDyedWaterBucket(DyeColor.WHITE, ModFluids.STILL_WHITE_WATER);
+    public static final Item LIGHT_GRAY_WATER_BUCKET = registerDyedWaterBucket(DyeColor.LIGHT_GRAY, ModFluids.STILL_LIGHT_GRAY_WATER);
+    public static final Item GRAY_WATER_BUCKET = registerDyedWaterBucket(DyeColor.GRAY, ModFluids.STILL_GRAY_WATER);
+    public static final Item BLACK_WATER_BUCKET = registerDyedWaterBucket(DyeColor.BLACK, ModFluids.STILL_BLACK_WATER);
+    public static final Item BROWN_WATER_BUCKET = registerDyedWaterBucket(DyeColor.BROWN, ModFluids.STILL_BROWN_WATER);
+    public static final Item RED_WATER_BUCKET = registerDyedWaterBucket(DyeColor.RED, ModFluids.STILL_RED_WATER);
+    public static final Item ORANGE_WATER_BUCKET = registerDyedWaterBucket(DyeColor.ORANGE, ModFluids.STILL_ORANGE_WATER);
+    public static final Item YELLOW_WATER_BUCKET = registerDyedWaterBucket(DyeColor.YELLOW, ModFluids.STILL_YELLOW_WATER);
+    public static final Item LIME_WATER_BUCKET = registerDyedWaterBucket(DyeColor.LIME, ModFluids.STILL_LIME_WATER);
+    public static final Item GREEN_WATER_BUCKET = registerDyedWaterBucket(DyeColor.GREEN, ModFluids.STILL_GREEN_WATER);
+    public static final Item CYAN_WATER_BUCKET = registerDyedWaterBucket(DyeColor.CYAN, ModFluids.STILL_CYAN_WATER);
+    public static final Item LIGHT_BLUE_WATER_BUCKET = registerDyedWaterBucket(DyeColor.LIGHT_BLUE, ModFluids.STILL_LIGHT_BLUE_WATER);
+    public static final Item BLUE_WATER_BUCKET = registerDyedWaterBucket(DyeColor.BLUE, ModFluids.STILL_BLUE_WATER);
+    public static final Item PURPLE_WATER_BUCKET = registerDyedWaterBucket(DyeColor.PURPLE, ModFluids.STILL_PURPLE_WATER);
+    public static final Item MAGENTA_WATER_BUCKET = registerDyedWaterBucket(DyeColor.MAGENTA, ModFluids.STILL_MAGENTA_WATER);
+    public static final Item PINK_WATER_BUCKET = registerDyedWaterBucket(DyeColor.PINK, ModFluids.STILL_PINK_WATER);
 
 // Lava
-
-    public static final Item WHITE_LAVA_BUCKET = Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID,
-            "white_lava_bucket"), new BucketItem(ModFluids.STILL_WHITE_LAVA,
-            new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
-
-    public static final Item LIGHT_GRAY_LAVA_BUCKET = Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID,
-            "light_gray_lava_bucket"), new BucketItem(ModFluids.STILL_LIGHT_GRAY_LAVA,
-            new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
-
-    public static final Item GRAY_LAVA_BUCKET = Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID,
-            "gray_lava_bucket"), new BucketItem(ModFluids.STILL_GRAY_LAVA,
-            new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
-
-    public static final Item BLACK_LAVA_BUCKET = Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID,
-            "black_lava_bucket"), new BucketItem(ModFluids.STILL_BLACK_LAVA,
-            new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
-
-    public static final Item BROWN_LAVA_BUCKET = Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID,
-            "brown_lava_bucket"), new BucketItem(ModFluids.STILL_BROWN_LAVA,
-            new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
-
-    public static final Item RED_LAVA_BUCKET = Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID,
-            "red_lava_bucket"), new BucketItem(ModFluids.STILL_RED_LAVA,
-            new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
-
-    public static final Item ORANGE_LAVA_BUCKET = Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID,
-            "orange_lava_bucket"), new BucketItem(ModFluids.STILL_ORANGE_LAVA,
-            new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
-
-    public static final Item YELLOW_LAVA_BUCKET = Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID,
-            "yellow_lava_bucket"), new BucketItem(ModFluids.STILL_YELLOW_LAVA,
-            new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
-
-    public static final Item LIME_LAVA_BUCKET = Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID,
-            "lime_lava_bucket"), new BucketItem(ModFluids.STILL_LIME_LAVA,
-            new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
-
-    public static final Item GREEN_LAVA_BUCKET = Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID,
-            "green_lava_bucket"), new BucketItem(ModFluids.STILL_GREEN_LAVA,
-            new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
-
-    public static final Item CYAN_LAVA_BUCKET = Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID,
-            "cyan_lava_bucket"), new BucketItem(ModFluids.STILL_CYAN_LAVA,
-            new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
-
-    public static final Item LIGHT_BLUE_LAVA_BUCKET = Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID,
-            "light_blue_lava_bucket"), new BucketItem(ModFluids.STILL_LIGHT_BLUE_LAVA,
-            new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
-
-    public static final Item BLUE_LAVA_BUCKET = Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID,
-            "blue_lava_bucket"), new BucketItem(ModFluids.STILL_BLUE_LAVA,
-            new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
-
-    public static final Item PURPLE_LAVA_BUCKET = Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID,
-            "purple_lava_bucket"), new BucketItem(ModFluids.STILL_PURPLE_LAVA,
-            new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
-
-    public static final Item MAGENTA_LAVA_BUCKET = Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID,
-            "magenta_lava_bucket"), new BucketItem(ModFluids.STILL_MAGENTA_LAVA,
-            new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
-
-    public static final Item PINK_LAVA_BUCKET = Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID,
-            "pink_lava_bucket"), new BucketItem(ModFluids.STILL_PINK_LAVA,
-            new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
-
-
-
-
-
+    public static final Item WHITE_LAVA_BUCKET = registerDyedLavaBucket(DyeColor.WHITE, ModFluids.STILL_WHITE_LAVA);
+    public static final Item LIGHT_GRAY_LAVA_BUCKET = registerDyedLavaBucket(DyeColor.LIGHT_GRAY, ModFluids.STILL_LIGHT_GRAY_LAVA);
+    public static final Item GRAY_LAVA_BUCKET = registerDyedLavaBucket(DyeColor.GRAY, ModFluids.STILL_GRAY_LAVA);
+    public static final Item BLACK_LAVA_BUCKET = registerDyedLavaBucket(DyeColor.BLACK, ModFluids.STILL_BLACK_LAVA);
+    public static final Item BROWN_LAVA_BUCKET = registerDyedLavaBucket(DyeColor.BROWN, ModFluids.STILL_BROWN_LAVA);
+    public static final Item RED_LAVA_BUCKET = registerDyedLavaBucket(DyeColor.RED, ModFluids.STILL_RED_LAVA);
+    public static final Item ORANGE_LAVA_BUCKET = registerDyedLavaBucket(DyeColor.ORANGE, ModFluids.STILL_ORANGE_LAVA);
+    public static final Item YELLOW_LAVA_BUCKET = registerDyedLavaBucket(DyeColor.YELLOW, ModFluids.STILL_YELLOW_LAVA);
+    public static final Item LIME_LAVA_BUCKET = registerDyedLavaBucket(DyeColor.LIME, ModFluids.STILL_LIME_LAVA);
+    public static final Item GREEN_LAVA_BUCKET = registerDyedLavaBucket(DyeColor.GREEN, ModFluids.STILL_GREEN_LAVA);
+    public static final Item CYAN_LAVA_BUCKET = registerDyedLavaBucket(DyeColor.CYAN, ModFluids.STILL_CYAN_LAVA);
+    public static final Item LIGHT_BLUE_LAVA_BUCKET = registerDyedLavaBucket(DyeColor.LIGHT_BLUE, ModFluids.STILL_LIGHT_BLUE_LAVA);
+    public static final Item BLUE_LAVA_BUCKET = registerDyedLavaBucket(DyeColor.BLUE, ModFluids.STILL_BLUE_LAVA);
+    public static final Item PURPLE_LAVA_BUCKET = registerDyedLavaBucket(DyeColor.PURPLE, ModFluids.STILL_PURPLE_LAVA);
+    public static final Item MAGENTA_LAVA_BUCKET = registerDyedLavaBucket(DyeColor.MAGENTA, ModFluids.STILL_MAGENTA_LAVA);
+    public static final Item PINK_LAVA_BUCKET = registerDyedLavaBucket(DyeColor.PINK, ModFluids.STILL_PINK_LAVA);
 
 
     public static final Item TELEPORT_TRAP_ITEM = Registry.register(Registries.ITEM,
@@ -616,16 +519,17 @@ public class ModItems {
             new Identifier(Steamcraft.MOD_ID, "smoke_block_item"),
             new SmokeBlockItem(ModBlocks.SMOKE_BLOCK, new FabricItemSettings()));
 
+    private static Item registerDyedWaterBucket(DyeColor color, FlowableFluid fluid) {
+        BucketItem item = new BucketItem(fluid, new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1));
+        COLOR_TO_WATER_BUCKET.put(color, item);
+        return Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID, color.getName() + "_water_bucket"), item);
+    }
 
-
-
-
-
-
-
-
-
-
+    private static Item registerDyedLavaBucket(DyeColor color, FlowableFluid fluid) {
+        BucketItem item = new BucketItem(fluid, new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1));
+        COLOR_TO_LAVA_BUCKET.put(color, item);
+        return Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID, color.getName() + "_lava_bucket"), item);
+    }
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID, name), item);

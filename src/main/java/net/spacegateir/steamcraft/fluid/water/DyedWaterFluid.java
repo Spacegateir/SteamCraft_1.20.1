@@ -1,5 +1,7 @@
 package net.spacegateir.steamcraft.fluid.water;
 
+import com.google.common.base.Supplier;
+import com.google.common.base.Suppliers;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
@@ -7,23 +9,38 @@ import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.item.Item;
+import net.minecraft.registry.tag.FluidTags;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.Properties;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.*;
 import net.spacegateir.steamcraft.fluid.ModFluids;
 import net.spacegateir.steamcraft.item.ModItems;
 
-public abstract class GrayWaterFluid extends FlowableFluid {
+public abstract class DyedWaterFluid extends FlowableFluid {
+
+    private final Supplier<FlowableFluid> stillSupplier;
+    private final Supplier<FlowableFluid> flowingSupplier;
+    private final Supplier<Block> blockSupplier;
+    private final Supplier<Item> bucketSupplier;
+
+    public DyedWaterFluid(DyeColor color) {
+        this.stillSupplier = Suppliers.memoize(() -> ModFluids.COLOR_TO_STILL_WATER.get(color));
+        this.flowingSupplier = Suppliers.memoize(() -> ModFluids.COLOR_TO_FLOWING_WATER.get(color));
+        this.blockSupplier = Suppliers.memoize(() -> ModFluids.COLOR_TO_WATER_BLOCK.get(color));
+        this.bucketSupplier = Suppliers.memoize(() -> ModItems.COLOR_TO_WATER_BUCKET.get(color));
+    }
+
     @Override
     public Fluid getFlowing() {
-        return ModFluids.FLOWING_GRAY_WATER;
+        return this.flowingSupplier.get();
     }
 
     @Override
     public Fluid getStill() {
-        return ModFluids.STILL_GRAY_WATER;
+        return this.stillSupplier.get();
     }
 
     @Override
@@ -49,13 +66,13 @@ public abstract class GrayWaterFluid extends FlowableFluid {
 
     @Override
     public Item getBucketItem() {
-        return ModItems.GRAY_WATER_BUCKET;
+        return this.bucketSupplier.get();
     }
 
     @Override
     protected boolean canBeReplacedWith(FluidState state, BlockView world, BlockPos pos, Fluid fluid, Direction direction) {
         // Allow replacement like vanilla water (e.g. lava replacing water downward)
-        return direction == Direction.DOWN && !fluid.isIn(net.minecraft.registry.tag.FluidTags.WATER);
+        return direction == Direction.DOWN && !state.isIn(FluidTags.WATER);
     }
 
     @Override
@@ -75,7 +92,7 @@ public abstract class GrayWaterFluid extends FlowableFluid {
 
     @Override
     protected BlockState toBlockState(FluidState state) {
-        return ModFluids.GRAY_WATER_BLOCK.getDefaultState().with(Properties.LEVEL_15, getBlockStateLevel(state));
+        return this.blockSupplier.get().getDefaultState().with(Properties.LEVEL_15, getBlockStateLevel(state));
     }
 
     @Override
@@ -88,7 +105,11 @@ public abstract class GrayWaterFluid extends FlowableFluid {
         return 0;
     }
 
-    public static class Flowing extends GrayWaterFluid {
+    public static class Flowing extends DyedWaterFluid {
+        public Flowing(DyeColor color) {
+            super(color);
+        }
+
         @Override
         protected void appendProperties(StateManager.Builder<Fluid, FluidState> builder) {
             super.appendProperties(builder);
@@ -106,7 +127,11 @@ public abstract class GrayWaterFluid extends FlowableFluid {
         }
     }
 
-    public static class Still extends GrayWaterFluid {
+    public static class Still extends DyedWaterFluid {
+        public Still(DyeColor color) {
+            super(color);
+        }
+
         @Override
         public int getLevel(FluidState state) {
             return 8;

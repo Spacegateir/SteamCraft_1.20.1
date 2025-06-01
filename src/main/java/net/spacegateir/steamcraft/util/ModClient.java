@@ -2,6 +2,7 @@ package net.spacegateir.steamcraft.util;
 
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
 import net.minecraft.util.Identifier;
+import net.spacegateir.steamcraft.Steamcraft;
 import net.spacegateir.steamcraft.fluid.ModFluids;
 import net.minecraft.fluid.FlowableFluid;
 

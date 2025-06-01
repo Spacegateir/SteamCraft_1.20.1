@@ -1,14 +1,11 @@
 package net.spacegateir.steamcraft.util;
 
-import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
+import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
 import net.minecraft.block.ComposterBlock;
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.potion.Potions;
 import net.minecraft.util.Identifier;
-import net.minecraft.village.TradeOffer;
-import net.minecraft.village.VillagerProfession;
 import net.spacegateir.steamcraft.Steamcraft;
 import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.item.ModItems;
@@ -21,6 +18,29 @@ public class ModRegistries {
         createPortal();
         registerPotionRecipes();
         registerModCompostables();
+        registerFuels();
+    }
+
+    private static void registerFuels() {
+        FuelRegistry registry = FuelRegistry.INSTANCE;
+
+        registry.add(ModItems.WHITE_LAVA_BUCKET, 20000);
+        registry.add(ModItems.ORANGE_LAVA_BUCKET, 20000);
+        registry.add(ModItems.MAGENTA_LAVA_BUCKET, 20000);
+        registry.add(ModItems.LIGHT_BLUE_LAVA_BUCKET, 20000);
+        registry.add(ModItems.YELLOW_LAVA_BUCKET, 20000);
+        registry.add(ModItems.LIME_LAVA_BUCKET, 20000);
+        registry.add(ModItems.PINK_LAVA_BUCKET, 20000);
+        registry.add(ModItems.GRAY_LAVA_BUCKET, 20000);
+        registry.add(ModItems.LIGHT_GRAY_LAVA_BUCKET, 20000);
+        registry.add(ModItems.CYAN_LAVA_BUCKET, 20000);
+        registry.add(ModItems.PURPLE_LAVA_BUCKET, 20000);
+        registry.add(ModItems.BLUE_LAVA_BUCKET, 20000);
+        registry.add(ModItems.BROWN_LAVA_BUCKET, 20000);
+        registry.add(ModItems.GREEN_LAVA_BUCKET, 20000);
+        registry.add(ModItems.RED_LAVA_BUCKET, 20000);
+        registry.add(ModItems.BLACK_LAVA_BUCKET, 20000);
+
     }
 
     private static void createPortal() {

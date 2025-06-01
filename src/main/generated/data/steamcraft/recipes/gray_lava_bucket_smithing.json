@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:netherite_upgrade_smithing_template"
+  },
+  "base": {
+    "item": "minecraft:gray_dye"
+  },
+  "result": {
+    "item": "steamcraft:gray_lava_bucket"
+  },
+  "template": {
+    "item": "minecraft:lava_bucket"
+  }
+}

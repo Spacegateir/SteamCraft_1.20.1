@@ -230,6 +230,45 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.SNOW_PATH
                         );
 
+        getOrCreateTagBuilder(BlockTags.CAULDRONS)
+                .add(
+                        ModBlocks.BLACK_LAVA_CAULDRON_BLOCK,
+                        ModBlocks.BLACK_WATER_CAULDRON_BLOCK,
+                        ModBlocks.BLUE_LAVA_CAULDRON_BLOCK,
+                        ModBlocks.BLUE_WATER_CAULDRON_BLOCK,
+                        ModBlocks.BROWN_LAVA_CAULDRON_BLOCK,
+                        ModBlocks.BROWN_WATER_CAULDRON_BLOCK,
+                        ModBlocks.CYAN_LAVA_CAULDRON_BLOCK,
+                        ModBlocks.CYAN_WATER_CAULDRON_BLOCK,
+                        ModBlocks.GRAY_LAVA_CAULDRON_BLOCK,
+                        ModBlocks.GRAY_WATER_CAULDRON_BLOCK,
+                        ModBlocks.GREEN_LAVA_CAULDRON_BLOCK,
+                        ModBlocks.GREEN_WATER_CAULDRON_BLOCK,
+                        ModBlocks.LIGHT_BLUE_LAVA_CAULDRON_BLOCK,
+                        ModBlocks.LIGHT_BLUE_WATER_CAULDRON_BLOCK,
+                        ModBlocks.LIGHT_GRAY_LAVA_CAULDRON_BLOCK,
+                        ModBlocks.LIGHT_GRAY_WATER_CAULDRON_BLOCK,
+                        ModBlocks.LIME_LAVA_CAULDRON_BLOCK,
+                        ModBlocks.LIME_WATER_CAULDRON_BLOCK,
+                        ModBlocks.MAGENTA_LAVA_CAULDRON_BLOCK,
+                        ModBlocks.MAGENTA_WATER_CAULDRON_BLOCK,
+                        ModBlocks.ORANGE_LAVA_CAULDRON_BLOCK,
+                        ModBlocks.ORANGE_WATER_CAULDRON_BLOCK,
+                        ModBlocks.PINK_LAVA_CAULDRON_BLOCK,
+                        ModBlocks.PINK_WATER_CAULDRON_BLOCK,
+                        ModBlocks.PURPLE_LAVA_CAULDRON_BLOCK,
+                        ModBlocks.PURPLE_WATER_CAULDRON_BLOCK,
+                        ModBlocks.RED_LAVA_CAULDRON_BLOCK,
+                        ModBlocks.RED_WATER_CAULDRON_BLOCK,
+                        ModBlocks.WHITE_LAVA_CAULDRON_BLOCK,
+                        ModBlocks.WHITE_WATER_CAULDRON_BLOCK,
+                        ModBlocks.YELLOW_LAVA_CAULDRON_BLOCK,
+                        ModBlocks.YELLOW_WATER_CAULDRON_BLOCK
+                );
+
+
+
+
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .addTag(ModTags.Blocks.SKELETON)
                 .addTag(ModTags.Blocks.ARCANE_BLOCKS)

@@ -1,5 +1,40 @@
 {
   "replace": false,
   "values": [
+
+    "steamcraft:white_water",
+    "steamcraft:light_gray_water",
+    "steamcraft:gray_water",
+    "steamcraft:black_water",
+    "steamcraft:brown_water",
+    "steamcraft:red_water",
+    "steamcraft:orange_water",
+    "steamcraft:yellow_water",
+    "steamcraft:lime_water",
+    "steamcraft:green_water",
+    "steamcraft:cyan_water",
+    "steamcraft:light_blue_water",
+    "steamcraft:blue_water",
+    "steamcraft:purple_water",
+    "steamcraft:magenta_water",
+    "steamcraft:pink_water",
+
+    "steamcraft:white_lava",
+    "steamcraft:light_gray_lava",
+    "steamcraft:gray_lava",
+    "steamcraft:black_lava",
+    "steamcraft:brown_lava",
+    "steamcraft:red_lava",
+    "steamcraft:orange_lava",
+    "steamcraft:yellow_lava",
+    "steamcraft:lime_lava",
+    "steamcraft:green_lava",
+    "steamcraft:cyan_lava",
+    "steamcraft:light_blue_lava",
+    "steamcraft:blue_lava",
+    "steamcraft:purple_lava",
+    "steamcraft:magenta_lava",
+    "steamcraft:pink_lava"
+
   ]
 }

@@ -1,0 +1,7 @@
+{
+  "parent": "block/liquid",
+  "textures": {
+    "still": "steamcraft:block/black_lava_still",
+    "flow": "steamcraft:block/black_lava_flow"
+  }
+}

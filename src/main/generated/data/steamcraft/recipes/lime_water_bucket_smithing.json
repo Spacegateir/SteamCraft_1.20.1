@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:netherite_upgrade_smithing_template"
+  },
+  "base": {
+    "item": "minecraft:lime_dye"
+  },
+  "result": {
+    "item": "steamcraft:lime_water_bucket"
+  },
+  "template": {
+    "item": "minecraft:water_bucket"
+  }
+}

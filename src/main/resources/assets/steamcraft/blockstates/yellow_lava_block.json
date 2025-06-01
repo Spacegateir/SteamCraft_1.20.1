@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "steamcraft:block/yellow_lava_block"
+    }
+  }
+}

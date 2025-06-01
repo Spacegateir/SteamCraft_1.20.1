@@ -1,0 +1,41 @@
+{
+  "replace": false,
+  "values": [
+
+    "#minecraft:water",
+
+    "steamcraft:white_water",
+    "steamcraft:flowing_white_water",
+    "steamcraft:light_gray_water",
+    "steamcraft:flowing_light_gray_water",
+    "steamcraft:gray_water",
+    "steamcraft:flowing_gray_water",
+    "steamcraft:black_water",
+    "steamcraft:flowing_black_water",
+    "steamcraft:brown_water",
+    "steamcraft:flowing_brown_water",
+    "steamcraft:red_water",
+    "steamcraft:flowing_red_water",
+    "steamcraft:orange_water",
+    "steamcraft:flowing_orange_water",
+    "steamcraft:yellow_water",
+    "steamcraft:flowing_yellow_water",
+    "steamcraft:lime_water",
+    "steamcraft:flowing_lime_water",
+    "steamcraft:green_water",
+    "steamcraft:flowing_green_water",
+    "steamcraft:cyan_water",
+    "steamcraft:flowing_cyan_water",
+    "steamcraft:light_blue_water",
+    "steamcraft:flowing_light_blue_water",
+    "steamcraft:blue_water",
+    "steamcraft:flowing_blue_water",
+    "steamcraft:purple_water",
+    "steamcraft:flowing_purple_water",
+    "steamcraft:magenta_water",
+    "steamcraft:flowing_magenta_water",
+    "steamcraft:pink_water",
+    "steamcraft:flowing_pink_water"
+
+  ]
+}

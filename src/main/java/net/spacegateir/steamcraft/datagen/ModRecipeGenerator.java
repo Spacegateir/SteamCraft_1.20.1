@@ -12,9 +12,6 @@ import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.Registries;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.tag.TagKey;
-import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.item.ModItems;
@@ -24,6 +21,8 @@ import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Consumer;
+
+import static java.util.Map.entry;
 
 public class ModRecipeGenerator extends FabricRecipeProvider {
 
@@ -1676,27 +1675,84 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
 
 
 
+        // Lava Bucket Outputs
+        Map<String, Item> dyeToLavaBucket = Map.ofEntries(
+                entry("white", ModItems.WHITE_LAVA_BUCKET),
+                entry("orange", ModItems.ORANGE_LAVA_BUCKET),
+                entry("magenta", ModItems.MAGENTA_LAVA_BUCKET),
+                entry("light_blue", ModItems.LIGHT_BLUE_LAVA_BUCKET),
+                entry("yellow", ModItems.YELLOW_LAVA_BUCKET),
+                entry("lime", ModItems.LIME_LAVA_BUCKET),
+                entry("pink", ModItems.PINK_LAVA_BUCKET),
+                entry("gray", ModItems.GRAY_LAVA_BUCKET),
+                entry("light_gray", ModItems.LIGHT_GRAY_LAVA_BUCKET),
+                entry("cyan", ModItems.CYAN_LAVA_BUCKET),
+                entry("purple", ModItems.PURPLE_LAVA_BUCKET),
+                entry("blue", ModItems.BLUE_LAVA_BUCKET),
+                entry("brown", ModItems.BROWN_LAVA_BUCKET),
+                entry("green", ModItems.GREEN_LAVA_BUCKET),
+                entry("red", ModItems.RED_LAVA_BUCKET),
+                entry("black", ModItems.BLACK_LAVA_BUCKET)
+        );
 
+        // Water Bucket Outputs
+        Map<String, Item> dyeToWaterBucket = Map.ofEntries(
+                entry("white", ModItems.WHITE_WATER_BUCKET),
+                entry("orange", ModItems.ORANGE_WATER_BUCKET),
+                entry("magenta", ModItems.MAGENTA_WATER_BUCKET),
+                entry("light_blue", ModItems.LIGHT_BLUE_WATER_BUCKET),
+                entry("yellow", ModItems.YELLOW_WATER_BUCKET),
+                entry("lime", ModItems.LIME_WATER_BUCKET),
+                entry("pink", ModItems.PINK_WATER_BUCKET),
+                entry("gray", ModItems.GRAY_WATER_BUCKET),
+                entry("light_gray", ModItems.LIGHT_GRAY_WATER_BUCKET),
+                entry("cyan", ModItems.CYAN_WATER_BUCKET),
+                entry("purple", ModItems.PURPLE_WATER_BUCKET),
+                entry("blue", ModItems.BLUE_WATER_BUCKET),
+                entry("brown", ModItems.BROWN_WATER_BUCKET),
+                entry("green", ModItems.GREEN_WATER_BUCKET),
+                entry("red", ModItems.RED_WATER_BUCKET),
+                entry("black", ModItems.BLACK_WATER_BUCKET)
+        );
 
+        // Dye Inputs
+        Map<String, Item> dyeItems = Map.ofEntries(
+                entry("white", Items.WHITE_DYE),
+                entry("orange", Items.ORANGE_DYE),
+                entry("magenta", Items.MAGENTA_DYE),
+                entry("light_blue", Items.LIGHT_BLUE_DYE),
+                entry("yellow", Items.YELLOW_DYE),
+                entry("lime", Items.LIME_DYE),
+                entry("pink", Items.PINK_DYE),
+                entry("gray", Items.GRAY_DYE),
+                entry("light_gray", Items.LIGHT_GRAY_DYE),
+                entry("cyan", Items.CYAN_DYE),
+                entry("purple", Items.PURPLE_DYE),
+                entry("blue", Items.BLUE_DYE),
+                entry("brown", Items.BROWN_DYE),
+                entry("green", Items.GREEN_DYE),
+                entry("red", Items.RED_DYE),
+                entry("black", Items.BLACK_DYE)
+        );
 
-    //Flowers
+        //Flowers
         Map<Item, String> dyeToFlowerMap = Map.ofEntries(
-                Map.entry(Items.LIGHT_BLUE_DYE, "BLUE_COSMOS"),
-                Map.entry(Items.WHITE_DYE, "SNOW_DROP"),
-                Map.entry(Items.MAGENTA_DYE, "CARNATION"),
-                Map.entry(Items.PURPLE_DYE, "VIOLET"),
-                Map.entry(Items.PINK_DYE, "IRIS"),
-                Map.entry(Items.YELLOW_DYE, "PRIMROSE"),
-                Map.entry(Items.ORANGE_DYE, "DAFFODIL"),
-                Map.entry(Items.BLUE_DYE, "DELPHINIUM"),
-                Map.entry(Items.BROWN_DYE, "DAHLIA"),
-                Map.entry(Items.LIME_DYE, "HYDRANGEA"),
-                Map.entry(Items.BLACK_DYE, "MIDNIGHT_MYSTIC"),
-                Map.entry(Items.LIGHT_GRAY_DYE, "HAWTHORN"),
-                Map.entry(Items.GREEN_DYE, "BONSAI"),
-                Map.entry(Items.RED_DYE, "SPIDERLILY"),
-                Map.entry(Items.CYAN_DYE, "LARKSPUR"),
-                Map.entry(Items.GRAY_DYE, "AGAPANTHUS")
+                entry(Items.LIGHT_BLUE_DYE, "BLUE_COSMOS"),
+                entry(Items.WHITE_DYE, "SNOW_DROP"),
+                entry(Items.MAGENTA_DYE, "CARNATION"),
+                entry(Items.PURPLE_DYE, "VIOLET"),
+                entry(Items.PINK_DYE, "IRIS"),
+                entry(Items.YELLOW_DYE, "PRIMROSE"),
+                entry(Items.ORANGE_DYE, "DAFFODIL"),
+                entry(Items.BLUE_DYE, "DELPHINIUM"),
+                entry(Items.BROWN_DYE, "DAHLIA"),
+                entry(Items.LIME_DYE, "HYDRANGEA"),
+                entry(Items.BLACK_DYE, "MIDNIGHT_MYSTIC"),
+                entry(Items.LIGHT_GRAY_DYE, "HAWTHORN"),
+                entry(Items.GREEN_DYE, "BONSAI"),
+                entry(Items.RED_DYE, "SPIDERLILY"),
+                entry(Items.CYAN_DYE, "LARKSPUR"),
+                entry(Items.GRAY_DYE, "AGAPANTHUS")
         );
 
         String[] prefixes = {
@@ -1721,6 +1777,57 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 }
             }
         }
+
+        // Lava Recipes
+        dyeToLavaBucket.forEach((color, bucketItem) -> {
+            ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, bucketItem)
+                    .input(Items.LAVA_BUCKET)
+                    .input(Items.BUCKET)
+                    .input(dyeItems.get(color))
+                    .criterion("has_lava_bucket", conditionsFromItem(Items.LAVA_BUCKET))
+                    .criterion("has_dye", conditionsFromItem(dyeItems.get(color)))
+                    .offerTo(exporter, new Identifier("dyeableliquids", color + "_lava_bucket"));
+        });
+
+        // Water Recipes
+        dyeToWaterBucket.forEach((color, bucketItem) -> {
+            ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, bucketItem)
+                    .input(Items.WATER_BUCKET)
+                    .input(Items.BUCKET)
+                    .input(dyeItems.get(color))
+                    .criterion("has_water_bucket", conditionsFromItem(Items.WATER_BUCKET))
+                    .criterion("has_dye", conditionsFromItem(dyeItems.get(color)))
+                    .offerTo(exporter, new Identifier("dyeableliquids", color + "_water_bucket"));
+        });
+
+        // Lava Bucket Smithing Recipes
+        dyeToLavaBucket.forEach((color, bucketItem) -> {
+            SmithingTransformRecipeJsonBuilder.create(
+                            Ingredient.ofItems(Items.LAVA_BUCKET),                           // base item
+                            Ingredient.ofItems(dyeItems.get(color)),                         // addition (dye)
+                            Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),   // template (none)
+                            RecipeCategory.MISC,
+                            bucketItem
+                    )
+                    .criterion("has_lava_bucket", conditionsFromItem(Items.LAVA_BUCKET))
+                    .criterion("has_dye", conditionsFromItem(dyeItems.get(color)))
+                    .offerTo(exporter, new Identifier("dyeableliquids", color + "_lava_bucket_smithing"));
+        });
+
+        // Water Bucket Smithing Recipes
+        dyeToWaterBucket.forEach((color, bucketItem) -> {
+            SmithingTransformRecipeJsonBuilder.create(
+                            Ingredient.ofItems(Items.WATER_BUCKET),                          // base item
+                            Ingredient.ofItems(dyeItems.get(color)),                         // addition (dye)
+                            Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),   // template (none)
+                            RecipeCategory.MISC,
+                            bucketItem
+                    )
+                    .criterion("has_water_bucket", conditionsFromItem(Items.WATER_BUCKET))
+                    .criterion("has_dye", conditionsFromItem(dyeItems.get(color)))
+                    .offerTo(exporter, new Identifier("dyeableliquids", color + "_water_bucket_smithing"));
+        });
+
 
         registerGlowRecipe(exporter, ModBlocks.SNOW_DROP_FLOWER_BLOCK, ModBlocks.GLOW_SNOW_DROP_FLOWER_BLOCK);
         registerGlowRecipe(exporter, ModBlocks.CARNATION_FLOWER_BLOCK, ModBlocks.GLOW_CARNATION_FLOWER_BLOCK);
@@ -1774,6 +1881,8 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         registerGlowRecipe(exporter, ModBlocks.LUSH_BLUE_COSMOS_FLOWER_BLOCK, ModBlocks.GLOW_LUSH_BLUE_COSMOS_FLOWER_BLOCK);
     }
 
+
+
     private void registerGlowRecipe(Consumer<RecipeJsonProvider> exporter, Block baseFlower, Block glowFlower) {
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, glowFlower.asItem())
                 .input(baseFlower.asItem())
@@ -1782,6 +1891,8 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion("has_glowstone_dust", conditionsFromItem(Items.GLOWSTONE_DUST))
                 .offerTo(exporter);
     }
+
+
 
 
 

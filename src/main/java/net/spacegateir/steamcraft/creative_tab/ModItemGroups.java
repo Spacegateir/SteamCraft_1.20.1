@@ -369,6 +369,42 @@ public class ModItemGroups {
                         entries.add(ModItems.LUSH_VIOLET_FLOWER_ITEM);
 //                        entries.add(ModItems.GLOW_LUSH_VIOLET_FLOWER_ITEM);
 
+                        entries.add(ModItems.WHITE_WATER_BUCKET);
+                        entries.add(ModItems.LIGHT_GRAY_WATER_BUCKET);
+                        entries.add(ModItems.GRAY_WATER_BUCKET);
+                        entries.add(ModItems.BLACK_WATER_BUCKET);
+                        entries.add(ModItems.BROWN_WATER_BUCKET);
+                        entries.add(ModItems.RED_WATER_BUCKET);
+                        entries.add(ModItems.ORANGE_WATER_BUCKET);
+                        entries.add(ModItems.YELLOW_WATER_BUCKET);
+                        entries.add(ModItems.LIME_WATER_BUCKET);
+                        entries.add(ModItems.GREEN_WATER_BUCKET);
+                        entries.add(ModItems.CYAN_WATER_BUCKET);
+                        entries.add(ModItems.LIGHT_BLUE_WATER_BUCKET);
+                        entries.add(ModItems.BLUE_WATER_BUCKET);
+                        entries.add(ModItems.PURPLE_WATER_BUCKET);
+                        entries.add(ModItems.MAGENTA_WATER_BUCKET);
+                        entries.add(ModItems.PINK_WATER_BUCKET);
+
+                        entries.add(ModItems.WHITE_LAVA_BUCKET);
+                        entries.add(ModItems.LIGHT_GRAY_LAVA_BUCKET);
+                        entries.add(ModItems.GRAY_LAVA_BUCKET);
+                        entries.add(ModItems.BLACK_LAVA_BUCKET);
+                        entries.add(ModItems.BROWN_LAVA_BUCKET);
+                        entries.add(ModItems.RED_LAVA_BUCKET);
+                        entries.add(ModItems.ORANGE_LAVA_BUCKET);
+                        entries.add(ModItems.YELLOW_LAVA_BUCKET);
+                        entries.add(ModItems.LIME_LAVA_BUCKET);
+                        entries.add(ModItems.GREEN_LAVA_BUCKET);
+                        entries.add(ModItems.CYAN_LAVA_BUCKET);
+                        entries.add(ModItems.LIGHT_BLUE_LAVA_BUCKET);
+                        entries.add(ModItems.BLUE_LAVA_BUCKET);
+                        entries.add(ModItems.PURPLE_LAVA_BUCKET);
+                        entries.add(ModItems.MAGENTA_LAVA_BUCKET);
+                        entries.add(ModItems.PINK_LAVA_BUCKET);
+
+
+
 
 
 

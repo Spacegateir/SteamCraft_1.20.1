@@ -39,8 +39,8 @@ public class ModClient {
                     data.still().get(), data.flowing().get(),
                     ModFluidRenderHandler.coloredLava(
                             data.color(),
-                            new Identifier("steamcraft", "block/" + data.textureBase() + "_still"),
-                            new Identifier("steamcraft", "block/" + data.textureBase() + "_flow")
+                            new Identifier(Steamcraft.MOD_ID, "block/" + data.textureBase() + "_still"),
+                            new Identifier(Steamcraft.MOD_ID, "block/" + data.textureBase() + "_flow")
                     )
             );
         });
@@ -70,8 +70,8 @@ public class ModClient {
                     data.still().get(), data.flowing().get(),
                     ModFluidRenderHandler.coloredWater(
                             data.color(),
-                            new Identifier("steamcraft", "block/" + data.textureBase() + "_still"),
-                            new Identifier("steamcraft", "block/" + data.textureBase() + "_flow")
+                            new Identifier(Steamcraft.MOD_ID, "block/" + data.textureBase() + "_still"),
+                            new Identifier(Steamcraft.MOD_ID, "block/" + data.textureBase() + "_flow")
                     )
             );
         });

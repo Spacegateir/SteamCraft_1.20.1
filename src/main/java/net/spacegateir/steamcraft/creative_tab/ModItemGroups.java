@@ -10,11 +10,12 @@ import net.minecraft.util.Identifier;
 import net.spacegateir.steamcraft.Steamcraft;
 import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.item.ModItems;
+import net.spacegateir.steamcraft.item.ModRewardItems;
 
 public class ModItemGroups {
     public static final ItemGroup STEAMCRAFT = Registry.register(Registries.ITEM_GROUP,
-            new Identifier(Steamcraft.MOD_ID,"sc"),
-            FabricItemGroup.builder().displayName(Text.translatable("SteamCraft"))
+            new Identifier(Steamcraft.MOD_ID, "sc"),
+            FabricItemGroup.builder().displayName(Text.literal("SteamCraft"))
                     .icon(() -> new ItemStack(ModItems.PATTERN_RECOMPILER)).entries((displayContext, entries) -> {
 
                         //Items
@@ -204,38 +205,38 @@ public class ModItemGroups {
 
                         entries.add(ModItems.SMOKE_BLOCK_ITEM);
 
-                        entries.add(ModBlocks.COBBLED_WHITE_CONCRETE);
-                        entries.add(ModBlocks.COBBLED_WHITE_CONCRETE_POWDER);
-                        entries.add(ModBlocks.COBBLED_LIGHT_GRAY_CONCRETE);
-                        entries.add(ModBlocks.COBBLED_LIGHT_GRAY_CONCRETE_POWDER);
-                        entries.add(ModBlocks.COBBLED_GRAY_CONCRETE);
-                        entries.add(ModBlocks.COBBLED_GRAY_CONCRETE_POWDER);
-                        entries.add(ModBlocks.COBBLED_BLACK_CONCRETE);
-                        entries.add(ModBlocks.COBBLED_BLACK_CONCRETE_POWDER);
-                        entries.add(ModBlocks.COBBLED_BROWN_CONCRETE);
-                        entries.add(ModBlocks.COBBLED_BROWN_CONCRETE_POWDER);
-                        entries.add(ModBlocks.COBBLED_RED_CONCRETE);
-                        entries.add(ModBlocks.COBBLED_RED_CONCRETE_POWDER);
-                        entries.add(ModBlocks.COBBLED_ORANGE_CONCRETE);
-                        entries.add(ModBlocks.COBBLED_ORANGE_CONCRETE_POWDER);
-                        entries.add(ModBlocks.COBBLED_YELLOW_CONCRETE);
-                        entries.add(ModBlocks.COBBLED_YELLOW_CONCRETE_POWDER);
-                        entries.add(ModBlocks.COBBLED_LIME_CONCRETE);
-                        entries.add(ModBlocks.COBBLED_LIME_CONCRETE_POWDER);
-                        entries.add(ModBlocks.COBBLED_GREEN_CONCRETE);
-                        entries.add(ModBlocks.COBBLED_GREEN_CONCRETE_POWDER);
-                        entries.add(ModBlocks.COBBLED_CYAN_CONCRETE);
-                        entries.add(ModBlocks.COBBLED_CYAN_CONCRETE_POWDER);
-                        entries.add(ModBlocks.COBBLED_LIGHT_BLUE_CONCRETE);
-                        entries.add(ModBlocks.COBBLED_LIGHT_BLUE_CONCRETE_POWDER);
-                        entries.add(ModBlocks.COBBLED_BLUE_CONCRETE);
-                        entries.add(ModBlocks.COBBLED_BLUE_CONCRETE_POWDER);
-                        entries.add(ModBlocks.COBBLED_PURPLE_CONCRETE);
-                        entries.add(ModBlocks.COBBLED_PURPLE_CONCRETE_POWDER);
-                        entries.add(ModBlocks.COBBLED_MAGENTA_CONCRETE);
-                        entries.add(ModBlocks.COBBLED_MAGENTA_CONCRETE_POWDER);
-                        entries.add(ModBlocks.COBBLED_PINK_CONCRETE);
-                        entries.add(ModBlocks.COBBLED_PINK_CONCRETE_POWDER);
+                        entries.add(ModBlocks.WHITE_COBBLED_CONCRETE);
+                        entries.add(ModBlocks.WHITE_COBBLED_CONCRETE_POWDER);
+                        entries.add(ModBlocks.LIGHT_GRAY_COBBLED_CONCRETE);
+                        entries.add(ModBlocks.LIGHT_GRAY_COBBLED_CONCRETE_POWDER);
+                        entries.add(ModBlocks.GRAY_COBBLED_CONCRETE);
+                        entries.add(ModBlocks.GRAY_COBBLED_CONCRETE_POWDER);
+                        entries.add(ModBlocks.BLACK_COBBLED_CONCRETE);
+                        entries.add(ModBlocks.BLACK_COBBLED_CONCRETE_POWDER);
+                        entries.add(ModBlocks.BROWN_COBBLED_CONCRETE);
+                        entries.add(ModBlocks.BROWN_COBBLED_CONCRETE_POWDER);
+                        entries.add(ModBlocks.RED_COBBLED_CONCRETE);
+                        entries.add(ModBlocks.RED_COBBLED_CONCRETE_POWDER);
+                        entries.add(ModBlocks.ORANGE_COBBLED_CONCRETE);
+                        entries.add(ModBlocks.ORANGE_COBBLED_CONCRETE_POWDER);
+                        entries.add(ModBlocks.YELLOW_COBBLED_CONCRETE);
+                        entries.add(ModBlocks.YELLOW_COBBLED_CONCRETE_POWDER);
+                        entries.add(ModBlocks.LIME_COBBLED_CONCRETE);
+                        entries.add(ModBlocks.LIME_COBBLED_CONCRETE_POWDER);
+                        entries.add(ModBlocks.GREEN_COBBLED_CONCRETE);
+                        entries.add(ModBlocks.GREEN_COBBLED_CONCRETE_POWDER);
+                        entries.add(ModBlocks.CYAN_COBBLED_CONCRETE);
+                        entries.add(ModBlocks.CYAN_COBBLED_CONCRETE_POWDER);
+                        entries.add(ModBlocks.LIGHT_BLUE_COBBLED_CONCRETE);
+                        entries.add(ModBlocks.LIGHT_BLUE_COBBLED_CONCRETE_POWDER);
+                        entries.add(ModBlocks.BLUE_COBBLED_CONCRETE);
+                        entries.add(ModBlocks.BLUE_COBBLED_CONCRETE_POWDER);
+                        entries.add(ModBlocks.PURPLE_COBBLED_CONCRETE);
+                        entries.add(ModBlocks.PURPLE_COBBLED_CONCRETE_POWDER);
+                        entries.add(ModBlocks.MAGENTA_COBBLED_CONCRETE);
+                        entries.add(ModBlocks.MAGENTA_COBBLED_CONCRETE_POWDER);
+                        entries.add(ModBlocks.PINK_COBBLED_CONCRETE);
+                        entries.add(ModBlocks.PINK_COBBLED_CONCRETE_POWDER);
 
                         entries.add(ModBlocks.PACKED_ICE_BRICKS);
                         entries.add(ModBlocks.PACKED_ICE_BRICKS_CRACKED);
@@ -410,7 +411,92 @@ public class ModItemGroups {
 
                     }).build());
 
+    public static final ItemGroup STEAMCRAFT_REWARDS = Registry.register(Registries.ITEM_GROUP,
+            new Identifier(Steamcraft.MOD_ID, "scr"),
+            FabricItemGroup.builder().displayName(Text.literal("SteamCraft Rewards"))
+                    .icon(() -> new ItemStack(ModRewardItems.WOLF_FURY_HELMET)).entries((displayContext, entries) -> {
+
+                        entries.add(ModRewardItems.LOOT_CHEST);
+
+                        entries.add(ModRewardItems.DRAGON_BANE_LOOT_CHEST);
+                        entries.add(ModRewardItems.DRAGON_BANE_HELMET);
+                        entries.add(ModRewardItems.DRAGON_BANE_CHESTPLATE);
+                        entries.add(ModRewardItems.DRAGON_BANE_LEGGINGS);
+                        entries.add(ModRewardItems.DRAGON_BANE_BOOTS);
+
+                        entries.add(ModRewardItems.ORIKALKUM_LOOT_CHEST);
+                        entries.add(ModRewardItems.ORIKALKUM_HELMET);
+                        entries.add(ModRewardItems.ORIKALKUM_CHESTPLATE);
+                        entries.add(ModRewardItems.ORIKALKUM_LEGGINGS);
+                        entries.add(ModRewardItems.ORIKALKUM_BOOTS);
+
+                        entries.add(ModRewardItems.ADAMANTITE_LOOT_CHEST);
+                        entries.add(ModRewardItems.ADAMANTITE_HELMET);
+                        entries.add(ModRewardItems.ADAMANTITE_CHESTPLATE);
+                        entries.add(ModRewardItems.ADAMANTITE_LEGGINGS);
+                        entries.add(ModRewardItems.ADAMANTITE_BOOTS);
+
+                        entries.add(ModRewardItems.MAGIRITE_LOOT_CHEST);
+                        entries.add(ModRewardItems.MAGIRITE_HELMET);
+                        entries.add(ModRewardItems.MAGIRITE_CHESTPLATE);
+                        entries.add(ModRewardItems.MAGIRITE_LEGGINGS);
+                        entries.add(ModRewardItems.MAGIRITE_BOOTS);
+
+                        entries.add(ModRewardItems.MYTHRIL_LOOT_CHEST);
+                        entries.add(ModRewardItems.MYTHRIL_HELMET);
+                        entries.add(ModRewardItems.MYTHRIL_CHESTPLATE);
+                        entries.add(ModRewardItems.MYTHRIL_LEGGINGS);
+                        entries.add(ModRewardItems.MYTHRIL_BOOTS);
+
+                        entries.add(ModRewardItems.DWARF_STEEL_LOOT_CHEST);
+                        entries.add(ModRewardItems.DWARF_STEEL_HELMET);
+                        entries.add(ModRewardItems.DWARF_STEEL_CHESTPLATE);
+                        entries.add(ModRewardItems.DWARF_STEEL_LEGGINGS);
+                        entries.add(ModRewardItems.DWARF_STEEL_BOOTS);
+
+                        entries.add(ModRewardItems.AER_LOOT_CHEST);
+                        entries.add(ModRewardItems.AER_HELMET);
+                        entries.add(ModRewardItems.AER_CHESTPLATE);
+                        entries.add(ModRewardItems.AER_LEGGINGS);
+                        entries.add(ModRewardItems.AER_BOOTS);
+
+                        entries.add(ModRewardItems.AQUA_LOOT_CHEST);
+                        entries.add(ModRewardItems.AQUA_HELMET);
+                        entries.add(ModRewardItems.AQUA_CHESTPLATE);
+                        entries.add(ModRewardItems.AQUA_LEGGINGS);
+                        entries.add(ModRewardItems.AQUA_BOOTS);
+
+                        entries.add(ModRewardItems.TERA_LOOT_CHEST);
+                        entries.add(ModRewardItems.TERA_HELMET);
+                        entries.add(ModRewardItems.TERA_CHESTPLATE);
+                        entries.add(ModRewardItems.TERA_LEGGINGS);
+                        entries.add(ModRewardItems.TERA_BOOTS);
+
+                        entries.add(ModRewardItems.IGNIS_LOOT_CHEST);
+                        entries.add(ModRewardItems.IGNIS_HELMET);
+                        entries.add(ModRewardItems.IGNIS_CHESTPLATE);
+                        entries.add(ModRewardItems.IGNIS_LEGGINGS);
+                        entries.add(ModRewardItems.IGNIS_BOOTS);
+
+                        entries.add(ModRewardItems.WOLF_FURY_LOOT_CHEST);
+                        entries.add(ModRewardItems.WOLF_FURY_HELMET);
+                        entries.add(ModRewardItems.WOLF_FURY_CHESTPLATE);
+                        entries.add(ModRewardItems.WOLF_FURY_LEGGINGS);
+                        entries.add(ModRewardItems.WOLF_FURY_BOOTS);
+
+//                        entries.add(ModRewardItems.AMETHYST_LOOT_CHEST);
+//                        entries.add(ModRewardItems.AMETHYST_HELMET);
+//                        entries.add(ModRewardItems.AMETHYST_CHESTPLATE);
+//                        entries.add(ModRewardItems.AMETHYST_LEGGINGS);
+//                        entries.add(ModRewardItems.AMETHYST_BOOTS);
+
+
+
+
+
+                    }).build());
+
     public static void registerItemGroups() {
-        Steamcraft.LOGGER.info("registering Item Groups for "+ Steamcraft.MOD_ID);
+        Steamcraft.LOGGER.info("registering Item Groups for " + Steamcraft.MOD_ID);
     }
 }

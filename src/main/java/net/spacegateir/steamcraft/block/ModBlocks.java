@@ -3,79 +3,59 @@ package net.spacegateir.steamcraft.block;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
+import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.spacegateir.steamcraft.Steamcraft;
-import net.spacegateir.steamcraft.block.arcane.*;
-import net.spacegateir.steamcraft.block.arcane_specal.*;
-import net.spacegateir.steamcraft.block.cauldronblocks.*;
+import net.spacegateir.steamcraft.block.arcane.ArcaneBlock;
+import net.spacegateir.steamcraft.block.arcane.ArcaneSlownessBlock;
+import net.spacegateir.steamcraft.block.arcane.ArcaneSpeedBlock;
+import net.spacegateir.steamcraft.block.arcane.ArcaneStarvingBlock;
+import net.spacegateir.steamcraft.block.arcane_specal.ArcaneVoidBlock;
+import net.spacegateir.steamcraft.block.cauldronblocks.DyedLavaCauldronBlock;
+import net.spacegateir.steamcraft.block.cauldronblocks.DyedWaterCauldronBlock;
 import net.spacegateir.steamcraft.block.custom.*;
 import net.spacegateir.steamcraft.block.path_blocks.*;
 import net.spacegateir.steamcraft.block.traps.*;
 import net.spacegateir.steamcraft.effect.ModEffects;
 
-import static net.minecraft.block.Blocks.CAULDRON;
+import java.util.EnumMap;
+import java.util.function.Function;
 
 public class ModBlocks {
+
+    public static final EnumMap<DyeColor, Block> COLOR_TO_LAVA_CAULDRON = new EnumMap<>(DyeColor.class);
+    public static final EnumMap<DyeColor, Block> COLOR_TO_WATER_CAULDRON = new EnumMap<>(DyeColor.class);
 
     public static final Block TEST_BLOCK = registerBlock("test_block",
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
 
     public static final Block AETHER_COIL = registerBlock("aether_coil",
             new AetherBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN)));
-    public static final Block AETHER_COIL_WHITE = registerBlock("aether_coil_white",
-            new AetherBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(50,2400)
-                    .nonOpaque().velocityMultiplier(1.25F).mapColor(MapColor.WHITE)));
-    public static final Block AETHER_COIL_LIGHT_GRAY = registerBlock("aether_coil_light_gray",
-            new AetherBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(50,2400)
-                    .nonOpaque().velocityMultiplier(1.25F).mapColor(MapColor.LIGHT_GRAY)));
-    public static final Block AETHER_COIL_GRAY = registerBlock("aether_coil_gray",
-            new AetherBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(50,2400)
-                    .nonOpaque().velocityMultiplier(1.25F).mapColor(MapColor.GRAY)));
-    public static final Block AETHER_COIL_BLACK = registerBlock("aether_coil_black",
-            new AetherBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(50,2400)
-                    .nonOpaque().velocityMultiplier(1.25F).mapColor(MapColor.BLACK)));
-    public static final Block AETHER_COIL_BROWN = registerBlock("aether_coil_brown",
-            new AetherBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(50,2400)
-                    .nonOpaque().velocityMultiplier(1.25F).mapColor(MapColor.BROWN)));
-    public static final Block AETHER_COIL_RED = registerBlock("aether_coil_red",
-            new AetherBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(50,2400)
-                    .nonOpaque().velocityMultiplier(1.25F).mapColor(MapColor.RED)));
-    public static final Block AETHER_COIL_ORANGE = registerBlock("aether_coil_orange",
-            new AetherBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(50,2400)
-                    .nonOpaque().velocityMultiplier(1.25F).mapColor(MapColor.ORANGE)));
-    public static final Block AETHER_COIL_YELLOW = registerBlock("aether_coil_yellow",
-            new AetherBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(50,2400)
-                    .nonOpaque().velocityMultiplier(1.25F).mapColor(MapColor.YELLOW)));
-    public static final Block AETHER_COIL_LIME = registerBlock("aether_coil_lime",
-            new AetherBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(50,2400)
-                    .nonOpaque().velocityMultiplier(1.25F).mapColor(MapColor.LIME)));
-    public static final Block AETHER_COIL_GREEN = registerBlock("aether_coil_green",
-            new AetherBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(50,2400)
-                    .nonOpaque().velocityMultiplier(1.25F).mapColor(MapColor.GREEN)));
-    public static final Block AETHER_COIL_CYAN = registerBlock("aether_coil_cyan",
-            new AetherBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(50,2400)
-                    .nonOpaque().velocityMultiplier(1.25F).mapColor(MapColor.CYAN)));
-    public static final Block AETHER_COIL_LIGHT_BLUE = registerBlock("aether_coil_light_blue",
-            new AetherBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(50,2400)
-                    .nonOpaque().velocityMultiplier(1.25F).mapColor(MapColor.LIGHT_BLUE)));
-    public static final Block AETHER_COIL_BLUE = registerBlock("aether_coil_blue",
-            new AetherBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(50,2400)
-                    .nonOpaque().velocityMultiplier(1.25F).mapColor(MapColor.BLUE)));
-    public static final Block AETHER_COIL_PURPLE = registerBlock("aether_coil_purple",
-            new AetherBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(50,2400)
-                    .nonOpaque().velocityMultiplier(1.25F).mapColor(MapColor.PURPLE)));
-    public static final Block AETHER_COIL_MAGENTA = registerBlock("aether_coil_magenta",
-            new AetherBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(50,2400)
-                    .nonOpaque().velocityMultiplier(1.25F).mapColor(MapColor.MAGENTA)));
-    public static final Block AETHER_COIL_PINK = registerBlock("aether_coil_pink",
-            new AetherBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(50,2400)
-                    .nonOpaque().velocityMultiplier(1.25F).mapColor(MapColor.PINK)));
+
+    public static final Block AETHER_COIL_WHITE = registerDyedAetherCoil("white", MapColor.WHITE);
+    public static final Block AETHER_COIL_LIGHT_GRAY = registerDyedAetherCoil("light_gray", MapColor.LIGHT_GRAY);
+    public static final Block AETHER_COIL_GRAY = registerDyedAetherCoil("gray", MapColor.GRAY);
+    public static final Block AETHER_COIL_BLACK = registerDyedAetherCoil("black", MapColor.BLACK);
+    public static final Block AETHER_COIL_BROWN = registerDyedAetherCoil("brown", MapColor.BROWN);
+    public static final Block AETHER_COIL_RED = registerDyedAetherCoil("red", MapColor.RED);
+    public static final Block AETHER_COIL_ORANGE = registerDyedAetherCoil("orange", MapColor.ORANGE);
+    public static final Block AETHER_COIL_YELLOW = registerDyedAetherCoil("yellow", MapColor.YELLOW);
+    public static final Block AETHER_COIL_LIME = registerDyedAetherCoil("lime", MapColor.LIME);
+    public static final Block AETHER_COIL_GREEN = registerDyedAetherCoil("green", MapColor.GREEN);
+    public static final Block AETHER_COIL_CYAN = registerDyedAetherCoil("cyan", MapColor.CYAN);
+    public static final Block AETHER_COIL_LIGHT_BLUE = registerDyedAetherCoil("light_blue", MapColor.LIGHT_BLUE);
+    public static final Block AETHER_COIL_BLUE = registerDyedAetherCoil("blue", MapColor.BLUE);
+    public static final Block AETHER_COIL_PURPLE = registerDyedAetherCoil("purple", MapColor.PURPLE);
+    public static final Block AETHER_COIL_MAGENTA = registerDyedAetherCoil("magenta", MapColor.MAGENTA);
+    public static final Block AETHER_COIL_PINK = registerDyedAetherCoil("pink", MapColor.PINK);
 
     public static final Block FOOLS_GOLD_BLOCK = registerBlock("fools_gold_block",
             new Block(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK)));
@@ -178,80 +158,80 @@ public class ModBlocks {
 
     // Arcane Blocks
 
-    public static final Block ARCANE_ABSORPTION_BLOCK = registerBlock("arcane_absorption_block",
-            new ArcaneAbsorptionBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_ABSORPTION_BLOCK = registerArcaneBlock(StatusEffects.ABSORPTION, signalStrength ->
+                    new StatusEffectInstance(StatusEffects.ABSORPTION, signalStrength * 2400 + 2400, signalStrength, false, false));
 
-    public static final Block ARCANE_BAD_OMEN_BLOCK = registerBlock("arcane_bad_omen_block",
-            new ArcaneBadOmenBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_BAD_OMEN_BLOCK = registerArcaneBlock(StatusEffects.BAD_OMEN, signalStrength ->
+                    new StatusEffectInstance(StatusEffects.BAD_OMEN, signalStrength * 2400 + 2400, signalStrength, false, false));
 
-    public static final Block ARCANE_BLINDNESS_BLOCK = registerBlock("arcane_blindness_block",
-            new ArcaneBlindnessBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_BLINDNESS_BLOCK = registerArcaneBlock(StatusEffects.BLINDNESS, signalStrength ->
+                    new StatusEffectInstance(StatusEffects.BLINDNESS, signalStrength == 0 ? 2400 : signalStrength * 1200 + 1200, signalStrength, false, false));
 
-    public static final Block ARCANE_CONDUIT_BLOCK = registerBlock("arcane_conduit_block",
-            new ArcaneConduitBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_CONDUIT_BLOCK = registerArcaneBlock(StatusEffects.CONDUIT_POWER, signalStrength ->
+                    new StatusEffectInstance(StatusEffects.CONDUIT_POWER, signalStrength * 2400 + 2400, signalStrength, false, false));
 
-    public static final Block ARCANE_DARKNESS_BLOCK = registerBlock("arcane_darkness_block",
-            new ArcaneDarknessBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_DARKNESS_BLOCK = registerArcaneBlock(StatusEffects.DARKNESS, signalStrength ->
+                    new StatusEffectInstance(StatusEffects.DARKNESS, signalStrength == 0 ? 2400 : signalStrength * 1200 + 1200, signalStrength, false, false));
 
-    public static final Block ARCANE_DOLPHINS_GRACE_BLOCK = registerBlock("arcane_dolphins_grace_block",
-            new ArcaneDolphinsGraceBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_DOLPHINS_GRACE_BLOCK = registerArcaneBlock(StatusEffects.DOLPHINS_GRACE, signalStrength ->
+                    new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE, signalStrength * 2400 + 2400, signalStrength, false, false));
 
-    public static final Block ARCANE_FIRE_RESISTANCE_BLOCK = registerBlock("arcane_fire_resistance_block",
-            new ArcaneFireResistanceBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_FIRE_RESISTANCE_BLOCK = registerArcaneBlock(StatusEffects.FIRE_RESISTANCE, signalStrength ->
+                    new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, signalStrength * 2400 + 2400, signalStrength, false, false));
 
-    public static final Block ARCANE_GLOWING_BLOCK = registerBlock("arcane_glowing_block",
-            new ArcaneGlowingBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_GLOWING_BLOCK = registerArcaneBlock(StatusEffects.GLOWING, signalStrength ->
+                    new StatusEffectInstance(StatusEffects.GLOWING, signalStrength * 2400 + 2400, signalStrength, false, false));
 
-    public static final Block ARCANE_HASTE_BLOCK = registerBlock("arcane_haste_block",
-            new ArcaneHasteBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_HASTE_BLOCK = registerArcaneBlock(StatusEffects.HASTE, signalStrength ->
+                    new StatusEffectInstance(StatusEffects.HASTE, signalStrength * 2400 + 2400, ((signalStrength == 0) ? 0 : 2400 /* TODO amplifier 2400? */) + signalStrength, false, false));
 
-    public static final Block ARCANE_HEALTH_BOOST_BLOCK = registerBlock("arcane_health_boost_block",
-            new ArcaneHealthBoostBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_HEALTH_BOOST_BLOCK = registerArcaneBlock(StatusEffects.HEALTH_BOOST, signalStrength ->
+                    new StatusEffectInstance(StatusEffects.HEALTH_BOOST, signalStrength * 1200 + 1200, signalStrength, false, false));
 
-    public static final Block ARCANE_HERO_OF_THE_VILLAGE_BLOCK = registerBlock("arcane_hero_of_the_village_block",
-            new ArcaneHeroOfTheVillageBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_HERO_OF_THE_VILLAGE_BLOCK = registerArcaneBlock(StatusEffects.HERO_OF_THE_VILLAGE, signalStrength ->
+                    new StatusEffectInstance(StatusEffects.HERO_OF_THE_VILLAGE, signalStrength * 2400 + 2400, signalStrength, false, false));
 
-    public static final Block ARCANE_INSTANT_DAMAGE_BLOCK = registerBlock("arcane_instant_damage_block",
-            new ArcaneInstantDamageBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_INSTANT_DAMAGE_BLOCK = registerArcaneBlock(StatusEffects.INSTANT_DAMAGE, signalStrength ->
+                    new StatusEffectInstance(StatusEffects.INSTANT_DAMAGE, signalStrength == 0 ? 1 : signalStrength * 10 + 10, signalStrength, false, false));
 
-    public static final Block ARCANE_INSTANT_HEALTH_BLOCK = registerBlock("arcane_instant_health_block",
-            new ArcaneInstantHealthBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_INSTANT_HEALTH_BLOCK = registerArcaneBlock(StatusEffects.INSTANT_HEALTH, signalStrength ->
+                    new StatusEffectInstance(StatusEffects.INSTANT_HEALTH, signalStrength * 1200 + 1200, signalStrength, false, false));
 
-    public static final Block ARCANE_INVISIBILITY_BLOCK = registerBlock("arcane_invisibility_block",
-            new ArcaneInvisibilityBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_INVISIBILITY_BLOCK = registerArcaneBlock(StatusEffects.INVISIBILITY, signalStrength ->
+                    new StatusEffectInstance(StatusEffects.INVISIBILITY, signalStrength * 2400 + 2400, signalStrength, false, false));
 
-    public static final Block ARCANE_JUMP_BOOST_BLOCK = registerBlock("arcane_jump_boost_block",
-            new ArcaneJumpBoostBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_JUMP_BOOST_BLOCK = registerArcaneBlock(StatusEffects.JUMP_BOOST, signalStrength ->
+                    new StatusEffectInstance(StatusEffects.JUMP_BOOST, signalStrength * 600 + 600, signalStrength == 0 ? 0 : signalStrength * 2 + 1, false, false));
 
-    public static final Block ARCANE_LEVITATION_BLOCK = registerBlock("arcane_levitation_block",
-            new ArcaneLevitationBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_LEVITATION_BLOCK = registerArcaneBlock(StatusEffects.LEVITATION, signalStrength ->
+                    new StatusEffectInstance(StatusEffects.LEVITATION, signalStrength * 600 + 600, signalStrength, false, false));
 
-    public static final Block ARCANE_LUCK_BLOCK = registerBlock("arcane_luck_block",
-            new ArcaneLuckBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_LUCK_BLOCK = registerArcaneBlock(StatusEffects.LUCK, signalStrength ->
+                    new StatusEffectInstance(StatusEffects.LUCK, signalStrength * 2400 + 2400, signalStrength, false, false));
 
-    public static final Block ARCANE_MINING_FATIGUE_BLOCK = registerBlock("arcane_mining_fatigue_block",
-            new ArcaneMiningFatigueBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_MINING_FATIGUE_BLOCK = registerArcaneBlock(StatusEffects.MINING_FATIGUE, signalStrength ->
+                    new StatusEffectInstance(StatusEffects.MINING_FATIGUE, signalStrength * 2400 + 2400, ((signalStrength == 0) ? 0 : 2400 /* TODO amplifier 2400? */) + signalStrength, false, false));
 
-    public static final Block ARCANE_NEAUSEA_BLOCK = registerBlock("arcane_neausea_block",
-            new ArcaneNeauseaBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_NEAUSEA_BLOCK = registerArcaneBlock(StatusEffects.NAUSEA, signalStrength ->
+                    new StatusEffectInstance(StatusEffects.NAUSEA, signalStrength * 2400 + 2400, signalStrength, false, false));
 
-    public static final Block ARCANE_NIGHT_VISION_BLOCK = registerBlock("arcane_night_vision_block",
-            new ArcaneNightVisionBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_NIGHT_VISION_BLOCK = registerArcaneBlock(StatusEffects.NIGHT_VISION, signalStrength ->
+                    new StatusEffectInstance(StatusEffects.NIGHT_VISION, signalStrength * 2400 + 2400, signalStrength, false, false));
 
-    public static final Block ARCANE_POISION_BLOCK = registerBlock("arcane_poision_block",
-            new ArcanePoisionBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_POISION_BLOCK = registerArcaneBlock(StatusEffects.POISON, signalStrength ->
+                    new StatusEffectInstance(StatusEffects.POISON, signalStrength * 2400 + 2400, signalStrength, false, false));
 
-    public static final Block ARCANE_REGENERATION_BLOCK = registerBlock("arcane_regeneration_block",
-            new ArcaneRegenerationBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_REGENERATION_BLOCK = registerArcaneBlock(StatusEffects.REGENERATION, signalStrength ->
+                    new StatusEffectInstance(StatusEffects.REGENERATION, signalStrength * 600 + 600, signalStrength, false, false));
 
-    public static final Block ARCANE_RESISTANCE_BLOCK = registerBlock("arcane_resistance_block",
-            new ArcaneResistanceBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_RESISTANCE_BLOCK = registerArcaneBlock(StatusEffects.RESISTANCE, signalStrength ->
+                    new StatusEffectInstance(StatusEffects.RESISTANCE, signalStrength * 2400 + 2400, signalStrength, false, false));
 
-    public static final Block ARCANE_SATUATION_BLOCK = registerBlock("arcane_satuation_block",
-            new ArcaneSatuationBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_SATUATION_BLOCK = registerArcaneBlock(StatusEffects.SATURATION, signalStrength ->
+                    new StatusEffectInstance(StatusEffects.SATURATION, signalStrength * 2400 + 2400, signalStrength, false, false));
 
-    public static final Block ARCANE_SLOW_FALL_BLOCK = registerBlock("arcane_slow_fall_block",
-            new ArcaneSlowFallBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_SLOW_FALL_BLOCK = registerArcaneBlock(StatusEffects.SLOW_FALLING, signalStrength ->
+                    new StatusEffectInstance(StatusEffects.SLOW_FALLING, signalStrength * 2400 + 2400, signalStrength, false, false));
 
     public static final Block ARCANE_SLOWNESS_BLOCK = registerBlock("arcane_slowness_block",
             new ArcaneSlownessBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
@@ -262,43 +242,42 @@ public class ModBlocks {
     public static final Block ARCANE_STARVING_BLOCK = registerBlock("arcane_starving_block",
             new ArcaneStarvingBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
 
-    public static final Block ARCANE_STRENGTH_BLOCK = registerBlock("arcane_strength_block",
-            new ArcaneStrengthBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_STRENGTH_BLOCK = registerArcaneBlock(StatusEffects.STRENGTH, signalStrength ->
+                    new StatusEffectInstance(StatusEffects.STRENGTH, signalStrength * 2400 + 2400, signalStrength, false, false));
 
-    public static final Block ARCANE_UNLUCK_BLOCK = registerBlock("arcane_unluck_block",
-            new ArcaneUnluckBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_UNLUCK_BLOCK = registerArcaneBlock(StatusEffects.UNLUCK, signalStrength ->
+                    new StatusEffectInstance(StatusEffects.UNLUCK, signalStrength * 2400 + 2400, signalStrength, false, false));
 
-    public static final Block ARCANE_WATER_BREATHING_BLOCK = registerBlock("arcane_water_breathing_block",
-            new ArcaneWaterBreathingBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_WATER_BREATHING_BLOCK = registerArcaneBlock(StatusEffects.WATER_BREATHING, signalStrength ->
+                    new StatusEffectInstance(StatusEffects.WATER_BREATHING, signalStrength * 2400 + 2400, signalStrength, false, false));
 
-    public static final Block ARCANE_WEAKNESS_BLOCK = registerBlock("arcane_weakness_block",
-            new ArcaneWeaknessBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_WEAKNESS_BLOCK = registerArcaneBlock(StatusEffects.WEAKNESS, signalStrength ->
+                    new StatusEffectInstance(StatusEffects.WEAKNESS, signalStrength * 2400 + 2400, signalStrength, false, false));
 
-    public static final Block ARCANE_WITHER_BLOCK = registerBlock("arcane_wither_block",
-            new ArcaneWitherBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
-
+    public static final Block ARCANE_WITHER_BLOCK = registerArcaneBlock(StatusEffects.WITHER, signalStrength ->
+                    new StatusEffectInstance(StatusEffects.WITHER, signalStrength * 600 + 600, signalStrength, false, false));
 
 
     public static final Block ARCANE_VOID_BLOCK = registerBlock("arcane_void_block",
             new ArcaneVoidBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
 
-    public static final Block ARCANE_CLEAR_NEGATIVE_BLOCK = registerBlock("arcane_clear_negative_block",
-            new ArcaneClearNegativeBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_CLEAR_NEGATIVE_BLOCK = registerArcaneBlock(ModEffects.CLEAR_NEGATIVE_EFFECT, signalStrength ->
+                    new StatusEffectInstance(ModEffects.CLEAR_NEGATIVE_EFFECT, 1, 200, false, false));
 
-    public static final Block ARCANE_CLEAR_POSITIVE_BLOCK = registerBlock("arcane_clear_positive_block",
-            new ArcaneClearPositiveBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_CLEAR_POSITIVE_BLOCK = registerArcaneBlock(ModEffects.CLEAR_POSITIVE_EFFECT, signalStrength ->
+                    new StatusEffectInstance(ModEffects.CLEAR_POSITIVE_EFFECT, 1, 200, false, false));
 
-    public static final Block ARCANE_CLEAR_NEUTRAL_BLOCK = registerBlock("arcane_clear_neutral_block",
-            new ArcaneClearNeutralBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_CLEAR_NEUTRAL_BLOCK = registerArcaneBlock(ModEffects.CLEAR_NEUTRAL_EFFECT, signalStrength ->
+                    new StatusEffectInstance(ModEffects.CLEAR_NEUTRAL_EFFECT, 1, 200, false, false));
 
-    public static final Block ARCANE_DISORIENT_BLOCK = registerBlock("arcane_disorient_block",
-            new ArcaneDisorientBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_DISORIENT_BLOCK = registerArcaneBlock(ModEffects.DISORIENT, signalStrength ->
+                    new StatusEffectInstance(ModEffects.DISORIENT, signalStrength * 600 + 600, signalStrength, false, false));
 
-    public static final Block ARCANE_STICKY_FEAT_BLOCK = registerBlock("arcane_sticky_feat_block",
-            new ArcaneStickyFeatBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_STICKY_FEAT_BLOCK = registerArcaneBlock(ModEffects.STICKY_FEAT, signalStrength ->
+                    new StatusEffectInstance(ModEffects.STICKY_FEAT, signalStrength * 2400 + 2400, signalStrength, false, false));
 
-    public static final Block ARCANE_FREAKY_BUNNY_BLOCK = registerBlock("arcane_freaky_bunny_block",
-            new ArcanFreakyBunnyBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_FREAKY_BUNNY_BLOCK = registerArcaneBlock(ModEffects.FREAKY_BUNNY, signalStrength ->
+                    new StatusEffectInstance(ModEffects.FREAKY_BUNNY, signalStrength * 2400 + 2400, signalStrength, false, false));
 
 
     // Trap Blocks
@@ -364,184 +343,104 @@ public class ModBlocks {
 
     // Concrete Blocks
 
-    public static final Block COBBLED_WHITE_CONCRETE = registerBlock("cobbled_white_concrete",
-            new Block(FabricBlockSettings.copyOf(Blocks.WHITE_CONCRETE)));
-    public static final Block COBBLED_WHITE_CONCRETE_POWDER = registerBlock("cobbled_white_concrete_powder",
-            new ConcretePowderBlock(COBBLED_WHITE_CONCRETE, FabricBlockSettings.copyOf(Blocks.WHITE_CONCRETE_POWDER)));
+    public static final Block WHITE_COBBLED_CONCRETE = registerCobbledConcrete(DyeColor.WHITE);
+    public static final Block WHITE_COBBLED_CONCRETE_POWDER = registerCobbledConcretePowder(DyeColor.WHITE, WHITE_COBBLED_CONCRETE);
 
-    public static final Block COBBLED_LIGHT_GRAY_CONCRETE = registerBlock("cobbled_light_gray_concrete",
-            new Block(FabricBlockSettings.copyOf(Blocks.LIGHT_GRAY_CONCRETE)));
-    public static final Block COBBLED_LIGHT_GRAY_CONCRETE_POWDER = registerBlock("cobbled_light_gray_concrete_powder",
-            new ConcretePowderBlock(COBBLED_LIGHT_GRAY_CONCRETE, FabricBlockSettings.copyOf(Blocks.LIGHT_GRAY_CONCRETE_POWDER)));
+    public static final Block LIGHT_GRAY_COBBLED_CONCRETE = registerCobbledConcrete(DyeColor.LIGHT_GRAY);
+    public static final Block LIGHT_GRAY_COBBLED_CONCRETE_POWDER = registerCobbledConcretePowder(DyeColor.LIGHT_GRAY, LIGHT_GRAY_COBBLED_CONCRETE);
 
-    public static final Block COBBLED_GRAY_CONCRETE = registerBlock("cobbled_gray_concrete",
-            new Block(FabricBlockSettings.copyOf(Blocks.GRAY_CONCRETE)));
-    public static final Block COBBLED_GRAY_CONCRETE_POWDER = registerBlock("cobbled_gray_concrete_powder",
-            new ConcretePowderBlock(COBBLED_GRAY_CONCRETE, FabricBlockSettings.copyOf(Blocks.GRAY_CONCRETE_POWDER)));
+    public static final Block GRAY_COBBLED_CONCRETE = registerCobbledConcrete(DyeColor.GRAY);
+    public static final Block GRAY_COBBLED_CONCRETE_POWDER = registerCobbledConcretePowder(DyeColor.GRAY, GRAY_COBBLED_CONCRETE);
 
-    public static final Block COBBLED_BLACK_CONCRETE = registerBlock("cobbled_black_concrete",
-            new Block(FabricBlockSettings.copyOf(Blocks.BLACK_CONCRETE)));
-    public static final Block COBBLED_BLACK_CONCRETE_POWDER = registerBlock("cobbled_black_concrete_powder",
-            new ConcretePowderBlock(COBBLED_BLACK_CONCRETE, FabricBlockSettings.copyOf(Blocks.BLACK_CONCRETE_POWDER)));
+    public static final Block BLACK_COBBLED_CONCRETE = registerCobbledConcrete(DyeColor.BLACK);
+    public static final Block BLACK_COBBLED_CONCRETE_POWDER = registerCobbledConcretePowder(DyeColor.BLACK, BLACK_COBBLED_CONCRETE);
 
-    public static final Block COBBLED_BROWN_CONCRETE = registerBlock("cobbled_brown_concrete",
-            new Block(FabricBlockSettings.copyOf(Blocks.BROWN_CONCRETE)));
-    public static final Block COBBLED_BROWN_CONCRETE_POWDER = registerBlock("cobbled_brown_concrete_powder",
-            new ConcretePowderBlock(COBBLED_BROWN_CONCRETE, FabricBlockSettings.copyOf(Blocks.BROWN_CONCRETE_POWDER)));
+    public static final Block BROWN_COBBLED_CONCRETE = registerCobbledConcrete(DyeColor.BROWN);
+    public static final Block BROWN_COBBLED_CONCRETE_POWDER = registerCobbledConcretePowder(DyeColor.BROWN, BROWN_COBBLED_CONCRETE);
 
-    public static final Block COBBLED_RED_CONCRETE = registerBlock("cobbled_red_concrete",
-            new Block(FabricBlockSettings.copyOf(Blocks.RED_CONCRETE)));
-    public static final Block COBBLED_RED_CONCRETE_POWDER = registerBlock("cobbled_red_concrete_powder",
-            new ConcretePowderBlock(COBBLED_RED_CONCRETE, FabricBlockSettings.copyOf(Blocks.RED_CONCRETE_POWDER)));
+    public static final Block RED_COBBLED_CONCRETE = registerCobbledConcrete(DyeColor.RED);
+    public static final Block RED_COBBLED_CONCRETE_POWDER = registerCobbledConcretePowder(DyeColor.RED, RED_COBBLED_CONCRETE);
 
-    public static final Block COBBLED_ORANGE_CONCRETE = registerBlock("cobbled_orange_concrete",
-            new Block(FabricBlockSettings.copyOf(Blocks.ORANGE_CONCRETE)));
-    public static final Block COBBLED_ORANGE_CONCRETE_POWDER = registerBlock("cobbled_orange_concrete_powder",
-            new ConcretePowderBlock(COBBLED_ORANGE_CONCRETE, FabricBlockSettings.copyOf(Blocks.ORANGE_CONCRETE_POWDER)));
+    public static final Block ORANGE_COBBLED_CONCRETE = registerCobbledConcrete(DyeColor.ORANGE);
+    public static final Block ORANGE_COBBLED_CONCRETE_POWDER = registerCobbledConcretePowder(DyeColor.ORANGE, ORANGE_COBBLED_CONCRETE);
 
-    public static final Block COBBLED_YELLOW_CONCRETE = registerBlock("cobbled_yellow_concrete",
-            new Block(FabricBlockSettings.copyOf(Blocks.YELLOW_CONCRETE)));
-    public static final Block COBBLED_YELLOW_CONCRETE_POWDER = registerBlock("cobbled_yellow_concrete_powder",
-            new ConcretePowderBlock(COBBLED_YELLOW_CONCRETE, FabricBlockSettings.copyOf(Blocks.YELLOW_CONCRETE_POWDER)));
+    public static final Block YELLOW_COBBLED_CONCRETE = registerCobbledConcrete(DyeColor.YELLOW);
+    public static final Block YELLOW_COBBLED_CONCRETE_POWDER = registerCobbledConcretePowder(DyeColor.YELLOW, YELLOW_COBBLED_CONCRETE);
 
-    public static final Block COBBLED_LIME_CONCRETE = registerBlock("cobbled_lime_concrete",
-            new Block(FabricBlockSettings.copyOf(Blocks.LIME_CONCRETE)));
-    public static final Block COBBLED_LIME_CONCRETE_POWDER = registerBlock("cobbled_lime_concrete_powder",
-            new ConcretePowderBlock(COBBLED_LIME_CONCRETE, FabricBlockSettings.copyOf(Blocks.LIME_CONCRETE_POWDER)));
+    public static final Block LIME_COBBLED_CONCRETE = registerCobbledConcrete(DyeColor.LIME);
+    public static final Block LIME_COBBLED_CONCRETE_POWDER = registerCobbledConcretePowder(DyeColor.LIME, LIME_COBBLED_CONCRETE);
 
-    public static final Block COBBLED_GREEN_CONCRETE = registerBlock("cobbled_green_concrete",
-            new Block(FabricBlockSettings.copyOf(Blocks.GREEN_CONCRETE)));
-    public static final Block COBBLED_GREEN_CONCRETE_POWDER = registerBlock("cobbled_green_concrete_powder",
-            new ConcretePowderBlock(COBBLED_GREEN_CONCRETE, FabricBlockSettings.copyOf(Blocks.GREEN_CONCRETE_POWDER)));
+    public static final Block GREEN_COBBLED_CONCRETE = registerCobbledConcrete(DyeColor.GREEN);
+    public static final Block GREEN_COBBLED_CONCRETE_POWDER = registerCobbledConcretePowder(DyeColor.GREEN, GREEN_COBBLED_CONCRETE);
 
-    public static final Block COBBLED_CYAN_CONCRETE = registerBlock("cobbled_cyan_concrete",
-            new Block(FabricBlockSettings.copyOf(Blocks.CYAN_CONCRETE)));
-    public static final Block COBBLED_CYAN_CONCRETE_POWDER = registerBlock("cobbled_cyan_concrete_powder",
-            new ConcretePowderBlock(COBBLED_CYAN_CONCRETE, FabricBlockSettings.copyOf(Blocks.CYAN_CONCRETE_POWDER)));
+    public static final Block CYAN_COBBLED_CONCRETE = registerCobbledConcrete(DyeColor.CYAN);
+    public static final Block CYAN_COBBLED_CONCRETE_POWDER = registerCobbledConcretePowder(DyeColor.CYAN, CYAN_COBBLED_CONCRETE);
 
-    public static final Block COBBLED_LIGHT_BLUE_CONCRETE = registerBlock("cobbled_light_blue_concrete",
-            new Block(FabricBlockSettings.copyOf(Blocks.LIGHT_BLUE_CONCRETE)));
-    public static final Block COBBLED_LIGHT_BLUE_CONCRETE_POWDER = registerBlock("cobbled_light_blue_concrete_powder",
-            new ConcretePowderBlock(COBBLED_LIGHT_BLUE_CONCRETE, FabricBlockSettings.copyOf(Blocks.LIGHT_BLUE_CONCRETE_POWDER)));
+    public static final Block LIGHT_BLUE_COBBLED_CONCRETE = registerCobbledConcrete(DyeColor.LIGHT_BLUE);
+    public static final Block LIGHT_BLUE_COBBLED_CONCRETE_POWDER = registerCobbledConcretePowder(DyeColor.LIGHT_BLUE, LIGHT_BLUE_COBBLED_CONCRETE);
 
-    public static final Block COBBLED_BLUE_CONCRETE = registerBlock("cobbled_blue_concrete",
-            new Block(FabricBlockSettings.copyOf(Blocks.BLUE_CONCRETE)));
-    public static final Block COBBLED_BLUE_CONCRETE_POWDER = registerBlock("cobbled_blue_concrete_powder",
-            new ConcretePowderBlock(COBBLED_BLUE_CONCRETE, FabricBlockSettings.copyOf(Blocks.BLUE_CONCRETE_POWDER)));
+    public static final Block BLUE_COBBLED_CONCRETE = registerCobbledConcrete(DyeColor.BLUE);
+    public static final Block BLUE_COBBLED_CONCRETE_POWDER = registerCobbledConcretePowder(DyeColor.BLUE, BLUE_COBBLED_CONCRETE);
 
-    public static final Block COBBLED_PURPLE_CONCRETE = registerBlock("cobbled_purple_concrete",
-            new Block(FabricBlockSettings.copyOf(Blocks.PURPLE_CONCRETE)));
-    public static final Block COBBLED_PURPLE_CONCRETE_POWDER = registerBlock("cobbled_purple_concrete_powder",
-            new ConcretePowderBlock(COBBLED_PURPLE_CONCRETE, FabricBlockSettings.copyOf(Blocks.PURPLE_CONCRETE_POWDER)));
+    public static final Block PURPLE_COBBLED_CONCRETE = registerCobbledConcrete(DyeColor.PURPLE);
+    public static final Block PURPLE_COBBLED_CONCRETE_POWDER = registerCobbledConcretePowder(DyeColor.PURPLE, PURPLE_COBBLED_CONCRETE);
 
-    public static final Block COBBLED_MAGENTA_CONCRETE = registerBlock("cobbled_magenta_concrete",
-            new Block(FabricBlockSettings.copyOf(Blocks.MAGENTA_CONCRETE)));
-    public static final Block COBBLED_MAGENTA_CONCRETE_POWDER = registerBlock("cobbled_magenta_concrete_powder",
-            new ConcretePowderBlock(COBBLED_MAGENTA_CONCRETE, FabricBlockSettings.copyOf(Blocks.MAGENTA_CONCRETE_POWDER)));
+    public static final Block MAGENTA_COBBLED_CONCRETE = registerCobbledConcrete(DyeColor.MAGENTA);
+    public static final Block MAGENTA_COBBLED_CONCRETE_POWDER = registerCobbledConcretePowder(DyeColor.MAGENTA, MAGENTA_COBBLED_CONCRETE);
 
-    public static final Block COBBLED_PINK_CONCRETE = registerBlock("cobbled_pink_concrete",
-            new Block(FabricBlockSettings.copyOf(Blocks.PINK_CONCRETE)));
-    public static final Block COBBLED_PINK_CONCRETE_POWDER = registerBlock("cobbled_pink_concrete_powder",
-            new ConcretePowderBlock(COBBLED_PINK_CONCRETE, FabricBlockSettings.copyOf(Blocks.PINK_CONCRETE_POWDER)));
+    public static final Block PINK_COBBLED_CONCRETE = registerCobbledConcrete(DyeColor.PINK);
+    public static final Block PINK_COBBLED_CONCRETE_POWDER = registerCobbledConcretePowder(DyeColor.PINK, PINK_COBBLED_CONCRETE);
 
 
 
 
-    // WHITE
-    public static final Block WHITE_LAVA_CAULDRON_BLOCK = registerBlock("white_lava_cauldron_block",
-            new WhiteLavaCauldronBlock(AbstractBlock.Settings.copy(CAULDRON).luminance(state -> 15)));
-    public static final Block WHITE_WATER_CAULDRON_BLOCK = registerBlock("white_water_cauldron_block",
-            new WhiteWaterCauldronBlock(AbstractBlock.Settings.copy(CAULDRON)));
+    public static final Block WHITE_LAVA_CAULDRON_BLOCK = registerDyedLavaCauldron(DyeColor.WHITE);
+    public static final Block WHITE_WATER_CAULDRON_BLOCK = registerDyedWaterCauldron(DyeColor.WHITE);
 
-    // ORANGE
-    public static final Block ORANGE_LAVA_CAULDRON_BLOCK = registerBlock("orange_lava_cauldron_block",
-            new OrangeLavaCauldronBlock(AbstractBlock.Settings.copy(CAULDRON).luminance(state -> 15)));
-    public static final Block ORANGE_WATER_CAULDRON_BLOCK = registerBlock("orange_water_cauldron_block",
-            new OrangeWaterCauldronBlock(AbstractBlock.Settings.copy(CAULDRON)));
+    public static final Block ORANGE_LAVA_CAULDRON_BLOCK = registerDyedLavaCauldron(DyeColor.ORANGE);
+    public static final Block ORANGE_WATER_CAULDRON_BLOCK = registerDyedWaterCauldron(DyeColor.ORANGE);
 
-    // MAGENTA
-    public static final Block MAGENTA_LAVA_CAULDRON_BLOCK = registerBlock("magenta_lava_cauldron_block",
-            new MagentaLavaCauldronBlock(AbstractBlock.Settings.copy(CAULDRON).luminance(state -> 15)));
-    public static final Block MAGENTA_WATER_CAULDRON_BLOCK = registerBlock("magenta_water_cauldron_block",
-            new MagentaWaterCauldronBlock(AbstractBlock.Settings.copy(CAULDRON)));
+    public static final Block MAGENTA_LAVA_CAULDRON_BLOCK = registerDyedLavaCauldron(DyeColor.MAGENTA);
+    public static final Block MAGENTA_WATER_CAULDRON_BLOCK = registerDyedWaterCauldron(DyeColor.MAGENTA);
 
-    // LIGHT BLUE
-    public static final Block LIGHT_BLUE_LAVA_CAULDRON_BLOCK = registerBlock("light_blue_lava_cauldron_block",
-            new LightBlueLavaCauldronBlock(AbstractBlock.Settings.copy(CAULDRON).luminance(state -> 15)));
-    public static final Block LIGHT_BLUE_WATER_CAULDRON_BLOCK = registerBlock("light_blue_water_cauldron_block",
-            new LightBlueWaterCauldronBlock(AbstractBlock.Settings.copy(CAULDRON)));
+    public static final Block LIGHT_BLUE_LAVA_CAULDRON_BLOCK = registerDyedLavaCauldron(DyeColor.LIGHT_BLUE);
+    public static final Block LIGHT_BLUE_WATER_CAULDRON_BLOCK = registerDyedWaterCauldron(DyeColor.LIGHT_BLUE);
 
-    // YELLOW
-    public static final Block YELLOW_LAVA_CAULDRON_BLOCK = registerBlock("yellow_lava_cauldron_block",
-            new YellowLavaCauldronBlock(AbstractBlock.Settings.copy(CAULDRON).luminance(state -> 15)));
-    public static final Block YELLOW_WATER_CAULDRON_BLOCK = registerBlock("yellow_water_cauldron_block",
-            new YellowWaterCauldronBlock(AbstractBlock.Settings.copy(CAULDRON)));
+    public static final Block YELLOW_LAVA_CAULDRON_BLOCK = registerDyedLavaCauldron(DyeColor.YELLOW);
+    public static final Block YELLOW_WATER_CAULDRON_BLOCK = registerDyedWaterCauldron(DyeColor.YELLOW);
 
-    // LIME
-    public static final Block LIME_LAVA_CAULDRON_BLOCK = registerBlock("lime_lava_cauldron_block",
-            new LimeLavaCauldronBlock(AbstractBlock.Settings.copy(CAULDRON).luminance(state -> 15)));
-    public static final Block LIME_WATER_CAULDRON_BLOCK = registerBlock("lime_water_cauldron_block",
-            new LimeWaterCauldronBlock(AbstractBlock.Settings.copy(CAULDRON)));
+    public static final Block LIME_LAVA_CAULDRON_BLOCK = registerDyedLavaCauldron(DyeColor.LIME);
+    public static final Block LIME_WATER_CAULDRON_BLOCK = registerDyedWaterCauldron(DyeColor.LIME);
 
-    // PINK
-    public static final Block PINK_LAVA_CAULDRON_BLOCK = registerBlock("pink_lava_cauldron_block",
-            new PinkLavaCauldronBlock(AbstractBlock.Settings.copy(CAULDRON).luminance(state -> 15)));
-    public static final Block PINK_WATER_CAULDRON_BLOCK = registerBlock("pink_water_cauldron_block",
-            new PinkWaterCauldronBlock(AbstractBlock.Settings.copy(CAULDRON)));
+    public static final Block PINK_LAVA_CAULDRON_BLOCK = registerDyedLavaCauldron(DyeColor.PINK);
+    public static final Block PINK_WATER_CAULDRON_BLOCK = registerDyedWaterCauldron(DyeColor.PINK);
 
-    // GRAY
-    public static final Block GRAY_LAVA_CAULDRON_BLOCK = registerBlock("gray_lava_cauldron_block",
-            new GrayLavaCauldronBlock(AbstractBlock.Settings.copy(CAULDRON).luminance(state -> 15)));
-    public static final Block GRAY_WATER_CAULDRON_BLOCK = registerBlock("gray_water_cauldron_block",
-            new GrayWaterCauldronBlock(AbstractBlock.Settings.copy(CAULDRON)));
+    public static final Block GRAY_LAVA_CAULDRON_BLOCK = registerDyedLavaCauldron(DyeColor.GRAY);
+    public static final Block GRAY_WATER_CAULDRON_BLOCK = registerDyedWaterCauldron(DyeColor.GRAY);
 
-    // LIGHT GRAY
-    public static final Block LIGHT_GRAY_LAVA_CAULDRON_BLOCK = registerBlock("light_gray_lava_cauldron_block",
-            new LightGrayLavaCauldronBlock(AbstractBlock.Settings.copy(CAULDRON).luminance(state -> 15)));
-    public static final Block LIGHT_GRAY_WATER_CAULDRON_BLOCK = registerBlock("light_gray_water_cauldron_block",
-            new LightGrayWaterCauldronBlock(AbstractBlock.Settings.copy(CAULDRON)));
+    public static final Block LIGHT_GRAY_LAVA_CAULDRON_BLOCK = registerDyedLavaCauldron(DyeColor.LIGHT_GRAY);
+    public static final Block LIGHT_GRAY_WATER_CAULDRON_BLOCK = registerDyedWaterCauldron(DyeColor.LIGHT_GRAY);
 
-    // CYAN
-    public static final Block CYAN_LAVA_CAULDRON_BLOCK = registerBlock("cyan_lava_cauldron_block",
-            new CyanLavaCauldronBlock(AbstractBlock.Settings.copy(CAULDRON).luminance(state -> 15)));
-    public static final Block CYAN_WATER_CAULDRON_BLOCK = registerBlock("cyan_water_cauldron_block",
-            new CyanWaterCauldronBlock(AbstractBlock.Settings.copy(CAULDRON)));
+    public static final Block CYAN_LAVA_CAULDRON_BLOCK = registerDyedLavaCauldron(DyeColor.CYAN);
+    public static final Block CYAN_WATER_CAULDRON_BLOCK = registerDyedWaterCauldron(DyeColor.CYAN);
 
-    // PURPLE
-    public static final Block PURPLE_LAVA_CAULDRON_BLOCK = registerBlock("purple_lava_cauldron_block",
-            new PurpleLavaCauldronBlock(AbstractBlock.Settings.copy(CAULDRON).luminance(state -> 15)));
-    public static final Block PURPLE_WATER_CAULDRON_BLOCK = registerBlock("purple_water_cauldron_block",
-            new PurpleWaterCauldronBlock(AbstractBlock.Settings.copy(CAULDRON)));
+    public static final Block PURPLE_LAVA_CAULDRON_BLOCK = registerDyedLavaCauldron(DyeColor.PURPLE);
+    public static final Block PURPLE_WATER_CAULDRON_BLOCK = registerDyedWaterCauldron(DyeColor.PURPLE);
 
-    // BLUE
-    public static final Block BLUE_LAVA_CAULDRON_BLOCK = registerBlock("blue_lava_cauldron_block",
-            new BlueLavaCauldronBlock(AbstractBlock.Settings.copy(CAULDRON).luminance(state -> 15)));
-    public static final Block BLUE_WATER_CAULDRON_BLOCK = registerBlock("blue_water_cauldron_block",
-            new BlueWaterCauldronBlock(AbstractBlock.Settings.copy(CAULDRON)));
+    public static final Block BLUE_LAVA_CAULDRON_BLOCK = registerDyedLavaCauldron(DyeColor.BLUE);
+    public static final Block BLUE_WATER_CAULDRON_BLOCK = registerDyedWaterCauldron(DyeColor.BLUE);
 
-    // BROWN
-    public static final Block BROWN_LAVA_CAULDRON_BLOCK = registerBlock("brown_lava_cauldron_block",
-            new BrownLavaCauldronBlock(AbstractBlock.Settings.copy(CAULDRON).luminance(state -> 15)));
-    public static final Block BROWN_WATER_CAULDRON_BLOCK = registerBlock("brown_water_cauldron_block",
-            new BrownWaterCauldronBlock(AbstractBlock.Settings.copy(CAULDRON)));
+    public static final Block BROWN_LAVA_CAULDRON_BLOCK = registerDyedLavaCauldron(DyeColor.BROWN);
+    public static final Block BROWN_WATER_CAULDRON_BLOCK = registerDyedWaterCauldron(DyeColor.BROWN);
 
-    // GREEN
-    public static final Block GREEN_LAVA_CAULDRON_BLOCK = registerBlock("green_lava_cauldron_block",
-            new GreenLavaCauldronBlock(AbstractBlock.Settings.copy(CAULDRON).luminance(state -> 15)));
-    public static final Block GREEN_WATER_CAULDRON_BLOCK = registerBlock("green_water_cauldron_block",
-            new GreenWaterCauldronBlock(AbstractBlock.Settings.copy(CAULDRON)));
+    public static final Block GREEN_LAVA_CAULDRON_BLOCK = registerDyedLavaCauldron(DyeColor.GREEN);
+    public static final Block GREEN_WATER_CAULDRON_BLOCK = registerDyedWaterCauldron(DyeColor.GREEN);
 
-    // RED
-    public static final Block RED_LAVA_CAULDRON_BLOCK = registerBlock("red_lava_cauldron_block",
-            new RedLavaCauldronBlock(AbstractBlock.Settings.copy(CAULDRON).luminance(state -> 15)));
-    public static final Block RED_WATER_CAULDRON_BLOCK = registerBlock("red_water_cauldron_block",
-            new RedWaterCauldronBlock(AbstractBlock.Settings.copy(CAULDRON)));
+    public static final Block RED_LAVA_CAULDRON_BLOCK = registerDyedLavaCauldron(DyeColor.RED);
+    public static final Block RED_WATER_CAULDRON_BLOCK = registerDyedWaterCauldron(DyeColor.RED);
 
-    // BLACK
-    public static final Block BLACK_LAVA_CAULDRON_BLOCK = registerBlock("black_lava_cauldron_block",
-            new BlackLavaCauldronBlock(AbstractBlock.Settings.copy(CAULDRON).luminance(state -> 15)));
-    public static final Block BLACK_WATER_CAULDRON_BLOCK = registerBlock("black_water_cauldron_block",
-            new BlackWaterCauldronBlock(AbstractBlock.Settings.copy(CAULDRON)));
+    public static final Block BLACK_LAVA_CAULDRON_BLOCK = registerDyedLavaCauldron(DyeColor.BLACK);
+    public static final Block BLACK_WATER_CAULDRON_BLOCK = registerDyedWaterCauldron(DyeColor.BLACK);
 
 
 // Snow and Ice Blocks
@@ -569,26 +468,6 @@ public class ModBlocks {
 
     public static final Block SNOW_TILES_CRACKED = registerBlock("snow_tiles_cracked",
             new Block(FabricBlockSettings.copyOf(Blocks.SNOW_BLOCK).strength(0.2F)));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1225,8 +1104,38 @@ public class ModBlocks {
             new FlowerPotBlock(GLOW_LUSH_VIOLET_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
 
+    private static Block registerDyedWaterCauldron(DyeColor color) {
+        DyedWaterCauldronBlock block = new DyedWaterCauldronBlock(FabricBlockSettings.copyOf(Blocks.WATER_CAULDRON), color);
+        COLOR_TO_WATER_CAULDRON.put(color, block);
+        return registerBlock(color.getName() + "_water_cauldron", block);
+    }
 
+    private static Block registerDyedLavaCauldron(DyeColor color) {
+        DyedLavaCauldronBlock block = new DyedLavaCauldronBlock(FabricBlockSettings.copyOf(Blocks.LAVA_CAULDRON).luminance(15), color);
+        COLOR_TO_LAVA_CAULDRON.put(color, block);
+        return registerBlock(color.getName() + "_lava_cauldron", block);
+    }
 
+    private static Block registerCobbledConcrete(DyeColor color) {
+        Block block = new Block(FabricBlockSettings.copyOf(Blocks.WHITE_CONCRETE));
+        return registerBlock(color.getName() + "_cobbled_concrete", block);
+    }
+
+    private static Block registerCobbledConcretePowder(DyeColor color, Block hardened) {
+        Block block = new ConcretePowderBlock(hardened, FabricBlockSettings.copyOf(Blocks.WHITE_CONCRETE_POWDER));
+        return registerBlock(color.getName() + "_cobbled_concrete_powder", block);
+    }
+
+    private static Block registerArcaneBlock(StatusEffect effect, Function<Integer, StatusEffectInstance> signalStrengthToEffect) {
+        return registerBlock("arcane_" + effect.getName().getString() + "_block",
+                new ArcaneBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F), signalStrengthToEffect));
+    }
+
+    private static Block registerDyedAetherCoil(String colorName, MapColor mapColor) {
+        return registerBlock("aether_coil_" + colorName,
+                new AetherBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(50,2400)
+                        .nonOpaque().velocityMultiplier(1.25F).mapColor(mapColor)));
+    }
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

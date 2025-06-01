@@ -2,10 +2,10 @@ package net.spacegateir.steamcraft;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
 import net.spacegateir.steamcraft.block.ModBlockEntities;
 import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.creative_tab.ModItemGroups;
-import net.spacegateir.steamcraft.creative_tab.ModItemRewardsGroups;
 import net.spacegateir.steamcraft.effect.ModEffects;
 import net.spacegateir.steamcraft.fluid.ModFluids;
 import net.spacegateir.steamcraft.item.ModItems;
@@ -29,10 +29,9 @@ public class Steamcraft implements ModInitializer {
 		ModFluids.registerFluids();
 		ModRewardItems.registerModRewardItems();
 
-		ModBlockEntities.registerAll();
+		ModBlockEntities.registerBlockEntities();
 
 		ModItemGroups.registerItemGroups();
-		ModItemRewardsGroups.registerItemGroups();
 
 		ModEffects.registerEffects();
 		ModPotions.registerPotions();
@@ -46,14 +45,5 @@ public class Steamcraft implements ModInitializer {
 		GeckoLib.initialize();
 
 		ModWorldGeneration.generateModWorldGeneration();
-
-
-
-
-
-
-
-
-		LOGGER.info("Hello Fabric world!");
 	}
 }

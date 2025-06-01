@@ -1,18 +1,16 @@
 package net.spacegateir.steamcraft.mixin;
 
-import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.Vec3d;
+import net.spacegateir.steamcraft.effect.ModEffects;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import net.spacegateir.steamcraft.effect.ModEffects;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-
 
 @Mixin(PlayerEntity.class)
 public class PlayerEntityMixin {
@@ -22,7 +20,7 @@ public class PlayerEntityMixin {
     private void onTick(CallbackInfo ci) {
         PlayerEntity player = (PlayerEntity)(Object)this;
 
-        if (!player.getWorld().isClient() &&
+        if (player.getWorld() instanceof ServerWorld serverWorld &&
                 player.hasStatusEffect(ModEffects.CELESTIAL_GEARFORGES_EFFECT) &&
                 player.isSwimming()) {
 
@@ -32,8 +30,6 @@ public class PlayerEntityMixin {
             Vec3d newVelocity = player.getVelocity().add(direction.x * swimBoost, 0, direction.z * swimBoost);
             player.setVelocity(newVelocity);
             player.velocityModified = true;
-
-            ServerWorld serverWorld = (ServerWorld)player.getWorld();
 
             for (int i = 0; i < 4; i++) {
                 double offsetX = -direction.x * i * 0.3;
@@ -58,16 +54,14 @@ public class PlayerEntityMixin {
     // Change jump height 4.5 Blocks
     @Inject(method = "jump", at = @At("HEAD"), cancellable = true)
     private void modifyJump(CallbackInfo ci) {
-        PlayerEntity player = (PlayerEntity)(Object)this;
+        PlayerEntity player = (PlayerEntity) (Object) this;
 
         if (player.hasStatusEffect(ModEffects.CELESTIAL_GEARFORGES_EFFECT)) {
             Vec3d velocity = player.getVelocity();
             player.setVelocity(velocity.x, 0.8, velocity.z);
 
             // Add particle burst at feet
-            if (!player.getWorld().isClient()) {
-                ServerWorld serverWorld = (ServerWorld) player.getWorld();
-
+            if (player.getWorld() instanceof ServerWorld serverWorld) {
                 serverWorld.spawnParticles(
                         ParticleTypes.CLOUD,     // You can change this to FLAME, FIREWORK, etc.
                         player.getX(),
@@ -87,11 +81,11 @@ public class PlayerEntityMixin {
     // Modify fall damage 10 Blocks
     @Inject(method = "handleFallDamage", at = @At("HEAD"), cancellable = true)
     private void onFall(float fallDistance, float damageMultiplier, DamageSource damageSource, CallbackInfoReturnable<Boolean> cir) {
-        PlayerEntity player = (PlayerEntity)(Object)this;
+        PlayerEntity player = (PlayerEntity) (Object) this;
 
         if (player.hasStatusEffect(ModEffects.CELESTIAL_GEARFORGES_EFFECT)) {
             if (fallDistance <= 10) {
-                cir.cancel();
+                cir.setReturnValue(false);
             }
         }
     }

@@ -4,12 +4,12 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
+import net.spacegateir.steamcraft.Steamcraft;
 import net.spacegateir.steamcraft.block.ModBlocks;
 
 import java.util.concurrent.CompletableFuture;
@@ -23,31 +23,31 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         public static class Blocks {
             public static final TagKey<Block> SKELETON = TagKey.of(
                     RegistryKeys.BLOCK,
-                    new Identifier("steamcraft", "skeleton")
+                    new Identifier(Steamcraft.MOD_ID, "skeleton")
             );
             public static final TagKey<Block> ARCANE_BLOCKS = TagKey.of(
                     RegistryKeys.BLOCK,
-                    new Identifier("steamcraft", "arcane_blocks")
+                    new Identifier(Steamcraft.MOD_ID, "arcane_blocks")
             );
             public static final TagKey<Block> AETHER_BLOCKS = TagKey.of(
                     RegistryKeys.BLOCK,
-                    new Identifier("steamcraft", "aether_blocks")
+                    new Identifier(Steamcraft.MOD_ID, "aether_blocks")
             );
             public static final TagKey<Block> TRAPS = TagKey.of(
                     RegistryKeys.BLOCK,
-                    new Identifier("steamcraft", "traps")
+                    new Identifier(Steamcraft.MOD_ID, "traps")
             );
             public static final TagKey<Block> BUILDING_BLOCKS = TagKey.of(
                     RegistryKeys.BLOCK,
-                    new Identifier("steamcraft", "building_blocks")
+                    new Identifier(Steamcraft.MOD_ID, "building_blocks")
             );
             public static final TagKey<Block> STONE_PATH_BLOCKS = TagKey.of(
                     RegistryKeys.BLOCK,
-                    new Identifier("steamcraft", "path_blocks")
+                    new Identifier(Steamcraft.MOD_ID, "path_blocks")
             );
             public static final TagKey<Block> SOIL_PATH_BLOCKS = TagKey.of(
                     RegistryKeys.BLOCK,
-                    new Identifier("steamcraft", "path_blocks")
+                    new Identifier(Steamcraft.MOD_ID, "path_blocks")
             );
         }
     }
@@ -158,38 +158,38 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(ModTags.Blocks.BUILDING_BLOCKS)
                 .add(
 
-                        ModBlocks.COBBLED_WHITE_CONCRETE,
-                        ModBlocks.COBBLED_WHITE_CONCRETE_POWDER,
-                        ModBlocks.COBBLED_LIGHT_GRAY_CONCRETE,
-                        ModBlocks.COBBLED_LIGHT_GRAY_CONCRETE_POWDER,
-                        ModBlocks.COBBLED_GRAY_CONCRETE,
-                        ModBlocks.COBBLED_GRAY_CONCRETE_POWDER,
-                        ModBlocks.COBBLED_BLACK_CONCRETE,
-                        ModBlocks.COBBLED_BLACK_CONCRETE_POWDER,
-                        ModBlocks.COBBLED_BROWN_CONCRETE,
-                        ModBlocks.COBBLED_BROWN_CONCRETE_POWDER,
-                        ModBlocks.COBBLED_RED_CONCRETE,
-                        ModBlocks.COBBLED_RED_CONCRETE_POWDER,
-                        ModBlocks.COBBLED_ORANGE_CONCRETE,
-                        ModBlocks.COBBLED_ORANGE_CONCRETE_POWDER,
-                        ModBlocks.COBBLED_YELLOW_CONCRETE,
-                        ModBlocks.COBBLED_YELLOW_CONCRETE_POWDER,
-                        ModBlocks.COBBLED_LIME_CONCRETE,
-                        ModBlocks.COBBLED_LIME_CONCRETE_POWDER,
-                        ModBlocks.COBBLED_GREEN_CONCRETE,
-                        ModBlocks.COBBLED_GREEN_CONCRETE_POWDER,
-                        ModBlocks.COBBLED_CYAN_CONCRETE,
-                        ModBlocks.COBBLED_CYAN_CONCRETE_POWDER,
-                        ModBlocks.COBBLED_LIGHT_BLUE_CONCRETE,
-                        ModBlocks.COBBLED_LIGHT_BLUE_CONCRETE_POWDER,
-                        ModBlocks.COBBLED_BLUE_CONCRETE,
-                        ModBlocks.COBBLED_BLUE_CONCRETE_POWDER,
-                        ModBlocks.COBBLED_PURPLE_CONCRETE,
-                        ModBlocks.COBBLED_PURPLE_CONCRETE_POWDER,
-                        ModBlocks.COBBLED_MAGENTA_CONCRETE,
-                        ModBlocks.COBBLED_MAGENTA_CONCRETE_POWDER,
-                        ModBlocks.COBBLED_PINK_CONCRETE,
-                        ModBlocks.COBBLED_PINK_CONCRETE_POWDER
+                        ModBlocks.WHITE_COBBLED_CONCRETE,
+                        ModBlocks.WHITE_COBBLED_CONCRETE_POWDER,
+                        ModBlocks.LIGHT_GRAY_COBBLED_CONCRETE,
+                        ModBlocks.LIGHT_GRAY_COBBLED_CONCRETE_POWDER,
+                        ModBlocks.GRAY_COBBLED_CONCRETE,
+                        ModBlocks.GRAY_COBBLED_CONCRETE_POWDER,
+                        ModBlocks.BLACK_COBBLED_CONCRETE,
+                        ModBlocks.BLACK_COBBLED_CONCRETE_POWDER,
+                        ModBlocks.BROWN_COBBLED_CONCRETE,
+                        ModBlocks.BROWN_COBBLED_CONCRETE_POWDER,
+                        ModBlocks.RED_COBBLED_CONCRETE,
+                        ModBlocks.RED_COBBLED_CONCRETE_POWDER,
+                        ModBlocks.ORANGE_COBBLED_CONCRETE,
+                        ModBlocks.ORANGE_COBBLED_CONCRETE_POWDER,
+                        ModBlocks.YELLOW_COBBLED_CONCRETE,
+                        ModBlocks.YELLOW_COBBLED_CONCRETE_POWDER,
+                        ModBlocks.LIME_COBBLED_CONCRETE,
+                        ModBlocks.LIME_COBBLED_CONCRETE_POWDER,
+                        ModBlocks.GREEN_COBBLED_CONCRETE,
+                        ModBlocks.GREEN_COBBLED_CONCRETE_POWDER,
+                        ModBlocks.CYAN_COBBLED_CONCRETE,
+                        ModBlocks.CYAN_COBBLED_CONCRETE_POWDER,
+                        ModBlocks.LIGHT_BLUE_COBBLED_CONCRETE,
+                        ModBlocks.LIGHT_BLUE_COBBLED_CONCRETE_POWDER,
+                        ModBlocks.BLUE_COBBLED_CONCRETE,
+                        ModBlocks.BLUE_COBBLED_CONCRETE_POWDER,
+                        ModBlocks.PURPLE_COBBLED_CONCRETE,
+                        ModBlocks.PURPLE_COBBLED_CONCRETE_POWDER,
+                        ModBlocks.MAGENTA_COBBLED_CONCRETE,
+                        ModBlocks.MAGENTA_COBBLED_CONCRETE_POWDER,
+                        ModBlocks.PINK_COBBLED_CONCRETE,
+                        ModBlocks.PINK_COBBLED_CONCRETE_POWDER
                         );
 
         getOrCreateTagBuilder(ModTags.Blocks.STONE_PATH_BLOCKS)

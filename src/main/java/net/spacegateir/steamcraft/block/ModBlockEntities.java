@@ -18,7 +18,7 @@ public class ModBlockEntities {
 
 
 
-    public static void registerAll() {
+    public static void registerBlockEntities() {
 
     }
 }

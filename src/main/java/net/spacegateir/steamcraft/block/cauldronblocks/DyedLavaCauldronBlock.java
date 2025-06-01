@@ -3,14 +3,15 @@ package net.spacegateir.steamcraft.block.cauldronblocks;
 import net.minecraft.block.AbstractCauldronBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.spacegateir.steamcraft.util.ModCauldronInteractions;
 
-public class BlueWaterCauldronBlock extends AbstractCauldronBlock {
+public class DyedLavaCauldronBlock extends AbstractCauldronBlock {
 
-    public BlueWaterCauldronBlock(Settings settings) {
-        super(settings, ModCauldronInteractions.BLUE_WATER_CAULDRON_BEHAVIOR);
+    public DyedLavaCauldronBlock(Settings settings, DyeColor color) {
+        super(settings, ModCauldronInteractions.COLOR_TO_LAVA_CAULDRON_BEHAVIOR.get(color));
     }
 
     @Override
@@ -25,9 +26,6 @@ public class BlueWaterCauldronBlock extends AbstractCauldronBlock {
 
     @Override
     public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
-        if (this.isEntityTouchingFluid(state, pos, entity)) {
-            entity.setOnFireFromLava();
-        }
     }
 
     @Override

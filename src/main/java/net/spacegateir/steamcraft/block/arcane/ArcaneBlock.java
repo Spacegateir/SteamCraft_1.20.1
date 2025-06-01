@@ -1,33 +1,30 @@
-package net.spacegateir.steamcraft.block.arcane_specal;
+package net.spacegateir.steamcraft.block.arcane;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
-import net.spacegateir.steamcraft.effect.ModEffects;
-import net.minecraft.state.StateManager;
-import net.minecraft.state.property.IntProperty;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class ArcanFreakyBunnyBlock extends Block {
+import java.util.function.Function;
+
+public class ArcaneBlock extends Block {
     // modify when the json file gets more models
     public static final IntProperty SWITCH_STATE = IntProperty.of("switch_state", 0, 49);
 
+    private final Function<Integer, StatusEffectInstance> signalStrengthToEffect;
 
-    public ArcanFreakyBunnyBlock(Settings settings) {
+    public ArcaneBlock(Settings settings, Function<Integer, StatusEffectInstance> signalStrengthToEffect) {
+
         super(settings);
         setDefaultState(this.stateManager.getDefaultState().with(SWITCH_STATE, 0));
+        this.signalStrengthToEffect = signalStrengthToEffect;
     }
+
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
@@ -41,18 +38,11 @@ public class ArcanFreakyBunnyBlock extends Block {
             // Get the redstone signal strength at the block position
             int signalStrength = world.getReceivedRedstonePower(pos);
 
-            // Set base values if no signal is present (signalStrength == 0)
-            int baseDuration = (signalStrength == 0) ? 2400 : 2400;
-            int baseAmplifier = (signalStrength == 0) ? 0 : 0;
-
-            // Adjust duration and amplifier based on the redstone signal
-            int adjustedDuration = baseDuration + (signalStrength * 2400);
-            int adjustedAmplifier = baseAmplifier + signalStrength;
-
-            livingEntity.addStatusEffect(new StatusEffectInstance(ModEffects.FREAKY_BUNNY, adjustedDuration, adjustedAmplifier, false, false));
+            StatusEffectInstance statusEffectInstance = signalStrengthToEffect.apply(signalStrength);
+            if (statusEffectInstance != null) {
+                livingEntity.addStatusEffect(statusEffectInstance);
+            }
         }
         super.onSteppedOn(world, pos, state, entity);
     }
-
 }
-

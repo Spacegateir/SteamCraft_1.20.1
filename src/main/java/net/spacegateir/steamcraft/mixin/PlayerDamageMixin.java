@@ -10,6 +10,7 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.entity.EquipmentSlot;
 import net.spacegateir.steamcraft.item.ModItems;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
@@ -32,6 +33,7 @@ public class PlayerDamageMixin {
         }
     }
 
+    @Unique
     private boolean isWearingFullFoolsGold(PlayerEntity player) {
         return player.getEquippedStack(EquipmentSlot.HEAD).getItem() == ModItems.FOOLS_GOLD_HELMET &&
                 player.getEquippedStack(EquipmentSlot.CHEST).getItem() == ModItems.FOOLS_GOLD_CHESTPLATE &&
@@ -39,6 +41,7 @@ public class PlayerDamageMixin {
                 player.getEquippedStack(EquipmentSlot.FEET).getItem() == ModItems.FOOLS_GOLD_BOOTS;
     }
 
+    @Unique
     private void flingScrap(PlayerEntity player, net.minecraft.item.Item item) {
         ServerWorld world = (ServerWorld) player.getWorld();
         Vec3d pos = player.getPos();

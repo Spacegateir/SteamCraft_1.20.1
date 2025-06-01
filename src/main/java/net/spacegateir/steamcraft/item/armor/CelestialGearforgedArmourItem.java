@@ -1,6 +1,5 @@
 package net.spacegateir.steamcraft.item.armor;
 
-import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
@@ -27,7 +26,6 @@ import software.bernie.geckolib.core.animatable.instance.SingletonAnimatableInst
 import software.bernie.geckolib.core.animation.*;
 import software.bernie.geckolib.core.object.PlayState;
 
-import java.util.Map;
 import java.util.UUID;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
@@ -35,15 +33,6 @@ import java.util.function.Supplier;
 import static net.minecraft.entity.EquipmentSlot.*;
 
 public class CelestialGearforgedArmourItem extends ArmorItem implements GeoItem {
-    private final AnimatableInstanceCache cache = new SingletonAnimatableInstanceCache(this);
-    private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
-    private static final Map<ArmorMaterial, StatusEffectInstance> MATERIAL_TO_EFFECT_MAP =
-            new ImmutableMap.Builder<ArmorMaterial, StatusEffectInstance>()
-                    .put(ModArmorMaterials.CELESTIAL_GEARFORGED, new StatusEffectInstance(ModEffects.CELESTIAL_GEARFORGES_EFFECT, 1000, 0,
-                            false, false, false))
-                    .build();
-
-
 
     private static final UUID SPEED_BOOST_UUID = UUID.fromString("e94b5c2e-6a6f-4f1e-9048-6d5f84a16b36");
     private static final UUID ATTACK_BOOST_UUID = UUID.fromString("c47d1a2e-6b2a-4d5b-9dbe-2e7f92f8364f");
@@ -56,6 +45,9 @@ public class CelestialGearforgedArmourItem extends ArmorItem implements GeoItem 
     private static final UUID LEGGINGS_UUID = UUID.fromString("4de3db2f-9f6b-4e71-baf2-614d34fa9c6b");
     private static final UUID BOOTS_UUID = UUID.fromString("5f293a94-49f0-4bb7-a0cf-b3a32aebef9d");
 
+
+    private final AnimatableInstanceCache cache = new SingletonAnimatableInstanceCache(this);
+    private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
 
     public CelestialGearforgedArmourItem(ArmorMaterial material, Type type, Settings settings) {
         super(material, type, settings);
@@ -86,10 +78,10 @@ public class CelestialGearforgedArmourItem extends ArmorItem implements GeoItem 
 
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-        controllers.add(new AnimationController(this, "controller", 40, this::predicate));
+        controllers.add(new AnimationController<>(this, "controller", 40, this::predicate));
     }
 
-    private PlayState predicate(AnimationState animationState) {
+    private PlayState predicate(AnimationState<?> animationState) {
         animationState.getController().setAnimation(RawAnimation.begin().then("animation.model.Idel", Animation.LoopType.LOOP));
         return PlayState.CONTINUE;
     }
@@ -103,143 +95,71 @@ public class CelestialGearforgedArmourItem extends ArmorItem implements GeoItem 
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
         if (!world.isClient() && entity instanceof PlayerEntity player) {
-            if(hasFullSuitOfArmorOn(player)) {
-                evaluateArmorEffect(player);
+            if (player.getInventory().armor.stream()
+                    .allMatch(armorStack -> stack.getItem() instanceof ArmorItem armorItem &&
+                            armorItem.getMaterial() == ModArmorMaterials.CELESTIAL_GEARFORGED)) {
+                player.addStatusEffect(new StatusEffectInstance(ModEffects.CELESTIAL_GEARFORGES_EFFECT, 1000, 0,
+                        false, false, false));
             }
         }
 
         super.inventoryTick(stack, world, entity, slot, selected);
     }
 
-
-    private void evaluateArmorEffect(PlayerEntity player) {
-        for (Map.Entry<ArmorMaterial, StatusEffectInstance> entry : MATERIAL_TO_EFFECT_MAP.entrySet()) {
-            ArmorMaterial mapArmorMaterial = entry.getKey();
-            StatusEffectInstance mapStatusEffect = entry.getValue();
-
-            if (hasCorrectArmorOn(mapArmorMaterial, player)) {
-                addStatusEffectForMaterial(player, mapStatusEffect);
-                break;
-
-            }
-        }
-    }
-
-    private void addStatusEffectForMaterial(PlayerEntity player, StatusEffectInstance mapStatusEffect) {
-        boolean hasPlayerEffectAlready = player.hasStatusEffect(mapStatusEffect.getEffectType());
-
-        if (!hasPlayerEffectAlready) {
-            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect.getEffectType(),
-                    mapStatusEffect.getDuration(), mapStatusEffect.getAmplifier()));
-        }
-    }
-
-    private boolean hasCorrectArmorOn(ArmorMaterial mapArmorMaterial, PlayerEntity player) {
-        for (ItemStack armorStack : player.getArmorItems()) {
-            if(!(armorStack.getItem() instanceof ArmorItem)) {
-                return false;
-            }
-        }
-
-        ArmorItem boots = ((ArmorItem) player.getInventory().getArmorStack(0).getItem());
-        ArmorItem leggings = ((ArmorItem) player.getInventory().getArmorStack(1).getItem());
-        ArmorItem chestplate = ((ArmorItem) player.getInventory().getArmorStack(2).getItem());
-        ArmorItem helmet = ((ArmorItem) player.getInventory().getArmorStack(3).getItem());
-
-        return helmet.getMaterial() == mapArmorMaterial && leggings.getMaterial() == mapArmorMaterial &&
-                chestplate.getMaterial() == mapArmorMaterial && boots.getMaterial() == mapArmorMaterial;
-    }
-
-    private boolean hasFullSuitOfArmorOn(PlayerEntity player) {
-        ItemStack boots = player.getInventory().getArmorStack(0);
-        ItemStack leggings = player.getInventory().getArmorStack(1);
-        ItemStack chestplate = player.getInventory().getArmorStack(2);
-        ItemStack helmet = player.getInventory().getArmorStack(3);
-
-        return !boots.isEmpty() &&!leggings.isEmpty() &&!chestplate.isEmpty() &&!helmet.isEmpty();
-    }
-
     @Override
     public Multimap<EntityAttribute, EntityAttributeModifier> getAttributeModifiers(ItemStack stack, EquipmentSlot slot) {
         ImmutableMultimap.Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();
 
-        UUID armorUUID = switch (slot) {
-            case HEAD -> HELMENT_UUID;
-            case CHEST -> CHESTPLATE_UUID;
-            case LEGS -> LEGGINGS_UUID;
-            case FEET -> BOOTS_UUID;
-            default -> UUID.randomUUID();
-        };
-
-
-
         if (slot == HEAD && stack.getItem() == ModItems.CELESTIAL_GEARFORGED_HELMET) {
-            builder.put(
-                    EntityAttributes.GENERIC_ARMOR,
+            builder.put(EntityAttributes.GENERIC_ARMOR,
                     new EntityAttributeModifier(HELMENT_UUID, "Armor", 8.0, EntityAttributeModifier.Operation.ADDITION));
-            builder.put(
-                    EntityAttributes.GENERIC_ARMOR_TOUGHNESS,
+            builder.put(EntityAttributes.GENERIC_ARMOR_TOUGHNESS,
                     new EntityAttributeModifier(HELMENT_UUID, "Toughness", 8.0, EntityAttributeModifier.Operation.ADDITION));
-            builder.put(
-                    EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE,
+            builder.put(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE,
                     new EntityAttributeModifier(HELMENT_UUID, "Knockback Resistance", 10.0, EntityAttributeModifier.Operation.MULTIPLY_BASE));
 
-            builder.put(
-                    EntityAttributes.GENERIC_LUCK,
+            builder.put(EntityAttributes.GENERIC_LUCK,
                     new EntityAttributeModifier(LUCK_BOOST_UUID, "Luck boost", 50.0, EntityAttributeModifier.Operation.ADDITION));
         }
 
         if (slot == EquipmentSlot.CHEST && stack.getItem() == ModItems.CELESTIAL_GEARFORGED_CHESTPLATE) {
-            builder.put(
-                    EntityAttributes.GENERIC_ARMOR,
+            builder.put(EntityAttributes.GENERIC_ARMOR,
                     new EntityAttributeModifier(CHESTPLATE_UUID, "Armor", 18.0, EntityAttributeModifier.Operation.ADDITION));
-            builder.put(
-                    EntityAttributes.GENERIC_ARMOR_TOUGHNESS,
+            builder.put(EntityAttributes.GENERIC_ARMOR_TOUGHNESS,
                     new EntityAttributeModifier(CHESTPLATE_UUID, "Toughness", 8.0, EntityAttributeModifier.Operation.ADDITION));
-            builder.put(
-                    EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE,
+            builder.put(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE,
                     new EntityAttributeModifier(CHESTPLATE_UUID, "Knockback Resistance", 10.0, EntityAttributeModifier.Operation.MULTIPLY_BASE));
 
 
-            builder.put(
-                    EntityAttributes.GENERIC_ATTACK_DAMAGE,
+            builder.put(EntityAttributes.GENERIC_ATTACK_DAMAGE,
                     new EntityAttributeModifier(ATTACK_BOOST_UUID, "Attack boost", 6.0, EntityAttributeModifier.Operation.ADDITION));
-            builder.put(
-                    EntityAttributes.GENERIC_ATTACK_SPEED,
+            builder.put(EntityAttributes.GENERIC_ATTACK_SPEED,
                     new EntityAttributeModifier(ATTACK_SPEED_BOOST_UUID, "Attack Speed boost", 1.0, EntityAttributeModifier.Operation.MULTIPLY_TOTAL));
         }
 
         if (slot == LEGS && stack.getItem() == ModItems.CELESTIAL_GEARFORGED_LEGGINGS) {
-            builder.put(
-                    EntityAttributes.GENERIC_ARMOR,
+            builder.put(EntityAttributes.GENERIC_ARMOR,
                     new EntityAttributeModifier(LEGGINGS_UUID, "Armor", 14.0, EntityAttributeModifier.Operation.ADDITION));
-            builder.put(
-                    EntityAttributes.GENERIC_ARMOR_TOUGHNESS,
+            builder.put(EntityAttributes.GENERIC_ARMOR_TOUGHNESS,
                     new EntityAttributeModifier(LEGGINGS_UUID, "Toughness", 8.0, EntityAttributeModifier.Operation.ADDITION));
-            builder.put(
-                    EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE,
+            builder.put(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE,
                     new EntityAttributeModifier(LEGGINGS_UUID, "Knockback Resistance", 10.0, EntityAttributeModifier.Operation.MULTIPLY_BASE));
 
 
-            builder.put(
-                    EntityAttributes.GENERIC_MAX_HEALTH,
+            builder.put(EntityAttributes.GENERIC_MAX_HEALTH,
                     new EntityAttributeModifier(HEALTH_BOOST_UUID, "Health boost", 20.0, EntityAttributeModifier.Operation.ADDITION));
         }
 
         if (slot == FEET && stack.getItem() == ModItems.CELESTIAL_GEARFORGED_BOOTS) {
-            builder.put(
-                    EntityAttributes.GENERIC_ARMOR,
+            builder.put(EntityAttributes.GENERIC_ARMOR,
                     new EntityAttributeModifier(BOOTS_UUID, "Armor", 8.0, EntityAttributeModifier.Operation.ADDITION));
-            builder.put(
-                    EntityAttributes.GENERIC_ARMOR_TOUGHNESS,
+            builder.put(EntityAttributes.GENERIC_ARMOR_TOUGHNESS,
                     new EntityAttributeModifier(BOOTS_UUID, "Toughness", 8.0, EntityAttributeModifier.Operation.ADDITION));
-            builder.put(
-                    EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE,
+            builder.put(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE,
                     new EntityAttributeModifier(BOOTS_UUID, "Knockback Resistance", 10.0, EntityAttributeModifier.Operation.MULTIPLY_BASE));
 
 
-            builder.put(
-                    EntityAttributes.GENERIC_MOVEMENT_SPEED,
+            builder.put(EntityAttributes.GENERIC_MOVEMENT_SPEED,
                     new EntityAttributeModifier(SPEED_BOOST_UUID, "Speed boost", 1.25, EntityAttributeModifier.Operation.MULTIPLY_TOTAL));
         }
 

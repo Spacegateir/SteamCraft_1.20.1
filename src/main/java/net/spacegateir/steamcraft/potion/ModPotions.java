@@ -17,18 +17,18 @@ public class ModPotions {
             new Potion(new StatusEffectInstance(ModEffects.STICKY_FEAT, 1200, 1)));
 
     public static final Potion DISORIENT_POTION = registerPotion("disorient_potion",
-            new Potion(new StatusEffectInstance(ModEffects.DISORIENT, 200, 0)));
+            new Potion(new StatusEffectInstance(ModEffects.DISORIENT, 400, 0)));
     public static final Potion DISORIENT_POTION_1 = registerPotion("disorient_potion_1",
             new Potion(new StatusEffectInstance(ModEffects.DISORIENT, 800, 0)));
     public static final Potion DISORIENT_POTION_2 = registerPotion("disorient_potion_2",
-            new Potion(new StatusEffectInstance(ModEffects.DISORIENT, 100, 1)));
+            new Potion(new StatusEffectInstance(ModEffects.DISORIENT, 200, 1)));
 
     public static final Potion FREAKY_BUNNY_POTION = registerPotion("freaky_bunny_potion",
-            new Potion(new StatusEffectInstance(ModEffects.FREAKY_BUNNY, 200, 0)));
+            new Potion(new StatusEffectInstance(ModEffects.FREAKY_BUNNY, 400, 0)));
     public static final Potion FREAKY_BUNNY_POTION_1 = registerPotion("freaky_bunny_potion_1",
             new Potion(new StatusEffectInstance(ModEffects.FREAKY_BUNNY, 800, 0)));
     public static final Potion FREAKY_BUNNY_POTION_2 = registerPotion("freaky_bunny_potion_2",
-            new Potion(new StatusEffectInstance(ModEffects.FREAKY_BUNNY, 100, 1)));
+            new Potion(new StatusEffectInstance(ModEffects.FREAKY_BUNNY, 200, 1)));
 
 
 

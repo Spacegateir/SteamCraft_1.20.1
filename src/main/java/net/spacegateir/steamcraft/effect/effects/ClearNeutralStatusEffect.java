@@ -18,6 +18,7 @@ public class ClearNeutralStatusEffect extends StatusEffect {
         BLACKLISTED_EFFECTS.add(ClearNeutralStatusEffect.class); // Add class types
         BLACKLISTED_EFFECTS.add(ClearNegativeStatusEffect.class);
         BLACKLISTED_EFFECTS.add(ClearPositiveStatusEffect.class);
+        BLACKLISTED_EFFECTS.add(CelestialGearforgedEffect.class);
     }
 
     public ClearNeutralStatusEffect(StatusEffectCategory category, int color) {

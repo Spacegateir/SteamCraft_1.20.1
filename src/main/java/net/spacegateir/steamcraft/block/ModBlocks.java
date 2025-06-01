@@ -357,7 +357,7 @@ public class ModBlocks {
     public static final Block SMOKE_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "smoke_block"),
             new SmokeBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).strength(2f,-1f).nonOpaque()
-                    .luminance(5).noCollision().burnable()));
+                    .luminance(5).noCollision()));
 
     // Concrete Blocks
 

@@ -2,6 +2,7 @@ package net.spacegateir.steamcraft.util;
 
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.minecraft.block.Blocks;
+import net.minecraft.item.Items;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.condition.KilledByPlayerLootCondition;
@@ -34,6 +35,10 @@ public class ModLootTableModifiers {
             new Identifier("minecraft","entities/evoker");
     private static final Identifier VINDICATOR_ID =
             new Identifier("minecraft","entities/vindicator");
+    private static final Identifier GUARDIAN_ID =
+            new Identifier("minecraft","entities/gardian");
+    private static final Identifier GHAST_ID =
+            new Identifier("minecraft","entities/ghast");
 
     private static final Identifier VILLAGER_ID =
             new Identifier("minecraft","entities/villager");
@@ -120,7 +125,7 @@ public class ModLootTableModifiers {
             if (WITCH_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.001f)) // Drops 0.10% of the time
+                        .conditionally(RandomChanceLootCondition.builder(0.01f)) // Drops 1.0% of the time
                         .conditionally(KilledByPlayerLootCondition.builder().build()) // Only when killed by player
                         .with(ItemEntry.builder(ModItems.FOOLS_GOLD_BOOTS_1))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
@@ -142,7 +147,7 @@ public class ModLootTableModifiers {
             if (ILLAGER_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.001f)) // Drops 0.10% of the time
+                        .conditionally(RandomChanceLootCondition.builder(0.01f)) // Drops 1.0% of the time
                         .conditionally(KilledByPlayerLootCondition.builder().build()) // Only when killed by player
                         .with(ItemEntry.builder(ModItems.FOOLS_GOLD_CHESTPLATE_2))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
@@ -153,7 +158,7 @@ public class ModLootTableModifiers {
             if (RAVANGER_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.001f)) // Drops 0.10% of the time
+                        .conditionally(RandomChanceLootCondition.builder(0.01f)) // Drops 1.0% of the time
                         .conditionally(KilledByPlayerLootCondition.builder().build()) // Only when killed by player
                         .with(ItemEntry.builder(ModItems.FOOLS_GOLD_LEGGINGS_2))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
@@ -164,7 +169,7 @@ public class ModLootTableModifiers {
             if (EVOKER_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.001f)) // Drops 0.10% of the time
+                        .conditionally(RandomChanceLootCondition.builder(0.01f)) // Drops 1.0% of the time
                         .conditionally(KilledByPlayerLootCondition.builder().build()) // Only when killed by player
                         .with(ItemEntry.builder(ModItems.FOOLS_GOLD_BOOTS_2))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
@@ -175,10 +180,32 @@ public class ModLootTableModifiers {
             if (VINDICATOR_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.001f)) // Drops 0.10% of the time
+                        .conditionally(RandomChanceLootCondition.builder(0.01f)) // Drops 1.0% of the time
                         .conditionally(KilledByPlayerLootCondition.builder().build()) // Only when killed by player
                         .with(ItemEntry.builder(ModItems.FOOLS_GOLD_HELMET_3))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+
+                tableBuilder.pool(poolBuilder.build());
+            }
+
+            if (GUARDIAN_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(0.001f)) // Drops 0.1% of the time
+                        .conditionally(KilledByPlayerLootCondition.builder().build()) // Only when killed by player
+                        .with(ItemEntry.builder(ModItems.AQUARION_SHARD))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+
+                tableBuilder.pool(poolBuilder.build());
+            }
+
+            if (GHAST_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(1f)) // Drops 100% of the time
+                        .conditionally(KilledByPlayerLootCondition.builder().build()) // Only when killed by player
+                        .with(ItemEntry.builder(Items.GHAST_TEAR))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0f, 6.0f)).build());
 
                 tableBuilder.pool(poolBuilder.build());
             }
@@ -187,7 +214,7 @@ public class ModLootTableModifiers {
             if (VILLAGER_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.001f)) // Drops 0.10% of the time
+                        .conditionally(RandomChanceLootCondition.builder(0.01f)) // Drops 1.0% of the time
                         .conditionally(KilledByPlayerLootCondition.builder().build()) // Only when killed by player
                         .with(ItemEntry.builder(ModItems.FOOLS_GOLD_CHESTPLATE_3))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
@@ -211,7 +238,7 @@ public class ModLootTableModifiers {
             if (IRON_GOLEM_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.001f)) // Drops 0.10% of the time
+                        .conditionally(RandomChanceLootCondition.builder(0.01f)) // Drops 1.0% of the time
                         .conditionally(KilledByPlayerLootCondition.builder().build()) // Only when killed by player
                         .with(ItemEntry.builder(ModItems.FOOLS_GOLD_BOOTS_3))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
@@ -253,6 +280,17 @@ public class ModLootTableModifiers {
                         .conditionally(KilledByPlayerLootCondition.builder().build()) // Only when killed by player
                         .with(ItemEntry.builder(ModItems.FERRITE_HEARTSTONE))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+
+                tableBuilder.pool(poolBuilder.build());
+            }
+
+            if (WARDEN_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(1.0f)) // 100% drop chance
+                        .conditionally(KilledByPlayerLootCondition.builder().build()) // Only when killed by player
+                        .with(ItemEntry.builder(Items.ECHO_SHARD))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 3.0f)).build());
 
                 tableBuilder.pool(poolBuilder.build());
             }
@@ -348,7 +386,14 @@ public class ModLootTableModifiers {
                 .with(ItemEntry.builder(ModItems.BLANK_MOULD))
                 .with(ItemEntry.builder(ModItems.CORE_OF_CHANGING))
                 .with(ItemEntry.builder(ModItems.TROWEL))
-                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 3.0f)).build());
+                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+
+        LootPool.Builder poolBuilder_40 = LootPool.builder()
+                .rolls(ConstantLootNumberProvider.create(1))
+                .conditionally(RandomChanceLootCondition.builder(0.4f)) // Drops 50% of the time
+                .with(ItemEntry.builder(ModItems.BLANK_MOULD))
+                .with(ItemEntry.builder(ModItems.CORE_OF_CHANGING))
+                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(3.0f, 7.0f)).build());
 
 
         tableBuilder.pool(poolBuilder_gem.build());
@@ -357,6 +402,7 @@ public class ModLootTableModifiers {
         tableBuilder.pool(poolBuilder_leggings.build());
         tableBuilder.pool(poolBuilder_boots.build());
         tableBuilder.pool(poolBuilder_20.build());
+        tableBuilder.pool(poolBuilder_40.build());
     }
 
 

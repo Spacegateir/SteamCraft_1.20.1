@@ -151,6 +151,16 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
                 dropsWithSilkTouch(ModBlocks.END_STONE_PATH, ItemEntry.builder(Blocks.END_STONE))
         );
 
+// Minecraft blocks
+        addDrop(Blocks.BUDDING_AMETHYST,
+                dropsWithSilkTouch(Blocks.BUDDING_AMETHYST, ItemEntry.builder(Blocks.AMETHYST_BLOCK))
+        );
+        addDrop(Blocks.SPAWNER,
+                dropsWithSilkTouch(Blocks.SPAWNER, ItemEntry.builder(Blocks.SPAWNER))
+        );
+        addDrop(Blocks.REINFORCED_DEEPSLATE);
+
+// Mob Parts
         addDrop(ModBlocks.SKELETON_ARM);
         addDrop(ModBlocks.SKELETON_CHEST);
         addDrop(ModBlocks.SKELETON_HEAD);
@@ -165,15 +175,15 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.SKELETON_SITTING);
         addDrop(ModBlocks.SKELETON_SPINE);
 
-        addDrop(ModBlocks.AGAPANTHUS_FLOWER_BLOCK);
-        addDrop(ModBlocks.GLOW_AGAPANTHUS_FLOWER_BLOCK);
 
-        addDrop(ModBlocks.BLUE_COSMOS_FLOWER_BLOCK);
-        addDrop(ModBlocks.GLOW_BLUE_COSMOS_FLOWER_BLOCK);
 
         // Normal Flowers
         addDrop(ModBlocks.BONSAI_FLOWER_BLOCK);
         addDrop(ModBlocks.GLOW_BONSAI_FLOWER_BLOCK);
+        addDrop(ModBlocks.AGAPANTHUS_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_AGAPANTHUS_FLOWER_BLOCK);
+        addDrop(ModBlocks.BLUE_COSMOS_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_BLUE_COSMOS_FLOWER_BLOCK);
         addDrop(ModBlocks.CARNATION_FLOWER_BLOCK);
         addDrop(ModBlocks.GLOW_CARNATION_FLOWER_BLOCK);
         addDrop(ModBlocks.DAFFODIL_FLOWER_BLOCK);
@@ -230,6 +240,10 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.GLOW_THORNED_SPIDERLILY_FLOWER_BLOCK);
         addDrop(ModBlocks.THORNED_VIOLET_FLOWER_BLOCK);
         addDrop(ModBlocks.GLOW_THORNED_VIOLET_FLOWER_BLOCK);
+        addDrop(ModBlocks.THORNED_BLUE_COSMOS_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_THORNED_BLUE_COSMOS_FLOWER_BLOCK);
+        addDrop(ModBlocks.THORNED_AGAPANTHUS_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_THORNED_AGAPANTHUS_FLOWER_BLOCK);
 
         // Lush Flowers
         addDrop(ModBlocks.LUSH_BONSAI_FLOWER_BLOCK);
@@ -260,6 +274,10 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.GLOW_LUSH_SPIDERLILY_FLOWER_BLOCK);
         addDrop(ModBlocks.LUSH_VIOLET_FLOWER_BLOCK);
         addDrop(ModBlocks.GLOW_LUSH_VIOLET_FLOWER_BLOCK);
+        addDrop(ModBlocks.LUSH_BLUE_COSMOS_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_LUSH_BLUE_COSMOS_FLOWER_BLOCK);
+        addDrop(ModBlocks.LUSH_AGAPANTHUS_FLOWER_BLOCK);
+        addDrop(ModBlocks.GLOW_LUSH_AGAPANTHUS_FLOWER_BLOCK);
 
         addDrop(ModBlocks.POWER_PRECISION_BLOCK);
 

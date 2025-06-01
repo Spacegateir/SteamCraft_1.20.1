@@ -48,6 +48,8 @@ public class ArcaneVoidBlock extends Block {
             livingEntity.addStatusEffect(new StatusEffectInstance(ModEffects.CLEAR_NEGATIVE_EFFECT, 1, 200, false, false));
 
             livingEntity.addStatusEffect(new StatusEffectInstance(ModEffects.CLEAR_NEUTRAL_EFFECT, 1, 200, false, false));
+
+//            livingEntity.addStatusEffect(new StatusEffectInstance(ModEffects.CELESTIAL_GEARFORGES_EFFECT, 1, 200, false, false));
         }
         super.onSteppedOn(world, pos, state, entity);
     }

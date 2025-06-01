@@ -3,6 +3,7 @@ package net.spacegateir.steamcraft.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
@@ -27,6 +28,10 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
             public static final TagKey<Block> ARCANE_BLOCKS = TagKey.of(
                     RegistryKeys.BLOCK,
                     new Identifier("steamcraft", "arcane_blocks")
+            );
+            public static final TagKey<Block> AETHER_BLOCKS = TagKey.of(
+                    RegistryKeys.BLOCK,
+                    new Identifier("steamcraft", "aether_blocks")
             );
             public static final TagKey<Block> TRAPS = TagKey.of(
                     RegistryKeys.BLOCK,
@@ -109,6 +114,27 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.ARCANE_DISORIENT_BLOCK,
                         ModBlocks.ARCANE_STICKY_FEAT_BLOCK,
                         ModBlocks.ARCANE_FREAKY_BUNNY_BLOCK
+                        );
+
+        getOrCreateTagBuilder(ModTags.Blocks.AETHER_BLOCKS)
+                .add(
+                        ModBlocks.AETHER_COIL,
+                        ModBlocks.AETHER_COIL_WHITE,
+                        ModBlocks.AETHER_COIL_LIGHT_GRAY,
+                        ModBlocks.AETHER_COIL_GRAY,
+                        ModBlocks.AETHER_COIL_BLACK,
+                        ModBlocks.AETHER_COIL_BROWN,
+                        ModBlocks.AETHER_COIL_RED,
+                        ModBlocks.AETHER_COIL_ORANGE,
+                        ModBlocks.AETHER_COIL_YELLOW,
+                        ModBlocks.AETHER_COIL_LIME,
+                        ModBlocks.AETHER_COIL_GREEN,
+                        ModBlocks.AETHER_COIL_CYAN,
+                        ModBlocks.AETHER_COIL_LIGHT_BLUE,
+                        ModBlocks.AETHER_COIL_BLUE,
+                        ModBlocks.AETHER_COIL_PURPLE,
+                        ModBlocks.AETHER_COIL_MAGENTA,
+                        ModBlocks.AETHER_COIL_PINK
                         );
 
         getOrCreateTagBuilder(ModBlockTagProvider.ModTags.Blocks.TRAPS)
@@ -207,28 +233,16 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .addTag(ModTags.Blocks.SKELETON)
                 .addTag(ModTags.Blocks.ARCANE_BLOCKS)
+                .addTag(ModTags.Blocks.AETHER_BLOCKS)
                 .addTag(ModTags.Blocks.TRAPS)
                 .addTag(ModTags.Blocks.BUILDING_BLOCKS)
                 .addTag(ModTags.Blocks.STONE_PATH_BLOCKS)
 
                 .add(
-                        ModBlocks.AETHER_COIL,
-                        ModBlocks.AETHER_COIL_WHITE,
-                        ModBlocks.AETHER_COIL_LIGHT_GRAY,
-                        ModBlocks.AETHER_COIL_GRAY,
-                        ModBlocks.AETHER_COIL_BLACK,
-                        ModBlocks.AETHER_COIL_BROWN,
-                        ModBlocks.AETHER_COIL_RED,
-                        ModBlocks.AETHER_COIL_ORANGE,
-                        ModBlocks.AETHER_COIL_YELLOW,
-                        ModBlocks.AETHER_COIL_LIME,
-                        ModBlocks.AETHER_COIL_GREEN,
-                        ModBlocks.AETHER_COIL_CYAN,
-                        ModBlocks.AETHER_COIL_LIGHT_BLUE,
-                        ModBlocks.AETHER_COIL_BLUE,
-                        ModBlocks.AETHER_COIL_PURPLE,
-                        ModBlocks.AETHER_COIL_MAGENTA,
-                        ModBlocks.AETHER_COIL_PINK,
+
+                        Blocks.BUDDING_AMETHYST,
+                        Blocks.SPAWNER,
+                        Blocks.REINFORCED_DEEPSLATE,
 
                         ModBlocks.FOOLS_GOLD_BLOCK,
                         ModBlocks.FOOLS_GOLD_RAW_BLOCK,
@@ -309,7 +323,14 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(TagKey.of(RegistryKeys.BLOCK, new Identifier("fabric", "needs_tool_level_4")))
                 .addTag(ModTags.Blocks.ARCANE_BLOCKS)
-                .addTag(ModTags.Blocks.TRAPS);
+                .addTag(ModTags.Blocks.TRAPS)
+
+                .add(
+                        Blocks.BUDDING_AMETHYST,
+                        Blocks.REINFORCED_DEEPSLATE,
+                        Blocks.SPAWNER
+
+                );
 
 
 

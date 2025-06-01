@@ -61,6 +61,11 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         offerBlasting(exporter, List.of(ModItems.FOOLS_GOLD_RAW), RecipeCategory.MISC, ModItems.FOOLS_GOLD_INGOT,
                 1.00f, 100, "fools_gold");
 
+        offerSmelting(exporter, List.of(Items.LODESTONE), RecipeCategory.MISC, Items.NETHERITE_INGOT,
+                1.00f, 200, "netherite_ingot");
+        offerBlasting(exporter, List.of(Items.LODESTONE), RecipeCategory.MISC, Items.NETHERITE_INGOT,
+                1.00f, 100, "netherite_ingot");
+
         offerSmelting(exporter, List.of(ModBlocks.PACKED_ICE_BRICKS), RecipeCategory.MISC, ModBlocks.PACKED_ICE_BRICKS_CRACKED,
                 0.10f, 50, "packed_ice_bricks");
         offerBlasting(exporter, List.of(ModBlocks.PACKED_ICE_BRICKS), RecipeCategory.MISC, ModBlocks.PACKED_ICE_BRICKS_CRACKED,
@@ -384,6 +389,42 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('2', Items.OBSIDIAN)
                 .criterion(hasItem(Items.TUFF), conditionsFromItem(Items.TUFF))
                 .offerTo(exporter, new Identifier(getRecipeName(Items.TUFF) + "cobbled_deepslate"));
+
+//Rooted Dirt
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items.ROOTED_DIRT, 1)
+                .pattern("12")
+                .input('1', Items.DIRT)
+                .input('2', Items.HANGING_ROOTS)
+                .criterion(hasItem(Items.DIRT), conditionsFromItem(Items.DIRT))
+                .offerTo(exporter, new Identifier(getRecipeName(Items.ROOTED_DIRT) + "rooted_dirt"));
+
+//Mud
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items.MUD, 8)
+                .pattern("111")
+                .pattern("121")
+                .pattern("111")
+                .input('1', Items.DIRT)
+                .input('2', Items.WATER_BUCKET)
+                .criterion(hasItem(Items.DIRT), conditionsFromItem(Items.DIRT))
+                .offerTo(exporter, new Identifier(getRecipeName(Items.MUD) + "mud"));
+
+//Gilded Blackstone
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items.GILDED_BLACKSTONE, 2)
+                .pattern("12")
+                .pattern("21")
+                .input('1', Items.BLACKSTONE)
+                .input('2', Items.GOLD_INGOT)
+                .criterion(hasItem(Items.GOLD_INGOT), conditionsFromItem(Items.GOLD_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(Items.GILDED_BLACKSTONE) + "gilded_blackstone"));
+
+//Crying Obsidian
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items.CRYING_OBSIDIAN, 2)
+                .pattern("12")
+                .pattern("21")
+                .input('1', Items.OBSIDIAN)
+                .input('2', Items.ENDER_PEARL)
+                .criterion(hasItem(Items.OBSIDIAN), conditionsFromItem(Items.OBSIDIAN))
+                .offerTo(exporter, new Identifier(getRecipeName(Items.CRYING_OBSIDIAN) + "crying_obsidian"));
 
 //Mould Duplicating
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.HELMET_MOULD, 2)

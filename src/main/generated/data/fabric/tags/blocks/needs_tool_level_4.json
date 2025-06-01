@@ -2,6 +2,9 @@
   "replace": false,
   "values": [
     "#steamcraft:arcane_blocks",
-    "#steamcraft:traps"
+    "#steamcraft:traps",
+    "minecraft:budding_amethyst",
+    "minecraft:reinforced_deepslate",
+    "minecraft:spawner"
   ]
 }

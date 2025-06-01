@@ -10,12 +10,12 @@ public class ToDo {
 
     // create dimentions (earth copy, void, waterworld, skulk, overworld neather type, sky dimention)
 
-    // give glow flowers a partical effect or a flim strip
+    // give glow flowers the ability to farm like plants
 
     // make dragon egg with 8 netherstars craft divine egg
     // make divine egg drop halo when placed on the ground slowly cracks over 1hr then turns into a halo
 
-    // Blue lava called soul lava
+    // Blue lava called soul lava (dyedable liquids water and lava)
 
     // loot chests (common, rare legenday) witch will drop everywere and have great items in it like god sword
 
@@ -42,12 +42,11 @@ public class ToDo {
 
     //    A half Slab with a wall inside slab at the bottom and wall in the middle (rotatable block)
     //    ( Cobblestone, Stone_bricks, Andesite, Bricks )
-    //    Off-center chain
-    //    Corner and edge
+    //    Off-center chain, Corner and edge
 
     //    Food
     //    Loot items
-    //	- Loot boxes (common, uncommon, rare, legendary, unique).
+    //	  Loot boxes (common, uncommon, rare, legendary, unique).
 
 
 
@@ -61,7 +60,6 @@ public class ToDo {
     //Fix
 
     // boots noise clinet side only
-    // shovel to path blocks (should be fixed)
 
 
 

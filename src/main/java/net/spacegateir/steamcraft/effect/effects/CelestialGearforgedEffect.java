@@ -11,6 +11,7 @@ import net.minecraft.entity.passive.VillagerEntity;
 import net.minecraft.entity.passive.IronGolemEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Vec3d;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -29,6 +30,7 @@ public class CelestialGearforgedEffect extends StatusEffect {
         BLACKLISTED_EFFECTS.add(ClearNeutralStatusEffect.class);
         BLACKLISTED_EFFECTS.add(ClearNegativeStatusEffect.class);
         BLACKLISTED_EFFECTS.add(ClearPositiveStatusEffect.class);
+        BLACKLISTED_EFFECTS.add(CelestialGearforgedEffect.class);
     }
 
     @Override
@@ -40,17 +42,17 @@ public class CelestialGearforgedEffect extends StatusEffect {
                         !BLACKLISTED_EFFECTS.contains(effect.getClass())
         );
 
-        // step up 1 block
+        // Step up 1 block if not sneaking
         if (entity instanceof PlayerEntity player) {
-            if (player.isOnGround()) {
-                BlockPos playerPos = player.getBlockPos();
-                BlockPos blockInFront = playerPos.offset(player.getMovementDirection());
-
-                if (player.getWorld().getBlockState(blockInFront.up()).isAir() && player.getWorld().getBlockState(blockInFront).isSolidBlock(player.getWorld(), blockInFront)) {
-                    player.setVelocity(player.getVelocity().add(0, 0.5D, 0));
-                }
+            if (!player.isSneaking()) {
+                player.setStepHeight(1.0F); // Enable stepping up 1 block
+            } else {
+                player.setStepHeight(0.6F); // Default step height while crouching
             }
         }
+
+
+
 
         // Frozen Immunity
         if (entity.isFrozen()) {entity.isOnFire();

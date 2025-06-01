@@ -259,6 +259,8 @@ public class SteamcraftClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.GLOW_LUSH_VIOLET_FLOWER_BLOCK, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_GLOW_LUSH_VIOLET_FLOWER_BLOCK, RenderLayer.getCutout());
 
+
+
         });
     }
 }

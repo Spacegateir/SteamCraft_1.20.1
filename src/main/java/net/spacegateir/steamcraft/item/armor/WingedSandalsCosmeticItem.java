@@ -30,6 +30,7 @@ import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 public class WingedSandalsCosmeticItem extends ArmorItem implements GeoItem {
+    private static final int DASH_COOLDOWN_TICKS = 200;
     private static long lastDashAge = 0;
 
     private final AnimatableInstanceCache cache = new SingletonAnimatableInstanceCache(this);
@@ -93,7 +94,7 @@ public class WingedSandalsCosmeticItem extends ArmorItem implements GeoItem {
 
         boolean isJumpingNow = player.input.sneaking && player.input.jumping;
 
-        if (isJumpingNow && !player.isOnGround() && (player.age - lastDashAge > DASH_COOLDOWN_MS)) {
+        if (isJumpingNow && !player.isOnGround() && (player.age - lastDashAge > DASH_COOLDOWN_TICKS)) {
             if (player.getHungerManager().getFoodLevel() >= 10) {
 
                 Vec3d forward = player.getRotationVec(1.0F).normalize().multiply(100.0); // Balanced dash distance

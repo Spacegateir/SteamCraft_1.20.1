@@ -9,8 +9,6 @@ import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.spacegateir.steamcraft.Steamcraft;
 
-import java.util.EnumMap;
-
 public class ModTags {
     public static class Blocks {
 

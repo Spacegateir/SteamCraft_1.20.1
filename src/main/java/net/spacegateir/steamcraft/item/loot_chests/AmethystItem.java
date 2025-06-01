@@ -3,10 +3,10 @@ package net.spacegateir.steamcraft.item.loot_chests;
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.FireworkRocketEntity;
-import net.minecraft.item.FireworkRocketItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtList;
 import net.minecraft.text.Text;
@@ -66,7 +66,7 @@ public class AmethystItem extends Item {
 
     private void launchFireworks(World world, Vec3d pos) {
         for (int i = 0; i < 16; i++) {
-            ItemStack fireworkStack = new ItemStack(net.minecraft.item.Items.FIREWORK_ROCKET);
+            ItemStack fireworkStack = new ItemStack(Items.FIREWORK_ROCKET);
             NbtCompound fireworksNbt = new NbtCompound();
             NbtList explosions = new NbtList();
 

@@ -15,13 +15,13 @@ import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.event.renderers.SmokeBlockRenderer;
 import net.spacegateir.steamcraft.fluid.ModFluids;
 import net.spacegateir.steamcraft.item.armor.WingedSandalsCosmeticItem;
-import net.spacegateir.steamcraft.util.ModClient;
+import net.spacegateir.steamcraft.util.ModFluidRendererRegistry;
 
 public class SteamcraftClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
 
-        ModClient.registerFluidRenderers();
+        ModFluidRendererRegistry.registerFluidRenderers();
 
         BlockEntityRendererFactories.register(ModBlockEntities.SMOKE_BLOCK_ENTITY, SmokeBlockRenderer::new);
 

@@ -3,10 +3,8 @@
 	"package": "net.spacegateir.steamcraft.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ExampleMixin",
 		"PlayerEntityMixin",
-		"PlayerDamageMixin",
-		"BrewingRecipeRegistryMixin"
+		"PlayerDamageMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

@@ -2,296 +2,82 @@ package net.spacegateir.steamcraft.world.gen;
 
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.minecraft.block.Block;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeKeys;
 import net.minecraft.world.gen.GenerationStep;
+import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.world.ModPlacedFeatures;
 
 public class ModFlowerGeneration {
     public static void generateFlowers() {
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.CARNATION_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.VIOLET_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.IRIS_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.PRIMROSE_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.DAFFODIL_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.DELPHINIUM_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.DAHLIA_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.HYDRANGEA_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.MIDNIGHT_MYSTIC_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.HAWTHORN_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.BONSAI_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.SPIDERLILY_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LARKSPUR_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.AGAPANTHUS_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.BLUE_COSMOS_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.SNOW_DROP_FLOWER_PLACED_KEY);
-// Thorned Flowers
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_CARNATION_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_VIOLET_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_IRIS_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_PRIMROSE_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_DAFFODIL_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_DELPHINIUM_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_DAHLIA_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_HYDRANGEA_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_MIDNIGHT_MYSTIC_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_HAWTHORN_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_BONSAI_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_SPIDERLILY_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_LARKSPUR_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_AGAPANTHUS_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_BLUE_COSMOS_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_SNOW_DROP_FLOWER_PLACED_KEY);
-// Lush Flowers
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_CARNATION_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_VIOLET_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_IRIS_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_PRIMROSE_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_DAFFODIL_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_DELPHINIUM_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_DAHLIA_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_HYDRANGEA_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_MIDNIGHT_MYSTIC_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_HAWTHORN_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_BONSAI_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_SPIDERLILY_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_LARKSPUR_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_AGAPANTHUS_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_BLUE_COSMOS_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.THE_VOID),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_SNOW_DROP_FLOWER_PLACED_KEY);
-
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.CARNATION_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.VIOLET_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.IRIS_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.PRIMROSE_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.DAFFODIL_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.DELPHINIUM_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.DAHLIA_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.HYDRANGEA_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.MIDNIGHT_MYSTIC_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.HAWTHORN_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.BONSAI_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.SPIDERLILY_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LARKSPUR_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.AGAPANTHUS_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.BLUE_COSMOS_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.SNOW_DROP_FLOWER_PLACED_KEY);
-
-// Thorned Flowers
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_CARNATION_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_VIOLET_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_IRIS_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_PRIMROSE_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_DAFFODIL_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_DELPHINIUM_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_DAHLIA_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_HYDRANGEA_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_MIDNIGHT_MYSTIC_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_HAWTHORN_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_BONSAI_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_SPIDERLILY_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_LARKSPUR_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_AGAPANTHUS_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_BLUE_COSMOS_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_SNOW_DROP_FLOWER_PLACED_KEY);
-
-// Lush Flowers
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_CARNATION_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_VIOLET_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_IRIS_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_PRIMROSE_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_DAFFODIL_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_DELPHINIUM_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_DAHLIA_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_HYDRANGEA_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_MIDNIGHT_MYSTIC_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_HAWTHORN_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_BONSAI_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_SPIDERLILY_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_LARKSPUR_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_AGAPANTHUS_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_BLUE_COSMOS_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_SNOW_DROP_FLOWER_PLACED_KEY);
-
+        for (Block flower : ModBlocks.COLOR_TO_FLOWER.values()) {
+            registerFlowerFeature(BiomeKeys.FLOWER_FOREST, flower);
+            registerFlowerFeature(BiomeKeys.FLOWER_FOREST, ModBlocks.FLOWER_TO_THORNED_FLOWER.get(flower));
+            registerFlowerFeature(BiomeKeys.FLOWER_FOREST, ModBlocks.FLOWER_TO_LUSH_FLOWER.get(flower));
+            registerFlowerFeature(BiomeKeys.THE_VOID, flower);
+            registerFlowerFeature(BiomeKeys.THE_VOID, ModBlocks.FLOWER_TO_THORNED_FLOWER.get(flower));
+            registerFlowerFeature(BiomeKeys.THE_VOID, ModBlocks.FLOWER_TO_LUSH_FLOWER.get(flower));
+            registerFlowerFeature(BiomeKeys.SWAMP, ModBlocks.FLOWER_TO_THORNED_FLOWER.get(flower));
+            registerFlowerFeature(BiomeKeys.RIVER, ModBlocks.FLOWER_TO_LUSH_FLOWER.get(flower));
+            registerFlowerFeature(BiomeKeys.LUSH_CAVES, ModBlocks.FLOWER_TO_LUSH_FLOWER.get(flower));
+            registerFlowerFeature(BiomeKeys.MANGROVE_SWAMP, ModBlocks.FLOWER_TO_THORNED_FLOWER.get(flower));
+        }
 
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.PLAINS),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.CARNATION_FLOWER_PLACED_KEY);
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.getKey(ModBlocks.CARNATION));
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.PLAINS),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.DAHLIA_FLOWER_PLACED_KEY);
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.getKey(ModBlocks.DAHLIA));
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.PLAINS),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.BLUE_COSMOS_FLOWER_PLACED_KEY);
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.getKey(ModBlocks.BLUE_COSMOS));
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.PLAINS),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.PRIMROSE_FLOWER_PLACED_KEY);
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.getKey(ModBlocks.PRIMROSE));
 
 //        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SUNFLOWER_PLAINS),
 //                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.);
 
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.VIOLET_FLOWER_PLACED_KEY);
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.getKey(ModBlocks.VIOLET));
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.HYDRANGEA_FLOWER_PLACED_KEY);
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.getKey(ModBlocks.HYDRANGEA));
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.SNOW_DROP_FLOWER_PLACED_KEY);
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.getKey(ModBlocks.SNOW_DROP));
 
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.BIRCH_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.HAWTHORN_FLOWER_PLACED_KEY);
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.getKey(ModBlocks.HAWTHORN));
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.BIRCH_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.DAHLIA_FLOWER_PLACED_KEY);
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.getKey(ModBlocks.DAHLIA));
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.BIRCH_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LARKSPUR_FLOWER_PLACED_KEY);
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.getKey(ModBlocks.LARKSPUR));
 
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.TAIGA),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LARKSPUR_FLOWER_PLACED_KEY);
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.getKey(ModBlocks.LARKSPUR));
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.TAIGA),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.HAWTHORN_FLOWER_PLACED_KEY);
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.getKey(ModBlocks.HAWTHORN));
 
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SWAMP),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_CARNATION_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SWAMP),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_VIOLET_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SWAMP),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_IRIS_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SWAMP),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_PRIMROSE_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SWAMP),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_DAFFODIL_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SWAMP),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_DELPHINIUM_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SWAMP),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_DAHLIA_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SWAMP),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_HYDRANGEA_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SWAMP),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_MIDNIGHT_MYSTIC_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SWAMP),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_HAWTHORN_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SWAMP),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_BONSAI_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SWAMP),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_SPIDERLILY_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SWAMP),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_LARKSPUR_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SWAMP),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_AGAPANTHUS_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SWAMP),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_BLUE_COSMOS_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SWAMP),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_SNOW_DROP_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SWAMP),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.SPIDERLILY_FLOWER_PLACED_KEY);
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.getKey(ModBlocks.SPIDERLILY));
 
 //        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DESERT),
 //                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.);
 
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.JUNGLE),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.BONSAI_FLOWER_PLACED_KEY);
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.getKey(ModBlocks.BONSAI));
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.JUNGLE),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.HYDRANGEA_FLOWER_PLACED_KEY);
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.getKey(ModBlocks.HYDRANGEA));
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.JUNGLE),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.DELPHINIUM_FLOWER_PLACED_KEY);
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.getKey(ModBlocks.DELPHINIUM));
 
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SAVANNA),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.AGAPANTHUS_FLOWER_PLACED_KEY);
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.getKey(ModBlocks.AGAPANTHUS));
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SAVANNA),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.BLUE_COSMOS_FLOWER_PLACED_KEY);
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.getKey(ModBlocks.BLUE_COSMOS));
 
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.BADLANDS),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.BONSAI_FLOWER_PLACED_KEY);
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.getKey(ModBlocks.BONSAI));
 
 //        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.ICE_SPIKES),
 //                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.);
@@ -302,52 +88,18 @@ public class ModFlowerGeneration {
 
 
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.BEACH),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.DAFFODIL_FLOWER_PLACED_KEY);
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.getKey(ModBlocks.DAFFODIL));
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.BEACH),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.MIDNIGHT_MYSTIC_FLOWER_PLACED_KEY);
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.getKey(ModBlocks.MIDNIGHT_MYSTIC));
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.BEACH),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.CARNATION_FLOWER_PLACED_KEY);
-
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.RIVER),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_CARNATION_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.RIVER),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_VIOLET_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.RIVER),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_IRIS_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.RIVER),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_PRIMROSE_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.RIVER),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_DAFFODIL_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.RIVER),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_DELPHINIUM_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.RIVER),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_DAHLIA_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.RIVER),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_HYDRANGEA_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.RIVER),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_MIDNIGHT_MYSTIC_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.RIVER),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_HAWTHORN_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.RIVER),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_BONSAI_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.RIVER),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_SPIDERLILY_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.RIVER),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_LARKSPUR_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.RIVER),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_AGAPANTHUS_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.RIVER),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_BLUE_COSMOS_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.RIVER),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_SNOW_DROP_FLOWER_PLACED_KEY);
-
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.getKey(ModBlocks.CARNATION));
 
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.MEADOW),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.PRIMROSE_FLOWER_PLACED_KEY);
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.getKey(ModBlocks.PRIMROSE));
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.MEADOW),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.IRIS_FLOWER_PLACED_KEY);
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.getKey(ModBlocks.IRIS));
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.MEADOW),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.SPIDERLILY_FLOWER_PLACED_KEY);
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.getKey(ModBlocks.SPIDERLILY));
 
 //        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SNOWY_PLAINS),
 //                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.);
@@ -361,39 +113,6 @@ public class ModFlowerGeneration {
 //        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DEEP_FROZEN_OCEAN),
 //                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.);
 
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.LUSH_CAVES),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_CARNATION_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.LUSH_CAVES),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_VIOLET_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.LUSH_CAVES),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_IRIS_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.LUSH_CAVES),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_PRIMROSE_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.LUSH_CAVES),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_DAFFODIL_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.LUSH_CAVES),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_DELPHINIUM_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.LUSH_CAVES),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_DAHLIA_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.LUSH_CAVES),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_HYDRANGEA_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.LUSH_CAVES),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_MIDNIGHT_MYSTIC_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.LUSH_CAVES),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_HAWTHORN_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.LUSH_CAVES),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_BONSAI_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.LUSH_CAVES),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_SPIDERLILY_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.LUSH_CAVES),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_LARKSPUR_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.LUSH_CAVES),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_AGAPANTHUS_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.LUSH_CAVES),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_SNOW_DROP_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.LUSH_CAVES),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LUSH_BLUE_COSMOS_FLOWER_PLACED_KEY);
-
 //        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DRIPSTONE_CAVES),
 //                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.);
 
@@ -401,44 +120,11 @@ public class ModFlowerGeneration {
 //                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.);
 
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DARK_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.MIDNIGHT_MYSTIC_FLOWER_PLACED_KEY);
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.getKey(ModBlocks.MIDNIGHT_MYSTIC));
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DARK_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.AGAPANTHUS_FLOWER_PLACED_KEY);
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.getKey(ModBlocks.AGAPANTHUS));
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DARK_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.VIOLET_FLOWER_PLACED_KEY);
-
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.MANGROVE_SWAMP),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_CARNATION_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.MANGROVE_SWAMP),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_VIOLET_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.MANGROVE_SWAMP),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_IRIS_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.MANGROVE_SWAMP),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_PRIMROSE_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.MANGROVE_SWAMP),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_DAFFODIL_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.MANGROVE_SWAMP),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_DELPHINIUM_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.MANGROVE_SWAMP),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_DAHLIA_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.MANGROVE_SWAMP),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_HYDRANGEA_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.MANGROVE_SWAMP),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_MIDNIGHT_MYSTIC_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.MANGROVE_SWAMP),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_HAWTHORN_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.MANGROVE_SWAMP),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_BONSAI_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.MANGROVE_SWAMP),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_SPIDERLILY_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.MANGROVE_SWAMP),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_LARKSPUR_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.MANGROVE_SWAMP),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_AGAPANTHUS_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.MANGROVE_SWAMP),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_BLUE_COSMOS_FLOWER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.MANGROVE_SWAMP),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.THORNED_SNOW_DROP_FLOWER_PLACED_KEY);
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.getKey(ModBlocks.VIOLET));
 
 //        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.CRIMSON_FOREST),
 //                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.);
@@ -465,19 +151,22 @@ public class ModFlowerGeneration {
 //                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.);
 
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.GROVE),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.DELPHINIUM_FLOWER_PLACED_KEY);
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.getKey(ModBlocks.DELPHINIUM));
 
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SNOWY_TAIGA),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.SNOW_DROP_FLOWER_PLACED_KEY);
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.getKey(ModBlocks.SNOW_DROP));
 
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.OLD_GROWTH_BIRCH_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.IRIS_FLOWER_PLACED_KEY);
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.getKey(ModBlocks.IRIS));
 
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.OLD_GROWTH_PINE_TAIGA),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.DAFFODIL_FLOWER_PLACED_KEY);
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.getKey(ModBlocks.DAFFODIL));
+    }
 
-
-
-
+    private static void registerFlowerFeature(RegistryKey<Biome> biomeKey, Block flower) {
+        BiomeModifications.addFeature(
+                BiomeSelectors.includeByKey(biomeKey),
+                GenerationStep.Feature.VEGETAL_DECORATION,
+                RegistryKey.of(RegistryKeys.PLACED_FEATURE, Registries.BLOCK.getId(flower)));
     }
 }

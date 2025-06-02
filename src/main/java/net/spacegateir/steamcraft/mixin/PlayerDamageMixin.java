@@ -1,15 +1,20 @@
 package net.spacegateir.steamcraft.mixin;
 
+import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ArmorItem;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.Vec3d;
-import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.util.math.random.Random;
+import net.spacegateir.steamcraft.item.ModArmorMaterials;
 import net.spacegateir.steamcraft.item.ModItems;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
@@ -32,19 +37,20 @@ public class PlayerDamageMixin {
         }
     }
 
+    @Unique
     private boolean isWearingFullFoolsGold(PlayerEntity player) {
-        return player.getEquippedStack(EquipmentSlot.HEAD).getItem() == ModItems.FOOLS_GOLD_HELMET &&
-                player.getEquippedStack(EquipmentSlot.CHEST).getItem() == ModItems.FOOLS_GOLD_CHESTPLATE &&
-                player.getEquippedStack(EquipmentSlot.LEGS).getItem() == ModItems.FOOLS_GOLD_LEGGINGS &&
-                player.getEquippedStack(EquipmentSlot.FEET).getItem() == ModItems.FOOLS_GOLD_BOOTS;
+        return player.getInventory().armor.stream()
+                .allMatch(stack -> stack.getItem() instanceof ArmorItem armorItem &&
+                        armorItem.getMaterial() == ModArmorMaterials.FOOLS_GOLD);
     }
 
-    private void flingScrap(PlayerEntity player, net.minecraft.item.Item item) {
+    @Unique
+    private void flingScrap(PlayerEntity player, Item item) {
         ServerWorld world = (ServerWorld) player.getWorld();
         Vec3d pos = player.getPos();
         ItemStack stack = new ItemStack(item, 1);
 
-        net.minecraft.util.math.random.Random rand = player.getRandom();
+        Random rand = player.getRandom();
         double angle = rand.nextDouble() * 2 * Math.PI;
         double speed = 0.3 + rand.nextDouble() * 0.4;
 
@@ -52,7 +58,7 @@ public class PlayerDamageMixin {
         double vz = Math.sin(angle) * speed;
         double vy = 0.3 + rand.nextDouble() * 0.2;
 
-        var itemEntity = new net.minecraft.entity.ItemEntity(world, pos.x, pos.y + 1, pos.z, stack);
+        var itemEntity = new ItemEntity(world, pos.x, pos.y + 1, pos.z, stack);
         itemEntity.setVelocity(vx, vy, vz);
         itemEntity.setPickupDelay(40); // Delay in ticks (2 seconds)
 
@@ -67,7 +73,4 @@ public class PlayerDamageMixin {
                 0.9f + rand.nextFloat() * 0.2f
         );
     }
-
-
-
 }

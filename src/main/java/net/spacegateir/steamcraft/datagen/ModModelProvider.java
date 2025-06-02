@@ -6,6 +6,7 @@ import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
 import net.minecraft.item.ArmorItem;
+import net.minecraft.util.DyeColor;
 import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.item.ModItems;
 import net.spacegateir.steamcraft.item.ModRewardItems;
@@ -21,38 +22,10 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FOOLS_GOLD_RAW_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FOOLS_GOLD_BLOCK);
 
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_WHITE_CONCRETE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_WHITE_CONCRETE_POWDER);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_LIGHT_GRAY_CONCRETE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_LIGHT_GRAY_CONCRETE_POWDER);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_GRAY_CONCRETE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_GRAY_CONCRETE_POWDER);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_BLACK_CONCRETE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_BLACK_CONCRETE_POWDER);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_BROWN_CONCRETE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_BROWN_CONCRETE_POWDER);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_RED_CONCRETE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_RED_CONCRETE_POWDER);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_ORANGE_CONCRETE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_ORANGE_CONCRETE_POWDER);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_YELLOW_CONCRETE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_YELLOW_CONCRETE_POWDER);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_LIME_CONCRETE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_LIME_CONCRETE_POWDER);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_GREEN_CONCRETE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_GREEN_CONCRETE_POWDER);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_CYAN_CONCRETE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_CYAN_CONCRETE_POWDER);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_LIGHT_BLUE_CONCRETE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_LIGHT_BLUE_CONCRETE_POWDER);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_BLUE_CONCRETE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_BLUE_CONCRETE_POWDER);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_PURPLE_CONCRETE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_PURPLE_CONCRETE_POWDER);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_MAGENTA_CONCRETE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_MAGENTA_CONCRETE_POWDER);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_PINK_CONCRETE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_PINK_CONCRETE_POWDER);
+        for (DyeColor color : DyeColor.values()) {
+            blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COLOR_TO_COBBLED_CONCRETE.get(color));
+            blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COLOR_TO_COBBLED_CONCRETE_POWDER.get(color));
+        }
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PACKED_ICE_BRICKS);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PACKED_ICE_BRICKS_CRACKED);
@@ -65,155 +38,22 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SNOW_TILES_CRACKED);
 
         // Normal Flowers
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.AGAPANTHUS_FLOWER_BLOCK, ModBlocks.POTTED_AGAPANTHUS_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_AGAPANTHUS_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_AGAPANTHUS_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.BLUE_COSMOS_FLOWER_BLOCK, ModBlocks.POTTED_BLUE_COSMOS_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_BLUE_COSMOS_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_BLUE_COSMOS_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.BONSAI_FLOWER_BLOCK, ModBlocks.POTTED_BONSAI_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_BONSAI_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_BONSAI_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.CARNATION_FLOWER_BLOCK, ModBlocks.POTTED_CARNATION_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_CARNATION_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_CARNATION_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.DAFFODIL_FLOWER_BLOCK, ModBlocks.POTTED_DAFFODIL_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_DAFFODIL_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_DAFFODIL_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.DAHLIA_FLOWER_BLOCK, ModBlocks.POTTED_DAHLIA_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_DAHLIA_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_DAHLIA_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.DELPHINIUM_FLOWER_BLOCK, ModBlocks.POTTED_DELPHINIUM_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_DELPHINIUM_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_DELPHINIUM_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.HAWTHORN_FLOWER_BLOCK, ModBlocks.POTTED_HAWTHORN_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_HAWTHORN_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_HAWTHORN_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.HYDRANGEA_FLOWER_BLOCK, ModBlocks.POTTED_HYDRANGEA_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_HYDRANGEA_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_HYDRANGEA_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.IRIS_FLOWER_BLOCK, ModBlocks.POTTED_IRIS_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_IRIS_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_IRIS_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.LARKSPUR_FLOWER_BLOCK, ModBlocks.POTTED_LARKSPUR_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_LARKSPUR_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_LARKSPUR_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.MIDNIGHT_MYSTIC_FLOWER_BLOCK, ModBlocks.POTTED_MIDNIGHT_MYSTIC_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_MIDNIGHT_MYSTIC_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_MIDNIGHT_MYSTIC_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.PRIMROSE_FLOWER_BLOCK, ModBlocks.POTTED_PRIMROSE_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_PRIMROSE_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_PRIMROSE_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.SNOW_DROP_FLOWER_BLOCK, ModBlocks.POTTED_SNOW_DROP_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_SNOW_DROP_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_SNOW_DROP_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.SPIDERLILY_FLOWER_BLOCK, ModBlocks.POTTED_SPIDERLILY_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_SPIDERLILY_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_SPIDERLILY_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.VIOLET_FLOWER_BLOCK, ModBlocks.POTTED_VIOLET_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_VIOLET_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_VIOLET_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
+        ModBlocks.FLOWER_TO_POTTED_FLOWER.forEach((flower, pottedFlower) ->
+                blockStateModelGenerator.registerFlowerPotPlant(flower, pottedFlower, BlockStateModelGenerator.TintType.NOT_TINTED));
+        ModBlocks.FLOWER_TO_GLOW_FLOWER.forEach((flower, glowFlower) ->
+                blockStateModelGenerator.registerFlowerPotPlant(glowFlower, ModBlocks.FLOWER_TO_POTTED_GLOW_FLOWER.get(flower), BlockStateModelGenerator.TintType.NOT_TINTED));
 
         // Thorned Flowers
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.THORNED_AGAPANTHUS_FLOWER_BLOCK, ModBlocks.POTTED_THORNED_AGAPANTHUS_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_THORNED_AGAPANTHUS_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_THORNED_AGAPANTHUS_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.THORNED_BLUE_COSMOS_FLOWER_BLOCK, ModBlocks.POTTED_THORNED_BLUE_COSMOS_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_THORNED_BLUE_COSMOS_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_THORNED_BLUE_COSMOS_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.THORNED_BONSAI_FLOWER_BLOCK, ModBlocks.POTTED_THORNED_BONSAI_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_THORNED_BONSAI_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_THORNED_BONSAI_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.THORNED_CARNATION_FLOWER_BLOCK, ModBlocks.POTTED_THORNED_CARNATION_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_THORNED_CARNATION_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_THORNED_CARNATION_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.THORNED_DAFFODIL_FLOWER_BLOCK, ModBlocks.POTTED_THORNED_DAFFODIL_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_THORNED_DAFFODIL_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_THORNED_DAFFODIL_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.THORNED_DAHLIA_FLOWER_BLOCK, ModBlocks.POTTED_THORNED_DAHLIA_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_THORNED_DAHLIA_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_THORNED_DAHLIA_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.THORNED_DELPHINIUM_FLOWER_BLOCK, ModBlocks.POTTED_THORNED_DELPHINIUM_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_THORNED_DELPHINIUM_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_THORNED_DELPHINIUM_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.THORNED_HAWTHORN_FLOWER_BLOCK, ModBlocks.POTTED_THORNED_HAWTHORN_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_THORNED_HAWTHORN_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_THORNED_HAWTHORN_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.THORNED_HYDRANGEA_FLOWER_BLOCK, ModBlocks.POTTED_THORNED_HYDRANGEA_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_THORNED_HYDRANGEA_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_THORNED_HYDRANGEA_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.THORNED_IRIS_FLOWER_BLOCK, ModBlocks.POTTED_THORNED_IRIS_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_THORNED_IRIS_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_THORNED_IRIS_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.THORNED_LARKSPUR_FLOWER_BLOCK, ModBlocks.POTTED_THORNED_LARKSPUR_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_THORNED_LARKSPUR_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_THORNED_LARKSPUR_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.THORNED_MIDNIGHT_MYSTIC_FLOWER_BLOCK, ModBlocks.POTTED_THORNED_MIDNIGHT_MYSTIC_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_THORNED_MIDNIGHT_MYSTIC_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_THORNED_MIDNIGHT_MYSTIC_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.THORNED_PRIMROSE_FLOWER_BLOCK, ModBlocks.POTTED_THORNED_PRIMROSE_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_THORNED_PRIMROSE_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_THORNED_PRIMROSE_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.THORNED_SNOW_DROP_FLOWER_BLOCK, ModBlocks.POTTED_THORNED_SNOW_DROP_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_THORNED_SNOW_DROP_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_THORNED_SNOW_DROP_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.THORNED_SPIDERLILY_FLOWER_BLOCK, ModBlocks.POTTED_THORNED_SPIDERLILY_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_THORNED_SPIDERLILY_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_THORNED_SPIDERLILY_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.THORNED_VIOLET_FLOWER_BLOCK, ModBlocks.POTTED_THORNED_VIOLET_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_THORNED_VIOLET_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_THORNED_VIOLET_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
+        ModBlocks.FLOWER_TO_THORNED_FLOWER.forEach((flower, thornedFlower) ->
+                blockStateModelGenerator.registerFlowerPotPlant(thornedFlower, ModBlocks.FLOWER_TO_POTTED_THORNED_FLOWER.get(flower), BlockStateModelGenerator.TintType.NOT_TINTED));
+        ModBlocks.FLOWER_TO_GLOW_THORNED_FLOWER.forEach((flower, glowThornedFlower) ->
+                blockStateModelGenerator.registerFlowerPotPlant(glowThornedFlower, ModBlocks.FLOWER_TO_POTTED_GLOW_THORNED_FLOWER.get(flower), BlockStateModelGenerator.TintType.NOT_TINTED));
 
         // Lush Flowers
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.LUSH_AGAPANTHUS_FLOWER_BLOCK, ModBlocks.POTTED_LUSH_AGAPANTHUS_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_LUSH_AGAPANTHUS_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_LUSH_AGAPANTHUS_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.LUSH_BLUE_COSMOS_FLOWER_BLOCK, ModBlocks.POTTED_LUSH_BLUE_COSMOS_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_LUSH_BLUE_COSMOS_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_LUSH_BLUE_COSMOS_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.LUSH_BONSAI_FLOWER_BLOCK, ModBlocks.POTTED_LUSH_BONSAI_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_LUSH_BONSAI_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_LUSH_BONSAI_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.LUSH_CARNATION_FLOWER_BLOCK, ModBlocks.POTTED_LUSH_CARNATION_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_LUSH_CARNATION_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_LUSH_CARNATION_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.LUSH_DAFFODIL_FLOWER_BLOCK, ModBlocks.POTTED_LUSH_DAFFODIL_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_LUSH_DAFFODIL_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_LUSH_DAFFODIL_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.LUSH_DAHLIA_FLOWER_BLOCK, ModBlocks.POTTED_LUSH_DAHLIA_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_LUSH_DAHLIA_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_LUSH_DAHLIA_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.LUSH_DELPHINIUM_FLOWER_BLOCK, ModBlocks.POTTED_LUSH_DELPHINIUM_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_LUSH_DELPHINIUM_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_LUSH_DELPHINIUM_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.LUSH_HAWTHORN_FLOWER_BLOCK, ModBlocks.POTTED_LUSH_HAWTHORN_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_LUSH_HAWTHORN_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_LUSH_HAWTHORN_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.LUSH_HYDRANGEA_FLOWER_BLOCK, ModBlocks.POTTED_LUSH_HYDRANGEA_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_LUSH_HYDRANGEA_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_LUSH_HYDRANGEA_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.LUSH_IRIS_FLOWER_BLOCK, ModBlocks.POTTED_LUSH_IRIS_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_LUSH_IRIS_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_LUSH_IRIS_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.LUSH_LARKSPUR_FLOWER_BLOCK, ModBlocks.POTTED_LUSH_LARKSPUR_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_LUSH_LARKSPUR_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_LUSH_LARKSPUR_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.LUSH_MIDNIGHT_MYSTIC_FLOWER_BLOCK, ModBlocks.POTTED_LUSH_MIDNIGHT_MYSTIC_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_LUSH_MIDNIGHT_MYSTIC_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_LUSH_MIDNIGHT_MYSTIC_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.LUSH_PRIMROSE_FLOWER_BLOCK, ModBlocks.POTTED_LUSH_PRIMROSE_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_LUSH_PRIMROSE_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_LUSH_PRIMROSE_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.LUSH_SNOW_DROP_FLOWER_BLOCK, ModBlocks.POTTED_LUSH_SNOW_DROP_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_LUSH_SNOW_DROP_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_LUSH_SNOW_DROP_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.LUSH_SPIDERLILY_FLOWER_BLOCK, ModBlocks.POTTED_LUSH_SPIDERLILY_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_LUSH_SPIDERLILY_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_LUSH_SPIDERLILY_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.LUSH_VIOLET_FLOWER_BLOCK, ModBlocks.POTTED_LUSH_VIOLET_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GLOW_LUSH_VIOLET_FLOWER_BLOCK, ModBlocks.POTTED_GLOW_LUSH_VIOLET_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);
-
-
-
+        ModBlocks.FLOWER_TO_LUSH_FLOWER.forEach((flower, lushFlower) ->
+                blockStateModelGenerator.registerFlowerPotPlant(lushFlower, ModBlocks.FLOWER_TO_POTTED_LUSH_FLOWER.get(flower), BlockStateModelGenerator.TintType.NOT_TINTED));
+        ModBlocks.FLOWER_TO_GLOW_LUSH_FLOWER.forEach((flower, glowLushFlower) ->
+                blockStateModelGenerator.registerFlowerPotPlant(glowLushFlower, ModBlocks.FLOWER_TO_POTTED_GLOW_LUSH_FLOWER.get(flower), BlockStateModelGenerator.TintType.NOT_TINTED));
     }
 
     @Override
@@ -227,39 +67,12 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.TRAP_CONCEALER, Models.GENERATED);
 
 
-        itemModelGenerator.register(ModItems.WHITE_WATER_BUCKET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.LIGHT_GRAY_WATER_BUCKET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.GRAY_WATER_BUCKET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.BLACK_WATER_BUCKET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.BROWN_WATER_BUCKET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.RED_WATER_BUCKET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.ORANGE_WATER_BUCKET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.YELLOW_WATER_BUCKET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.LIME_WATER_BUCKET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.GREEN_WATER_BUCKET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.CYAN_WATER_BUCKET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.LIGHT_BLUE_WATER_BUCKET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.BLUE_WATER_BUCKET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.PURPLE_WATER_BUCKET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.MAGENTA_WATER_BUCKET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.PINK_WATER_BUCKET, Models.GENERATED);
+        ModItems.COLOR_TO_WATER_BUCKET.values().forEach(waterBucket ->
+                itemModelGenerator.register(waterBucket, Models.GENERATED));
 
-        itemModelGenerator.register(ModItems.WHITE_LAVA_BUCKET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.LIGHT_GRAY_LAVA_BUCKET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.GRAY_LAVA_BUCKET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.BLACK_LAVA_BUCKET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.BROWN_LAVA_BUCKET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.RED_LAVA_BUCKET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.ORANGE_LAVA_BUCKET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.YELLOW_LAVA_BUCKET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.LIME_LAVA_BUCKET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.GREEN_LAVA_BUCKET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.CYAN_LAVA_BUCKET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.LIGHT_BLUE_LAVA_BUCKET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.BLUE_LAVA_BUCKET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.PURPLE_LAVA_BUCKET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.MAGENTA_LAVA_BUCKET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.PINK_LAVA_BUCKET, Models.GENERATED);
+        ModItems.COLOR_TO_LAVA_BUCKET.values().forEach(lavaBucket ->
+                itemModelGenerator.register(lavaBucket, Models.GENERATED));
+
 
         itemModelGenerator.register(ModItems.BLANK_MOULD, Models.GENERATED);
         itemModelGenerator.register(ModItems.HELMET_MOULD, Models.GENERATED);
@@ -291,10 +104,10 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.FOOLS_GOLD_BOOTS_3, Models.GENERATED);
         itemModelGenerator.register(ModItems.FOOLS_GOLD_BOOTS_4, Models.GENERATED);
 
-        itemModelGenerator.registerArmor(((ArmorItem) ModItems.FOOLS_GOLD_HELMET));
-        itemModelGenerator.registerArmor(((ArmorItem) ModItems.FOOLS_GOLD_CHESTPLATE));
-        itemModelGenerator.registerArmor(((ArmorItem) ModItems.FOOLS_GOLD_LEGGINGS));
-        itemModelGenerator.registerArmor(((ArmorItem) ModItems.FOOLS_GOLD_BOOTS));
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.FOOLS_GOLD_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.FOOLS_GOLD_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.FOOLS_GOLD_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.FOOLS_GOLD_BOOTS);
 
         itemModelGenerator.register(ModItems.CELESTIAL_GEARFORGED_HELMET, Models.GENERATED);
         itemModelGenerator.register(ModItems.CELESTIAL_GEARFORGED_CHESTPLATE, Models.GENERATED);

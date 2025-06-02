@@ -1,22 +1,26 @@
 package net.spacegateir.steamcraft.creative_tab;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.minecraft.block.Block;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.spacegateir.steamcraft.Steamcraft;
 import net.spacegateir.steamcraft.block.ModBlocks;
+import net.spacegateir.steamcraft.block.arcane.ArcaneBlock;
 import net.spacegateir.steamcraft.item.ModItems;
+import net.spacegateir.steamcraft.item.ModRewardItems;
 
 public class ModItemGroups {
     public static final ItemGroup STEAMCRAFT = Registry.register(Registries.ITEM_GROUP,
-            new Identifier(Steamcraft.MOD_ID,"sc"),
-            FabricItemGroup.builder().displayName(Text.translatable("SteamCraft"))
-                    .icon(() -> new ItemStack(ModItems.PATTERN_RECOMPILER)).entries((displayContext, entries) -> {
-
+            new Identifier(Steamcraft.MOD_ID, "sc"),
+            FabricItemGroup.builder().displayName(Text.literal("SteamCraft"))
+                    .icon(() -> new ItemStack(ModItems.PATTERN_RECOMPILER))
+                    .entries((displayContext, entries) -> {
                         //Items
 //                        entries.add(ModItems.TEST_ITEM);
 
@@ -79,22 +83,7 @@ public class ModItemGroups {
 //                        entries.add(ModBlocks.TEST_BLOCK);
 
                         entries.add(ModBlocks.AETHER_COIL);
-                        entries.add(ModBlocks.AETHER_COIL_WHITE);
-                        entries.add(ModBlocks.AETHER_COIL_LIGHT_GRAY);
-                        entries.add(ModBlocks.AETHER_COIL_GRAY);
-                        entries.add(ModBlocks.AETHER_COIL_BLACK);
-                        entries.add(ModBlocks.AETHER_COIL_BROWN);
-                        entries.add(ModBlocks.AETHER_COIL_RED);
-                        entries.add(ModBlocks.AETHER_COIL_ORANGE);
-                        entries.add(ModBlocks.AETHER_COIL_YELLOW);
-                        entries.add(ModBlocks.AETHER_COIL_LIME);
-                        entries.add(ModBlocks.AETHER_COIL_GREEN);
-                        entries.add(ModBlocks.AETHER_COIL_CYAN);
-                        entries.add(ModBlocks.AETHER_COIL_LIGHT_BLUE);
-                        entries.add(ModBlocks.AETHER_COIL_BLUE);
-                        entries.add(ModBlocks.AETHER_COIL_PURPLE);
-                        entries.add(ModBlocks.AETHER_COIL_MAGENTA);
-                        entries.add(ModBlocks.AETHER_COIL_PINK);
+                        ModBlocks.COLOR_TO_AETHER_COIL.values().forEach(entries::add);
 
                         entries.add(ModBlocks.CLAY_PATH);
                         entries.add(ModBlocks.COARSE_DIRT_PATH);
@@ -139,46 +128,9 @@ public class ModItemGroups {
                         entries.add(ModBlocks.SKELETON_PELVIS);
                         entries.add(ModBlocks.SKELETON_SPINE);
 
-                        entries.add(ModBlocks.ARCANE_ABSORPTION_BLOCK);
-                        entries.add(ModBlocks.ARCANE_BAD_OMEN_BLOCK);
-                        entries.add(ModBlocks.ARCANE_BLINDNESS_BLOCK);
-                        entries.add(ModBlocks.ARCANE_CONDUIT_BLOCK);
-                        entries.add(ModBlocks.ARCANE_DARKNESS_BLOCK);
-                        entries.add(ModBlocks.ARCANE_DOLPHINS_GRACE_BLOCK);
-                        entries.add(ModBlocks.ARCANE_FIRE_RESISTANCE_BLOCK);
-                        entries.add(ModBlocks.ARCANE_GLOWING_BLOCK);
-                        entries.add(ModBlocks.ARCANE_HASTE_BLOCK);
-                        entries.add(ModBlocks.ARCANE_HEALTH_BOOST_BLOCK);
-                        entries.add(ModBlocks.ARCANE_HERO_OF_THE_VILLAGE_BLOCK);
-                        entries.add(ModBlocks.ARCANE_INSTANT_DAMAGE_BLOCK);
-                        entries.add(ModBlocks.ARCANE_INSTANT_HEALTH_BLOCK);
-                        entries.add(ModBlocks.ARCANE_INVISIBILITY_BLOCK);
-                        entries.add(ModBlocks.ARCANE_JUMP_BOOST_BLOCK);
-                        entries.add(ModBlocks.ARCANE_LEVITATION_BLOCK);
-                        entries.add(ModBlocks.ARCANE_LUCK_BLOCK);
-                        entries.add(ModBlocks.ARCANE_MINING_FATIGUE_BLOCK);
-                        entries.add(ModBlocks.ARCANE_NEAUSEA_BLOCK);
-                        entries.add(ModBlocks.ARCANE_NIGHT_VISION_BLOCK);
-                        entries.add(ModBlocks.ARCANE_POISION_BLOCK);
-                        entries.add(ModBlocks.ARCANE_REGENERATION_BLOCK);
-                        entries.add(ModBlocks.ARCANE_RESISTANCE_BLOCK);
-                        entries.add(ModBlocks.ARCANE_SATUATION_BLOCK);
-                        entries.add(ModBlocks.ARCANE_SLOW_FALL_BLOCK);
-                        entries.add(ModBlocks.ARCANE_SLOWNESS_BLOCK);
-                        entries.add(ModBlocks.ARCANE_SPEED_BLOCK);
-                        entries.add(ModBlocks.ARCANE_STARVING_BLOCK);
-                        entries.add(ModBlocks.ARCANE_STRENGTH_BLOCK);
-                        entries.add(ModBlocks.ARCANE_UNLUCK_BLOCK);
-                        entries.add(ModBlocks.ARCANE_WATER_BREATHING_BLOCK);
-                        entries.add(ModBlocks.ARCANE_WEAKNESS_BLOCK);
-                        entries.add(ModBlocks.ARCANE_WITHER_BLOCK);
-                        entries.add(ModBlocks.ARCANE_VOID_BLOCK);
-                        entries.add(ModBlocks.ARCANE_CLEAR_NEGATIVE_BLOCK);
-                        entries.add(ModBlocks.ARCANE_CLEAR_POSITIVE_BLOCK);
-                        entries.add(ModBlocks.ARCANE_CLEAR_NEUTRAL_BLOCK);
-                        entries.add(ModBlocks.ARCANE_DISORIENT_BLOCK);
-                        entries.add(ModBlocks.ARCANE_STICKY_FEAT_BLOCK);
-                        entries.add(ModBlocks.ARCANE_FREAKY_BUNNY_BLOCK);
+                        Registries.BLOCK.stream()
+                                .filter(block -> block instanceof ArcaneBlock)
+                                .forEach(entries::add);
 
                         entries.add(ModBlocks.POWER_PRECISION_BLOCK);
 
@@ -204,38 +156,10 @@ public class ModItemGroups {
 
                         entries.add(ModItems.SMOKE_BLOCK_ITEM);
 
-                        entries.add(ModBlocks.COBBLED_WHITE_CONCRETE);
-                        entries.add(ModBlocks.COBBLED_WHITE_CONCRETE_POWDER);
-                        entries.add(ModBlocks.COBBLED_LIGHT_GRAY_CONCRETE);
-                        entries.add(ModBlocks.COBBLED_LIGHT_GRAY_CONCRETE_POWDER);
-                        entries.add(ModBlocks.COBBLED_GRAY_CONCRETE);
-                        entries.add(ModBlocks.COBBLED_GRAY_CONCRETE_POWDER);
-                        entries.add(ModBlocks.COBBLED_BLACK_CONCRETE);
-                        entries.add(ModBlocks.COBBLED_BLACK_CONCRETE_POWDER);
-                        entries.add(ModBlocks.COBBLED_BROWN_CONCRETE);
-                        entries.add(ModBlocks.COBBLED_BROWN_CONCRETE_POWDER);
-                        entries.add(ModBlocks.COBBLED_RED_CONCRETE);
-                        entries.add(ModBlocks.COBBLED_RED_CONCRETE_POWDER);
-                        entries.add(ModBlocks.COBBLED_ORANGE_CONCRETE);
-                        entries.add(ModBlocks.COBBLED_ORANGE_CONCRETE_POWDER);
-                        entries.add(ModBlocks.COBBLED_YELLOW_CONCRETE);
-                        entries.add(ModBlocks.COBBLED_YELLOW_CONCRETE_POWDER);
-                        entries.add(ModBlocks.COBBLED_LIME_CONCRETE);
-                        entries.add(ModBlocks.COBBLED_LIME_CONCRETE_POWDER);
-                        entries.add(ModBlocks.COBBLED_GREEN_CONCRETE);
-                        entries.add(ModBlocks.COBBLED_GREEN_CONCRETE_POWDER);
-                        entries.add(ModBlocks.COBBLED_CYAN_CONCRETE);
-                        entries.add(ModBlocks.COBBLED_CYAN_CONCRETE_POWDER);
-                        entries.add(ModBlocks.COBBLED_LIGHT_BLUE_CONCRETE);
-                        entries.add(ModBlocks.COBBLED_LIGHT_BLUE_CONCRETE_POWDER);
-                        entries.add(ModBlocks.COBBLED_BLUE_CONCRETE);
-                        entries.add(ModBlocks.COBBLED_BLUE_CONCRETE_POWDER);
-                        entries.add(ModBlocks.COBBLED_PURPLE_CONCRETE);
-                        entries.add(ModBlocks.COBBLED_PURPLE_CONCRETE_POWDER);
-                        entries.add(ModBlocks.COBBLED_MAGENTA_CONCRETE);
-                        entries.add(ModBlocks.COBBLED_MAGENTA_CONCRETE_POWDER);
-                        entries.add(ModBlocks.COBBLED_PINK_CONCRETE);
-                        entries.add(ModBlocks.COBBLED_PINK_CONCRETE_POWDER);
+                        for (DyeColor color : DyeColor.values()) {
+                            entries.add(ModBlocks.COLOR_TO_CONCRETE.get(color));
+                            entries.add(ModBlocks.COLOR_TO_CONCRETE_POWDER.get(color));
+                        }
 
                         entries.add(ModBlocks.PACKED_ICE_BRICKS);
                         entries.add(ModBlocks.PACKED_ICE_BRICKS_CRACKED);
@@ -247,170 +171,106 @@ public class ModItemGroups {
                         entries.add(ModBlocks.SNOW_TILES);
                         entries.add(ModBlocks.SNOW_TILES_CRACKED);
 
-
-
-
-
-
-
                         //BlockItems
 //                        entries.add(ModItems.TEST_ITEM_BLOCK);
 
 
-                        entries.add(ModItems.AGAPANTHUS_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_AGAPANTHUS_FLOWER_ITEM);
-                        entries.add(ModItems.THORNED_AGAPANTHUS_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_THORNED_AGAPANTHUS_FLOWER_ITEM);
-                        entries.add(ModItems.LUSH_AGAPANTHUS_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_LUSH_AGAPANTHUS_FLOWER_ITEM);
+                        for (Block flower : ModBlocks.COLOR_TO_FLOWER.values()) {
+                            entries.add(flower);
+                            entries.add(ModBlocks.FLOWER_TO_GLOW_FLOWER.get(flower));
+                            entries.add(ModBlocks.FLOWER_TO_THORNED_FLOWER.get(flower));
+                            entries.add(ModBlocks.FLOWER_TO_GLOW_THORNED_FLOWER.get(flower));
+                            entries.add(ModBlocks.FLOWER_TO_LUSH_FLOWER.get(flower));
+                            entries.add(ModBlocks.FLOWER_TO_GLOW_LUSH_FLOWER.get(flower));
+                        }
 
-                        entries.add(ModItems.BLUE_COSMOS_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_BLUE_COSMOS_FLOWER_ITEM);
-                        entries.add(ModItems.THORNED_BLUE_COSMOS_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_THORNED_BLUE_COSMOS_FLOWER_ITEM);
-                        entries.add(ModItems.LUSH_BLUE_COSMOS_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_LUSH_BLUE_COSMOS_FLOWER_ITEM);
+                        ModItems.COLOR_TO_WATER_BUCKET.values().forEach(entries::add);
+                        ModItems.COLOR_TO_LAVA_BUCKET.values().forEach(entries::add);
+                    }).build());
 
-                        entries.add(ModItems.BONSAI_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_BONSAI_FLOWER_ITEM);
-                        entries.add(ModItems.THORNED_BONSAI_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_THORNED_BONSAI_FLOWER_ITEM);
-                        entries.add(ModItems.LUSH_BONSAI_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_LUSH_BONSAI_FLOWER_ITEM);
+    public static final ItemGroup STEAMCRAFT_REWARDS = Registry.register(Registries.ITEM_GROUP,
+            new Identifier(Steamcraft.MOD_ID, "scr"),
+            FabricItemGroup.builder().displayName(Text.literal("SteamCraft Rewards"))
+                    .icon(() -> new ItemStack(ModRewardItems.WOLF_FURY_HELMET)).entries((displayContext, entries) -> {
 
-                        entries.add(ModItems.CARNATION_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_CARNATION_FLOWER_ITEM);
-                        entries.add(ModItems.THORNED_CARNATION_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_THORNED_CARNATION_FLOWER_ITEM);
-                        entries.add(ModItems.LUSH_CARNATION_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_LUSH_CARNATION_FLOWER_ITEM);
+                        entries.add(ModRewardItems.LOOT_CHEST);
 
-                        entries.add(ModItems.DAFFODIL_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_DAFFODIL_FLOWER_ITEM);
-                        entries.add(ModItems.THORNED_DAFFODIL_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_THORNED_DAFFODIL_FLOWER_ITEM);
-                        entries.add(ModItems.LUSH_DAFFODIL_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_LUSH_DAFFODIL_FLOWER_ITEM);
+                        entries.add(ModRewardItems.DRAGON_BANE_LOOT_CHEST);
+                        entries.add(ModRewardItems.DRAGON_BANE_HELMET);
+                        entries.add(ModRewardItems.DRAGON_BANE_CHESTPLATE);
+                        entries.add(ModRewardItems.DRAGON_BANE_LEGGINGS);
+                        entries.add(ModRewardItems.DRAGON_BANE_BOOTS);
 
-                        entries.add(ModItems.DAHLIA_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_DAHLIA_FLOWER_ITEM);
-                        entries.add(ModItems.THORNED_DAHLIA_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_THORNED_DAHLIA_FLOWER_ITEM);
-                        entries.add(ModItems.LUSH_DAHLIA_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_LUSH_DAHLIA_FLOWER_ITEM);
+                        entries.add(ModRewardItems.ORIKALKUM_LOOT_CHEST);
+                        entries.add(ModRewardItems.ORIKALKUM_HELMET);
+                        entries.add(ModRewardItems.ORIKALKUM_CHESTPLATE);
+                        entries.add(ModRewardItems.ORIKALKUM_LEGGINGS);
+                        entries.add(ModRewardItems.ORIKALKUM_BOOTS);
 
-                        entries.add(ModItems.DELPHINIUM_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_DELPHINIUM_FLOWER_ITEM);
-                        entries.add(ModItems.THORNED_DELPHINIUM_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_THORNED_DELPHINIUM_FLOWER_ITEM);
-                        entries.add(ModItems.LUSH_DELPHINIUM_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_LUSH_DELPHINIUM_FLOWER_ITEM);
+                        entries.add(ModRewardItems.ADAMANTITE_LOOT_CHEST);
+                        entries.add(ModRewardItems.ADAMANTITE_HELMET);
+                        entries.add(ModRewardItems.ADAMANTITE_CHESTPLATE);
+                        entries.add(ModRewardItems.ADAMANTITE_LEGGINGS);
+                        entries.add(ModRewardItems.ADAMANTITE_BOOTS);
 
-                        entries.add(ModItems.HAWTHORN_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_HAWTHORN_FLOWER_ITEM);
-                        entries.add(ModItems.THORNED_HAWTHORN_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_THORNED_HAWTHORN_FLOWER_ITEM);
-                        entries.add(ModItems.LUSH_HAWTHORN_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_LUSH_HAWTHORN_FLOWER_ITEM);
+                        entries.add(ModRewardItems.MAGIRITE_LOOT_CHEST);
+                        entries.add(ModRewardItems.MAGIRITE_HELMET);
+                        entries.add(ModRewardItems.MAGIRITE_CHESTPLATE);
+                        entries.add(ModRewardItems.MAGIRITE_LEGGINGS);
+                        entries.add(ModRewardItems.MAGIRITE_BOOTS);
 
-                        entries.add(ModItems.HYDRANGEA_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_HYDRANGEA_FLOWER_ITEM);
-                        entries.add(ModItems.THORNED_HYDRANGEA_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_THORNED_HYDRANGEA_FLOWER_ITEM);
-                        entries.add(ModItems.LUSH_HYDRANGEA_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_LUSH_HYDRANGEA_FLOWER_ITEM);
+                        entries.add(ModRewardItems.MYTHRIL_LOOT_CHEST);
+                        entries.add(ModRewardItems.MYTHRIL_HELMET);
+                        entries.add(ModRewardItems.MYTHRIL_CHESTPLATE);
+                        entries.add(ModRewardItems.MYTHRIL_LEGGINGS);
+                        entries.add(ModRewardItems.MYTHRIL_BOOTS);
 
-                        entries.add(ModItems.IRIS_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_IRIS_FLOWER_ITEM);
-                        entries.add(ModItems.THORNED_IRIS_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_THORNED_IRIS_FLOWER_ITEM);
-                        entries.add(ModItems.LUSH_IRIS_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_LUSH_IRIS_FLOWER_ITEM);
+                        entries.add(ModRewardItems.DWARF_STEEL_LOOT_CHEST);
+                        entries.add(ModRewardItems.DWARF_STEEL_HELMET);
+                        entries.add(ModRewardItems.DWARF_STEEL_CHESTPLATE);
+                        entries.add(ModRewardItems.DWARF_STEEL_LEGGINGS);
+                        entries.add(ModRewardItems.DWARF_STEEL_BOOTS);
 
-                        entries.add(ModItems.LARKSPUR_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_LARKSPUR_FLOWER_ITEM);
-                        entries.add(ModItems.THORNED_LARKSPUR_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_THORNED_LARKSPUR_FLOWER_ITEM);
-                        entries.add(ModItems.LUSH_LARKSPUR_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_LUSH_LARKSPUR_FLOWER_ITEM);
+                        entries.add(ModRewardItems.AER_LOOT_CHEST);
+                        entries.add(ModRewardItems.AER_HELMET);
+                        entries.add(ModRewardItems.AER_CHESTPLATE);
+                        entries.add(ModRewardItems.AER_LEGGINGS);
+                        entries.add(ModRewardItems.AER_BOOTS);
 
-                        entries.add(ModItems.MIDNIGHT_MYSTIC_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_MIDNIGHT_MYSTIC_FLOWER_ITEM);
-                        entries.add(ModItems.THORNED_MIDNIGHT_MYSTIC_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_THORNED_MIDNIGHT_MYSTIC_FLOWER_ITEM);
-                        entries.add(ModItems.LUSH_MIDNIGHT_MYSTIC_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_LUSH_MIDNIGHT_MYSTIC_FLOWER_ITEM);
+                        entries.add(ModRewardItems.AQUA_LOOT_CHEST);
+                        entries.add(ModRewardItems.AQUA_HELMET);
+                        entries.add(ModRewardItems.AQUA_CHESTPLATE);
+                        entries.add(ModRewardItems.AQUA_LEGGINGS);
+                        entries.add(ModRewardItems.AQUA_BOOTS);
 
-                        entries.add(ModItems.PRIMROSE_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_PRIMROSE_FLOWER_ITEM);
-                        entries.add(ModItems.THORNED_PRIMROSE_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_THORNED_PRIMROSE_FLOWER_ITEM);
-                        entries.add(ModItems.LUSH_PRIMROSE_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_LUSH_PRIMROSE_FLOWER_ITEM);
+                        entries.add(ModRewardItems.TERA_LOOT_CHEST);
+                        entries.add(ModRewardItems.TERA_HELMET);
+                        entries.add(ModRewardItems.TERA_CHESTPLATE);
+                        entries.add(ModRewardItems.TERA_LEGGINGS);
+                        entries.add(ModRewardItems.TERA_BOOTS);
 
-                        entries.add(ModItems.SNOW_DROP_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_SNOW_DROP_FLOWER_ITEM);
-                        entries.add(ModItems.THORNED_SNOW_DROP_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_THORNED_SNOW_DROP_FLOWER_ITEM);
-                        entries.add(ModItems.LUSH_SNOW_DROP_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_LUSH_SNOW_DROP_FLOWER_ITEM);
+                        entries.add(ModRewardItems.IGNIS_LOOT_CHEST);
+                        entries.add(ModRewardItems.IGNIS_HELMET);
+                        entries.add(ModRewardItems.IGNIS_CHESTPLATE);
+                        entries.add(ModRewardItems.IGNIS_LEGGINGS);
+                        entries.add(ModRewardItems.IGNIS_BOOTS);
 
-                        entries.add(ModItems.SPIDERLILY_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_SPIDERLILY_FLOWER_ITEM);
-                        entries.add(ModItems.THORNED_SPIDERLILY_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_THORNED_SPIDERLILY_FLOWER_ITEM);
-                        entries.add(ModItems.LUSH_SPIDERLILY_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_LUSH_SPIDERLILY_FLOWER_ITEM);
+                        entries.add(ModRewardItems.WOLF_FURY_LOOT_CHEST);
+                        entries.add(ModRewardItems.WOLF_FURY_HELMET);
+                        entries.add(ModRewardItems.WOLF_FURY_CHESTPLATE);
+                        entries.add(ModRewardItems.WOLF_FURY_LEGGINGS);
+                        entries.add(ModRewardItems.WOLF_FURY_BOOTS);
 
-                        entries.add(ModItems.VIOLET_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_VIOLET_FLOWER_ITEM);
-                        entries.add(ModItems.THORNED_VIOLET_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_THORNED_VIOLET_FLOWER_ITEM);
-                        entries.add(ModItems.LUSH_VIOLET_FLOWER_ITEM);
-//                        entries.add(ModItems.GLOW_LUSH_VIOLET_FLOWER_ITEM);
-
-                        entries.add(ModItems.WHITE_WATER_BUCKET);
-                        entries.add(ModItems.LIGHT_GRAY_WATER_BUCKET);
-                        entries.add(ModItems.GRAY_WATER_BUCKET);
-                        entries.add(ModItems.BLACK_WATER_BUCKET);
-                        entries.add(ModItems.BROWN_WATER_BUCKET);
-                        entries.add(ModItems.RED_WATER_BUCKET);
-                        entries.add(ModItems.ORANGE_WATER_BUCKET);
-                        entries.add(ModItems.YELLOW_WATER_BUCKET);
-                        entries.add(ModItems.LIME_WATER_BUCKET);
-                        entries.add(ModItems.GREEN_WATER_BUCKET);
-                        entries.add(ModItems.CYAN_WATER_BUCKET);
-                        entries.add(ModItems.LIGHT_BLUE_WATER_BUCKET);
-                        entries.add(ModItems.BLUE_WATER_BUCKET);
-                        entries.add(ModItems.PURPLE_WATER_BUCKET);
-                        entries.add(ModItems.MAGENTA_WATER_BUCKET);
-                        entries.add(ModItems.PINK_WATER_BUCKET);
-
-                        entries.add(ModItems.WHITE_LAVA_BUCKET);
-                        entries.add(ModItems.LIGHT_GRAY_LAVA_BUCKET);
-                        entries.add(ModItems.GRAY_LAVA_BUCKET);
-                        entries.add(ModItems.BLACK_LAVA_BUCKET);
-                        entries.add(ModItems.BROWN_LAVA_BUCKET);
-                        entries.add(ModItems.RED_LAVA_BUCKET);
-                        entries.add(ModItems.ORANGE_LAVA_BUCKET);
-                        entries.add(ModItems.YELLOW_LAVA_BUCKET);
-                        entries.add(ModItems.LIME_LAVA_BUCKET);
-                        entries.add(ModItems.GREEN_LAVA_BUCKET);
-                        entries.add(ModItems.CYAN_LAVA_BUCKET);
-                        entries.add(ModItems.LIGHT_BLUE_LAVA_BUCKET);
-                        entries.add(ModItems.BLUE_LAVA_BUCKET);
-                        entries.add(ModItems.PURPLE_LAVA_BUCKET);
-                        entries.add(ModItems.MAGENTA_LAVA_BUCKET);
-                        entries.add(ModItems.PINK_LAVA_BUCKET);
-
-
-
-
+//                        entries.add(ModRewardItems.AMETHYST_LOOT_CHEST);
+//                        entries.add(ModRewardItems.AMETHYST_HELMET);
+//                        entries.add(ModRewardItems.AMETHYST_CHESTPLATE);
+//                        entries.add(ModRewardItems.AMETHYST_LEGGINGS);
+//                        entries.add(ModRewardItems.AMETHYST_BOOTS);
 
 
                     }).build());
 
     public static void registerItemGroups() {
-        Steamcraft.LOGGER.info("registering Item Groups for "+ Steamcraft.MOD_ID);
+        Steamcraft.LOGGER.info("Registering Item Groups");
     }
 }

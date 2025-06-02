@@ -3,7 +3,6 @@ package net.spacegateir.steamcraft.item;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.block.Block;
 import net.minecraft.item.ArmorItem;
-import net.minecraft.item.ArmorMaterials;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -173,7 +172,7 @@ public class ModRewardItems {
     }
 
     public static void registerModRewardItems()   {
-        Steamcraft.LOGGER.info("Registering Mod Items for " + Steamcraft.MOD_ID);
+        Steamcraft.LOGGER.info("Registering Mod Items");
     }
 
     private static Item registerBlockItem(String name, Block block) {

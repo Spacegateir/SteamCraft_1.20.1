@@ -24,8 +24,6 @@ public class SteamcraftDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModWorldGenerator::new);
 		pack.addProvider(ModFluidTagProvider::new);
 
-
-
 	}
 
 	@Override

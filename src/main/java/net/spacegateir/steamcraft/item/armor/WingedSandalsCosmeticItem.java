@@ -14,6 +14,7 @@ import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.math.Vec3d;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import net.spacegateir.steamcraft.item.client.winged_sandals.WingedSandalsRenderer;
 import org.jetbrains.annotations.Nullable;
@@ -29,12 +30,11 @@ import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 public class WingedSandalsCosmeticItem extends ArmorItem implements GeoItem {
+    private static final int DASH_COOLDOWN_TICKS = 200;
+    private static long lastDashAge = 0;
+
     private final AnimatableInstanceCache cache = new SingletonAnimatableInstanceCache(this);
     private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
-
-    private long lastDashTime = 0; // Add this as a class field
-    private static final long DASH_COOLDOWN_MS = 10000; // 10 seconds cooldown
-
 
     public WingedSandalsCosmeticItem(ArmorMaterial material, Type type, Settings settings) {
         super(material, type, settings);
@@ -42,7 +42,7 @@ public class WingedSandalsCosmeticItem extends ArmorItem implements GeoItem {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        if(Screen.hasShiftDown()) {
+        if (Screen.hasShiftDown()) {
             tooltip.add(Text.translatable("tooltip.steamcraft.winged_sandals.tooltip.shift_1"));
             tooltip.add(Text.translatable("tooltip.steamcraft.winged_sandals.tooltip.shift_2"));
             tooltip.add(Text.translatable("tooltip.steamcraft.winged_sandals.tooltip.shift_3"));
@@ -77,10 +77,10 @@ public class WingedSandalsCosmeticItem extends ArmorItem implements GeoItem {
 
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-        controllers.add(new AnimationController(this, "controller", 0, this::predicate));
+        controllers.add(new AnimationController<>(this, "controller", 0, this::predicate));
     }
 
-    private PlayState predicate(AnimationState animationState) {
+    private PlayState predicate(AnimationState<?> animationState) {
         animationState.getController().setAnimation(RawAnimation.begin().then("animation.model.Idel", Animation.LoopType.LOOP));
         return PlayState.CONTINUE;
     }
@@ -93,9 +93,8 @@ public class WingedSandalsCosmeticItem extends ArmorItem implements GeoItem {
     public void handleMovement(ClientPlayerEntity player) {
 
         boolean isJumpingNow = player.input.sneaking && player.input.jumping;
-        long currentTime = System.currentTimeMillis();
 
-        if (isJumpingNow && !player.isOnGround() && (currentTime - lastDashTime > DASH_COOLDOWN_MS)) {
+        if (isJumpingNow && !player.isOnGround() && (player.age - lastDashAge > DASH_COOLDOWN_TICKS)) {
             if (player.getHungerManager().getFoodLevel() >= 10) {
 
                 Vec3d forward = player.getRotationVec(1.0F).normalize().multiply(100.0); // Balanced dash distance
@@ -104,10 +103,11 @@ public class WingedSandalsCosmeticItem extends ArmorItem implements GeoItem {
 
                 player.playSound(SoundEvents.ENTITY_LIGHTNING_BOLT_THUNDER, 3.0F, 1.2F);
 
+                Random random = player.getRandom();
                 for (int i = 0; i < 10; i++) {
-                    double offsetX = (player.getRandom().nextDouble() - 0.5) * 1.0;
-                    double offsetY = player.getRandom().nextDouble() * 1.0;
-                    double offsetZ = (player.getRandom().nextDouble() - 0.5) * 1.0;
+                    double offsetX = random.nextDouble() - 0.5;
+                    double offsetY = random.nextDouble();
+                    double offsetZ = random.nextDouble() - 0.5;
 
                     player.getWorld().addParticle(ParticleTypes.CLOUD,
                             dashTo.x + offsetX,
@@ -123,7 +123,7 @@ public class WingedSandalsCosmeticItem extends ArmorItem implements GeoItem {
                     hunger.setSaturationLevel(Math.min(hunger.getSaturationLevel(), hunger.getFoodLevel()));
                 }
 
-                lastDashTime = currentTime;
+                lastDashAge = player.age;
             }
         }
     }

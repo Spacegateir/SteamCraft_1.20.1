@@ -1,7 +1,7 @@
 package net.spacegateir.steamcraft.item.armor;
 
-import com.google.common.collect.ImmutableMap;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
@@ -13,14 +13,8 @@ import net.minecraft.text.Text;
 import net.minecraft.world.World;
 import net.spacegateir.steamcraft.item.ModArmorMaterials;
 
-import java.util.Map;
-
 public class FoolsGoldArmourItem extends ArmorItem {
     private static final int[] WARNING_THRESHOLDS = {75, 50, 25, 20, 15, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
-    private static final Map<ArmorMaterial, StatusEffectInstance> MATERIAL_TO_EFFECT_MAP =
-            new ImmutableMap.Builder<ArmorMaterial, StatusEffectInstance>()
-                    .put(ModArmorMaterials.FOOLS_GOLD, new StatusEffectInstance(StatusEffects.REGENERATION, 100, 1))
-                    .build();
 
     public FoolsGoldArmourItem(ArmorMaterial material, Type type, Settings settings) {
         super(material, type, settings);
@@ -35,6 +29,7 @@ public class FoolsGoldArmourItem extends ArmorItem {
             int remainingDurability = maxDamage - currentDamage;
             int percent = (int) ((remainingDurability / (float) maxDamage) * 100);
 
+            // TODO: use a single "warned" int value
             for (int threshold : WARNING_THRESHOLDS) {
                 String key = "warned_" + threshold;
                 if (percent <= threshold && !nbt.getBoolean(key)) {
@@ -54,48 +49,13 @@ public class FoolsGoldArmourItem extends ArmorItem {
             }
 
             // Apply effects if full set is worn
-            evaluateArmorEffect(player);
+            if (player.getInventory().armor.stream()
+                    .allMatch(itemStack -> itemStack.getItem() instanceof ArmorItem armorItem &&
+                            armorItem.getMaterial() == ModArmorMaterials.FOOLS_GOLD)) {
+                player.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 100, 1));
+            }
         }
 
         super.inventoryTick(stack, world, entity, slot, selected);
-    }
-
-    private void evaluateArmorEffect(PlayerEntity player) {
-        for (Map.Entry<ArmorMaterial, StatusEffectInstance> entry : MATERIAL_TO_EFFECT_MAP.entrySet()) {
-            ArmorMaterial mapArmorMaterial = entry.getKey();
-            StatusEffectInstance mapStatusEffect = entry.getValue();
-
-            if (hasFullSuitOfArmorOn(player) && hasCorrectArmorOn(mapArmorMaterial, player)) {
-                addStatusEffectForMaterial(player, mapStatusEffect);
-                break;
-            }
-        }
-    }
-
-    private void addStatusEffectForMaterial(PlayerEntity player, StatusEffectInstance mapStatusEffect) {
-        boolean hasPlayerEffectAlready = player.hasStatusEffect(mapStatusEffect.getEffectType());
-
-        if (!hasPlayerEffectAlready) {
-            player.addStatusEffect(new StatusEffectInstance(
-                    mapStatusEffect.getEffectType(),
-                    mapStatusEffect.getDuration(),
-                    mapStatusEffect.getAmplifier()));
-        }
-    }
-
-    private boolean hasCorrectArmorOn(ArmorMaterial material, PlayerEntity player) {
-        for (ItemStack armorStack : player.getArmorItems()) {
-            if (!(armorStack.getItem() instanceof ArmorItem armorItem) || armorItem.getMaterial() != material) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    private boolean hasFullSuitOfArmorOn(PlayerEntity player) {
-        return !player.getInventory().getArmorStack(0).isEmpty() &&
-                !player.getInventory().getArmorStack(1).isEmpty() &&
-                !player.getInventory().getArmorStack(2).isEmpty() &&
-                !player.getInventory().getArmorStack(3).isEmpty();
     }
 }

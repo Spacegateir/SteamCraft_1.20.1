@@ -12,7 +12,7 @@ import net.spacegateir.steamcraft.effect.effects.*;
 
 public class ModEffects {
     public static final StatusEffect CELESTIAL_GEARFORGES_EFFECT = registerStatusEffect("celestial_gearforged_effect",
-            new CelestialGearforgedEffect(StatusEffectCategory.NEUTRAL, 0xffa500));
+            new CelestialGearforgedEffect(StatusEffectCategory.NEUTRAL, 0xFFA500));
 
     public static final StatusEffect STICKY_FEAT = registerStatusEffect("sticky_feat",
             new StickyFeatEffect(StatusEffectCategory.NEUTRAL, 0x36ebab)
@@ -24,7 +24,7 @@ public class ModEffects {
             new DisorientEffect(StatusEffectCategory.HARMFUL, 0x7140C5));
 
     public static final StatusEffect FREAKY_BUNNY = registerStatusEffect("freaky_bunny",
-            new FreakyBunnyEffect(StatusEffectCategory.HARMFUL, 0xff6600));
+            new FreakyBunnyEffect(StatusEffectCategory.HARMFUL, 0xFF6600));
 
 
 
@@ -36,8 +36,7 @@ public class ModEffects {
             new ClearNegativeStatusEffect(StatusEffectCategory.BENEFICIAL, 0x3A2065));
 
     public static final StatusEffect CLEAR_NEUTRAL_EFFECT = registerStatusEffect("clear_neutral_effect",
-            new ClearNeutralStatusEffect(StatusEffectCategory.BENEFICIAL
-                    , 0x6E6A6A));
+            new ClearNeutralStatusEffect(StatusEffectCategory.BENEFICIAL, 0x6E6A6A));
 
 
 
@@ -46,6 +45,6 @@ public class ModEffects {
     }
 
     public static void registerEffects() {
-        Steamcraft.LOGGER.info("Registering Mod Effects for " + Steamcraft.MOD_ID);
+        Steamcraft.LOGGER.info("Registering Mod Effects");
     }
 }

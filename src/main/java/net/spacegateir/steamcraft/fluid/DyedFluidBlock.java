@@ -1,4 +1,4 @@
-package net.spacegateir.steamcraft.block.fluidblocks;
+package net.spacegateir.steamcraft.fluid;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;

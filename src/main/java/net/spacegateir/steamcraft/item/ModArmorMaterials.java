@@ -2,19 +2,13 @@ package net.spacegateir.steamcraft.item;
 
 import com.google.common.base.Supplier;
 import com.google.common.base.Suppliers;
-import com.mojang.serialization.Codec;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
-import net.minecraft.item.ArmorMaterials;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.util.StringIdentifiable;
-import net.minecraft.util.Util;
 import net.spacegateir.steamcraft.Steamcraft;
-
-import java.util.EnumMap;
 
 public enum ModArmorMaterials implements ArmorMaterial {
 
@@ -63,7 +57,6 @@ public enum ModArmorMaterials implements ArmorMaterial {
     DRAGON_BANE("dragon_bane", 37, new int[] {3, 8, 6, 3}, 15,
             SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.ofItems(Items.NETHERITE_INGOT));
 
-    public static final Codec<ArmorMaterials> CODEC = StringIdentifiable.createCodec(ArmorMaterials::values);
     private static final int[] BASE_DURABILITY = {11, 16, 15, 13};
 
     private final String name;

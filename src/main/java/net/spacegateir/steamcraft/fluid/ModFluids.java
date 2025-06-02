@@ -9,9 +9,6 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.spacegateir.steamcraft.Steamcraft;
-import net.spacegateir.steamcraft.block.fluidblocks.*;
-import net.spacegateir.steamcraft.fluid.lava.*;
-import net.spacegateir.steamcraft.fluid.water.*;
 
 import java.util.EnumMap;
 
@@ -197,6 +194,6 @@ public class ModFluids {
     }
 
     public static void registerFluids() {
-        Steamcraft.LOGGER.info("Registering Fluid for " + Steamcraft.MOD_ID);
+        Steamcraft.LOGGER.info("Registering Fluids");
     }
 }

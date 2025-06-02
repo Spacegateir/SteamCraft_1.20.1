@@ -13,7 +13,7 @@ public class ModFluidRendererRegistry {
 
     public static void registerFluidRenderers() {
 
-        EnumMap<DyeColor, Integer> COLOR_TO_FLUID_COLOR = Util.make(new EnumMap<>(DyeColor.class), map -> {
+        EnumMap<DyeColor, Integer> colorToFluidColor = Util.make(new EnumMap<>(DyeColor.class), map -> {
             map.put(DyeColor.WHITE, 0xA1FFFFFF);
             map.put(DyeColor.LIGHT_GRAY, 0xFFA0A0A0);
             map.put(DyeColor.GRAY, 0xFF808080);
@@ -36,7 +36,7 @@ public class ModFluidRendererRegistry {
             FluidRenderHandlerRegistry.INSTANCE.register(
                     ModFluids.COLOR_TO_STILL_WATER.get(color), ModFluids.COLOR_TO_FLOWING_WATER.get(color),
                     ModFluidRenderHandler.coloredWater(
-                            COLOR_TO_FLUID_COLOR.get(color),
+                            colorToFluidColor.get(color),
                             new Identifier(Steamcraft.MOD_ID, "block/" + color.getName() + "_water_still"),
                             new Identifier(Steamcraft.MOD_ID, "block/" + color.getName() + "_water_flow")
                     )
@@ -45,7 +45,7 @@ public class ModFluidRendererRegistry {
             FluidRenderHandlerRegistry.INSTANCE.register(
                     ModFluids.COLOR_TO_STILL_LAVA.get(color), ModFluids.COLOR_TO_FLOWING_LAVA.get(color),
                     ModFluidRenderHandler.coloredLava(
-                            COLOR_TO_FLUID_COLOR.get(color),
+                            colorToFluidColor.get(color),
                             new Identifier(Steamcraft.MOD_ID, "block/" + color.getName() + "_lava_still"),
                             new Identifier(Steamcraft.MOD_ID, "block/" + color.getName() + "_lava_flow")
                     )

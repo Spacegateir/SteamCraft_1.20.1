@@ -11,16 +11,14 @@ import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.Registries;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.spacegateir.steamcraft.Steamcraft;
 import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.item.ModItems;
 
 import java.util.List;
-import java.util.Map;
 import java.util.function.Consumer;
-
-import static java.util.Map.entry;
 
 public class ModRecipeGenerator extends FabricRecipeProvider {
 
@@ -120,7 +118,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('N', Items.NETHERITE_INGOT)
                 .input('I', Items.IRON_INGOT)
                 .criterion(hasItem(Items.NETHERITE_INGOT), conditionsFromItem(Items.NETHERITE_INGOT))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.PATTERN_RECOMPILER)));
+                .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TROWEL)
                 .pattern("  1")
@@ -129,7 +127,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('1', Items.STICK)
                 .input('2', Items.IRON_INGOT)
                 .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.TROWEL)));
+                .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TRAP_CONCEALER)
                 .pattern(" N ")
@@ -140,7 +138,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('I', Items.COPPER_INGOT)
                 .input('1', ModItems.PATTERN_RECOMPILER)
                 .criterion(hasItem(ModItems.DIVINITITE_ALLOY_INGOT), conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.TRAP_CONCEALER)));
+                .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SMOKE_BLOCK_ITEM, 16)
                 .pattern("222")
@@ -149,7 +147,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('1', ModItems.CORE_OF_CHANGING)
                 .input('2', Items.CAMPFIRE)
                 .criterion(hasItem(ModItems.CORE_OF_CHANGING), conditionsFromItem(ModItems.CORE_OF_CHANGING))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.SMOKE_BLOCK_ITEM)));
+                .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.AETHER_COIL, 8)
                 .pattern("III")
@@ -188,7 +186,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.FOOLS_GOLD_HELMET_2), conditionsFromItem(ModItems.FOOLS_GOLD_HELMET_2))
                 .criterion(hasItem(ModItems.FOOLS_GOLD_HELMET_3), conditionsFromItem(ModItems.FOOLS_GOLD_HELMET_3))
                 .criterion(hasItem(ModItems.FOOLS_GOLD_HELMET_4), conditionsFromItem(ModItems.FOOLS_GOLD_HELMET_4))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.FOOLS_GOLD_HELMET)));
+                .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.FOOLS_GOLD_CHESTPLATE)
                 .pattern("12")
@@ -201,7 +199,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.FOOLS_GOLD_CHESTPLATE_2), conditionsFromItem(ModItems.FOOLS_GOLD_CHESTPLATE_2))
                 .criterion(hasItem(ModItems.FOOLS_GOLD_CHESTPLATE_3), conditionsFromItem(ModItems.FOOLS_GOLD_CHESTPLATE_3))
                 .criterion(hasItem(ModItems.FOOLS_GOLD_CHESTPLATE_4), conditionsFromItem(ModItems.FOOLS_GOLD_CHESTPLATE_4))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.FOOLS_GOLD_CHESTPLATE)));
+                .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.FOOLS_GOLD_LEGGINGS)
                 .pattern("12")
@@ -214,7 +212,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.FOOLS_GOLD_LEGGINGS_2), conditionsFromItem(ModItems.FOOLS_GOLD_LEGGINGS_2))
                 .criterion(hasItem(ModItems.FOOLS_GOLD_LEGGINGS_3), conditionsFromItem(ModItems.FOOLS_GOLD_LEGGINGS_3))
                 .criterion(hasItem(ModItems.FOOLS_GOLD_LEGGINGS_4), conditionsFromItem(ModItems.FOOLS_GOLD_LEGGINGS_4))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.FOOLS_GOLD_LEGGINGS)));
+                .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.FOOLS_GOLD_BOOTS)
                 .pattern("12")
@@ -227,7 +225,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.FOOLS_GOLD_BOOTS_2), conditionsFromItem(ModItems.FOOLS_GOLD_BOOTS_2))
                 .criterion(hasItem(ModItems.FOOLS_GOLD_BOOTS_3), conditionsFromItem(ModItems.FOOLS_GOLD_BOOTS_3))
                 .criterion(hasItem(ModItems.FOOLS_GOLD_BOOTS_4), conditionsFromItem(ModItems.FOOLS_GOLD_BOOTS_4))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.FOOLS_GOLD_BOOTS)));
+                .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CELESTIAL_GEARFORGED_HELMET)
                 .pattern("323")
@@ -236,7 +234,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('2', ModItems.LUMINITE_SPARK)
                 .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
                 .criterion(hasItem(ModItems.FOOLS_GOLD_HELMET), conditionsFromItem(ModItems.FOOLS_GOLD_HELMET))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.CELESTIAL_GEARFORGED_HELMET)));
+                .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CELESTIAL_GEARFORGED_CHESTPLATE)
                 .pattern("515")
@@ -248,7 +246,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('4', ModItems.AQUARION_SHARD)
                 .input('5', ModItems.DIVINITITE_ALLOY_INGOT)
                 .criterion(hasItem(ModItems.FOOLS_GOLD_CHESTPLATE), conditionsFromItem(ModItems.FOOLS_GOLD_CHESTPLATE))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.CELESTIAL_GEARFORGED_CHESTPLATE)));
+                .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CELESTIAL_GEARFORGED_LEGGINGS)
                 .pattern("444")
@@ -259,7 +257,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('3', ModItems.AETHERIUM_PRISM)
                 .input('4', ModItems.DIVINITITE_ALLOY_INGOT)
                 .criterion(hasItem(ModItems.FOOLS_GOLD_LEGGINGS), conditionsFromItem(ModItems.FOOLS_GOLD_LEGGINGS))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.CELESTIAL_GEARFORGED_LEGGINGS)));
+                .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CELESTIAL_GEARFORGED_BOOTS)
                 .pattern(" 2 ")
@@ -269,7 +267,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('2', ModItems.WINGED_SANDALS)
                 .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
                 .criterion(hasItem(ModItems.FOOLS_GOLD_BOOTS), conditionsFromItem(ModItems.FOOLS_GOLD_BOOTS))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.CELESTIAL_GEARFORGED_BOOTS)));
+                .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.DIVINITITE_ALLOY_INGOT)
                 .pattern("424")
@@ -280,7 +278,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('3', Items.NETHER_STAR)
                 .input('4', Blocks.GOLD_BLOCK)
                 .criterion(hasItem(ModItems.FOOLS_GOLD_INGOT), conditionsFromItem(ModItems.FOOLS_GOLD_INGOT))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.DIVINITITE_ALLOY_INGOT)));
+                .offerTo(exporter);
 
 //Tuff Crafting
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items.TUFF, 8)
@@ -299,7 +297,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('1', Items.COBBLED_DEEPSLATE)
                 .input('2', Items.OBSIDIAN)
                 .criterion(hasItem(Items.TUFF), conditionsFromItem(Items.TUFF))
-                .offerTo(exporter, new Identifier(getRecipeName(Items.TUFF) + "cobbled_deepslate"));
+                .offerTo(exporter, convertBetween(Items.TUFF, Items.COBBLED_DEEPSLATE));
 
 //Rooted Dirt
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items.ROOTED_DIRT, 1)
@@ -307,7 +305,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('1', Items.DIRT)
                 .input('2', Items.HANGING_ROOTS)
                 .criterion(hasItem(Items.DIRT), conditionsFromItem(Items.DIRT))
-                .offerTo(exporter, new Identifier(getRecipeName(Items.ROOTED_DIRT) + "rooted_dirt"));
+                .offerTo(exporter);
 
 //Mud
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items.MUD, 8)
@@ -317,7 +315,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('1', Items.DIRT)
                 .input('2', Items.WATER_BUCKET)
                 .criterion(hasItem(Items.DIRT), conditionsFromItem(Items.DIRT))
-                .offerTo(exporter, new Identifier(getRecipeName(Items.MUD) + "mud"));
+                .offerTo(exporter);
 
 //Gilded Blackstone
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items.GILDED_BLACKSTONE, 2)
@@ -326,7 +324,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('1', Items.BLACKSTONE)
                 .input('2', Items.GOLD_INGOT)
                 .criterion(hasItem(Items.GOLD_INGOT), conditionsFromItem(Items.GOLD_INGOT))
-                .offerTo(exporter, new Identifier(getRecipeName(Items.GILDED_BLACKSTONE) + "gilded_blackstone"));
+                .offerTo(exporter);
 
 //Crying Obsidian
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items.CRYING_OBSIDIAN, 2)
@@ -335,7 +333,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('1', Items.OBSIDIAN)
                 .input('2', Items.ENDER_PEARL)
                 .criterion(hasItem(Items.OBSIDIAN), conditionsFromItem(Items.OBSIDIAN))
-                .offerTo(exporter, new Identifier(getRecipeName(Items.CRYING_OBSIDIAN) + "crying_obsidian"));
+                .offerTo(exporter);
 
 //Mould Duplicating
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.HELMET_MOULD, 2)
@@ -346,7 +344,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('2', ModItems.HELMET_MOULD)
                 .input('3', Items.NETHERITE_HELMET)
                 .criterion(hasItem(ModItems.HELMET_MOULD), conditionsFromItem(ModItems.HELMET_MOULD))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.HELMET_MOULD)));
+                .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CHESTPLATE_MOULD, 2)
                 .pattern("121")
@@ -356,7 +354,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('2', ModItems.CHESTPLATE_MOULD)
                 .input('3', Items.NETHERITE_CHESTPLATE)
                 .criterion(hasItem(ModItems.CHESTPLATE_MOULD), conditionsFromItem(ModItems.CHESTPLATE_MOULD))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.CHESTPLATE_MOULD)));
+                .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.LEGGINGS_MOULD, 2)
                 .pattern("121")
@@ -366,7 +364,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('2', ModItems.LEGGINGS_MOULD)
                 .input('3', Items.NETHERITE_LEGGINGS)
                 .criterion(hasItem(ModItems.LEGGINGS_MOULD), conditionsFromItem(ModItems.LEGGINGS_MOULD))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.LEGGINGS_MOULD)));
+                .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BOOTS_MOULD, 2)
                 .pattern("121")
@@ -376,7 +374,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('2', ModItems.BOOTS_MOULD)
                 .input('3', Items.NETHERITE_BOOTS)
                 .criterion(hasItem(ModItems.BOOTS_MOULD), conditionsFromItem(ModItems.BOOTS_MOULD))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.BOOTS_MOULD)));
+                .offerTo(exporter);
 
 //Smithing Table Recipies
 //Fools Gold Helmet
@@ -519,7 +517,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('8', Blocks.GRAVEL)
                 .input('9', Blocks.TERRACOTTA)
                 .criterion("has_diamond_block", conditionsFromItem(Blocks.DIAMOND_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.CORE_OF_CHANGING)));
+                .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_ABSORPTION_BLOCK, 1)
                 .pattern("111")
@@ -1170,312 +1168,31 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('2', ModBlocks.POWER_PRECISION_BLOCK)
                 .input('3', Blocks.SCULK)
                 .criterion("has_power_precision_block", conditionsFromItem(ModBlocks.POWER_PRECISION_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.TELEPORT_TRAP_ITEM)));
+                .offerTo(exporter);
 
 
-// White Concrete
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.WHITE_COBBLED_CONCRETE, 8)
-                .pattern("111")
-                .pattern("121")
-                .pattern("111")
-                .input('1', Blocks.WHITE_CONCRETE)
-                .input('2', Blocks.COBBLESTONE)
-                .criterion("has_white_concrete", conditionsFromItem(Blocks.WHITE_CONCRETE))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.WHITE_COBBLED_CONCRETE)));
+        for (DyeColor color : DyeColor.values()) {
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.WHITE_COBBLED_CONCRETE_POWDER, 8)
-                .pattern("111")
-                .pattern("121")
-                .pattern("111")
-                .input('1', Blocks.WHITE_CONCRETE_POWDER)
-                .input('2', Blocks.COBBLESTONE)
-                .criterion("has_white_concrete_powder", conditionsFromItem(Blocks.WHITE_CONCRETE_POWDER))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.WHITE_COBBLED_CONCRETE_POWDER)));
+            Block concrete = ModBlocks.COLOR_TO_CONCRETE.get(color);
+            ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.COLOR_TO_COBBLED_CONCRETE.get(color), 8)
+                    .pattern("CCC")
+                    .pattern("CSC")
+                    .pattern("CCC")
+                    .input('C', concrete)
+                    .input('S', Blocks.COBBLESTONE)
+                    .criterion(hasItem(concrete), conditionsFromItem(concrete))
+                    .offerTo(exporter);
 
-// Light Gray Concrete
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_COBBLED_CONCRETE, 8)
-                .pattern("111")
-                .pattern("121")
-                .pattern("111")
-                .input('1', Blocks.LIGHT_GRAY_CONCRETE)
-                .input('2', Blocks.COBBLESTONE)
-                .criterion("has_light_gray_concrete", conditionsFromItem(Blocks.LIGHT_GRAY_CONCRETE))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.LIGHT_GRAY_COBBLED_CONCRETE)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_COBBLED_CONCRETE_POWDER, 8)
-                .pattern("111")
-                .pattern("121")
-                .pattern("111")
-                .input('1', Blocks.LIGHT_GRAY_CONCRETE_POWDER)
-                .input('2', Blocks.COBBLESTONE)
-                .criterion("has_light_gray_concrete_powder", conditionsFromItem(Blocks.LIGHT_GRAY_CONCRETE_POWDER))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.LIGHT_GRAY_COBBLED_CONCRETE_POWDER)));
-
-// Gray Concrete
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GRAY_COBBLED_CONCRETE, 8)
-                .pattern("111")
-                .pattern("121")
-                .pattern("111")
-                .input('1', Blocks.GRAY_CONCRETE)
-                .input('2', Blocks.COBBLESTONE)
-                .criterion("has_gray_concrete", conditionsFromItem(Blocks.GRAY_CONCRETE))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GRAY_COBBLED_CONCRETE)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GRAY_COBBLED_CONCRETE_POWDER, 8)
-                .pattern("111")
-                .pattern("121")
-                .pattern("111")
-                .input('1', Blocks.GRAY_CONCRETE_POWDER)
-                .input('2', Blocks.COBBLESTONE)
-                .criterion("has_gray_concrete_powder", conditionsFromItem(Blocks.GRAY_CONCRETE_POWDER))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GRAY_COBBLED_CONCRETE_POWDER)));
-
-// Black Concrete
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.BLACK_COBBLED_CONCRETE, 8)
-                .pattern("111")
-                .pattern("121")
-                .pattern("111")
-                .input('1', Blocks.BLACK_CONCRETE)
-                .input('2', Blocks.COBBLESTONE)
-                .criterion("has_black_concrete", conditionsFromItem(Blocks.BLACK_CONCRETE))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.BLACK_COBBLED_CONCRETE)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.BLACK_COBBLED_CONCRETE_POWDER, 8)
-                .pattern("111")
-                .pattern("121")
-                .pattern("111")
-                .input('1', Blocks.BLACK_CONCRETE_POWDER)
-                .input('2', Blocks.COBBLESTONE)
-                .criterion("has_black_concrete_powder", conditionsFromItem(Blocks.BLACK_CONCRETE_POWDER))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.BLACK_COBBLED_CONCRETE_POWDER)));
-
-// Brown Concrete
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.BROWN_COBBLED_CONCRETE, 8)
-                .pattern("111")
-                .pattern("121")
-                .pattern("111")
-                .input('1', Blocks.BROWN_CONCRETE)
-                .input('2', Blocks.COBBLESTONE)
-                .criterion("has_brown_concrete", conditionsFromItem(Blocks.BROWN_CONCRETE))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.BROWN_COBBLED_CONCRETE)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.BROWN_COBBLED_CONCRETE_POWDER, 8)
-                .pattern("111")
-                .pattern("121")
-                .pattern("111")
-                .input('1', Blocks.BROWN_CONCRETE_POWDER)
-                .input('2', Blocks.COBBLESTONE)
-                .criterion("has_brown_concrete_powder", conditionsFromItem(Blocks.BROWN_CONCRETE_POWDER))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.BROWN_COBBLED_CONCRETE_POWDER)));
-
-// Red Concrete
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.RED_COBBLED_CONCRETE, 8)
-                .pattern("111")
-                .pattern("121")
-                .pattern("111")
-                .input('1', Blocks.RED_CONCRETE)
-                .input('2', Blocks.COBBLESTONE)
-                .criterion("has_red_concrete", conditionsFromItem(Blocks.RED_CONCRETE))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.RED_COBBLED_CONCRETE)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.RED_COBBLED_CONCRETE_POWDER, 8)
-                .pattern("111")
-                .pattern("121")
-                .pattern("111")
-                .input('1', Blocks.RED_CONCRETE_POWDER)
-                .input('2', Blocks.COBBLESTONE)
-                .criterion("has_red_concrete_powder", conditionsFromItem(Blocks.RED_CONCRETE_POWDER))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.RED_COBBLED_CONCRETE_POWDER)));
-
-// Orange Concrete
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ORANGE_COBBLED_CONCRETE, 8)
-                .pattern("111")
-                .pattern("121")
-                .pattern("111")
-                .input('1', Blocks.ORANGE_CONCRETE)
-                .input('2', Blocks.COBBLESTONE)
-                .criterion("has_orange_concrete", conditionsFromItem(Blocks.ORANGE_CONCRETE))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ORANGE_COBBLED_CONCRETE)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ORANGE_COBBLED_CONCRETE_POWDER, 8)
-                .pattern("111")
-                .pattern("121")
-                .pattern("111")
-                .input('1', Blocks.ORANGE_CONCRETE_POWDER)
-                .input('2', Blocks.COBBLESTONE)
-                .criterion("has_orange_concrete_powder", conditionsFromItem(Blocks.ORANGE_CONCRETE_POWDER))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ORANGE_COBBLED_CONCRETE_POWDER)));
-
-// Yellow Concrete
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.YELLOW_COBBLED_CONCRETE, 8)
-                .pattern("111")
-                .pattern("121")
-                .pattern("111")
-                .input('1', Blocks.YELLOW_CONCRETE)
-                .input('2', Blocks.COBBLESTONE)
-                .criterion("has_yellow_concrete", conditionsFromItem(Blocks.YELLOW_CONCRETE))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.YELLOW_COBBLED_CONCRETE)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.YELLOW_COBBLED_CONCRETE_POWDER, 8)
-                .pattern("111")
-                .pattern("121")
-                .pattern("111")
-                .input('1', Blocks.YELLOW_CONCRETE_POWDER)
-                .input('2', Blocks.COBBLESTONE)
-                .criterion("has_yellow_concrete_powder", conditionsFromItem(Blocks.YELLOW_CONCRETE_POWDER))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.YELLOW_COBBLED_CONCRETE_POWDER)));
-
-// Lime Concrete
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.LIME_COBBLED_CONCRETE, 8)
-                .pattern("111")
-                .pattern("121")
-                .pattern("111")
-                .input('1', Blocks.LIME_CONCRETE)
-                .input('2', Blocks.COBBLESTONE)
-                .criterion("has_lime_concrete", conditionsFromItem(Blocks.LIME_CONCRETE))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.LIME_COBBLED_CONCRETE)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.LIME_COBBLED_CONCRETE_POWDER, 8)
-                .pattern("111")
-                .pattern("121")
-                .pattern("111")
-                .input('1', Blocks.LIME_CONCRETE_POWDER)
-                .input('2', Blocks.COBBLESTONE)
-                .criterion("has_lime_concrete_powder", conditionsFromItem(Blocks.LIME_CONCRETE_POWDER))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.LIME_COBBLED_CONCRETE_POWDER)));
-
-// Green Concrete
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GREEN_COBBLED_CONCRETE, 8)
-                .pattern("111")
-                .pattern("121")
-                .pattern("111")
-                .input('1', Blocks.GREEN_CONCRETE)
-                .input('2', Blocks.COBBLESTONE)
-                .criterion("has_green_concrete", conditionsFromItem(Blocks.GREEN_CONCRETE))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GREEN_COBBLED_CONCRETE)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GREEN_COBBLED_CONCRETE_POWDER, 8)
-                .pattern("111")
-                .pattern("121")
-                .pattern("111")
-                .input('1', Blocks.GREEN_CONCRETE_POWDER)
-                .input('2', Blocks.COBBLESTONE)
-                .criterion("has_green_concrete_powder", conditionsFromItem(Blocks.GREEN_CONCRETE_POWDER))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GREEN_COBBLED_CONCRETE_POWDER)));
-
-// Cyan Concrete
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.CYAN_COBBLED_CONCRETE, 8)
-                .pattern("111")
-                .pattern("121")
-                .pattern("111")
-                .input('1', Blocks.CYAN_CONCRETE)
-                .input('2', Blocks.COBBLESTONE)
-                .criterion("has_cyan_concrete", conditionsFromItem(Blocks.CYAN_CONCRETE))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.CYAN_COBBLED_CONCRETE)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.CYAN_COBBLED_CONCRETE_POWDER, 8)
-                .pattern("111")
-                .pattern("121")
-                .pattern("111")
-                .input('1', Blocks.CYAN_CONCRETE_POWDER)
-                .input('2', Blocks.COBBLESTONE)
-                .criterion("has_cyan_concrete_powder", conditionsFromItem(Blocks.CYAN_CONCRETE_POWDER))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.CYAN_COBBLED_CONCRETE_POWDER)));
-
-// Light Blue Concrete
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_COBBLED_CONCRETE, 8)
-                .pattern("111")
-                .pattern("121")
-                .pattern("111")
-                .input('1', Blocks.LIGHT_BLUE_CONCRETE)
-                .input('2', Blocks.COBBLESTONE)
-                .criterion("has_light_blue_concrete", conditionsFromItem(Blocks.LIGHT_BLUE_CONCRETE))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.LIGHT_BLUE_COBBLED_CONCRETE)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_COBBLED_CONCRETE_POWDER, 8)
-                .pattern("111")
-                .pattern("121")
-                .pattern("111")
-                .input('1', Blocks.LIGHT_BLUE_CONCRETE_POWDER)
-                .input('2', Blocks.COBBLESTONE)
-                .criterion("has_light_blue_concrete_powder", conditionsFromItem(Blocks.LIGHT_BLUE_CONCRETE_POWDER))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.LIGHT_BLUE_COBBLED_CONCRETE_POWDER)));
-
-// Blue Concrete
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.BLUE_COBBLED_CONCRETE, 8)
-                .pattern("111")
-                .pattern("121")
-                .pattern("111")
-                .input('1', Blocks.BLUE_CONCRETE)
-                .input('2', Blocks.COBBLESTONE)
-                .criterion("has_blue_concrete", conditionsFromItem(Blocks.BLUE_CONCRETE))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.BLUE_COBBLED_CONCRETE)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.BLUE_COBBLED_CONCRETE_POWDER, 8)
-                .pattern("111")
-                .pattern("121")
-                .pattern("111")
-                .input('1', Blocks.BLUE_CONCRETE_POWDER)
-                .input('2', Blocks.COBBLESTONE)
-                .criterion("has_blue_concrete_powder", conditionsFromItem(Blocks.BLUE_CONCRETE_POWDER))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.BLUE_COBBLED_CONCRETE_POWDER)));
-
-// Purple Concrete
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.PURPLE_COBBLED_CONCRETE, 8)
-                .pattern("111")
-                .pattern("121")
-                .pattern("111")
-                .input('1', Blocks.PURPLE_CONCRETE)
-                .input('2', Blocks.COBBLESTONE)
-                .criterion("has_purple_concrete", conditionsFromItem(Blocks.PURPLE_CONCRETE))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.PURPLE_COBBLED_CONCRETE)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.PURPLE_COBBLED_CONCRETE_POWDER, 8)
-                .pattern("111")
-                .pattern("121")
-                .pattern("111")
-                .input('1', Blocks.PURPLE_CONCRETE_POWDER)
-                .input('2', Blocks.COBBLESTONE)
-                .criterion("has_purple_concrete_powder", conditionsFromItem(Blocks.PURPLE_CONCRETE_POWDER))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.PURPLE_COBBLED_CONCRETE_POWDER)));
-
-// Magenta Concrete
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.MAGENTA_COBBLED_CONCRETE, 8)
-                .pattern("111")
-                .pattern("121")
-                .pattern("111")
-                .input('1', Blocks.MAGENTA_CONCRETE)
-                .input('2', Blocks.COBBLESTONE)
-                .criterion("has_magenta_concrete", conditionsFromItem(Blocks.MAGENTA_CONCRETE))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.MAGENTA_COBBLED_CONCRETE)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.MAGENTA_COBBLED_CONCRETE_POWDER, 8)
-                .pattern("111")
-                .pattern("121")
-                .pattern("111")
-                .input('1', Blocks.MAGENTA_CONCRETE_POWDER)
-                .input('2', Blocks.COBBLESTONE)
-                .criterion("has_magenta_concrete_powder", conditionsFromItem(Blocks.MAGENTA_CONCRETE_POWDER))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.MAGENTA_COBBLED_CONCRETE_POWDER)));
-
-// Pink Concrete
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.PINK_COBBLED_CONCRETE, 8)
-                .pattern("111")
-                .pattern("121")
-                .pattern("111")
-                .input('1', Blocks.PINK_CONCRETE)
-                .input('2', Blocks.COBBLESTONE)
-                .criterion("has_magenta_concrete", conditionsFromItem(Blocks.MAGENTA_CONCRETE))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.PINK_COBBLED_CONCRETE)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.PINK_COBBLED_CONCRETE_POWDER, 8)
-                .pattern("111")
-                .pattern("121")
-                .pattern("111")
-                .input('1', Blocks.PINK_CONCRETE_POWDER)
-                .input('2', Blocks.COBBLESTONE)
-                .criterion("has_pink_concrete_powder", conditionsFromItem(Blocks.PINK_CONCRETE_POWDER))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.PINK_COBBLED_CONCRETE_POWDER)));
+            Block concretePowder = ModBlocks.COLOR_TO_CONCRETE_POWDER.get(color);
+            ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.COLOR_TO_COBBLED_CONCRETE_POWDER.get(color), 8)
+                    .pattern("CCC")
+                    .pattern("CSC")
+                    .pattern("CCC")
+                    .input('C', concretePowder)
+                    .input('S', Blocks.COBBLESTONE)
+                    .criterion(hasItem(concretePowder), conditionsFromItem(concretePowder))
+                    .offerTo(exporter);
+        }
 
 // Ice and Snow
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.PACKED_ICE_BRICKS, 8)
@@ -1515,244 +1232,66 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.SNOW_TILES)));
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // Lava Bucket Outputs
-        Map<String, Item> dyeToLavaBucket = Map.ofEntries(
-                entry("white", ModItems.WHITE_LAVA_BUCKET),
-                entry("orange", ModItems.ORANGE_LAVA_BUCKET),
-                entry("magenta", ModItems.MAGENTA_LAVA_BUCKET),
-                entry("light_blue", ModItems.LIGHT_BLUE_LAVA_BUCKET),
-                entry("yellow", ModItems.YELLOW_LAVA_BUCKET),
-                entry("lime", ModItems.LIME_LAVA_BUCKET),
-                entry("pink", ModItems.PINK_LAVA_BUCKET),
-                entry("gray", ModItems.GRAY_LAVA_BUCKET),
-                entry("light_gray", ModItems.LIGHT_GRAY_LAVA_BUCKET),
-                entry("cyan", ModItems.CYAN_LAVA_BUCKET),
-                entry("purple", ModItems.PURPLE_LAVA_BUCKET),
-                entry("blue", ModItems.BLUE_LAVA_BUCKET),
-                entry("brown", ModItems.BROWN_LAVA_BUCKET),
-                entry("green", ModItems.GREEN_LAVA_BUCKET),
-                entry("red", ModItems.RED_LAVA_BUCKET),
-                entry("black", ModItems.BLACK_LAVA_BUCKET)
-        );
-
-        // Water Bucket Outputs
-        Map<String, Item> dyeToWaterBucket = Map.ofEntries(
-                entry("white", ModItems.WHITE_WATER_BUCKET),
-                entry("orange", ModItems.ORANGE_WATER_BUCKET),
-                entry("magenta", ModItems.MAGENTA_WATER_BUCKET),
-                entry("light_blue", ModItems.LIGHT_BLUE_WATER_BUCKET),
-                entry("yellow", ModItems.YELLOW_WATER_BUCKET),
-                entry("lime", ModItems.LIME_WATER_BUCKET),
-                entry("pink", ModItems.PINK_WATER_BUCKET),
-                entry("gray", ModItems.GRAY_WATER_BUCKET),
-                entry("light_gray", ModItems.LIGHT_GRAY_WATER_BUCKET),
-                entry("cyan", ModItems.CYAN_WATER_BUCKET),
-                entry("purple", ModItems.PURPLE_WATER_BUCKET),
-                entry("blue", ModItems.BLUE_WATER_BUCKET),
-                entry("brown", ModItems.BROWN_WATER_BUCKET),
-                entry("green", ModItems.GREEN_WATER_BUCKET),
-                entry("red", ModItems.RED_WATER_BUCKET),
-                entry("black", ModItems.BLACK_WATER_BUCKET)
-        );
-
-        // Dye Inputs
-        Map<String, Item> dyeItems = Map.ofEntries(
-                entry("white", Items.WHITE_DYE),
-                entry("orange", Items.ORANGE_DYE),
-                entry("magenta", Items.MAGENTA_DYE),
-                entry("light_blue", Items.LIGHT_BLUE_DYE),
-                entry("yellow", Items.YELLOW_DYE),
-                entry("lime", Items.LIME_DYE),
-                entry("pink", Items.PINK_DYE),
-                entry("gray", Items.GRAY_DYE),
-                entry("light_gray", Items.LIGHT_GRAY_DYE),
-                entry("cyan", Items.CYAN_DYE),
-                entry("purple", Items.PURPLE_DYE),
-                entry("blue", Items.BLUE_DYE),
-                entry("brown", Items.BROWN_DYE),
-                entry("green", Items.GREEN_DYE),
-                entry("red", Items.RED_DYE),
-                entry("black", Items.BLACK_DYE)
-        );
-
-        //Flowers
-        Map<Item, String> dyeToFlowerMap = Map.ofEntries(
-                entry(Items.LIGHT_BLUE_DYE, "BLUE_COSMOS"),
-                entry(Items.WHITE_DYE, "SNOW_DROP"),
-                entry(Items.MAGENTA_DYE, "CARNATION"),
-                entry(Items.PURPLE_DYE, "VIOLET"),
-                entry(Items.PINK_DYE, "IRIS"),
-                entry(Items.YELLOW_DYE, "PRIMROSE"),
-                entry(Items.ORANGE_DYE, "DAFFODIL"),
-                entry(Items.BLUE_DYE, "DELPHINIUM"),
-                entry(Items.BROWN_DYE, "DAHLIA"),
-                entry(Items.LIME_DYE, "HYDRANGEA"),
-                entry(Items.BLACK_DYE, "MIDNIGHT_MYSTIC"),
-                entry(Items.LIGHT_GRAY_DYE, "HAWTHORN"),
-                entry(Items.GREEN_DYE, "BONSAI"),
-                entry(Items.RED_DYE, "SPIDERLILY"),
-                entry(Items.CYAN_DYE, "LARKSPUR"),
-                entry(Items.GRAY_DYE, "AGAPANTHUS")
-        );
-
-        String[] prefixes = {
-                "",                  // Normal
-                "GLOW_",
-                "THORNED_",
-                "GLOW_THORNED_",
-                "LUSH_",
-                "GLOW_LUSH_"
-        };
-
-        for (String prefix : prefixes) {
-            for (Map.Entry<Item, String> entry : dyeToFlowerMap.entrySet()) {
-                Item dye = entry.getKey();
-                String flowerName = entry.getValue();
-
-                try {
-                    Block flowerBlock = (Block) ModBlocks.class.getField(prefix + flowerName + "_FLOWER_BLOCK").get(null);
-                    offerShapelessRecipe(exporter, dye, flowerBlock, "dye_recipes", 4);
-                } catch (NoSuchFieldException | IllegalAccessException e) {
-                    System.err.println("Missing field: " + prefix + flowerName + "_FLOWER_BLOCK");
-                }
-            }
-        }
+        ModBlocks.COLOR_TO_FLOWER.forEach((color, flower) -> {
+            Item dye = ModItems.COLOR_TO_DYE.get(color);
+            offerShapelessRecipe(exporter, dye, flower, "dye_recipes", 4);
+            offerShapelessRecipe(exporter, dye, ModBlocks.FLOWER_TO_GLOW_FLOWER.get(flower), "dye_recipes", 4);
+            offerShapelessRecipe(exporter, dye, ModBlocks.FLOWER_TO_GLOW_THORNED_FLOWER.get(flower), "dye_recipes", 4);
+            offerShapelessRecipe(exporter, dye, ModBlocks.FLOWER_TO_LUSH_FLOWER.get(flower), "dye_recipes", 4);
+            offerShapelessRecipe(exporter, dye, ModBlocks.FLOWER_TO_GLOW_LUSH_FLOWER.get(flower), "dye_recipes", 4);
+        });
 
         // Lava Recipes
-        dyeToLavaBucket.forEach((color, bucketItem) -> {
+        ModItems.COLOR_TO_LAVA_BUCKET.forEach((color, bucketItem) -> {
+            Item dye = ModItems.COLOR_TO_DYE.get(color);
+
             ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, bucketItem)
                     .input(Items.LAVA_BUCKET)
                     .input(Items.BUCKET)
-                    .input(dyeItems.get(color))
+                    .input(dye)
                     .criterion("has_lava_bucket", conditionsFromItem(Items.LAVA_BUCKET))
-                    .criterion("has_dye", conditionsFromItem(dyeItems.get(color)))
-                    .offerTo(exporter, new Identifier("dyeableliquids", color + "_lava_bucket"));
+                    .criterion("has_dye", conditionsFromItem(dye))
+                    .offerTo(exporter, "dyeableliquids/" +color + "_lava_bucket");
+
+            SmithingTransformRecipeJsonBuilder.create(
+                            Ingredient.ofItems(Items.LAVA_BUCKET),                           // base item
+                            Ingredient.ofItems(dye),                         // addition (dye)
+                            Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),   // template (none)
+                            RecipeCategory.MISC,
+                            bucketItem
+                    )
+                    .criterion("has_lava_bucket", conditionsFromItem(Items.LAVA_BUCKET))
+                    .criterion("has_dye", conditionsFromItem(dye))
+                    .offerTo(exporter, "dyeableliquids/" + color + "_lava_bucket_smithing");
         });
 
         // Water Recipes
-        dyeToWaterBucket.forEach((color, bucketItem) -> {
+        ModItems.COLOR_TO_WATER_BUCKET.forEach((color, bucketItem) -> {
             ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, bucketItem)
                     .input(Items.WATER_BUCKET)
                     .input(Items.BUCKET)
-                    .input(dyeItems.get(color))
+                    .input(ModItems.COLOR_TO_DYE.get(color))
                     .criterion("has_water_bucket", conditionsFromItem(Items.WATER_BUCKET))
-                    .criterion("has_dye", conditionsFromItem(dyeItems.get(color)))
-                    .offerTo(exporter, new Identifier("dyeableliquids", color + "_water_bucket"));
-        });
+                    .criterion("has_dye", conditionsFromItem(ModItems.COLOR_TO_DYE.get(color)))
+                    .offerTo(exporter, "dyeableliquids/" + color + "_water_bucket");
 
-        // Lava Bucket Smithing Recipes
-        dyeToLavaBucket.forEach((color, bucketItem) -> {
-            SmithingTransformRecipeJsonBuilder.create(
-                            Ingredient.ofItems(Items.LAVA_BUCKET),                           // base item
-                            Ingredient.ofItems(dyeItems.get(color)),                         // addition (dye)
-                            Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),   // template (none)
-                            RecipeCategory.MISC,
-                            bucketItem
-                    )
-                    .criterion("has_lava_bucket", conditionsFromItem(Items.LAVA_BUCKET))
-                    .criterion("has_dye", conditionsFromItem(dyeItems.get(color)))
-                    .offerTo(exporter, new Identifier("dyeableliquids", color + "_lava_bucket_smithing"));
-        });
-
-        // Water Bucket Smithing Recipes
-        dyeToWaterBucket.forEach((color, bucketItem) -> {
             SmithingTransformRecipeJsonBuilder.create(
                             Ingredient.ofItems(Items.WATER_BUCKET),                          // base item
-                            Ingredient.ofItems(dyeItems.get(color)),                         // addition (dye)
+                            Ingredient.ofItems(ModItems.COLOR_TO_DYE.get(color)),                         // addition (dye)
                             Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),   // template (none)
                             RecipeCategory.MISC,
                             bucketItem
                     )
                     .criterion("has_water_bucket", conditionsFromItem(Items.WATER_BUCKET))
-                    .criterion("has_dye", conditionsFromItem(dyeItems.get(color)))
-                    .offerTo(exporter, new Identifier("dyeableliquids", color + "_water_bucket_smithing"));
+                    .criterion("has_dye", conditionsFromItem(ModItems.COLOR_TO_DYE.get(color)))
+                    .offerTo(exporter, "dyeableliquids/" + color + "_water_bucket_smithing");
         });
 
 
-        registerGlowRecipe(exporter, ModBlocks.SNOW_DROP_FLOWER_BLOCK, ModBlocks.GLOW_SNOW_DROP_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.CARNATION_FLOWER_BLOCK, ModBlocks.GLOW_CARNATION_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.VIOLET_FLOWER_BLOCK, ModBlocks.GLOW_VIOLET_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.IRIS_FLOWER_BLOCK, ModBlocks.GLOW_IRIS_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.PRIMROSE_FLOWER_BLOCK, ModBlocks.GLOW_PRIMROSE_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.DAFFODIL_FLOWER_BLOCK, ModBlocks.GLOW_DAFFODIL_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.DELPHINIUM_FLOWER_BLOCK, ModBlocks.GLOW_DELPHINIUM_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.DAHLIA_FLOWER_BLOCK, ModBlocks.GLOW_DAHLIA_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.HYDRANGEA_FLOWER_BLOCK, ModBlocks.GLOW_HYDRANGEA_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.MIDNIGHT_MYSTIC_FLOWER_BLOCK, ModBlocks.GLOW_MIDNIGHT_MYSTIC_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.HAWTHORN_FLOWER_BLOCK, ModBlocks.GLOW_HAWTHORN_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.BONSAI_FLOWER_BLOCK, ModBlocks.GLOW_BONSAI_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.SPIDERLILY_FLOWER_BLOCK, ModBlocks.GLOW_SPIDERLILY_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.LARKSPUR_FLOWER_BLOCK, ModBlocks.GLOW_LARKSPUR_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.AGAPANTHUS_FLOWER_BLOCK, ModBlocks.GLOW_AGAPANTHUS_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.BLUE_COSMOS_FLOWER_BLOCK, ModBlocks.GLOW_BLUE_COSMOS_FLOWER_BLOCK);
-
-        registerGlowRecipe(exporter, ModBlocks.THORNED_SNOW_DROP_FLOWER_BLOCK, ModBlocks.GLOW_THORNED_SNOW_DROP_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.THORNED_CARNATION_FLOWER_BLOCK, ModBlocks.GLOW_THORNED_CARNATION_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.THORNED_VIOLET_FLOWER_BLOCK, ModBlocks.GLOW_THORNED_VIOLET_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.THORNED_IRIS_FLOWER_BLOCK, ModBlocks.GLOW_THORNED_IRIS_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.THORNED_PRIMROSE_FLOWER_BLOCK, ModBlocks.GLOW_THORNED_PRIMROSE_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.THORNED_DAFFODIL_FLOWER_BLOCK, ModBlocks.GLOW_THORNED_DAFFODIL_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.THORNED_DELPHINIUM_FLOWER_BLOCK, ModBlocks.GLOW_THORNED_DELPHINIUM_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.THORNED_DAHLIA_FLOWER_BLOCK, ModBlocks.GLOW_THORNED_DAHLIA_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.THORNED_HYDRANGEA_FLOWER_BLOCK, ModBlocks.GLOW_THORNED_HYDRANGEA_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.THORNED_MIDNIGHT_MYSTIC_FLOWER_BLOCK, ModBlocks.GLOW_THORNED_MIDNIGHT_MYSTIC_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.THORNED_HAWTHORN_FLOWER_BLOCK, ModBlocks.GLOW_THORNED_HAWTHORN_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.THORNED_BONSAI_FLOWER_BLOCK, ModBlocks.GLOW_THORNED_BONSAI_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.THORNED_SPIDERLILY_FLOWER_BLOCK, ModBlocks.GLOW_THORNED_SPIDERLILY_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.THORNED_LARKSPUR_FLOWER_BLOCK, ModBlocks.GLOW_THORNED_LARKSPUR_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.THORNED_AGAPANTHUS_FLOWER_BLOCK, ModBlocks.GLOW_THORNED_AGAPANTHUS_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.THORNED_BLUE_COSMOS_FLOWER_BLOCK, ModBlocks.GLOW_THORNED_BLUE_COSMOS_FLOWER_BLOCK);
-
-        registerGlowRecipe(exporter, ModBlocks.LUSH_SNOW_DROP_FLOWER_BLOCK, ModBlocks.GLOW_LUSH_SNOW_DROP_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.LUSH_CARNATION_FLOWER_BLOCK, ModBlocks.GLOW_LUSH_CARNATION_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.LUSH_VIOLET_FLOWER_BLOCK, ModBlocks.GLOW_LUSH_VIOLET_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.LUSH_IRIS_FLOWER_BLOCK, ModBlocks.GLOW_LUSH_IRIS_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.LUSH_PRIMROSE_FLOWER_BLOCK, ModBlocks.GLOW_LUSH_PRIMROSE_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.LUSH_DAFFODIL_FLOWER_BLOCK, ModBlocks.GLOW_LUSH_DAFFODIL_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.LUSH_DELPHINIUM_FLOWER_BLOCK, ModBlocks.GLOW_LUSH_DELPHINIUM_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.LUSH_DAHLIA_FLOWER_BLOCK, ModBlocks.GLOW_LUSH_DAHLIA_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.LUSH_HYDRANGEA_FLOWER_BLOCK, ModBlocks.GLOW_LUSH_HYDRANGEA_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.LUSH_MIDNIGHT_MYSTIC_FLOWER_BLOCK, ModBlocks.GLOW_LUSH_MIDNIGHT_MYSTIC_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.LUSH_HAWTHORN_FLOWER_BLOCK, ModBlocks.GLOW_LUSH_HAWTHORN_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.LUSH_BONSAI_FLOWER_BLOCK, ModBlocks.GLOW_LUSH_BONSAI_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.LUSH_SPIDERLILY_FLOWER_BLOCK, ModBlocks.GLOW_LUSH_SPIDERLILY_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.LUSH_LARKSPUR_FLOWER_BLOCK, ModBlocks.GLOW_LUSH_LARKSPUR_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.LUSH_AGAPANTHUS_FLOWER_BLOCK, ModBlocks.GLOW_LUSH_AGAPANTHUS_FLOWER_BLOCK);
-        registerGlowRecipe(exporter, ModBlocks.LUSH_BLUE_COSMOS_FLOWER_BLOCK, ModBlocks.GLOW_LUSH_BLUE_COSMOS_FLOWER_BLOCK);
+        ModBlocks.FLOWER_TO_GLOW_FLOWER.forEach((flower, glowFlower) -> registerGlowRecipe(exporter, flower, glowFlower));
+        ModBlocks.FLOWER_TO_THORNED_FLOWER.forEach((flower, thornedFlower) -> registerGlowRecipe(exporter, thornedFlower, ModBlocks.FLOWER_TO_GLOW_THORNED_FLOWER.get(flower)));
+        ModBlocks.FLOWER_TO_LUSH_FLOWER.forEach((flower, lushFlower) -> registerGlowRecipe(exporter, lushFlower, ModBlocks.FLOWER_TO_GLOW_LUSH_FLOWER.get(flower)));
     }
-
-
 
     private void registerGlowRecipe(Consumer<RecipeJsonProvider> exporter, Block baseFlower, Block glowFlower) {
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, glowFlower.asItem())

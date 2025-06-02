@@ -3,6 +3,7 @@ package net.spacegateir.steamcraft.util;
 import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
+import net.minecraft.block.Block;
 import net.minecraft.block.ComposterBlock;
 import net.minecraft.item.Items;
 import net.minecraft.potion.Potions;
@@ -24,24 +25,7 @@ public class ModRegistries {
 
     private static void registerFuels() {
         FuelRegistry registry = FuelRegistry.INSTANCE;
-
-        registry.add(ModItems.WHITE_LAVA_BUCKET, 20000);
-        registry.add(ModItems.ORANGE_LAVA_BUCKET, 20000);
-        registry.add(ModItems.MAGENTA_LAVA_BUCKET, 20000);
-        registry.add(ModItems.LIGHT_BLUE_LAVA_BUCKET, 20000);
-        registry.add(ModItems.YELLOW_LAVA_BUCKET, 20000);
-        registry.add(ModItems.LIME_LAVA_BUCKET, 20000);
-        registry.add(ModItems.PINK_LAVA_BUCKET, 20000);
-        registry.add(ModItems.GRAY_LAVA_BUCKET, 20000);
-        registry.add(ModItems.LIGHT_GRAY_LAVA_BUCKET, 20000);
-        registry.add(ModItems.CYAN_LAVA_BUCKET, 20000);
-        registry.add(ModItems.PURPLE_LAVA_BUCKET, 20000);
-        registry.add(ModItems.BLUE_LAVA_BUCKET, 20000);
-        registry.add(ModItems.BROWN_LAVA_BUCKET, 20000);
-        registry.add(ModItems.GREEN_LAVA_BUCKET, 20000);
-        registry.add(ModItems.RED_LAVA_BUCKET, 20000);
-        registry.add(ModItems.BLACK_LAVA_BUCKET, 20000);
-
+        ModItems.COLOR_TO_LAVA_BUCKET.values().forEach(lavaBucket -> registry.add(lavaBucket, 20_000));
     }
 
     private static void createPortal() {
@@ -114,107 +98,16 @@ public class ModRegistries {
 
     private static void registerModCompostables() {
 
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.SNOW_DROP_FLOWER_ITEM, 0.4F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.CARNATION_FLOWER_ITEM, 0.4F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.VIOLET_FLOWER_ITEM, 0.4F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.IRIS_FLOWER_ITEM, 0.4F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.PRIMROSE_FLOWER_ITEM, 0.4F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.DAFFODIL_FLOWER_ITEM, 0.4F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.DELPHINIUM_FLOWER_ITEM, 0.4F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.DAHLIA_FLOWER_ITEM, 0.4F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.HYDRANGEA_FLOWER_ITEM, 0.4F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.MIDNIGHT_MYSTIC_FLOWER_ITEM, 0.4F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.HAWTHORN_FLOWER_ITEM, 0.4F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.BONSAI_FLOWER_ITEM, 0.4F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.SPIDERLILY_FLOWER_ITEM, 0.4F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.LARKSPUR_FLOWER_ITEM, 0.4F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.AGAPANTHUS_FLOWER_ITEM, 0.4F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.BLUE_COSMOS_FLOWER_ITEM, 0.4F);
+        for (Block flower : ModBlocks.COLOR_TO_FLOWER.values()) {
+            ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(flower, 0.4F);
+            ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.FLOWER_TO_GLOW_FLOWER.get(flower), 0.4F);
 
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_SNOW_DROP_FLOWER_ITEM, 0.4F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_CARNATION_FLOWER_ITEM, 0.4F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_VIOLET_FLOWER_ITEM, 0.4F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_IRIS_FLOWER_ITEM, 0.4F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_PRIMROSE_FLOWER_ITEM, 0.4F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_DAFFODIL_FLOWER_ITEM, 0.4F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_DELPHINIUM_FLOWER_ITEM, 0.4F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_DAHLIA_FLOWER_ITEM, 0.4F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_HYDRANGEA_FLOWER_ITEM, 0.4F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_MIDNIGHT_MYSTIC_FLOWER_ITEM, 0.4F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_HAWTHORN_FLOWER_ITEM, 0.4F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_BONSAI_FLOWER_ITEM, 0.4F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_SPIDERLILY_FLOWER_ITEM, 0.4F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_LARKSPUR_FLOWER_ITEM, 0.4F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_AGAPANTHUS_FLOWER_ITEM, 0.4F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_BLUE_COSMOS_FLOWER_ITEM, 0.4F);
+            ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.FLOWER_TO_THORNED_FLOWER.get(flower), 0.6F);
+            ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.FLOWER_TO_GLOW_THORNED_FLOWER.get(flower), 0.6F);
 
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.THORNED_SNOW_DROP_FLOWER_ITEM, 0.6F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.THORNED_CARNATION_FLOWER_ITEM, 0.6F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.THORNED_VIOLET_FLOWER_ITEM, 0.6F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.THORNED_IRIS_FLOWER_ITEM, 0.6F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.THORNED_PRIMROSE_FLOWER_ITEM, 0.6F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.THORNED_DAFFODIL_FLOWER_ITEM, 0.6F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.THORNED_DELPHINIUM_FLOWER_ITEM, 0.6F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.THORNED_DAHLIA_FLOWER_ITEM, 0.6F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.THORNED_HYDRANGEA_FLOWER_ITEM, 0.6F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.THORNED_MIDNIGHT_MYSTIC_FLOWER_ITEM, 0.6F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.THORNED_HAWTHORN_FLOWER_ITEM, 0.6F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.THORNED_BONSAI_FLOWER_ITEM, 0.6F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.THORNED_SPIDERLILY_FLOWER_ITEM, 0.6F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.THORNED_LARKSPUR_FLOWER_ITEM, 0.6F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.THORNED_AGAPANTHUS_FLOWER_ITEM, 0.6F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.THORNED_BLUE_COSMOS_FLOWER_ITEM, 0.6F);
-
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_THORNED_SNOW_DROP_FLOWER_ITEM, 0.6F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_THORNED_CARNATION_FLOWER_ITEM, 0.6F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_THORNED_VIOLET_FLOWER_ITEM, 0.6F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_THORNED_IRIS_FLOWER_ITEM, 0.6F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_THORNED_PRIMROSE_FLOWER_ITEM, 0.6F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_THORNED_DAFFODIL_FLOWER_ITEM, 0.6F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_THORNED_DELPHINIUM_FLOWER_ITEM, 0.6F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_THORNED_DAHLIA_FLOWER_ITEM, 0.6F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_THORNED_HYDRANGEA_FLOWER_ITEM, 0.6F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_THORNED_MIDNIGHT_MYSTIC_FLOWER_ITEM, 0.6F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_THORNED_HAWTHORN_FLOWER_ITEM, 0.6F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_THORNED_BONSAI_FLOWER_ITEM, 0.6F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_THORNED_SPIDERLILY_FLOWER_ITEM, 0.6F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_THORNED_LARKSPUR_FLOWER_ITEM, 0.6F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_THORNED_AGAPANTHUS_FLOWER_ITEM, 0.6F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_THORNED_BLUE_COSMOS_FLOWER_ITEM, 0.6F);
-
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.LUSH_SNOW_DROP_FLOWER_ITEM, 0.8F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.LUSH_CARNATION_FLOWER_ITEM, 0.8F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.LUSH_VIOLET_FLOWER_ITEM, 0.8F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.LUSH_IRIS_FLOWER_ITEM, 0.8F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.LUSH_PRIMROSE_FLOWER_ITEM, 0.8F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.LUSH_DAFFODIL_FLOWER_ITEM, 0.8F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.LUSH_DELPHINIUM_FLOWER_ITEM, 0.8F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.LUSH_DAHLIA_FLOWER_ITEM, 0.8F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.LUSH_HYDRANGEA_FLOWER_ITEM, 0.8F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.LUSH_MIDNIGHT_MYSTIC_FLOWER_ITEM, 0.8F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.LUSH_HAWTHORN_FLOWER_ITEM, 0.8F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.LUSH_BONSAI_FLOWER_ITEM, 0.8F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.LUSH_SPIDERLILY_FLOWER_ITEM, 0.8F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.LUSH_LARKSPUR_FLOWER_ITEM, 0.8F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.LUSH_AGAPANTHUS_FLOWER_ITEM, 0.8F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.LUSH_BLUE_COSMOS_FLOWER_ITEM, 0.8F);
-
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_LUSH_SNOW_DROP_FLOWER_ITEM, 0.8F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_LUSH_CARNATION_FLOWER_ITEM, 0.8F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_LUSH_VIOLET_FLOWER_ITEM, 0.8F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_LUSH_IRIS_FLOWER_ITEM, 0.8F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_LUSH_PRIMROSE_FLOWER_ITEM, 0.8F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_LUSH_DAFFODIL_FLOWER_ITEM, 0.8F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_LUSH_DELPHINIUM_FLOWER_ITEM, 0.8F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_LUSH_DAHLIA_FLOWER_ITEM, 0.8F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_LUSH_HYDRANGEA_FLOWER_ITEM, 0.8F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_LUSH_MIDNIGHT_MYSTIC_FLOWER_ITEM, 0.8F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_LUSH_HAWTHORN_FLOWER_ITEM, 0.8F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_LUSH_BONSAI_FLOWER_ITEM, 0.8F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_LUSH_SPIDERLILY_FLOWER_ITEM, 0.8F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_LUSH_LARKSPUR_FLOWER_ITEM, 0.8F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_LUSH_AGAPANTHUS_FLOWER_ITEM, 0.8F);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_LUSH_BLUE_COSMOS_FLOWER_ITEM, 0.8F);
+            ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.FLOWER_TO_LUSH_FLOWER.get(flower), 0.8F);
+            ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.FLOWER_TO_GLOW_LUSH_FLOWER.get(flower), 0.8F);
+        }
     }
 }
 

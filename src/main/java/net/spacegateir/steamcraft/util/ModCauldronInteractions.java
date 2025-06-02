@@ -29,32 +29,13 @@ public class ModCauldronInteractions {
         }
     });
 
-    public static final EnumMap<DyeColor, Item> COLOR_TO_DYE = Util.make(new EnumMap<>(DyeColor.class), map -> {
-        map.put(DyeColor.WHITE, Items.WHITE_DYE);
-        map.put(DyeColor.ORANGE, Items.ORANGE_DYE);
-        map.put(DyeColor.MAGENTA, Items.MAGENTA_DYE);
-        map.put(DyeColor.LIGHT_BLUE, Items.LIGHT_BLUE_DYE);
-        map.put(DyeColor.YELLOW, Items.YELLOW_DYE);
-        map.put(DyeColor.LIME, Items.LIME_DYE);
-        map.put(DyeColor.PINK, Items.PINK_DYE);
-        map.put(DyeColor.GRAY, Items.GRAY_DYE);
-        map.put(DyeColor.LIGHT_GRAY, Items.LIGHT_GRAY_DYE);
-        map.put(DyeColor.CYAN, Items.CYAN_DYE);
-        map.put(DyeColor.PURPLE, Items.PURPLE_DYE);
-        map.put(DyeColor.BLUE, Items.BLUE_DYE);
-        map.put(DyeColor.BROWN, Items.BROWN_DYE);
-        map.put(DyeColor.GREEN, Items.GREEN_DYE);
-        map.put(DyeColor.RED, Items.RED_DYE);
-        map.put(DyeColor.BLACK, Items.BLACK_DYE);
-    });
-
     public static void bootstrap() {
 
         for (DyeColor color : DyeColor.values()) {
 
             Item lavaBucket = ModItems.COLOR_TO_LAVA_BUCKET.get(color);
             Item waterBucket = ModItems.COLOR_TO_WATER_BUCKET.get(color);
-            Item dyeItem = COLOR_TO_DYE.get(color);
+            Item dyeItem = ModItems.COLOR_TO_DYE.get(color);
 
             BlockState lavaCauldron = ModBlocks.COLOR_TO_LAVA_CAULDRON.get(color).getDefaultState();
             BlockState waterCauldron = ModBlocks.COLOR_TO_WATER_CAULDRON.get(color).getDefaultState();

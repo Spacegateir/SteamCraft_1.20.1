@@ -3,13 +3,13 @@ package net.spacegateir.steamcraft;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
-import net.minecraft.block.Block;
 import net.minecraft.block.FlowerBlock;
 import net.minecraft.block.FlowerPotBlock;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.spacegateir.steamcraft.block.ModBlockEntities;
 import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.event.renderers.SmokeBlockRenderer;
@@ -62,11 +62,11 @@ public class SteamcraftClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.EMPTY_BRASIER, RenderLayer.getCutout());
 
 
-        for (Block block : Registries.BLOCK) {
-            if (block instanceof FlowerBlock || block instanceof FlowerPotBlock) {
-                BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getCutout());
-            }
-        }
+        Registries.BLOCK.streamEntries()
+                .filter(blockReference -> blockReference.registryKey().getValue().getNamespace().equals(Steamcraft.MOD_ID))
+                .map(RegistryEntry.Reference::value)
+                .filter(block -> block instanceof FlowerBlock || block instanceof FlowerPotBlock)
+                .forEach(block -> BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getCutout()));
 
 
 //            FluidRenderHandlerRegistry.INSTANCE.register(ModFluids.STILL_WHITE_WATER, ModFluids.FLOWING_WHITE_WATER,

@@ -4,7 +4,7 @@ public class ToDo {
 
     // Keep a record for the mods Update Log
     // Keep a Wiki Record so people know how to play the mod
-    // ON THE CURSED FORGE SITE EXPALIN HOW TO PLAY THE MOD
+    // ON THE CURSEFORGE SITE EXPALIN HOW TO PLAY THE MOD
 
     // MODIFY THE CRAFTTING RECIPE FOR THE GOD ARMOR (halo)
 
@@ -49,23 +49,7 @@ public class ToDo {
     //	  Loot boxes (common, uncommon, rare, legendary, unique).
 
 
-
-
-
-
-
-
-
-
     //Fix
 
     // boots noise clinet side only
-
-
-
-
-
-
-
-
 }

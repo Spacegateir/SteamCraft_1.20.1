@@ -49,6 +49,6 @@ public class ModPotions {
     }
 
     public static void registerPotions() {
-        Steamcraft.LOGGER.info("Registering Potions for " + Steamcraft.MOD_ID);
+        Steamcraft.LOGGER.info("Registering Potions");
     }
 }

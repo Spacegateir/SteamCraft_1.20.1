@@ -1,15 +1,16 @@
 package net.spacegateir.steamcraft.util;
 
+import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
 import net.minecraft.block.ComposterBlock;
 import net.minecraft.item.Items;
 import net.minecraft.potion.Potions;
+import net.minecraft.recipe.Ingredient;
 import net.minecraft.util.Identifier;
 import net.spacegateir.steamcraft.Steamcraft;
 import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.item.ModItems;
-import net.spacegateir.steamcraft.mixin.BrewingRecipeRegistryMixin;
 import net.spacegateir.steamcraft.potion.ModPotions;
 
 public class ModRegistries {
@@ -94,21 +95,21 @@ public class ModRegistries {
     }
 
     private static void registerPotionRecipes() {
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.SLOW_FALLING, Items.SLIME_BALL, ModPotions.STICKY_FEAT_POTION);
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(ModPotions.STICKY_FEAT_POTION, Items.REDSTONE, ModPotions.STICKY_FEAT_POTION_1); // 8 min
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(ModPotions.STICKY_FEAT_POTION, Items.GLOWSTONE_DUST, ModPotions.STICKY_FEAT_POTION_2); // lvl 2
+        FabricBrewingRecipeRegistry.registerPotionRecipe(Potions.SLOW_FALLING, Ingredient.ofItems(Items.SLIME_BALL), ModPotions.STICKY_FEAT_POTION);
+        FabricBrewingRecipeRegistry.registerPotionRecipe(ModPotions.STICKY_FEAT_POTION, Ingredient.ofItems(Items.REDSTONE), ModPotions.STICKY_FEAT_POTION_1); // 8 min
+        FabricBrewingRecipeRegistry.registerPotionRecipe(ModPotions.STICKY_FEAT_POTION, Ingredient.ofItems(Items.GLOWSTONE_DUST), ModPotions.STICKY_FEAT_POTION_2); // lvl 2
 
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.HARMING, Items.POISONOUS_POTATO, ModPotions.DISORIENT_POTION);
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(ModPotions.DISORIENT_POTION, Items.REDSTONE, ModPotions.DISORIENT_POTION_1); // 8 min
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(ModPotions.DISORIENT_POTION, Items.GLOWSTONE_DUST, ModPotions.DISORIENT_POTION_2); // lvl 2
+        FabricBrewingRecipeRegistry.registerPotionRecipe(Potions.HARMING, Ingredient.ofItems(Items.POISONOUS_POTATO), ModPotions.DISORIENT_POTION);
+        FabricBrewingRecipeRegistry.registerPotionRecipe(ModPotions.DISORIENT_POTION, Ingredient.ofItems(Items.REDSTONE), ModPotions.DISORIENT_POTION_1); // 8 min
+        FabricBrewingRecipeRegistry.registerPotionRecipe(ModPotions.DISORIENT_POTION, Ingredient.ofItems(Items.GLOWSTONE_DUST), ModPotions.DISORIENT_POTION_2); // lvl 2
 
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.LEAPING, Items.CARROT, ModPotions.FREAKY_BUNNY_POTION);
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(ModPotions.FREAKY_BUNNY_POTION, Items.REDSTONE, ModPotions.FREAKY_BUNNY_POTION_1); // 8 min
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(ModPotions.FREAKY_BUNNY_POTION, Items.GLOWSTONE_DUST, ModPotions.FREAKY_BUNNY_POTION_2); // lvl 2
+        FabricBrewingRecipeRegistry.registerPotionRecipe(Potions.LEAPING, Ingredient.ofItems(Items.CARROT), ModPotions.FREAKY_BUNNY_POTION);
+        FabricBrewingRecipeRegistry.registerPotionRecipe(ModPotions.FREAKY_BUNNY_POTION, Ingredient.ofItems(Items.REDSTONE), ModPotions.FREAKY_BUNNY_POTION_1); // 8 min
+        FabricBrewingRecipeRegistry.registerPotionRecipe(ModPotions.FREAKY_BUNNY_POTION, Ingredient.ofItems(Items.GLOWSTONE_DUST), ModPotions.FREAKY_BUNNY_POTION_2); // lvl 2
 
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.REGENERATION, Items.NETHER_STAR, ModPotions.CLEAR_NEGATIVE_EFFECT_POTION);
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.REGENERATION, Items.HEART_OF_THE_SEA, ModPotions.CLEAR_NEUTRAL_EFFECT_POTION);
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.REGENERATION, Items.ECHO_SHARD, ModPotions.CLEAR_POSITIVE_EFFECT_POTION);
+        FabricBrewingRecipeRegistry.registerPotionRecipe(Potions.REGENERATION, Ingredient.ofItems(Items.NETHER_STAR), ModPotions.CLEAR_NEGATIVE_EFFECT_POTION);
+        FabricBrewingRecipeRegistry.registerPotionRecipe(Potions.REGENERATION, Ingredient.ofItems(Items.HEART_OF_THE_SEA), ModPotions.CLEAR_NEUTRAL_EFFECT_POTION);
+        FabricBrewingRecipeRegistry.registerPotionRecipe(Potions.REGENERATION, Ingredient.ofItems(Items.ECHO_SHARD), ModPotions.CLEAR_POSITIVE_EFFECT_POTION);
     }
 
     private static void registerModCompostables() {

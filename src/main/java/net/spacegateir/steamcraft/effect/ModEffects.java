@@ -46,6 +46,6 @@ public class ModEffects {
     }
 
     public static void registerEffects() {
-        Steamcraft.LOGGER.info("Registering Mod Effects for " + Steamcraft.MOD_ID);
+        Steamcraft.LOGGER.info("Registering Mod Effects");
     }
 }

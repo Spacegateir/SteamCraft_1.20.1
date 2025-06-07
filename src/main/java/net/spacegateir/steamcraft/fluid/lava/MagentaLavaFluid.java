@@ -18,6 +18,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.*;
+import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.block.fluidblocks.ModFluidMagenta;
 import net.spacegateir.steamcraft.fluid.ModFluids;
 import net.spacegateir.steamcraft.item.ModItems;
@@ -184,7 +185,7 @@ public abstract class MagentaLavaFluid extends FlowableFluid {
         if (direction == Direction.DOWN) {FluidState fluidState2 = world.getFluidState(pos);
             if (this.isIn(ModTags.Fluids.MAGENTA_LAVA_DL) && fluidState2.isIn(ModTags.Fluids.MAGENTA_WATER_DL)) {
                 if (state.getBlock() instanceof ModFluidMagenta) {
-                    world.setBlockState(pos, Blocks.MAGENTA_CONCRETE.getDefaultState(), Block.NOTIFY_ALL);
+                    world.setBlockState(pos, ModBlocks.COBBLED_MAGENTA_CONCRETE_POWDER.getDefaultState(), Block.NOTIFY_ALL);
                 }
                 this.playExtinguishEvent(world, pos);
                 return;

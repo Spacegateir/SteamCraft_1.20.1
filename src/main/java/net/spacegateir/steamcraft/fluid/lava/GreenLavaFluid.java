@@ -18,6 +18,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.*;
+import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.block.fluidblocks.ModFluidGreen;
 import net.spacegateir.steamcraft.fluid.ModFluids;
 import net.spacegateir.steamcraft.item.ModItems;
@@ -184,7 +185,7 @@ public abstract class GreenLavaFluid extends FlowableFluid {
         if (direction == Direction.DOWN) {FluidState fluidState2 = world.getFluidState(pos);
             if (this.isIn(ModTags.Fluids.GREEN_LAVA_DL) && fluidState2.isIn(ModTags.Fluids.GREEN_WATER_DL)) {
                 if (state.getBlock() instanceof ModFluidGreen) {
-                    world.setBlockState(pos, Blocks.GREEN_CONCRETE.getDefaultState(), Block.NOTIFY_ALL);
+                    world.setBlockState(pos, ModBlocks.COBBLED_GREEN_CONCRETE_POWDER.getDefaultState(), Block.NOTIFY_ALL);
                 }
                 this.playExtinguishEvent(world, pos);
                 return;

@@ -205,7 +205,7 @@ public class ModLootTableModifiers {
                         .conditionally(RandomChanceLootCondition.builder(1f)) // Drops 100% of the time
                         .conditionally(KilledByPlayerLootCondition.builder().build()) // Only when killed by player
                         .with(ItemEntry.builder(Items.GHAST_TEAR))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0f, 6.0f)).build());
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(0.0f, 3.0f)).build());
 
                 tableBuilder.pool(poolBuilder.build());
             }
@@ -290,7 +290,7 @@ public class ModLootTableModifiers {
                         .conditionally(RandomChanceLootCondition.builder(1.0f)) // 100% drop chance
                         .conditionally(KilledByPlayerLootCondition.builder().build()) // Only when killed by player
                         .with(ItemEntry.builder(Items.ECHO_SHARD))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 3.0f)).build());
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(0.0f, 2.0f)).build());
 
                 tableBuilder.pool(poolBuilder.build());
             }

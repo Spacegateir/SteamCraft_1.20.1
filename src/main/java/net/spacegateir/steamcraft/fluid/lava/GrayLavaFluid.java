@@ -18,6 +18,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.*;
+import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.block.fluidblocks.ModFluidGray;
 import net.spacegateir.steamcraft.fluid.ModFluids;
 import net.spacegateir.steamcraft.item.ModItems;
@@ -184,7 +185,7 @@ public abstract class GrayLavaFluid extends FlowableFluid {
         if (direction == Direction.DOWN) {FluidState fluidState2 = world.getFluidState(pos);
             if (this.isIn(ModTags.Fluids.GRAY_LAVA_DL) && fluidState2.isIn(ModTags.Fluids.GRAY_WATER_DL)) {
                 if (state.getBlock() instanceof ModFluidGray) {
-                    world.setBlockState(pos, Blocks.GRAY_CONCRETE.getDefaultState(), Block.NOTIFY_ALL);
+                    world.setBlockState(pos, ModBlocks.COBBLED_GRAY_CONCRETE_POWDER.getDefaultState(), Block.NOTIFY_ALL);
                 }
                 this.playExtinguishEvent(world, pos);
                 return;

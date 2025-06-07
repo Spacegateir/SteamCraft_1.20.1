@@ -140,17 +140,6 @@ public class ModRewardItems {
     public static final Item ADAMANTITE_BOOTS = registerItem("adamantite_boots",
             new AdamantiteArmorItem(ModArmorMaterials.ADAMANTITE, ArmorItem.Type.BOOTS, new FabricItemSettings()));
 
-    public static final Item AMETHYST_LOOT_CHEST = registerItem("amethyst_loot_chest",
-            new AmethystItem(new FabricItemSettings().maxCount(1)));
-    public static final Item AMETHYST_HELMET = registerItem("amethyst_helmet",
-            new AmethystArmorItem(ModArmorMaterials.AMETHYST, ArmorItem.Type.HELMET, new FabricItemSettings()));
-    public static final Item AMETHYST_CHESTPLATE = registerItem("amethyst_chestplate",
-            new AmethystArmorItem(ModArmorMaterials.AMETHYST, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
-    public static final Item AMETHYST_LEGGINGS = registerItem("amethyst_leggings",
-            new AmethystArmorItem(ModArmorMaterials.AMETHYST, ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
-    public static final Item AMETHYST_BOOTS = registerItem("amethyst_boots",
-            new AmethystArmorItem(ModArmorMaterials.AMETHYST, ArmorItem.Type.BOOTS, new FabricItemSettings()));
-
     public static final Item WOLF_FURY_LOOT_CHEST = registerItem("wolf_fury_loot_chest",
             new WolfFuryItem(new FabricItemSettings().maxCount(1)));
     public static final Item WOLF_FURY_HELMET = registerItem("wolf_fury_helmet",

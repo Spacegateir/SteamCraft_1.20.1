@@ -2,7 +2,6 @@ package net.spacegateir.steamcraft.item.client.winged_sandals;
 
 import net.minecraft.util.Identifier;
 import net.spacegateir.steamcraft.Steamcraft;
-import net.spacegateir.steamcraft.item.armor.AmethystArmorItem;
 import net.spacegateir.steamcraft.item.armor.WingedSandalsCosmeticItem;
 import software.bernie.geckolib.model.GeoModel;
 

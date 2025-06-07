@@ -84,12 +84,6 @@ public class ModItemRewardsGroups {
                         entries.add(ModRewardItems.WOLF_FURY_LEGGINGS);
                         entries.add(ModRewardItems.WOLF_FURY_BOOTS);
 
-//                        entries.add(ModRewardItems.AMETHYST_LOOT_CHEST);
-//                        entries.add(ModRewardItems.AMETHYST_HELMET);
-//                        entries.add(ModRewardItems.AMETHYST_CHESTPLATE);
-//                        entries.add(ModRewardItems.AMETHYST_LEGGINGS);
-//                        entries.add(ModRewardItems.AMETHYST_BOOTS);
-
 
 
 

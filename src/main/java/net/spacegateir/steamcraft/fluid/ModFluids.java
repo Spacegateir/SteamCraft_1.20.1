@@ -6,13 +6,24 @@ import net.minecraft.block.Blocks;
 import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.spacegateir.steamcraft.Steamcraft;
 import net.spacegateir.steamcraft.block.fluidblocks.*;
 import net.spacegateir.steamcraft.fluid.lava.*;
 import net.spacegateir.steamcraft.fluid.water.*;
 
+import java.util.EnumMap;
+
 public class ModFluids {
+
+    public static final EnumMap<DyeColor, FlowableFluid> COLOR_TO_STILL_WATER = new EnumMap<>(DyeColor.class);
+    public static final EnumMap<DyeColor, FlowableFluid> COLOR_TO_FLOWING_WATER = new EnumMap<>(DyeColor.class);
+    public static final EnumMap<DyeColor, Block> COLOR_TO_WATER_BLOCK = new EnumMap<>(DyeColor.class);
+
+    public static final EnumMap<DyeColor, FlowableFluid> COLOR_TO_STILL_LAVA = new EnumMap<>(DyeColor.class);
+    public static final EnumMap<DyeColor, FlowableFluid> COLOR_TO_FLOWING_LAVA = new EnumMap<>(DyeColor.class);
+    public static final EnumMap<DyeColor, Block> COLOR_TO_LAVA_BLOCK = new EnumMap<>(DyeColor.class);
 
     // White
     public static final FlowableFluid STILL_WHITE_WATER = Registry.register(Registries.FLUID,

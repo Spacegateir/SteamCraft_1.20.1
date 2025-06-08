@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "group": "fools_gold_block",
+  "ingredient": {
+    "item": "steamcraft:fools_gold_raw_block"
+  },
+  "result": "steamcraft:fools_gold_block"
+}

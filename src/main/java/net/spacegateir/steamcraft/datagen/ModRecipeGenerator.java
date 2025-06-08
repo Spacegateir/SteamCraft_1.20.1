@@ -71,6 +71,11 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         offerBlasting(exporter, List.of(ModItems.FOOLS_GOLD_RAW), RecipeCategory.MISC, ModItems.FOOLS_GOLD_INGOT,
                 1.00f, 100, "fools_gold");
 
+        offerSmelting(exporter, List.of(ModBlocks.FOOLS_GOLD_RAW_BLOCK), RecipeCategory.MISC, ModBlocks.FOOLS_GOLD_BLOCK,
+                1.00f, 200, "fools_gold_block");
+        offerBlasting(exporter, List.of(ModBlocks.FOOLS_GOLD_RAW_BLOCK), RecipeCategory.MISC, ModBlocks.FOOLS_GOLD_BLOCK,
+                1.00f, 100, "fools_gold_block");
+
         offerSmelting(exporter, List.of(Items.LODESTONE), RecipeCategory.MISC, Items.NETHERITE_INGOT,
                 1.00f, 200, "netherite_ingot");
         offerBlasting(exporter, List.of(Items.LODESTONE), RecipeCategory.MISC, Items.NETHERITE_INGOT,
@@ -493,6 +498,16 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('3', Items.NETHERITE_BOOTS)
                 .criterion(hasItem(ModItems.BOOTS_MOULD), conditionsFromItem(ModItems.BOOTS_MOULD))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.BOOTS_MOULD)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BUCKET_MOULD, 2)
+                .pattern("121")
+                .pattern("131")
+                .pattern("111")
+                .input('1', ModItems.BLANK_MOULD)
+                .input('2', ModItems.BUCKET_MOULD)
+                .input('3', Items.BUCKET)
+                .criterion(hasItem(ModItems.BOOTS_MOULD), conditionsFromItem(ModItems.BUCKET_MOULD))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.BUCKET_MOULD)));
 
 //Smithing Table Recipies
         //Fools Gold Helmet
@@ -1765,34 +1780,34 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
             }
         }
 
-        // Lava Recipes
-        dyeToLavaBucket.forEach((color, bucketItem) -> {
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, bucketItem)
-                    .input(Items.LAVA_BUCKET)
-                    .input(Items.BUCKET)
-                    .input(dyeItems.get(color))
-                    .criterion("has_lava_bucket", conditionsFromItem(Items.LAVA_BUCKET))
-                    .criterion("has_dye", conditionsFromItem(dyeItems.get(color)))
-                    .offerTo(exporter, new Identifier("dyeableliquids", color + "_lava_bucket"));
-        });
-
-        // Water Recipes
-        dyeToWaterBucket.forEach((color, bucketItem) -> {
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, bucketItem)
-                    .input(Items.WATER_BUCKET)
-                    .input(Items.BUCKET)
-                    .input(dyeItems.get(color))
-                    .criterion("has_water_bucket", conditionsFromItem(Items.WATER_BUCKET))
-                    .criterion("has_dye", conditionsFromItem(dyeItems.get(color)))
-                    .offerTo(exporter, new Identifier("dyeableliquids", color + "_water_bucket"));
-        });
+//        // Lava Recipes
+//        dyeToLavaBucket.forEach((color, bucketItem) -> {
+//            ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, bucketItem)
+//                    .input(Items.LAVA_BUCKET)
+//                    .input(Items.BUCKET)
+//                    .input(dyeItems.get(color))
+//                    .criterion("has_lava_bucket", conditionsFromItem(Items.LAVA_BUCKET))
+//                    .criterion("has_dye", conditionsFromItem(dyeItems.get(color)))
+//                    .offerTo(exporter, new Identifier("dyeableliquids", color + "_lava_bucket"));
+//        });
+//
+//        // Water Recipes
+//        dyeToWaterBucket.forEach((color, bucketItem) -> {
+//            ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, bucketItem)
+//                    .input(Items.WATER_BUCKET)
+//                    .input(Items.BUCKET)
+//                    .input(dyeItems.get(color))
+//                    .criterion("has_water_bucket", conditionsFromItem(Items.WATER_BUCKET))
+//                    .criterion("has_dye", conditionsFromItem(dyeItems.get(color)))
+//                    .offerTo(exporter, new Identifier("dyeableliquids", color + "_water_bucket"));
+//        });
 
         // Lava Bucket Smithing Recipes
         dyeToLavaBucket.forEach((color, bucketItem) -> {
             SmithingTransformRecipeJsonBuilder.create(
                             Ingredient.ofItems(Items.LAVA_BUCKET),                           // base item
                             Ingredient.ofItems(dyeItems.get(color)),                         // addition (dye)
-                            Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),   // template (none)
+                            Ingredient.ofItems(ModItems.BUCKET_MOULD),   // template (none)
                             RecipeCategory.MISC,
                             bucketItem
                     )
@@ -1806,7 +1821,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
             SmithingTransformRecipeJsonBuilder.create(
                             Ingredient.ofItems(Items.WATER_BUCKET),                          // base item
                             Ingredient.ofItems(dyeItems.get(color)),                         // addition (dye)
-                            Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),   // template (none)
+                            Ingredient.ofItems(ModItems.BUCKET_MOULD),   // template (none)
                             RecipeCategory.MISC,
                             bucketItem
                     )

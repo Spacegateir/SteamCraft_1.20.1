@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_dye": {
+    "has_fools_gold_raw_block": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:orange_dye"
+              "steamcraft:fools_gold_raw_block"
             ]
           }
         ]
@@ -15,33 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "dyeableliquids:orange_water_bucket"
+        "recipe": "minecraft:fools_gold_block_from_blasting_fools_gold_raw_block"
       },
       "trigger": "minecraft:recipe_unlocked"
-    },
-    "has_water_bucket": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "minecraft:water_bucket"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
     }
   },
   "requirements": [
     [
-      "has_water_bucket",
-      "has_dye",
+      "has_fools_gold_raw_block",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "dyeableliquids:orange_water_bucket"
+      "minecraft:fools_gold_block_from_blasting_fools_gold_raw_block"
     ]
   },
   "sends_telemetry_event": false

@@ -40,6 +40,7 @@ public class ModItemGroups {
                         entries.add(ModItems.CHESTPLATE_MOULD);
                         entries.add(ModItems.LEGGINGS_MOULD);
                         entries.add(ModItems.BOOTS_MOULD);
+                        entries.add(ModItems.BUCKET_MOULD);
                         entries.add(ModItems.WINGED_SANDALS);
 
                         entries.add(ModItems.FOOLS_GOLD_SCRAP);

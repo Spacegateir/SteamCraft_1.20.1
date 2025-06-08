@@ -81,6 +81,8 @@ public class ModItems {
             new Item(new FabricItemSettings()));
     public static final Item BOOTS_MOULD = registerItem("boots_mould",
             new Item(new FabricItemSettings()));
+    public static final Item BUCKET_MOULD = registerItem("bucket_mould",
+            new Item(new FabricItemSettings()));
 
     public static final Item FERRITE_HEARTSTONE = registerItem("ferrite_heartstone",
             new ToolTipItem(ModBlocks.SMOKE_BLOCK, new FabricItemSettings()));

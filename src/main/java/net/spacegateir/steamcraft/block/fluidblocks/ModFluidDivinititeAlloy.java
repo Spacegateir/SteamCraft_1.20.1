@@ -144,7 +144,7 @@ public class ModFluidDivinititeAlloy extends Block implements FluidDrainable {
                 }
 
                 if (bl && world.getBlockState(blockPos).isOf(Blocks.BLUE_ICE)) {
-                    world.setBlockState(pos, Blocks.ANDESITE.getDefaultState());
+                    world.setBlockState(pos, Blocks.GILDED_BLACKSTONE.getDefaultState());
                     this.playExtinguishSound(world, pos);
                     return false;
                 }

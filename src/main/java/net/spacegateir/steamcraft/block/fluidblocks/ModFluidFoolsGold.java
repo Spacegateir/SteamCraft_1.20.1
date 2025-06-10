@@ -23,6 +23,7 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldEvents;
+import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.util.ModTags;
 
 import java.util.Collections;
@@ -132,7 +133,7 @@ public class ModFluidFoolsGold extends Block implements FluidDrainable {
 
     private boolean receiveNeighborFluids(World world, BlockPos pos, BlockState state) {
         if (this.fluid.isIn(ModTags.Fluids.FOOLS_GOLD_MM)) {
-            boolean bl = world.getBlockState(pos.down()).isOf(Blocks.SOUL_SOIL);
+            boolean bl = world.getBlockState(pos.down()).isOf(ModBlocks.FOOLS_GOLD_BLOCK);
 
             for (Direction direction : FLOW_DIRECTIONS) {
                 BlockPos blockPos = pos.offset(direction.getOpposite());
@@ -144,7 +145,7 @@ public class ModFluidFoolsGold extends Block implements FluidDrainable {
                 }
 
                 if (bl && world.getBlockState(blockPos).isOf(Blocks.BLUE_ICE)) {
-                    world.setBlockState(pos, Blocks.ANDESITE.getDefaultState());
+                    world.setBlockState(pos, Blocks.GLOWSTONE.getDefaultState());
                     this.playExtinguishSound(world, pos);
                     return false;
                 }

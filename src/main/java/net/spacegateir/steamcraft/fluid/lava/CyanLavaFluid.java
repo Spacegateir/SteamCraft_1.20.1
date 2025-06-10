@@ -19,12 +19,13 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.*;
 import net.spacegateir.steamcraft.block.ModBlocks;
-import net.spacegateir.steamcraft.block.fluidblocks.ModFluidCyan;
+import net.spacegateir.steamcraft.block.fluidblocks.*;
 import net.spacegateir.steamcraft.fluid.ModFluids;
 import net.spacegateir.steamcraft.item.ModItems;
 import net.spacegateir.steamcraft.util.ModTags;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Map;
 import java.util.Optional;
 
 public abstract class CyanLavaFluid extends FlowableFluid {
@@ -180,20 +181,41 @@ public abstract class CyanLavaFluid extends FlowableFluid {
 
     @Override
     protected void flow(WorldAccess world, BlockPos pos, BlockState state, Direction direction, FluidState fluidState) {
+        // Define the fluid-block reactions once
+        Map<Class<?>, Block> coloredWaterReactions = Map.ofEntries(
+                Map.entry(ModFluidWhite.class, ModBlocks.COBBLED_LIGHT_BLUE_CONCRETE_POWDER),   // Cyan + White ≈ Light Blue
+                Map.entry(ModFluidOrange.class, ModBlocks.COBBLED_LIGHT_GRAY_CONCRETE_POWDER),  // Cyan + Orange ≈ Light Gray (desaturated contrast)
+                Map.entry(ModFluidMagenta.class, ModBlocks.COBBLED_PURPLE_CONCRETE_POWDER),     // Cyan + Magenta ≈ Purple
+                Map.entry(ModFluidLightBlue.class, ModBlocks.COBBLED_LIGHT_BLUE_CONCRETE_POWDER),// Cyan + Light Blue ≈ Light Blue
+                Map.entry(ModFluidYellow.class, ModBlocks.COBBLED_LIME_CONCRETE_POWDER),        // Cyan + Yellow ≈ Lime
+                Map.entry(ModFluidLime.class, ModBlocks.COBBLED_GREEN_CONCRETE_POWDER),         // Cyan + Lime ≈ Green
+                Map.entry(ModFluidPink.class, ModBlocks.COBBLED_MAGENTA_CONCRETE_POWDER),       // Cyan + Pink ≈ Magenta
+                Map.entry(ModFluidGray.class, ModBlocks.COBBLED_GRAY_CONCRETE_POWDER),          // Cyan + Gray = Gray
+                Map.entry(ModFluidLightGray.class, ModBlocks.COBBLED_LIGHT_GRAY_CONCRETE_POWDER),// Cyan + Light Gray = Light Gray
+                Map.entry(ModFluidCyan.class, ModBlocks.COBBLED_CYAN_CONCRETE_POWDER),          // Cyan + Cyan = Cyan
+                Map.entry(ModFluidPurple.class, ModBlocks.COBBLED_PURPLE_CONCRETE_POWDER),      // Cyan + Purple = Purple
+                Map.entry(ModFluidBlue.class, ModBlocks.COBBLED_BLUE_CONCRETE_POWDER),          // Cyan + Blue ≈ Blue
+                Map.entry(ModFluidBrown.class, ModBlocks.COBBLED_GRAY_CONCRETE_POWDER),         // Cyan + Brown ≈ Gray
+                Map.entry(ModFluidGreen.class, ModBlocks.COBBLED_GREEN_CONCRETE_POWDER),        // Cyan + Green = Green
+                Map.entry(ModFluidRed.class, ModBlocks.COBBLED_PURPLE_CONCRETE_POWDER),         // Cyan + Red ≈ Purple (cyan + red = violet)
+                Map.entry(ModFluidBlack.class, ModBlocks.COBBLED_GRAY_CONCRETE_POWDER)          // Cyan + Black = Gray
+        );
 
-        // CYAN_LAVA + CYAN_WATER => CYAN_CONCRETE
-        if (direction == Direction.DOWN) {FluidState fluidState2 = world.getFluidState(pos);
-            if (this.isIn(ModTags.Fluids.CYAN_LAVA_DL) && fluidState2.isIn(ModTags.Fluids.CYAN_WATER_DL)) {
-                if (state.getBlock() instanceof ModFluidCyan) {
-                    world.setBlockState(pos, ModBlocks.COBBLED_CYAN_CONCRETE_POWDER.getDefaultState(), Block.NOTIFY_ALL);
+
+        if (direction == Direction.DOWN) {
+            FluidState fluidState2 = world.getFluidState(pos);
+
+            if (this.isIn(ModTags.Fluids.CYAN_LAVA_DL) && fluidState2.isIn(ModTags.Fluids.WATER_DL)) {
+                for (Map.Entry<Class<?>, Block> entry : coloredWaterReactions.entrySet()) {
+                    if (state.getBlock().getClass().equals(entry.getKey())) {
+                        world.setBlockState(pos, entry.getValue().getDefaultState(), Block.NOTIFY_ALL);
+                        this.playExtinguishEvent(world, pos);
+                        return;
+                    }
                 }
-                this.playExtinguishEvent(world, pos);
-                return;
             }
-        }
 
-        // Vanilla: LAVA + WATER => STONE
-        if (direction == Direction.DOWN) {FluidState fluidState2 = world.getFluidState(pos);
+            // Vanilla: LAVA + WATER => STONE
             if (this.isIn(FluidTags.LAVA) && fluidState2.isIn(FluidTags.WATER)) {
                 if (state.getBlock() instanceof FluidBlock) {
                     world.setBlockState(pos, Blocks.STONE.getDefaultState(), Block.NOTIFY_ALL);

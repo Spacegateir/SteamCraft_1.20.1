@@ -7,6 +7,9 @@ public class ToDo {
     // ON THE CURSED FORGE SITE EXPALIN HOW TO PLAY THE MOD
 
     // Add divinitite alloy block
+    // Fools gold generator (cobble = cobbled shimmer rock) (stone = shimmer rock) (blue ice + fools Gold block = glowstone)
+    // Divinitite Alloy generator (cobble = ?) (stone = ?) (blue ice + Divinitite block = ?)
+
 
     // MODIFY THE CRAFTTING RECIPE FOR THE GOD ARMOR (halo)
 

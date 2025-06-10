@@ -1,4 +1,4 @@
-// 1.20.1	2025-06-08T10:00:55.9935237	Steamcraft/Block Loot Tables
+// 1.20.1	2025-06-10T09:50:51.7826305	Steamcraft/Block Loot Tables
 4b434f9602c9c2f60246afcd159bc287d5f98c8c data\steamcraft\loot_tables\blocks\aether_coil_magenta.json
 490ef70f451d3872f02eda59b92dea235effffb9 data\steamcraft\loot_tables\blocks\cursed_totem_block.json
 5d0e986b1c8ba29c83f8ef42daa1d253312f2d1d data\steamcraft\loot_tables\blocks\cobbled_pink_concrete.json
@@ -243,8 +243,8 @@ c47314243884c82587132939b4ddd4f7ed6397f5 data\steamcraft\loot_tables\blocks\glow
 294d266b7fb1491a4ab988637c906aacad3b5d68 data\steamcraft\loot_tables\blocks\glow_lush_midnight_mystic_flower.json
 4a17ccb1d885b36a83dd810b23651a747ad018fb data\steamcraft\loot_tables\blocks\cursed_brasier_trap_block.json
 e2c805479ae01b2fa479a9c2bd7e41eae5fb4fb1 data\steamcraft\loot_tables\blocks\delphinium_flower.json
-a24fec64019c14bb62ea55b2df98bc18c7ef6ca0 data\steamcraft\loot_tables\blocks\deepslate_trap_block.json
 65a1f5cf527c35b89b51a4c924ae12f6dc9c94dc data\steamcraft\loot_tables\blocks\cobbled_white_concrete.json
+a24fec64019c14bb62ea55b2df98bc18c7ef6ca0 data\steamcraft\loot_tables\blocks\deepslate_trap_block.json
 1443928665776f6f48157ab514d947ea3784dd47 data\steamcraft\loot_tables\blocks\packed_ice_tiles_cracked.json
 30229063aecb1c5ec32a41ce7dfa11f854bf041f data\steamcraft\loot_tables\blocks\arcane_satuation_block.json
 8fba7985a823a2c8858a64170d57de1fb880ed6b data\steamcraft\loot_tables\blocks\skeleton_head.json

@@ -37,6 +37,7 @@ public class ModCauldronInteractions {
             Item waterBucket = ModItems.COLOR_TO_WATER_BUCKET.get(color);
             Item dyeItem = ModItems.COLOR_TO_DYE.get(color);
 
+
             BlockState lavaCauldron = ModBlocks.COLOR_TO_LAVA_CAULDRON.get(color).getDefaultState();
             BlockState waterCauldron = ModBlocks.COLOR_TO_WATER_CAULDRON.get(color).getDefaultState();
 

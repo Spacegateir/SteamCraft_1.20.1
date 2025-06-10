@@ -261,6 +261,9 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.MAGENTA_LAVA_BUCKET, Models.GENERATED);
         itemModelGenerator.register(ModItems.PINK_LAVA_BUCKET, Models.GENERATED);
 
+        itemModelGenerator.register(ModItems.FOOLS_GOLD_LAVA_BUCKET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.DIVINITITE_ALLOY_LAVA_BUCKET, Models.GENERATED);
+
         itemModelGenerator.register(ModItems.BLANK_MOULD, Models.GENERATED);
         itemModelGenerator.register(ModItems.HELMET_MOULD, Models.GENERATED);
         itemModelGenerator.register(ModItems.CHESTPLATE_MOULD, Models.GENERATED);

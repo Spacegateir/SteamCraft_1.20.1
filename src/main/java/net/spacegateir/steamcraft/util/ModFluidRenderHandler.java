@@ -14,4 +14,9 @@ public class ModFluidRenderHandler {
         // overlay is null here, but you can add your own overlay texture if you want
         return new SimpleFluidRenderHandler(stillTexture, flowTexture, null, tint);
     }
+
+    public static SimpleFluidRenderHandler moltenMetal(int tint, Identifier stillTexture, Identifier flowTexture) {
+        // overlay is null here, but you can add your own overlay texture if you want
+        return new SimpleFluidRenderHandler(stillTexture, flowTexture, null, tint);
+    }
 }

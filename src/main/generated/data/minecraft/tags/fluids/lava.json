@@ -32,6 +32,10 @@
     "steamcraft:flowing_magenta_lava",
     "steamcraft:magenta_lava",
     "steamcraft:flowing_pink_lava",
-    "steamcraft:pink_lava"
+    "steamcraft:pink_lava",
+    "steamcraft:flowing_fools_gold_lava",
+    "steamcraft:fools_gold_lava",
+    "steamcraft:flowing_divinitite_alloy_lava",
+    "steamcraft:divinitite_alloy_lava"
   ]
 }

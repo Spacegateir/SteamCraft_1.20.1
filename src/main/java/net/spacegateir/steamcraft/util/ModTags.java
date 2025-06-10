@@ -65,18 +65,24 @@ public class ModTags {
         public static final TagKey<Fluid> BLACK_WATER_DL = createFluidTag("black_water_dl");
 
 
+        public static final TagKey<Fluid> MOLTEN_METALS = createFluidTag("molten_metals");
+
+        public static final TagKey<Fluid> FOOLS_GOLD_MM = createFluidTag("fools_gold_mm");
+        public static final TagKey<Fluid> DIVINITITE_ALLOY_MM = createFluidTag("divinitite_alloy_mm");
+
+
         private static TagKey<Fluid> createFluidTag(String name) {
             return TagKey.of(RegistryKeys.FLUID, new Identifier(Steamcraft.MOD_ID, name));
         }
 
-        public static TagKey<Fluid> createWaterTag(DyeColor color) {
-            String name = color.getName() + "_water_dl";
-            return TagKey.of(RegistryKeys.FLUID, new Identifier(Steamcraft.MOD_ID, name));
-        }
+//        public static TagKey<Fluid> createWaterTag(DyeColor color) {
+//            String name = color.getName() + "_water_dl";
+//            return TagKey.of(RegistryKeys.FLUID, new Identifier(Steamcraft.MOD_ID, name));
+//        }
 
-        public static TagKey<Fluid> createLavaTag(DyeColor color) {
-            String name = color.getName() + "_lava_dl";
-            return TagKey.of(RegistryKeys.FLUID, new Identifier(Steamcraft.MOD_ID, name));
-        }
+//        public static TagKey<Fluid> createLavaTag(DyeColor color) {
+//            String name = color.getName() + "_lava_dl";
+//            return TagKey.of(RegistryKeys.FLUID, new Identifier(Steamcraft.MOD_ID, name));
+//        }
     }
 }

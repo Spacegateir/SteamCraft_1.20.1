@@ -406,6 +406,9 @@ public class ModItemGroups {
                         entries.add(ModItems.MAGENTA_LAVA_BUCKET);
                         entries.add(ModItems.PINK_LAVA_BUCKET);
 
+                        entries.add(ModItems.FOOLS_GOLD_LAVA_BUCKET);
+                        entries.add(ModItems.DIVINITITE_ALLOY_LAVA_BUCKET);
+
 
 
 

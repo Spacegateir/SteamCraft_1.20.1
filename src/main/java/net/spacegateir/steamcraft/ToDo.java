@@ -6,6 +6,8 @@ public class ToDo {
     // Keep a Wiki Record so people know how to play the mod
     // ON THE CURSED FORGE SITE EXPALIN HOW TO PLAY THE MOD
 
+    // Add divinitite alloy block
+
     // MODIFY THE CRAFTTING RECIPE FOR THE GOD ARMOR (halo)
 
     // create dimentions (earth copy, void, waterworld, skulk, overworld neather type, sky dimention)

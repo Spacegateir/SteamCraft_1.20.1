@@ -1,0 +1,7 @@
+{
+  "parent": "block/liquid",
+  "textures": {
+    "still": "steamcraft:block/divinitite_alloy_lava_still",
+    "flow": "steamcraft:block/divinitite_alloy_lava_flow"
+  }
+}

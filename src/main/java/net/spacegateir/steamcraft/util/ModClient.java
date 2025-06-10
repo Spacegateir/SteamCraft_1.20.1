@@ -12,6 +12,7 @@ public class ModClient {
 
     private record LavaFluidData(Supplier<FlowableFluid> still, Supplier<FlowableFluid> flowing, int color, String textureBase) {}
     private record WaterFluidData(Supplier<FlowableFluid> still, Supplier<FlowableFluid> flowing, int color, String textureBase) {}
+    private record MoltenFluidData(Supplier<FlowableFluid> still, Supplier<FlowableFluid> flowing, int color, String textureBase) {}
 
     public static void registerFluidRenderers() {
         // Register lava fluids
@@ -69,6 +70,23 @@ public class ModClient {
             FluidRenderHandlerRegistry.INSTANCE.register(
                     data.still().get(), data.flowing().get(),
                     ModFluidRenderHandler.coloredWater(
+                            data.color(),
+                            new Identifier("steamcraft", "block/" + data.textureBase() + "_still"),
+                            new Identifier("steamcraft", "block/" + data.textureBase() + "_flow")
+                    )
+            );
+        });
+
+        // Register Molten Metals fluids
+        Map<String, MoltenFluidData> metalMoltenFluids = Map.ofEntries(
+                Map.entry("fools_gold", new MoltenFluidData(() -> ModFluids.STILL_FOOLS_GOLD_LAVA, () -> ModFluids.FLOWING_FOOLS_GOLD_LAVA, 0xFFA0A0A0 , "fools_gold_lava")),
+                Map.entry("divinitite_alloy", new MoltenFluidData(() -> ModFluids.STILL_DIVINITITE_ALLOY_LAVA, () -> ModFluids.FLOWING_DIVINITITE_ALLOY_LAVA, 0xFFA0A0A0, "divinitite_alloy_lava"))
+                );
+
+        metalMoltenFluids.forEach((name, data) -> {
+            FluidRenderHandlerRegistry.INSTANCE.register(
+                    data.still().get(), data.flowing().get(),
+                    ModFluidRenderHandler.moltenMetal(
                             data.color(),
                             new Identifier("steamcraft", "block/" + data.textureBase() + "_still"),
                             new Identifier("steamcraft", "block/" + data.textureBase() + "_flow")

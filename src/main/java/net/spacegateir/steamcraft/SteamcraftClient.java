@@ -365,6 +365,12 @@ public class SteamcraftClient implements ClientModInitializer {
             BlockRenderLayerMap.INSTANCE.putBlock(ModFluids.PINK_LAVA_BLOCK, RenderLayer.getTranslucent());
             BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), ModFluids.STILL_PINK_LAVA, ModFluids.FLOWING_PINK_LAVA);
 
+            BlockRenderLayerMap.INSTANCE.putBlock(ModFluids.FOOLS_GOLD_LAVA_BLOCK, RenderLayer.getTranslucent());
+            BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), ModFluids.STILL_FOOLS_GOLD_LAVA, ModFluids.FLOWING_FOOLS_GOLD_LAVA);
+
+            BlockRenderLayerMap.INSTANCE.putBlock(ModFluids.DIVINITITE_ALLOY_LAVA_BLOCK, RenderLayer.getTranslucent());
+            BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), ModFluids.STILL_DIVINITITE_ALLOY_LAVA, ModFluids.FLOWING_DIVINITITE_ALLOY_LAVA);
+
 
 
 

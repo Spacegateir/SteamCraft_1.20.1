@@ -495,6 +495,16 @@ public class ModItems {
             new BlockItem(ModBlocks.GLOW_LUSH_VIOLET_FLOWER_BLOCK, new FabricItemSettings()));
 
 
+
+    public static final Item TELEPORT_TRAP_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "teleport_trap_item"),
+            new TeleportTrapBlockItem(ModBlocks.TELEPORT_TRAP_BLOCK, new FabricItemSettings()));
+
+    public static final Item SMOKE_BLOCK_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "smoke_block_item"),
+            new SmokeBlockItem(ModBlocks.SMOKE_BLOCK, new FabricItemSettings()));
+
+
     // Water
     public static final Item WHITE_WATER_BUCKET = registerDyedWaterBucket(DyeColor.WHITE, ModFluids.STILL_WHITE_WATER);
     public static final Item LIGHT_GRAY_WATER_BUCKET = registerDyedWaterBucket(DyeColor.LIGHT_GRAY, ModFluids.STILL_LIGHT_GRAY_WATER);
@@ -531,19 +541,22 @@ public class ModItems {
     public static final Item MAGENTA_LAVA_BUCKET = registerDyedLavaBucket(DyeColor.MAGENTA, ModFluids.STILL_MAGENTA_LAVA);
     public static final Item PINK_LAVA_BUCKET = registerDyedLavaBucket(DyeColor.PINK, ModFluids.STILL_PINK_LAVA);
 
+    public static final Item FOOLS_GOLD_LAVA_BUCKET = Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID,
+            "fools_gold_lava_bucket"), new BucketItem(ModFluids.STILL_FOOLS_GOLD_LAVA,
+            new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
+
+    public static final Item DIVINITITE_ALLOY_LAVA_BUCKET = Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID,
+            "divinitite_alloy_lava_bucket"), new BucketItem(ModFluids.STILL_DIVINITITE_ALLOY_LAVA,
+            new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
 
 
 
 
 
 
-    public static final Item TELEPORT_TRAP_ITEM = Registry.register(Registries.ITEM,
-            new Identifier(Steamcraft.MOD_ID, "teleport_trap_item"),
-            new TeleportTrapBlockItem(ModBlocks.TELEPORT_TRAP_BLOCK, new FabricItemSettings()));
 
-    public static final Item SMOKE_BLOCK_ITEM = Registry.register(Registries.ITEM,
-            new Identifier(Steamcraft.MOD_ID, "smoke_block_item"),
-            new SmokeBlockItem(ModBlocks.SMOKE_BLOCK, new FabricItemSettings()));
+
+
 
 
 

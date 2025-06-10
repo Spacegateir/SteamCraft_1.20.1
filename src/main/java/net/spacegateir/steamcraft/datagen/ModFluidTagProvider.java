@@ -2,9 +2,14 @@ package net.spacegateir.steamcraft.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.minecraft.block.Block;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.FluidTags;
+import net.minecraft.registry.tag.TagKey;
+import net.minecraft.util.Identifier;
 import net.spacegateir.steamcraft.fluid.ModFluids;
+import net.spacegateir.steamcraft.util.ModTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -85,7 +90,12 @@ public class ModFluidTagProvider extends FabricTagProvider.FluidTagProvider {
                 .add(ModFluids.FLOWING_MAGENTA_LAVA)
                 .add(ModFluids.STILL_MAGENTA_LAVA)
                 .add(ModFluids.FLOWING_PINK_LAVA)
-                .add(ModFluids.STILL_PINK_LAVA);
+                .add(ModFluids.STILL_PINK_LAVA)
+
+                .add(ModFluids.FLOWING_FOOLS_GOLD_LAVA)
+                .add(ModFluids.STILL_FOOLS_GOLD_LAVA)
+                .add(ModFluids.FLOWING_DIVINITITE_ALLOY_LAVA)
+                .add(ModFluids.STILL_DIVINITITE_ALLOY_LAVA);
 
 
     }

@@ -324,6 +324,26 @@ public class ModFluids {
             "pink_lava_block"), new ModFluidPink(STILL_PINK_LAVA, FabricBlockSettings.copyOf(Blocks.LAVA)
             .replaceable().liquid()));
 
+//Molten Metals
+
+    // Fools Gold
+    public static final FlowableFluid STILL_FOOLS_GOLD_LAVA = Registry.register(Registries.FLUID,
+            new Identifier(Steamcraft.MOD_ID, "fools_gold_lava"), new FoolsGoldLavaFluid.Still());
+    public static final FlowableFluid FLOWING_FOOLS_GOLD_LAVA = Registry.register(Registries.FLUID,
+            new Identifier(Steamcraft.MOD_ID, "flowing_fools_gold_lava"), new FoolsGoldLavaFluid.Flowing());
+    public static final Block FOOLS_GOLD_LAVA_BLOCK = Registry.register(Registries.BLOCK, new Identifier(Steamcraft.MOD_ID,
+            "fools_gold_lava_block"), new ModFluidFoolsGold(STILL_FOOLS_GOLD_LAVA, FabricBlockSettings.copyOf(Blocks.LAVA)
+            .replaceable().liquid()));
+
+    // Fools Gold
+    public static final FlowableFluid STILL_DIVINITITE_ALLOY_LAVA = Registry.register(Registries.FLUID,
+            new Identifier(Steamcraft.MOD_ID, "divinitite_alloy_lava"), new DivinititeAlloyLavaFluid.Still());
+    public static final FlowableFluid FLOWING_DIVINITITE_ALLOY_LAVA = Registry.register(Registries.FLUID,
+            new Identifier(Steamcraft.MOD_ID, "flowing_divinitite_alloy_lava"), new DivinititeAlloyLavaFluid.Flowing());
+    public static final Block DIVINITITE_ALLOY_LAVA_BLOCK = Registry.register(Registries.BLOCK, new Identifier(Steamcraft.MOD_ID,
+            "divinitite_alloy_lava_block"), new ModFluidDivinititeAlloy(STILL_DIVINITITE_ALLOY_LAVA, FabricBlockSettings.copyOf(Blocks.LAVA)
+            .replaceable().liquid()));
+
 
 
 

@@ -65,6 +65,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         offerReversibleCompactingRecipesWithId(exporter, RecipeCategory.MISC, ModItems.FOOLS_GOLD_SCRAP, RecipeCategory.MISC, ModItems.FOOLS_GOLD_RAW, "scrap");
         offerReversibleCompactingRecipesWithId(exporter, RecipeCategory.MISC, ModItems.FOOLS_GOLD_RAW, RecipeCategory.MISC, ModBlocks.FOOLS_GOLD_RAW_BLOCK, "block");
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.FOOLS_GOLD_INGOT, RecipeCategory.MISC, ModBlocks.FOOLS_GOLD_BLOCK);
+        offerReversibleCompactingRecipesWithId(exporter, RecipeCategory.MISC, ModItems.DIVINITITE_ALLOY_INGOT, RecipeCategory.MISC, ModBlocks.DIVINITITE_ALLOY_BLOCK, "block");
 
         offerSmelting(exporter, List.of(ModItems.FOOLS_GOLD_RAW), RecipeCategory.MISC, ModItems.FOOLS_GOLD_INGOT,
                 1.00f, 200, "fools_gold");
@@ -191,111 +192,6 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
 //                    .input(Ingredient.ofItems(ModBlocks.AETHER_COIL), i)
 //                    .criterion("has_aether_coil", RecipeProvider.conditionsFromItem(ModBlocks.AETHER_COIL))
 //                    .offerTo(exporter, new Identifier("steamcraft", "aether_coil_white_from_dye_and_aether_coil" + i));
-//        }
-//        for (int i = 1; i <= 8; i++) {
-//            ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.AETHER_COIL_LIGHT_GRAY, i)
-//                    .input(Ingredient.ofItems(Items.LIGHT_GRAY_DYE))
-//                    .input(Ingredient.ofItems(ModBlocks.AETHER_COIL), i)
-//                    .criterion("has_aether_coil", RecipeProvider.conditionsFromItem(ModBlocks.AETHER_COIL))
-//                    .offerTo(exporter, new Identifier("steamcraft", "aether_coil_light_gray_from_dye_and_aether_coil" + i));
-//        }
-//        for (int i = 1; i <= 8; i++) {
-//            ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.AETHER_COIL_GRAY, i)
-//                    .input(Ingredient.ofItems(Items.GRAY_DYE))
-//                    .input(Ingredient.ofItems(ModBlocks.AETHER_COIL), i)
-//                    .criterion("has_aether_coil", RecipeProvider.conditionsFromItem(ModBlocks.AETHER_COIL))
-//                    .offerTo(exporter, new Identifier("steamcraft", "aether_coil_gray_from_dye_and_aether_coil" + i));
-//        }
-//        for (int i = 1; i <= 8; i++) {
-//            ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.AETHER_COIL_BLACK, i)
-//                    .input(Ingredient.ofItems(Items.BLACK_DYE))
-//                    .input(Ingredient.ofItems(ModBlocks.AETHER_COIL), i)
-//                    .criterion("has_aether_coil", RecipeProvider.conditionsFromItem(ModBlocks.AETHER_COIL))
-//                    .offerTo(exporter, new Identifier("steamcraft", "aether_coil_black_from_dye_and_aether_coil" + i));
-//        }
-//        for (int i = 1; i <= 8; i++) {
-//            ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.AETHER_COIL_BROWN, i)
-//                    .input(Ingredient.ofItems(Items.BROWN_DYE))
-//                    .input(Ingredient.ofItems(ModBlocks.AETHER_COIL), i)
-//                    .criterion("has_aether_coil", RecipeProvider.conditionsFromItem(ModBlocks.AETHER_COIL))
-//                    .offerTo(exporter, new Identifier("steamcraft", "aether_coil_brown_from_dye_and_aether_coil" + i));
-//        }
-//        for (int i = 1; i <= 8; i++) {
-//            ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.AETHER_COIL_RED, i)
-//                    .input(Ingredient.ofItems(Items.RED_DYE))
-//                    .input(Ingredient.ofItems(ModBlocks.AETHER_COIL), i)
-//                    .criterion("has_aether_coil", RecipeProvider.conditionsFromItem(ModBlocks.AETHER_COIL))
-//                    .offerTo(exporter, new Identifier("steamcraft", "aether_coil_red_from_dye_and_aether_coil" + i));
-//        }
-//        for (int i = 1; i <= 8; i++) {
-//            ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.AETHER_COIL_ORANGE, i)
-//                    .input(Ingredient.ofItems(Items.ORANGE_DYE))
-//                    .input(Ingredient.ofItems(ModBlocks.AETHER_COIL), i)
-//                    .criterion("has_aether_coil", RecipeProvider.conditionsFromItem(ModBlocks.AETHER_COIL))
-//                    .offerTo(exporter, new Identifier("steamcraft", "aether_coil_orange_from_dye_and_aether_coil" + i));
-//        }
-//        for (int i = 1; i <= 8; i++) {
-//            ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.AETHER_COIL_YELLOW, i)
-//                    .input(Ingredient.ofItems(Items.YELLOW_DYE))
-//                    .input(Ingredient.ofItems(ModBlocks.AETHER_COIL), i)
-//                    .criterion("has_aether_coil", RecipeProvider.conditionsFromItem(ModBlocks.AETHER_COIL))
-//                    .offerTo(exporter, new Identifier("steamcraft", "aether_coil_yellow_from_dye_and_aether_coil" + i));
-//        }
-//        for (int i = 1; i <= 8; i++) {
-//            ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.AETHER_COIL_LIME, i)
-//                    .input(Ingredient.ofItems(Items.LIME_DYE))
-//                    .input(Ingredient.ofItems(ModBlocks.AETHER_COIL), i)
-//                    .criterion("has_aether_coil", RecipeProvider.conditionsFromItem(ModBlocks.AETHER_COIL))
-//                    .offerTo(exporter, new Identifier("steamcraft", "aether_coil_lime_from_dye_and_aether_coil" + i));
-//        }
-//        for (int i = 1; i <= 8; i++) {
-//            ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.AETHER_COIL_GREEN, i)
-//                    .input(Ingredient.ofItems(Items.GREEN_DYE))
-//                    .input(Ingredient.ofItems(ModBlocks.AETHER_COIL), i)
-//                    .criterion("has_aether_coil", RecipeProvider.conditionsFromItem(ModBlocks.AETHER_COIL))
-//                    .offerTo(exporter, new Identifier("steamcraft", "aether_coil_green_from_dye_and_aether_coil" + i));
-//        }
-//        for (int i = 1; i <= 8; i++) {
-//            ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.AETHER_COIL_CYAN, i)
-//                    .input(Ingredient.ofItems(Items.CYAN_DYE))
-//                    .input(Ingredient.ofItems(ModBlocks.AETHER_COIL), i)
-//                    .criterion("has_aether_coil", RecipeProvider.conditionsFromItem(ModBlocks.AETHER_COIL))
-//                    .offerTo(exporter, new Identifier("steamcraft", "aether_coil_cyan_from_dye_and_aether_coil" + i));
-//        }
-//        for (int i = 1; i <= 8; i++) {
-//            ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.AETHER_COIL_LIGHT_BLUE, i)
-//                    .input(Ingredient.ofItems(Items.LIGHT_BLUE_DYE))
-//                    .input(Ingredient.ofItems(ModBlocks.AETHER_COIL), i)
-//                    .criterion("has_aether_coil", RecipeProvider.conditionsFromItem(ModBlocks.AETHER_COIL))
-//                    .offerTo(exporter, new Identifier("steamcraft", "aether_coil_light_blue_from_dye_and_aether_coil" + i));
-//        }
-//        for (int i = 1; i <= 8; i++) {
-//            ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.AETHER_COIL_BLUE, i)
-//                    .input(Ingredient.ofItems(Items.BLUE_DYE))
-//                    .input(Ingredient.ofItems(ModBlocks.AETHER_COIL), i)
-//                    .criterion("has_aether_coil", RecipeProvider.conditionsFromItem(ModBlocks.AETHER_COIL))
-//                    .offerTo(exporter, new Identifier("steamcraft", "aether_coil_blue_from_dye_and_aether_coil" + i));
-//        }
-//        for (int i = 1; i <= 8; i++) {
-//            ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.AETHER_COIL_PURPLE, i)
-//                    .input(Ingredient.ofItems(Items.PURPLE_DYE))
-//                    .input(Ingredient.ofItems(ModBlocks.AETHER_COIL), i)
-//                    .criterion("has_aether_coil", RecipeProvider.conditionsFromItem(ModBlocks.AETHER_COIL))
-//                    .offerTo(exporter, new Identifier("steamcraft", "aether_coil_purple_from_dye_and_aether_coil" + i));
-//        }
-//        for (int i = 1; i <= 8; i++) {
-//            ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.AETHER_COIL_MAGENTA, i)
-//                    .input(Ingredient.ofItems(Items.MAGENTA_DYE))
-//                    .input(Ingredient.ofItems(ModBlocks.AETHER_COIL), i)
-//                    .criterion("has_aether_coil", RecipeProvider.conditionsFromItem(ModBlocks.AETHER_COIL))
-//                    .offerTo(exporter, new Identifier("steamcraft", "aether_coil_magenta_from_dye_and_aether_coil" + i));
-//        }
-//        for (int i = 1; i <= 8; i++) {
-//            ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.AETHER_COIL_PINK, i)
-//                    .input(Ingredient.ofItems(Items.PINK_DYE))
-//                    .input(Ingredient.ofItems(ModBlocks.AETHER_COIL), i)
-//                    .criterion("has_aether_coil", RecipeProvider.conditionsFromItem(ModBlocks.AETHER_COIL))
-//                    .offerTo(exporter, new Identifier("steamcraft", "aether_coil_pink_from_dye_and_aether_coil" + i));
 //        }
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.FOOLS_GOLD_HELMET)
@@ -1829,6 +1725,32 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                     .criterion("has_dye", conditionsFromItem(dyeItems.get(color)))
                     .offerTo(exporter, new Identifier("dyeableliquids", color + "_water_bucket_smithing"));
         });
+
+        //Fools Gold smithing template to liquid
+        SmithingTransformRecipeJsonBuilder.create(
+                        Ingredient.ofItems(ModItems.BUCKET_MOULD),
+                        Ingredient.ofItems(ModBlocks.FOOLS_GOLD_BLOCK.asItem()),
+                        Ingredient.ofItems(Items.LAVA_BUCKET),
+                        RecipeCategory.MISC,
+                        ModItems.FOOLS_GOLD_LAVA_BUCKET
+                )
+                .criterion("has_bucket_mould", conditionsFromItem(ModItems.BUCKET_MOULD))
+                .criterion("has_fools_gold_block", conditionsFromItem(ModBlocks.FOOLS_GOLD_BLOCK.asItem()))
+                .criterion("has_lava_bucket", conditionsFromItem(Items.LAVA_BUCKET))
+                .offerTo(exporter, new Identifier("steamcraft", "fools_gold_lava_bucket_smithing"));
+
+        //Divinitite Alloy smithing template to liquid
+        SmithingTransformRecipeJsonBuilder.create(
+                        Ingredient.ofItems(ModItems.BUCKET_MOULD),
+                        Ingredient.ofItems(ModBlocks.DIVINITITE_ALLOY_BLOCK.asItem()),
+                        Ingredient.ofItems(Items.LAVA_BUCKET),
+                        RecipeCategory.MISC,
+                        ModItems.DIVINITITE_ALLOY_LAVA_BUCKET
+                )
+                .criterion("has_bucket_mould", conditionsFromItem(ModItems.BUCKET_MOULD))
+                .criterion("has_divinitite_alloy_block", conditionsFromItem(ModBlocks.DIVINITITE_ALLOY_BLOCK.asItem()))
+                .criterion("has_lava_bucket", conditionsFromItem(Items.LAVA_BUCKET))
+                .offerTo(exporter, new Identifier("steamcraft", "divinitite_alloy_lava_bucket_smithing"));
 
 
         registerGlowRecipe(exporter, ModBlocks.SNOW_DROP_FLOWER_BLOCK, ModBlocks.GLOW_SNOW_DROP_FLOWER_BLOCK);

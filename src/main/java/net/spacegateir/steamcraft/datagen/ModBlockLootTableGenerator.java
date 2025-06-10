@@ -65,6 +65,7 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.FOOLS_GOLD_RAW_BLOCK);
         addDrop(ModBlocks.FOOLS_GOLD_BLOCK);
+        addDrop(ModBlocks.DIVINITITE_ALLOY_BLOCK);
 
         addDrop(ModBlocks.CLAY_PATH,
                 dropsWithSilkTouch(ModBlocks.CLAY_PATH, ItemEntry.builder(Blocks.CLAY))
@@ -385,6 +386,88 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.SNOW_BRICKS_CRACKED);
         addDrop(ModBlocks.SNOW_TILES);
         addDrop(ModBlocks.SNOW_TILES_CRACKED);
+
+//        Cauldrons
+
+        addDrop(ModBlocks.WHITE_LAVA_CAULDRON_BLOCK,
+                dropsWithSilkTouch(Blocks.CAULDRON, ItemEntry.builder(Blocks.CAULDRON)));
+        addDrop(ModBlocks.WHITE_WATER_CAULDRON_BLOCK,
+                dropsWithSilkTouch(Blocks.CAULDRON, ItemEntry.builder(Blocks.CAULDRON)));
+
+        addDrop(ModBlocks.BLACK_LAVA_CAULDRON_BLOCK,
+                dropsWithSilkTouch(Blocks.CAULDRON, ItemEntry.builder(Blocks.CAULDRON)));
+        addDrop(ModBlocks.BLACK_WATER_CAULDRON_BLOCK,
+                dropsWithSilkTouch(Blocks.CAULDRON, ItemEntry.builder(Blocks.CAULDRON)));
+
+        addDrop(ModBlocks.BLUE_LAVA_CAULDRON_BLOCK,
+                dropsWithSilkTouch(Blocks.CAULDRON, ItemEntry.builder(Blocks.CAULDRON)));
+        addDrop(ModBlocks.BLUE_WATER_CAULDRON_BLOCK,
+                dropsWithSilkTouch(Blocks.CAULDRON, ItemEntry.builder(Blocks.CAULDRON)));
+
+        addDrop(ModBlocks.LIGHT_BLUE_LAVA_CAULDRON_BLOCK,
+                dropsWithSilkTouch(Blocks.CAULDRON, ItemEntry.builder(Blocks.CAULDRON)));
+        addDrop(ModBlocks.LIGHT_BLUE_WATER_CAULDRON_BLOCK,
+                dropsWithSilkTouch(Blocks.CAULDRON, ItemEntry.builder(Blocks.CAULDRON)));
+
+        addDrop(ModBlocks.BROWN_LAVA_CAULDRON_BLOCK,
+                dropsWithSilkTouch(Blocks.CAULDRON, ItemEntry.builder(Blocks.CAULDRON)));
+        addDrop(ModBlocks.BROWN_WATER_CAULDRON_BLOCK,
+                dropsWithSilkTouch(Blocks.CAULDRON, ItemEntry.builder(Blocks.CAULDRON)));
+
+        addDrop(ModBlocks.CYAN_LAVA_CAULDRON_BLOCK,
+                dropsWithSilkTouch(Blocks.CAULDRON, ItemEntry.builder(Blocks.CAULDRON)));
+        addDrop(ModBlocks.CYAN_WATER_CAULDRON_BLOCK,
+                dropsWithSilkTouch(Blocks.CAULDRON, ItemEntry.builder(Blocks.CAULDRON)));
+
+        addDrop(ModBlocks.GRAY_LAVA_CAULDRON_BLOCK,
+                dropsWithSilkTouch(Blocks.CAULDRON, ItemEntry.builder(Blocks.CAULDRON)));
+        addDrop(ModBlocks.GRAY_WATER_CAULDRON_BLOCK,
+                dropsWithSilkTouch(Blocks.CAULDRON, ItemEntry.builder(Blocks.CAULDRON)));
+
+        addDrop(ModBlocks.LIGHT_GRAY_LAVA_CAULDRON_BLOCK,
+                dropsWithSilkTouch(Blocks.CAULDRON, ItemEntry.builder(Blocks.CAULDRON)));
+        addDrop(ModBlocks.LIGHT_GRAY_WATER_CAULDRON_BLOCK,
+                dropsWithSilkTouch(Blocks.CAULDRON, ItemEntry.builder(Blocks.CAULDRON)));
+
+        addDrop(ModBlocks.GREEN_LAVA_CAULDRON_BLOCK,
+                dropsWithSilkTouch(Blocks.CAULDRON, ItemEntry.builder(Blocks.CAULDRON)));
+        addDrop(ModBlocks.GREEN_WATER_CAULDRON_BLOCK,
+                dropsWithSilkTouch(Blocks.CAULDRON, ItemEntry.builder(Blocks.CAULDRON)));
+
+        addDrop(ModBlocks.LIME_LAVA_CAULDRON_BLOCK,
+                dropsWithSilkTouch(Blocks.CAULDRON, ItemEntry.builder(Blocks.CAULDRON)));
+        addDrop(ModBlocks.LIME_WATER_CAULDRON_BLOCK,
+                dropsWithSilkTouch(Blocks.CAULDRON, ItemEntry.builder(Blocks.CAULDRON)));
+
+        addDrop(ModBlocks.MAGENTA_LAVA_CAULDRON_BLOCK,
+                dropsWithSilkTouch(Blocks.CAULDRON, ItemEntry.builder(Blocks.CAULDRON)));
+        addDrop(ModBlocks.MAGENTA_WATER_CAULDRON_BLOCK,
+                dropsWithSilkTouch(Blocks.CAULDRON, ItemEntry.builder(Blocks.CAULDRON)));
+
+        addDrop(ModBlocks.ORANGE_LAVA_CAULDRON_BLOCK,
+                dropsWithSilkTouch(Blocks.CAULDRON, ItemEntry.builder(Blocks.CAULDRON)));
+        addDrop(ModBlocks.ORANGE_WATER_CAULDRON_BLOCK,
+                dropsWithSilkTouch(Blocks.CAULDRON, ItemEntry.builder(Blocks.CAULDRON)));
+
+        addDrop(ModBlocks.PINK_LAVA_CAULDRON_BLOCK,
+                dropsWithSilkTouch(Blocks.CAULDRON, ItemEntry.builder(Blocks.CAULDRON)));
+        addDrop(ModBlocks.PINK_WATER_CAULDRON_BLOCK,
+                dropsWithSilkTouch(Blocks.CAULDRON, ItemEntry.builder(Blocks.CAULDRON)));
+
+        addDrop(ModBlocks.PURPLE_LAVA_CAULDRON_BLOCK,
+                dropsWithSilkTouch(Blocks.CAULDRON, ItemEntry.builder(Blocks.CAULDRON)));
+        addDrop(ModBlocks.PURPLE_WATER_CAULDRON_BLOCK,
+                dropsWithSilkTouch(Blocks.CAULDRON, ItemEntry.builder(Blocks.CAULDRON)));
+
+        addDrop(ModBlocks.RED_LAVA_CAULDRON_BLOCK,
+                dropsWithSilkTouch(Blocks.CAULDRON, ItemEntry.builder(Blocks.CAULDRON)));
+        addDrop(ModBlocks.RED_WATER_CAULDRON_BLOCK,
+                dropsWithSilkTouch(Blocks.CAULDRON, ItemEntry.builder(Blocks.CAULDRON)));
+
+        addDrop(ModBlocks.YELLOW_LAVA_CAULDRON_BLOCK,
+                dropsWithSilkTouch(Blocks.CAULDRON, ItemEntry.builder(Blocks.CAULDRON)));
+        addDrop(ModBlocks.YELLOW_WATER_CAULDRON_BLOCK,
+                dropsWithSilkTouch(Blocks.CAULDRON, ItemEntry.builder(Blocks.CAULDRON)));
 
 
 

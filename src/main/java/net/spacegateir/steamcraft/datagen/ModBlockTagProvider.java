@@ -285,6 +285,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
                         ModBlocks.FOOLS_GOLD_BLOCK,
                         ModBlocks.FOOLS_GOLD_RAW_BLOCK,
+                        ModBlocks.DIVINITITE_ALLOY_BLOCK,
 
                         ModBlocks.POWER_PRECISION_BLOCK,
                         ModBlocks.SMOKE_BLOCK,
@@ -365,6 +366,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .addTag(ModTags.Blocks.TRAPS)
 
                 .add(
+                        ModBlocks.DIVINITITE_ALLOY_BLOCK,
                         Blocks.BUDDING_AMETHYST,
                         Blocks.REINFORCED_DEEPSLATE,
                         Blocks.SPAWNER

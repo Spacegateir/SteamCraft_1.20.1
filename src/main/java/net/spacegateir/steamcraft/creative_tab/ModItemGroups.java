@@ -45,10 +45,12 @@ public class ModItemGroups {
 
                         entries.add(ModItems.FOOLS_GOLD_SCRAP);
                         entries.add(ModItems.FOOLS_GOLD_RAW);
-                        entries.add(ModBlocks.FOOLS_GOLD_RAW_BLOCK);
                         entries.add(ModItems.FOOLS_GOLD_INGOT);
-                        entries.add(ModBlocks.FOOLS_GOLD_BLOCK);
                         entries.add(ModItems.DIVINITITE_ALLOY_INGOT);
+
+                        entries.add(ModBlocks.FOOLS_GOLD_RAW_BLOCK);
+                        entries.add(ModBlocks.FOOLS_GOLD_BLOCK);
+                        entries.add(ModItems.DIVINITITE_ALLOY_ITEM);
 
                         entries.add(ModItems.FOOLS_GOLD_HELMET);
                         entries.add(ModItems.FOOLS_GOLD_CHESTPLATE);

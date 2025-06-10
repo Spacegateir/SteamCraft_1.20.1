@@ -23,6 +23,7 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldEvents;
+import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.util.ModTags;
 
 import java.util.Collections;
@@ -132,7 +133,7 @@ public class ModFluidDivinititeAlloy extends Block implements FluidDrainable {
 
     private boolean receiveNeighborFluids(World world, BlockPos pos, BlockState state) {
         if (this.fluid.isIn(ModTags.Fluids.DIVINITITE_ALLOY_MM)) {
-            boolean bl = world.getBlockState(pos.down()).isOf(Blocks.SOUL_SOIL);
+            boolean bl = world.getBlockState(pos.down()).isOf(ModBlocks.DIVINITITE_ALLOY_BLOCK);
 
             for (Direction direction : FLOW_DIRECTIONS) {
                 BlockPos blockPos = pos.offset(direction.getOpposite());

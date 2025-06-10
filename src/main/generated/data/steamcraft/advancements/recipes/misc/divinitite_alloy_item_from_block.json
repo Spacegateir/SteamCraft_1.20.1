@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_divinitite_alloy_item": {
+    "has_divinitite_alloy_ingot": {
       "conditions": {
         "items": [
           {
             "items": [
-              "steamcraft:divinitite_alloy_item"
+              "steamcraft:divinitite_alloy_ingot"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:divinitite_alloy_ingot"
+        "recipe": "steamcraft:divinitite_alloy_item_from_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_divinitite_alloy_item",
+      "has_divinitite_alloy_ingot",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:divinitite_alloy_ingot"
+      "steamcraft:divinitite_alloy_item_from_block"
     ]
   },
   "sends_telemetry_event": false

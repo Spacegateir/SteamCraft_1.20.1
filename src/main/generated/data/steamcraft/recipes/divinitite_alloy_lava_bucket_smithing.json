@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:lava_bucket"
+  },
+  "base": {
+    "item": "steamcraft:divinitite_alloy_item"
+  },
+  "result": {
+    "item": "steamcraft:divinitite_alloy_lava_bucket"
+  },
+  "template": {
+    "item": "steamcraft:bucket_mould"
+  }
+}

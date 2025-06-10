@@ -57,9 +57,12 @@ public class ModItems {
     public static final Item FOOLS_GOLD_RAW = registerItem("fools_gold_raw",
             new Item(new FabricItemSettings().rarity(Rarity.RARE)));
     public static final Item FOOLS_GOLD_INGOT = registerItem("fools_gold_ingot",
-            new Item(new FabricItemSettings()));
+            new Item(new FabricItemSettings().rarity(Rarity.RARE)));
     public static final Item DIVINITITE_ALLOY_INGOT = registerItem("divinitite_alloy_ingot",
-            new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
+            new Item(new FabricItemSettings().rarity(Rarity.EPIC).fireproof()));
+    public static final Item DIVINITITE_ALLOY_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "divinitite_alloy_item"),
+            new BlockItem(ModBlocks.DIVINITITE_ALLOY_BLOCK, new FabricItemSettings().rarity(Rarity.EPIC).fireproof()));
 
     public static final Item PATTERN_RECOMPILER = registerItem("pattern_recompiler",
             new SwapItem(new FabricItemSettings()));
@@ -543,11 +546,11 @@ public class ModItems {
 
     public static final Item FOOLS_GOLD_LAVA_BUCKET = Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID,
             "fools_gold_lava_bucket"), new BucketItem(ModFluids.STILL_FOOLS_GOLD_LAVA,
-            new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
+            new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1).rarity(Rarity.RARE)));
 
     public static final Item DIVINITITE_ALLOY_LAVA_BUCKET = Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID,
             "divinitite_alloy_lava_bucket"), new BucketItem(ModFluids.STILL_DIVINITITE_ALLOY_LAVA,
-            new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
+            new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1).rarity(Rarity.EPIC)));
 
 
 

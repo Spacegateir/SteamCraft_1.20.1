@@ -11,7 +11,6 @@ import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.Util;
 import net.spacegateir.steamcraft.Steamcraft;
 import net.spacegateir.steamcraft.block.arcane.*;
 import net.spacegateir.steamcraft.block.arcane_specal.*;
@@ -88,6 +87,12 @@ public class ModBlocks {
             new Block(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK)));
     public static final Block FOOLS_GOLD_RAW_BLOCK = registerBlock("fools_gold_raw_block",
             new Block(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK)));
+
+
+    public static final Block DIVINITITE_ALLOY_BLOCK = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "divinitite_alloy_block"),
+            new Block(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK).nonOpaque()
+                    .luminance(state -> 15)));
 
     // Path Blocks
 

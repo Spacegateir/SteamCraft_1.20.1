@@ -68,14 +68,19 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         offerReversibleCompactingRecipesWithId(exporter, RecipeCategory.MISC, ModItems.DIVINITITE_ALLOY_INGOT, RecipeCategory.MISC, ModBlocks.DIVINITITE_ALLOY_BLOCK, "block");
 
         offerSmelting(exporter, List.of(ModItems.FOOLS_GOLD_RAW), RecipeCategory.MISC, ModItems.FOOLS_GOLD_INGOT,
-                1.00f, 200, "fools_gold");
+                0.15f, 200, "fools_gold");
         offerBlasting(exporter, List.of(ModItems.FOOLS_GOLD_RAW), RecipeCategory.MISC, ModItems.FOOLS_GOLD_INGOT,
-                1.00f, 100, "fools_gold");
+                0.15f, 100, "fools_gold");
 
         offerSmelting(exporter, List.of(ModBlocks.FOOLS_GOLD_RAW_BLOCK), RecipeCategory.MISC, ModBlocks.FOOLS_GOLD_BLOCK,
-                1.00f, 200, "fools_gold_block");
+                0.15f, 200, "fools_gold_block");
         offerBlasting(exporter, List.of(ModBlocks.FOOLS_GOLD_RAW_BLOCK), RecipeCategory.MISC, ModBlocks.FOOLS_GOLD_BLOCK,
-                1.00f, 100, "fools_gold_block");
+                0.15f, 100, "fools_gold_block");
+
+        offerSmelting(exporter, List.of(ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK), RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_BLOCK,
+                0.15f, 200, "glimmerstone_block");
+        offerBlasting(exporter, List.of(ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK), RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_BLOCK,
+                0.15f, 100, "glimmerstone_block");
 
         offerSmelting(exporter, List.of(Items.LODESTONE), RecipeCategory.MISC, Items.NETHERITE_INGOT,
                 1.00f, 200, "netherite_ingot");

@@ -209,6 +209,9 @@ public class ModItemGroups {
 
                         entries.add(ModItems.SMOKE_BLOCK_ITEM);
 
+                        entries.add(ModItems.GLIMMERSTONE_ITEM);
+                        entries.add(ModItems.GLIMMERSTONE_COBBLESTONE_ITEM);
+
                         entries.add(ModBlocks.COBBLED_WHITE_CONCRETE);
                         entries.add(ModBlocks.COBBLED_WHITE_CONCRETE_POWDER);
                         entries.add(ModBlocks.COBBLED_LIGHT_GRAY_CONCRETE);

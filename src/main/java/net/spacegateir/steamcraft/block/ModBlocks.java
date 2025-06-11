@@ -1188,6 +1188,14 @@ public class ModBlocks {
             new Identifier(Steamcraft.MOD_ID, "potted_glow_lush_violet_flower"),
             new FlowerPotBlock(GLOW_LUSH_VIOLET_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
+    public static final Block GLIMMERSTONE_BLOCK = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "glimmerstone_block"),
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE)));
+
+    public static final Block GLIMMERSTONE_COBBLESTONE_BLOCK = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "glimmerstone_cobblestone_block"),
+            new Block(FabricBlockSettings.copyOf(Blocks.COBBLESTONE)));
+
 
 
 

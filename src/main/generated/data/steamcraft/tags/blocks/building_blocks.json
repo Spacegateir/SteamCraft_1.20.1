@@ -32,6 +32,8 @@
     "steamcraft:cobbled_magenta_concrete",
     "steamcraft:cobbled_magenta_concrete_powder",
     "steamcraft:cobbled_pink_concrete",
-    "steamcraft:cobbled_pink_concrete_powder"
+    "steamcraft:cobbled_pink_concrete_powder",
+    "steamcraft:glimmerstone_block",
+    "steamcraft:glimmerstone_cobblestone_block"
   ]
 }

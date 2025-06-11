@@ -183,22 +183,22 @@ public abstract class DivinititeAlloyLavaFluid extends FlowableFluid {
     protected void flow(WorldAccess world, BlockPos pos, BlockState state, Direction direction, FluidState fluidState) {
         // Define the fluid-block reactions once
         Map<Class<?>, Block> coloredWaterReactions = Map.ofEntries(
-                Map.entry(ModFluidWhite.class, ModBlocks.COBBLED_WHITE_CONCRETE_POWDER),
-                Map.entry(ModFluidOrange.class, ModBlocks.COBBLED_ORANGE_CONCRETE_POWDER),
-                Map.entry(ModFluidMagenta.class, ModBlocks.COBBLED_MAGENTA_CONCRETE_POWDER),
-                Map.entry(ModFluidLightBlue.class, ModBlocks.COBBLED_LIGHT_BLUE_CONCRETE_POWDER),
-                Map.entry(ModFluidYellow.class, ModBlocks.COBBLED_YELLOW_CONCRETE_POWDER),
-                Map.entry(ModFluidLime.class, ModBlocks.COBBLED_LIME_CONCRETE_POWDER),
-                Map.entry(ModFluidPink.class, ModBlocks.COBBLED_PINK_CONCRETE_POWDER),
-                Map.entry(ModFluidGray.class, ModBlocks.COBBLED_GRAY_CONCRETE_POWDER),
-                Map.entry(ModFluidLightGray.class, ModBlocks.COBBLED_LIGHT_GRAY_CONCRETE_POWDER),
-                Map.entry(ModFluidCyan.class, ModBlocks.COBBLED_CYAN_CONCRETE_POWDER),
-                Map.entry(ModFluidPurple.class, ModBlocks.COBBLED_PURPLE_CONCRETE_POWDER),
-                Map.entry(ModFluidBlue.class, ModBlocks.COBBLED_BLUE_CONCRETE_POWDER),
-                Map.entry(ModFluidBrown.class, ModBlocks.COBBLED_BROWN_CONCRETE_POWDER),
-                Map.entry(ModFluidGreen.class, ModBlocks.COBBLED_GREEN_CONCRETE_POWDER),
-                Map.entry(ModFluidRed.class, ModBlocks.COBBLED_RED_CONCRETE_POWDER),
-                Map.entry(ModFluidBlack.class, ModBlocks.COBBLED_BLACK_CONCRETE_POWDER)
+                Map.entry(ModFluidWhite.class, Blocks.DEEPSLATE),
+                Map.entry(ModFluidOrange.class, Blocks.DEEPSLATE),
+                Map.entry(ModFluidMagenta.class, Blocks.DEEPSLATE),
+                Map.entry(ModFluidLightBlue.class, Blocks.DEEPSLATE),
+                Map.entry(ModFluidYellow.class, Blocks.DEEPSLATE),
+                Map.entry(ModFluidLime.class, Blocks.DEEPSLATE),
+                Map.entry(ModFluidPink.class, Blocks.DEEPSLATE),
+                Map.entry(ModFluidGray.class, Blocks.DEEPSLATE),
+                Map.entry(ModFluidLightGray.class, Blocks.DEEPSLATE),
+                Map.entry(ModFluidCyan.class, Blocks.DEEPSLATE),
+                Map.entry(ModFluidPurple.class, Blocks.DEEPSLATE),
+                Map.entry(ModFluidBlue.class, Blocks.DEEPSLATE),
+                Map.entry(ModFluidBrown.class, Blocks.DEEPSLATE),
+                Map.entry(ModFluidGreen.class, Blocks.DEEPSLATE),
+                Map.entry(ModFluidRed.class, Blocks.DEEPSLATE),
+                Map.entry(ModFluidBlack.class, Blocks.DEEPSLATE)
         );
 
         if (direction == Direction.DOWN) {
@@ -218,7 +218,7 @@ public abstract class DivinititeAlloyLavaFluid extends FlowableFluid {
             // Vanilla: LAVA + WATER => STONE
             if (this.isIn(FluidTags.LAVA) && fluidState2.isIn(FluidTags.WATER)) {
                 if (state.getBlock() instanceof FluidBlock) {
-                    world.setBlockState(pos, Blocks.STONE.getDefaultState(), Block.NOTIFY_ALL);
+                    world.setBlockState(pos, Blocks.DEEPSLATE.getDefaultState(), Block.NOTIFY_ALL);
                 }
                 this.playExtinguishEvent(world, pos);
                 return;

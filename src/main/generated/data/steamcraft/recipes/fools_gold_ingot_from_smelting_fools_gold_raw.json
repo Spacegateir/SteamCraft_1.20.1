@@ -2,7 +2,7 @@
   "type": "minecraft:smelting",
   "category": "misc",
   "cookingtime": 200,
-  "experience": 1.0,
+  "experience": 0.15,
   "group": "fools_gold",
   "ingredient": {
     "item": "steamcraft:fools_gold_raw"

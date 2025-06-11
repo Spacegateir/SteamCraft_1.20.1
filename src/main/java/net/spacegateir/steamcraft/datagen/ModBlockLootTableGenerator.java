@@ -469,6 +469,11 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.YELLOW_WATER_CAULDRON_BLOCK,
                 dropsWithSilkTouch(Blocks.CAULDRON, ItemEntry.builder(Blocks.CAULDRON)));
 
+//        Glimmerstones
+        addDrop(ModBlocks.GLIMMERSTONE_BLOCK,
+                dropsWithSilkTouch(ModBlocks.GLIMMERSTONE_BLOCK, ItemEntry.builder(ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK)));
+        addDrop(ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK);
+
 
 
 

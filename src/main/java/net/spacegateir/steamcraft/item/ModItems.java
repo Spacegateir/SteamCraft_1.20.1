@@ -18,6 +18,8 @@ import net.spacegateir.steamcraft.item.custom.*;
 
 import java.util.EnumMap;
 
+import static net.minecraft.util.Rarity.RARE;
+
 public class ModItems {
 
     public static final EnumMap<DyeColor, Item> COLOR_TO_WATER_BUCKET = new EnumMap<>(DyeColor.class);
@@ -53,11 +55,11 @@ public class ModItems {
             new GlintItem(new FabricItemSettings().rarity(Rarity.UNCOMMON)));
 
     public static final Item FOOLS_GOLD_SCRAP = registerItem("fools_gold_scrap",
-            new Item(new FabricItemSettings().rarity(Rarity.RARE)));
+            new Item(new FabricItemSettings().rarity(RARE)));
     public static final Item FOOLS_GOLD_RAW = registerItem("fools_gold_raw",
-            new Item(new FabricItemSettings().rarity(Rarity.RARE)));
+            new Item(new FabricItemSettings().rarity(RARE)));
     public static final Item FOOLS_GOLD_INGOT = registerItem("fools_gold_ingot",
-            new Item(new FabricItemSettings().rarity(Rarity.RARE)));
+            new Item(new FabricItemSettings().rarity(RARE)));
     public static final Item DIVINITITE_ALLOY_INGOT = registerItem("divinitite_alloy_ingot",
             new Item(new FabricItemSettings().rarity(Rarity.EPIC).fireproof()));
     public static final Item DIVINITITE_ALLOY_ITEM = Registry.register(Registries.ITEM,
@@ -507,6 +509,14 @@ public class ModItems {
             new Identifier(Steamcraft.MOD_ID, "smoke_block_item"),
             new SmokeBlockItem(ModBlocks.SMOKE_BLOCK, new FabricItemSettings()));
 
+    public static final Item GLIMMERSTONE_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glimmerstone_item"),
+            new BlockItem(ModBlocks.GLIMMERSTONE_BLOCK, new FabricItemSettings()));
+
+    public static final Item GLIMMERSTONE_COBBLESTONE_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glimmerstone_cobblestone_item"),
+            new BlockItem(ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK, new FabricItemSettings()));
+
 
     // Water
     public static final Item WHITE_WATER_BUCKET = registerDyedWaterBucket(DyeColor.WHITE, ModFluids.STILL_WHITE_WATER);
@@ -546,7 +556,7 @@ public class ModItems {
 
     public static final Item FOOLS_GOLD_LAVA_BUCKET = Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID,
             "fools_gold_lava_bucket"), new BucketItem(ModFluids.STILL_FOOLS_GOLD_LAVA,
-            new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1).rarity(Rarity.RARE)));
+            new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1).rarity(RARE)));
 
     public static final Item DIVINITITE_ALLOY_LAVA_BUCKET = Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID,
             "divinitite_alloy_lava_bucket"), new BucketItem(ModFluids.STILL_DIVINITITE_ALLOY_LAVA,

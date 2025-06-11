@@ -138,7 +138,7 @@ public class ModFluidDivinititeAlloy extends Block implements FluidDrainable {
             for (Direction direction : FLOW_DIRECTIONS) {
                 BlockPos blockPos = pos.offset(direction.getOpposite());
                 if (world.getFluidState(blockPos).isIn(ModTags.Fluids.WATER_DL)) {
-                    Block block = world.getFluidState(pos).isStill() ? Blocks.CRYING_OBSIDIAN : Blocks.COBBLED_DEEPSLATE;
+                    Block block = world.getFluidState(pos).isStill() ? ModBlocks.DIVINITITE_ALLOY_BLOCK : Blocks.COBBLED_DEEPSLATE;
                     world.setBlockState(pos, block.getDefaultState());
                     this.playExtinguishSound(world, pos);
                     return false;

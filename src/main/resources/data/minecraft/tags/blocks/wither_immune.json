@@ -2,6 +2,9 @@
   "replace": false,
   "values": [
     "#steamcraft:aether_blocks",
-    "#steamcraft:arcane_blocks"
+    "#steamcraft:arcane_blocks",
+
+
+    "steamcraft:divinitite_alloy_block"
   ]
 }

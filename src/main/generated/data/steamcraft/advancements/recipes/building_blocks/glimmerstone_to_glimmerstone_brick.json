@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_glimmerstone": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "steamcraft:glimmerstone_item"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "steamcraft:glimmerstone_to_glimmerstone_brick"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_glimmerstone",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "steamcraft:glimmerstone_to_glimmerstone_brick"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "steamcraft:block/glimmerstone_cobblestone_block",
+    "side": "steamcraft:block/glimmerstone_cobblestone_block",
+    "top": "steamcraft:block/glimmerstone_cobblestone_block"
+  }
+}

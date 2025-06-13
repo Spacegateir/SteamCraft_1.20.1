@@ -192,7 +192,19 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.COBBLED_PINK_CONCRETE_POWDER,
 
                         ModBlocks.GLIMMERSTONE_BLOCK,
-                        ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK
+                        ModBlocks.GLIMMERSTONE_STAIR_BLOCK,
+                        ModBlocks.GLIMMERSTONE_SLAB_BLOCK,
+                        ModBlocks.GLIMMERSTONE_WALL_BLOCK,
+
+                        ModBlocks.GLIMMERSTONE_BRICKS_BLOCK,
+                        ModBlocks.GLIMMERSTONE_BRICKS_STAIR_BLOCK,
+                        ModBlocks.GLIMMERSTONE_BRICKS_SLAB_BLOCK,
+                        ModBlocks.GLIMMERSTONE_BRICKS_WALL_BLOCK,
+
+                        ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK,
+                        ModBlocks.GLIMMERSTONE_COBBLESTONE_STAIR_BLOCK,
+                        ModBlocks.GLIMMERSTONE_COBBLESTONE_SLAB_BLOCK,
+                        ModBlocks.GLIMMERSTONE_COBBLESTONE_WALL_BLOCK
                         );
 
         getOrCreateTagBuilder(ModTags.Blocks.STONE_PATH_BLOCKS)
@@ -360,12 +372,30 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.FOOLS_GOLD_BLOCK,
                         ModBlocks.FOOLS_GOLD_RAW_BLOCK,
 
-                        ModBlocks.GLIMMERSTONE_BLOCK,
                         ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK,
+                        ModBlocks.GLIMMERSTONE_COBBLESTONE_STAIR_BLOCK,
+                        ModBlocks.GLIMMERSTONE_COBBLESTONE_SLAB_BLOCK,
+                        ModBlocks.GLIMMERSTONE_COBBLESTONE_WALL_BLOCK,
+
+                        ModBlocks.GLIMMERSTONE_BLOCK,
+                        ModBlocks.GLIMMERSTONE_STAIR_BLOCK,
+                        ModBlocks.GLIMMERSTONE_SLAB_BLOCK,
+                        ModBlocks.GLIMMERSTONE_WALL_BLOCK,
+
+                        ModBlocks.GLIMMERSTONE_BRICKS_BLOCK,
+                        ModBlocks.GLIMMERSTONE_BRICKS_STAIR_BLOCK,
+                        ModBlocks.GLIMMERSTONE_BRICKS_SLAB_BLOCK,
+                        ModBlocks.GLIMMERSTONE_BRICKS_WALL_BLOCK,
 
                         ModBlocks.POWER_PRECISION_BLOCK
 
                 );
+
+        getOrCreateTagBuilder(BlockTags.WALLS)
+
+                .add(ModBlocks.GLIMMERSTONE_WALL_BLOCK)
+                .add(ModBlocks.GLIMMERSTONE_COBBLESTONE_WALL_BLOCK)
+                .add(ModBlocks.GLIMMERSTONE_BRICKS_WALL_BLOCK);
 
         getOrCreateTagBuilder(TagKey.of(RegistryKeys.BLOCK, new Identifier("fabric", "needs_tool_level_4")))
                 .addTag(ModTags.Blocks.ARCANE_BLOCKS)

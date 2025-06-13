@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "steamcraft:block/glimmerstone_slab_block"
+    },
+    "type=double": {
+      "model": "steamcraft:block/glimmerstone_block"
+    },
+    "type=top": {
+      "model": "steamcraft:block/glimmerstone_slab_block_top"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "steamcraft:block/glimmerstone_bricks_block",
+    "side": "steamcraft:block/glimmerstone_bricks_block",
+    "top": "steamcraft:block/glimmerstone_bricks_block"
+  }
+}

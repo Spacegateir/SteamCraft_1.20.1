@@ -6,8 +6,6 @@ public class ToDo {
     // Keep a Wiki Record so people know how to play the mod
     // ON THE CURSED FORGE SITE EXPALIN HOW TO PLAY THE MOD
 
-    // Add divinitite alloy block
-    // Fools gold generator (cobble = cobbled shimmer rock) (stone = shimmer rock) (blue ice + fools Gold block = glowstone)
     // Divinitite Alloy generator (cobble = ?) (stone = ?) (blue ice + Divinitite block = ?)
 
 
@@ -15,12 +13,14 @@ public class ToDo {
 
     // create dimentions (earth copy, void, waterworld, skulk, overworld neather type, sky dimention)
 
+    // add glimmerstone (stairs, slabs, walls ect.) (bricks, ect.)
+    // add glimmerstone cobblestone (stairs, slabs, walls ect.)
+
     // give glow flowers the ability to farm like plants
 
     // make dragon egg with 8 netherstars craft divine egg
     // make divine egg drop halo when placed on the ground slowly cracks over 1hr then turns into a halo
 
-    // Blue lava called soul lava (dyedable liquids water and lava)
 
     // loot chests (common, rare legenday) witch will drop everywere and have great items in it like god sword
 

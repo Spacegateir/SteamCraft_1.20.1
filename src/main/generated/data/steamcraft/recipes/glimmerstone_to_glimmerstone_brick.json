@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "steamcraft:glimmerstone_item"
+    },
+    {
+      "item": "steamcraft:glimmerstone_item"
+    },
+    {
+      "item": "steamcraft:glimmerstone_item"
+    },
+    {
+      "item": "steamcraft:glimmerstone_item"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "steamcraft:glimmerstone_bricks_item"
+  }
+}

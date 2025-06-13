@@ -34,6 +34,16 @@
     "steamcraft:cobbled_pink_concrete",
     "steamcraft:cobbled_pink_concrete_powder",
     "steamcraft:glimmerstone_block",
-    "steamcraft:glimmerstone_cobblestone_block"
+    "steamcraft:glimmerstone_stair_block",
+    "steamcraft:glimmerstone_slab_block",
+    "steamcraft:glimmerstone_wall_block",
+    "steamcraft:glimmerstone_bricks_block",
+    "steamcraft:glimmerstone_bricks_stair_block",
+    "steamcraft:glimmerstone_bricks_slab_block",
+    "steamcraft:glimmerstone_bricks_wall_block",
+    "steamcraft:glimmerstone_cobblestone_block",
+    "steamcraft:glimmerstone_cobblestone_stair_block",
+    "steamcraft:glimmerstone_cobblestone_slab_block",
+    "steamcraft:glimmerstone_cobblestone_wall_block"
   ]
 }

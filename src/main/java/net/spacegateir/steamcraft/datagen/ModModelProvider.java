@@ -22,8 +22,20 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FOOLS_GOLD_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DIVINITITE_ALLOY_BLOCK);
 
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GLIMMERSTONE_BLOCK);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK);
+        BlockStateModelGenerator.BlockTexturePool GlimmerstoneTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.GLIMMERSTONE_BLOCK);
+        GlimmerstoneTexturePool.stairs(ModBlocks.GLIMMERSTONE_STAIR_BLOCK);
+        GlimmerstoneTexturePool.slab(ModBlocks.GLIMMERSTONE_SLAB_BLOCK);
+        GlimmerstoneTexturePool.wall(ModBlocks.GLIMMERSTONE_WALL_BLOCK);
+
+        BlockStateModelGenerator.BlockTexturePool GlimmerstoneBricksTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.GLIMMERSTONE_BRICKS_BLOCK);
+        GlimmerstoneBricksTexturePool.stairs(ModBlocks.GLIMMERSTONE_BRICKS_STAIR_BLOCK);
+        GlimmerstoneBricksTexturePool.slab(ModBlocks.GLIMMERSTONE_BRICKS_SLAB_BLOCK);
+        GlimmerstoneBricksTexturePool.wall(ModBlocks.GLIMMERSTONE_BRICKS_WALL_BLOCK);
+
+        BlockStateModelGenerator.BlockTexturePool GlimmerstoneCobblestoneTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK);
+        GlimmerstoneCobblestoneTexturePool.stairs(ModBlocks.GLIMMERSTONE_COBBLESTONE_STAIR_BLOCK);
+        GlimmerstoneCobblestoneTexturePool.slab(ModBlocks.GLIMMERSTONE_COBBLESTONE_SLAB_BLOCK);
+        GlimmerstoneCobblestoneTexturePool.wall(ModBlocks.GLIMMERSTONE_COBBLESTONE_WALL_BLOCK);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_WHITE_CONCRETE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_WHITE_CONCRETE_POWDER);

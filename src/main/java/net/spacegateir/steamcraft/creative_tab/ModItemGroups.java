@@ -209,8 +209,20 @@ public class ModItemGroups {
 
                         entries.add(ModItems.SMOKE_BLOCK_ITEM);
 
-                        entries.add(ModItems.GLIMMERSTONE_ITEM);
                         entries.add(ModItems.GLIMMERSTONE_COBBLESTONE_ITEM);
+                        entries.add(ModItems.GLIMMERSTONE_COBBLESTONE_STAIR_ITEM);
+                        entries.add(ModItems.GLIMMERSTONE_COBBLESTONE_SLAB_ITEM);
+                        entries.add(ModItems.GLIMMERSTONE_COBBLESTONE_WALL_ITEM);
+
+                        entries.add(ModItems.GLIMMERSTONE_ITEM);
+                        entries.add(ModItems.GLIMMERSTONE_STAIR_ITEM);
+                        entries.add(ModItems.GLIMMERSTONE_SLAB_ITEM);
+                        entries.add(ModItems.GLIMMERSTONE_WALL_ITEM);
+
+                        entries.add(ModItems.GLIMMERSTONE_BRICKS_ITEM);
+                        entries.add(ModItems.GLIMMERSTONE_BRICKS_STAIR_ITEM);
+                        entries.add(ModItems.GLIMMERSTONE_BRICKS_SLAB_ITEM);
+                        entries.add(ModItems.GLIMMERSTONE_BRICKS_WALL_ITEM);
 
                         entries.add(ModBlocks.COBBLED_WHITE_CONCRETE);
                         entries.add(ModBlocks.COBBLED_WHITE_CONCRETE_POWDER);

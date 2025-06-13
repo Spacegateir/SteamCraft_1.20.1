@@ -51,9 +51,6 @@ public class CelestialGearforgedEffect extends StatusEffect {
             }
         }
 
-
-
-
         // Frozen Immunity
         if (entity.isFrozen()) {entity.isOnFire();
         }
@@ -90,7 +87,7 @@ public class CelestialGearforgedEffect extends StatusEffect {
                                     false, false, false));
                             e.addStatusEffect(new StatusEffectInstance(StatusEffects.LUCK, 2400, 1024,
                                     false, false, false));
-                            e.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 2400, 0,
+                            e.addStatusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING, 2400, 0,
                                     false, false, false));
                         }
                     });

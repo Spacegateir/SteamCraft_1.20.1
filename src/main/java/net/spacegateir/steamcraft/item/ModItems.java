@@ -512,10 +512,41 @@ public class ModItems {
     public static final Item GLIMMERSTONE_ITEM = Registry.register(Registries.ITEM,
             new Identifier(Steamcraft.MOD_ID, "glimmerstone_item"),
             new BlockItem(ModBlocks.GLIMMERSTONE_BLOCK, new FabricItemSettings()));
+    public static final Item GLIMMERSTONE_STAIR_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glimmerstone_stair_item"),
+            new BlockItem(ModBlocks.GLIMMERSTONE_STAIR_BLOCK, new FabricItemSettings()));
+    public static final Item GLIMMERSTONE_SLAB_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glimmerstone_slab_item"),
+            new BlockItem(ModBlocks.GLIMMERSTONE_SLAB_BLOCK, new FabricItemSettings()));
+    public static final Item GLIMMERSTONE_WALL_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glimmerstone_wall_item"),
+            new BlockItem(ModBlocks.GLIMMERSTONE_WALL_BLOCK, new FabricItemSettings()));
 
     public static final Item GLIMMERSTONE_COBBLESTONE_ITEM = Registry.register(Registries.ITEM,
             new Identifier(Steamcraft.MOD_ID, "glimmerstone_cobblestone_item"),
             new BlockItem(ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK, new FabricItemSettings()));
+    public static final Item GLIMMERSTONE_COBBLESTONE_STAIR_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glimmerstone_cobblestone_stair_item"),
+            new BlockItem(ModBlocks.GLIMMERSTONE_COBBLESTONE_STAIR_BLOCK, new FabricItemSettings()));
+    public static final Item GLIMMERSTONE_COBBLESTONE_SLAB_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glimmerstone_cobblestone_slab_item"),
+            new BlockItem(ModBlocks.GLIMMERSTONE_COBBLESTONE_SLAB_BLOCK, new FabricItemSettings()));
+    public static final Item GLIMMERSTONE_COBBLESTONE_WALL_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glimmerstone_cobblestone_wall_item"),
+            new BlockItem(ModBlocks.GLIMMERSTONE_COBBLESTONE_WALL_BLOCK, new FabricItemSettings()));
+
+    public static final Item GLIMMERSTONE_BRICKS_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glimmerstone_bricks_item"),
+            new BlockItem(ModBlocks.GLIMMERSTONE_BRICKS_BLOCK, new FabricItemSettings()));
+    public static final Item GLIMMERSTONE_BRICKS_STAIR_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glimmerstone_bricks_stair_item"),
+            new BlockItem(ModBlocks.GLIMMERSTONE_BRICKS_STAIR_BLOCK, new FabricItemSettings()));
+    public static final Item GLIMMERSTONE_BRICKS_SLAB_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glimmerstone_bricks_slab_item"),
+            new BlockItem(ModBlocks.GLIMMERSTONE_BRICKS_SLAB_BLOCK, new FabricItemSettings()));
+    public static final Item GLIMMERSTONE_BRICKS_WALL_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glimmerstone_bricks_wall_item"),
+            new BlockItem(ModBlocks.GLIMMERSTONE_BRICKS_WALL_BLOCK, new FabricItemSettings()));
 
 
     // Water

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "steamcraft:block/lush_midnight_mystic_crop_stage1"
+  }
+}

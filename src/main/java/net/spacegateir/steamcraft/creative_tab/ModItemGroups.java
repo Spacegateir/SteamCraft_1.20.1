@@ -389,6 +389,60 @@ public class ModItemGroups {
                         entries.add(ModItems.LUSH_VIOLET_FLOWER_ITEM);
 //                        entries.add(ModItems.GLOW_LUSH_VIOLET_FLOWER_ITEM);
 
+                        //seeds
+                        entries.add(ModItems.CARNATION_SEED);
+                        entries.add(ModItems.VIOLET_SEED);
+                        entries.add(ModItems.IRIS_SEED);
+                        entries.add(ModItems.PRIMROSE_SEED);
+                        entries.add(ModItems.DAFFODIL_SEED);
+                        entries.add(ModItems.DELPHINIUM_SEED);
+                        entries.add(ModItems.DAHLIA_SEED);
+                        entries.add(ModItems.HYDRANGEA_SEED);
+                        entries.add(ModItems.MIDNIGHT_MYSTIC_SEED);
+                        entries.add(ModItems.HAWTHORN_SEED);
+                        entries.add(ModItems.BONSAI_SEED);
+                        entries.add(ModItems.SPIDERLILY_SEED);
+                        entries.add(ModItems.LARKSPUR_SEED);
+                        entries.add(ModItems.AGAPANTHUS_SEED);
+                        entries.add(ModItems.BLUE_COSMOS_SEED);
+                        entries.add(ModItems.SNOW_DROP_SEED);
+
+                        entries.add(ModItems.LUSH_CARNATION_SEED);
+                        entries.add(ModItems.LUSH_VIOLET_SEED);
+                        entries.add(ModItems.LUSH_IRIS_SEED);
+                        entries.add(ModItems.LUSH_PRIMROSE_SEED);
+                        entries.add(ModItems.LUSH_DAFFODIL_SEED);
+                        entries.add(ModItems.LUSH_DELPHINIUM_SEED);
+                        entries.add(ModItems.LUSH_DAHLIA_SEED);
+                        entries.add(ModItems.LUSH_HYDRANGEA_SEED);
+                        entries.add(ModItems.LUSH_MIDNIGHT_MYSTIC_SEED);
+                        entries.add(ModItems.LUSH_HAWTHORN_SEED);
+                        entries.add(ModItems.LUSH_BONSAI_SEED);
+                        entries.add(ModItems.LUSH_SPIDERLILY_SEED);
+                        entries.add(ModItems.LUSH_LARKSPUR_SEED);
+                        entries.add(ModItems.LUSH_AGAPANTHUS_SEED);
+                        entries.add(ModItems.LUSH_BLUE_COSMOS_SEED);
+                        entries.add(ModItems.LUSH_SNOW_DROP_SEED);
+
+                        entries.add(ModItems.THORNED_CARNATION_SEED);
+                        entries.add(ModItems.THORNED_VIOLET_SEED);
+                        entries.add(ModItems.THORNED_IRIS_SEED);
+                        entries.add(ModItems.THORNED_PRIMROSE_SEED);
+                        entries.add(ModItems.THORNED_DAFFODIL_SEED);
+                        entries.add(ModItems.THORNED_DELPHINIUM_SEED);
+                        entries.add(ModItems.THORNED_DAHLIA_SEED);
+                        entries.add(ModItems.THORNED_HYDRANGEA_SEED);
+                        entries.add(ModItems.THORNED_MIDNIGHT_MYSTIC_SEED);
+                        entries.add(ModItems.THORNED_HAWTHORN_SEED);
+                        entries.add(ModItems.THORNED_BONSAI_SEED);
+                        entries.add(ModItems.THORNED_SPIDERLILY_SEED);
+                        entries.add(ModItems.THORNED_LARKSPUR_SEED);
+                        entries.add(ModItems.THORNED_AGAPANTHUS_SEED);
+                        entries.add(ModItems.THORNED_BLUE_COSMOS_SEED);
+                        entries.add(ModItems.THORNED_SNOW_DROP_SEED);
+
+
+
                         entries.add(ModItems.WHITE_WATER_BUCKET);
                         entries.add(ModItems.LIGHT_GRAY_WATER_BUCKET);
                         entries.add(ModItems.GRAY_WATER_BUCKET);

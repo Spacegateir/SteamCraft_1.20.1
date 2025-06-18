@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "steamcraft:block/hydrangea_crop_stage3"
+  }
+}

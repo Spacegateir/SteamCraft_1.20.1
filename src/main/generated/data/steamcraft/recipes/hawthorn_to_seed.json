@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "steamcraft:hawthorn_flower_item"
+    }
+  ],
+  "result": {
+    "item": "steamcraft:hawthorn_seed"
+  }
+}

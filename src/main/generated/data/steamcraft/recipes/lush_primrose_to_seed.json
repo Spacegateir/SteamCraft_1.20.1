@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "steamcraft:lush_primrose_flower_item"
+    }
+  ],
+  "result": {
+    "item": "steamcraft:lush_primrose_seed"
+  }
+}

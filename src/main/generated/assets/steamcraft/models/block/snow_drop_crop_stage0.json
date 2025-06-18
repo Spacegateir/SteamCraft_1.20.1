@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "steamcraft:block/snow_drop_crop_stage0"
+  }
+}

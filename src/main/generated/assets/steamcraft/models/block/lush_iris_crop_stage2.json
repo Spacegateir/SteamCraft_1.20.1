@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "steamcraft:block/lush_iris_crop_stage2"
+  }
+}

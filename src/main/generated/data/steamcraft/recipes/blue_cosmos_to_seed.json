@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "steamcraft:blue_cosmos_flower_item"
+    }
+  ],
+  "result": {
+    "item": "steamcraft:blue_cosmos_seed"
+  }
+}

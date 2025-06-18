@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "steamcraft:block/larkspur_crop_stage3"
+  }
+}

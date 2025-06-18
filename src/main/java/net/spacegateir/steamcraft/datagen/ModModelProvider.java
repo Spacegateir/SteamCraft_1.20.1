@@ -7,6 +7,7 @@ import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
 import net.minecraft.item.ArmorItem;
 import net.spacegateir.steamcraft.block.ModBlocks;
+import net.spacegateir.steamcraft.block.custom.ModCropBlock;
 import net.spacegateir.steamcraft.item.ModItems;
 import net.spacegateir.steamcraft.item.ModRewardItems;
 
@@ -79,6 +80,71 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SNOW_BRICKS_CRACKED);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SNOW_TILES);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SNOW_TILES_CRACKED);
+
+        blockStateModelGenerator.registerCrop(ModBlocks.CARNATION_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+        blockStateModelGenerator.registerCrop(ModBlocks.LUSH_CARNATION_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+        blockStateModelGenerator.registerCrop(ModBlocks.THORNED_CARNATION_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+
+        blockStateModelGenerator.registerCrop(ModBlocks.VIOLET_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+        blockStateModelGenerator.registerCrop(ModBlocks.LUSH_VIOLET_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+        blockStateModelGenerator.registerCrop(ModBlocks.THORNED_VIOLET_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+
+        blockStateModelGenerator.registerCrop(ModBlocks.IRIS_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+        blockStateModelGenerator.registerCrop(ModBlocks.LUSH_IRIS_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+        blockStateModelGenerator.registerCrop(ModBlocks.THORNED_IRIS_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+
+        blockStateModelGenerator.registerCrop(ModBlocks.PRIMROSE_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+        blockStateModelGenerator.registerCrop(ModBlocks.LUSH_PRIMROSE_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+        blockStateModelGenerator.registerCrop(ModBlocks.THORNED_PRIMROSE_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+
+        blockStateModelGenerator.registerCrop(ModBlocks.DAFFODIL_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+        blockStateModelGenerator.registerCrop(ModBlocks.LUSH_DAFFODIL_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+        blockStateModelGenerator.registerCrop(ModBlocks.THORNED_DAFFODIL_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+
+        blockStateModelGenerator.registerCrop(ModBlocks.DELPHINIUM_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+        blockStateModelGenerator.registerCrop(ModBlocks.LUSH_DELPHINIUM_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+        blockStateModelGenerator.registerCrop(ModBlocks.THORNED_DELPHINIUM_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+
+        blockStateModelGenerator.registerCrop(ModBlocks.DAHLIA_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+        blockStateModelGenerator.registerCrop(ModBlocks.LUSH_DAHLIA_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+        blockStateModelGenerator.registerCrop(ModBlocks.THORNED_DAHLIA_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+
+        blockStateModelGenerator.registerCrop(ModBlocks.HYDRANGEA_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+        blockStateModelGenerator.registerCrop(ModBlocks.LUSH_HYDRANGEA_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+        blockStateModelGenerator.registerCrop(ModBlocks.THORNED_HYDRANGEA_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+
+        blockStateModelGenerator.registerCrop(ModBlocks.MIDNIGHT_MYSTIC_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+        blockStateModelGenerator.registerCrop(ModBlocks.LUSH_MIDNIGHT_MYSTIC_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+        blockStateModelGenerator.registerCrop(ModBlocks.THORNED_MIDNIGHT_MYSTIC_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+
+        blockStateModelGenerator.registerCrop(ModBlocks.HAWTHORN_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+        blockStateModelGenerator.registerCrop(ModBlocks.LUSH_HAWTHORN_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+        blockStateModelGenerator.registerCrop(ModBlocks.THORNED_HAWTHORN_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+
+        blockStateModelGenerator.registerCrop(ModBlocks.BONSAI_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+        blockStateModelGenerator.registerCrop(ModBlocks.LUSH_BONSAI_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+        blockStateModelGenerator.registerCrop(ModBlocks.THORNED_BONSAI_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+
+        blockStateModelGenerator.registerCrop(ModBlocks.SPIDERLILY_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+        blockStateModelGenerator.registerCrop(ModBlocks.LUSH_SPIDERLILY_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+        blockStateModelGenerator.registerCrop(ModBlocks.THORNED_SPIDERLILY_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+
+        blockStateModelGenerator.registerCrop(ModBlocks.LARKSPUR_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+        blockStateModelGenerator.registerCrop(ModBlocks.LUSH_LARKSPUR_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+        blockStateModelGenerator.registerCrop(ModBlocks.THORNED_LARKSPUR_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+
+        blockStateModelGenerator.registerCrop(ModBlocks.AGAPANTHUS_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+        blockStateModelGenerator.registerCrop(ModBlocks.LUSH_AGAPANTHUS_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+        blockStateModelGenerator.registerCrop(ModBlocks.THORNED_AGAPANTHUS_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+
+        blockStateModelGenerator.registerCrop(ModBlocks.BLUE_COSMOS_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+        blockStateModelGenerator.registerCrop(ModBlocks.LUSH_BLUE_COSMOS_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+        blockStateModelGenerator.registerCrop(ModBlocks.THORNED_BLUE_COSMOS_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+
+        blockStateModelGenerator.registerCrop(ModBlocks.SNOW_DROP_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+        blockStateModelGenerator.registerCrop(ModBlocks.LUSH_SNOW_DROP_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+        blockStateModelGenerator.registerCrop(ModBlocks.THORNED_SNOW_DROP_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
+
 
         // Normal Flowers
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.AGAPANTHUS_FLOWER_BLOCK, ModBlocks.POTTED_AGAPANTHUS_FLOWER_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED);

@@ -6,13 +6,17 @@ import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.FluidTags;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 import net.spacegateir.steamcraft.block.ModBlocks;
+import net.spacegateir.steamcraft.fluid.ModFluids;
 import net.spacegateir.steamcraft.item.ModItems;
 import net.spacegateir.steamcraft.item.ModRewardItems;
 
+import java.lang.reflect.Field;
 import java.util.concurrent.CompletableFuture;
 
 public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
@@ -36,6 +40,11 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                     net.minecraft.registry.Registries.ITEM.getKey(),
                     new Identifier("steamcraft", "ancient_gems")
             );
+
+            public static final TagKey<Item> FLOWER_SEEDS = TagKey.of(
+                    net.minecraft.registry.Registries.ITEM.getKey(),
+                    new Identifier("steamcraft", "flower_seeds")
+            );
         }
     }
 
@@ -55,8 +64,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModRewardItems.MAGIRITE_HELMET, ModRewardItems.MAGIRITE_CHESTPLATE, ModRewardItems.MAGIRITE_LEGGINGS, ModRewardItems.MAGIRITE_BOOTS);
 
 
-
-    getOrCreateTagBuilder(ModTags.Items.AETHER_COIL)
+        getOrCreateTagBuilder(ModTags.Items.AETHER_COIL)
                 .add(ModBlocks.AETHER_COIL.asItem())
                 .add(ModBlocks.AETHER_COIL_WHITE.asItem())
                 .add(ModBlocks.AETHER_COIL_LIGHT_GRAY.asItem())
@@ -83,5 +91,33 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.LUMINITE_SPARK.asItem())
                 .add(ModItems.OBSCURIUM_CRYSTAL.asItem());
 
+
+
+
+        // Dynamic seed tag registration
+        String[] baseFlowers = {
+                "carnation", "violet", "iris", "primrose", "daffodil", "delphinium", "dahlia",
+                "hydrangea", "midnight_mystic", "hawthorn", "bonsai", "spiderlily",
+                "larkspur", "agapanthus", "blue_cosmos", "snow_drop"
+        };
+
+        String[] prefixes = {"", "lush_", "thorned_"};
+
+        var builder = getOrCreateTagBuilder(ModTags.Items.FLOWER_SEEDS);
+
+        for (String prefix : prefixes) {
+            for (String base : baseFlowers) {
+                String fieldName = (prefix + base).toUpperCase() + "_SEED";
+                try {
+                    Field field = ModItems.class.getField(fieldName);
+                    Object item = field.get(null);
+                    if (item instanceof Item) {
+                        builder.add((Item) item);
+                    }
+                } catch (NoSuchFieldException | IllegalAccessException e) {
+                    System.err.println("Field not found or inaccessible: " + fieldName);
+                }
+            }
+        }
     }
 }

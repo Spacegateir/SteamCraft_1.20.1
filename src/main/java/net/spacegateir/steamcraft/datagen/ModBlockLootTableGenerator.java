@@ -2,9 +2,17 @@ package net.spacegateir.steamcraft.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemConvertible;
+import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
+import net.minecraft.loot.condition.LootCondition;
 import net.minecraft.loot.entry.ItemEntry;
+import net.minecraft.predicate.StatePredicate;
 import net.spacegateir.steamcraft.block.ModBlocks;
+import net.spacegateir.steamcraft.block.custom.ModCropBlock;
+import net.spacegateir.steamcraft.item.ModItems;
 
 public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
     public ModBlockLootTableGenerator(FabricDataOutput dataOutput) {
@@ -175,7 +183,6 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.SKELETON_TORSO);
         addDrop(ModBlocks.SKELETON_SITTING);
         addDrop(ModBlocks.SKELETON_SPINE);
-
 
 
         // Normal Flowers
@@ -469,6 +476,7 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.YELLOW_WATER_CAULDRON_BLOCK,
                 dropsWithSilkTouch(Blocks.CAULDRON, ItemEntry.builder(Blocks.CAULDRON)));
 
+
 //        Glimmerstones
         addDrop(ModBlocks.GLIMMERSTONE_BLOCK,
                 dropsWithSilkTouch(ModBlocks.GLIMMERSTONE_BLOCK, ItemEntry.builder(ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK)));
@@ -486,10 +494,79 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.GLIMMERSTONE_BRICKS_SLAB_BLOCK);
         addDrop(ModBlocks.GLIMMERSTONE_BRICKS_WALL_BLOCK);
 
-
-
-
-
-
     }
-}
+
+        // Auto-generated crop drops
+        private void registerAllCropDrops() {
+            registerCropDrop(ModBlocks.CARNATION_CROP, ModItems.CARNATION_FLOWER_ITEM, ModItems.CARNATION_SEED);
+            registerCropDrop(ModBlocks.LUSH_CARNATION_CROP, ModItems.LUSH_CARNATION_FLOWER_ITEM, ModItems.LUSH_CARNATION_SEED);
+            registerCropDrop(ModBlocks.THORNED_CARNATION_CROP, ModItems.THORNED_CARNATION_FLOWER_ITEM, ModItems.THORNED_CARNATION_SEED);
+
+            registerCropDrop(ModBlocks.VIOLET_CROP, ModItems.VIOLET_FLOWER_ITEM, ModItems.VIOLET_SEED);
+            registerCropDrop(ModBlocks.LUSH_VIOLET_CROP, ModItems.LUSH_VIOLET_FLOWER_ITEM, ModItems.LUSH_VIOLET_SEED);
+            registerCropDrop(ModBlocks.THORNED_VIOLET_CROP, ModItems.THORNED_VIOLET_FLOWER_ITEM, ModItems.THORNED_VIOLET_SEED);
+
+            registerCropDrop(ModBlocks.IRIS_CROP, ModItems.IRIS_FLOWER_ITEM, ModItems.IRIS_SEED);
+            registerCropDrop(ModBlocks.LUSH_IRIS_CROP, ModItems.LUSH_IRIS_FLOWER_ITEM, ModItems.LUSH_IRIS_SEED);
+            registerCropDrop(ModBlocks.THORNED_IRIS_CROP, ModItems.THORNED_IRIS_FLOWER_ITEM, ModItems.THORNED_IRIS_SEED);
+
+            registerCropDrop(ModBlocks.PRIMROSE_CROP, ModItems.PRIMROSE_FLOWER_ITEM, ModItems.PRIMROSE_SEED);
+            registerCropDrop(ModBlocks.LUSH_PRIMROSE_CROP, ModItems.LUSH_PRIMROSE_FLOWER_ITEM, ModItems.LUSH_PRIMROSE_SEED);
+            registerCropDrop(ModBlocks.THORNED_PRIMROSE_CROP, ModItems.THORNED_PRIMROSE_FLOWER_ITEM, ModItems.THORNED_PRIMROSE_SEED);
+
+            registerCropDrop(ModBlocks.DAFFODIL_CROP, ModItems.DAFFODIL_FLOWER_ITEM, ModItems.DAFFODIL_SEED);
+            registerCropDrop(ModBlocks.LUSH_DAFFODIL_CROP, ModItems.LUSH_DAFFODIL_FLOWER_ITEM, ModItems.LUSH_DAFFODIL_SEED);
+            registerCropDrop(ModBlocks.THORNED_DAFFODIL_CROP, ModItems.THORNED_DAFFODIL_FLOWER_ITEM, ModItems.THORNED_DAFFODIL_SEED);
+
+            registerCropDrop(ModBlocks.DELPHINIUM_CROP, ModItems.DELPHINIUM_FLOWER_ITEM, ModItems.DELPHINIUM_SEED);
+            registerCropDrop(ModBlocks.LUSH_DELPHINIUM_CROP, ModItems.LUSH_DELPHINIUM_FLOWER_ITEM, ModItems.LUSH_DELPHINIUM_SEED);
+            registerCropDrop(ModBlocks.THORNED_DELPHINIUM_CROP, ModItems.THORNED_DELPHINIUM_FLOWER_ITEM, ModItems.THORNED_DELPHINIUM_SEED);
+
+            registerCropDrop(ModBlocks.DAHLIA_CROP, ModItems.DAHLIA_FLOWER_ITEM, ModItems.DAHLIA_SEED);
+            registerCropDrop(ModBlocks.LUSH_DAHLIA_CROP, ModItems.LUSH_DAHLIA_FLOWER_ITEM, ModItems.LUSH_DAHLIA_SEED);
+            registerCropDrop(ModBlocks.THORNED_DAHLIA_CROP, ModItems.THORNED_DAHLIA_FLOWER_ITEM, ModItems.THORNED_DAHLIA_SEED);
+
+            registerCropDrop(ModBlocks.HYDRANGEA_CROP, ModItems.HYDRANGEA_FLOWER_ITEM, ModItems.HYDRANGEA_SEED);
+            registerCropDrop(ModBlocks.LUSH_HYDRANGEA_CROP, ModItems.LUSH_HYDRANGEA_FLOWER_ITEM, ModItems.LUSH_HYDRANGEA_SEED);
+            registerCropDrop(ModBlocks.THORNED_HYDRANGEA_CROP, ModItems.THORNED_HYDRANGEA_FLOWER_ITEM, ModItems.THORNED_HYDRANGEA_SEED);
+
+            registerCropDrop(ModBlocks.MIDNIGHT_MYSTIC_CROP, ModItems.MIDNIGHT_MYSTIC_FLOWER_ITEM, ModItems.MIDNIGHT_MYSTIC_SEED);
+            registerCropDrop(ModBlocks.LUSH_MIDNIGHT_MYSTIC_CROP, ModItems.LUSH_MIDNIGHT_MYSTIC_FLOWER_ITEM, ModItems.LUSH_MIDNIGHT_MYSTIC_SEED);
+            registerCropDrop(ModBlocks.THORNED_MIDNIGHT_MYSTIC_CROP, ModItems.THORNED_MIDNIGHT_MYSTIC_FLOWER_ITEM, ModItems.THORNED_MIDNIGHT_MYSTIC_SEED);
+
+            registerCropDrop(ModBlocks.HAWTHORN_CROP, ModItems.HAWTHORN_FLOWER_ITEM, ModItems.HAWTHORN_SEED);
+            registerCropDrop(ModBlocks.LUSH_HAWTHORN_CROP, ModItems.LUSH_HAWTHORN_FLOWER_ITEM, ModItems.LUSH_HAWTHORN_SEED);
+            registerCropDrop(ModBlocks.THORNED_HAWTHORN_CROP, ModItems.THORNED_HAWTHORN_FLOWER_ITEM, ModItems.THORNED_HAWTHORN_SEED);
+
+            registerCropDrop(ModBlocks.BONSAI_CROP, ModItems.BONSAI_FLOWER_ITEM, ModItems.BONSAI_SEED);
+            registerCropDrop(ModBlocks.LUSH_BONSAI_CROP, ModItems.LUSH_BONSAI_FLOWER_ITEM, ModItems.LUSH_BONSAI_SEED);
+            registerCropDrop(ModBlocks.THORNED_BONSAI_CROP, ModItems.THORNED_BONSAI_FLOWER_ITEM, ModItems.THORNED_BONSAI_SEED);
+
+            registerCropDrop(ModBlocks.SPIDERLILY_CROP, ModItems.SPIDERLILY_FLOWER_ITEM, ModItems.SPIDERLILY_SEED);
+            registerCropDrop(ModBlocks.LUSH_SPIDERLILY_CROP, ModItems.LUSH_SPIDERLILY_FLOWER_ITEM, ModItems.LUSH_SPIDERLILY_SEED);
+            registerCropDrop(ModBlocks.THORNED_SPIDERLILY_CROP, ModItems.THORNED_SPIDERLILY_FLOWER_ITEM, ModItems.THORNED_SPIDERLILY_SEED);
+
+            registerCropDrop(ModBlocks.LARKSPUR_CROP, ModItems.LARKSPUR_FLOWER_ITEM, ModItems.LARKSPUR_SEED);
+            registerCropDrop(ModBlocks.LUSH_LARKSPUR_CROP, ModItems.LUSH_LARKSPUR_FLOWER_ITEM, ModItems.LUSH_LARKSPUR_SEED);
+            registerCropDrop(ModBlocks.THORNED_LARKSPUR_CROP, ModItems.THORNED_LARKSPUR_FLOWER_ITEM, ModItems.THORNED_LARKSPUR_SEED);
+
+            registerCropDrop(ModBlocks.AGAPANTHUS_CROP, ModItems.AGAPANTHUS_FLOWER_ITEM, ModItems.AGAPANTHUS_SEED);
+            registerCropDrop(ModBlocks.LUSH_AGAPANTHUS_CROP, ModItems.LUSH_AGAPANTHUS_FLOWER_ITEM, ModItems.LUSH_AGAPANTHUS_SEED);
+            registerCropDrop(ModBlocks.THORNED_AGAPANTHUS_CROP, ModItems.THORNED_AGAPANTHUS_FLOWER_ITEM, ModItems.THORNED_AGAPANTHUS_SEED);
+
+            registerCropDrop(ModBlocks.BLUE_COSMOS_CROP, ModItems.BLUE_COSMOS_FLOWER_ITEM, ModItems.BLUE_COSMOS_SEED);
+            registerCropDrop(ModBlocks.LUSH_BLUE_COSMOS_CROP, ModItems.LUSH_BLUE_COSMOS_FLOWER_ITEM, ModItems.LUSH_BLUE_COSMOS_SEED);
+            registerCropDrop(ModBlocks.THORNED_BLUE_COSMOS_CROP, ModItems.THORNED_BLUE_COSMOS_FLOWER_ITEM, ModItems.THORNED_BLUE_COSMOS_SEED);
+
+            registerCropDrop(ModBlocks.SNOW_DROP_CROP, ModItems.SNOW_DROP_FLOWER_ITEM, ModItems.SNOW_DROP_SEED);
+            registerCropDrop(ModBlocks.LUSH_SNOW_DROP_CROP, ModItems.LUSH_SNOW_DROP_FLOWER_ITEM, ModItems.LUSH_SNOW_DROP_SEED);
+            registerCropDrop(ModBlocks.THORNED_SNOW_DROP_CROP, ModItems.THORNED_SNOW_DROP_FLOWER_ITEM, ModItems.THORNED_SNOW_DROP_SEED);
+        }
+
+// Reusable helper
+        private void registerCropDrop(Block cropBlock, ItemConvertible flowerItem, ItemConvertible seedItem) {
+            LootCondition.Builder condition = BlockStatePropertyLootCondition.builder(cropBlock)
+                    .properties(StatePredicate.Builder.create().exactMatch(ModCropBlock.AGE, ModCropBlock.MAX_AGE));
+            this.addDrop(cropBlock, this.cropDrops(cropBlock, (Item) flowerItem, (Item) seedItem, condition));
+        }
+    }

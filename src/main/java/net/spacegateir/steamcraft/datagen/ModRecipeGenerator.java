@@ -57,6 +57,33 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                     .offerTo(exporter, new Identifier(Steamcraft.MOD_ID, Registries.ITEM.getId(dye).getPath() + coilCount));
         }
     }
+    private void registerFlowerToSeedRecipes(Consumer<RecipeJsonProvider> exporter) {
+        String[] baseNames = {
+                "carnation", "violet", "iris", "primrose", "daffodil", "delphinium", "dahlia", "hydrangea",
+                "midnight_mystic", "hawthorn", "bonsai", "spiderlily", "larkspur", "agapanthus",
+                "blue_cosmos", "snow_drop"
+        };
+
+        for (String name : baseNames) {
+            registerSingleFlowerToSeed(exporter, name, "", ""); // Normal
+            registerSingleFlowerToSeed(exporter, name, "lush_", "LUSH_"); // Lush
+            registerSingleFlowerToSeed(exporter, name, "thorned_", "THORNED_"); // Thorned
+        }
+    }
+
+    private void registerSingleFlowerToSeed(Consumer<RecipeJsonProvider> exporter, String baseName, String prefix, String fieldPrefix) {
+        String path = prefix + baseName + "_to_seed";
+        Identifier id = new Identifier(Steamcraft.MOD_ID, path);
+
+        Item seed = ModItems.getField(fieldPrefix.toUpperCase() + baseName.toUpperCase() + "_SEED");
+        Item flower = ModItems.getField(fieldPrefix.toUpperCase() + baseName.toUpperCase() + "_FLOWER_ITEM");
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, seed)
+                .input(flower)
+                .criterion("has_flower", conditionsFromItem(flower))
+                .offerTo(exporter, id);
+    }
+
 
 
     @Override
@@ -1660,6 +1687,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
 
 
 
+
         // Lava Bucket Outputs
         Map<String, Item> dyeToLavaBucket = Map.ofEntries(
                 entry("white", ModItems.WHITE_LAVA_BUCKET),
@@ -1890,7 +1918,11 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         registerGlowRecipe(exporter, ModBlocks.LUSH_LARKSPUR_FLOWER_BLOCK, ModBlocks.GLOW_LUSH_LARKSPUR_FLOWER_BLOCK);
         registerGlowRecipe(exporter, ModBlocks.LUSH_AGAPANTHUS_FLOWER_BLOCK, ModBlocks.GLOW_LUSH_AGAPANTHUS_FLOWER_BLOCK);
         registerGlowRecipe(exporter, ModBlocks.LUSH_BLUE_COSMOS_FLOWER_BLOCK, ModBlocks.GLOW_LUSH_BLUE_COSMOS_FLOWER_BLOCK);
+
+        registerFlowerToSeedRecipes(exporter);
     }
+
+
 
 
 

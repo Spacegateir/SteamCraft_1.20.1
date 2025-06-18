@@ -544,6 +544,137 @@
   "block.steamcraft.divinitite_alloy_lava_block": "Divinitite Alloy Molten",
 
 
+  "item.steamcraft.agapanthus_seed": "Agapanthus Seed",
+  "item.steamcraft.lush_agapanthus_seed": "Lush Agapanthus Seed",
+  "item.steamcraft.thorned_agapanthus_seed": "Thorned Agapanthus Seed",
+
+  "item.steamcraft.blue_cosmos_seed": "Blue Cosmos Seed",
+  "item.steamcraft.lush_blue_cosmos_seed": "Lush Blue Cosmos Seed",
+  "item.steamcraft.thorned_blue_cosmos_seed": "Thorned Blue Cosmos Seed",
+
+  "item.steamcraft.bonsai_seed": "Bonsai Seed",
+  "item.steamcraft.lush_bonsai_seed": "Lush Bonsai Seed",
+  "item.steamcraft.thorned_bonsai_seed": "Thorned Bonsai Seed",
+
+  "item.steamcraft.carnation_seed": "Carnation Seed",
+  "item.steamcraft.lush_carnation_seed": "Lush Carnation Seed",
+  "item.steamcraft.thorned_carnation_seed": "Thorned Carnation Seed",
+
+  "item.steamcraft.daffodil_seed": "Daffodil Seed",
+  "item.steamcraft.lush_daffodil_seed": "Lush Daffodil Seed",
+  "item.steamcraft.thorned_daffodil_seed": "Thorned Daffodil Seed",
+
+  "item.steamcraft.dahlia_seed": "Dahlia Seed",
+  "item.steamcraft.lush_dahlia_seed": "Lush Dahlia Seed",
+  "item.steamcraft.thorned_dahlia_seed": "Thorned Dahlia Seed",
+
+  "item.steamcraft.delphinium_seed": "Delphinium Seed",
+  "item.steamcraft.lush_delphinium_seed": "Lush Delphinium Seed",
+  "item.steamcraft.thorned_delphinium_seed": "Thorned Delphinium Seed",
+
+  "item.steamcraft.hawthorn_seed": "Hawthorn Seed",
+  "item.steamcraft.lush_hawthorn_seed": "Lush Hawthorn Seed",
+  "item.steamcraft.thorned_hawthorn_seed": "Thorned Hawthorn Seed",
+
+  "item.steamcraft.hydrangea_seed": "Hydrangea Seed",
+  "item.steamcraft.lush_hydrangea_seed": "Lush Hydrangea Seed",
+  "item.steamcraft.thorned_hydrangea_seed": "Thorned Hydrangea Seed",
+
+  "item.steamcraft.iris_seed": "Iris Seed",
+  "item.steamcraft.lush_iris_seed": "Lush Iris Seed",
+  "item.steamcraft.thorned_iris_seed": "Thorned Iris Seed",
+
+  "item.steamcraft.larkspur_seed": "Larkspur Seed",
+  "item.steamcraft.lush_larkspur_seed": "Lush Larkspur Seed",
+  "item.steamcraft.thorned_larkspur_seed": "Thorned Larkspur Seed",
+
+  "item.steamcraft.midnight_mystic_seed": "Midnight Mystic Seed",
+  "item.steamcraft.lush_midnight_mystic_seed": "Lush Midnight Mystic Seed",
+  "item.steamcraft.thorned_midnight_mystic_seed": "Thorned Midnight Mystic Seed",
+
+  "item.steamcraft.primrose_seed": "Primrose Seed",
+  "item.steamcraft.lush_primrose_seed": "Lush Primrose Seed",
+  "item.steamcraft.thorned_primrose_seed": "Thorned Primrose Seed",
+
+  "item.steamcraft.snow_drop_seed": "Snow Drop Seed",
+  "item.steamcraft.lush_snow_drop_seed": "Lush Snow Drop Seed",
+  "item.steamcraft.thorned_snow_drop_seed": "Thorned Snow Drop Seed",
+
+  "item.steamcraft.spiderlily_seed": "Spiderlily Seed",
+  "item.steamcraft.lush_spiderlily_seed": "Lush Spiderlily Seed",
+  "item.steamcraft.thorned_spiderlily_seed": "Thorned Spiderlily Seed",
+
+  "item.steamcraft.violet_seed": "Violet Seed",
+  "item.steamcraft.lush_violet_seed": "Lush Violet Seed",
+  "item.steamcraft.thorned_violet_seed": "Thorned Violet Seed",
+
+  "block.steamcraft.agapanthus_crop": "Agapanthus Crop",
+  "block.steamcraft.lush_agapanthus_crop": "Lush Agapanthus Crop",
+  "block.steamcraft.thorned_agapanthus_crop": "Thorned Agapanthus Crop",
+
+  "block.steamcraft.blue_cosmos_crop": "Blue Cosmos Crop",
+  "block.steamcraft.lush_blue_cosmos_crop": "Lush Blue Cosmos Crop",
+  "block.steamcraft.thorned_blue_cosmos_crop": "Thorned Blue Cosmos Crop",
+
+  "block.steamcraft.bonsai_crop": "Bonsai Crop",
+  "block.steamcraft.lush_bonsai_crop": "Lush Bonsai Crop",
+  "block.steamcraft.thorned_bonsai_crop": "Thorned Bonsai Crop",
+
+  "block.steamcraft.carnation_crop": "Carnation Crop",
+  "block.steamcraft.lush_carnation_crop": "Lush Carnation Crop",
+  "block.steamcraft.thorned_carnation_crop": "Thorned Carnation Crop",
+
+  "block.steamcraft.daffodil_crop": "Daffodil Crop",
+  "block.steamcraft.lush_daffodil_crop": "Lush Daffodil Crop",
+  "block.steamcraft.thorned_daffodil_crop": "Thorned Daffodil Crop",
+
+  "block.steamcraft.dahlia_crop": "Dahlia Crop",
+  "block.steamcraft.lush_dahlia_crop": "Lush Dahlia Crop",
+  "block.steamcraft.thorned_dahlia_crop": "Thorned Dahlia Crop",
+
+  "block.steamcraft.delphinium_crop": "Delphinium Crop",
+  "block.steamcraft.lush_delphinium_crop": "Lush Delphinium Crop",
+  "block.steamcraft.thorned_delphinium_crop": "Thorned Delphinium Crop",
+
+  "block.steamcraft.hawthorn_crop": "Hawthorn Crop",
+  "block.steamcraft.lush_hawthorn_crop": "Lush Hawthorn Crop",
+  "block.steamcraft.thorned_hawthorn_crop": "Thorned Hawthorn Crop",
+
+  "block.steamcraft.hydrangea_crop": "Hydrangea Crop",
+  "block.steamcraft.lush_hydrangea_crop": "Lush Hydrangea Crop",
+  "block.steamcraft.thorned_hydrangea_crop": "Thorned Hydrangea Crop",
+
+  "block.steamcraft.iris_crop": "Iris Crop",
+  "block.steamcraft.lush_iris_crop": "Lush Iris Crop",
+  "block.steamcraft.thorned_iris_crop": "Thorned Iris Crop",
+
+  "block.steamcraft.larkspur_crop": "Larkspur Crop",
+  "block.steamcraft.lush_larkspur_crop": "Lush Larkspur Crop",
+  "block.steamcraft.thorned_larkspur_crop": "Thorned Larkspur Crop",
+
+  "block.steamcraft.midnight_mystic_crop": "Midnight Mystic Crop",
+  "block.steamcraft.lush_midnight_mystic_crop": "Lush Midnight Mystic Crop",
+  "block.steamcraft.thorned_midnight_mystic_crop": "Thorned Midnight Mystic Crop",
+
+  "block.steamcraft.primrose_crop": "Primrose Crop",
+  "block.steamcraft.lush_primrose_crop": "Lush Primrose Crop",
+  "block.steamcraft.thorned_primrose_crop": "Thorned Primrose Crop",
+
+  "block.steamcraft.snow_drop_crop": "Snow Drop Crop",
+  "block.steamcraft.lush_snow_drop_crop": "Lush Snow Drop Crop",
+  "block.steamcraft.thorned_snow_drop_crop": "Thorned Snow Drop Crop",
+
+  "block.steamcraft.spiderlily_crop": "Spiderlily Crop",
+  "block.steamcraft.lush_spiderlily_crop": "Lush Spiderlily Crop",
+  "block.steamcraft.thorned_spiderlily_crop": "Thorned Spiderlily Crop",
+
+  "block.steamcraft.violet_crop": "Violet Crop",
+  "block.steamcraft.lush_violet_crop": "Lush Violet Crop",
+  "block.steamcraft.thorned_violet_crop": "Thorned Violet Crop",
+
+
+
+
 
 
 

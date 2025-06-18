@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "steamcraft:daffodil_flower_item"
+    }
+  ],
+  "result": {
+    "item": "steamcraft:daffodil_seed"
+  }
+}

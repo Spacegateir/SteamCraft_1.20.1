@@ -12,6 +12,15 @@ import net.spacegateir.steamcraft.Steamcraft;
 public class ModTags {
     public static class Blocks {
 
+        public static final TagKey<Block> SKELETON = createBlockTag("skeleton");
+        public static final TagKey<Block> ARCANE_BLOCKS = createBlockTag("arcane_blocks");
+        public static final TagKey<Block> AETHER_BLOCKS = createBlockTag("aether_blocks");
+        public static final TagKey<Block> TRAPS = createBlockTag("traps");
+        public static final TagKey<Block> BUILDING_BLOCKS = createBlockTag("building_blocks");
+        public static final TagKey<Block> STONE_PATH_BLOCKS = createBlockTag("path_blocks");
+        public static final TagKey<Block> SOIL_PATH_BLOCKS = createBlockTag("path_blocks");
+        public static final TagKey<Block> FLOWER_SEEDS = createBlockTag("flower_seeds");
+
         private static TagKey<Block> createBlockTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, new Identifier(Steamcraft.MOD_ID, name));
         }
@@ -19,10 +28,15 @@ public class ModTags {
 
     public static class Items {
 
+        public static final TagKey<Item> DYES = createItemTag("dyes");
+        public static final TagKey<Item> AETHER_COIL = createItemTag("aether_coil");
+        public static final TagKey<Item> ANCIENT_GEMS = createItemTag("ancient_gems");
+
         private static TagKey<Item> createItemTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, new Identifier(Steamcraft.MOD_ID, name));
         }
     }
+
 
     public static class Fluids {
 
@@ -74,15 +88,5 @@ public class ModTags {
         private static TagKey<Fluid> createFluidTag(String name) {
             return TagKey.of(RegistryKeys.FLUID, new Identifier(Steamcraft.MOD_ID, name));
         }
-
-//        public static TagKey<Fluid> createWaterTag(DyeColor color) {
-//            String name = color.getName() + "_water_dl";
-//            return TagKey.of(RegistryKeys.FLUID, new Identifier(Steamcraft.MOD_ID, name));
-//        }
-
-//        public static TagKey<Fluid> createLavaTag(DyeColor color) {
-//            String name = color.getName() + "_lava_dl";
-//            return TagKey.of(RegistryKeys.FLUID, new Identifier(Steamcraft.MOD_ID, name));
-//        }
     }
 }

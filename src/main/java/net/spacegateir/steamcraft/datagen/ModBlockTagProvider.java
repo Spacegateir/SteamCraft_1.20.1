@@ -4,15 +4,14 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 import net.spacegateir.steamcraft.block.ModBlocks;
-
 import java.util.concurrent.CompletableFuture;
+
 
 public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     public ModBlockTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
@@ -49,6 +48,10 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                     RegistryKeys.BLOCK,
                     new Identifier("steamcraft", "path_blocks")
             );
+            public static final TagKey<Block> FLOWER_CROPS = TagKey.of(
+                    RegistryKeys.BLOCK,
+                    new Identifier("steamcraft", "flower_crops")
+            );
         }
     }
 
@@ -70,7 +73,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.SKELETON_TORSO,
                         ModBlocks.SKELETON_SITTING,
                         ModBlocks.SKELETON_SPINE
-                        );
+                );
 
         getOrCreateTagBuilder(ModTags.Blocks.ARCANE_BLOCKS)
                 .add(
@@ -114,7 +117,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.ARCANE_DISORIENT_BLOCK,
                         ModBlocks.ARCANE_STICKY_FEAT_BLOCK,
                         ModBlocks.ARCANE_FREAKY_BUNNY_BLOCK
-                        );
+                );
 
         getOrCreateTagBuilder(ModTags.Blocks.AETHER_BLOCKS)
                 .add(
@@ -135,7 +138,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.AETHER_COIL_PURPLE,
                         ModBlocks.AETHER_COIL_MAGENTA,
                         ModBlocks.AETHER_COIL_PINK
-                        );
+                );
 
         getOrCreateTagBuilder(ModBlockTagProvider.ModTags.Blocks.TRAPS)
                 .add(
@@ -153,7 +156,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.EMPTY_BRASIER,
                         ModBlocks.CURSED_TOTEM_BLOCK,
                         ModBlocks.TELEPORT_TRAP_BLOCK
-                        );
+                );
 
         getOrCreateTagBuilder(ModTags.Blocks.BUILDING_BLOCKS)
                 .add(
@@ -205,7 +208,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.GLIMMERSTONE_COBBLESTONE_STAIR_BLOCK,
                         ModBlocks.GLIMMERSTONE_COBBLESTONE_SLAB_BLOCK,
                         ModBlocks.GLIMMERSTONE_COBBLESTONE_WALL_BLOCK
-                        );
+                );
 
         getOrCreateTagBuilder(ModTags.Blocks.STONE_PATH_BLOCKS)
                 .add(
@@ -229,7 +232,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.STONE_MOSSY_PATH,
                         ModBlocks.STONE_DIRTY_PATH,
                         ModBlocks.END_STONE_PATH
-                        );
+                );
 
         getOrCreateTagBuilder(ModTags.Blocks.SOIL_PATH_BLOCKS)
                 .add(
@@ -243,7 +246,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.ROOTED_DIRT_PATH,
                         ModBlocks.SAND_PATH,
                         ModBlocks.SNOW_PATH
-                        );
+                );
 
         getOrCreateTagBuilder(BlockTags.CAULDRONS)
                 .add(
@@ -280,8 +283,6 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.YELLOW_LAVA_CAULDRON_BLOCK,
                         ModBlocks.YELLOW_WATER_CAULDRON_BLOCK
                 );
-
-
 
 
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
@@ -334,6 +335,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 );
 
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
+
                 .add(
 
                         ModBlocks.CURSED_POISON_SPORE_TRAP_BLOCK,
@@ -341,6 +343,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.SMOKE_BLOCK
 
                 );
+
 
         getOrCreateTagBuilder(BlockTags.HOE_MINEABLE)
                 .add(
@@ -409,6 +412,31 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
                 );
 
+        // Dynamic seed block tag registration
+        String[] baseFlowers = {
+                "carnation", "violet", "iris", "primrose", "daffodil", "delphinium", "dahlia",
+                "hydrangea", "midnight_mystic", "hawthorn", "bonsai", "spiderlily",
+                "larkspur", "agapanthus", "blue_cosmos", "snow_drop"
+        };
+
+        String[] prefixes = {"", "lush_", "thorned_"};
+
+        var builder = getOrCreateTagBuilder(ModTags.Blocks.FLOWER_CROPS);
+
+        for (String prefix : prefixes) {
+            for (String base : baseFlowers) {
+                String fieldName = (prefix + base).toUpperCase() + "_CROP"; // check if block fields have this naming
+                try {
+                    java.lang.reflect.Field field = ModBlocks.class.getField(fieldName);
+                    Object block = field.get(null);
+                    if (block instanceof Block) {
+                        builder.add((Block) block);
+                    }
+                } catch (NoSuchFieldException | IllegalAccessException e) {
+                    System.err.println("Block field not found or inaccessible: " + fieldName);
+                }
+            }
+        }
 
 
     }

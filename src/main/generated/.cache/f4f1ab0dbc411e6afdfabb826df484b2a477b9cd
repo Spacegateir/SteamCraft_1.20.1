@@ -1,7 +1,8 @@
-// 1.20.1	2025-06-13T13:09:24.0048879	Steamcraft/Tags for minecraft:block
+// 1.20.1	2025-06-14T14:33:29.1417357	Steamcraft/Tags for minecraft:block
 57a3bc489a8a2a21e9d33ca7cce56eea3280a961 data\minecraft\tags\blocks\mineable\pickaxe.json
 5eabe78f698f7462e5e1226462b8164c4b9c2589 data\minecraft\tags\blocks\mineable\hoe.json
 6396f25858a3395d476285f24f08ae9614a83dca data\minecraft\tags\blocks\mineable\axe.json
+4c56e1710058d2526a01b8fac9e141633cf26bfd data\steamcraft\tags\blocks\flower_crops.json
 fa19d22072770a74e8be0f17bf08a69d378dddd4 data\steamcraft\tags\blocks\skeleton.json
 1578f83ae4fefb8d8102c4d3c5cd27bd2fc9c076 data\steamcraft\tags\blocks\path_blocks.json
 fd98d0a53654e2bbea1803472c30cb88e82e980d data\steamcraft\tags\blocks\traps.json

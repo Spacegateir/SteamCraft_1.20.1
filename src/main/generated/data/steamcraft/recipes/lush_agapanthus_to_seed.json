@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "steamcraft:lush_agapanthus_flower_item"
+    }
+  ],
+  "result": {
+    "item": "steamcraft:lush_agapanthus_seed"
+  }
+}

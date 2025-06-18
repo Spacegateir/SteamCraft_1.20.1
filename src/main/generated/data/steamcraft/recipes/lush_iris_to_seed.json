@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "steamcraft:lush_iris_flower_item"
+    }
+  ],
+  "result": {
+    "item": "steamcraft:lush_iris_seed"
+  }
+}

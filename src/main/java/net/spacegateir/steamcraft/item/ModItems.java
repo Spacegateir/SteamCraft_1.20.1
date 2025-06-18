@@ -16,6 +16,7 @@ import net.spacegateir.steamcraft.fluid.ModFluids;
 import net.spacegateir.steamcraft.item.armor.*;
 import net.spacegateir.steamcraft.item.custom.*;
 
+import java.lang.reflect.Field;
 import java.util.EnumMap;
 
 import static net.minecraft.util.Rarity.RARE;
@@ -593,6 +594,110 @@ public class ModItems {
             "divinitite_alloy_lava_bucket"), new BucketItem(ModFluids.STILL_DIVINITITE_ALLOY_LAVA,
             new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1).rarity(Rarity.EPIC)));
 
+    // Base Seeds
+    public static final Item AGAPANTHUS_SEED = registerItem("agapanthus_seed",
+            new AliasedBlockItem(ModBlocks.AGAPANTHUS_CROP, new FabricItemSettings()));
+    public static final Item BLUE_COSMOS_SEED = registerItem("blue_cosmos_seed",
+            new AliasedBlockItem(ModBlocks.BLUE_COSMOS_CROP, new FabricItemSettings()));
+    public static final Item BONSAI_SEED = registerItem("bonsai_seed",
+            new AliasedBlockItem(ModBlocks.BONSAI_CROP, new FabricItemSettings()));
+    public static final Item CARNATION_SEED = registerItem("carnation_seed",
+            new AliasedBlockItem(ModBlocks.CARNATION_CROP, new FabricItemSettings()));
+    public static final Item DAFFODIL_SEED = registerItem("daffodil_seed",
+            new AliasedBlockItem(ModBlocks.DAFFODIL_CROP, new FabricItemSettings()));
+    public static final Item DAHLIA_SEED = registerItem("dahlia_seed",
+            new AliasedBlockItem(ModBlocks.DAHLIA_CROP, new FabricItemSettings()));
+    public static final Item DELPHINIUM_SEED = registerItem("delphinium_seed",
+            new AliasedBlockItem(ModBlocks.DELPHINIUM_CROP, new FabricItemSettings()));
+    public static final Item HAWTHORN_SEED = registerItem("hawthorn_seed",
+            new AliasedBlockItem(ModBlocks.HAWTHORN_CROP, new FabricItemSettings()));
+    public static final Item HYDRANGEA_SEED = registerItem("hydrangea_seed",
+            new AliasedBlockItem(ModBlocks.HYDRANGEA_CROP, new FabricItemSettings()));
+    public static final Item IRIS_SEED = registerItem("iris_seed",
+            new AliasedBlockItem(ModBlocks.IRIS_CROP, new FabricItemSettings()));
+    public static final Item LARKSPUR_SEED = registerItem("larkspur_seed",
+            new AliasedBlockItem(ModBlocks.LARKSPUR_CROP, new FabricItemSettings()));
+    public static final Item MIDNIGHT_MYSTIC_SEED = registerItem("midnight_mystic_seed",
+            new AliasedBlockItem(ModBlocks.MIDNIGHT_MYSTIC_CROP, new FabricItemSettings()));
+    public static final Item PRIMROSE_SEED = registerItem("primrose_seed",
+            new AliasedBlockItem(ModBlocks.PRIMROSE_CROP, new FabricItemSettings()));
+    public static final Item SNOW_DROP_SEED = registerItem("snow_drop_seed",
+            new AliasedBlockItem(ModBlocks.SNOW_DROP_CROP, new FabricItemSettings()));
+    public static final Item SPIDERLILY_SEED = registerItem("spiderlily_seed",
+            new AliasedBlockItem(ModBlocks.SPIDERLILY_CROP, new FabricItemSettings()));
+    public static final Item VIOLET_SEED = registerItem("violet_seed",
+            new AliasedBlockItem(ModBlocks.VIOLET_CROP, new FabricItemSettings()));
+
+    // Thorned Seeds
+    public static final Item THORNED_AGAPANTHUS_SEED = registerItem("thorned_agapanthus_seed",
+            new AliasedBlockItem(ModBlocks.THORNED_AGAPANTHUS_CROP, new FabricItemSettings()));
+    public static final Item THORNED_BLUE_COSMOS_SEED = registerItem("thorned_blue_cosmos_seed",
+            new AliasedBlockItem(ModBlocks.THORNED_BLUE_COSMOS_CROP, new FabricItemSettings()));
+    public static final Item THORNED_BONSAI_SEED = registerItem("thorned_bonsai_seed",
+            new AliasedBlockItem(ModBlocks.THORNED_BONSAI_CROP, new FabricItemSettings()));
+    public static final Item THORNED_CARNATION_SEED = registerItem("thorned_carnation_seed",
+            new AliasedBlockItem(ModBlocks.THORNED_CARNATION_CROP, new FabricItemSettings()));
+    public static final Item THORNED_DAFFODIL_SEED = registerItem("thorned_daffodil_seed",
+            new AliasedBlockItem(ModBlocks.THORNED_DAFFODIL_CROP, new FabricItemSettings()));
+    public static final Item THORNED_DAHLIA_SEED = registerItem("thorned_dahlia_seed",
+            new AliasedBlockItem(ModBlocks.THORNED_DAHLIA_CROP, new FabricItemSettings()));
+    public static final Item THORNED_DELPHINIUM_SEED = registerItem("thorned_delphinium_seed",
+            new AliasedBlockItem(ModBlocks.THORNED_DELPHINIUM_CROP, new FabricItemSettings()));
+    public static final Item THORNED_HAWTHORN_SEED = registerItem("thorned_hawthorn_seed",
+            new AliasedBlockItem(ModBlocks.THORNED_HAWTHORN_CROP, new FabricItemSettings()));
+    public static final Item THORNED_HYDRANGEA_SEED = registerItem("thorned_hydrangea_seed",
+            new AliasedBlockItem(ModBlocks.THORNED_HYDRANGEA_CROP, new FabricItemSettings()));
+    public static final Item THORNED_IRIS_SEED = registerItem("thorned_iris_seed",
+            new AliasedBlockItem(ModBlocks.THORNED_IRIS_CROP, new FabricItemSettings()));
+    public static final Item THORNED_LARKSPUR_SEED = registerItem("thorned_larkspur_seed",
+            new AliasedBlockItem(ModBlocks.THORNED_LARKSPUR_CROP, new FabricItemSettings()));
+    public static final Item THORNED_MIDNIGHT_MYSTIC_SEED = registerItem("thorned_midnight_mystic_seed",
+            new AliasedBlockItem(ModBlocks.THORNED_MIDNIGHT_MYSTIC_CROP, new FabricItemSettings()));
+    public static final Item THORNED_PRIMROSE_SEED = registerItem("thorned_primrose_seed",
+            new AliasedBlockItem(ModBlocks.THORNED_PRIMROSE_CROP, new FabricItemSettings()));
+    public static final Item THORNED_SNOW_DROP_SEED = registerItem("thorned_snow_drop_seed",
+            new AliasedBlockItem(ModBlocks.THORNED_SNOW_DROP_CROP, new FabricItemSettings()));
+    public static final Item THORNED_SPIDERLILY_SEED = registerItem("thorned_spiderlily_seed",
+            new AliasedBlockItem(ModBlocks.THORNED_SPIDERLILY_CROP, new FabricItemSettings()));
+    public static final Item THORNED_VIOLET_SEED = registerItem("thorned_violet_seed",
+            new AliasedBlockItem(ModBlocks.THORNED_VIOLET_CROP, new FabricItemSettings()));
+
+    // Lush Seeds
+    public static final Item LUSH_AGAPANTHUS_SEED = registerItem("lush_agapanthus_seed",
+            new AliasedBlockItem(ModBlocks.LUSH_AGAPANTHUS_CROP, new FabricItemSettings()));
+    public static final Item LUSH_BLUE_COSMOS_SEED = registerItem("lush_blue_cosmos_seed",
+            new AliasedBlockItem(ModBlocks.LUSH_BLUE_COSMOS_CROP, new FabricItemSettings()));
+    public static final Item LUSH_BONSAI_SEED = registerItem("lush_bonsai_seed",
+            new AliasedBlockItem(ModBlocks.LUSH_BONSAI_CROP, new FabricItemSettings()));
+    public static final Item LUSH_CARNATION_SEED = registerItem("lush_carnation_seed",
+            new AliasedBlockItem(ModBlocks.LUSH_CARNATION_CROP, new FabricItemSettings()));
+    public static final Item LUSH_DAFFODIL_SEED = registerItem("lush_daffodil_seed",
+            new AliasedBlockItem(ModBlocks.LUSH_DAFFODIL_CROP, new FabricItemSettings()));
+    public static final Item LUSH_DAHLIA_SEED = registerItem("lush_dahlia_seed",
+            new AliasedBlockItem(ModBlocks.LUSH_DAHLIA_CROP, new FabricItemSettings()));
+    public static final Item LUSH_DELPHINIUM_SEED = registerItem("lush_delphinium_seed",
+            new AliasedBlockItem(ModBlocks.LUSH_DELPHINIUM_CROP, new FabricItemSettings()));
+    public static final Item LUSH_HAWTHORN_SEED = registerItem("lush_hawthorn_seed",
+            new AliasedBlockItem(ModBlocks.LUSH_HAWTHORN_CROP, new FabricItemSettings()));
+    public static final Item LUSH_HYDRANGEA_SEED = registerItem("lush_hydrangea_seed",
+            new AliasedBlockItem(ModBlocks.LUSH_HYDRANGEA_CROP, new FabricItemSettings()));
+    public static final Item LUSH_IRIS_SEED = registerItem("lush_iris_seed",
+            new AliasedBlockItem(ModBlocks.LUSH_IRIS_CROP, new FabricItemSettings()));
+    public static final Item LUSH_LARKSPUR_SEED = registerItem("lush_larkspur_seed",
+            new AliasedBlockItem(ModBlocks.LUSH_LARKSPUR_CROP, new FabricItemSettings()));
+    public static final Item LUSH_MIDNIGHT_MYSTIC_SEED = registerItem("lush_midnight_mystic_seed",
+            new AliasedBlockItem(ModBlocks.LUSH_MIDNIGHT_MYSTIC_CROP, new FabricItemSettings()));
+    public static final Item LUSH_PRIMROSE_SEED = registerItem("lush_primrose_seed",
+            new AliasedBlockItem(ModBlocks.LUSH_PRIMROSE_CROP, new FabricItemSettings()));
+    public static final Item LUSH_SNOW_DROP_SEED = registerItem("lush_snow_drop_seed",
+            new AliasedBlockItem(ModBlocks.LUSH_SNOW_DROP_CROP, new FabricItemSettings()));
+    public static final Item LUSH_SPIDERLILY_SEED = registerItem("lush_spiderlily_seed",
+            new AliasedBlockItem(ModBlocks.LUSH_SPIDERLILY_CROP, new FabricItemSettings()));
+    public static final Item LUSH_VIOLET_SEED = registerItem("lush_violet_seed",
+            new AliasedBlockItem(ModBlocks.LUSH_VIOLET_CROP, new FabricItemSettings()));
+
+
+
 
 
 
@@ -631,4 +736,14 @@ public class ModItems {
         return Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID, name),
                 new BlockItem(block, new FabricItemSettings()));
     }
+
+    public static Item getField(String fieldName) {
+        try {
+            Field field = ModItems.class.getField(fieldName);
+            return (Item) field.get(null);
+        } catch (Exception e) {
+            throw new RuntimeException("Could not find field: " + fieldName, e);
+        }
+    }
+
 }

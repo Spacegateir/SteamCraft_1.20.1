@@ -25,6 +25,7 @@ public class Steamcraft implements ModInitializer {
 	public void onInitialize() {
 
 		ModBlocks.registerModBlocks();
+		ModBlocks.registerCropData();
 		ModItems.registerModItems();
 		ModFluids.registerFluids();
 		ModRewardItems.registerModRewardItems();

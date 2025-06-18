@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "steamcraft:snow_drop_flower_item"
+    }
+  ],
+  "result": {
+    "item": "steamcraft:snow_drop_seed"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "steamcraft:dahlia_flower_item"
+    }
+  ],
+  "result": {
+    "item": "steamcraft:dahlia_seed"
+  }
+}

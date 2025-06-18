@@ -19,6 +19,7 @@ import net.spacegateir.steamcraft.block.custom.*;
 import net.spacegateir.steamcraft.block.path_blocks.*;
 import net.spacegateir.steamcraft.block.traps.*;
 import net.spacegateir.steamcraft.effect.ModEffects;
+import net.spacegateir.steamcraft.item.ModItems;
 
 import java.util.EnumMap;
 
@@ -1188,6 +1189,8 @@ public class ModBlocks {
             new Identifier(Steamcraft.MOD_ID, "potted_glow_lush_violet_flower"),
             new FlowerPotBlock(GLOW_LUSH_VIOLET_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
+
+
     public static final Block GLIMMERSTONE_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glimmerstone_block"),
             new Block(FabricBlockSettings.copyOf(Blocks.STONE)));
@@ -1227,6 +1230,120 @@ public class ModBlocks {
             new Identifier(Steamcraft.MOD_ID, "glimmerstone_bricks_wall_block"),
             new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
 
+    // Crops
+    public static final Block AGAPANTHUS_CROP = registerBlockWithoutBlockItem("agapanthus_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),false));
+    public static final Block LUSH_AGAPANTHUS_CROP = registerBlockWithoutBlockItem("lush_agapanthus_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),false));
+    public static final Block THORNED_AGAPANTHUS_CROP = registerBlockWithoutBlockItem("thorned_agapanthus_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),true));
+
+    public static final Block BLUE_COSMOS_CROP = registerBlockWithoutBlockItem("blue_cosmos_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),false));
+    public static final Block LUSH_BLUE_COSMOS_CROP = registerBlockWithoutBlockItem("lush_blue_cosmos_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),false));
+    public static final Block THORNED_BLUE_COSMOS_CROP = registerBlockWithoutBlockItem("thorned_blue_cosmos_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),true));
+
+    public static final Block BONSAI_CROP = registerBlockWithoutBlockItem("bonsai_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),false));
+    public static final Block LUSH_BONSAI_CROP = registerBlockWithoutBlockItem("lush_bonsai_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),false));
+    public static final Block THORNED_BONSAI_CROP = registerBlockWithoutBlockItem("thorned_bonsai_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),true));
+
+    public static final Block CARNATION_CROP = registerBlockWithoutBlockItem("carnation_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),false));
+    public static final Block LUSH_CARNATION_CROP = registerBlockWithoutBlockItem("lush_carnation_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),false));
+    public static final Block THORNED_CARNATION_CROP = registerBlockWithoutBlockItem("thorned_carnation_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),true));
+
+    public static final Block DAFFODIL_CROP = registerBlockWithoutBlockItem("daffodil_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),false));
+    public static final Block LUSH_DAFFODIL_CROP = registerBlockWithoutBlockItem("lush_daffodil_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),false));
+    public static final Block THORNED_DAFFODIL_CROP = registerBlockWithoutBlockItem("thorned_daffodil_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),true));
+
+    public static final Block DAHLIA_CROP = registerBlockWithoutBlockItem("dahlia_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),false));
+    public static final Block LUSH_DAHLIA_CROP = registerBlockWithoutBlockItem("lush_dahlia_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),false));
+    public static final Block THORNED_DAHLIA_CROP = registerBlockWithoutBlockItem("thorned_dahlia_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),true));
+
+    public static final Block DELPHINIUM_CROP = registerBlockWithoutBlockItem("delphinium_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),false));
+    public static final Block LUSH_DELPHINIUM_CROP = registerBlockWithoutBlockItem("lush_delphinium_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),false));
+    public static final Block THORNED_DELPHINIUM_CROP = registerBlockWithoutBlockItem("thorned_delphinium_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),true));
+
+    public static final Block HAWTHORN_CROP = registerBlockWithoutBlockItem("hawthorn_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),false));
+    public static final Block LUSH_HAWTHORN_CROP = registerBlockWithoutBlockItem("lush_hawthorn_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),false));
+    public static final Block THORNED_HAWTHORN_CROP = registerBlockWithoutBlockItem("thorned_hawthorn_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),true));
+
+    public static final Block HYDRANGEA_CROP = registerBlockWithoutBlockItem("hydrangea_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),false));
+    public static final Block LUSH_HYDRANGEA_CROP = registerBlockWithoutBlockItem("lush_hydrangea_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),false));
+    public static final Block THORNED_HYDRANGEA_CROP = registerBlockWithoutBlockItem("thorned_hydrangea_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),true));
+
+    public static final Block IRIS_CROP = registerBlockWithoutBlockItem("iris_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),false));
+    public static final Block LUSH_IRIS_CROP = registerBlockWithoutBlockItem("lush_iris_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),false));
+    public static final Block THORNED_IRIS_CROP = registerBlockWithoutBlockItem("thorned_iris_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),true));
+
+    public static final Block LARKSPUR_CROP = registerBlockWithoutBlockItem("larkspur_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),false));
+    public static final Block LUSH_LARKSPUR_CROP = registerBlockWithoutBlockItem("lush_larkspur_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),false));
+    public static final Block THORNED_LARKSPUR_CROP = registerBlockWithoutBlockItem("thorned_larkspur_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),false));
+
+    public static final Block MIDNIGHT_MYSTIC_CROP = registerBlockWithoutBlockItem("midnight_mystic_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),false));
+    public static final Block LUSH_MIDNIGHT_MYSTIC_CROP = registerBlockWithoutBlockItem("lush_midnight_mystic_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),false));
+    public static final Block THORNED_MIDNIGHT_MYSTIC_CROP = registerBlockWithoutBlockItem("thorned_midnight_mystic_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),true));
+
+    public static final Block PRIMROSE_CROP = registerBlockWithoutBlockItem("primrose_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),false));
+    public static final Block LUSH_PRIMROSE_CROP = registerBlockWithoutBlockItem("lush_primrose_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),false));
+    public static final Block THORNED_PRIMROSE_CROP = registerBlockWithoutBlockItem("thorned_primrose_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),true));
+
+    public static final Block SNOW_DROP_CROP = registerBlockWithoutBlockItem("snow_drop_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),false));
+    public static final Block LUSH_SNOW_DROP_CROP = registerBlockWithoutBlockItem("lush_snow_drop_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),false));
+    public static final Block THORNED_SNOW_DROP_CROP = registerBlockWithoutBlockItem("thorned_snow_drop_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),true));
+
+    public static final Block SPIDERLILY_CROP = registerBlockWithoutBlockItem("spiderlily_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),false));
+    public static final Block LUSH_SPIDERLILY_CROP = registerBlockWithoutBlockItem("lush_spiderlily_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),false));
+    public static final Block THORNED_SPIDERLILY_CROP = registerBlockWithoutBlockItem("thorned_spiderlily_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),true));
+
+    public static final Block VIOLET_CROP = registerBlockWithoutBlockItem("violet_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),false));
+    public static final Block LUSH_VIOLET_CROP = registerBlockWithoutBlockItem("lush_violet_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),false));
+    public static final Block THORNED_VIOLET_CROP = registerBlockWithoutBlockItem("thorned_violet_crop",
+            new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),true));
+
+
 
 
 
@@ -1247,10 +1364,81 @@ public class ModBlocks {
         return Registry.register(Registries.BLOCK, new Identifier(Steamcraft.MOD_ID, name), block);
     }
 
+    private static Block registerBlockWithoutBlockItem(String name, Block block) {
+        return Registry.register(Registries.BLOCK, new Identifier(Steamcraft.MOD_ID, name), block);
+    }
+
     private static Item registerBlockItem(String name, Block block) {
         return Registry.register(Registries.ITEM, new Identifier(Steamcraft.MOD_ID, name),
                 new BlockItem(block, new FabricItemSettings()));
     }
+
+    public static void registerCropData() {
+        ModCropData.register(AGAPANTHUS_CROP, ModItems.AGAPANTHUS_SEED, ModItems.AGAPANTHUS_FLOWER_ITEM);
+        ModCropData.register(LUSH_AGAPANTHUS_CROP, ModItems.LUSH_AGAPANTHUS_SEED, ModItems.LUSH_AGAPANTHUS_FLOWER_ITEM);
+        ModCropData.register(THORNED_AGAPANTHUS_CROP, ModItems.THORNED_AGAPANTHUS_SEED, ModItems.THORNED_AGAPANTHUS_FLOWER_ITEM);
+
+        ModCropData.register(BLUE_COSMOS_CROP, ModItems.BLUE_COSMOS_SEED, ModItems.BLUE_COSMOS_FLOWER_ITEM);
+        ModCropData.register(LUSH_BLUE_COSMOS_CROP, ModItems.LUSH_BLUE_COSMOS_SEED, ModItems.LUSH_BLUE_COSMOS_FLOWER_ITEM);
+        ModCropData.register(THORNED_BLUE_COSMOS_CROP, ModItems.THORNED_BLUE_COSMOS_SEED, ModItems.THORNED_BLUE_COSMOS_FLOWER_ITEM);
+
+        ModCropData.register(BONSAI_CROP, ModItems.BONSAI_SEED, ModItems.BONSAI_FLOWER_ITEM);
+        ModCropData.register(LUSH_BONSAI_CROP, ModItems.LUSH_BONSAI_SEED, ModItems.LUSH_BONSAI_FLOWER_ITEM);
+        ModCropData.register(THORNED_BONSAI_CROP, ModItems.THORNED_BONSAI_SEED, ModItems.THORNED_BONSAI_FLOWER_ITEM);
+
+        ModCropData.register(CARNATION_CROP, ModItems.CARNATION_SEED, ModItems.CARNATION_FLOWER_ITEM);
+        ModCropData.register(LUSH_CARNATION_CROP, ModItems.LUSH_CARNATION_SEED, ModItems.LUSH_CARNATION_FLOWER_ITEM);
+        ModCropData.register(THORNED_CARNATION_CROP, ModItems.THORNED_CARNATION_SEED, ModItems.THORNED_CARNATION_FLOWER_ITEM);
+
+        ModCropData.register(DAFFODIL_CROP, ModItems.DAFFODIL_SEED, ModItems.DAFFODIL_FLOWER_ITEM);
+        ModCropData.register(LUSH_DAFFODIL_CROP, ModItems.LUSH_DAFFODIL_SEED, ModItems.LUSH_DAFFODIL_FLOWER_ITEM);
+        ModCropData.register(THORNED_DAFFODIL_CROP, ModItems.THORNED_DAFFODIL_SEED, ModItems.THORNED_DAFFODIL_FLOWER_ITEM);
+
+        ModCropData.register(DAHLIA_CROP, ModItems.DAHLIA_SEED, ModItems.DAHLIA_FLOWER_ITEM);
+        ModCropData.register(LUSH_DAHLIA_CROP, ModItems.LUSH_DAHLIA_SEED, ModItems.LUSH_DAHLIA_FLOWER_ITEM);
+        ModCropData.register(THORNED_DAHLIA_CROP, ModItems.THORNED_DAHLIA_SEED, ModItems.THORNED_DAHLIA_FLOWER_ITEM);
+
+        ModCropData.register(DELPHINIUM_CROP, ModItems.DELPHINIUM_SEED, ModItems.DELPHINIUM_FLOWER_ITEM);
+        ModCropData.register(LUSH_DELPHINIUM_CROP, ModItems.LUSH_DELPHINIUM_SEED, ModItems.LUSH_DELPHINIUM_FLOWER_ITEM);
+        ModCropData.register(THORNED_DELPHINIUM_CROP, ModItems.THORNED_DELPHINIUM_SEED, ModItems.THORNED_DELPHINIUM_FLOWER_ITEM);
+
+        ModCropData.register(HAWTHORN_CROP, ModItems.HAWTHORN_SEED, ModItems.HAWTHORN_FLOWER_ITEM);
+        ModCropData.register(LUSH_HAWTHORN_CROP, ModItems.LUSH_HAWTHORN_SEED, ModItems.LUSH_HAWTHORN_FLOWER_ITEM);
+        ModCropData.register(THORNED_HAWTHORN_CROP, ModItems.THORNED_HAWTHORN_SEED, ModItems.THORNED_HAWTHORN_FLOWER_ITEM);
+
+        ModCropData.register(HYDRANGEA_CROP, ModItems.HYDRANGEA_SEED, ModItems.HYDRANGEA_FLOWER_ITEM);
+        ModCropData.register(LUSH_HYDRANGEA_CROP, ModItems.LUSH_HYDRANGEA_SEED, ModItems.LUSH_HYDRANGEA_FLOWER_ITEM);
+        ModCropData.register(THORNED_HYDRANGEA_CROP, ModItems.THORNED_HYDRANGEA_SEED, ModItems.THORNED_HYDRANGEA_FLOWER_ITEM);
+
+        ModCropData.register(IRIS_CROP, ModItems.IRIS_SEED, ModItems.IRIS_FLOWER_ITEM);
+        ModCropData.register(LUSH_IRIS_CROP, ModItems.LUSH_IRIS_SEED, ModItems.LUSH_IRIS_FLOWER_ITEM);
+        ModCropData.register(THORNED_IRIS_CROP, ModItems.THORNED_IRIS_SEED, ModItems.THORNED_IRIS_FLOWER_ITEM);
+
+        ModCropData.register(LARKSPUR_CROP, ModItems.LARKSPUR_SEED, ModItems.LARKSPUR_FLOWER_ITEM);
+        ModCropData.register(LUSH_LARKSPUR_CROP, ModItems.LUSH_LARKSPUR_SEED, ModItems.LUSH_LARKSPUR_FLOWER_ITEM);
+        ModCropData.register(THORNED_LARKSPUR_CROP, ModItems.THORNED_LARKSPUR_SEED, ModItems.THORNED_LARKSPUR_FLOWER_ITEM);
+
+        ModCropData.register(MIDNIGHT_MYSTIC_CROP, ModItems.MIDNIGHT_MYSTIC_SEED, ModItems.MIDNIGHT_MYSTIC_FLOWER_ITEM);
+        ModCropData.register(LUSH_MIDNIGHT_MYSTIC_CROP, ModItems.LUSH_MIDNIGHT_MYSTIC_SEED, ModItems.LUSH_MIDNIGHT_MYSTIC_FLOWER_ITEM);
+        ModCropData.register(THORNED_MIDNIGHT_MYSTIC_CROP, ModItems.THORNED_MIDNIGHT_MYSTIC_SEED, ModItems.THORNED_MIDNIGHT_MYSTIC_FLOWER_ITEM);
+
+        ModCropData.register(PRIMROSE_CROP, ModItems.PRIMROSE_SEED, ModItems.PRIMROSE_FLOWER_ITEM);
+        ModCropData.register(LUSH_PRIMROSE_CROP, ModItems.LUSH_PRIMROSE_SEED, ModItems.LUSH_PRIMROSE_FLOWER_ITEM);
+        ModCropData.register(THORNED_PRIMROSE_CROP, ModItems.THORNED_PRIMROSE_SEED, ModItems.THORNED_PRIMROSE_FLOWER_ITEM);
+
+        ModCropData.register(SNOW_DROP_CROP, ModItems.SNOW_DROP_SEED, ModItems.SNOW_DROP_FLOWER_ITEM);
+        ModCropData.register(LUSH_SNOW_DROP_CROP, ModItems.LUSH_SNOW_DROP_SEED, ModItems.LUSH_SNOW_DROP_FLOWER_ITEM);
+        ModCropData.register(THORNED_SNOW_DROP_CROP, ModItems.THORNED_SNOW_DROP_SEED, ModItems.THORNED_SNOW_DROP_FLOWER_ITEM);
+
+        ModCropData.register(SPIDERLILY_CROP, ModItems.SPIDERLILY_SEED, ModItems.SPIDERLILY_FLOWER_ITEM);
+        ModCropData.register(LUSH_SPIDERLILY_CROP, ModItems.LUSH_SPIDERLILY_SEED, ModItems.LUSH_SPIDERLILY_FLOWER_ITEM);
+        ModCropData.register(THORNED_SPIDERLILY_CROP, ModItems.THORNED_SPIDERLILY_SEED, ModItems.THORNED_SPIDERLILY_FLOWER_ITEM);
+
+        ModCropData.register(VIOLET_CROP, ModItems.VIOLET_SEED, ModItems.VIOLET_FLOWER_ITEM);
+        ModCropData.register(LUSH_VIOLET_CROP, ModItems.LUSH_VIOLET_SEED, ModItems.LUSH_VIOLET_FLOWER_ITEM);
+        ModCropData.register(THORNED_VIOLET_CROP, ModItems.THORNED_VIOLET_SEED, ModItems.THORNED_VIOLET_FLOWER_ITEM);
+    }
+
 
     public static void registerModBlocks() {
         Steamcraft.LOGGER.info("Registering ModBlocks for " + Steamcraft.MOD_ID);

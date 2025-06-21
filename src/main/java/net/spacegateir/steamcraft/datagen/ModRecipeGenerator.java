@@ -329,7 +329,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('3', Items.NETHER_STAR)
                 .input('4', Blocks.GOLD_BLOCK)
                 .criterion(hasItem(ModItems.FOOLS_GOLD_INGOT), conditionsFromItem(ModItems.FOOLS_GOLD_INGOT))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.DIVINITITE_ALLOY_INGOT)));
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.DIVINITITE_ALLOY_INGOT) + "divinitite_alloy"));
 
 //Tuff Crafting
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items.TUFF, 8)
@@ -1843,9 +1843,9 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
 
         //Fools Gold smithing template to liquid
         SmithingTransformRecipeJsonBuilder.create(
-                        Ingredient.ofItems(ModItems.BUCKET_MOULD),
-                        Ingredient.ofItems(ModBlocks.FOOLS_GOLD_BLOCK.asItem()),
                         Ingredient.ofItems(Items.LAVA_BUCKET),
+                        Ingredient.ofItems(ModBlocks.FOOLS_GOLD_BLOCK.asItem()),
+                        Ingredient.ofItems(ModItems.BUCKET_MOULD),
                         RecipeCategory.MISC,
                         ModItems.FOOLS_GOLD_LAVA_BUCKET
                 )
@@ -1856,9 +1856,9 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
 
         //Divinitite Alloy smithing template to liquid
         SmithingTransformRecipeJsonBuilder.create(
-                        Ingredient.ofItems(ModItems.BUCKET_MOULD),
-                        Ingredient.ofItems(ModBlocks.DIVINITITE_ALLOY_BLOCK.asItem()),
                         Ingredient.ofItems(Items.LAVA_BUCKET),
+                        Ingredient.ofItems(ModBlocks.DIVINITITE_ALLOY_BLOCK.asItem()),
+                        Ingredient.ofItems(ModItems.BUCKET_MOULD),
                         RecipeCategory.MISC,
                         ModItems.DIVINITITE_ALLOY_LAVA_BUCKET
                 )

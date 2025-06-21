@@ -6,14 +6,15 @@ public class ToDo {
     // Keep a Wiki Record so people know how to play the mod
     // ON THE CURSED FORGE SITE EXPALIN HOW TO PLAY THE MOD
 
+    //    Sword, Pickaxe, shovel, axe, hoe, sheers, sheild, bucket,
+
+    // Fix (lava cauldron set you on fire, flower dye and flower seed recipe are the same)
+
 
 
     // MODIFY THE CRAFTTING RECIPE FOR THE GOD ARMOR (halo)
 
     // create dimentions (earth copy, void, waterworld, skulk, overworld neather type, sky dimention)
-
-    // make dragon egg with 8 netherstars craft divine egg
-    // make divine egg drop halo when placed on the ground slowly cracks over 1hr then turns into a halo
 
 
     // loot chests (common, rare legenday) witch will drop everywere and have great items in it like god sword

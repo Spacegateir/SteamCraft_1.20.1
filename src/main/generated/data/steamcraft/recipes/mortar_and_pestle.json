@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "minecraft:flint"
+    },
+    "2": {
+      "item": "minecraft:stone"
+    }
+  },
+  "pattern": [
+    "  1",
+    "2 2",
+    " 2 "
+  ],
+  "result": {
+    "item": "steamcraft:mortar_and_pestle"
+  },
+  "show_notification": true
+}

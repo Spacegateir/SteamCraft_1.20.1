@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "steamcraft:mortar_and_pestle"
+    },
+    {
+      "item": "steamcraft:lush_larkspur_flower_item"
+    },
+    {
+      "item": "steamcraft:lush_larkspur_flower_item"
+    },
+    {
+      "item": "steamcraft:lush_larkspur_flower_item"
+    },
+    {
+      "item": "steamcraft:lush_larkspur_flower_item"
+    },
+    {
+      "item": "steamcraft:lush_larkspur_flower_item"
+    },
+    {
+      "item": "steamcraft:lush_larkspur_flower_item"
+    },
+    {
+      "item": "steamcraft:lush_larkspur_flower_item"
+    }
+  ],
+  "result": {
+    "count": 28,
+    "item": "minecraft:cyan_dye"
+  }
+}

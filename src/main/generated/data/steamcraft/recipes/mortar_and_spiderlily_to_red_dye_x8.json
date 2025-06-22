@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "steamcraft:mortar_and_pestle"
+    },
+    {
+      "item": "steamcraft:spiderlily_flower_item"
+    },
+    {
+      "item": "steamcraft:spiderlily_flower_item"
+    },
+    {
+      "item": "steamcraft:spiderlily_flower_item"
+    },
+    {
+      "item": "steamcraft:spiderlily_flower_item"
+    },
+    {
+      "item": "steamcraft:spiderlily_flower_item"
+    },
+    {
+      "item": "steamcraft:spiderlily_flower_item"
+    },
+    {
+      "item": "steamcraft:spiderlily_flower_item"
+    },
+    {
+      "item": "steamcraft:spiderlily_flower_item"
+    }
+  ],
+  "result": {
+    "count": 32,
+    "item": "minecraft:red_dye"
+  }
+}

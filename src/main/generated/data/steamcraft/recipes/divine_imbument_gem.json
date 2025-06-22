@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "steamcraft:fools_gold_ingot"
+    },
+    "2": {
+      "item": "steamcraft:ferrite_heartstone"
+    },
+    "3": {
+      "item": "steamcraft:aetherium_prism"
+    },
+    "4": {
+      "item": "steamcraft:aquarion_shard"
+    },
+    "5": {
+      "item": "steamcraft:pyrocite_core"
+    },
+    "6": {
+      "item": "steamcraft:luminite_spark"
+    },
+    "7": {
+      "item": "steamcraft:obscurium_crystal"
+    }
+  },
+  "pattern": [
+    "213",
+    "415",
+    "617"
+  ],
+  "result": {
+    "item": "steamcraft:divine_imbument_gem"
+  },
+  "show_notification": true
+}

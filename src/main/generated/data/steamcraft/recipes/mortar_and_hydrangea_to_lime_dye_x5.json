@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "steamcraft:mortar_and_pestle"
+    },
+    {
+      "item": "steamcraft:hydrangea_flower_item"
+    },
+    {
+      "item": "steamcraft:hydrangea_flower_item"
+    },
+    {
+      "item": "steamcraft:hydrangea_flower_item"
+    },
+    {
+      "item": "steamcraft:hydrangea_flower_item"
+    },
+    {
+      "item": "steamcraft:hydrangea_flower_item"
+    }
+  ],
+  "result": {
+    "count": 20,
+    "item": "minecraft:lime_dye"
+  }
+}

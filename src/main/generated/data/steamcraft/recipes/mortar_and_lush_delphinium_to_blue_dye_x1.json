@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "steamcraft:mortar_and_pestle"
+    },
+    {
+      "item": "steamcraft:lush_delphinium_flower_item"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "minecraft:blue_dye"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "steamcraft:mortar_and_pestle"
+    },
+    {
+      "item": "steamcraft:snow_drop_flower_item"
+    },
+    {
+      "item": "steamcraft:snow_drop_flower_item"
+    },
+    {
+      "item": "steamcraft:snow_drop_flower_item"
+    }
+  ],
+  "result": {
+    "count": 12,
+    "item": "minecraft:white_dye"
+  }
+}

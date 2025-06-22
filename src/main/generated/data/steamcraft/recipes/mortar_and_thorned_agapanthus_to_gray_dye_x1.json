@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "steamcraft:mortar_and_pestle"
+    },
+    {
+      "item": "steamcraft:thorned_agapanthus_flower_item"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "minecraft:gray_dye"
+  }
+}

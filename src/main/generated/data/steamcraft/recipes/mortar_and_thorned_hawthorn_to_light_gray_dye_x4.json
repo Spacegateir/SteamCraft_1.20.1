@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "steamcraft:mortar_and_pestle"
+    },
+    {
+      "item": "steamcraft:thorned_hawthorn_flower_item"
+    },
+    {
+      "item": "steamcraft:thorned_hawthorn_flower_item"
+    },
+    {
+      "item": "steamcraft:thorned_hawthorn_flower_item"
+    },
+    {
+      "item": "steamcraft:thorned_hawthorn_flower_item"
+    }
+  ],
+  "result": {
+    "count": 16,
+    "item": "minecraft:light_gray_dye"
+  }
+}

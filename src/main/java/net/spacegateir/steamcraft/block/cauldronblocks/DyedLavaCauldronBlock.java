@@ -26,6 +26,9 @@ public class DyedLavaCauldronBlock extends AbstractCauldronBlock {
 
     @Override
     public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
+        if (this.isEntityTouchingFluid(state, pos, entity)) {
+            entity.setOnFireFromLava();
+        }
     }
 
     @Override

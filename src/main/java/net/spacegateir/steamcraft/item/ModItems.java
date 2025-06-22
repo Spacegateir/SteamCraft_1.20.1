@@ -73,6 +73,8 @@ public class ModItems {
             new TrapConcealerItem(new FabricItemSettings()));
     public static final Item TROWEL = registerItem("trowel",
             new TrowelItem(new FabricItemSettings().maxDamage(500)));
+    public static final Item MORTAR_AND_PESTLE = registerItem("mortar_and_pestle",
+            new MortarAndPestleItem(new FabricItemSettings().recipeRemainder(ModItems.MORTAR_AND_PESTLE).maxCount(1)));
     public static final Item CORE_OF_CHANGING = registerItem("core_of_changing",
             new Item(new FabricItemSettings()));
 
@@ -80,28 +82,30 @@ public class ModItems {
     public static final Item BLANK_MOULD = registerItem("blank_mould",
             new Item(new FabricItemSettings()));
     public static final Item HELMET_MOULD = registerItem("helmet_mould",
-            new Item(new FabricItemSettings()));
+            new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
     public static final Item CHESTPLATE_MOULD = registerItem("chestplate_mould",
-            new Item(new FabricItemSettings()));
+            new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
     public static final Item LEGGINGS_MOULD = registerItem("leggings_mould",
-            new Item(new FabricItemSettings()));
+            new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
     public static final Item BOOTS_MOULD = registerItem("boots_mould",
-            new Item(new FabricItemSettings()));
+            new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
     public static final Item BUCKET_MOULD = registerItem("bucket_mould",
-            new Item(new FabricItemSettings()));
+            new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
 
     public static final Item FERRITE_HEARTSTONE = registerItem("ferrite_heartstone",
-            new ToolTipItem(ModBlocks.SMOKE_BLOCK, new FabricItemSettings()));
+            new ToolTipItem(new FabricItemSettings().rarity(Rarity.RARE)));
     public static final Item AETHERIUM_PRISM = registerItem("aetherium_prism",
-            new ToolTipItem(ModBlocks.SMOKE_BLOCK, new FabricItemSettings()));
+            new ToolTipItem(new FabricItemSettings().rarity(Rarity.RARE)));
     public static final Item AQUARION_SHARD = registerItem("aquarion_shard",
-            new ToolTipItem(ModBlocks.SMOKE_BLOCK, new FabricItemSettings()));
+            new ToolTipItem(new FabricItemSettings().rarity(Rarity.RARE)));
     public static final Item PYROCITE_CORE = registerItem("pyrocite_core",
-            new ToolTipItem(ModBlocks.SMOKE_BLOCK, new FabricItemSettings()));
+            new ToolTipItem(new FabricItemSettings().rarity(Rarity.RARE)));
     public static final Item LUMINITE_SPARK = registerItem("luminite_spark",
-            new ToolTipItem(ModBlocks.SMOKE_BLOCK, new FabricItemSettings()));
+            new ToolTipItem(new FabricItemSettings().rarity(Rarity.RARE)));
     public static final Item OBSCURIUM_CRYSTAL = registerItem("obscurium_crystal",
-            new ToolTipItem(ModBlocks.SMOKE_BLOCK, new FabricItemSettings()));
+            new ToolTipItem(new FabricItemSettings().rarity(Rarity.RARE)));
+    public static final Item DIVINE_IMBUMENT_GEM = registerItem("divine_imbument_gem",
+            new Item(new FabricItemSettings()));
 
     public static final Item FOOLS_GOLD_HELMET_1 = registerItem("fools_gold_helmet_1-4",
             new Item(new FabricItemSettings().rarity(Rarity.EPIC).fireproof()));

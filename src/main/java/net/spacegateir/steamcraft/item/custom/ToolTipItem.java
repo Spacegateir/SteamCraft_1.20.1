@@ -13,7 +13,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class ToolTipItem extends Item {
-    public ToolTipItem(Block smokeBlock, Settings settings) {
+    public ToolTipItem(Settings settings) {
         super(settings);
     }
     @Override

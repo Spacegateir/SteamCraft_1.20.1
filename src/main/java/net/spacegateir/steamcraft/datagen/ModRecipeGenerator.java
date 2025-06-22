@@ -12,12 +12,15 @@ import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.Registries;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 import net.spacegateir.steamcraft.Steamcraft;
 import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.item.ModItems;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
+import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.registry.Registries;
 
 import java.util.List;
 import java.util.Map;
@@ -172,6 +175,15 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.TROWEL)));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MORTAR_AND_PESTLE)
+                .pattern("  1")
+                .pattern("2 2")
+                .pattern(" 2 ")
+                .input('1', Items.FLINT)
+                .input('2', Items.STONE)
+                .criterion(hasItem(Items.FLINT), conditionsFromItem(Items.FLINT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.MORTAR_AND_PESTLE)));
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TRAP_CONCEALER)
                 .pattern(" N ")
                 .pattern("N1N")
@@ -182,6 +194,20 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('1', ModItems.PATTERN_RECOMPILER)
                 .criterion(hasItem(ModItems.DIVINITITE_ALLOY_INGOT), conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.TRAP_CONCEALER)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.DIVINE_IMBUMENT_GEM, 1)
+                .pattern("213")
+                .pattern("415")
+                .pattern("617")
+                .input('1', ModItems.FOOLS_GOLD_INGOT)
+                .input('2', ModItems.FERRITE_HEARTSTONE)
+                .input('3', ModItems.AETHERIUM_PRISM)
+                .input('4', ModItems.AQUARION_SHARD)
+                .input('5', ModItems.PYROCITE_CORE)
+                .input('6', ModItems.LUMINITE_SPARK)
+                .input('7', ModItems.OBSCURIUM_CRYSTAL)
+                .criterion(hasItem(ModItems.FOOLS_GOLD_INGOT), conditionsFromItem(ModItems.FOOLS_GOLD_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.DIVINE_IMBUMENT_GEM)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SMOKE_BLOCK_ITEM, 16)
                 .pattern("222")
@@ -385,6 +411,38 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('2', Items.ENDER_PEARL)
                 .criterion(hasItem(Items.OBSIDIAN), conditionsFromItem(Items.OBSIDIAN))
                 .offerTo(exporter, new Identifier(getRecipeName(Items.CRYING_OBSIDIAN) + "crying_obsidian"));
+
+//Brown Mushroom
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items.BROWN_MUSHROOM_BLOCK, 1)
+                .pattern("11")
+                .pattern("11")
+                .input('1', Items.BROWN_MUSHROOM)
+                .criterion(hasItem(Items.BROWN_MUSHROOM), conditionsFromItem(Items.BROWN_MUSHROOM))
+                .offerTo(exporter, new Identifier(getRecipeName(Items.BROWN_MUSHROOM_BLOCK) + "brown_mushroom_block"));
+
+//Brown Mushroom Stem
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items.MUSHROOM_STEM, 2)
+                .pattern("1")
+                .pattern("1")
+                .input('1', Items.BROWN_MUSHROOM_BLOCK)
+                .criterion(hasItem(Items.BROWN_MUSHROOM_BLOCK), conditionsFromItem(Items.BROWN_MUSHROOM_BLOCK))
+                .offerTo(exporter, new Identifier(getRecipeName(Items.MUSHROOM_STEM) + "brown_mushroom_stem"));
+
+//Red Mushroom
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items.RED_MUSHROOM_BLOCK, 1)
+                .pattern("11")
+                .pattern("11")
+                .input('1', Items.RED_MUSHROOM)
+                .criterion(hasItem(Items.RED_MUSHROOM), conditionsFromItem(Items.RED_MUSHROOM))
+                .offerTo(exporter, new Identifier(getRecipeName(Items.RED_MUSHROOM_BLOCK) + "red_mushroom_block"));
+
+//Red Mushroom Stem
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items.MUSHROOM_STEM, 2)
+                .pattern("1")
+                .pattern("1")
+                .input('1', Items.RED_MUSHROOM_BLOCK)
+                .criterion(hasItem(Items.RED_MUSHROOM_BLOCK), conditionsFromItem(Items.RED_MUSHROOM_BLOCK))
+                .offerTo(exporter, new Identifier(getRecipeName(Items.MUSHROOM_STEM) + "red_mushroom_stem"));
 
 //Mould Duplicating
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.HELMET_MOULD, 2)
@@ -1688,6 +1746,10 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
 
 
 
+
+
+
+
         // Lava Bucket Outputs
         Map<String, Item> dyeToLavaBucket = Map.ofEntries(
                 entry("white", ModItems.WHITE_LAVA_BUCKET),
@@ -1778,13 +1840,34 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         };
 
         for (String prefix : prefixes) {
-            for (Map.Entry<Item, String> entry : dyeToFlowerMap.entrySet()) {
-                Item dye = entry.getKey();
-                String flowerName = entry.getValue();
+            for (Map.Entry<Item, String> dyeEntry : dyeToFlowerMap.entrySet()) {
+                Item dye = dyeEntry.getKey();
+                String flowerName = dyeEntry.getValue();
 
                 try {
-                    Block flowerBlock = (Block) ModBlocks.class.getField(prefix + flowerName + "_FLOWER_BLOCK").get(null);
-                    offerShapelessRecipe(exporter, dye, flowerBlock, "dye_recipes", 4);
+                    Block flowerBlock = (Block) ModBlocks.class
+                            .getField(prefix + flowerName + "_FLOWER_BLOCK")
+                            .get(null);
+
+                    for (int i = 1; i <= 8; i++) {
+                        ShapelessRecipeJsonBuilder builder = ShapelessRecipeJsonBuilder
+                                .create(RecipeCategory.MISC, dye, 4 * i) // 4 dye per flower
+                                .input(ModItems.MORTAR_AND_PESTLE);     // Not consumed if remainder is set
+
+                        for (int j = 0; j < i; j++) {
+                            builder.input(flowerBlock.asItem());       // Add 'i' flowers
+                        }
+
+                        builder.criterion("has_mortar_and_pestle",
+                                        RecipeProvider.conditionsFromItem(ModItems.MORTAR_AND_PESTLE))
+                                .criterion("has_flower",
+                                        RecipeProvider.conditionsFromItem(flowerBlock.asItem()))
+                                .offerTo(exporter, new Identifier("steamcraft",
+                                        "mortar_and_" + prefix.toLowerCase() +
+                                                flowerName.toLowerCase() + "_to_" +
+                                                Registries.ITEM.getId(dye).getPath() + "_x" + i));
+                    }
+
                 } catch (NoSuchFieldException | IllegalAccessException e) {
                     System.err.println("Missing field: " + prefix + flowerName + "_FLOWER_BLOCK");
                 }

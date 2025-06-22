@@ -28,7 +28,7 @@ public class ModTags {
 
     public static class Items {
 
-        public static final TagKey<Item> DYES = createItemTag("dyes");
+        public static final TagKey<Item> FLOWER_SEEDS = createItemTag("flower_seeds");
         public static final TagKey<Item> AETHER_COIL = createItemTag("aether_coil");
         public static final TagKey<Item> ANCIENT_GEMS = createItemTag("ancient_gems");
 

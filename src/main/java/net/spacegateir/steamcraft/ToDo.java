@@ -7,8 +7,8 @@ public class ToDo {
     // ON THE CURSED FORGE SITE EXPALIN HOW TO PLAY THE MOD
 
     //    Sword, Pickaxe, shovel, axe, hoe, sheers, sheild, bucket,
+    // add gem for crafting tools + crafting recipe
 
-    // Fix (lava cauldron set you on fire, flower dye and flower seed recipe are the same)
 
 
 

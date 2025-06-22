@@ -306,7 +306,10 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.GOLD_COIN, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.TROWEL, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MORTAR_AND_PESTLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.TRAP_CONCEALER, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.DIVINE_IMBUMENT_GEM, Models.GENERATED);
 
 
         itemModelGenerator.register(ModItems.WHITE_WATER_BUCKET, Models.GENERATED);

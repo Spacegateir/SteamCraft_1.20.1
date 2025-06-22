@@ -26,6 +26,7 @@ public class ModItemGroups {
                         entries.add(ModItems.TROWEL);
                         entries.add(ModItems.PATTERN_RECOMPILER);
                         entries.add(ModItems.TRAP_CONCEALER);
+                        entries.add(ModItems.MORTAR_AND_PESTLE);
                         entries.add(ModItems.CORE_OF_CHANGING);
 
                         entries.add(ModItems.FERRITE_HEARTSTONE);
@@ -34,6 +35,7 @@ public class ModItemGroups {
                         entries.add(ModItems.PYROCITE_CORE);
                         entries.add(ModItems.LUMINITE_SPARK);
                         entries.add(ModItems.OBSCURIUM_CRYSTAL);
+                        entries.add(ModItems.DIVINE_IMBUMENT_GEM);
 
                         entries.add(ModItems.BLANK_MOULD);
                         entries.add(ModItems.HELMET_MOULD);

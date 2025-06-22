@@ -17,6 +17,7 @@ import net.spacegateir.steamcraft.item.ModItems;
 import net.spacegateir.steamcraft.item.ModRewardItems;
 
 import java.lang.reflect.Field;
+import java.util.Locale;
 import java.util.concurrent.CompletableFuture;
 
 public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
@@ -26,10 +27,6 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     public static class ModTags {
         public static class Items {
-            public static final TagKey<Item> DYES = TagKey.of(
-                    RegistryKeys.ITEM,
-                    new Identifier("steamcraft", "dyes")
-            );
 
             public static final TagKey<Item> AETHER_COIL = TagKey.of(
                     net.minecraft.registry.Registries.ITEM.getKey(),
@@ -89,9 +86,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.AQUARION_SHARD.asItem())
                 .add(ModItems.PYROCITE_CORE.asItem())
                 .add(ModItems.LUMINITE_SPARK.asItem())
-                .add(ModItems.OBSCURIUM_CRYSTAL.asItem());
-
-
+                .add(ModItems.OBSCURIUM_CRYSTAL.asItem())
+                .add(ModItems.DIVINE_IMBUMENT_GEM.asItem());
 
 
         // Dynamic seed tag registration

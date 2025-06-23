@@ -381,12 +381,13 @@ public class ModLootTableModifiers {
                 .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
 
         LootPool.Builder poolBuilder_20 = LootPool.builder()
-                .rolls(ConstantLootNumberProvider.create(1))
+                .rolls(UniformLootNumberProvider.create(1.0f, 3.0f))
                 .conditionally(RandomChanceLootCondition.builder(0.2f)) // Drops 20% of the time
                 .with(ItemEntry.builder(ModItems.BLANK_MOULD))
                 .with(ItemEntry.builder(ModItems.BUCKET_MOULD))
                 .with(ItemEntry.builder(ModItems.CORE_OF_CHANGING))
                 .with(ItemEntry.builder(ModItems.TROWEL))
+                .with(ItemEntry.builder(ModItems.MORTAR_AND_PESTLE))
                 .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
 
         LootPool.Builder poolBuilder_40 = LootPool.builder()

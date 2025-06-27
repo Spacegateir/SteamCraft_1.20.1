@@ -186,7 +186,7 @@ public class CelestialGearforgedArmourItem extends ArmorItem implements GeoItem 
 
             builder.put(
                     EntityAttributes.GENERIC_LUCK,
-                    new EntityAttributeModifier(LUCK_BOOST_UUID, "Luck boost", 50.0, EntityAttributeModifier.Operation.ADDITION));
+                    new EntityAttributeModifier(LUCK_BOOST_UUID, "Luck boost", 25.0, EntityAttributeModifier.Operation.ADDITION));
         }
 
         if (slot == EquipmentSlot.CHEST && stack.getItem() == ModItems.CELESTIAL_GEARFORGED_CHESTPLATE) {

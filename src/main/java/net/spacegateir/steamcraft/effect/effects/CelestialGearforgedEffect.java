@@ -85,8 +85,6 @@ public class CelestialGearforgedEffect extends StatusEffect {
                                     false, false, false));
                             e.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 2400, 2,
                                     false, false, false));
-                            e.addStatusEffect(new StatusEffectInstance(StatusEffects.LUCK, 2400, 1024,
-                                    false, false, false));
                             e.addStatusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING, 2400, 0,
                                     false, false, false));
                         }

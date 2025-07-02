@@ -6,9 +6,11 @@ public class ToDo {
     // Keep a Wiki Record so people know how to play the mod
     // ON THE CURSED FORGE SITE EXPLAIN HOW TO PLAY THE MOD
 
-    // Sword, Pickaxe, shovel, axe, hoe, sheers, shield, bucket, + Tools Recipes and Classes
+    // Sword, Pickaxe (deepslate = insta at eff 5), shovel, axe, hoe, sheers, shield, bucket, + Tools Recipes and Classes
 
     // add animal tail and ears cosmetics
+
+    // god horse armour
 
 
 
@@ -65,6 +67,10 @@ public class ToDo {
     //Fix
 
     // boots noise clinet side only
+
+
+
+    // click CTRL + H
 
 
 

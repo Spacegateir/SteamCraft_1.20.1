@@ -15,6 +15,7 @@ import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.fluid.ModFluids;
 import net.spacegateir.steamcraft.item.armor.*;
 import net.spacegateir.steamcraft.item.custom.*;
+import net.spacegateir.steamcraft.item.tools.*;
 
 import java.lang.reflect.Field;
 import java.util.EnumMap;
@@ -157,6 +158,23 @@ public class ModItems {
             new CelestialGearforgedArmourItem(ModArmorMaterials.CELESTIAL_GEARFORGED, ArmorItem.Type.LEGGINGS, new FabricItemSettings().fireproof()));
     public static final Item CELESTIAL_GEARFORGED_BOOTS = registerItem("celestial_gearforged_boots",
             new CelestialGearforgedArmourItem(ModArmorMaterials.CELESTIAL_GEARFORGED, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof()));
+
+    public static final Item CELESTIAL_GEARFORGED_PICKAXE = registerItem("celestial_gearforged_pickaxe",
+            new CelestialGearforgedPickaxeItem(ModToolMaterials.CELESTIAL_GEARFORGED, 1, 1F, new FabricItemSettings().fireproof()));
+    public static final Item CELESTIAL_GEARFORGED_SHOVEL = registerItem("celestial_gearforged_shovel",
+            new CelestialGearforgedShovelItem(ModToolMaterials.CELESTIAL_GEARFORGED, 1, 1F, new FabricItemSettings().fireproof()));
+    public static final Item CELESTIAL_GEARFORGED_AXE = registerItem("celestial_gearforged_axe",
+            new CelestialGearforgedAxeItem(ModToolMaterials.CELESTIAL_GEARFORGED, 3, 1F, new FabricItemSettings().fireproof()));
+    public static final Item CELESTIAL_GEARFORGED_HOE = registerItem("celestial_gearforged_hoe",
+            new CelestialGearforgedHoeItem(ModToolMaterials.CELESTIAL_GEARFORGED, 1, 1F, new FabricItemSettings().fireproof()));
+    public static final Item CELESTIAL_GEARFORGED_SHEARS = registerItem("celestial_gearforged_shears",
+            new CelestialGearforgedShearsItem(new FabricItemSettings().fireproof()));
+    public static final Item CELESTIAL_GEARFORGED_SHIELD = registerItem("celestial_gearforged_shield",
+            new CelestialGearforgedShieldItem(new FabricItemSettings().fireproof()));
+    public static final Item CELESTIAL_GEARFORGED_SWORD_SLIM = registerItem("celestial_gearforged_sword_slim",
+            new CelestialGearforgedSwordSlimItem(ModToolMaterials.CELESTIAL_GEARFORGED, 10, 1.6F, new FabricItemSettings().fireproof()));
+    public static final Item CELESTIAL_GEARFORGED_SWORD = registerItem("celestial_gearforged_sword",
+            new CelestialGearforgedSwordItem(ModToolMaterials.CELESTIAL_GEARFORGED, 1, 1.6F, new FabricItemSettings().fireproof()));
 
     public static final Item WINGED_SANDALS = registerItem("winged_sandals",
             new WingedSandalsCosmeticItem(ModArmorMaterials.UNBREAKING, ArmorItem.Type.BOOTS, new FabricItemSettings()));

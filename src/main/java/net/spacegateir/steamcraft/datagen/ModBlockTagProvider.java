@@ -394,6 +394,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
                 );
 
+
         getOrCreateTagBuilder(BlockTags.WALLS)
 
                 .add(ModBlocks.GLIMMERSTONE_WALL_BLOCK)
@@ -406,9 +407,15 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
                 .add(
                         ModBlocks.DIVINITITE_ALLOY_BLOCK,
-                        Blocks.BUDDING_AMETHYST,
-                        Blocks.REINFORCED_DEEPSLATE,
-                        Blocks.SPAWNER
+                        Blocks.BUDDING_AMETHYST
+
+                );
+
+        getOrCreateTagBuilder(TagKey.of(RegistryKeys.BLOCK, new Identifier("fabric", "needs_tool_level_5")))
+                .add(
+
+                        Blocks.SPAWNER,
+                        Blocks.REINFORCED_DEEPSLATE
 
                 );
 

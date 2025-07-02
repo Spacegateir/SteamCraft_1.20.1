@@ -64,6 +64,15 @@ public class ModItemGroups {
                         entries.add(ModItems.CELESTIAL_GEARFORGED_LEGGINGS);
                         entries.add(ModItems.CELESTIAL_GEARFORGED_BOOTS);
 
+                        entries.add(ModItems.CELESTIAL_GEARFORGED_PICKAXE);
+                        entries.add(ModItems.CELESTIAL_GEARFORGED_SHOVEL);
+                        entries.add(ModItems.CELESTIAL_GEARFORGED_AXE);
+                        entries.add(ModItems.CELESTIAL_GEARFORGED_HOE);
+                        entries.add(ModItems.CELESTIAL_GEARFORGED_SHEARS);
+                        entries.add(ModItems.CELESTIAL_GEARFORGED_SWORD_SLIM);
+                        entries.add(ModItems.CELESTIAL_GEARFORGED_SWORD);
+                        entries.add(ModItems.CELESTIAL_GEARFORGED_SHIELD);
+
 
                         entries.add(ModItems.FOOLS_GOLD_HELMET_1);
                         entries.add(ModItems.FOOLS_GOLD_HELMET_2);

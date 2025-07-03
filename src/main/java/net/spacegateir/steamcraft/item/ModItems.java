@@ -60,6 +60,11 @@ public class ModItems {
             new Item(new FabricItemSettings().rarity(RARE)));
     public static final Item FOOLS_GOLD_RAW = registerItem("fools_gold_raw",
             new Item(new FabricItemSettings().rarity(RARE)));
+
+    public static final Item SILVER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "silver_item"),
+            new BlockItem(ModBlocks.SILVER_BLOCK, new FabricItemSettings()));
+
     public static final Item FOOLS_GOLD_INGOT = registerItem("fools_gold_ingot",
             new Item(new FabricItemSettings().rarity(RARE)));
     public static final Item DIVINITITE_ALLOY_INGOT = registerItem("divinitite_alloy_ingot",
@@ -74,8 +79,9 @@ public class ModItems {
             new TrapConcealerItem(new FabricItemSettings()));
     public static final Item TROWEL = registerItem("trowel",
             new TrowelItem(new FabricItemSettings().maxDamage(500)));
-    public static final Item MORTAR_AND_PESTLE = registerItem("mortar_and_pestle",
-            new MortarAndPestleItem(new FabricItemSettings().recipeRemainder(ModItems.MORTAR_AND_PESTLE).maxCount(1)));
+    public static final Item MORTAR_AND_PESTLE = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "mortar_and_pestle"),
+            new BlockItem(ModBlocks.MORTAR_AND_PESTLE_BLOCK, new FabricItemSettings().recipeRemainder(ModItems.MORTAR_AND_PESTLE).maxCount(1)));
     public static final Item CORE_OF_CHANGING = registerItem("core_of_changing",
             new Item(new FabricItemSettings()));
 

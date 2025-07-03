@@ -388,6 +388,7 @@ public class ModLootTableModifiers {
                 .with(ItemEntry.builder(ModItems.CORE_OF_CHANGING))
                 .with(ItemEntry.builder(ModItems.TROWEL))
                 .with(ItemEntry.builder(ModItems.MORTAR_AND_PESTLE))
+                .with(ItemEntry.builder(ModItems.SILVER_ITEM))
                 .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
 
         LootPool.Builder poolBuilder_40 = LootPool.builder()

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "facing=north": { "model": "steamcraft:block/participation_trophy_block" },
+    "facing=south": { "model": "steamcraft:block/participation_trophy_block", "y": 180 },
+    "facing=east":  { "model": "steamcraft:block/participation_trophy_block", "y": 90 },
+    "facing=west":  { "model": "steamcraft:block/participation_trophy_block", "y": 270 },
+    "facing=up":    { "model": "steamcraft:block/participation_trophy_block", "x": 270 },
+    "facing=down":  { "model": "steamcraft:block/participation_trophy_block", "x": 90 }
+  }
+}

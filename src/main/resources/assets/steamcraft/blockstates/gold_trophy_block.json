@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "steamcraft:block/gold_trophy_block" },
+    "facing=south": { "model": "steamcraft:block/gold_trophy_block", "y": 180 },
+    "facing=west":  { "model": "steamcraft:block/gold_trophy_block", "y": 270 },
+    "facing=east":  { "model": "steamcraft:block/gold_trophy_block", "y": 90 }
+  }
+}

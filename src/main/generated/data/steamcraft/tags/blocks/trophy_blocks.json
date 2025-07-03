@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "steamcraft:gold_trophy_block",
+    "steamcraft:silver_trophy_block",
+    "steamcraft:copper_trophy_block",
+    "steamcraft:participation_trophy_block"
+  ]
+}

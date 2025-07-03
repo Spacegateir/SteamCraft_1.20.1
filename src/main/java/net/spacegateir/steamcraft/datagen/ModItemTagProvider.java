@@ -42,6 +42,11 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                     net.minecraft.registry.Registries.ITEM.getKey(),
                     new Identifier("steamcraft", "flower_seeds")
             );
+
+            public static final TagKey<Item> TROPHY_ITEMS = TagKey.of(
+                    net.minecraft.registry.Registries.ITEM.getKey(),
+                    new Identifier("steamcraft", "trophy_items")
+            );
         }
     }
 
@@ -88,6 +93,12 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.LUMINITE_SPARK.asItem())
                 .add(ModItems.OBSCURIUM_CRYSTAL.asItem())
                 .add(ModItems.DIVINE_IMBUMENT_GEM.asItem());
+
+        getOrCreateTagBuilder(ModTags.Items.TROPHY_ITEMS)
+                .add(ModRewardItems.GOLD_TROPHY_ITEM)
+                .add(ModRewardItems.SILVER_TROPHY_ITEM)
+                .add(ModRewardItems.COPPER_TROPHY_ITEM)
+                .add(ModRewardItems.PARTICIPATION_TROPHY_ITEM);
 
 
         // Dynamic seed tag registration

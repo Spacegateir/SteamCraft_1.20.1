@@ -51,6 +51,7 @@ public class ModItemGroups {
                         entries.add(ModItems.DIVINITITE_ALLOY_INGOT);
 
                         entries.add(ModBlocks.FOOLS_GOLD_RAW_BLOCK);
+                        entries.add(ModItems.SILVER_ITEM);
                         entries.add(ModBlocks.FOOLS_GOLD_BLOCK);
                         entries.add(ModItems.DIVINITITE_ALLOY_ITEM);
 

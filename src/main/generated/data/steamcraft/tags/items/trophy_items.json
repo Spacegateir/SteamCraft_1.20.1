@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "steamcraft:gold_trophy",
+    "steamcraft:silver_trophy",
+    "steamcraft:copper_trophy",
+    "steamcraft:participation_trophy"
+  ]
+}

@@ -52,6 +52,14 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                     RegistryKeys.BLOCK,
                     new Identifier("steamcraft", "flower_crops")
             );
+            public static final TagKey<Block> TROPHY_BLOCKS = TagKey.of(
+                    RegistryKeys.BLOCK,
+                    new Identifier("steamcraft", "trophy_blocks")
+            );
+            public static final TagKey<Block> DECORATION_BLOCKS = TagKey.of(
+                    RegistryKeys.BLOCK,
+                    new Identifier("steamcraft", "decoration_blocks")
+            );
         }
     }
 
@@ -284,6 +292,20 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.YELLOW_WATER_CAULDRON_BLOCK
                 );
 
+        getOrCreateTagBuilder(ModTags.Blocks.TROPHY_BLOCKS)
+                .add(
+                        ModBlocks.GOLD_TROPHY_BLOCK,
+                        ModBlocks.SILVER_TROPHY_BLOCK,
+                        ModBlocks.COPPER_TROPHY_BLOCK,
+                        ModBlocks.PARTICIPATION_TROPHY_BLOCK
+                );
+
+        getOrCreateTagBuilder(ModTags.Blocks.DECORATION_BLOCKS)
+                .add(
+
+                        ModBlocks.MORTAR_AND_PESTLE_BLOCK
+                );
+
 
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .addTag(ModTags.Blocks.SKELETON)
@@ -292,6 +314,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .addTag(ModTags.Blocks.TRAPS)
                 .addTag(ModTags.Blocks.BUILDING_BLOCKS)
                 .addTag(ModTags.Blocks.STONE_PATH_BLOCKS)
+                .addTag(ModTags.Blocks.TROPHY_BLOCKS)
+                .addTag(ModTags.Blocks.DECORATION_BLOCKS)
 
                 .add(
 

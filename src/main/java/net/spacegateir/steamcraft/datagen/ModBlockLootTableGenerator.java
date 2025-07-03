@@ -494,6 +494,15 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.GLIMMERSTONE_BRICKS_SLAB_BLOCK);
         addDrop(ModBlocks.GLIMMERSTONE_BRICKS_WALL_BLOCK);
 
+        addDrop(ModBlocks.SILVER_BLOCK);
+
+        addDrop(ModBlocks.MORTAR_AND_PESTLE_BLOCK);
+
+        addDrop(ModBlocks.PARTICIPATION_TROPHY_BLOCK);
+        addDrop(ModBlocks.COPPER_TROPHY_BLOCK);
+        addDrop(ModBlocks.SILVER_TROPHY_BLOCK);
+        addDrop(ModBlocks.GOLD_TROPHY_BLOCK);
+
     }
 
         // Auto-generated crop drops

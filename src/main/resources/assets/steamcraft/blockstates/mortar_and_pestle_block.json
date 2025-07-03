@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "steamcraft:block/mortar_and_pestle_block" },
+    "facing=south": { "model": "steamcraft:block/mortar_and_pestle_block", "y": 180 },
+    "facing=west":  { "model": "steamcraft:block/mortar_and_pestle_block", "y": 270 },
+    "facing=east":  { "model": "steamcraft:block/mortar_and_pestle_block", "y": 90 }
+  }
+}

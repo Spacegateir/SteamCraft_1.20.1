@@ -20,6 +20,7 @@ import net.spacegateir.steamcraft.block.path_blocks.*;
 import net.spacegateir.steamcraft.block.traps.*;
 import net.spacegateir.steamcraft.effect.ModEffects;
 import net.spacegateir.steamcraft.item.ModItems;
+import net.spacegateir.steamcraft.item.custom.MortarAndPestleItem;
 
 import java.util.EnumMap;
 
@@ -1342,6 +1343,30 @@ public class ModBlocks {
             new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),false));
     public static final Block THORNED_VIOLET_CROP = registerBlockWithoutBlockItem("thorned_violet_crop",
             new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),true));
+
+
+
+    public static final Block PARTICIPATION_TROPHY_BLOCK = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "participation_trophy_block"),
+            new PlackBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).nonOpaque()));
+
+    public static final Block COPPER_TROPHY_BLOCK = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "copper_trophy_block"),
+            new TrophyBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).nonOpaque()));
+    public static final Block SILVER_TROPHY_BLOCK = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "silver_trophy_block"),
+            new TrophyBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).nonOpaque()));
+    public static final Block GOLD_TROPHY_BLOCK = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "gold_trophy_block"),
+            new TrophyFireBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).nonOpaque().luminance(state -> 15)));
+
+    public static final Block MORTAR_AND_PESTLE_BLOCK = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "mortar_and_pestle_block"),
+            new MortarAndPestleBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).nonOpaque()));
+
+    public static final Block SILVER_BLOCK = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "silver_block"),
+            new Block(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK).nonOpaque()));
 
 
 

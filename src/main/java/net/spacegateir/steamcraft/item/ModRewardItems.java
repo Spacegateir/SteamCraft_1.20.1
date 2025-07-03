@@ -10,11 +10,27 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.spacegateir.steamcraft.Steamcraft;
+import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.item.armor.*;
 import net.spacegateir.steamcraft.item.loot_chests.*;
 
 public class ModRewardItems {
 
+
+
+    public static final Item PARTICIPATION_TROPHY_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "participation_trophy"),
+            new BlockItem(ModBlocks.PARTICIPATION_TROPHY_BLOCK, new FabricItemSettings()));
+
+    public static final Item COPPER_TROPHY_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "copper_trophy"),
+            new BlockItem(ModBlocks.COPPER_TROPHY_BLOCK, new FabricItemSettings()));
+    public static final Item SILVER_TROPHY_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "silver_trophy"),
+            new BlockItem(ModBlocks.SILVER_TROPHY_BLOCK, new FabricItemSettings()));
+    public static final Item GOLD_TROPHY_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "gold_trophy"),
+            new BlockItem(ModBlocks.GOLD_TROPHY_BLOCK, new FabricItemSettings()));
 
     public static final Item LOOT_CHEST = registerItem("loot_chest",
             new LootChestItem(new FabricItemSettings().maxCount(1)));

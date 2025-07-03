@@ -16,6 +16,11 @@ public class ModItemRewardsGroups {
             FabricItemGroup.builder().displayName(Text.translatable("SteamCraft Rewards"))
                     .icon(() -> new ItemStack(ModRewardItems.WOLF_FURY_HELMET)).entries((displayContext, entries) -> {
 
+                        entries.add(ModRewardItems.GOLD_TROPHY_ITEM);
+                        entries.add(ModRewardItems.SILVER_TROPHY_ITEM);
+                        entries.add(ModRewardItems.COPPER_TROPHY_ITEM);
+                        entries.add(ModRewardItems.PARTICIPATION_TROPHY_ITEM);
+
                         entries.add(ModRewardItems.LOOT_CHEST);
 
                         entries.add(ModRewardItems.DRAGON_BANE_LOOT_CHEST);

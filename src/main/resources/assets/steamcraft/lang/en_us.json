@@ -27,6 +27,8 @@
   "item.steamcraft.fools_gold_raw": "Fools Gold Raw",
   "block.steamcraft.fools_gold_raw_block": "Fools Gold Raw Block",
   "item.steamcraft.fools_gold_ingot": "Fools Gold Ingot",
+  "item.steamcraft.silver_item": "Silver Block",
+  "block.steamcraft.silver_block": "Silver Block",
   "block.steamcraft.fools_gold_block": "Fools Gold Block",
   "item.steamcraft.divinitite_alloy_ingot": "Divinitite Alloy Ingot",
   "block.steamcraft.divinitite_alloy_block": "Divinitite Alloy Block",
@@ -322,6 +324,7 @@
 
   "item.steamcraft.trowel": "Trowel",
   "item.steamcraft.mortar_and_pestle": "Mortar and Pestle",
+  "block.steamcraft.mortar_and_pestle_block": "Mortar and Pestle",
   "item.steamcraft.trap_concealer": "Trap Conealer",
   "item.steamcraft.core_of_changing": "Core of Changing",
 
@@ -682,6 +685,17 @@
   "block.steamcraft.violet_crop": "Violet Crop",
   "block.steamcraft.lush_violet_crop": "Lush Violet Crop",
   "block.steamcraft.thorned_violet_crop": "Thorned Violet Crop",
+
+
+
+  "item.steamcraft.participation_trophy_item": "Participation Trophy",
+  "block.steamcraft.participation_trophy_block": "Participation Trophy",
+  "block.steamcraft.copper_trophy_block": "Copper Trophy",
+  "item.steamcraft.copper_trophy_item": "Copper Trophy",
+  "item.steamcraft.silver_trophy_item": "Silver Trophy",
+  "block.steamcraft.silver_trophy_block": "Silver Trophy",
+  "item.steamcraft.gold_trophy_item": "Gold Trophy",
+  "block.steamcraft.gold_trophy_block": "Gold Trophy",
 
 
 

@@ -20,6 +20,7 @@ public class ModTags {
         public static final TagKey<Block> STONE_PATH_BLOCKS = createBlockTag("path_blocks");
         public static final TagKey<Block> SOIL_PATH_BLOCKS = createBlockTag("path_blocks");
         public static final TagKey<Block> FLOWER_SEEDS = createBlockTag("flower_seeds");
+        public static final TagKey<Block> PICKAXE_EFFICIENT = createBlockTag("pickaxe_efficient");
 
         private static TagKey<Block> createBlockTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, new Identifier(Steamcraft.MOD_ID, name));

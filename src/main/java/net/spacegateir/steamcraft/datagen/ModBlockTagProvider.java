@@ -60,6 +60,10 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                     RegistryKeys.BLOCK,
                     new Identifier("steamcraft", "decoration_blocks")
             );
+            public static final TagKey<Block> PICKAXE_EFFICIENT = TagKey.of(
+                    RegistryKeys.BLOCK,
+                    new Identifier("steamcraft", "pickaxe_efficient")
+            );
         }
     }
 
@@ -304,6 +308,14 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(
 
                         ModBlocks.MORTAR_AND_PESTLE_BLOCK
+                );
+
+        getOrCreateTagBuilder(ModTags.Blocks.PICKAXE_EFFICIENT)
+                .add(
+
+                        ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK,
+                        ModBlocks.GLIMMERSTONE_BRICKS_BLOCK,
+                        ModBlocks.GLIMMERSTONE_BLOCK
                 );
 
 

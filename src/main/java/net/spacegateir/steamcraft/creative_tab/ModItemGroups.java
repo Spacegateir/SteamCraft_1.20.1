@@ -21,7 +21,7 @@ public class ModItemGroups {
                         //Items
 //                        entries.add(ModItems.TEST_ITEM);
 
-
+//                        entries.add(ModItems.EARTH_SPIKE_ITEM);
 
                         entries.add(ModItems.TROWEL);
                         entries.add(ModItems.PATTERN_RECOMPILER);

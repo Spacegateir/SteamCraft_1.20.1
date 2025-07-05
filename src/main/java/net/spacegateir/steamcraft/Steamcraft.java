@@ -10,6 +10,7 @@ import net.spacegateir.steamcraft.effect.ModEffects;
 import net.spacegateir.steamcraft.fluid.ModFluids;
 import net.spacegateir.steamcraft.item.ModItems;
 import net.spacegateir.steamcraft.item.ModRewardItems;
+import net.spacegateir.steamcraft.particle.ModParticles;
 import net.spacegateir.steamcraft.potion.ModPotions;
 import net.spacegateir.steamcraft.util.*;
 import net.spacegateir.steamcraft.world.gen.ModWorldGeneration;
@@ -39,6 +40,7 @@ public class Steamcraft implements ModInitializer {
 
 		ModEffects.registerEffects();
 		ModPotions.registerPotions();
+		ModParticles.registerParticles();
 
 		ModRegistries.registerModStuff();
 		ModCustomTrades.registerCustomTrades();

@@ -3,6 +3,7 @@ package net.spacegateir.steamcraft.block;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -1367,6 +1368,12 @@ public class ModBlocks {
     public static final Block SILVER_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "silver_block"),
             new Block(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK).nonOpaque()));
+
+    public static final Block EARTH_SPIKE_BLOCK = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "earth_spike_block"),
+            new EarthSpikeBlock(FabricBlockSettings.copyOf(Blocks.BEDROCK)
+                    .nonOpaque().solid().noCollision().pistonBehavior(PistonBehavior.DESTROY).strength(-1.0F, -1.0F)
+                    .dropsNothing().allowsSpawning(Blocks::never)));
 
 
 

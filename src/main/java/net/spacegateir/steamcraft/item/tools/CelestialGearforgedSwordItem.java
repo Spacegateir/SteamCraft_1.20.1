@@ -1,11 +1,14 @@
 package net.spacegateir.steamcraft.item.tools;
 
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LightningEntity;
+import net.minecraft.item.*;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
@@ -13,18 +16,19 @@ import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
+import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
+import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.SwordItem;
-import net.minecraft.item.ToolMaterial;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
+import net.spacegateir.steamcraft.block.ModBlocks;
+import net.spacegateir.steamcraft.item.ModItems;
 
 import java.util.List;
 import java.util.Random;
@@ -35,7 +39,9 @@ public class CelestialGearforgedSwordItem extends SwordItem {
 
     private static final String BUFF_COOLDOWN_KEY = "buffCooldown";
     private static final String BUFF_END_TIME_KEY = "buffEndTime";
-    private static final String JUMP_FIRE_FLAG_KEY = "HasJumped";
+    private static final String JUMP_EARTH_FLAG_KEY = "HasJumped";
+    private static final String EARTH_SPIKE_LAST_USED_KEY = "earth_spike_last_used";
+    private static final long COOLDOWN_TICKS = 2400;
 
     public CelestialGearforgedSwordItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
         super(toolMaterial, attackDamage, attackSpeed, settings);
@@ -55,9 +61,9 @@ public class CelestialGearforgedSwordItem extends SwordItem {
             tooltip.add(Text.literal("   §8• Grants Speed I and Strength III for 60 seconds"));
             tooltip.add(Text.literal("   §8• 4-minute cooldown"));
 
-            tooltip.add(Text.literal("§7- §eSneak + Look Down:§r Ashen Sanctum"));
-            tooltip.add(Text.literal("   §8• Creates a fiery ring around you"));
-            tooltip.add(Text.literal("   §8• Grants Fire Resistance for 20 seconds"));
+            tooltip.add(Text.literal("§7- §eSneak + Look Down:§r Sanctum +"));
+            tooltip.add(Text.literal("   §8• Creates a earthly ring around you"));
+            tooltip.add(Text.literal("   §8• 2-minute cooldown"));
 
             tooltip.add(Text.literal("§7- §dPassive:§r Healing Grace +"));
             tooltip.add(Text.literal("   §8• Heals you based on damage dealt"));
@@ -204,51 +210,73 @@ public class CelestialGearforgedSwordItem extends SwordItem {
 
         if (world.isClient || !(entity instanceof PlayerEntity player)) return;
 
+        ItemStack mainHandStack = player.getMainHandStack();
+        boolean isHoldingSword = mainHandStack.isOf(ModItems.CELESTIAL_GEARFORGED_SWORD);
+
+        if (!isHoldingSword) return;
+
         NbtCompound nbt = stack.getOrCreateNbt();
         long currentTime = world.getTime();
 
-        // Activation condition: Sneaking + Looking Down (> 60 degrees)
         boolean isSneaking = player.isSneaking();
         boolean isLookingDown = player.getPitch() > 60.0f;
-        boolean alreadyActivated = nbt.getBoolean(JUMP_FIRE_FLAG_KEY);
+        boolean alreadyActivated = nbt.getBoolean(JUMP_EARTH_FLAG_KEY);
+        long lastUsed = nbt.getLong(EARTH_SPIKE_LAST_USED_KEY);
+
+        boolean isCooldownOver = (currentTime - lastUsed) >= COOLDOWN_TICKS;
 
         if (isSneaking && isLookingDown && !alreadyActivated) {
-            activateFlamingGroundAbility(world, player);
-            nbt.putBoolean(JUMP_FIRE_FLAG_KEY, true);
+            if (isCooldownOver) {
+                activateEarthSpikes(world, player);
+                nbt.putBoolean(JUMP_EARTH_FLAG_KEY, true);
+                nbt.putLong(EARTH_SPIKE_LAST_USED_KEY, currentTime);
+
+                player.sendMessage(
+                        net.minecraft.text.Text.literal("§aEarth Spikes activated! Cooldown started."), true
+                );
+            } else {
+                long ticksLeft = COOLDOWN_TICKS - (currentTime - lastUsed);
+                long secondsLeft = ticksLeft / 20;
+
+                player.sendMessage(
+                        net.minecraft.text.Text.literal("§cEarth Spikes on cooldown: " + secondsLeft + "s remaining"), true
+                );
+            }
         }
 
-        // Reset when player is no longer looking down or not sneaking
         if ((!isSneaking || !isLookingDown) && alreadyActivated) {
-            nbt.putBoolean(JUMP_FIRE_FLAG_KEY, false);
+            nbt.putBoolean(JUMP_EARTH_FLAG_KEY, false);
         }
     }
 
-    private void activateFlamingGroundAbility(World world, PlayerEntity player) {
+
+    private void activateEarthSpikes(World world, PlayerEntity player) {
         BlockPos basePos = player.getBlockPos();
+        int safeRadius = 3;
+        int spikeRingRadius = 7;
+        Block earthSpikeBlock = ModBlocks.EARTH_SPIKE_BLOCK;
+        BlockState earthSpikeState = earthSpikeBlock.getDefaultState();
 
-        int safeRadius = 2;       // Safe zone radius
-        int fireRingRadius = 9;   // Fire ring radius
-
-        for (int dx = -fireRingRadius; dx <= fireRingRadius; dx++) {
-            for (int dz = -fireRingRadius; dz <= fireRingRadius; dz++) {
+        for (int dx = -spikeRingRadius; dx <= spikeRingRadius; dx++) {
+            for (int dz = -spikeRingRadius; dz <= spikeRingRadius; dz++) {
                 double distance = Math.sqrt(dx * dx + dz * dz);
+                if (distance <= safeRadius || distance > spikeRingRadius) continue;
 
-                if (distance <= safeRadius || distance > fireRingRadius) continue;
+                for (int dy = -3; dy <= 3; dy++) {
+                    BlockPos groundPos = basePos.add(dx, dy - 1, dz);
+                    BlockPos placePos = groundPos.up();
 
-                for (int dy = -4; dy <= 4; dy++) {
-                    BlockPos firePos = basePos.add(dx, dy - 1, dz);
-                    BlockPos abovePos = firePos.up();
+                    if (world.getBlockState(groundPos).isSolidBlock(world, groundPos) && world.isAir(placePos)) {
+                        // Place block manually
+                        world.setBlockState(placePos, earthSpikeState, 3);
 
-                    if (world.getBlockState(firePos).isSolidBlock(world, firePos) && world.isAir(abovePos)) {
-                        world.setBlockState(abovePos, Blocks.FIRE.getDefaultState());
+                        // Manually call onPlaced to ensure scheduledTick is set up
+                        earthSpikeBlock.onPlaced(world, placePos, earthSpikeState, player, player.getMainHandStack());
                     }
                 }
             }
         }
 
-        // Grant fire resistance for 20 seconds (400 ticks)
-        player.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 400, 0));
-
-        world.playSound(null, player.getBlockPos(), SoundEvents.ITEM_FLINTANDSTEEL_USE, player.getSoundCategory(), 1.0f, 1.0f);
+        world.playSound(null, player.getBlockPos(), SoundEvents.BLOCK_STONE_BREAK, player.getSoundCategory(), 1.0f, 1.0f);
     }
 }

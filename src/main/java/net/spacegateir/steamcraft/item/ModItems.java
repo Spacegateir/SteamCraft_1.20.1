@@ -15,6 +15,7 @@ import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.fluid.ModFluids;
 import net.spacegateir.steamcraft.item.armor.*;
 import net.spacegateir.steamcraft.item.custom.*;
+import net.spacegateir.steamcraft.item.testing_tools.TestParticlesItem;
 import net.spacegateir.steamcraft.item.tools.*;
 
 import java.lang.reflect.Field;
@@ -47,7 +48,7 @@ public class ModItems {
     });
 
     public static final Item TEST_ITEM = registerItem("test_item",
-            new Item(new FabricItemSettings()));
+            new TestParticlesItem(new FabricItemSettings()));
 
     public static final Item COPPER_COIN = registerItem("copper_coin",
             new GlintItem(new FabricItemSettings().rarity(Rarity.UNCOMMON)));
@@ -723,6 +724,11 @@ public class ModItems {
             new AliasedBlockItem(ModBlocks.LUSH_SPIDERLILY_CROP, new FabricItemSettings()));
     public static final Item LUSH_VIOLET_SEED = registerItem("lush_violet_seed",
             new AliasedBlockItem(ModBlocks.LUSH_VIOLET_CROP, new FabricItemSettings()));
+
+
+    public static final Item EARTH_SPIKE_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "earth_spike_item"),
+            new BlockItem(ModBlocks.EARTH_SPIKE_BLOCK, new FabricItemSettings()));
 
 
 

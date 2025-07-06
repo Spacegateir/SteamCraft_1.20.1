@@ -41,8 +41,8 @@ public class CelestialGearforgedSwordItem extends SwordItem {
     private static final String BUFF_END_TIME_KEY = "buffEndTime";
     private static final String JUMP_EARTH_FLAG_KEY = "HasJumped";
     private static final String EARTH_SPIKE_LAST_USED_KEY = "earth_spike_last_used";
-    private static final long COOLDOWN_TICKS = 2400;
-
+    private static final long COOLDOWN_TICKS = 2400;        // 120 seconds
+    private static final long BUFFED_COOLDOWN_TICKS = 1200; // 60 seconds
     public CelestialGearforgedSwordItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
         super(toolMaterial, attackDamage, attackSpeed, settings);
     }
@@ -54,8 +54,8 @@ public class CelestialGearforgedSwordItem extends SwordItem {
         if (Screen.hasShiftDown()) {
             // Show full abilities when Shift is held
             tooltip.add(Text.literal("§7- §eRight-Click:§r Roar of the King"));
-            tooltip.add(Text.literal("   §8• Knocks back and damages nearby enemies"));
-            tooltip.add(Text.literal("   §8• Applies Slowness, Blindness, and Weakness"));
+            tooltip.add(Text.literal("   §8• Knocks back, damages and debuff enemies"));
+            tooltip.add(Text.literal("   §8• 10 seconds cooldown 5 seconds with buff"));
 
             tooltip.add(Text.literal("§7- §eShift + Right-Click:§r Activate Buff"));
             tooltip.add(Text.literal("   §8• Grants Speed I and Strength III for 60 seconds"));
@@ -63,7 +63,7 @@ public class CelestialGearforgedSwordItem extends SwordItem {
 
             tooltip.add(Text.literal("§7- §eSneak + Look Down:§r Sanctum +"));
             tooltip.add(Text.literal("   §8• Creates a earthly ring around you"));
-            tooltip.add(Text.literal("   §8• 2-minute cooldown"));
+            tooltip.add(Text.literal("   §8• 2-minute cooldown 60 seconds with buff"));
 
             tooltip.add(Text.literal("§7- §dPassive:§r Healing Grace +"));
             tooltip.add(Text.literal("   §8• Heals you based on damage dealt"));
@@ -71,7 +71,7 @@ public class CelestialGearforgedSwordItem extends SwordItem {
 
             tooltip.add(Text.literal("§7- §dPassive:§r Tempest Wrath"));
             tooltip.add(Text.literal("   §8• Chance to summon lightning on hit during rainfall"));
-            tooltip.add(Text.literal("   §8• Also triggers in rain if buff is active"));
+            tooltip.add(Text.literal("   §8• Also triggers without rain if buff is active"));
         } else {
             // Show hint when Shift is not held
             tooltip.add(Text.literal("§7Hold §eShift §7for abilities details"));
@@ -85,8 +85,8 @@ public class CelestialGearforgedSwordItem extends SwordItem {
         long currentTime = world.getTime();
         boolean buffActive = nbt.getLong(BUFF_END_TIME_KEY) > currentTime;
 
-        // 1/5 chance to spawn lightning in thunder or rain if buffed ( When Stormy (Passive))
-        if (!world.isClient && (world.isThundering() || (buffActive && world.isRaining())) && RANDOM.nextInt(3) == 0) {
+        // 1/5 chance to spawn lightning in rain or without rain if buffed ( When Raining (Passive))
+        if (!world.isClient && (world.isRaining() || buffActive) && RANDOM.nextInt(3) == 0) {
             BlockPos pos = target.getBlockPos();
             LightningEntity lightning = new LightningEntity(EntityType.LIGHTNING_BOLT, world);
             lightning.setPosition(pos.getX(), pos.getY(), pos.getZ());
@@ -222,8 +222,9 @@ public class CelestialGearforgedSwordItem extends SwordItem {
         boolean isLookingDown = player.getPitch() > 60.0f;
         boolean alreadyActivated = nbt.getBoolean(JUMP_EARTH_FLAG_KEY);
         long lastUsed = nbt.getLong(EARTH_SPIKE_LAST_USED_KEY);
-
-        boolean isCooldownOver = (currentTime - lastUsed) >= COOLDOWN_TICKS;
+        boolean buffActive = nbt.getLong(BUFF_END_TIME_KEY) > currentTime;
+        long cooldownDuration = buffActive ? BUFFED_COOLDOWN_TICKS : COOLDOWN_TICKS;
+        boolean isCooldownOver = (currentTime - lastUsed) >= cooldownDuration;
 
         if (isSneaking && isLookingDown && !alreadyActivated) {
             if (isCooldownOver) {
@@ -235,7 +236,7 @@ public class CelestialGearforgedSwordItem extends SwordItem {
                         net.minecraft.text.Text.literal("§aEarth Spikes activated! Cooldown started."), true
                 );
             } else {
-                long ticksLeft = COOLDOWN_TICKS - (currentTime - lastUsed);
+                long ticksLeft = cooldownDuration - (currentTime - lastUsed);
                 long secondsLeft = ticksLeft / 20;
 
                 player.sendMessage(
@@ -267,10 +268,8 @@ public class CelestialGearforgedSwordItem extends SwordItem {
                     BlockPos placePos = groundPos.up();
 
                     if (world.getBlockState(groundPos).isSolidBlock(world, groundPos) && world.isAir(placePos)) {
-                        // Place block manually
                         world.setBlockState(placePos, earthSpikeState, 3);
 
-                        // Manually call onPlaced to ensure scheduledTick is set up
                         earthSpikeBlock.onPlaced(world, placePos, earthSpikeState, player, player.getMainHandStack());
                     }
                 }

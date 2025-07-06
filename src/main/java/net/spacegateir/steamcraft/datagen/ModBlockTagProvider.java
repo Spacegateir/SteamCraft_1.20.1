@@ -2,6 +2,7 @@ package net.spacegateir.steamcraft.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.RegistryKeys;
@@ -10,6 +11,9 @@ import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 import net.spacegateir.steamcraft.block.ModBlocks;
+
+
+import java.lang.reflect.Field;
 import java.util.concurrent.CompletableFuture;
 
 
@@ -64,13 +68,21 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                     RegistryKeys.BLOCK,
                     new Identifier("steamcraft", "pickaxe_efficient")
             );
+            public static final TagKey<Block> PICKAXE_MINING_MODE = TagKey.of(
+                    RegistryKeys.BLOCK,
+                    new Identifier("steamcraft", "pickaxe_mining_mode")
+            );
+            public static final TagKey<Block> PICKAXE_ORES = TagKey.of(
+                    RegistryKeys.BLOCK,
+                    new Identifier("steamcraft", "pickaxe_ores")
+            );
         }
     }
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
 
-        getOrCreateTagBuilder(ModBlockTagProvider.ModTags.Blocks.SKELETON)
+        getOrCreateTagBuilder(ModTags.Blocks.SKELETON)
                 .add(
                         ModBlocks.SKELETON_ARM,
                         ModBlocks.SKELETON_CHEST,
@@ -152,7 +164,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.AETHER_COIL_PINK
                 );
 
-        getOrCreateTagBuilder(ModBlockTagProvider.ModTags.Blocks.TRAPS)
+        getOrCreateTagBuilder(ModTags.Blocks.TRAPS)
                 .add(
                         ModBlocks.CURSED_BLOCK,
                         ModBlocks.COURSE_DIRT_TRAP_BLOCK,
@@ -318,6 +330,164 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.GLIMMERSTONE_BLOCK
                 );
 
+        getOrCreateTagBuilder(ModTags.Blocks.PICKAXE_MINING_MODE)
+//                .addTag(BlockTags.PICKAXE_MINEABLE)
+
+                .addTag(ModTags.Blocks.AETHER_BLOCKS)
+                .addTag(ModTags.Blocks.BUILDING_BLOCKS)
+                .addTag(ModTags.Blocks.STONE_PATH_BLOCKS)
+
+                .add(
+                        ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK,
+                        ModBlocks.GLIMMERSTONE_BRICKS_BLOCK,
+                        ModBlocks.GLIMMERSTONE_BLOCK,
+
+                        Blocks.STONE,
+                        Blocks.STONE_BRICKS,
+                        Blocks.ANDESITE,
+                        Blocks.POLISHED_ANDESITE,
+                        Blocks.GRANITE,
+                        Blocks.POLISHED_GRANITE,
+                        Blocks.DIORITE,
+                        Blocks.POLISHED_DIORITE,
+                        Blocks.COBBLESTONE,
+                        Blocks.BASALT,
+                        Blocks.SMOOTH_BASALT,
+                        Blocks.SMOOTH_SANDSTONE,
+                        Blocks.SMOOTH_QUARTZ,
+                        Blocks.SMOOTH_STONE,
+                        Blocks.POLISHED_BASALT,
+                        Blocks.CALCITE,
+                        Blocks.TUFF,
+                        Blocks.DEEPSLATE,
+                        Blocks.COBBLED_DEEPSLATE,
+                        Blocks.POLISHED_DEEPSLATE,
+                        Blocks.DEEPSLATE_TILES,
+                        Blocks.DEEPSLATE_BRICKS,
+                        Blocks.CHISELED_DEEPSLATE,
+                        Blocks.CRACKED_DEEPSLATE_BRICKS,
+                        Blocks.CRACKED_DEEPSLATE_TILES,
+                        Blocks.BLACKSTONE,
+                        Blocks.POLISHED_BLACKSTONE,
+                        Blocks.POLISHED_BLACKSTONE_BRICKS,
+                        Blocks.GILDED_BLACKSTONE,
+                        Blocks.ICE,
+                        Blocks.PACKED_ICE,
+                        Blocks.BLUE_ICE,
+                        Blocks.SANDSTONE,
+                        Blocks.RED_SANDSTONE,
+                        Blocks.MOSSY_COBBLESTONE,
+                        Blocks.BRICKS,
+                        Blocks.CUT_SANDSTONE,
+                        Blocks.CUT_RED_SANDSTONE,
+                        Blocks.CHISELED_SANDSTONE,
+                        Blocks.CHISELED_RED_SANDSTONE,
+                        Blocks.NETHER_BRICKS,
+                        Blocks.DRIPSTONE_BLOCK,
+                        Blocks.NETHERRACK,
+                        Blocks.END_STONE,
+                        Blocks.MUD,
+                        Blocks.MUD_BRICKS,
+
+                        Blocks.TERRACOTTA,
+                        Blocks.WHITE_TERRACOTTA,
+                        Blocks.ORANGE_TERRACOTTA,
+                        Blocks.MAGENTA_TERRACOTTA,
+                        Blocks.LIGHT_BLUE_TERRACOTTA,
+                        Blocks.YELLOW_TERRACOTTA,
+                        Blocks.LIME_TERRACOTTA,
+                        Blocks.PINK_TERRACOTTA,
+                        Blocks.GRAY_TERRACOTTA,
+                        Blocks.LIGHT_GRAY_TERRACOTTA,
+                        Blocks.CYAN_TERRACOTTA,
+                        Blocks.PURPLE_TERRACOTTA,
+                        Blocks.BLUE_TERRACOTTA,
+                        Blocks.BROWN_TERRACOTTA,
+                        Blocks.GREEN_TERRACOTTA,
+                        Blocks.RED_TERRACOTTA,
+                        Blocks.BLACK_TERRACOTTA,
+
+                        Blocks.WHITE_GLAZED_TERRACOTTA,
+                        Blocks.ORANGE_GLAZED_TERRACOTTA,
+                        Blocks.MAGENTA_GLAZED_TERRACOTTA,
+                        Blocks.LIGHT_BLUE_GLAZED_TERRACOTTA,
+                        Blocks.YELLOW_GLAZED_TERRACOTTA,
+                        Blocks.LIME_GLAZED_TERRACOTTA,
+                        Blocks.PINK_GLAZED_TERRACOTTA,
+                        Blocks.GRAY_GLAZED_TERRACOTTA,
+                        Blocks.LIGHT_GRAY_GLAZED_TERRACOTTA,
+                        Blocks.CYAN_GLAZED_TERRACOTTA,
+                        Blocks.PURPLE_GLAZED_TERRACOTTA,
+                        Blocks.BLUE_GLAZED_TERRACOTTA,
+                        Blocks.BROWN_GLAZED_TERRACOTTA,
+                        Blocks.GREEN_GLAZED_TERRACOTTA,
+                        Blocks.RED_GLAZED_TERRACOTTA,
+                        Blocks.BLACK_GLAZED_TERRACOTTA,
+
+                        Blocks.COAL_ORE,
+                        Blocks.DEEPSLATE_COAL_ORE,
+                        Blocks.COPPER_ORE,
+                        Blocks.DEEPSLATE_COPPER_ORE,
+                        Blocks.IRON_ORE,
+                        Blocks.DEEPSLATE_IRON_ORE,
+                        Blocks.GOLD_ORE,
+                        Blocks.DEEPSLATE_GOLD_ORE,
+                        Blocks.NETHER_GOLD_ORE,
+                        Blocks.DIAMOND_ORE,
+                        Blocks.DEEPSLATE_DIAMOND_ORE,
+                        Blocks.EMERALD_ORE,
+                        Blocks.DEEPSLATE_EMERALD_ORE,
+                        Blocks.LAPIS_ORE,
+                        Blocks.DEEPSLATE_LAPIS_ORE,
+                        Blocks.REDSTONE_ORE,
+                        Blocks.DEEPSLATE_REDSTONE_ORE,
+                        Blocks.NETHER_QUARTZ_ORE,
+                        Blocks.ANCIENT_DEBRIS,
+
+                        Blocks.LAPIS_BLOCK,
+                        Blocks.GOLD_BLOCK,
+                        Blocks.IRON_BLOCK,
+                        Blocks.DIAMOND_BLOCK,
+                        Blocks.EMERALD_BLOCK,
+                        Blocks.REDSTONE_BLOCK,
+                        Blocks.COPPER_BLOCK,
+                        Blocks.RAW_IRON_BLOCK,
+                        Blocks.RAW_COPPER_BLOCK,
+                        Blocks.RAW_GOLD_BLOCK
+                );
+
+        getOrCreateTagBuilder(ModTags.Blocks.PICKAXE_ORES)
+                .add(
+                        Blocks.ANDESITE,
+                        Blocks.GRANITE,
+                        Blocks.DIORITE,
+                        Blocks.BASALT,
+                        Blocks.SMOOTH_BASALT,
+                        Blocks.CALCITE,
+                        Blocks.AMETHYST_BLOCK,
+
+                        Blocks.COAL_ORE,
+                        Blocks.DEEPSLATE_COAL_ORE,
+                        Blocks.COPPER_ORE,
+                        Blocks.DEEPSLATE_COPPER_ORE,
+                        Blocks.IRON_ORE,
+                        Blocks.DEEPSLATE_IRON_ORE,
+                        Blocks.GOLD_ORE,
+                        Blocks.DEEPSLATE_GOLD_ORE,
+                        Blocks.NETHER_GOLD_ORE,
+                        Blocks.DIAMOND_ORE,
+                        Blocks.DEEPSLATE_DIAMOND_ORE,
+                        Blocks.EMERALD_ORE,
+                        Blocks.DEEPSLATE_EMERALD_ORE,
+                        Blocks.LAPIS_ORE,
+                        Blocks.DEEPSLATE_LAPIS_ORE,
+                        Blocks.REDSTONE_ORE,
+                        Blocks.DEEPSLATE_REDSTONE_ORE,
+                        Blocks.NETHER_QUARTZ_ORE,
+                        Blocks.ANCIENT_DEBRIS
+                );
+
+
 
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .addTag(ModTags.Blocks.SKELETON)
@@ -470,7 +640,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
             for (String base : baseFlowers) {
                 String fieldName = (prefix + base).toUpperCase() + "_CROP"; // check if block fields have this naming
                 try {
-                    java.lang.reflect.Field field = ModBlocks.class.getField(fieldName);
+                    Field field = ModBlocks.class.getField(fieldName);
                     Object block = field.get(null);
                     if (block instanceof Block) {
                         builder.add((Block) block);

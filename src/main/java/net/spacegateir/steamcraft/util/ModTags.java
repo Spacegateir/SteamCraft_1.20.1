@@ -21,6 +21,8 @@ public class ModTags {
         public static final TagKey<Block> SOIL_PATH_BLOCKS = createBlockTag("path_blocks");
         public static final TagKey<Block> FLOWER_SEEDS = createBlockTag("flower_seeds");
         public static final TagKey<Block> PICKAXE_EFFICIENT = createBlockTag("pickaxe_efficient");
+        public static final TagKey<Block> PICKAXE_MINING_MODE = createBlockTag("pickaxe_mining_mode");
+        public static final TagKey<Block> PICKAXE_ORES = createBlockTag("pickaxe_ores");
 
         private static TagKey<Block> createBlockTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, new Identifier(Steamcraft.MOD_ID, name));

@@ -2,7 +2,6 @@ package net.spacegateir.steamcraft.item.tools;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
@@ -19,10 +18,8 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
-import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
-import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import net.minecraft.client.item.TooltipContext;
@@ -42,7 +39,9 @@ public class CelestialGearforgedSwordSlimItem extends SwordItem {
     private static final String BUFF_END_TIME_KEY = "buffEndTime";
     private static final String JUMP_EARTH_FLAG_KEY = "HasJumped";
     private static final String EARTH_SPIKE_LAST_USED_KEY = "earth_spike_last_used";
-    private static final long COOLDOWN_TICKS = 2400;
+    private static final long COOLDOWN_TICKS = 2400;        // 120 seconds
+    private static final long BUFFED_COOLDOWN_TICKS = 1800; // 90 seconds
+
 
     public CelestialGearforgedSwordSlimItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
         super(toolMaterial, attackDamage, attackSpeed, settings);
@@ -55,8 +54,8 @@ public class CelestialGearforgedSwordSlimItem extends SwordItem {
         if (Screen.hasShiftDown()) {
             // Show full abilities when Shift is held
             tooltip.add(Text.literal("§7- §eRight-Click:§r Roar of the Champion"));
-            tooltip.add(Text.literal("   §8• Knocks back and damages nearby enemies"));
-            tooltip.add(Text.literal("   §8• Applies Slowness, Blindness, and Weakness"));
+            tooltip.add(Text.literal("   §8• Knocks back, damages and debuff enemies"));
+            tooltip.add(Text.literal("   §8• 10 seconds cooldown 5 seconds with buff"));
 
             tooltip.add(Text.literal("§7- §eShift + Right-Click:§r Activate Buff"));
             tooltip.add(Text.literal("   §8• Grants Speed II and Strength II for 30 seconds"));
@@ -64,7 +63,7 @@ public class CelestialGearforgedSwordSlimItem extends SwordItem {
 
             tooltip.add(Text.literal("§7- §eSneak + Look Down:§r Sanctum"));
             tooltip.add(Text.literal("   §8• Creates a earthly ring around you"));
-            tooltip.add(Text.literal("   §8• 2-minute cooldown"));
+            tooltip.add(Text.literal("   §8• 2-minute cooldown 90 seconds with buff"));
 
             tooltip.add(Text.literal("§7- §dPassive:§r Healing Grace"));
             tooltip.add(Text.literal("   §8• Heals you based on damage dealt"));
@@ -223,8 +222,9 @@ public class CelestialGearforgedSwordSlimItem extends SwordItem {
         boolean isLookingDown = player.getPitch() > 60.0f;
         boolean alreadyActivated = nbt.getBoolean(JUMP_EARTH_FLAG_KEY);
         long lastUsed = nbt.getLong(EARTH_SPIKE_LAST_USED_KEY);
-
-        boolean isCooldownOver = (currentTime - lastUsed) >= COOLDOWN_TICKS;
+        boolean buffActive = nbt.getLong(BUFF_END_TIME_KEY) > currentTime;
+        long cooldownDuration = buffActive ? BUFFED_COOLDOWN_TICKS : COOLDOWN_TICKS;
+        boolean isCooldownOver = (currentTime - lastUsed) >= cooldownDuration;
 
         if (isSneaking && isLookingDown && !alreadyActivated) {
             if (isCooldownOver) {
@@ -236,7 +236,7 @@ public class CelestialGearforgedSwordSlimItem extends SwordItem {
                         net.minecraft.text.Text.literal("§aEarth Spikes activated! Cooldown started."), true
                 );
             } else {
-                long ticksLeft = COOLDOWN_TICKS - (currentTime - lastUsed);
+                long ticksLeft = cooldownDuration - (currentTime - lastUsed);
                 long secondsLeft = ticksLeft / 20;
 
                 player.sendMessage(
@@ -269,10 +269,8 @@ public class CelestialGearforgedSwordSlimItem extends SwordItem {
                     BlockPos placePos = groundPos.up();
 
                     if (world.getBlockState(groundPos).isSolidBlock(world, groundPos) && world.isAir(placePos)) {
-                        // Place block manually
                         world.setBlockState(placePos, earthSpikeState, 3);
 
-                        // Manually call onPlaced to ensure scheduledTick is set up
                         earthSpikeBlock.onPlaced(world, placePos, earthSpikeState, player, player.getMainHandStack());
                     }
                 }

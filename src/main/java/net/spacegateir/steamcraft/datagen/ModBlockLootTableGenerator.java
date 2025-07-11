@@ -494,6 +494,9 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.GLIMMERSTONE_BRICKS_SLAB_BLOCK);
         addDrop(ModBlocks.GLIMMERSTONE_BRICKS_WALL_BLOCK);
 
+        addDrop(ModBlocks.FARMLAND_ENRICHED_BLOCK,
+                dropsWithSilkTouch(Blocks.DIRT, ItemEntry.builder(Blocks.DIRT)));
+
         addDrop(ModBlocks.SILVER_BLOCK);
 
         addDrop(ModBlocks.MORTAR_AND_PESTLE_BLOCK);

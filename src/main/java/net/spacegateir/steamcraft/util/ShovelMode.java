@@ -1,6 +1,6 @@
 package net.spacegateir.steamcraft.util;
 
-public enum MiningMode {
+public enum ShovelMode {
     X1("1x1"),
     X1X2("1x2"),
     X1X3("1x3"),
@@ -10,11 +10,11 @@ public enum MiningMode {
 
     private final String displayName;
 
-    MiningMode(String displayName) {
+    ShovelMode(String displayName) {
         this.displayName = displayName;
     }
 
-    public static MiningMode next(MiningMode current, boolean hasBuff) {
+    public static ShovelMode next(ShovelMode current, boolean hasBuff) {
         return switch (current) {
             case X1 -> X1X2;
             case X1X2 -> X1X3;

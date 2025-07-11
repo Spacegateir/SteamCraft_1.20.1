@@ -1,4 +1,4 @@
-package net.spacegateir.steamcraft.item.testing_tools;
+package net.spacegateir.steamcraft.TestTools.Tools;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;

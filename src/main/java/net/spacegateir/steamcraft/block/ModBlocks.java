@@ -1369,9 +1369,20 @@ public class ModBlocks {
             new Identifier(Steamcraft.MOD_ID, "silver_block"),
             new Block(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK).nonOpaque()));
 
+    public static final Block FARMLAND_ENRICHED_BLOCK = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "farmland_enriched_block"),
+            new ModFarmlandBlock(FabricBlockSettings.copyOf(Blocks.FARMLAND)
+                    .blockVision(Blocks::always).suffocates(Blocks::always)));
+
     public static final Block EARTH_SPIKE_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "earth_spike_block"),
             new EarthSpikeBlock(FabricBlockSettings.copyOf(Blocks.BEDROCK)
+                    .nonOpaque().solid().noCollision().pistonBehavior(PistonBehavior.DESTROY).strength(-1.0F, -1.0F)
+                    .dropsNothing().allowsSpawning(Blocks::never)));
+
+    public static final Block EARTH_WALL_BLOCK = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "earth_wall_block"),
+            new EarthWallBlock(FabricBlockSettings.copyOf(Blocks.BEDROCK)
                     .nonOpaque().solid().noCollision().pistonBehavior(PistonBehavior.DESTROY).strength(-1.0F, -1.0F)
                     .dropsNothing().allowsSpawning(Blocks::never)));
 

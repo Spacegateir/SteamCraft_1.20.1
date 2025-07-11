@@ -21,7 +21,13 @@ public class ModItemGroups {
                         //Items
 //                        entries.add(ModItems.TEST_ITEM);
 
+//                        entries.add(ModItems.COPPER_COIN);
+//                        entries.add(ModItems.SILVER_COIN);
+//                        entries.add(ModItems.GOLD_COIN);
+
 //                        entries.add(ModItems.EARTH_SPIKE_ITEM);
+//                        entries.add(ModItems.EARTH_WALL_ITEM);
+//                        entries.add(ModItems.FARMLAND_ENRICHED_ITEM);
 
                         entries.add(ModItems.TROWEL);
                         entries.add(ModItems.PATTERN_RECOMPILER);

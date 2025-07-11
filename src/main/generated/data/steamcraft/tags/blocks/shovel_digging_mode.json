@@ -1,0 +1,26 @@
+{
+  "replace": false,
+  "values": [
+    "#steamcraft:path_blocks",
+    "minecraft:dirt",
+    "minecraft:coarse_dirt",
+    "minecraft:rooted_dirt",
+    "minecraft:podzol",
+    "minecraft:mycelium",
+    "minecraft:grass_block",
+    "minecraft:farmland",
+    "minecraft:sand",
+    "minecraft:red_sand",
+    "minecraft:gravel",
+    "minecraft:clay",
+    "minecraft:snow",
+    "minecraft:snow_block",
+    "minecraft:powder_snow",
+    "minecraft:soul_sand",
+    "minecraft:soul_soil",
+    "minecraft:mud",
+    "minecraft:mud_bricks",
+    "minecraft:moss_block",
+    "minecraft:dirt_path"
+  ]
+}

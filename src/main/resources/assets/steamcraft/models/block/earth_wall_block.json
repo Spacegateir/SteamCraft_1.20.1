@@ -1,0 +1,7 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+		"all": "steamcraft:block/earth_wall_block",
+		"particle": "steamcraft:block/earth_wall_block"
+	}
+}

@@ -22,7 +22,11 @@ public class ModTags {
         public static final TagKey<Block> FLOWER_SEEDS = createBlockTag("flower_seeds");
         public static final TagKey<Block> PICKAXE_EFFICIENT = createBlockTag("pickaxe_efficient");
         public static final TagKey<Block> PICKAXE_MINING_MODE = createBlockTag("pickaxe_mining_mode");
+        public static final TagKey<Block> SHOVEL_DIGGING_MODE = createBlockTag("shovel_digging_mode");
+        public static final TagKey<Block> HOE_TILLING_MODE = createBlockTag("hoe_tilling_mode");
+        public static final TagKey<Block> SHEARING_MODE = createBlockTag("shearing_mode");
         public static final TagKey<Block> PICKAXE_ORES = createBlockTag("pickaxe_ores");
+        public static final TagKey<Block> AXE_STRIPPABLE = createBlockTag("axe_strippable");
 
         private static TagKey<Block> createBlockTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, new Identifier(Steamcraft.MOD_ID, name));

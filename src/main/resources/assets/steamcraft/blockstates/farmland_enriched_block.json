@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "steamcraft:block/farmland_enriched_block"
+    }
+  }
+}

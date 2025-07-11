@@ -1,4 +1,4 @@
-// 1.20.1	2025-07-06T14:36:29.0679044	Steamcraft/Block Loot Tables
+// 1.20.1	2025-07-09T16:06:08.5948002	Steamcraft/Block Loot Tables
 4b434f9602c9c2f60246afcd159bc287d5f98c8c data\steamcraft\loot_tables\blocks\aether_coil_magenta.json
 490ef70f451d3872f02eda59b92dea235effffb9 data\steamcraft\loot_tables\blocks\cursed_totem_block.json
 9c1fefe38fe0a53cdf96ff3bde2e97e89e33b98f data\steamcraft\loot_tables\blocks\gray_water_cauldron_block.json
@@ -291,8 +291,8 @@ c47314243884c82587132939b4ddd4f7ed6397f5 data\steamcraft\loot_tables\blocks\glow
 294d266b7fb1491a4ab988637c906aacad3b5d68 data\steamcraft\loot_tables\blocks\glow_lush_midnight_mystic_flower.json
 4a17ccb1d885b36a83dd810b23651a747ad018fb data\steamcraft\loot_tables\blocks\cursed_brasier_trap_block.json
 e2c805479ae01b2fa479a9c2bd7e41eae5fb4fb1 data\steamcraft\loot_tables\blocks\delphinium_flower.json
-a24fec64019c14bb62ea55b2df98bc18c7ef6ca0 data\steamcraft\loot_tables\blocks\deepslate_trap_block.json
 65a1f5cf527c35b89b51a4c924ae12f6dc9c94dc data\steamcraft\loot_tables\blocks\cobbled_white_concrete.json
+a24fec64019c14bb62ea55b2df98bc18c7ef6ca0 data\steamcraft\loot_tables\blocks\deepslate_trap_block.json
 1443928665776f6f48157ab514d947ea3784dd47 data\steamcraft\loot_tables\blocks\packed_ice_tiles_cracked.json
 30229063aecb1c5ec32a41ce7dfa11f854bf041f data\steamcraft\loot_tables\blocks\arcane_satuation_block.json
 8fba7985a823a2c8858a64170d57de1fb880ed6b data\steamcraft\loot_tables\blocks\skeleton_head.json
@@ -302,6 +302,7 @@ e0a6856c806b3c9717e27b7391eea8dfddd6146e data\steamcraft\loot_tables\blocks\pack
 25b0b154be1845385393c0d82e1ba815b69ff261 data\steamcraft\loot_tables\blocks\snow_drop_flower.json
 dfa352389562e7bb45797595e35efcaea4584a62 data\steamcraft\loot_tables\blocks\arcane_weakness_block.json
 670da25ae89057d658847121505944978629ff6f data\steamcraft\loot_tables\blocks\glow_spiderlily_flower.json
+7ca03f01dfa79f2837832a4ea87b4b9ae6ddb164 data\steamcraft\loot_tables\blocks\farmland_enriched_block.json
 67439dff702665991371aeb870fddee26018b255 data\steamcraft\loot_tables\blocks\arcane_luck_block.json
 9c1fefe38fe0a53cdf96ff3bde2e97e89e33b98f data\steamcraft\loot_tables\blocks\pink_lava_cauldron_block.json
 9b8975e488087a5db29baacc428ab0c88dccb4e0 data\steamcraft\loot_tables\blocks\iris_flower.json

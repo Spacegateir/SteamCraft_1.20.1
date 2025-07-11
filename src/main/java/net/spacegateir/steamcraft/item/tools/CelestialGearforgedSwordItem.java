@@ -33,16 +33,19 @@ import net.spacegateir.steamcraft.item.ModItems;
 import java.util.List;
 import java.util.Random;
 
-public class CelestialGearforgedSwordItem extends SwordItem {
+public class CelestialGearforgedSwordItem extends SwordItem implements IToolWithBuffAndMode{
 
     private static final Random RANDOM = new Random();
 
     private static final String BUFF_COOLDOWN_KEY = "buffCooldown";
     private static final String BUFF_END_TIME_KEY = "buffEndTime";
+
     private static final String JUMP_EARTH_FLAG_KEY = "HasJumped";
     private static final String EARTH_SPIKE_LAST_USED_KEY = "earth_spike_last_used";
+
     private static final long COOLDOWN_TICKS = 2400;        // 120 seconds
     private static final long BUFFED_COOLDOWN_TICKS = 1200; // 60 seconds
+
     public CelestialGearforgedSwordItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
         super(toolMaterial, attackDamage, attackSpeed, settings);
     }
@@ -52,28 +55,31 @@ public class CelestialGearforgedSwordItem extends SwordItem {
         tooltip.add(Text.literal("§6Celestial Gearforged Sword Abilities:"));
 
         if (Screen.hasShiftDown()) {
-            // Show full abilities when Shift is held
-            tooltip.add(Text.literal("§7- §eRight-Click:§r Roar of the King"));
+
+            tooltip.add(Text.literal("§7- §eRight-Click:§r §dRoar of the King§7"));
             tooltip.add(Text.literal("   §8• Knocks back, damages and debuff enemies"));
             tooltip.add(Text.literal("   §8• 10 seconds cooldown 5 seconds with buff"));
 
-            tooltip.add(Text.literal("§7- §eShift + Right-Click:§r Activate Buff"));
-            tooltip.add(Text.literal("   §8• Grants Speed I and Strength III for 60 seconds"));
-            tooltip.add(Text.literal("   §8• 4-minute cooldown"));
+            tooltip.add(Text.literal("§7- §eCTRL + Shift + Right-Click:§r §dActivate Buff§7"));
+            tooltip.add(Text.literal("   §8• Grants Speed I and Strength III for 1 minute"));
+            tooltip.add(Text.literal("   §8• 4 minutes cooldown"));
+            tooltip.add(Text.literal("   §8• Grants Resistance V for 1 minute when Celestial Shield is equipped"));
+            tooltip.add(Text.literal("   §8• 15 minutes cooldown"));
 
-            tooltip.add(Text.literal("§7- §eSneak + Look Down:§r Sanctum +"));
+            tooltip.add(Text.literal("§7- §eSneak + Look Down:§r §dDominion +§7"));
             tooltip.add(Text.literal("   §8• Creates a earthly ring around you"));
             tooltip.add(Text.literal("   §8• 2-minute cooldown 60 seconds with buff"));
+            tooltip.add(Text.literal("   §8• With Shield Equipped Creates a wall around you as well"));
+            tooltip.add(Text.literal("   §8• 6 minute cooldown"));
 
-            tooltip.add(Text.literal("§7- §dPassive:§r Healing Grace +"));
+            tooltip.add(Text.literal("§7- §dPassive:§r for §dHealing Grace +§7"));
             tooltip.add(Text.literal("   §8• Heals you based on damage dealt"));
             tooltip.add(Text.literal("   §8• Heals more when buff is active"));
 
-            tooltip.add(Text.literal("§7- §dPassive:§r Tempest Wrath"));
+            tooltip.add(Text.literal("§7- §dPassive:§r for §dTempest Wrath§7"));
             tooltip.add(Text.literal("   §8• Chance to summon lightning on hit during rainfall"));
             tooltip.add(Text.literal("   §8• Also triggers without rain if buff is active"));
         } else {
-            // Show hint when Shift is not held
             tooltip.add(Text.literal("§7Hold §eShift §7for abilities details"));
         }
     }
@@ -88,9 +94,14 @@ public class CelestialGearforgedSwordItem extends SwordItem {
         // 1/5 chance to spawn lightning in rain or without rain if buffed ( When Raining (Passive))
         if (!world.isClient && (world.isRaining() || buffActive) && RANDOM.nextInt(3) == 0) {
             BlockPos pos = target.getBlockPos();
-            LightningEntity lightning = new LightningEntity(EntityType.LIGHTNING_BOLT, world);
-            lightning.setPosition(pos.getX(), pos.getY(), pos.getZ());
-            ((ServerWorld) world).spawnEntity(lightning);
+            if (world instanceof ServerWorld serverWorld) {
+                LightningEntity lightning = EntityType.LIGHTNING_BOLT.create(serverWorld);
+                if (lightning != null) {
+                    lightning.setPosition(pos.getX(), pos.getY(), pos.getZ());
+                    serverWorld.spawnEntity(lightning);
+                }
+            }
+
         }
 
         // Heal attacker based on damage dealt ( Passive )
@@ -103,7 +114,7 @@ public class CelestialGearforgedSwordItem extends SwordItem {
 
                 if (attacker instanceof PlayerEntity player) {
                     player.sendMessage(
-                            net.minecraft.text.Text.literal("You were healed for " + String.format("%.1f", healAmount) + " health."),
+                            net.minecraft.text.Text.literal("§4You were §4§l§ohealed§r §4for " + String.format("§4§l§o%.1f", healAmount) + " health§r."),
                             true
                     );
                 }
@@ -119,43 +130,13 @@ public class CelestialGearforgedSwordItem extends SwordItem {
         NbtCompound nbt = stack.getOrCreateNbt();
         long currentTime = world.getTime();
 
-        // Sneak + right-click = activate buff (Enhance Buff ability)
-        if (!world.isClient && user.isSneaking()) {
-            long cooldownTime = nbt.getLong(BUFF_COOLDOWN_KEY);
-
-            if (cooldownTime <= currentTime) {
-                // Apply buff
-                nbt.putLong(BUFF_END_TIME_KEY, currentTime + 1200);    // 60 seconds
-                nbt.putLong(BUFF_COOLDOWN_KEY, currentTime + 4800);   // 4 minutes
-
-                user.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 1200, 2));
-                user.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 1200, 0));
-
-                world.playSound(null, user.getBlockPos(), SoundEvents.ENTITY_PLAYER_LEVELUP, user.getSoundCategory(), 1.0f, 1.0f);
-
-                user.sendMessage(
-                        net.minecraft.text.Text.literal("§aBuff active! Cooldown started."), true
-                );
-
-                return new TypedActionResult<>(ActionResult.SUCCESS, stack);
-            } else {
-                // Cooldown remaining
-                long ticksLeft = cooldownTime - currentTime;
-                long secondsLeft = ticksLeft / 20;
-                user.sendMessage(
-                        net.minecraft.text.Text.literal("§cBuff on cooldown: " + secondsLeft + "s remaining"), true
-                );
-                return new TypedActionResult<>(ActionResult.FAIL, stack);
-            }
-        }
-
         // Warden Roar (normal right-click)
         if (!world.isClient) {
             if (user.getItemCooldownManager().isCoolingDown(this)) {
                 return new TypedActionResult<>(ActionResult.FAIL, stack);
             }
 
-            boolean buffActive = nbt.getLong(BUFF_END_TIME_KEY) > currentTime;
+            boolean buffActive = nbt.getLong("buffEndTime") > currentTime;
 
             user.getItemCooldownManager().set(this, buffActive ? 100 : 200); // 5s or 10s cooldown
             world.playSound(null, user.getBlockPos(), SoundEvents.ENTITY_WARDEN_ROAR, user.getSoundCategory(), 3.0F, 1.0F);
@@ -192,12 +173,14 @@ public class CelestialGearforgedSwordItem extends SwordItem {
                 double y = origin.y + direction.y * d;
                 double z = origin.z + direction.z * d;
 
-                ((ServerWorld) world).spawnParticles(
-                        ParticleTypes.SONIC_BOOM,
-                        x, y, z,
-                        1,
-                        0, 0, 0, 0
-                );
+                if (world instanceof ServerWorld serverWorld) {
+                    serverWorld.spawnParticles(
+                            ParticleTypes.SONIC_BOOM,
+                            x, y, z,
+                            1,
+                            0, 0, 0, 0
+                    );
+                }
             }
         }
 
@@ -212,43 +195,61 @@ public class CelestialGearforgedSwordItem extends SwordItem {
 
         ItemStack mainHandStack = player.getMainHandStack();
         boolean isHoldingSword = mainHandStack.isOf(ModItems.CELESTIAL_GEARFORGED_SWORD);
-
         if (!isHoldingSword) return;
 
-        NbtCompound nbt = stack.getOrCreateNbt();
+        NbtCompound swordNbt = stack.getOrCreateNbt();
         long currentTime = world.getTime();
 
         boolean isSneaking = player.isSneaking();
         boolean isLookingDown = player.getPitch() > 60.0f;
-        boolean alreadyActivated = nbt.getBoolean(JUMP_EARTH_FLAG_KEY);
-        long lastUsed = nbt.getLong(EARTH_SPIKE_LAST_USED_KEY);
-        boolean buffActive = nbt.getLong(BUFF_END_TIME_KEY) > currentTime;
-        long cooldownDuration = buffActive ? BUFFED_COOLDOWN_TICKS : COOLDOWN_TICKS;
-        boolean isCooldownOver = (currentTime - lastUsed) >= cooldownDuration;
+        boolean alreadyActivated = swordNbt.getBoolean(JUMP_EARTH_FLAG_KEY);
 
         if (isSneaking && isLookingDown && !alreadyActivated) {
-            if (isCooldownOver) {
-                activateEarthSpikes(world, player);
-                nbt.putBoolean(JUMP_EARTH_FLAG_KEY, true);
-                nbt.putLong(EARTH_SPIKE_LAST_USED_KEY, currentTime);
+            swordNbt.putBoolean(JUMP_EARTH_FLAG_KEY, true);
 
-                player.sendMessage(
-                        net.minecraft.text.Text.literal("§aEarth Spikes activated! Cooldown started."), true
-                );
+            // ⚔ Earth Spikes (Sanctum Ability)
+            long lastUsed = swordNbt.getLong(EARTH_SPIKE_LAST_USED_KEY);
+            boolean buffActive = swordNbt.getLong(BUFF_END_TIME_KEY) > currentTime;
+            long cooldownDuration = buffActive ? BUFFED_COOLDOWN_TICKS : COOLDOWN_TICKS;
+            boolean earthCooldownOver = (currentTime - lastUsed) >= cooldownDuration;
+
+            if (earthCooldownOver) {
+                activateEarthSpikes(world, player);
+                swordNbt.putLong(EARTH_SPIKE_LAST_USED_KEY, currentTime);
+                player.sendMessage(Text.literal("§aEarth Spikes activated! Cooldown started."), true);
             } else {
                 long ticksLeft = cooldownDuration - (currentTime - lastUsed);
                 long secondsLeft = ticksLeft / 20;
-
-                player.sendMessage(
-                        net.minecraft.text.Text.literal("§cEarth Spikes on cooldown: " + secondsLeft + "s remaining"), true
-                );
+                player.sendMessage(Text.literal("§cEarth Spikes on cooldown: " + secondsLeft + "s remaining"), true);
             }
+
+            // 🛡 Shield Wall = Shield must be equipped
+            ItemStack offhandStack = player.getOffHandStack();
+            if (!offhandStack.isEmpty() && offhandStack.getItem() instanceof CelestialGearforgedShieldItem) {
+                NbtCompound shieldNbt = offhandStack.getOrCreateNbt();
+                long wallCooldownEnd = shieldNbt.getLong("CelestialWallCooldown");
+
+                if (currentTime >= wallCooldownEnd) {
+                    if (world instanceof ServerWorld) {
+                        CelestialGearforgedShieldItem.createShieldWall(world, player);
+                    }
+                    shieldNbt.putLong("CelestialWallCooldown", currentTime + 20 * 60 * 6); // 6 minutes
+                    player.sendMessage(Text.literal("§bShield Wall activated! Cooldown started."), true);
+                } else {
+                    long secondsLeft = (wallCooldownEnd - currentTime) / 20;
+                    player.sendMessage(Text.literal("§cShield Wall on cooldown: " + secondsLeft + "s remaining"), true);
+                }
+            }
+
         }
 
+        // Reset activation flag once the input is no longer held
         if ((!isSneaking || !isLookingDown) && alreadyActivated) {
-            nbt.putBoolean(JUMP_EARTH_FLAG_KEY, false);
+            swordNbt.putBoolean(JUMP_EARTH_FLAG_KEY, false);
         }
     }
+
+
 
 
     private void activateEarthSpikes(World world, PlayerEntity player) {
@@ -276,6 +277,63 @@ public class CelestialGearforgedSwordItem extends SwordItem {
             }
         }
 
-        world.playSound(null, player.getBlockPos(), SoundEvents.BLOCK_STONE_BREAK, player.getSoundCategory(), 1.0f, 1.0f);
+        world.playSound(null, player.getBlockPos(), SoundEvents.BLOCK_STONE_BREAK, player.getSoundCategory(), 0.25f, 0.25f);
     }
+
+    @Override
+    public boolean canActivateBuff(PlayerEntity player) {
+        ItemStack stack = player.getMainHandStack();
+        if (!stack.isOf(this)) return false;
+
+        NbtCompound nbt = stack.getOrCreateNbt();
+        long currentTime = player.getWorld().getTime();
+        long cooldownTime = nbt.getLong(BUFF_COOLDOWN_KEY);
+
+        if (cooldownTime <= currentTime) {
+            player.sendMessage(Text.literal("§bBuff activated! Strength III and Speed I granted for 1 minute."), true);
+            return true;
+        } else {
+            long ticksLeft = cooldownTime - currentTime;
+            long secondsLeft = ticksLeft / 20;
+            player.sendMessage(Text.literal("§cBroad Sword Buff still on cooldown: " + secondsLeft + "s remaining."), true);
+            return false;
+        }
+    }
+
+    @Override
+    public void applyBuffAbility(PlayerEntity player) {
+        ItemStack stack = player.getMainHandStack();
+        if (!stack.isOf(this)) return;
+
+        NbtCompound nbt = stack.getOrCreateNbt();
+        World world = player.getWorld();
+        long currentTime = world.getTime();
+
+        long cooldownTime = nbt.getLong(BUFF_COOLDOWN_KEY);
+
+        if (cooldownTime <= currentTime) {
+            // Apply buff
+            nbt.putLong(BUFF_END_TIME_KEY, currentTime + 1200);    // Buff active for 60 seconds (1200 ticks)
+            nbt.putLong(BUFF_COOLDOWN_KEY, currentTime + 4800);   // 4-minute cooldown (4800 ticks)
+
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 1200, 2));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 1200, 0));
+
+            world.playSound(null, player.getBlockPos(), SoundEvents.ENTITY_PLAYER_LEVELUP, player.getSoundCategory(), 1.0f, 1.0f);
+        }
+    }
+
+
+    @Override
+    public boolean canSwitchMode(PlayerEntity player) {
+        // Mode switching not implemented for this sword yet.
+        return false;
+    }
+
+    @Override
+    public void switchMode(PlayerEntity player) {
+        // You can leave this empty or send a message
+//        player.sendMessage(Text.literal("§7This weapon has no alternate mode."), true);
+    }
+
 }

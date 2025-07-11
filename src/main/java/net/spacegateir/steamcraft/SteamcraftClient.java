@@ -5,11 +5,11 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry;
-import net.minecraft.client.particle.ParticleFactory;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.item.ItemStack;
 import net.spacegateir.steamcraft.block.ModBlockEntities;
 import net.spacegateir.steamcraft.block.ModBlocks;
+import net.spacegateir.steamcraft.client.ToolInputHandler;
 import net.spacegateir.steamcraft.event.renderers.SmokeBlockRenderer;
 import net.spacegateir.steamcraft.fluid.ModFluids;
 import net.spacegateir.steamcraft.item.armor.WingedSandalsCosmeticItem;
@@ -24,6 +24,7 @@ public class SteamcraftClient implements ClientModInitializer {
 
         ModClient.registerFluidRenderers();
         ModModelPredicateProviderRegistry.registerModelPredicates();
+        ToolInputHandler.register();
 
         BlockEntityRendererRegistry.register(ModBlockEntities.SMOKE_BLOCK_ENTITY, SmokeBlockRenderer::new);
 

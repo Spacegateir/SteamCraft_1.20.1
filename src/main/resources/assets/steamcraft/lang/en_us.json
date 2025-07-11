@@ -70,7 +70,7 @@
   "item.steamcraft.celestial_gearforged_hoe": "§6Celestial Gearforged Hoe§r",
   "item.steamcraft.celestial_gearforged_shears": "§6Celestial Gearforged Shears§r",
   "item.steamcraft.celestial_gearforged_sword_slim": "§6Celestial Gearforged Long Sword§r",
-  "item.steamcraft.celestial_gearforged_sword": "§6Celestial Gearforged Brawd Sword§r",
+  "item.steamcraft.celestial_gearforged_sword": "§6Celestial Gearforged Broad Sword§r",
   "item.steamcraft.celestial_gearforged_shield": "§6Celestial Gearforged Shield§r",
 
   "item.steamcraft.loot_chest": "Loot Chest",
@@ -211,6 +211,8 @@
   "block.steamcraft.smoke_block": "Smoke Block",
   "block.steamcraft.earth_spike_block": "Earth Spike",
   "item.steamcraft.earth_spike_item": "Earth Spike",
+  "block.steamcraft.earth_wall_block": "Earth Wall",
+  "item.steamcraft.earth_wall_item": "Earth Wall",
 
   "block.steamcraft.agapanthus_flower": "Agapanthus Flower",
   "block.steamcraft.glow_agapanthus_flower": "Agapanthus Flower",
@@ -689,6 +691,9 @@
   "block.steamcraft.thorned_violet_crop": "Thorned Violet Crop",
 
 
+
+  "item.steamcraft.farmland_enriched_item": "Farmland Enriched",
+  "block.steamcraft.farmland_enriched_block": "Farmland Enriched",
 
   "item.steamcraft.participation_trophy_item": "Participation Trophy",
   "block.steamcraft.participation_trophy_block": "Participation Trophy",

@@ -15,7 +15,7 @@ import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.fluid.ModFluids;
 import net.spacegateir.steamcraft.item.armor.*;
 import net.spacegateir.steamcraft.item.custom.*;
-import net.spacegateir.steamcraft.item.testing_tools.TestParticlesItem;
+import net.spacegateir.steamcraft.TestTools.Tools.TestParticlesItem;
 import net.spacegateir.steamcraft.item.tools.*;
 
 import java.lang.reflect.Field;
@@ -175,9 +175,9 @@ public class ModItems {
     public static final Item CELESTIAL_GEARFORGED_HOE = registerItem("celestial_gearforged_hoe",
             new CelestialGearforgedHoeItem(ModToolMaterials.CELESTIAL_GEARFORGED, -3, 0.0F, new FabricItemSettings().fireproof()));
     public static final Item CELESTIAL_GEARFORGED_SHEARS = registerItem("celestial_gearforged_shears",
-            new CelestialGearforgedShearsItem(new FabricItemSettings().fireproof()));
+            new CelestialGearforgedShearsItem(new FabricItemSettings().fireproof().maxCount(1)));
     public static final Item CELESTIAL_GEARFORGED_SHIELD = registerItem("celestial_gearforged_shield",
-            new CelestialGearforgedShieldItem(new FabricItemSettings().fireproof()));
+            new CelestialGearforgedShieldItem(new FabricItemSettings().fireproof().maxCount(1)));
     public static final Item CELESTIAL_GEARFORGED_SWORD_SLIM = registerItem("celestial_gearforged_sword_slim",
             new CelestialGearforgedSwordSlimItem(ModToolMaterials.CELESTIAL_GEARFORGED, 10, -2.0F, new FabricItemSettings().fireproof()));
     public static final Item CELESTIAL_GEARFORGED_SWORD = registerItem("celestial_gearforged_sword",
@@ -726,9 +726,17 @@ public class ModItems {
             new AliasedBlockItem(ModBlocks.LUSH_VIOLET_CROP, new FabricItemSettings()));
 
 
+    public static final Item FARMLAND_ENRICHED_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "farmland_enriched_item"),
+            new BlockItem(ModBlocks.FARMLAND_ENRICHED_BLOCK, new FabricItemSettings()));
+
     public static final Item EARTH_SPIKE_ITEM = Registry.register(Registries.ITEM,
             new Identifier(Steamcraft.MOD_ID, "earth_spike_item"),
             new BlockItem(ModBlocks.EARTH_SPIKE_BLOCK, new FabricItemSettings()));
+
+    public static final Item EARTH_WALL_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "earth_wall_item"),
+            new BlockItem(ModBlocks.EARTH_WALL_BLOCK, new FabricItemSettings()));
 
 
 

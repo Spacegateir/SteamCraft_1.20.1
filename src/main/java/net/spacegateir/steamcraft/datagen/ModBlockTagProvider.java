@@ -72,9 +72,25 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                     RegistryKeys.BLOCK,
                     new Identifier("steamcraft", "pickaxe_mining_mode")
             );
+            public static final TagKey<Block> SHOVEL_DIGGING_MODE = TagKey.of(
+                    RegistryKeys.BLOCK,
+                    new Identifier("steamcraft", "shovel_digging_mode")
+            );
+            public static final TagKey<Block> HOE_TILLING_MODE = TagKey.of(
+                    RegistryKeys.BLOCK,
+                    new Identifier("steamcraft", "hoe_tilling_mode")
+            );
+            public static final TagKey<Block> SHEARING_MODE = TagKey.of(
+                    RegistryKeys.BLOCK,
+                    new Identifier("steamcraft", "shearing_mode")
+            );
             public static final TagKey<Block> PICKAXE_ORES = TagKey.of(
                     RegistryKeys.BLOCK,
                     new Identifier("steamcraft", "pickaxe_ores")
+            );
+            public static final TagKey<Block> AXE_STRIPPABLE = TagKey.of(
+                    RegistryKeys.BLOCK,
+                    new Identifier("steamcraft", "axe_strippable")
             );
         }
     }
@@ -330,6 +346,146 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.GLIMMERSTONE_BLOCK
                 );
 
+        getOrCreateTagBuilder(ModTags.Blocks.HOE_TILLING_MODE)
+                .add(
+                        Blocks.GRASS,
+                        Blocks.TALL_GRASS,
+                        Blocks.FERN,
+                        Blocks.LARGE_FERN,
+                        Blocks.DEAD_BUSH,
+                        Blocks.MOSS_BLOCK,
+                        Blocks.MOSS_CARPET,
+                        Blocks.VINE,
+                        Blocks.WEEPING_VINES,
+                        Blocks.TWISTING_VINES,
+                        Blocks.CAVE_VINES,
+                        Blocks.CAVE_VINES_PLANT,
+                        Blocks.GLOW_LICHEN,
+                        Blocks.MANGROVE_ROOTS,
+                        Blocks.HANGING_ROOTS,
+                        Blocks.CRIMSON_ROOTS,
+                        Blocks.WARPED_ROOTS,
+                        Blocks.NETHER_SPROUTS,
+                        Blocks.LILY_PAD,
+                        Blocks.SEAGRASS,
+                        Blocks.TALL_SEAGRASS,
+                        Blocks.SEA_PICKLE,
+                        Blocks.KELP,
+                        Blocks.SCULK_VEIN,
+                        Blocks.PINK_PETALS,
+
+                        Blocks.SCULK,
+                        Blocks.SCULK_CATALYST,
+                        Blocks.SCULK_SHRIEKER,
+                        Blocks.SCULK_SENSOR,
+                        Blocks.SPONGE,
+                        Blocks.WET_SPONGE,
+                        Blocks.TARGET,
+                        Blocks.DRIED_KELP_BLOCK,
+                        Blocks.HAY_BLOCK,
+                        Blocks.NETHER_WART_BLOCK,
+                        Blocks.WARPED_WART_BLOCK,
+                        Blocks.SHROOMLIGHT,
+
+                        Blocks.WHEAT,
+                        Blocks.CARROTS,
+                        Blocks.POTATOES,
+                        Blocks.BEETROOTS,
+                        Blocks.NETHER_WART,
+                        Blocks.MELON,
+                        Blocks.PUMPKIN,
+                        Blocks.SWEET_BERRY_BUSH,
+                        Blocks.COCOA
+                );
+
+        getOrCreateTagBuilder(ModTags.Blocks.SHOVEL_DIGGING_MODE)
+                .addTag(ModTags.Blocks.SOIL_PATH_BLOCKS)
+                .add(
+                        Blocks.DIRT,
+                        Blocks.COARSE_DIRT,
+                        Blocks.ROOTED_DIRT,
+                        Blocks.PODZOL,
+                        Blocks.MYCELIUM,
+                        Blocks.GRASS_BLOCK,
+                        Blocks.FARMLAND,
+                        Blocks.SAND,
+                        Blocks.RED_SAND,
+                        Blocks.GRAVEL,
+                        Blocks.CLAY,
+                        Blocks.SNOW,
+                        Blocks.SNOW_BLOCK,
+                        Blocks.POWDER_SNOW,
+                        Blocks.SOUL_SAND,
+                        Blocks.SOUL_SOIL,
+                        Blocks.MUD,
+                        Blocks.MUD_BRICKS,
+                        Blocks.MOSS_BLOCK,
+                        Blocks.DIRT_PATH
+                );
+
+        getOrCreateTagBuilder(ModTags.Blocks.SHEARING_MODE)
+                .add(
+                        // Wool
+                        Blocks.WHITE_WOOL,
+                        Blocks.LIGHT_GRAY_WOOL,
+                        Blocks.GRAY_WOOL,
+                        Blocks.BLACK_WOOL,
+                        Blocks.BROWN_WOOL,
+                        Blocks.RED_WOOL,
+                        Blocks.ORANGE_WOOL,
+                        Blocks.YELLOW_WOOL,
+                        Blocks.LIME_WOOL,
+                        Blocks.GREEN_WOOL,
+                        Blocks.CYAN_WOOL,
+                        Blocks.LIGHT_BLUE_WOOL,
+                        Blocks.BLUE_WOOL,
+                        Blocks.PURPLE_WOOL,
+                        Blocks.MAGENTA_WOOL,
+                        Blocks.PINK_WOOL,
+
+                        // Carpets
+                        Blocks.WHITE_CARPET,
+                        Blocks.LIGHT_GRAY_CARPET,
+                        Blocks.GRAY_CARPET,
+                        Blocks.BLACK_CARPET,
+                        Blocks.BROWN_CARPET,
+                        Blocks.RED_CARPET,
+                        Blocks.ORANGE_CARPET,
+                        Blocks.YELLOW_CARPET,
+                        Blocks.LIME_CARPET,
+                        Blocks.GREEN_CARPET,
+                        Blocks.CYAN_CARPET,
+                        Blocks.LIGHT_BLUE_CARPET,
+                        Blocks.BLUE_CARPET,
+                        Blocks.PURPLE_CARPET,
+                        Blocks.MAGENTA_CARPET,
+                        Blocks.PINK_CARPET,
+
+                        // Leaves
+                        Blocks.OAK_LEAVES,
+                        Blocks.SPRUCE_LEAVES,
+                        Blocks.BIRCH_LEAVES,
+                        Blocks.JUNGLE_LEAVES,
+                        Blocks.ACACIA_LEAVES,
+                        Blocks.DARK_OAK_LEAVES,
+                        Blocks.MANGROVE_LEAVES,
+                        Blocks.CHERRY_LEAVES,
+                        Blocks.AZALEA_LEAVES,
+                        Blocks.FLOWERING_AZALEA_LEAVES,
+
+                        // Shearables
+                        Blocks.COBWEB,
+                        Blocks.VINE,
+                        Blocks.GLOW_LICHEN,
+                        Blocks.TALL_GRASS,
+                        Blocks.FERN,
+                        Blocks.LARGE_FERN,
+                        Blocks.DEAD_BUSH
+                );
+
+
+
+
         getOrCreateTagBuilder(ModTags.Blocks.PICKAXE_MINING_MODE)
 //                .addTag(BlockTags.PICKAXE_MINEABLE)
 
@@ -486,6 +642,22 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         Blocks.NETHER_QUARTZ_ORE,
                         Blocks.ANCIENT_DEBRIS
                 );
+
+        getOrCreateTagBuilder(ModTags.Blocks.AXE_STRIPPABLE)
+                .add(
+                        Blocks.OAK_LOG,
+                        Blocks.SPRUCE_LOG,
+                        Blocks.BIRCH_LOG,
+                        Blocks.JUNGLE_LOG,
+                        Blocks.ACACIA_LOG,
+                        Blocks.DARK_OAK_LOG,
+                        Blocks.MANGROVE_LOG,
+                        Blocks.CHERRY_LOG,
+
+                        Blocks.CRIMSON_STEM,
+                        Blocks.WARPED_STEM
+                );
+
 
 
 

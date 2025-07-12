@@ -3,13 +3,10 @@ package net.spacegateir.steamcraft.network;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
-import net.minecraft.util.Identifier;
+import net.spacegateir.steamcraft.item.ModItems;
 import net.spacegateir.steamcraft.item.tools.IToolWithBuffAndMode;
 
 public class ModServerPackets {
-
-    // Packet identifier for buff activation
-//    public static final Identifier BUFF_ACTIVATION_PACKET_ID = new Identifier("steamcraft", "buff_activation"); // means nothing
 
     // Call this method during your server initialization
     public static void register() {
@@ -34,10 +31,68 @@ public class ModServerPackets {
                     }
                 }
 
-                // Optional: notify player no shield found or cooldown active
-//                player.sendMessage(Text.literal("§cYou must hold the Celestial Shield to activate the buff.2"), true); //on cooldown
+                // If holding CelestialGearforgedAxeItem, show buff or cooldown message
+                if (mainHandStack.getItem() == ModItems.CELESTIAL_GEARFORGED_AXE) {
+                    long cooldownEnd = mainHandStack.getOrCreateNbt().getLong("CelestialBuffCooldown");
+                    long currentTime = player.getWorld().getTime();
+
+                    long secondsLeft = (cooldownEnd - currentTime) / 20;
+                    if (secondsLeft < 0) secondsLeft = 0;
+
+                    player.sendMessage(Text.literal("§bAxe Buff active! §cBuff on cooldown: " + secondsLeft + "s remaining"), true);
+                }
+
+                // If holding CelestialGearforgedHoeItem, show buff or cooldown message
+                if (mainHandStack.getItem() == ModItems.CELESTIAL_GEARFORGED_HOE) {
+                    long cooldownEnd = mainHandStack.getOrCreateNbt().getLong("CelestialBuffCooldown");
+                    long currentTime = player.getWorld().getTime();
+
+                    long secondsLeft = (cooldownEnd - currentTime) / 20;
+                    if (secondsLeft < 0) secondsLeft = 0;
+
+                    player.sendMessage(Text.literal("§bHoe Buff active! §cBuff on cooldown: " + secondsLeft + "s remaining"), true);
+                }
+
+                // If holding CelestialGearforgedShovelItem, show buff or cooldown message
+                if (mainHandStack.getItem() == ModItems.CELESTIAL_GEARFORGED_SHOVEL) {
+                    long cooldownEnd = mainHandStack.getOrCreateNbt().getLong("CelestialBuffCooldown");
+                    long currentTime = player.getWorld().getTime();
+
+                    long secondsLeft = (cooldownEnd - currentTime) / 20;
+                    if (secondsLeft < 0) secondsLeft = 0;
+
+                    player.sendMessage(Text.literal("§bShovel Buff active! §cBuff on cooldown: " + secondsLeft + "s remaining"), true);
+                }
+
+                // If holding CelestialGearforgedShearsItem, show buff or cooldown message
+                if (mainHandStack.getItem() == ModItems.CELESTIAL_GEARFORGED_SHEARS) {
+                    long cooldownEnd = mainHandStack.getOrCreateNbt().getLong("CelestialBuffCooldown");
+                    long currentTime = player.getWorld().getTime();
+
+                    long secondsLeft = (cooldownEnd - currentTime) / 20;
+                    if (secondsLeft < 0) secondsLeft = 0;
+
+                    player.sendMessage(Text.literal("§bShears Buff active! §cBuff on cooldown: " + secondsLeft + "s remaining"), true);
+                }
+
+                // If holding CelestialGearforgedPickaxeItem, show buff or cooldown message
+                if (mainHandStack.getItem() == ModItems.CELESTIAL_GEARFORGED_PICKAXE) {
+                    long cooldownEnd = mainHandStack.getOrCreateNbt().getLong("CelestialBuffCooldown");
+                    long currentTime = player.getWorld().getTime();
+
+                    long secondsLeft = (cooldownEnd - currentTime) / 20;
+                    if (secondsLeft < 0) secondsLeft = 0;
+
+                    player.sendMessage(Text.literal("§bPickaxe Buff active! §cBuff on cooldown: " + secondsLeft + "s remaining"), true);
+                }
+
+
+
+                // else {
+                //     Optional: message for not holding the axe
+                //     player.sendMessage(Text.literal("§cYou must hold the Celestial Shield to activate the buff."), true);
+                // }
             });
         });
-
     }
 }

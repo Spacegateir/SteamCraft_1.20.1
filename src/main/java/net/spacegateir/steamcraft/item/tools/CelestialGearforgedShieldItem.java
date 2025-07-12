@@ -43,6 +43,7 @@ public class CelestialGearforgedShieldItem extends ShieldItem implements IToolWi
         if (Screen.hasShiftDown()) {
             tooltip.add(Text.literal("§7- §eShift + Look Down + Right Click:§r activate §dShield Wall§7"));
             tooltip.add(Text.literal("   §8• Creates a protective wall"));
+            tooltip.add(Text.literal("   §8• Works with Celestial Tools and Weapons"));
             tooltip.add(Text.literal("   §8• 6 minute cooldown"));
 
             tooltip.add(Text.literal("§7- §eCTRL + Shift + Right Click:§r activate §dResistance Buff§7"));

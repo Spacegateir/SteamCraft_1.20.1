@@ -287,7 +287,7 @@ public class CelestialGearforgedSwordSlimItem extends SwordItem implements ITool
         long cooldownTime = nbt.getLong(BUFF_COOLDOWN_KEY);
 
         if (cooldownTime <= currentTime) {
-            player.sendMessage(Text.literal("§bBuff activated! Speed II and Strength II for 30 seconds."), true);
+            player.sendMessage(Text.literal("§bLong Sword Buff activated! Speed II and Strength II for 30 seconds."), true);
             return true;
         } else {
             long ticksLeft = cooldownTime - currentTime;

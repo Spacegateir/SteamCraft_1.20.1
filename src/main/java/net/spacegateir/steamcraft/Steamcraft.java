@@ -12,6 +12,7 @@ import net.spacegateir.steamcraft.event.AxeBlockStripHandler;
 import net.spacegateir.steamcraft.fluid.ModFluids;
 import net.spacegateir.steamcraft.item.ModItems;
 import net.spacegateir.steamcraft.item.ModRewardItems;
+import net.spacegateir.steamcraft.network.ModPackets;
 import net.spacegateir.steamcraft.network.ModServerPackets;
 import net.spacegateir.steamcraft.particle.ModParticles;
 import net.spacegateir.steamcraft.potion.ModPotions;
@@ -56,6 +57,7 @@ public class Steamcraft implements ModInitializer {
 		ModWorldGeneration.generateModWorldGeneration();
 
 		ModServerPackets.register();
+		ModPackets.registerC2SPackets();
 
 		AxeBlockBreakHandler.register();
 		AxeBlockStripHandler.register();

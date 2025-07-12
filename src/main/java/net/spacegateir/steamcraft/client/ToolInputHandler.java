@@ -27,16 +27,16 @@ public class ToolInputHandler {
             }
             wasBuffKeyPressed = buffKeyPressed;
 
-            // Detect CTRL+SHIFT+RightClick (or custom key) for mode switching
-            // This example assumes right-click is detected in use() method for mode switch,
-            // but you could add a keybinding here for mode switching if you want.
-
-            // For example, handle another key combo similarly
-            // boolean modeKeyPressed = ...;
-            // if (modeKeyPressed && !wasModeKeyPressed) {
-            //     ClientPlayNetworking.send(ModPackets.SWITCH_MODE_PACKET_ID, PacketByteBufs.empty());
-            // }
-            // wasModeKeyPressed = modeKeyPressed;
+//             Detect CTRL+SHIFT+RightClick (or custom key) for mode switching
+//             This example assumes right-click is detected in use() method for mode switch,
+//             but you could add a keybinding here for mode switching if you want.
+//
+//             For example, handle another key combo similarly
+//             boolean modeKeyPressed = ...;
+//             if (modeKeyPressed && !wasModeKeyPressed) {
+//                 ClientPlayNetworking.send(ModPackets.SWITCH_MODE_PACKET_ID, PacketByteBufs.empty());
+//             }
+//             wasModeKeyPressed = modeKeyPressed;
         });
     }
 }

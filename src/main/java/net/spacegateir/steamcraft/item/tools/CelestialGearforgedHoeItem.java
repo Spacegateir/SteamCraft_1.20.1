@@ -3,6 +3,8 @@ package net.spacegateir.steamcraft.item.tools;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Maps;
 import com.mojang.datafixers.util.Pair;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
+import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -14,18 +16,20 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.hit.BlockHitResult;
-import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.item.tools.hammer_classes.*;
+import net.spacegateir.steamcraft.network.ModPackets;
 import net.spacegateir.steamcraft.util.ModTags;
 import net.spacegateir.steamcraft.util.TillingMode;
 
@@ -36,13 +40,13 @@ import java.util.Map;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
-public class CelestialGearforgedHoeItem extends HoeItem {
+public class CelestialGearforgedHoeItem extends HoeItem implements IToolWithBuffAndMode{
 
     private static final String MODE_KEY = "TillingMode";
-
     private static final String BUFF_COOLDOWN_KEY = "CelestialBuffCooldown";
-    private static final int BUFF_DURATION_TICKS = 20 * 60 * 5;   // 5 minutes
-    private static final int BUFF_COOLDOWN_TICKS = 20 * 60 * 20;   // 20 minutes
+
+    private static final int BUFF_DURATION_TICKS = 20 * 60 * 5;      // 5 minutes
+    private static final int BUFF_COOLDOWN_TICKS = 20 * 60 * 15;     // 15 minutes
 
     protected static final Map<Block, Pair<Predicate<ItemUsageContext>, Consumer<ItemUsageContext>>> TILLING_ACTIONS = Maps.<Block, Pair<Predicate<ItemUsageContext>, Consumer<ItemUsageContext>>>newHashMap(
         ImmutableMap.of(
@@ -81,7 +85,7 @@ public class CelestialGearforgedHoeItem extends HoeItem {
             tooltip.add(Text.literal("   §8• Change Dirt Types to Farmland Enriched Soil"));
             tooltip.add(Text.literal("   §8• Farmland Enriched Soil doesn't need water"));
 
-            tooltip.add(Text.literal("§7- §eRight-Click in Air:§r to change §dTilling Mode§7"));
+            tooltip.add(Text.literal("§7- §eShift + Right-Click in Air:§r to change §dTilling Mode§7"));
             tooltip.add(Text.literal("   §8• Effects Tilling area and Harvest area"));
             tooltip.add(Text.literal("   §8• Changes modes 1x1, 3x3, 5x5"));
             tooltip.add(Text.literal("   §8• Buff gives 7x7"));
@@ -89,6 +93,8 @@ public class CelestialGearforgedHoeItem extends HoeItem {
             tooltip.add(Text.literal("§7- §eCTRL + Shift + Right Click:§r activate §dBuff§7"));
             tooltip.add(Text.literal("   §8• Grants Haste 3 for 5 minutes"));
             tooltip.add(Text.literal("   §8• Cooldown for 20 minutes"));
+            tooltip.add(Text.literal("   §8• Grants Resistance V for 1 minute when Celestial Shield is equipped"));
+            tooltip.add(Text.literal("   §8• 15 minutes cooldown"));
 
         } else {
             tooltip.add(Text.literal("§7Hold §eShift §7for ability info"));
@@ -97,37 +103,55 @@ public class CelestialGearforgedHoeItem extends HoeItem {
     }
 
     @Override
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        ItemStack stack = user.getStackInHand(hand);
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand) {
+        ItemStack stack = player.getStackInHand(hand);
 
-        // Handle CTRL + SHIFT + right click (buff activation)
-        if (!world.isClient && Screen.hasControlDown() && Screen.hasShiftDown()) {
-            applyBuffAbility(user);
-            return TypedActionResult.success(stack, world.isClient());
+        // --- CLIENT SIDE ---
+        if (world.isClient) {
+            boolean isSneaking = player.isSneaking();
+            boolean isCtrlDown = Screen.hasControlDown();
+            boolean isShiftDown = Screen.hasShiftDown();
+            boolean isRightClickInAir = player.raycast(5.0D, 0.0F, false).getType() == net.minecraft.util.hit.HitResult.Type.MISS;
+
+            // Buff Logic: Ctrl + Shift triggers client to send buff activation packet
+            if (isCtrlDown && isShiftDown) {
+                ClientPlayNetworking.send(ModPackets.ACTIVATE_BUFF_PACKET_ID, PacketByteBufs.empty());
+                return TypedActionResult.success(stack, true); // Show use animation
+            }
+
+            // Prepare for Mode Switch: Sneaking + right click in air triggers animation only
+            if (isSneaking && isRightClickInAir) {
+                return TypedActionResult.success(stack, true); // Animation only
+            }
+
+            // Default: no special use
+            return TypedActionResult.pass(stack);
         }
 
-        // Mode switching only if not aiming at block
-        if (!world.isClient) {
-            HitResult hit = user.raycast(5.0D, 0.0F, false);
+        // --- SERVER SIDE ---
+        boolean isSneaking = player.isSneaking();
+        boolean isRightClickInAir = player.raycast(5.0D, 0.0F, false).getType() == net.minecraft.util.hit.HitResult.Type.MISS;
 
-            // Only switch mode if not targeting a block
-            if (hit.getType() == HitResult.Type.MISS) {
-                TillingMode currentMode = getMode(stack);
-
-                boolean hasBuff = user.hasStatusEffect(StatusEffects.HASTE) &&
-                        user.getStatusEffect(StatusEffects.HASTE).getAmplifier() >= 2;
-
-                TillingMode next = TillingMode.next(currentMode, hasBuff);
-                setMode(stack, next);
-
-                user.sendMessage(Text.literal("§bTilling Mode set to: §e§o" + next.getDisplayName()), true);
-                return TypedActionResult.success(stack);
-
+        // Mode Switch Logic: Sneaking + right click in air
+        if (isSneaking && isRightClickInAir) {
+            if (canSwitchMode(player)) {
+                switchMode(player);
+                player.getWorld().playSound(
+                        null,
+                        player.getBlockPos(),
+                        SoundEvents.UI_BUTTON_CLICK.value(),
+                        player.getSoundCategory(),
+                        0.5f,
+                        1.0f
+                );
+                return TypedActionResult.success(stack); // Actually performs the switch
             }
         }
 
-        return super.use(world, user, hand);
+        // Default: item not used
+        return TypedActionResult.pass(stack);
     }
+
 
     private TillingMode getMode(ItemStack stack) {
         String modeName = stack.getOrCreateNbt().getString(MODE_KEY);
@@ -152,14 +176,6 @@ public class CelestialGearforgedHoeItem extends HoeItem {
         if (player == null) return ActionResult.PASS;
 
         checkAndResetModeIfBuffExpired(player, stack);
-
-        // BUFF ABILITY (Shift + Ctrl)
-        if (!world.isClient) {
-            if (Screen.hasControlDown() && Screen.hasShiftDown()) {
-                applyBuffAbility(player);
-                return ActionResult.SUCCESS;
-            }
-        }
 
         // ACTUAL TILLING ACTION
         if (!world.isClient) {
@@ -194,20 +210,79 @@ public class CelestialGearforgedHoeItem extends HoeItem {
         return super.useOnBlock(context);
     }
 
-    private void applyBuffAbility(PlayerEntity player) {
+    @Override
+    public boolean canActivateBuff(PlayerEntity player) {
         ItemStack stack = player.getMainHandStack();
+        NbtCompound nbt = stack.getOrCreateNbt();
+        long cooldownTime = nbt.getLong(BUFF_COOLDOWN_KEY);
         long currentTime = player.getWorld().getTime();
-        long cooldownEnd = stack.getOrCreateNbt().getLong(BUFF_COOLDOWN_KEY);
+        return cooldownTime <= currentTime;
+    }
+
+    @Override
+    public void applyBuffAbility(PlayerEntity player) {
+        ItemStack stack = player.getInventory().getMainHandStack();
+        NbtCompound nbt = stack.getOrCreateNbt();
+
+        long currentTime = player.getWorld().getTime();
+        long cooldownEnd = nbt.getLong(BUFF_COOLDOWN_KEY);
+
+        System.out.println("CurrentTime: " + currentTime + ", CooldownEnd: " + cooldownEnd);
 
         if (currentTime >= cooldownEnd) {
             player.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, BUFF_DURATION_TICKS, 2));
-            stack.getOrCreateNbt().putLong(BUFF_COOLDOWN_KEY, currentTime + BUFF_COOLDOWN_TICKS);
-            player.sendMessage(Text.literal("§bBuff active! Cooldown started."), true);
+            nbt.putLong(BUFF_COOLDOWN_KEY, currentTime + BUFF_COOLDOWN_TICKS);
+
+            player.getWorld().playSound(null, player.getBlockPos(), SoundEvents.ENTITY_PLAYER_LEVELUP, player.getSoundCategory(), 1.0f, 1.0f);
+            player.sendMessage(Text.literal("§aHoe Buff active! Cooldown started."), true);
+
+            // Buff shield if equipped
+            ItemStack offhandStack = player.getOffHandStack();
+            if (offhandStack.getItem() instanceof IToolWithBuffAndMode tool) {
+                tool.applyBuffAbility(player);
+            }
+
         } else {
             long secondsLeft = (cooldownEnd - currentTime) / 20;
-            player.sendMessage(Text.literal("§cBuff on cooldown: " + secondsLeft + "s remaining"), true);
+            player.sendMessage(Text.literal("§cHoe Buff on cooldown: " + secondsLeft + "s remaining"), true);
         }
     }
+
+    @Override
+    public boolean canSwitchMode(PlayerEntity player) {
+        return true;
+    }
+
+    @Override
+    public void switchMode(PlayerEntity player) {
+        ItemStack stack = player.getMainHandStack();
+        NbtCompound nbt = stack.getOrCreateNbt();
+
+        TillingMode currentMode = getMode(stack);
+
+        // Check if player has the necessary buff
+        boolean hasBuff = player.hasStatusEffect(StatusEffects.HASTE) &&
+                player.getStatusEffect(StatusEffects.HASTE).getAmplifier() >= 2;
+
+        // Define allowed modes based on buff status
+        List<TillingMode> allowedModes = new ArrayList<>();
+        allowedModes.add(TillingMode.X1);
+        allowedModes.add(TillingMode.X3);
+        allowedModes.add(TillingMode.X5);
+        if (hasBuff) {
+            allowedModes.add(TillingMode.X7);
+        }
+
+        // Find the index of the current mode and go to the next one
+        int currentIndex = allowedModes.indexOf(currentMode);
+        int nextIndex = (currentIndex + 1) % allowedModes.size();
+        TillingMode nextMode = allowedModes.get(nextIndex);
+
+        // Update mode
+        setMode(stack, nextMode);
+        player.sendMessage(Text.literal("§bHoe Mode set to: §e§o" + nextMode.getDisplayName()), true);
+    }
+
 
     private void checkAndResetModeIfBuffExpired(PlayerEntity player, ItemStack stack) {
         TillingMode mode = getMode(stack);

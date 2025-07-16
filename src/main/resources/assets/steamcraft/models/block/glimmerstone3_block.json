@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "steamcraft:block/glimmerstone3_block",
+    "particle": "steamcraft:block/glimmerstone3_block"
+  }
+}

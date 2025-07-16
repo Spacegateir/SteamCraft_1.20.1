@@ -48,7 +48,15 @@ public class ModItemGroups {
                         entries.add(ModItems.CHESTPLATE_MOULD);
                         entries.add(ModItems.LEGGINGS_MOULD);
                         entries.add(ModItems.BOOTS_MOULD);
+                        entries.add(ModItems.PICKAXE_MOULD);
+                        entries.add(ModItems.AXE_MOULD);
+                        entries.add(ModItems.SHOVEL_MOULD);
+                        entries.add(ModItems.HOE_MOULD);
+                        entries.add(ModItems.SWORD_MOULD);
+                        entries.add(ModItems.SHEARS_MOULD);
+                        entries.add(ModItems.SHIELD_MOULD);
                         entries.add(ModItems.BUCKET_MOULD);
+
                         entries.add(ModItems.WINGED_SANDALS);
 
                         entries.add(ModItems.FOOLS_GOLD_SCRAP);
@@ -65,6 +73,14 @@ public class ModItemGroups {
                         entries.add(ModItems.FOOLS_GOLD_CHESTPLATE);
                         entries.add(ModItems.FOOLS_GOLD_LEGGINGS);
                         entries.add(ModItems.FOOLS_GOLD_BOOTS);
+
+                        entries.add(ModItems.FOOLS_GOLD_PICKAXE);
+                        entries.add(ModItems.FOOLS_GOLD_SHOVEL);
+                        entries.add(ModItems.FOOLS_GOLD_AXE);
+                        entries.add(ModItems.FOOLS_GOLD_HOE);
+                        entries.add(ModItems.FOOLS_GOLD_SHEARS);
+                        entries.add(ModItems.FOOLS_GOLD_SWORD);
+                        entries.add(ModItems.FOOLS_GOLD_SHIELD);
 
                         entries.add(ModItems.CELESTIAL_GEARFORGED_HELMET);
                         entries.add(ModItems.CELESTIAL_GEARFORGED_CHESTPLATE);
@@ -231,6 +247,8 @@ public class ModItemGroups {
                         entries.add(ModItems.GLIMMERSTONE_COBBLESTONE_STAIR_ITEM);
                         entries.add(ModItems.GLIMMERSTONE_COBBLESTONE_SLAB_ITEM);
                         entries.add(ModItems.GLIMMERSTONE_COBBLESTONE_WALL_ITEM);
+
+//                        entries.add(ModItems.GLIMMERSTONE1_ITEM);
 
                         entries.add(ModItems.GLIMMERSTONE_ITEM);
                         entries.add(ModItems.GLIMMERSTONE_STAIR_ITEM);

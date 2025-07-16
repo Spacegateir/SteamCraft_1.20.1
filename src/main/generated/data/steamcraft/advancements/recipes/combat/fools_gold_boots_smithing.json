@@ -1,18 +1,6 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_ancient_gem": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "steamcraft:divinitite_alloy_ingot"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
     "has_boots_mould": {
       "conditions": {
         "items": [
@@ -25,12 +13,24 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_fools_gold_block": {
+    "has_divinitite_ingot": {
       "conditions": {
         "items": [
           {
             "items": [
-              "steamcraft:fools_gold_block"
+              "steamcraft:divinitite_alloy_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_fools_gold_bucket": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "steamcraft:fools_gold_lava_bucket"
             ]
           }
         ]
@@ -47,8 +47,8 @@
   "requirements": [
     [
       "has_boots_mould",
-      "has_fools_gold_block",
-      "has_ancient_gem",
+      "has_fools_gold_bucket",
+      "has_divinitite_ingot",
       "has_the_recipe"
     ]
   ],

@@ -2,7 +2,6 @@ package net.spacegateir.steamcraft.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.minecraft.advancement.criterion.InventoryChangedCriterion;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.*;
@@ -12,15 +11,12 @@ import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.Registries;
-import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 import net.spacegateir.steamcraft.Steamcraft;
 import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.item.ModItems;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
-import net.minecraft.recipe.book.RecipeCategory;
-import net.minecraft.registry.Registries;
 
 import java.util.List;
 import java.util.Map;
@@ -91,6 +87,11 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
 
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
+
+        registerFlowerToSeedRecipes(exporter);
+        registerMouldRecipes(exporter);
+        registerFoolsGoldSmithingRecipes(exporter);
+
 
         offerReversibleCompactingRecipesWithId(exporter, RecipeCategory.MISC, ModItems.FOOLS_GOLD_SCRAP, RecipeCategory.MISC, ModItems.FOOLS_GOLD_RAW, "scrap");
         offerReversibleCompactingRecipesWithId(exporter, RecipeCategory.MISC, ModItems.FOOLS_GOLD_RAW, RecipeCategory.MISC, ModBlocks.FOOLS_GOLD_RAW_BLOCK, "block");
@@ -244,14 +245,6 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         offerAetherCoilRecipe(exporter, ModBlocks.AETHER_COIL_MAGENTA, Items.MAGENTA_DYE);
         offerAetherCoilRecipe(exporter, ModBlocks.AETHER_COIL_PINK, Items.PINK_DYE);
 
-//        for (int i = 1; i <= 8; i++) {
-//            ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.AETHER_COIL_WHITE, i)
-//                    .input(Ingredient.ofItems(Items.WHITE_DYE))
-//                    .input(Ingredient.ofItems(ModBlocks.AETHER_COIL), i)
-//                    .criterion("has_aether_coil", RecipeProvider.conditionsFromItem(ModBlocks.AETHER_COIL))
-//                    .offerTo(exporter, new Identifier("steamcraft", "aether_coil_white_from_dye_and_aether_coil" + i));
-//        }
-
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.FOOLS_GOLD_HELMET)
                 .pattern("12")
                 .pattern("34")
@@ -345,6 +338,98 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
                 .criterion(hasItem(ModItems.FOOLS_GOLD_BOOTS), conditionsFromItem(ModItems.FOOLS_GOLD_BOOTS))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.CELESTIAL_GEARFORGED_BOOTS)));
+
+// Celestial Gearforged Tools
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CELESTIAL_GEARFORGED_PICKAXE)
+                .pattern("333")
+                .pattern(" 12")
+                .pattern(" 4 ")
+                .input('1', ModItems.FOOLS_GOLD_PICKAXE)
+                .input('2', ModItems.DIVINE_IMBUMENT_GEM)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', ModItems.FOOLS_GOLD_INGOT)
+                .criterion(hasItem(ModItems.FOOLS_GOLD_PICKAXE), conditionsFromItem(ModItems.FOOLS_GOLD_PICKAXE))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.CELESTIAL_GEARFORGED_PICKAXE)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CELESTIAL_GEARFORGED_AXE)
+                .pattern("33 ")
+                .pattern("312")
+                .pattern(" 4 ")
+                .input('1', ModItems.FOOLS_GOLD_AXE)
+                .input('2', ModItems.DIVINE_IMBUMENT_GEM)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', ModItems.FOOLS_GOLD_INGOT)
+                .criterion(hasItem(ModItems.FOOLS_GOLD_AXE), conditionsFromItem(ModItems.FOOLS_GOLD_AXE))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.CELESTIAL_GEARFORGED_AXE) + "celestial_gearforged_pickaxe"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CELESTIAL_GEARFORGED_SHOVEL)
+                .pattern(" 3 ")
+                .pattern(" 12")
+                .pattern(" 4 ")
+                .input('1', ModItems.FOOLS_GOLD_SHOVEL)
+                .input('2', ModItems.DIVINE_IMBUMENT_GEM)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', ModItems.FOOLS_GOLD_INGOT)
+                .criterion(hasItem(ModItems.FOOLS_GOLD_SHOVEL), conditionsFromItem(ModItems.FOOLS_GOLD_SHOVEL))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.CELESTIAL_GEARFORGED_SHOVEL) + "celestial_gearforged_shovel"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CELESTIAL_GEARFORGED_HOE)
+                .pattern("33 ")
+                .pattern(" 12")
+                .pattern(" 4 ")
+                .input('1', ModItems.FOOLS_GOLD_HOE)
+                .input('2', ModItems.DIVINE_IMBUMENT_GEM)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', ModItems.FOOLS_GOLD_INGOT)
+                .criterion(hasItem(ModItems.FOOLS_GOLD_HOE), conditionsFromItem(ModItems.FOOLS_GOLD_HOE))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.CELESTIAL_GEARFORGED_HOE) + "celestial_gearforged_hoe"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CELESTIAL_GEARFORGED_SWORD_SLIM)
+                .pattern(" 3 ")
+                .pattern(" 34")
+                .pattern("412")
+                .input('1', ModItems.FOOLS_GOLD_SWORD)
+                .input('2', ModItems.DIVINE_IMBUMENT_GEM)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', ModItems.FOOLS_GOLD_INGOT)
+                .criterion(hasItem(ModItems.FOOLS_GOLD_SWORD), conditionsFromItem(ModItems.FOOLS_GOLD_SWORD))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.CELESTIAL_GEARFORGED_SWORD_SLIM) + "celestial_gearforged_sword"));
+
+        //Sword smithing template to god sword
+        SmithingTransformRecipeJsonBuilder.create(
+                        Ingredient.ofItems(ModItems.CELESTIAL_GEARFORGED_SWORD_SLIM),
+                        Ingredient.ofItems(ModItems.DIVINITITE_ALLOY_LAVA_BUCKET),
+                        Ingredient.ofItems(ModItems.DIVINE_IMBUMENT_GEM),
+                        RecipeCategory.MISC,
+                        ModItems.CELESTIAL_GEARFORGED_SWORD
+                )
+                .criterion("has_celestial_gearforged_sword_slim", conditionsFromItem(ModItems.CELESTIAL_GEARFORGED_SWORD_SLIM))
+                .criterion("has_divinitie_alloy_lava_bucket", conditionsFromItem(ModItems.DIVINITITE_ALLOY_LAVA_BUCKET))
+                .criterion("has_divine_imbument_gem", conditionsFromItem(ModItems.DIVINE_IMBUMENT_GEM))
+                .offerTo(exporter, new Identifier("steamcraft", "celestial_gearforged_sword_smithing"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CELESTIAL_GEARFORGED_SHEARS)
+                .pattern("3 3")
+                .pattern("323")
+                .pattern("414")
+                .input('1', ModItems.FOOLS_GOLD_SHEARS)
+                .input('2', ModItems.DIVINE_IMBUMENT_GEM)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', ModItems.FOOLS_GOLD_INGOT)
+                .criterion(hasItem(ModItems.FOOLS_GOLD_SHEARS), conditionsFromItem(ModItems.FOOLS_GOLD_SHEARS))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.CELESTIAL_GEARFORGED_SHEARS) + "celestial_gearforged_shears"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CELESTIAL_GEARFORGED_SHIELD)
+                .pattern("3 4")
+                .pattern("313")
+                .pattern("423")
+                .input('1', ModItems.FOOLS_GOLD_SHIELD)
+                .input('2', ModItems.DIVINE_IMBUMENT_GEM)
+                .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
+                .input('4', ModItems.FOOLS_GOLD_INGOT)
+                .criterion(hasItem(ModItems.FOOLS_GOLD_SHIELD), conditionsFromItem(ModItems.FOOLS_GOLD_SHIELD))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.CELESTIAL_GEARFORGED_SHIELD) + "celestial_gearforged_shield"));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.DIVINITITE_ALLOY_INGOT)
                 .pattern("424")
@@ -443,110 +528,6 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('1', Items.RED_MUSHROOM_BLOCK)
                 .criterion(hasItem(Items.RED_MUSHROOM_BLOCK), conditionsFromItem(Items.RED_MUSHROOM_BLOCK))
                 .offerTo(exporter, new Identifier(getRecipeName(Items.MUSHROOM_STEM) + "red_mushroom_stem"));
-
-//Mould Duplicating
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.HELMET_MOULD, 2)
-                .pattern("121")
-                .pattern("131")
-                .pattern("111")
-                .input('1', ModItems.BLANK_MOULD)
-                .input('2', ModItems.HELMET_MOULD)
-                .input('3', Items.NETHERITE_HELMET)
-                .criterion(hasItem(ModItems.HELMET_MOULD), conditionsFromItem(ModItems.HELMET_MOULD))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.HELMET_MOULD)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CHESTPLATE_MOULD, 2)
-                .pattern("121")
-                .pattern("131")
-                .pattern("111")
-                .input('1', ModItems.BLANK_MOULD)
-                .input('2', ModItems.CHESTPLATE_MOULD)
-                .input('3', Items.NETHERITE_CHESTPLATE)
-                .criterion(hasItem(ModItems.CHESTPLATE_MOULD), conditionsFromItem(ModItems.CHESTPLATE_MOULD))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.CHESTPLATE_MOULD)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.LEGGINGS_MOULD, 2)
-                .pattern("121")
-                .pattern("131")
-                .pattern("111")
-                .input('1', ModItems.BLANK_MOULD)
-                .input('2', ModItems.LEGGINGS_MOULD)
-                .input('3', Items.NETHERITE_LEGGINGS)
-                .criterion(hasItem(ModItems.LEGGINGS_MOULD), conditionsFromItem(ModItems.LEGGINGS_MOULD))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.LEGGINGS_MOULD)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BOOTS_MOULD, 2)
-                .pattern("121")
-                .pattern("131")
-                .pattern("111")
-                .input('1', ModItems.BLANK_MOULD)
-                .input('2', ModItems.BOOTS_MOULD)
-                .input('3', Items.NETHERITE_BOOTS)
-                .criterion(hasItem(ModItems.BOOTS_MOULD), conditionsFromItem(ModItems.BOOTS_MOULD))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.BOOTS_MOULD)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BUCKET_MOULD, 2)
-                .pattern("121")
-                .pattern("131")
-                .pattern("111")
-                .input('1', ModItems.BLANK_MOULD)
-                .input('2', ModItems.BUCKET_MOULD)
-                .input('3', Items.BUCKET)
-                .criterion(hasItem(ModItems.BOOTS_MOULD), conditionsFromItem(ModItems.BUCKET_MOULD))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.BUCKET_MOULD)));
-
-//Smithing Table Recipies
-        //Fools Gold Helmet
-        SmithingTransformRecipeJsonBuilder.create(
-                        Ingredient.ofItems(ModItems.HELMET_MOULD),
-                        Ingredient.ofItems(ModBlocks.FOOLS_GOLD_BLOCK.asItem()),
-                        Ingredient.ofItems(ModItems.DIVINITITE_ALLOY_INGOT),
-                        RecipeCategory.COMBAT,
-                        ModItems.FOOLS_GOLD_HELMET
-                )
-                .criterion("has_helmet_mould", conditionsFromItem(ModItems.HELMET_MOULD))
-                .criterion("has_fools_gold_block", conditionsFromItem(ModBlocks.FOOLS_GOLD_BLOCK.asItem()))
-                .criterion("has_ancient_gem", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
-                .offerTo(exporter, new Identifier("steamcraft", "fools_gold_helmet_smithing"));
-
-        //Fools Gold Chestplate
-        SmithingTransformRecipeJsonBuilder.create(
-                        Ingredient.ofItems(ModItems.CHESTPLATE_MOULD),
-                        Ingredient.ofItems(ModBlocks.FOOLS_GOLD_BLOCK.asItem()),
-                        Ingredient.ofItems(ModItems.DIVINITITE_ALLOY_INGOT),
-                        RecipeCategory.COMBAT,
-                        ModItems.FOOLS_GOLD_CHESTPLATE
-                )
-                .criterion("has_chestplate_mould", conditionsFromItem(ModItems.CHESTPLATE_MOULD))
-                .criterion("has_fools_gold_block", conditionsFromItem(ModBlocks.FOOLS_GOLD_BLOCK.asItem()))
-                .criterion("has_ancient_gem", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
-                .offerTo(exporter, new Identifier("steamcraft", "fools_gold_chestplate_smithing"));
-
-        //Fools Gold Leggings
-        SmithingTransformRecipeJsonBuilder.create(
-                        Ingredient.ofItems(ModItems.LEGGINGS_MOULD),
-                        Ingredient.ofItems(ModBlocks.FOOLS_GOLD_BLOCK.asItem()),
-                        Ingredient.ofItems(ModItems.DIVINITITE_ALLOY_INGOT),
-                        RecipeCategory.COMBAT,
-                        ModItems.FOOLS_GOLD_LEGGINGS
-                )
-                .criterion("has_leggings_mould", conditionsFromItem(ModItems.LEGGINGS_MOULD))
-                .criterion("has_fools_gold_block", conditionsFromItem(ModBlocks.FOOLS_GOLD_BLOCK.asItem()))
-                .criterion("has_ancient_gem", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
-                .offerTo(exporter, new Identifier("steamcraft", "fools_gold_leggings_smithing"));
-
-        //Fools Gold Boots
-        SmithingTransformRecipeJsonBuilder.create(
-                        Ingredient.ofItems(ModItems.BOOTS_MOULD),
-                        Ingredient.ofItems(ModBlocks.FOOLS_GOLD_BLOCK.asItem()),
-                        Ingredient.ofItems(ModItems.DIVINITITE_ALLOY_INGOT),
-                        RecipeCategory.COMBAT,
-                        ModItems.FOOLS_GOLD_BOOTS
-                )
-                .criterion("has_boots_mould", conditionsFromItem(ModItems.BOOTS_MOULD))
-                .criterion("has_fools_gold_block", conditionsFromItem(ModBlocks.FOOLS_GOLD_BLOCK.asItem()))
-                .criterion("has_ancient_gem", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
-                .offerTo(exporter, new Identifier("steamcraft", "fools_gold_boots_smithing"));
 
         // Skeleton BoneMeal Recipes
         offerShapelessRecipe(exporter, Items.BONE_MEAL, ModBlocks.SKELETON_HEAD, "misc", 3);
@@ -1897,38 +1878,34 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
 //        });
 
         // Lava Bucket Smithing Recipes
-        dyeToLavaBucket.forEach((color, bucketItem) -> {
-            SmithingTransformRecipeJsonBuilder.create(
-                            Ingredient.ofItems(Items.LAVA_BUCKET),                           // base item
-                            Ingredient.ofItems(dyeItems.get(color)),                         // addition (dye)
-                            Ingredient.ofItems(ModItems.BUCKET_MOULD),   // template (none)
-                            RecipeCategory.MISC,
-                            bucketItem
-                    )
-                    .criterion("has_lava_bucket", conditionsFromItem(Items.LAVA_BUCKET))
-                    .criterion("has_dye", conditionsFromItem(dyeItems.get(color)))
-                    .offerTo(exporter, new Identifier("dyeableliquids", color + "_lava_bucket_smithing"));
-        });
+        dyeToLavaBucket.forEach((color, bucketItem) -> SmithingTransformRecipeJsonBuilder.create(
+                        Ingredient.ofItems(ModItems.BUCKET_MOULD),   // template (none)
+                        Ingredient.ofItems(dyeItems.get(color)),                         // addition (dye)
+                        Ingredient.ofItems(Items.LAVA_BUCKET),                           // base item
+                        RecipeCategory.MISC,
+                        bucketItem
+                )
+                .criterion("has_lava_bucket", conditionsFromItem(Items.LAVA_BUCKET))
+                .criterion("has_dye", conditionsFromItem(dyeItems.get(color)))
+                .offerTo(exporter, new Identifier("dyeableliquids", color + "_lava_bucket_smithing")));
 
         // Water Bucket Smithing Recipes
-        dyeToWaterBucket.forEach((color, bucketItem) -> {
-            SmithingTransformRecipeJsonBuilder.create(
-                            Ingredient.ofItems(Items.WATER_BUCKET),                          // base item
-                            Ingredient.ofItems(dyeItems.get(color)),                         // addition (dye)
-                            Ingredient.ofItems(ModItems.BUCKET_MOULD),   // template (none)
-                            RecipeCategory.MISC,
-                            bucketItem
-                    )
-                    .criterion("has_water_bucket", conditionsFromItem(Items.WATER_BUCKET))
-                    .criterion("has_dye", conditionsFromItem(dyeItems.get(color)))
-                    .offerTo(exporter, new Identifier("dyeableliquids", color + "_water_bucket_smithing"));
-        });
+        dyeToWaterBucket.forEach((color, bucketItem) -> SmithingTransformRecipeJsonBuilder.create(
+                        Ingredient.ofItems(ModItems.BUCKET_MOULD),   // template (none)
+                        Ingredient.ofItems(dyeItems.get(color)),                         // addition (dye)
+                        Ingredient.ofItems(Items.WATER_BUCKET),                          // base item
+                        RecipeCategory.MISC,
+                        bucketItem
+                )
+                .criterion("has_water_bucket", conditionsFromItem(Items.WATER_BUCKET))
+                .criterion("has_dye", conditionsFromItem(dyeItems.get(color)))
+                .offerTo(exporter, new Identifier("dyeableliquids", color + "_water_bucket_smithing")));
 
         //Fools Gold smithing template to liquid
         SmithingTransformRecipeJsonBuilder.create(
-                        Ingredient.ofItems(Items.LAVA_BUCKET),
-                        Ingredient.ofItems(ModBlocks.FOOLS_GOLD_BLOCK.asItem()),
                         Ingredient.ofItems(ModItems.BUCKET_MOULD),
+                        Ingredient.ofItems(ModBlocks.FOOLS_GOLD_BLOCK.asItem()),
+                        Ingredient.ofItems(Items.LAVA_BUCKET),
                         RecipeCategory.MISC,
                         ModItems.FOOLS_GOLD_LAVA_BUCKET
                 )
@@ -1939,9 +1916,9 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
 
         //Divinitite Alloy smithing template to liquid
         SmithingTransformRecipeJsonBuilder.create(
-                        Ingredient.ofItems(Items.LAVA_BUCKET),
-                        Ingredient.ofItems(ModBlocks.DIVINITITE_ALLOY_BLOCK.asItem()),
                         Ingredient.ofItems(ModItems.BUCKET_MOULD),
+                        Ingredient.ofItems(ModBlocks.DIVINITITE_ALLOY_BLOCK.asItem()),
+                        Ingredient.ofItems(Items.LAVA_BUCKET),
                         RecipeCategory.MISC,
                         ModItems.DIVINITITE_ALLOY_LAVA_BUCKET
                 )
@@ -2002,12 +1979,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         registerGlowRecipe(exporter, ModBlocks.LUSH_AGAPANTHUS_FLOWER_BLOCK, ModBlocks.GLOW_LUSH_AGAPANTHUS_FLOWER_BLOCK);
         registerGlowRecipe(exporter, ModBlocks.LUSH_BLUE_COSMOS_FLOWER_BLOCK, ModBlocks.GLOW_LUSH_BLUE_COSMOS_FLOWER_BLOCK);
 
-        registerFlowerToSeedRecipes(exporter);
     }
-
-
-
-
 
     private void registerGlowRecipe(Consumer<RecipeJsonProvider> exporter, Block baseFlower, Block glowFlower) {
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, glowFlower.asItem())
@@ -2017,6 +1989,90 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion("has_glowstone_dust", conditionsFromItem(Items.GLOWSTONE_DUST))
                 .offerTo(exporter);
     }
+
+    private void registerMouldRecipes(Consumer<RecipeJsonProvider> exporter) {
+        Map<Item, Item> mouldRecipes = Map.ofEntries(
+                Map.entry(ModItems.HELMET_MOULD, Items.NETHERITE_HELMET),
+                Map.entry(ModItems.CHESTPLATE_MOULD, Items.NETHERITE_CHESTPLATE),
+                Map.entry(ModItems.LEGGINGS_MOULD, Items.NETHERITE_LEGGINGS),
+                Map.entry(ModItems.BOOTS_MOULD, Items.NETHERITE_BOOTS),
+                Map.entry(ModItems.BUCKET_MOULD, Items.BUCKET),
+                Map.entry(ModItems.PICKAXE_MOULD, Items.NETHERITE_PICKAXE),
+                Map.entry(ModItems.AXE_MOULD, Items.NETHERITE_AXE),
+                Map.entry(ModItems.SHOVEL_MOULD, Items.NETHERITE_SHOVEL),
+                Map.entry(ModItems.HOE_MOULD, Items.NETHERITE_HOE),
+                Map.entry(ModItems.SWORD_MOULD, Items.NETHERITE_SWORD),
+                Map.entry(ModItems.SHEARS_MOULD, Items.SHEARS),
+                Map.entry(ModItems.SHIELD_MOULD, Items.SHIELD)
+        );
+
+        mouldRecipes.forEach((mouldItem, baseItem) -> offerMouldRecipe(exporter, mouldItem, baseItem));
+    }
+
+    private void offerMouldRecipe(Consumer<RecipeJsonProvider> exporter, Item outputMould, Item baseItem) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, outputMould, 2)
+                .pattern("121")
+                .pattern("131")
+                .pattern("111")
+                .input('1', ModItems.BLANK_MOULD)
+                .input('2', outputMould)
+                .input('3', baseItem)
+                .criterion("has_" + Registries.ITEM.getId(outputMould).getPath(), conditionsFromItem(outputMould))
+                .offerTo(exporter, new Identifier(getRecipeName(outputMould)));
+    }
+
+    private static String getRecipeName(Item item) {
+        return Registries.ITEM.getId(item).getPath();
+    }
+
+    private void registerFoolsGoldSmithingRecipes(Consumer<RecipeJsonProvider> exporter) {
+        Map<Item, String> tools = Map.ofEntries(
+                Map.entry(ModItems.FOOLS_GOLD_HELMET, "helmet"),
+                Map.entry(ModItems.FOOLS_GOLD_CHESTPLATE, "chestplate"),
+                Map.entry(ModItems.FOOLS_GOLD_LEGGINGS, "leggings"),
+                Map.entry(ModItems.FOOLS_GOLD_BOOTS, "boots"),
+
+                Map.entry(ModItems.FOOLS_GOLD_PICKAXE, "pickaxe"),
+                Map.entry(ModItems.FOOLS_GOLD_AXE, "axe"),
+                Map.entry(ModItems.FOOLS_GOLD_SHOVEL, "shovel"),
+                Map.entry(ModItems.FOOLS_GOLD_HOE, "hoe"),
+                Map.entry(ModItems.FOOLS_GOLD_SWORD, "sword"),
+                Map.entry(ModItems.FOOLS_GOLD_SHEARS, "shears"),
+                Map.entry(ModItems.FOOLS_GOLD_SHIELD, "shield")
+        );
+
+        tools.forEach((outputItem, mouldName) -> SmithingTransformRecipeJsonBuilder.create(
+                        Ingredient.ofItems(getMouldItem(mouldName)),
+                        Ingredient.ofItems(ModItems.FOOLS_GOLD_LAVA_BUCKET),
+                        Ingredient.ofItems(ModItems.DIVINITITE_ALLOY_INGOT),
+                        RecipeCategory.COMBAT,
+                        outputItem
+                )
+                .criterion("has_" + mouldName + "_mould", conditionsFromItem(getMouldItem(mouldName)))
+                .criterion("has_fools_gold_bucket", conditionsFromItem(ModItems.FOOLS_GOLD_LAVA_BUCKET))
+                .criterion("has_divinitite_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
+                .offerTo(exporter, new Identifier("steamcraft", "fools_gold_" + mouldName + "_smithing")));
+    }
+
+    private Item getMouldItem(String mouldName) {
+        return switch (mouldName) {
+            case "helmet" -> ModItems.HELMET_MOULD;
+            case "chestplate" -> ModItems.CHESTPLATE_MOULD;
+            case "leggings" -> ModItems.LEGGINGS_MOULD;
+            case "boots" -> ModItems.BOOTS_MOULD;
+
+            case "pickaxe" -> ModItems.PICKAXE_MOULD;
+            case "axe" -> ModItems.AXE_MOULD;
+            case "shovel" -> ModItems.SHOVEL_MOULD;
+            case "hoe" -> ModItems.HOE_MOULD;
+            case "sword" -> ModItems.SWORD_MOULD;
+            case "shears" -> ModItems.SHEARS_MOULD;
+            case "shield" -> ModItems.SHIELD_MOULD;
+            default -> throw new IllegalArgumentException("Unknown mould name: " + mouldName);
+        };
+    }
+
+
 
 
 

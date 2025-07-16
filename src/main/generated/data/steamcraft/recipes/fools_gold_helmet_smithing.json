@@ -4,7 +4,7 @@
     "item": "steamcraft:divinitite_alloy_ingot"
   },
   "base": {
-    "item": "steamcraft:fools_gold_block"
+    "item": "steamcraft:fools_gold_lava_bucket"
   },
   "result": {
     "item": "steamcraft:fools_gold_helmet"

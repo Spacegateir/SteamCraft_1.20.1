@@ -10,9 +10,10 @@ import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
 
-    CELESTIAL_GEARFORGED(5, -1, 12.0F, 4.0F, 1000, () -> Ingredient.ofItems(ModItems.DIVINITITE_ALLOY_INGOT)),
+    FOOLS_GOLD(MiningLevels.NETHERITE, 2531, 9.0F, 4.0F, 30, () -> Ingredient.ofItems(ModItems.FOOLS_GOLD_INGOT)),
 
-    NETHERITE(MiningLevels.NETHERITE, 2031, 9.0F, 4.0F, 15, () -> Ingredient.ofItems(Items.NETHERITE_INGOT));
+    CELESTIAL_GEARFORGED(5, -1, 12.0F, 4.0F, 1000, () -> Ingredient.ofItems(ModItems.DIVINITITE_ALLOY_INGOT));
+
 
     private final int miningLevel;
     private final int itemDurability;

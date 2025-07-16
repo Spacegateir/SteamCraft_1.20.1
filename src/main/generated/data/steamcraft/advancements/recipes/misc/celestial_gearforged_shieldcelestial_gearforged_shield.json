@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_fools_gold_shield": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "steamcraft:fools_gold_shield"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:celestial_gearforged_shieldcelestial_gearforged_shield"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_fools_gold_shield",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:celestial_gearforged_shieldcelestial_gearforged_shield"
+    ]
+  },
+  "sends_telemetry_event": false
+}

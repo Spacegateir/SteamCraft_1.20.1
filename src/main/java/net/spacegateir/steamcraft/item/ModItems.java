@@ -97,6 +97,21 @@ public class ModItems {
             new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
     public static final Item BOOTS_MOULD = registerItem("boots_mould",
             new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
+
+    public static final Item PICKAXE_MOULD = registerItem("pickaxe_mould",
+            new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
+    public static final Item AXE_MOULD = registerItem("axe_mould",
+            new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
+    public static final Item SHOVEL_MOULD = registerItem("shovel_mould",
+            new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
+    public static final Item HOE_MOULD = registerItem("hoe_mould",
+            new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
+    public static final Item SWORD_MOULD = registerItem("sword_mould",
+            new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
+    public static final Item SHEARS_MOULD = registerItem("shears_mould",
+            new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
+    public static final Item SHIELD_MOULD = registerItem("shield_mould",
+            new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
     public static final Item BUCKET_MOULD = registerItem("bucket_mould",
             new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
 
@@ -156,6 +171,22 @@ public class ModItems {
             new FoolsGoldArmourItem(ModArmorMaterials.FOOLS_GOLD, ArmorItem.Type.LEGGINGS, new FabricItemSettings().fireproof()));
     public static final Item FOOLS_GOLD_BOOTS = registerItem("fools_gold_boots",
             new FoolsGoldArmourItem(ModArmorMaterials.FOOLS_GOLD, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof()));
+
+    public static final Item FOOLS_GOLD_PICKAXE = registerItem("fools_gold_pickaxe",
+            new PickaxeItem(ModToolMaterials.FOOLS_GOLD, 1, -2.8F, new FabricItemSettings().fireproof()));
+    public static final Item FOOLS_GOLD_SHOVEL = registerItem("fools_gold_shovel",
+            new ShovelItem(ModToolMaterials.FOOLS_GOLD, 1.5F, -3.0F, new FabricItemSettings().fireproof()));
+    public static final Item FOOLS_GOLD_AXE = registerItem("fools_gold_axe",
+            new AxeItem(ModToolMaterials.FOOLS_GOLD, 5.0F, -3.0F, new FabricItemSettings().fireproof()));
+    public static final Item FOOLS_GOLD_HOE = registerItem("fools_gold_hoe",
+            new HoeItem(ModToolMaterials.FOOLS_GOLD, -4, 0.0F, new FabricItemSettings().fireproof()));
+    public static final Item FOOLS_GOLD_SWORD = registerItem("fools_gold_sword",
+            new SwordItem(ModToolMaterials.FOOLS_GOLD, 3, -2.4F, new FabricItemSettings().fireproof()));
+    public static final Item FOOLS_GOLD_SHEARS = registerItem("fools_gold_shears",
+            new ShearsItem(new FabricItemSettings().fireproof().maxCount(1)));
+    public static final Item FOOLS_GOLD_SHIELD = registerItem("fools_gold_shield",
+            new ShieldItem(new FabricItemSettings().fireproof().maxCount(1)));
+
 
     public static final Item CELESTIAL_GEARFORGED_HELMET = registerItem("celestial_gearforged_helmet",
             new CelestialGearforgedArmourItem(ModArmorMaterials.CELESTIAL_GEARFORGED, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof()));
@@ -538,6 +569,10 @@ public class ModItems {
     public static final Item SMOKE_BLOCK_ITEM = Registry.register(Registries.ITEM,
             new Identifier(Steamcraft.MOD_ID, "smoke_block_item"),
             new SmokeBlockItem(ModBlocks.SMOKE_BLOCK, new FabricItemSettings()));
+
+    public static final Item GLIMMERSTONE1_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glimmerstone1_item"),
+            new BlockItem(ModBlocks.GLIMMERSTONE1_BLOCK, new FabricItemSettings()));
 
     public static final Item GLIMMERSTONE_ITEM = Registry.register(Registries.ITEM,
             new Identifier(Steamcraft.MOD_ID, "glimmerstone_item"),

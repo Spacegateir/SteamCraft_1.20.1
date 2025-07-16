@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_fools_gold_axe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "steamcraft:fools_gold_axe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:celestial_gearforged_axecelestial_gearforged_pickaxe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_fools_gold_axe",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:celestial_gearforged_axecelestial_gearforged_pickaxe"
+    ]
+  },
+  "sends_telemetry_event": false
+}

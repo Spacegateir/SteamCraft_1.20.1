@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "steamcraft:fools_gold_shield"
+    },
+    "2": {
+      "item": "steamcraft:divine_imbument_gem"
+    },
+    "3": {
+      "item": "steamcraft:divinitite_alloy_ingot"
+    },
+    "4": {
+      "item": "steamcraft:fools_gold_ingot"
+    }
+  },
+  "pattern": [
+    "3 4",
+    "313",
+    "423"
+  ],
+  "result": {
+    "item": "steamcraft:celestial_gearforged_shield"
+  },
+  "show_notification": true
+}

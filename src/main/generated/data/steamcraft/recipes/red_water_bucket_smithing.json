@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smithing_transform",
   "addition": {
-    "item": "steamcraft:bucket_mould"
+    "item": "minecraft:water_bucket"
   },
   "base": {
     "item": "minecraft:red_dye"
@@ -10,6 +10,6 @@
     "item": "steamcraft:red_water_bucket"
   },
   "template": {
-    "item": "minecraft:water_bucket"
+    "item": "steamcraft:bucket_mould"
   }
 }

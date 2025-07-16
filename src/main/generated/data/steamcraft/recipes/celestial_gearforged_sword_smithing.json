@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "steamcraft:divine_imbument_gem"
+  },
+  "base": {
+    "item": "steamcraft:divinitite_alloy_lava_bucket"
+  },
+  "result": {
+    "item": "steamcraft:celestial_gearforged_sword"
+  },
+  "template": {
+    "item": "steamcraft:celestial_gearforged_sword_slim"
+  }
+}

@@ -380,11 +380,58 @@ public class ModLootTableModifiers {
                 .with(ItemEntry.builder(ModItems.BOOTS_MOULD))
                 .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
 
+        LootPool.Builder poolBuilder_bucket = LootPool.builder()
+                .rolls(ConstantLootNumberProvider.create(1))
+                .conditionally(RandomChanceLootCondition.builder(0.01f)) // Drops 1% of the time
+                .with(ItemEntry.builder(ModItems.BUCKET_MOULD))
+                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+
+        LootPool.Builder poolBuilder_pickaxe = LootPool.builder()
+                .rolls(ConstantLootNumberProvider.create(1))
+                .conditionally(RandomChanceLootCondition.builder(0.01f)) // Drops 1% of the time
+                .with(ItemEntry.builder(ModItems.PICKAXE_MOULD))
+                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+
+        LootPool.Builder poolBuilder_axe = LootPool.builder()
+                .rolls(ConstantLootNumberProvider.create(1))
+                .conditionally(RandomChanceLootCondition.builder(0.01f)) // Drops 1% of the time
+                .with(ItemEntry.builder(ModItems.AXE_MOULD))
+                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+
+        LootPool.Builder poolBuilder_shovel = LootPool.builder()
+                .rolls(ConstantLootNumberProvider.create(1))
+                .conditionally(RandomChanceLootCondition.builder(0.01f)) // Drops 1% of the time
+                .with(ItemEntry.builder(ModItems.SHOVEL_MOULD))
+                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+
+        LootPool.Builder poolBuilder_hoe = LootPool.builder()
+                .rolls(ConstantLootNumberProvider.create(1))
+                .conditionally(RandomChanceLootCondition.builder(0.01f)) // Drops 1% of the time
+                .with(ItemEntry.builder(ModItems.HOE_MOULD))
+                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+
+        LootPool.Builder poolBuilder_sword = LootPool.builder()
+                .rolls(ConstantLootNumberProvider.create(1))
+                .conditionally(RandomChanceLootCondition.builder(0.01f)) // Drops 1% of the time
+                .with(ItemEntry.builder(ModItems.SWORD_MOULD))
+                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+
+        LootPool.Builder poolBuilder_shears = LootPool.builder()
+                .rolls(ConstantLootNumberProvider.create(1))
+                .conditionally(RandomChanceLootCondition.builder(0.01f)) // Drops 1% of the time
+                .with(ItemEntry.builder(ModItems.SHEARS_MOULD))
+                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+
+        LootPool.Builder poolBuilder_shield = LootPool.builder()
+                .rolls(ConstantLootNumberProvider.create(1))
+                .conditionally(RandomChanceLootCondition.builder(0.01f)) // Drops 1% of the time
+                .with(ItemEntry.builder(ModItems.SHIELD_MOULD))
+                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+
         LootPool.Builder poolBuilder_20 = LootPool.builder()
                 .rolls(UniformLootNumberProvider.create(1.0f, 3.0f))
                 .conditionally(RandomChanceLootCondition.builder(0.2f)) // Drops 20% of the time
                 .with(ItemEntry.builder(ModItems.BLANK_MOULD))
-                .with(ItemEntry.builder(ModItems.BUCKET_MOULD))
                 .with(ItemEntry.builder(ModItems.CORE_OF_CHANGING))
                 .with(ItemEntry.builder(ModItems.TROWEL))
                 .with(ItemEntry.builder(ModItems.MORTAR_AND_PESTLE))
@@ -393,10 +440,10 @@ public class ModLootTableModifiers {
 
         LootPool.Builder poolBuilder_40 = LootPool.builder()
                 .rolls(ConstantLootNumberProvider.create(1))
-                .conditionally(RandomChanceLootCondition.builder(0.4f)) // Drops 50% of the time
+                .conditionally(RandomChanceLootCondition.builder(0.4f)) // Drops 40% of the time
                 .with(ItemEntry.builder(ModItems.BLANK_MOULD))
                 .with(ItemEntry.builder(ModItems.CORE_OF_CHANGING))
-                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(3.0f, 7.0f)).build());
+                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(3.0f, 10.0f)).build());
 
 
         tableBuilder.pool(poolBuilder_gem.build());
@@ -404,6 +451,16 @@ public class ModLootTableModifiers {
         tableBuilder.pool(poolBuilder_chestplate.build());
         tableBuilder.pool(poolBuilder_leggings.build());
         tableBuilder.pool(poolBuilder_boots.build());
+
+        tableBuilder.pool(poolBuilder_bucket.build());
+        tableBuilder.pool(poolBuilder_pickaxe.build());
+        tableBuilder.pool(poolBuilder_axe.build());
+        tableBuilder.pool(poolBuilder_shovel.build());
+        tableBuilder.pool(poolBuilder_hoe.build());
+        tableBuilder.pool(poolBuilder_sword.build());
+        tableBuilder.pool(poolBuilder_shears.build());
+        tableBuilder.pool(poolBuilder_shield.build());
+
         tableBuilder.pool(poolBuilder_20.build());
         tableBuilder.pool(poolBuilder_40.build());
     }

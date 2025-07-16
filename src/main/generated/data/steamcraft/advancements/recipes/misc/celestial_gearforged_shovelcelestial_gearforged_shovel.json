@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_fools_gold_shovel": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "steamcraft:fools_gold_shovel"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:celestial_gearforged_shovelcelestial_gearforged_shovel"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_fools_gold_shovel",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:celestial_gearforged_shovelcelestial_gearforged_shovel"
+    ]
+  },
+  "sends_telemetry_event": false
+}

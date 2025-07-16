@@ -12,6 +12,7 @@ public class ModModelPredicateProviderRegistry {
 
     public static void registerModelPredicates() {
 
+        registerCustomShield(ModItems.FOOLS_GOLD_SHIELD);
         registerCustomShield(ModItems.CELESTIAL_GEARFORGED_SHIELD);
     }
 

@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_boots_mould": {
+    "has_bucket_mould": {
       "conditions": {
         "items": [
           {
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_boots_mould",
+      "has_bucket_mould",
       "has_the_recipe"
     ]
   ],

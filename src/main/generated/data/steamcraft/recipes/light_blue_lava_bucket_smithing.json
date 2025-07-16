@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smithing_transform",
   "addition": {
-    "item": "steamcraft:bucket_mould"
+    "item": "minecraft:lava_bucket"
   },
   "base": {
     "item": "minecraft:light_blue_dye"
@@ -10,6 +10,6 @@
     "item": "steamcraft:light_blue_lava_bucket"
   },
   "template": {
-    "item": "minecraft:lava_bucket"
+    "item": "steamcraft:bucket_mould"
   }
 }

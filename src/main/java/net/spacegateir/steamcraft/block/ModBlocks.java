@@ -1193,6 +1193,10 @@ public class ModBlocks {
 
 
 
+    public static final Block GLIMMERSTONE1_BLOCK = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "glimmerstone1_block"),
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE)));
+
     public static final Block GLIMMERSTONE_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glimmerstone_block"),
             new Block(FabricBlockSettings.copyOf(Blocks.STONE)));

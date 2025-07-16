@@ -12,6 +12,13 @@
   "item.steamcraft.chestplate_mould": "Chestplate Mould",
   "item.steamcraft.leggings_mould": "Leggings Mould",
   "item.steamcraft.boots_mould": "Boots Mould",
+  "item.steamcraft.pickaxe_mould": "Pickaxe Mould",
+  "item.steamcraft.axe_mould": "Axe Mould",
+  "item.steamcraft.shovel_mould": "Shovel Mould",
+  "item.steamcraft.hoe_mould": "Hoe Mould",
+  "item.steamcraft.sword_mould": "Sword Mould",
+  "item.steamcraft.shears_mould": "Shears Mould",
+  "item.steamcraft.shield_mould": "Shield Mould",
   "item.steamcraft.bucket_mould": "Bucket Mould",
 
   "item.steamcraft.pattern_recompiler": "Pattern Recompiler",
@@ -58,6 +65,14 @@
   "item.steamcraft.fools_gold_chestplate": "§6Fools Gold Chestplate§r",
   "item.steamcraft.fools_gold_leggings": "§6Fools Gold Leggings§r",
   "item.steamcraft.fools_gold_boots": "§6Fools Gold Boots§r",
+
+  "item.steamcraft.fools_gold_pickaxe": "§6Fools Gold Pickaxe§r",
+  "item.steamcraft.fools_gold_shovel": "§6Fools Gold Shovel§r",
+  "item.steamcraft.fools_gold_axe": "§6Fools Gold Axe§r",
+  "item.steamcraft.fools_gold_hoe": "§6Fools Gold Hoe§r",
+  "item.steamcraft.fools_gold_shears": "§6Fools Gold Shears§r",
+  "item.steamcraft.fools_gold_sword": "§6Fools Gold Sword§r",
+  "item.steamcraft.fools_gold_shield": "§6Fools Gold Shield§r",
 
   "item.steamcraft.celestial_gearforged_helmet": "§6Celestial Gearforged Helmet§r",
   "item.steamcraft.celestial_gearforged_chestplate": "§6Celestial Gearforged Chestplate§r",

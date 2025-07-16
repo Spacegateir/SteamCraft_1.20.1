@@ -3,6 +3,8 @@ package net.spacegateir.steamcraft.item.armor;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
+import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
@@ -15,6 +17,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
+import net.minecraft.text.Text;
 import net.minecraft.world.World;
 import net.spacegateir.steamcraft.effect.ModEffects;
 import net.spacegateir.steamcraft.item.ModArmorMaterials;
@@ -27,6 +30,7 @@ import software.bernie.geckolib.core.animatable.instance.SingletonAnimatableInst
 import software.bernie.geckolib.core.animation.*;
 import software.bernie.geckolib.core.object.PlayState;
 
+import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 import java.util.function.Consumer;
@@ -59,6 +63,23 @@ public class CelestialGearforgedArmourItem extends ArmorItem implements GeoItem 
 
     public CelestialGearforgedArmourItem(ArmorMaterial material, Type type, Settings settings) {
         super(material, type, settings);
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
+        tooltip.add(Text.literal("§6Celestial Gearforged Armour Abilities:"));
+
+        if (Screen.hasShiftDown()) {
+            tooltip.add(Text.literal("§7- §eEffect §dBuff§7"));
+            tooltip.add(Text.literal("   §8• Immune to Harmful effects"));
+            tooltip.add(Text.literal("   §8• Step up one block unless Sneaking"));
+            tooltip.add(Text.literal("   §8• Frost Cancellation ability"));
+            tooltip.add(Text.literal("   §8• Fire Cancellation ability"));
+            tooltip.add(Text.literal("   §8• Water Breathing ability"));
+            tooltip.add(Text.literal("   §8• Buff entities ability (Haste, Jump boost, Speed, Water Breathing"));
+        } else {
+            tooltip.add(Text.literal("§7Hold §eShift §7for ability info"));
+        }
     }
 
     @Override

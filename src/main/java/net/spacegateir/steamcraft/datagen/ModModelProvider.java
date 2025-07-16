@@ -355,6 +355,13 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CHESTPLATE_MOULD, Models.GENERATED);
         itemModelGenerator.register(ModItems.LEGGINGS_MOULD, Models.GENERATED);
         itemModelGenerator.register(ModItems.BOOTS_MOULD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PICKAXE_MOULD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.AXE_MOULD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SHOVEL_MOULD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.HOE_MOULD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SWORD_MOULD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SHEARS_MOULD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SHIELD_MOULD, Models.GENERATED);
         itemModelGenerator.register(ModItems.BUCKET_MOULD, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.FOOLS_GOLD_SCRAP, Models.GENERATED);
@@ -385,6 +392,13 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.FOOLS_GOLD_CHESTPLATE));
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.FOOLS_GOLD_LEGGINGS));
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.FOOLS_GOLD_BOOTS));
+
+        itemModelGenerator.register(ModItems.FOOLS_GOLD_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.FOOLS_GOLD_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.FOOLS_GOLD_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.FOOLS_GOLD_HOE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.FOOLS_GOLD_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.FOOLS_GOLD_SHEARS, Models.HANDHELD);
 
         itemModelGenerator.register(ModItems.CELESTIAL_GEARFORGED_HELMET, Models.GENERATED);
         itemModelGenerator.register(ModItems.CELESTIAL_GEARFORGED_CHESTPLATE, Models.GENERATED);

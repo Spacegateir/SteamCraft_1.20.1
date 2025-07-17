@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "steamcraft:checkers_item"
+    }
+  ],
+  "result": {
+    "item": "steamcraft:checkers_played_item"
+  }
+}

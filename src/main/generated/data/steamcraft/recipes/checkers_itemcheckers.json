@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:smooth_basalt"
+    },
+    "L": {
+      "tag": "minecraft:logs"
+    },
+    "W": {
+      "item": "minecraft:smooth_quartz"
+    }
+  },
+  "pattern": [
+    "W B",
+    "LLL"
+  ],
+  "result": {
+    "item": "steamcraft:checkers_item"
+  },
+  "show_notification": true
+}

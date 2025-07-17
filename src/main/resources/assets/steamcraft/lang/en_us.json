@@ -472,6 +472,8 @@
   "block.steamcraft.glimmerstone_bricks_slab_block": "Glimmerstone Bricks Slab",
   "block.steamcraft.glimmerstone_bricks_wall_block": "Glimmerstone Bricks Wall",
 
+
+
   "block.steamcraft.white_lava_cauldron_block": "White Lava Cauldron",
   "block.steamcraft.white_water_cauldron_block": "White Water Cauldron",
   "block.steamcraft.black_lava_cauldron_block": "Black Lava Cauldron",
@@ -718,6 +720,16 @@
   "block.steamcraft.silver_trophy_block": "Silver Trophy",
   "item.steamcraft.gold_trophy_item": "Gold Trophy",
   "block.steamcraft.gold_trophy_block": "Gold Trophy",
+
+  "item.steamcraft.chess_item": "Chess Board",
+  "block.steamcraft.chess_block": "Chess Board",
+  "item.steamcraft.chess_played_item": "Chess Played Board",
+  "block.steamcraft.chess_played_block": "Chess Played Board",
+
+  "item.steamcraft.checkers_item": "Checkers Board",
+  "block.steamcraft.checkers_block": "Checkers Board",
+  "item.steamcraft.checkers_played_item": "Checkers Played Board",
+  "block.steamcraft.checkers_played_block": "Checkers Played Board",
 
 
 

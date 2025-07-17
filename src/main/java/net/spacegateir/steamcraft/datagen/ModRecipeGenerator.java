@@ -11,6 +11,7 @@ import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.Registries;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Identifier;
 import net.spacegateir.steamcraft.Steamcraft;
 import net.spacegateir.steamcraft.block.ModBlocks;
@@ -1691,6 +1692,50 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('I', ModItems.GLIMMERSTONE_BRICKS_ITEM)
                 .criterion("has_ingot", conditionsFromItem(ModItems.GLIMMERSTONE_BRICKS_ITEM))
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GLIMMERSTONE_BRICKS_WALL_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CHESS_ITEM)
+                .pattern("B W")
+                .pattern("LLL")
+                .input('B', Items.SMOOTH_BASALT)
+                .input('W', Items.SMOOTH_QUARTZ)
+                .input('L', ItemTags.LOGS)
+                .criterion("has_smooth_basalt", conditionsFromItem(Items.SMOOTH_BASALT))
+                .criterion("has_smooth_quartz", conditionsFromItem(Items.SMOOTH_QUARTZ))
+                .criterion("has_logs", conditionsFromTag(ItemTags.LOGS))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.CHESS_ITEM) + "chess"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CHESS_PLAYED_ITEM)
+                .input(ModItems.CHESS_ITEM)
+                .criterion("has_chess_item", conditionsFromItem(ModItems.CHESS_ITEM))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.CHESS_PLAYED_ITEM) + "chessp"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CHESS_ITEM)
+                .input(ModItems.CHESS_PLAYED_ITEM)
+                .criterion("has_chess_item", conditionsFromItem(ModItems.CHESS_PLAYED_ITEM))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.CHESS_ITEM) + "chesspp"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CHECKERS_ITEM)
+                .pattern("W B")
+                .pattern("LLL")
+                .input('B', Items.SMOOTH_BASALT)
+                .input('W', Items.SMOOTH_QUARTZ)
+                .input('L', ItemTags.LOGS)
+                .criterion("has_smooth_basalt", conditionsFromItem(Items.SMOOTH_BASALT))
+                .criterion("has_smooth_quartz", conditionsFromItem(Items.SMOOTH_QUARTZ))
+                .criterion("has_logs", conditionsFromTag(ItemTags.LOGS))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.CHECKERS_ITEM) + "checkers"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CHECKERS_PLAYED_ITEM)
+                .input(ModItems.CHECKERS_ITEM)
+                .criterion("has_checkers_item", conditionsFromItem(ModItems.CHECKERS_ITEM))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.CHECKERS_PLAYED_ITEM) + "checkersp"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CHECKERS_ITEM)
+                .input(ModItems.CHECKERS_PLAYED_ITEM)
+                .criterion("has_checkers_item", conditionsFromItem(ModItems.CHECKERS_PLAYED_ITEM))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.CHECKERS_ITEM) + "checkerspp"));
+
+
 
 
 

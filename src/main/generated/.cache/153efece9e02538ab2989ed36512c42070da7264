@@ -1,4 +1,4 @@
-// 1.20.1	2025-07-16T16:57:26.3114051	Steamcraft/Block Loot Tables
+// 1.20.1	2025-07-17T17:14:15.6909314	Steamcraft/Block Loot Tables
 4b434f9602c9c2f60246afcd159bc287d5f98c8c data\steamcraft\loot_tables\blocks\aether_coil_magenta.json
 490ef70f451d3872f02eda59b92dea235effffb9 data\steamcraft\loot_tables\blocks\cursed_totem_block.json
 9c1fefe38fe0a53cdf96ff3bde2e97e89e33b98f data\steamcraft\loot_tables\blocks\gray_water_cauldron_block.json
@@ -64,8 +64,8 @@ ea16927ad9868d782d98cee061deb3f88e578006 data\steamcraft\loot_tables\blocks\lush
 8c4e43860bd7e31f62c7025cdfc4352c77422836 data\steamcraft\loot_tables\blocks\glow_thorned_dahlia_flower.json
 626302dcc3384deb6bfb081a28589e40bf757de9 data\steamcraft\loot_tables\blocks\skeleton_arms_cross.json
 e48ec1c865f297f87d4fdab07fab1364d950c98c data\steamcraft\loot_tables\blocks\thorned_delphinium_flower.json
-0abe4f1f78113e3f6f75cf66bfa24fec75e47b8e data\steamcraft\loot_tables\blocks\glimmerstone_bricks_wall_block.json
 40d54c84b77906796b75bacdae5e1d9f9bd9b1d0 data\steamcraft\loot_tables\blocks\glow_thorned_midnight_mystic_flower.json
+0abe4f1f78113e3f6f75cf66bfa24fec75e47b8e data\steamcraft\loot_tables\blocks\glimmerstone_bricks_wall_block.json
 d752faee77b6bb48abf0bb86c15dc9d3efdaea30 data\steamcraft\loot_tables\blocks\arcane_conduit_block.json
 5d5e0b953f61f93b91f718d86dfb5898c77baf23 data\steamcraft\loot_tables\blocks\glow_midnight_mystic_flower.json
 ebd970b7f4feba62467d715d32dbc2429980a41d data\steamcraft\loot_tables\blocks\arcane_blindness_block.json

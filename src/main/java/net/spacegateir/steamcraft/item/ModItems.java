@@ -570,10 +570,6 @@ public class ModItems {
             new Identifier(Steamcraft.MOD_ID, "smoke_block_item"),
             new SmokeBlockItem(ModBlocks.SMOKE_BLOCK, new FabricItemSettings()));
 
-    public static final Item GLIMMERSTONE1_ITEM = Registry.register(Registries.ITEM,
-            new Identifier(Steamcraft.MOD_ID, "glimmerstone1_item"),
-            new BlockItem(ModBlocks.GLIMMERSTONE1_BLOCK, new FabricItemSettings()));
-
     public static final Item GLIMMERSTONE_ITEM = Registry.register(Registries.ITEM,
             new Identifier(Steamcraft.MOD_ID, "glimmerstone_item"),
             new BlockItem(ModBlocks.GLIMMERSTONE_BLOCK, new FabricItemSettings()));
@@ -768,10 +764,22 @@ public class ModItems {
     public static final Item EARTH_SPIKE_ITEM = Registry.register(Registries.ITEM,
             new Identifier(Steamcraft.MOD_ID, "earth_spike_item"),
             new BlockItem(ModBlocks.EARTH_SPIKE_BLOCK, new FabricItemSettings()));
-
     public static final Item EARTH_WALL_ITEM = Registry.register(Registries.ITEM,
             new Identifier(Steamcraft.MOD_ID, "earth_wall_item"),
             new BlockItem(ModBlocks.EARTH_WALL_BLOCK, new FabricItemSettings()));
+
+    public static final Item CHESS_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "chess_item"),
+            new BlockItem(ModBlocks.CHESS_BLOCK, new FabricItemSettings()));
+    public static final Item CHESS_PLAYED_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "chess_played_item"),
+            new BlockItem(ModBlocks.CHESS_PLAYED_BLOCK, new FabricItemSettings()));
+    public static final Item CHECKERS_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "checkers_item"),
+            new BlockItem(ModBlocks.CHECKERS_BLOCK, new FabricItemSettings()));
+    public static final Item CHECKERS_PLAYED_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "checkers_played_item"),
+            new BlockItem(ModBlocks.CHECKERS_PLAYED_BLOCK, new FabricItemSettings()));
 
 
 

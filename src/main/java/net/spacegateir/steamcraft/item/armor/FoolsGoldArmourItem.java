@@ -1,6 +1,8 @@
 package net.spacegateir.steamcraft.item.armor;
 
 import com.google.common.collect.ImmutableMap;
+import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -13,6 +15,7 @@ import net.minecraft.text.Text;
 import net.minecraft.world.World;
 import net.spacegateir.steamcraft.item.ModArmorMaterials;
 
+import java.util.List;
 import java.util.Map;
 
 public class FoolsGoldArmourItem extends ArmorItem {
@@ -25,6 +28,21 @@ public class FoolsGoldArmourItem extends ArmorItem {
     public FoolsGoldArmourItem(ArmorMaterial material, Type type, Settings settings) {
         super(material, type, settings);
     }
+
+    @Override
+    public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
+        tooltip.add(Text.literal("§6Fool's Gold Armour§r"));
+
+        if (Screen.hasShiftDown()) {
+            tooltip.add(Text.literal("§7- §dGreatness cracks before it shines, and from ruin, power is born.§7"));
+            tooltip.add(Text.literal("   §8• Gather the golden shards as your armour fractures."));
+            tooltip.add(Text.literal("   §8• Fragments of the weak forge tools of the mighty."));
+            tooltip.add(Text.literal("   §8• Craft divine weapons and unlock secrets unknown."));
+        } else {
+            tooltip.add(Text.literal("§7Hold §eShift §7for more information."));
+        }
+    }
+
 
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {

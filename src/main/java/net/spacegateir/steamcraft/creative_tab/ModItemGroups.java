@@ -96,7 +96,6 @@ public class ModItemGroups {
                         entries.add(ModItems.CELESTIAL_GEARFORGED_SWORD);
                         entries.add(ModItems.CELESTIAL_GEARFORGED_SHIELD);
 
-
                         entries.add(ModItems.FOOLS_GOLD_HELMET_1);
                         entries.add(ModItems.FOOLS_GOLD_HELMET_2);
                         entries.add(ModItems.FOOLS_GOLD_HELMET_3);
@@ -248,8 +247,6 @@ public class ModItemGroups {
                         entries.add(ModItems.GLIMMERSTONE_COBBLESTONE_SLAB_ITEM);
                         entries.add(ModItems.GLIMMERSTONE_COBBLESTONE_WALL_ITEM);
 
-//                        entries.add(ModItems.GLIMMERSTONE1_ITEM);
-
                         entries.add(ModItems.GLIMMERSTONE_ITEM);
                         entries.add(ModItems.GLIMMERSTONE_STAIR_ITEM);
                         entries.add(ModItems.GLIMMERSTONE_SLAB_ITEM);
@@ -302,6 +299,11 @@ public class ModItemGroups {
                         entries.add(ModBlocks.SNOW_BRICKS_CRACKED);
                         entries.add(ModBlocks.SNOW_TILES);
                         entries.add(ModBlocks.SNOW_TILES_CRACKED);
+
+                        entries.add(ModItems.CHECKERS_ITEM);
+                        entries.add(ModItems.CHECKERS_PLAYED_ITEM);
+                        entries.add(ModItems.CHESS_ITEM);
+                        entries.add(ModItems.CHESS_PLAYED_ITEM);
 
 
 

@@ -185,7 +185,7 @@ public class ModItems {
     public static final Item FOOLS_GOLD_SHEARS = registerItem("fools_gold_shears",
             new ShearsItem(new FabricItemSettings().fireproof().maxCount(1)));
     public static final Item FOOLS_GOLD_SHIELD = registerItem("fools_gold_shield",
-            new ShieldItem(new FabricItemSettings().fireproof().maxCount(1)));
+            new ShieldItem(new FabricItemSettings().fireproof().maxCount(1).maxDamage(2531)));
 
 
     public static final Item CELESTIAL_GEARFORGED_HELMET = registerItem("celestial_gearforged_helmet",

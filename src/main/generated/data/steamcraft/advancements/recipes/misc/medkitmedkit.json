@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_chess_item": {
+    "has_iron_ingot": {
       "conditions": {
         "items": [
           {
             "items": [
-              "steamcraft:chess_item"
+              "minecraft:iron_ingot"
             ]
           }
         ]
@@ -15,20 +15,31 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:chess_played_itemchessp"
+        "recipe": "minecraft:medkitmedkit"
       },
       "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_wool": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "minecraft:wool"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "requirements": [
     [
-      "has_chess_item",
+      "has_iron_ingot",
+      "has_wool",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:chess_played_itemchessp"
+      "minecraft:medkitmedkit"
     ]
   },
   "sends_telemetry_event": false

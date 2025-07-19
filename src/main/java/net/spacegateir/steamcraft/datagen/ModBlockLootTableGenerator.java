@@ -501,6 +501,11 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.MORTAR_AND_PESTLE_BLOCK);
 
+        addDrop(ModBlocks.GAMEBOARD_BLOCK);
+        addDrop(ModBlocks.MEDKIT);
+        addDrop(ModBlocks.POT);
+        addDrop(ModBlocks.PAN);
+
         addDrop(ModBlocks.PARTICIPATION_TROPHY_BLOCK);
         addDrop(ModBlocks.COPPER_TROPHY_BLOCK);
         addDrop(ModBlocks.SILVER_TROPHY_BLOCK);

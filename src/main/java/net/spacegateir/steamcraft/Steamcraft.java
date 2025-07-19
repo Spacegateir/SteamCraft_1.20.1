@@ -58,6 +58,7 @@ public class Steamcraft implements ModInitializer {
 
 		ModServerPackets.register();
 		ModPackets.registerC2SPackets();
+		ModPackets.registerServerReceivers();
 
 		AxeBlockBreakHandler.register();
 		AxeBlockStripHandler.register();

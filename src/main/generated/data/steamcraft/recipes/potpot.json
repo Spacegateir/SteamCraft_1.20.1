@@ -2,22 +2,20 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "B": {
-      "item": "minecraft:smooth_basalt"
+    "I": {
+      "item": "minecraft:iron_ingot"
     },
     "L": {
       "tag": "minecraft:logs"
-    },
-    "W": {
-      "item": "minecraft:smooth_quartz"
     }
   },
   "pattern": [
-    "W B",
-    "LLL"
+    "   ",
+    "LIL",
+    " I "
   ],
   "result": {
-    "item": "steamcraft:checkers_item"
+    "item": "steamcraft:pot"
   },
   "show_notification": true
 }

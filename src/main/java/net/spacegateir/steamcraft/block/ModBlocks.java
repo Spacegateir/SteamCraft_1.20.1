@@ -1368,18 +1368,16 @@ public class ModBlocks {
             new Identifier(Steamcraft.MOD_ID, "silver_block"),
             new Block(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK).nonOpaque()));
 
-    public static final Block CHECKERS_BLOCK = Registry.register(Registries.BLOCK,
-            new Identifier(Steamcraft.MOD_ID, "checkers_block"),
-            new GameBlock(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK).nonOpaque()));
-    public static final Block CHECKERS_PLAYED_BLOCK = Registry.register(Registries.BLOCK,
-            new Identifier(Steamcraft.MOD_ID, "checkers_played_block"),
-            new GameBlock(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK).nonOpaque()));
-    public static final Block CHESS_BLOCK = Registry.register(Registries.BLOCK,
-            new Identifier(Steamcraft.MOD_ID, "chess_block"),
-            new GameBlock(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK).nonOpaque()));
-    public static final Block CHESS_PLAYED_BLOCK = Registry.register(Registries.BLOCK,
-            new Identifier(Steamcraft.MOD_ID, "chess_played_block"),
-            new GameBlock(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK).nonOpaque()));
+    public static final Block MEDKIT = registerBlock("medkit",
+            new MedkitBlock(FabricBlockSettings.copyOf(Blocks.STONE).nonOpaque()));
+    public static final Block PAN = registerBlock("pan",
+            new PanBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque()));
+    public static final Block POT = registerBlock("pot",
+            new PotBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque()));
+
+    public static final Block GAMEBOARD_BLOCK = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "gameboard_block"),
+            new GameBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).nonOpaque()));
 
     public static final Block FARMLAND_ENRICHED_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "farmland_enriched_block"),

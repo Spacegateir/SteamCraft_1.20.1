@@ -6,13 +6,9 @@ public class ToDo {
     // Keep a Wiki Record so people know how to play the mod
     // ON THE CURSED FORGE SITE EXPLAIN HOW TO PLAY THE MOD
 
-    // chess and checkers boards not roatationg directionaly
-
     // add animal tail and ears cosmetics
 
     // god horse armour, elytra, trident, fishing rod
-
-    // MODIFY THE CRAFTING RECIPE FOR THE GOD ARMOR (halo)
 
     // create dimensions (earth copy, void, waterworld, skulk, overworld neather type, sky dimension)
 
@@ -44,7 +40,7 @@ public class ToDo {
 
 
 
-
+    // TODO
 
 
 

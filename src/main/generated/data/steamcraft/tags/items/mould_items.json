@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "steamcraft:helmet_mould",
+    "steamcraft:chestplate_mould",
+    "steamcraft:leggings_mould",
+    "steamcraft:boots_mould",
+    "steamcraft:pickaxe_mould",
+    "steamcraft:axe_mould",
+    "steamcraft:shovel_mould",
+    "steamcraft:hoe_mould",
+    "steamcraft:sword_mould",
+    "steamcraft:shears_mould",
+    "steamcraft:shield_mould",
+    "steamcraft:bucket_mould",
+    "steamcraft:blank_mould"
+  ]
+}

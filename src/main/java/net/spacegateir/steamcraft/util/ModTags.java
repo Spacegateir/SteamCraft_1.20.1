@@ -38,6 +38,7 @@ public class ModTags {
         public static final TagKey<Item> FLOWER_SEEDS = createItemTag("flower_seeds");
         public static final TagKey<Item> AETHER_COIL = createItemTag("aether_coil");
         public static final TagKey<Item> ANCIENT_GEMS = createItemTag("ancient_gems");
+        public static final TagKey<Item> MOULD_ITEMS = createItemTag("mould_items");
 
         private static TagKey<Item> createItemTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, new Identifier(Steamcraft.MOD_ID, name));

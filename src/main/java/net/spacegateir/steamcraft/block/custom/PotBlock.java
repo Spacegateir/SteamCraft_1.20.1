@@ -6,7 +6,6 @@ import net.minecraft.block.ShapeContext;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
-import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.BlockMirror;
 import net.minecraft.util.BlockRotation;
@@ -20,32 +19,29 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.stream.Stream;
 
-public class GameBlock extends Block {
+public class PotBlock extends Block {
 
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
-    public static final IntProperty VARIANT = IntProperty.of("variant", 0, 3);
 
     public static final VoxelShape NORTH_SHAPE = Stream.of(
-            Block.createCuboidShape(0, 0, 0, 16, 4, 16)
+            Block.createCuboidShape(4, 0, 4, 12, 8, 12)
     ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
 
     public static final VoxelShape EAST_SHAPE = Stream.of(
-            Block.createCuboidShape(0, 0, 0, 16, 4, 16)
+            Block.createCuboidShape(4, 0, 4, 12, 8, 12)
     ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
 
     public static final VoxelShape SOUTH_SHAPE = Stream.of(
-            Block.createCuboidShape(0, 0, 0, 16, 4, 16)
+            Block.createCuboidShape(4, 0, 4, 12, 8, 12)
     ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
 
     public static final VoxelShape WEST_SHAPE = Stream.of(
-            Block.createCuboidShape(0, 0, 0, 16, 4, 16)
+            Block.createCuboidShape(4, 0, 4, 12, 8, 12)
     ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
 
-    public GameBlock(Settings settings) {
+    public PotBlock(Settings settings) {
         super(settings.nonOpaque());
-        this.setDefaultState(this.stateManager.getDefaultState()
-                .with(FACING, Direction.NORTH)
-                .with(VARIANT, 0));
+        this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.NORTH));
     }
 
     @Override
@@ -67,10 +63,7 @@ public class GameBlock extends Block {
     @Nullable
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
-        int randomVariant = ctx.getWorld().random.nextInt(4);   // increase this number to add more variants
-        return this.getDefaultState()
-                .with(FACING, ctx.getHorizontalPlayerFacing())
-                .with(VARIANT, randomVariant);
+        return this.getDefaultState().with(FACING, ctx.getHorizontalPlayerFacing());
     }
 
 
@@ -86,6 +79,6 @@ public class GameBlock extends Block {
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(FACING, VARIANT);
+        builder.add(FACING);
     }
 }

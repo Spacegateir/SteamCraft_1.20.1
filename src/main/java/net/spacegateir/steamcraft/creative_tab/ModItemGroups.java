@@ -300,10 +300,11 @@ public class ModItemGroups {
                         entries.add(ModBlocks.SNOW_TILES);
                         entries.add(ModBlocks.SNOW_TILES_CRACKED);
 
-                        entries.add(ModItems.CHECKERS_ITEM);
-                        entries.add(ModItems.CHECKERS_PLAYED_ITEM);
-                        entries.add(ModItems.CHESS_ITEM);
-                        entries.add(ModItems.CHESS_PLAYED_ITEM);
+                        entries.add(ModItems.GAMEBOARD_ITEM);
+
+                        entries.add(ModBlocks.MEDKIT);
+                        entries.add(ModBlocks.POT);
+                        entries.add(ModBlocks.PAN);
 
 
 

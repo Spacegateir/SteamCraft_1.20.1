@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "W": {
+      "tag": "minecraft:wool"
+    }
+  },
+  "pattern": [
+    "W  ",
+    "IIW",
+    "II "
+  ],
+  "result": {
+    "item": "steamcraft:medkit"
+  },
+  "show_notification": true
+}

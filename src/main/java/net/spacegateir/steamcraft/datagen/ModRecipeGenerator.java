@@ -1693,7 +1693,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion("has_ingot", conditionsFromItem(ModItems.GLIMMERSTONE_BRICKS_ITEM))
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GLIMMERSTONE_BRICKS_WALL_BLOCK)));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CHESS_ITEM)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.GAMEBOARD_ITEM)
                 .pattern("B W")
                 .pattern("LLL")
                 .input('B', Items.SMOOTH_BASALT)
@@ -1702,38 +1702,37 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion("has_smooth_basalt", conditionsFromItem(Items.SMOOTH_BASALT))
                 .criterion("has_smooth_quartz", conditionsFromItem(Items.SMOOTH_QUARTZ))
                 .criterion("has_logs", conditionsFromTag(ItemTags.LOGS))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.CHESS_ITEM) + "chess"));
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.GAMEBOARD_ITEM) + "game_board"));
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CHESS_PLAYED_ITEM)
-                .input(ModItems.CHESS_ITEM)
-                .criterion("has_chess_item", conditionsFromItem(ModItems.CHESS_ITEM))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.CHESS_PLAYED_ITEM) + "chessp"));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CHESS_ITEM)
-                .input(ModItems.CHESS_PLAYED_ITEM)
-                .criterion("has_chess_item", conditionsFromItem(ModItems.CHESS_PLAYED_ITEM))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.CHESS_ITEM) + "chesspp"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CHECKERS_ITEM)
-                .pattern("W B")
-                .pattern("LLL")
-                .input('B', Items.SMOOTH_BASALT)
-                .input('W', Items.SMOOTH_QUARTZ)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.PAN)
+                .pattern("II ")
+                .pattern("II ")
+                .pattern("  L")
+                .input('I', Items.IRON_INGOT)
                 .input('L', ItemTags.LOGS)
-                .criterion("has_smooth_basalt", conditionsFromItem(Items.SMOOTH_BASALT))
-                .criterion("has_smooth_quartz", conditionsFromItem(Items.SMOOTH_QUARTZ))
+                .criterion("has_iron_ingot", conditionsFromItem(Items.IRON_INGOT))
                 .criterion("has_logs", conditionsFromTag(ItemTags.LOGS))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.CHECKERS_ITEM) + "checkers"));
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.PAN) + "pan"));
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CHECKERS_PLAYED_ITEM)
-                .input(ModItems.CHECKERS_ITEM)
-                .criterion("has_checkers_item", conditionsFromItem(ModItems.CHECKERS_ITEM))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.CHECKERS_PLAYED_ITEM) + "checkersp"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.POT)
+                .pattern("   ")
+                .pattern("LIL")
+                .pattern(" I ")
+                .input('I', Items.IRON_INGOT)
+                .input('L', ItemTags.LOGS)
+                .criterion("has_iron_ingot", conditionsFromItem(Items.IRON_INGOT))
+                .criterion("has_logs", conditionsFromTag(ItemTags.LOGS))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.POT) + "pot"));
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CHECKERS_ITEM)
-                .input(ModItems.CHECKERS_PLAYED_ITEM)
-                .criterion("has_checkers_item", conditionsFromItem(ModItems.CHECKERS_PLAYED_ITEM))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.CHECKERS_ITEM) + "checkerspp"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.MEDKIT)
+                .pattern("W  ")
+                .pattern("IIW")
+                .pattern("II ")
+                .input('I', Items.IRON_INGOT)
+                .input('W', ItemTags.WOOL)
+                .criterion("has_iron_ingot", conditionsFromItem(Items.IRON_INGOT))
+                .criterion("has_wool", conditionsFromTag(ItemTags.WOOL))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.MEDKIT) + "medkit"));
 
 
 

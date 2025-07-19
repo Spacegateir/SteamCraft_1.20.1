@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "facing=north": { "model": "steamcraft:block/chess_played_block" },
-    "facing=south": { "model": "steamcraft:block/chess_played_block", "y": 180 },
-    "facing=west":  { "model": "steamcraft:block/chess_played_block", "y": 270 },
-    "facing=east":  { "model": "steamcraft:block/chess_played_block", "y": 90 }
-  }
-}

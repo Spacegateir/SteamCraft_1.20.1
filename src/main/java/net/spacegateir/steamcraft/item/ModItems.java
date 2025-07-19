@@ -768,18 +768,9 @@ public class ModItems {
             new Identifier(Steamcraft.MOD_ID, "earth_wall_item"),
             new BlockItem(ModBlocks.EARTH_WALL_BLOCK, new FabricItemSettings()));
 
-    public static final Item CHESS_ITEM = Registry.register(Registries.ITEM,
-            new Identifier(Steamcraft.MOD_ID, "chess_item"),
-            new BlockItem(ModBlocks.CHESS_BLOCK, new FabricItemSettings()));
-    public static final Item CHESS_PLAYED_ITEM = Registry.register(Registries.ITEM,
-            new Identifier(Steamcraft.MOD_ID, "chess_played_item"),
-            new BlockItem(ModBlocks.CHESS_PLAYED_BLOCK, new FabricItemSettings()));
-    public static final Item CHECKERS_ITEM = Registry.register(Registries.ITEM,
-            new Identifier(Steamcraft.MOD_ID, "checkers_item"),
-            new BlockItem(ModBlocks.CHECKERS_BLOCK, new FabricItemSettings()));
-    public static final Item CHECKERS_PLAYED_ITEM = Registry.register(Registries.ITEM,
-            new Identifier(Steamcraft.MOD_ID, "checkers_played_item"),
-            new BlockItem(ModBlocks.CHECKERS_PLAYED_BLOCK, new FabricItemSettings()));
+    public static final Item GAMEBOARD_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "gameboard_item"),
+            new BlockItem(ModBlocks.GAMEBOARD_BLOCK, new FabricItemSettings()));
 
 
 

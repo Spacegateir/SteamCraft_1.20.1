@@ -1,13 +1,23 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_chess_item": {
+    "has_iron_ingot": {
       "conditions": {
         "items": [
           {
             "items": [
-              "steamcraft:chess_played_item"
+              "minecraft:iron_ingot"
             ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_logs": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "minecraft:logs"
           }
         ]
       },
@@ -15,20 +25,21 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:chess_itemchesspp"
+        "recipe": "minecraft:panpan"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_chess_item",
+      "has_iron_ingot",
+      "has_logs",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:chess_itemchesspp"
+      "minecraft:panpan"
     ]
   },
   "sends_telemetry_event": false

@@ -47,6 +47,11 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                     net.minecraft.registry.Registries.ITEM.getKey(),
                     new Identifier("steamcraft", "trophy_items")
             );
+
+            public static final TagKey<Item> MOULD_ITEMS = TagKey.of(
+                    net.minecraft.registry.Registries.ITEM.getKey(),
+                    new Identifier("steamcraft", "mould_items")
+            );
         }
     }
 
@@ -99,6 +104,21 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModRewardItems.SILVER_TROPHY_ITEM)
                 .add(ModRewardItems.COPPER_TROPHY_ITEM)
                 .add(ModRewardItems.PARTICIPATION_TROPHY_ITEM);
+
+        getOrCreateTagBuilder(ModTags.Items.MOULD_ITEMS)
+                .add(ModItems.HELMET_MOULD)
+                .add(ModItems.CHESTPLATE_MOULD)
+                .add(ModItems.LEGGINGS_MOULD)
+                .add(ModItems.BOOTS_MOULD)
+                .add(ModItems.PICKAXE_MOULD)
+                .add(ModItems.AXE_MOULD)
+                .add(ModItems.SHOVEL_MOULD)
+                .add(ModItems.HOE_MOULD)
+                .add(ModItems.SWORD_MOULD)
+                .add(ModItems.SHEARS_MOULD)
+                .add(ModItems.SHIELD_MOULD)
+                .add(ModItems.BUCKET_MOULD)
+                .add(ModItems.BLANK_MOULD);
 
 
         // Dynamic seed tag registration

@@ -1,5 +1,6 @@
 package net.spacegateir.steamcraft.item.armor;
 
+import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.client.network.ClientPlayerEntity;
@@ -11,9 +12,12 @@ import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
+import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.Vec3d;
+import net.minecraft.world.RaycastContext;
 import net.minecraft.world.World;
 import net.spacegateir.steamcraft.item.client.winged_sandals.WingedSandalsRenderer;
 import org.jetbrains.annotations.Nullable;
@@ -23,6 +27,10 @@ import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache
 import software.bernie.geckolib.core.animatable.instance.SingletonAnimatableInstanceCache;
 import software.bernie.geckolib.core.animation.*;
 import software.bernie.geckolib.core.object.PlayState;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
+import net.minecraft.network.PacketByteBuf;
+import net.spacegateir.steamcraft.network.ModPackets;
+
 
 import java.util.List;
 import java.util.function.Consumer;
@@ -42,14 +50,20 @@ public class WingedSandalsCosmeticItem extends ArmorItem implements GeoItem {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        if(Screen.hasShiftDown()) {
+        if (Screen.hasShiftDown()) {
             tooltip.add(Text.translatable("tooltip.steamcraft.winged_sandals.tooltip.shift_1"));
             tooltip.add(Text.translatable("tooltip.steamcraft.winged_sandals.tooltip.shift_2"));
             tooltip.add(Text.translatable("tooltip.steamcraft.winged_sandals.tooltip.shift_3"));
+
+            long timeLeft = Math.max(0, (DASH_COOLDOWN_MS - (System.currentTimeMillis() - lastDashTime)) / 1000);
+            if (timeLeft > 0) {
+                tooltip.add(Text.literal("§cDash Cooldown: " + timeLeft + "s"));
+            } else {
+                tooltip.add(Text.literal("§aDash Ready!"));
+            }
         } else {
             tooltip.add(Text.translatable("tooltip.steamcraft.winged_sandals.tooltip"));
         }
-
     }
 
     @Override
@@ -91,40 +105,15 @@ public class WingedSandalsCosmeticItem extends ArmorItem implements GeoItem {
     }
 
     public void handleMovement(ClientPlayerEntity player) {
-
         boolean isJumpingNow = player.input.sneaking && player.input.jumping;
         long currentTime = System.currentTimeMillis();
 
         if (isJumpingNow && !player.isOnGround() && (currentTime - lastDashTime > DASH_COOLDOWN_MS)) {
-            if (player.getHungerManager().getFoodLevel() >= 10) {
+            // Send dash activation to server
+            PacketByteBuf buf = PacketByteBufs.create();
+            ClientPlayNetworking.send(ModPackets.WINGED_SANDALS_DASH_PACKET_ID, buf);
 
-                Vec3d forward = player.getRotationVec(1.0F).normalize().multiply(100.0); // Balanced dash distance
-                Vec3d dashTo = new Vec3d(player.getX() + forward.x, player.getY(), player.getZ() + forward.z);
-                player.updatePosition(dashTo.x, dashTo.y, dashTo.z);
-
-                player.playSound(SoundEvents.ENTITY_LIGHTNING_BOLT_THUNDER, 3.0F, 1.2F);
-
-                for (int i = 0; i < 10; i++) {
-                    double offsetX = (player.getRandom().nextDouble() - 0.5) * 1.0;
-                    double offsetY = player.getRandom().nextDouble() * 1.0;
-                    double offsetZ = (player.getRandom().nextDouble() - 0.5) * 1.0;
-
-                    player.getWorld().addParticle(ParticleTypes.CLOUD,
-                            dashTo.x + offsetX,
-                            dashTo.y + offsetY,
-                            dashTo.z + offsetZ,
-                            0, 0, 0
-                    );
-                }
-
-                if (!player.isCreative()) {
-                    HungerManager hunger = player.getHungerManager();
-                    hunger.setFoodLevel(Math.max(0, hunger.getFoodLevel() - 10));
-                    hunger.setSaturationLevel(Math.min(hunger.getSaturationLevel(), hunger.getFoodLevel()));
-                }
-
-                lastDashTime = currentTime;
-            }
+            lastDashTime = currentTime;
         }
     }
 

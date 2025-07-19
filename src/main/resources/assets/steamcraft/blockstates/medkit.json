@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "steamcraft:block/medkit" },
+    "facing=south": { "model": "steamcraft:block/medkit", "y": 180 },
+    "facing=west":  { "model": "steamcraft:block/medkit", "y": 270 },
+    "facing=east":  { "model": "steamcraft:block/medkit", "y": 90 }
+  }
+}

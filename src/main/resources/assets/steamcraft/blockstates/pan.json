@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "steamcraft:block/pan" },
+    "facing=south": { "model": "steamcraft:block/pan", "y": 180 },
+    "facing=west":  { "model": "steamcraft:block/pan", "y": 270 },
+    "facing=east":  { "model": "steamcraft:block/pan", "y": 90 }
+  }
+}

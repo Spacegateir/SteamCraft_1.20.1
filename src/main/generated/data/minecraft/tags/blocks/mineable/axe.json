@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "steamcraft:cursed_poison_spore_trap_block",
-    "steamcraft:smoke_block"
+    "steamcraft:smoke_block",
+    "steamcraft:gameboard_block"
   ]
 }

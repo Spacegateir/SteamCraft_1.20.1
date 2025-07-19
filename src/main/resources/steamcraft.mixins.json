@@ -5,7 +5,6 @@
 	"mixins": [
 		"CropBlockMixin",
 		"PlayerEntityMixin",
-		"PlayerEntityShieldMixin",
 		"PlayerDamageMixin",
 		"SheepEntityMixin"
 

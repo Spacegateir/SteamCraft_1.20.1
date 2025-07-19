@@ -683,6 +683,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
                         ModBlocks.POWER_PRECISION_BLOCK,
                         ModBlocks.SMOKE_BLOCK,
+                        ModBlocks.MEDKIT,
+                        ModBlocks.PAN,
+                        ModBlocks.POT,
 
                         ModBlocks.PACKED_ICE_BRICKS,
                         ModBlocks.PACKED_ICE_BRICKS_CRACKED,
@@ -718,7 +721,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
                         ModBlocks.CURSED_POISON_SPORE_TRAP_BLOCK,
 
-                        ModBlocks.SMOKE_BLOCK
+                        ModBlocks.SMOKE_BLOCK,
+                        ModBlocks.GAMEBOARD_BLOCK
 
                 );
 

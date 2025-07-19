@@ -1,0 +1,23 @@
+{
+  "variants": {
+    "facing=north,variant=0": { "model": "steamcraft:block/checkers_block" },
+    "facing=south,variant=0": { "model": "steamcraft:block/checkers_block", "y": 180 },
+    "facing=west,variant=0":  { "model": "steamcraft:block/checkers_block", "y": 270 },
+    "facing=east,variant=0":  { "model": "steamcraft:block/checkers_block", "y": 90 },
+
+    "facing=north,variant=1": { "model": "steamcraft:block/checkers_played_block" },
+    "facing=south,variant=1": { "model": "steamcraft:block/checkers_played_block", "y": 180 },
+    "facing=west,variant=1":  { "model": "steamcraft:block/checkers_played_block", "y": 270 },
+    "facing=east,variant=1":  { "model": "steamcraft:block/checkers_played_block", "y": 90 },
+
+    "facing=north,variant=2": { "model": "steamcraft:block/chess_block" },
+    "facing=south,variant=2": { "model": "steamcraft:block/chess_block", "y": 180 },
+    "facing=west,variant=2":  { "model": "steamcraft:block/chess_block", "y": 270 },
+    "facing=east,variant=2":  { "model": "steamcraft:block/chess_block", "y": 90 },
+
+    "facing=north,variant=3": { "model": "steamcraft:block/chess_played_block" },
+    "facing=south,variant=3": { "model": "steamcraft:block/chess_played_block", "y": 180 },
+    "facing=west,variant=3":  { "model": "steamcraft:block/chess_played_block", "y": 270 },
+    "facing=east,variant=3":  { "model": "steamcraft:block/chess_played_block", "y": 90 }
+  }
+}

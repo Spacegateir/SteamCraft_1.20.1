@@ -37,7 +37,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:checkers_itemcheckers"
+        "recipe": "minecraft:gameboard_itemgame_board"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -52,7 +52,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:checkers_itemcheckers"
+      "minecraft:gameboard_itemgame_board"
     ]
   },
   "sends_telemetry_event": false

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "type=bottom,variant=0": { "model": "steamcraft:block/glimmerstone/glimmerstone_block_01/glimmerstone_slab_block_01" },
+    "type=top,variant=0": { "model": "steamcraft:block/glimmerstone/glimmerstone_block_01/glimmerstone_slab_block_top_01" },
+    "type=double,variant=0": { "model": "steamcraft:block/glimmerstone/glimmerstone_block_01/glimmerstone_block_01" },
+
+    "type=bottom,variant=1": { "model": "steamcraft:block/glimmerstone/glimmerstone_block_02/glimmerstone_slab_block_02" },
+    "type=top,variant=1": { "model": "steamcraft:block/glimmerstone/glimmerstone_block_02/glimmerstone_slab_block_top_02" },
+    "type=double,variant=1": { "model": "steamcraft:block/glimmerstone/glimmerstone_block_02/glimmerstone_block_02" },
+
+    "type=bottom,variant=2": { "model": "steamcraft:block/glimmerstone/glimmerstone_block_03/glimmerstone_slab_block_03" },
+    "type=top,variant=2": { "model": "steamcraft:block/glimmerstone/glimmerstone_block_03/glimmerstone_slab_block_top_03" },
+    "type=double,variant=2": { "model": "steamcraft:block/glimmerstone/glimmerstone_block_03/glimmerstone_block_03" },
+
+    "type=bottom,variant=3": { "model": "steamcraft:block/glimmerstone/glimmerstone_block_04/glimmerstone_slab_block_04" },
+    "type=top,variant=3": { "model": "steamcraft:block/glimmerstone/glimmerstone_block_04/glimmerstone_slab_block_top_04" },
+    "type=double,variant=3": { "model": "steamcraft:block/glimmerstone/glimmerstone_block_04/glimmerstone_block_04" }
+  }
+}

@@ -6,16 +6,18 @@ public class ToDo {
     // Keep a Wiki Record so people know how to play the mod
     // ON THE CURSED FORGE SITE EXPLAIN HOW TO PLAY THE MOD
 
+    // shield takes durability
+
     // add animal tail and ears cosmetics
 
-    // god horse armour, elytra, trident, fishing rod
+    // god horse armour, elytra, trident, fishing rod, mace
 
     // create dimensions (earth copy, void, waterworld, skulk, overworld neather type, sky dimension)
 
     // loot chests (common, rare legendary) witch will drop everywhere and have great items in it like god sword
 
     // Building Blocks
-    // ICE, SNOW, SCULK (Bricks, Large Brick, )
+    // ICE, SNOW, SCULK (Bricks, Large Brick, pillar, engraved)
 
     //    Equipment
     //	- event prize wearables (pure looks, no special function) (loot box to receive a reward)
@@ -48,7 +50,6 @@ public class ToDo {
 
     //Fix
 
-    // boots noise clinet side only
 
 
 

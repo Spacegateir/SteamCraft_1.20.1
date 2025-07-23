@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "steamcraft:block/glimmerstone/glimmerstone_cobblestone_block_02"
+  }
+}

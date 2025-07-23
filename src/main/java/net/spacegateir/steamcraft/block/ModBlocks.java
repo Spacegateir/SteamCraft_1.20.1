@@ -1191,46 +1191,44 @@ public class ModBlocks {
             new Identifier(Steamcraft.MOD_ID, "potted_glow_lush_violet_flower"),
             new FlowerPotBlock(GLOW_LUSH_VIOLET_FLOWER_BLOCK, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).luminance(15).nonOpaque()));
 
-
-
     public static final Block GLIMMERSTONE_BLOCK = Registry.register(Registries.BLOCK,
-            new Identifier(Steamcraft.MOD_ID, "glimmerstone_block"),
-            new Block(FabricBlockSettings.copyOf(Blocks.STONE)));
+            new Identifier(Steamcraft.MOD_ID, "glimmerstone/glimmerstone_block"),
+            new GlimmerstoneBlock(FabricBlockSettings.copyOf(Blocks.STONE)));
     public static final Block GLIMMERSTONE_STAIR_BLOCK = Registry.register(Registries.BLOCK,
-            new Identifier(Steamcraft.MOD_ID, "glimmerstone_stair_block"),
-            new StairsBlock(ModBlocks.GLIMMERSTONE_BLOCK.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE)));
+            new Identifier(Steamcraft.MOD_ID, "glimmerstone/glimmerstone_stair_block"),
+            new GlimmerstoneStairsBlock(ModBlocks.GLIMMERSTONE_BLOCK.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE)));
     public static final Block GLIMMERSTONE_SLAB_BLOCK = Registry.register(Registries.BLOCK,
-            new Identifier(Steamcraft.MOD_ID, "glimmerstone_slab_block"),
-            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE)));
+            new Identifier(Steamcraft.MOD_ID, "glimmerstone/glimmerstone_slab_block"),
+            new GlimmerstoneSlabBlock(FabricBlockSettings.copyOf(Blocks.STONE)));
     public static final Block GLIMMERSTONE_WALL_BLOCK = Registry.register(Registries.BLOCK,
-            new Identifier(Steamcraft.MOD_ID, "glimmerstone_wall_block"),
-            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE)));
+            new Identifier(Steamcraft.MOD_ID, "glimmerstone/glimmerstone_wall_block"),
+            new GlimmerstoneWallBlock(FabricBlockSettings.copyOf(Blocks.STONE)));
 
     public static final Block GLIMMERSTONE_COBBLESTONE_BLOCK = Registry.register(Registries.BLOCK,
-            new Identifier(Steamcraft.MOD_ID, "glimmerstone_cobblestone_block"),
-            new Block(FabricBlockSettings.copyOf(Blocks.COBBLESTONE)));
+            new Identifier(Steamcraft.MOD_ID, "glimmerstone/glimmerstone_cobblestone_block"),
+            new GlimmerstoneBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE)));
     public static final Block GLIMMERSTONE_COBBLESTONE_STAIR_BLOCK = Registry.register(Registries.BLOCK,
-            new Identifier(Steamcraft.MOD_ID, "glimmerstone_cobblestone_stair_block"),
-            new StairsBlock(ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK.getDefaultState(), FabricBlockSettings.copyOf(Blocks.COBBLESTONE)));
+            new Identifier(Steamcraft.MOD_ID, "glimmerstone/glimmerstone_cobblestone_stair_block"),
+            new GlimmerstoneStairsBlock(ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK.getDefaultState(), FabricBlockSettings.copyOf(Blocks.COBBLESTONE)));
     public static final Block GLIMMERSTONE_COBBLESTONE_SLAB_BLOCK = Registry.register(Registries.BLOCK,
-            new Identifier(Steamcraft.MOD_ID, "glimmerstone_cobblestone_slab_block"),
-            new SlabBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE)));
+            new Identifier(Steamcraft.MOD_ID, "glimmerstone/glimmerstone_cobblestone_slab_block"),
+            new GlimmerstoneSlabBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE)));
     public static final Block GLIMMERSTONE_COBBLESTONE_WALL_BLOCK = Registry.register(Registries.BLOCK,
-            new Identifier(Steamcraft.MOD_ID, "glimmerstone_cobblestone_wall_block"),
-            new WallBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE)));
+            new Identifier(Steamcraft.MOD_ID, "glimmerstone/glimmerstone_cobblestone_wall_block"),
+            new GlimmerstoneWallBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE)));
 
     public static final Block GLIMMERSTONE_BRICKS_BLOCK = Registry.register(Registries.BLOCK,
-            new Identifier(Steamcraft.MOD_ID, "glimmerstone_bricks_block"),
-            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+            new Identifier(Steamcraft.MOD_ID, "glimmerstone/glimmerstone_bricks_block"),
+            new GlimmerstoneBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
     public static final Block GLIMMERSTONE_BRICKS_STAIR_BLOCK = Registry.register(Registries.BLOCK,
-            new Identifier(Steamcraft.MOD_ID, "glimmerstone_bricks_stair_block"),
-            new StairsBlock(ModBlocks.GLIMMERSTONE_BRICKS_BLOCK.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+            new Identifier(Steamcraft.MOD_ID, "glimmerstone/glimmerstone_bricks_stair_block"),
+            new GlimmerstoneStairsBlock(ModBlocks.GLIMMERSTONE_BRICKS_BLOCK.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
     public static final Block GLIMMERSTONE_BRICKS_SLAB_BLOCK = Registry.register(Registries.BLOCK,
-            new Identifier(Steamcraft.MOD_ID, "glimmerstone_bricks_slab_block"),
-            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+            new Identifier(Steamcraft.MOD_ID, "glimmerstone/glimmerstone_bricks_slab_block"),
+            new GlimmerstoneSlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
     public static final Block GLIMMERSTONE_BRICKS_WALL_BLOCK = Registry.register(Registries.BLOCK,
-            new Identifier(Steamcraft.MOD_ID, "glimmerstone_bricks_wall_block"),
-            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+            new Identifier(Steamcraft.MOD_ID, "glimmerstone/glimmerstone_bricks_wall_block"),
+            new GlimmerstoneWallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
     // Crops
     public static final Block AGAPANTHUS_CROP = registerBlockWithoutBlockItem("agapanthus_crop",
             new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),false));

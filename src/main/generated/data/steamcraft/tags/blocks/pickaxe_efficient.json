@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "steamcraft:glimmerstone_cobblestone_block",
-    "steamcraft:glimmerstone_bricks_block",
-    "steamcraft:glimmerstone_block"
+    "steamcraft:glimmerstone/glimmerstone_cobblestone_block",
+    "steamcraft:glimmerstone/glimmerstone_bricks_block",
+    "steamcraft:glimmerstone/glimmerstone_block"
   ]
 }

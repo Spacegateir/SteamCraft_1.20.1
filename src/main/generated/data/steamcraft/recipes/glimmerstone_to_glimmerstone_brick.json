@@ -3,20 +3,20 @@
   "category": "building",
   "ingredients": [
     {
-      "item": "steamcraft:glimmerstone_item"
+      "item": "steamcraft:glimmerstone/glimmerstone_item"
     },
     {
-      "item": "steamcraft:glimmerstone_item"
+      "item": "steamcraft:glimmerstone/glimmerstone_item"
     },
     {
-      "item": "steamcraft:glimmerstone_item"
+      "item": "steamcraft:glimmerstone/glimmerstone_item"
     },
     {
-      "item": "steamcraft:glimmerstone_item"
+      "item": "steamcraft:glimmerstone/glimmerstone_item"
     }
   ],
   "result": {
     "count": 4,
-    "item": "steamcraft:glimmerstone_bricks_item"
+    "item": "steamcraft:glimmerstone/glimmerstone_bricks_item"
   }
 }

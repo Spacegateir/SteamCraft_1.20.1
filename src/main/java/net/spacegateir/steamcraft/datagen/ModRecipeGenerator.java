@@ -1629,13 +1629,13 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GLIMMERSTONE_COBBLESTONE_STAIR_BLOCK)));
 
         // Glimmerstone Stairs
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_STAIR_BLOCK, 4)
-                .pattern("I  ")
-                .pattern("II ")
-                .pattern("III")
-                .input('I', ModItems.GLIMMERSTONE_ITEM)
-                .criterion("has_ingot", conditionsFromItem(ModItems.GLIMMERSTONE_ITEM))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GLIMMERSTONE_STAIR_BLOCK)));
+//        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_STAIR_BLOCK, 4)
+//                .pattern("I  ")
+//                .pattern("II ")
+//                .pattern("III")
+//                .input('I', ModItems.GLIMMERSTONE_ITEM)
+//                .criterion("has_ingot", conditionsFromItem(ModItems.GLIMMERSTONE_ITEM))
+//                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GLIMMERSTONE_STAIR_BLOCK)));
 
         // Glimmerstone Bricks Stairs
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_BRICKS_STAIR_BLOCK, 4)
@@ -1655,11 +1655,11 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GLIMMERSTONE_COBBLESTONE_SLAB_BLOCK)));
 
         // Glimmerstone Slab
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_SLAB_BLOCK, 6)
-                .pattern("III")
-                .input('I', ModItems.GLIMMERSTONE_ITEM)
-                .criterion("has_ingot", conditionsFromItem(ModItems.GLIMMERSTONE_ITEM))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GLIMMERSTONE_SLAB_BLOCK)));
+//        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_SLAB_BLOCK, 6)
+//                .pattern("III")
+//                .input('I', ModItems.GLIMMERSTONE_ITEM)
+//                .criterion("has_ingot", conditionsFromItem(ModItems.GLIMMERSTONE_ITEM))
+//                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GLIMMERSTONE_SLAB_BLOCK)));
 
         // Glimmerstone Bricks Slab
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_BRICKS_SLAB_BLOCK, 6)
@@ -1678,12 +1678,12 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GLIMMERSTONE_COBBLESTONE_WALL_BLOCK)));
 
         // Glimmerstone Wall
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_WALL_BLOCK, 6)
-                .pattern("III")
-                .pattern("III")
-                .input('I', ModItems.GLIMMERSTONE_ITEM)
-                .criterion("has_ingot", conditionsFromItem(ModItems.GLIMMERSTONE_ITEM))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GLIMMERSTONE_WALL_BLOCK)));
+//        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_WALL_BLOCK, 6)
+//                .pattern("III")
+//                .pattern("III")
+//                .input('I', ModItems.GLIMMERSTONE_ITEM)
+//                .criterion("has_ingot", conditionsFromItem(ModItems.GLIMMERSTONE_ITEM))
+//                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GLIMMERSTONE_WALL_BLOCK)));
 
         // Glimmerstone Bricks Wall
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_BRICKS_WALL_BLOCK, 6)

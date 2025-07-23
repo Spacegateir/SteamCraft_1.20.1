@@ -1,16 +1,15 @@
 package net.spacegateir.steamcraft.block.custom;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.SlabBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
 import org.jetbrains.annotations.Nullable;
 
-public class GlimmerstoneBlock extends SlabBlock {
+public class GlimmerstoneBlock extends Block {
 
-    public static final IntProperty VARIANT = IntProperty.of("variant", 0, 15);
+    public static final IntProperty VARIANT = IntProperty.of("variant", 0, 3);
 
     public GlimmerstoneBlock(Settings settings) {
         super(settings);
@@ -20,7 +19,7 @@ public class GlimmerstoneBlock extends SlabBlock {
     @Nullable
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
-        int randomVariant = ctx.getWorld().random.nextInt(16);
+        int randomVariant = ctx.getWorld().random.nextInt(4);
         return super.getPlacementState(ctx).with(VARIANT, randomVariant);
     }
 

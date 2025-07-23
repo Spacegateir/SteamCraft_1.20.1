@@ -457,20 +457,20 @@
   "block.steamcraft.snow_tiles": "Snow Tiles",
   "block.steamcraft.snow_tiles_cracked": "Cracked Snow Tiles",
 
-  "block.steamcraft.glimmerstone_cobblestone_block": "Glimmerstone Cobblestone",
-  "block.steamcraft.glimmerstone_cobblestone_stair_block": "Glimmerstone Cobblestone Stair",
-  "block.steamcraft.glimmerstone_cobblestone_slab_block": "Glimmerstone Cobblestone Slab",
-  "block.steamcraft.glimmerstone_cobblestone_wall_block": "Glimmerstone Cobblestone Wall",
+  "block.steamcraft.glimmerstone.glimmerstone_cobblestone_block": "Glimmerstone Cobblestone",
+  "block.steamcraft.glimmerstone.glimmerstone_cobblestone_stair_block": "Glimmerstone Cobblestone Stair",
+  "block.steamcraft.glimmerstone.glimmerstone_cobblestone_slab_block": "Glimmerstone Cobblestone Slab",
+  "block.steamcraft.glimmerstone.glimmerstone_cobblestone_wall_block": "Glimmerstone Cobblestone Wall",
 
-  "block.steamcraft.glimmerstone_block": "Glimmerstone",
-  "block.steamcraft.glimmerstone_stair_block": "Glimmerstone Stair",
-  "block.steamcraft.glimmerstone_slab_block": "Glimmerstone Slab",
-  "block.steamcraft.glimmerstone_wall_block": "Glimmerstone Wall",
+  "block.steamcraft.glimmerstone.glimmerstone_block": "Glimmerstone",
+  "block.steamcraft.glimmerstone.glimmerstone_stair_block": "Glimmerstone Stair",
+  "block.steamcraft.glimmerstone.glimmerstone_slab_block": "Glimmerstone Slab",
+  "block.steamcraft.glimmerstone.glimmerstone_wall_block": "Glimmerstone Wall",
 
-  "block.steamcraft.glimmerstone_bricks_block": "Glimmerstone Bricks",
-  "block.steamcraft.glimmerstone_bricks_stair_block": "Glimmerstone Bricks Stair",
-  "block.steamcraft.glimmerstone_bricks_slab_block": "Glimmerstone Bricks Slab",
-  "block.steamcraft.glimmerstone_bricks_wall_block": "Glimmerstone Bricks Wall",
+  "block.steamcraft.glimmerstone.glimmerstone_bricks_block": "Glimmerstone Bricks",
+  "block.steamcraft.glimmerstone.glimmerstone_bricks_stair_block": "Glimmerstone Bricks Stair",
+  "block.steamcraft.glimmerstone.glimmerstone_bricks_slab_block": "Glimmerstone Bricks Slab",
+  "block.steamcraft.glimmerstone.glimmerstone_bricks_wall_block": "Glimmerstone Bricks Wall",
 
 
 

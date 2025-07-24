@@ -44,6 +44,8 @@
     "steamcraft:glimmerstone/glimmerstone_cobblestone_block",
     "steamcraft:glimmerstone/glimmerstone_cobblestone_stair_block",
     "steamcraft:glimmerstone/glimmerstone_cobblestone_slab_block",
-    "steamcraft:glimmerstone/glimmerstone_cobblestone_wall_block"
+    "steamcraft:glimmerstone/glimmerstone_cobblestone_wall_block",
+    "steamcraft:glimmerstone/glimmerstone_pillar_block",
+    "steamcraft:glimmerstone/glimmerstone_engraved_block"
   ]
 }

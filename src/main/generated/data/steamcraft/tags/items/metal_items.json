@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "steamcraft:silver_nugget",
+    "steamcraft:raw_silver",
+    "steamcraft:raw_silver_item",
+    "steamcraft:silver_ingot",
+    "steamcraft:fools_gold_scrap",
+    "steamcraft:fools_gold_raw",
+    "steamcraft:fools_gold_raw_item",
+    "steamcraft:fools_gold_ingot"
+  ]
+}

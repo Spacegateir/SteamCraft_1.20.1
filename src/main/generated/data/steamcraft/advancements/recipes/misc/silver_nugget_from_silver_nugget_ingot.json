@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_fools_gold_raw_block": {
+    "has_silver_ingot": {
       "conditions": {
         "items": [
           {
             "items": [
-              "steamcraft:fools_gold_raw_block"
+              "steamcraft:silver_ingot"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:fools_gold_block_from_blasting_fools_gold_raw_block"
+        "recipe": "steamcraft:silver_nugget_from_silver_nugget_ingot"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_fools_gold_raw_block",
+      "has_silver_ingot",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:fools_gold_block_from_blasting_fools_gold_raw_block"
+      "steamcraft:silver_nugget_from_silver_nugget_ingot"
     ]
   },
   "sends_telemetry_event": false

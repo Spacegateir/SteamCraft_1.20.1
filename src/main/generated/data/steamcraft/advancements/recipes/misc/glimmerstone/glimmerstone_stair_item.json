@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_fools_gold_ingot": {
+    "has_ingot": {
       "conditions": {
         "items": [
           {
             "items": [
-              "steamcraft:fools_gold_ingot"
+              "steamcraft:glimmerstone/glimmerstone_item"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:fools_gold_block"
+        "recipe": "minecraft:glimmerstone/glimmerstone_stair_item"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_fools_gold_ingot",
+      "has_ingot",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:fools_gold_block"
+      "minecraft:glimmerstone/glimmerstone_stair_item"
     ]
   },
   "sends_telemetry_event": false

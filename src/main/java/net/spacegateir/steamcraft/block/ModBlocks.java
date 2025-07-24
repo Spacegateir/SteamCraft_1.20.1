@@ -21,11 +21,9 @@ import net.spacegateir.steamcraft.block.path_blocks.*;
 import net.spacegateir.steamcraft.block.traps.*;
 import net.spacegateir.steamcraft.effect.ModEffects;
 import net.spacegateir.steamcraft.item.ModItems;
-import net.spacegateir.steamcraft.item.custom.MortarAndPestleItem;
 
 import java.util.EnumMap;
 
-import static net.minecraft.block.Blocks.CAULDRON;
 
 public class ModBlocks {
 
@@ -86,11 +84,19 @@ public class ModBlocks {
             new AetherBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(50,2400)
                     .nonOpaque().velocityMultiplier(1.25F).mapColor(MapColor.PINK)));
 
-    public static final Block FOOLS_GOLD_BLOCK = registerBlock("fools_gold_block",
-            new Block(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK)));
-    public static final Block FOOLS_GOLD_RAW_BLOCK = registerBlock("fools_gold_raw_block",
-            new Block(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK)));
+    public static final Block RAW_SILVER_BLOCK = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "raw_silver_block"),
+            new Block(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK).nonOpaque()));
+    public static final Block SILVER_BLOCK = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "silver_block"),
+            new Block(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK).nonOpaque()));
 
+    public static final Block FOOLS_GOLD_RAW_BLOCK = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "fools_gold_raw_block"),
+            new Block(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK).nonOpaque()));
+    public static final Block FOOLS_GOLD_BLOCK = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "fools_gold_block"),
+            new Block(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK).nonOpaque()));
 
     public static final Block DIVINITITE_ALLOY_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "divinitite_alloy_block"),
@@ -1229,6 +1235,15 @@ public class ModBlocks {
     public static final Block GLIMMERSTONE_BRICKS_WALL_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glimmerstone/glimmerstone_bricks_wall_block"),
             new GlimmerstoneWallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+
+    public static final Block GLIMMERSTONE_PILLAR_BLOCK = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "glimmerstone/glimmerstone_pillar_block"),
+            new GlimmerstoneBlock(FabricBlockSettings.copyOf(Blocks.STONE)));
+
+    public static final Block GLIMMERSTONE_ENGRAVED_BLOCK = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "glimmerstone/glimmerstone_engraved_block"),
+            new GlimmerstoneBlock(FabricBlockSettings.copyOf(Blocks.STONE)));
+
     // Crops
     public static final Block AGAPANTHUS_CROP = registerBlockWithoutBlockItem("agapanthus_crop",
             new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),false));
@@ -1361,10 +1376,6 @@ public class ModBlocks {
     public static final Block MORTAR_AND_PESTLE_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "mortar_and_pestle_block"),
             new MortarAndPestleBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).nonOpaque()));
-
-    public static final Block SILVER_BLOCK = Registry.register(Registries.BLOCK,
-            new Identifier(Steamcraft.MOD_ID, "silver_block"),
-            new Block(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK).nonOpaque()));
 
     public static final Block MEDKIT = registerBlock("medkit",
             new MedkitBlock(FabricBlockSettings.copyOf(Blocks.STONE).nonOpaque()));

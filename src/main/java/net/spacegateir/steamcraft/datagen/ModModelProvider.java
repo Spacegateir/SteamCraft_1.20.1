@@ -19,6 +19,7 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
 
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_SILVER_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FOOLS_GOLD_RAW_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SILVER_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FOOLS_GOLD_BLOCK);
@@ -28,16 +29,6 @@ public class ModModelProvider extends FabricModelProvider {
 //        GlimmerstoneTexturePool.stairs(ModBlocks.GLIMMERSTONE_STAIR_BLOCK);
 //        GlimmerstoneTexturePool.slab(ModBlocks.GLIMMERSTONE_SLAB_BLOCK);
 //        GlimmerstoneTexturePool.wall(ModBlocks.GLIMMERSTONE_WALL_BLOCK);
-
-//        BlockStateModelGenerator.BlockTexturePool GlimmerstoneBricksTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.GLIMMERSTONE_BRICKS_BLOCK);
-//        GlimmerstoneBricksTexturePool.stairs(ModBlocks.GLIMMERSTONE_BRICKS_STAIR_BLOCK);
-//        GlimmerstoneBricksTexturePool.slab(ModBlocks.GLIMMERSTONE_BRICKS_SLAB_BLOCK);
-//        GlimmerstoneBricksTexturePool.wall(ModBlocks.GLIMMERSTONE_BRICKS_WALL_BLOCK);
-
-//        BlockStateModelGenerator.BlockTexturePool GlimmerstoneCobblestoneTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK);
-//        GlimmerstoneCobblestoneTexturePool.stairs(ModBlocks.GLIMMERSTONE_COBBLESTONE_STAIR_BLOCK);
-//        GlimmerstoneCobblestoneTexturePool.slab(ModBlocks.GLIMMERSTONE_COBBLESTONE_SLAB_BLOCK);
-//        GlimmerstoneCobblestoneTexturePool.wall(ModBlocks.GLIMMERSTONE_COBBLESTONE_WALL_BLOCK);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_WHITE_CONCRETE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_WHITE_CONCRETE_POWDER);
@@ -310,8 +301,11 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.MORTAR_AND_PESTLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.TRAP_CONCEALER, Models.GENERATED);
 
-        itemModelGenerator.register(ModItems.DIVINE_IMBUMENT_GEM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SILVER_NUGGET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RAW_SILVER, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SILVER_INGOT, Models.GENERATED);
 
+        itemModelGenerator.register(ModItems.DIVINE_IMBUMENT_GEM, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.WHITE_WATER_BUCKET, Models.GENERATED);
         itemModelGenerator.register(ModItems.LIGHT_GRAY_WATER_BUCKET, Models.GENERATED);

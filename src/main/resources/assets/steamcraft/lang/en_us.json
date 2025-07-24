@@ -30,13 +30,25 @@
   "item.steamcraft.obscurium_crystal": "Obscurium Crystal",
   "item.steamcraft.divine_imbument_gem": "Divine Imbument Gem",
 
+  "item.steamcraft.silver_nugget": "Silver Nugget",
   "item.steamcraft.fools_gold_scrap": "Fools Gold Scrap",
+
+  "item.steamcraft.raw_silver": "Raw Silver",
   "item.steamcraft.fools_gold_raw": "Fools Gold Raw",
+
+  "item.steamcraft.raw_silver_item": "Raw Silver Block",
+  "block.steamcraft.raw_silver_block": "Raw Silver Block",
+  "item.steamcraft.fools_gold_raw_item": "Fools Gold Raw Block",
   "block.steamcraft.fools_gold_raw_block": "Fools Gold Raw Block",
+
+  "item.steamcraft.silver_ingot": "Silver Ingot",
   "item.steamcraft.fools_gold_ingot": "Fools Gold Ingot",
+
   "item.steamcraft.silver_item": "Silver Block",
   "block.steamcraft.silver_block": "Silver Block",
+  "item.steamcraft.fools_gold_item": "Fools Gold Block",
   "block.steamcraft.fools_gold_block": "Fools Gold Block",
+
   "item.steamcraft.divinitite_alloy_ingot": "Divinitite Alloy Ingot",
   "block.steamcraft.divinitite_alloy_block": "Divinitite Alloy Block",
 
@@ -471,6 +483,10 @@
   "block.steamcraft.glimmerstone.glimmerstone_bricks_stair_block": "Glimmerstone Bricks Stair",
   "block.steamcraft.glimmerstone.glimmerstone_bricks_slab_block": "Glimmerstone Bricks Slab",
   "block.steamcraft.glimmerstone.glimmerstone_bricks_wall_block": "Glimmerstone Bricks Wall",
+
+  "block.steamcraft.glimmerstone.glimmerstone_pillar_block": "Glimmerstone Pillar",
+  "block.steamcraft.glimmerstone.glimmerstone_engraved_block": "Glimmerstone Engraved",
+
 
 
 

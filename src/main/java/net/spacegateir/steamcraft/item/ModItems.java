@@ -62,9 +62,26 @@ public class ModItems {
     public static final Item FOOLS_GOLD_RAW = registerItem("fools_gold_raw",
             new Item(new FabricItemSettings().rarity(RARE)));
 
+    public static final Item SILVER_NUGGET = registerItem("silver_nugget",
+            new Item(new FabricItemSettings()));
+    public static final Item RAW_SILVER = registerItem("raw_silver",
+            new Item(new FabricItemSettings()));
+    public static final Item SILVER_INGOT = registerItem("silver_ingot",
+            new Item(new FabricItemSettings()));
+
+    public static final Item RAW_SILVER_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "raw_silver_item"),
+            new BlockItem(ModBlocks.RAW_SILVER_BLOCK, new FabricItemSettings()));
     public static final Item SILVER_ITEM = Registry.register(Registries.ITEM,
             new Identifier(Steamcraft.MOD_ID, "silver_item"),
             new BlockItem(ModBlocks.SILVER_BLOCK, new FabricItemSettings()));
+
+    public static final Item FOOLS_GOLD_RAW_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "fools_gold_raw_item"),
+            new BlockItem(ModBlocks.FOOLS_GOLD_RAW_BLOCK, new FabricItemSettings()));
+    public static final Item FOOLS_GOLD_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "fools_gold_item"),
+            new BlockItem(ModBlocks.FOOLS_GOLD_BLOCK, new FabricItemSettings()));
 
     public static final Item FOOLS_GOLD_INGOT = registerItem("fools_gold_ingot",
             new Item(new FabricItemSettings().rarity(RARE)));
@@ -608,6 +625,14 @@ public class ModItems {
     public static final Item GLIMMERSTONE_BRICKS_WALL_ITEM = Registry.register(Registries.ITEM,
             new Identifier(Steamcraft.MOD_ID, "glimmerstone/glimmerstone_bricks_wall_item"),
             new BlockItem(ModBlocks.GLIMMERSTONE_BRICKS_WALL_BLOCK, new FabricItemSettings()));
+
+    public static final Item GLIMMERSTONE_PILLAR_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glimmerstone/glimmerstone_pillar_item"),
+            new BlockItem(ModBlocks.GLIMMERSTONE_PILLAR_BLOCK, new FabricItemSettings()));
+
+    public static final Item GLIMMERSTONE_ENGRAVED_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "glimmerstone/glimmerstone_engraved_item"),
+            new BlockItem(ModBlocks.GLIMMERSTONE_ENGRAVED_BLOCK, new FabricItemSettings()));
 
 
     // Water

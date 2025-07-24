@@ -4,7 +4,7 @@
     "item": "minecraft:lava_bucket"
   },
   "base": {
-    "item": "steamcraft:fools_gold_block"
+    "item": "steamcraft:fools_gold_item"
   },
   "result": {
     "item": "steamcraft:fools_gold_lava_bucket"

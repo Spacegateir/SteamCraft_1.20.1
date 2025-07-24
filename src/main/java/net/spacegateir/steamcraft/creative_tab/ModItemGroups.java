@@ -59,14 +59,18 @@ public class ModItemGroups {
 
                         entries.add(ModItems.WINGED_SANDALS);
 
+                        entries.add(ModItems.SILVER_NUGGET);
                         entries.add(ModItems.FOOLS_GOLD_SCRAP);
+                        entries.add(ModItems.RAW_SILVER);
                         entries.add(ModItems.FOOLS_GOLD_RAW);
+                        entries.add(ModItems.SILVER_INGOT);
                         entries.add(ModItems.FOOLS_GOLD_INGOT);
                         entries.add(ModItems.DIVINITITE_ALLOY_INGOT);
 
-                        entries.add(ModBlocks.FOOLS_GOLD_RAW_BLOCK);
+                        entries.add(ModItems.RAW_SILVER_ITEM);
+                        entries.add(ModItems.FOOLS_GOLD_RAW_ITEM);
                         entries.add(ModItems.SILVER_ITEM);
-                        entries.add(ModBlocks.FOOLS_GOLD_BLOCK);
+                        entries.add(ModItems.FOOLS_GOLD_ITEM);
                         entries.add(ModItems.DIVINITITE_ALLOY_ITEM);
 
                         entries.add(ModItems.FOOLS_GOLD_HELMET);
@@ -256,6 +260,9 @@ public class ModItemGroups {
                         entries.add(ModItems.GLIMMERSTONE_BRICKS_STAIR_ITEM);
                         entries.add(ModItems.GLIMMERSTONE_BRICKS_SLAB_ITEM);
                         entries.add(ModItems.GLIMMERSTONE_BRICKS_WALL_ITEM);
+
+                        entries.add(ModItems.GLIMMERSTONE_PILLAR_ITEM);
+                        entries.add(ModItems.GLIMMERSTONE_ENGRAVED_ITEM);
 
                         entries.add(ModBlocks.COBBLED_WHITE_CONCRETE);
                         entries.add(ModBlocks.COBBLED_WHITE_CONCRETE_POWDER);

@@ -5,7 +5,7 @@
   "experience": 0.15,
   "group": "fools_gold_block",
   "ingredient": {
-    "item": "steamcraft:fools_gold_raw_block"
+    "item": "steamcraft:fools_gold_raw_item"
   },
-  "result": "steamcraft:fools_gold_block"
+  "result": "steamcraft:fools_gold_item"
 }

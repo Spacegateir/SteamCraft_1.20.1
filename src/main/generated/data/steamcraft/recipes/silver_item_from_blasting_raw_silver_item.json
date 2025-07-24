@@ -3,9 +3,9 @@
   "category": "blocks",
   "cookingtime": 100,
   "experience": 0.15,
-  "group": "fools_gold_block",
+  "group": "silver_block",
   "ingredient": {
-    "item": "steamcraft:fools_gold_raw_block"
+    "item": "steamcraft:raw_silver_item"
   },
-  "result": "steamcraft:fools_gold_block"
+  "result": "steamcraft:silver_item"
 }

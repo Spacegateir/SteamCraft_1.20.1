@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "steamcraft:fools_gold_raw_block"
+          "name": "steamcraft:fools_gold_raw_item"
         }
       ],
       "rolls": 1.0

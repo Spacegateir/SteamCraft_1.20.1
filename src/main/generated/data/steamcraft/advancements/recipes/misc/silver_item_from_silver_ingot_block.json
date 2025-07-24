@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_silver_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "steamcraft:silver_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "steamcraft:silver_item_from_silver_ingot_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_silver_ingot",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "steamcraft:silver_item_from_silver_ingot_block"
+    ]
+  },
+  "sends_telemetry_event": false
+}

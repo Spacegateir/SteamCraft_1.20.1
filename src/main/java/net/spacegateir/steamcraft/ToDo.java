@@ -6,8 +6,6 @@ public class ToDo {
     // Keep a Wiki Record so people know how to play the mod
     // ON THE CURSED FORGE SITE EXPLAIN HOW TO PLAY THE MOD
 
-    // shield takes durability
-
     // add animal tail and ears cosmetics
 
     // god horse armour, elytra, trident, fishing rod, mace

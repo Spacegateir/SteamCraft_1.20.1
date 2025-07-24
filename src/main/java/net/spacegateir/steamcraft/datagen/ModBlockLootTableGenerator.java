@@ -71,6 +71,8 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
                 dropsWithSilkTouch(ModBlocks.AETHER_COIL_PINK, ItemEntry.builder(ModBlocks.AETHER_COIL))
         );
 
+        addDrop(ModBlocks.RAW_SILVER_BLOCK);
+        addDrop(ModBlocks.SILVER_BLOCK);
         addDrop(ModBlocks.FOOLS_GOLD_RAW_BLOCK);
         addDrop(ModBlocks.FOOLS_GOLD_BLOCK);
         addDrop(ModBlocks.DIVINITITE_ALLOY_BLOCK);
@@ -494,10 +496,12 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.GLIMMERSTONE_BRICKS_SLAB_BLOCK);
         addDrop(ModBlocks.GLIMMERSTONE_BRICKS_WALL_BLOCK);
 
+        addDrop(ModBlocks.GLIMMERSTONE_PILLAR_BLOCK);
+        addDrop(ModBlocks.GLIMMERSTONE_ENGRAVED_BLOCK);
+
         addDrop(ModBlocks.FARMLAND_ENRICHED_BLOCK,
                 dropsWithSilkTouch(Blocks.DIRT, ItemEntry.builder(Blocks.DIRT)));
 
-        addDrop(ModBlocks.SILVER_BLOCK);
 
         addDrop(ModBlocks.MORTAR_AND_PESTLE_BLOCK);
 

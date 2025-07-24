@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(PlayerEntity.class)
-public class PlayerEntityMixin {
+public class CelestialArmorPlayerEntityMixin {
 
     // Boost Swim Speed
     @Inject(method = "tick", at = @At("TAIL"))

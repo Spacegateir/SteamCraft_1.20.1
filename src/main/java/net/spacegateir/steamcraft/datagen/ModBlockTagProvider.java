@@ -91,6 +91,10 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                     RegistryKeys.BLOCK,
                     new Identifier("steamcraft", "axe_strippable")
             );
+            public static final TagKey<Block> METALS = TagKey.of(
+                    RegistryKeys.BLOCK,
+                    new Identifier("steamcraft", "metals")
+            );
         }
     }
 
@@ -246,7 +250,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK,
                         ModBlocks.GLIMMERSTONE_COBBLESTONE_STAIR_BLOCK,
                         ModBlocks.GLIMMERSTONE_COBBLESTONE_SLAB_BLOCK,
-                        ModBlocks.GLIMMERSTONE_COBBLESTONE_WALL_BLOCK
+                        ModBlocks.GLIMMERSTONE_COBBLESTONE_WALL_BLOCK,
+
+                        ModBlocks.GLIMMERSTONE_PILLAR_BLOCK,
+                        ModBlocks.GLIMMERSTONE_ENGRAVED_BLOCK
+
                 );
 
         getOrCreateTagBuilder(ModTags.Blocks.STONE_PATH_BLOCKS)
@@ -657,6 +665,14 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         Blocks.WARPED_STEM
                 );
 
+        getOrCreateTagBuilder(ModTags.Blocks.METALS)
+                .add(
+                        ModBlocks.RAW_SILVER_BLOCK,
+                        ModBlocks.SILVER_BLOCK,
+                        ModBlocks.FOOLS_GOLD_RAW_BLOCK,
+                        ModBlocks.FOOLS_GOLD_BLOCK
+                );
+
 
 
 
@@ -770,6 +786,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.GLIMMERSTONE_BRICKS_STAIR_BLOCK,
                         ModBlocks.GLIMMERSTONE_BRICKS_SLAB_BLOCK,
                         ModBlocks.GLIMMERSTONE_BRICKS_WALL_BLOCK,
+
+                        ModBlocks.GLIMMERSTONE_ENGRAVED_BLOCK,
+                        ModBlocks.GLIMMERSTONE_PILLAR_BLOCK,
 
                         ModBlocks.POWER_PRECISION_BLOCK
 

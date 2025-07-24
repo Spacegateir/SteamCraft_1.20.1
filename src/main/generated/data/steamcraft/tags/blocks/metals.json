@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "steamcraft:raw_silver_block",
+    "steamcraft:silver_block",
+    "steamcraft:fools_gold_raw_block",
+    "steamcraft:fools_gold_block"
+  ]
+}

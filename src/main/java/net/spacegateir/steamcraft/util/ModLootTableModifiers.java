@@ -428,6 +428,13 @@ public class ModLootTableModifiers {
                 .with(ItemEntry.builder(ModItems.SHIELD_MOULD))
                 .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
 
+        LootPool.Builder poolBuilder_silver = LootPool.builder()
+                .rolls(UniformLootNumberProvider.create(1.0f, 5.0f))
+                .conditionally(RandomChanceLootCondition.builder(0.8f)) // Drops 80% of the time
+                .with(ItemEntry.builder(ModItems.RAW_SILVER))
+                .with(ItemEntry.builder(ModItems.SILVER_NUGGET))
+                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 10.0f)).build());
+
         LootPool.Builder poolBuilder_20 = LootPool.builder()
                 .rolls(UniformLootNumberProvider.create(1.0f, 3.0f))
                 .conditionally(RandomChanceLootCondition.builder(0.2f)) // Drops 20% of the time
@@ -460,6 +467,8 @@ public class ModLootTableModifiers {
         tableBuilder.pool(poolBuilder_sword.build());
         tableBuilder.pool(poolBuilder_shears.build());
         tableBuilder.pool(poolBuilder_shield.build());
+
+        tableBuilder.pool(poolBuilder_silver.build());
 
         tableBuilder.pool(poolBuilder_20.build());
         tableBuilder.pool(poolBuilder_40.build());

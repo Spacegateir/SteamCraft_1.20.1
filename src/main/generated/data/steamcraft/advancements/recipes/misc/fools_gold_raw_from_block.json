@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_fools_gold_raw_block": {
+    "has_fools_gold_raw_item": {
       "conditions": {
         "items": [
           {
             "items": [
-              "steamcraft:fools_gold_raw_block"
+              "steamcraft:fools_gold_raw_item"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_fools_gold_raw_block",
+      "has_fools_gold_raw_item",
       "has_the_recipe"
     ]
   ],

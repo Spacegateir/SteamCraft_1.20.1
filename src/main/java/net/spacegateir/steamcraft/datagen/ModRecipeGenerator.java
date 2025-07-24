@@ -94,6 +94,9 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         registerFoolsGoldSmithingRecipes(exporter);
 
 
+        offerReversibleCompactingRecipesWithId(exporter, RecipeCategory.MISC, ModItems.SILVER_NUGGET, RecipeCategory.MISC, ModItems.SILVER_INGOT, "silver_nugget_ingot");
+        offerReversibleCompactingRecipesWithId(exporter, RecipeCategory.MISC, ModItems.SILVER_INGOT, RecipeCategory.MISC, ModBlocks.SILVER_BLOCK, "silver_ingot_block");
+        offerReversibleCompactingRecipesWithId(exporter, RecipeCategory.MISC, ModItems.RAW_SILVER, RecipeCategory.MISC, ModItems.RAW_SILVER_ITEM, "raw_silver_block");
         offerReversibleCompactingRecipesWithId(exporter, RecipeCategory.MISC, ModItems.FOOLS_GOLD_SCRAP, RecipeCategory.MISC, ModItems.FOOLS_GOLD_RAW, "scrap");
         offerReversibleCompactingRecipesWithId(exporter, RecipeCategory.MISC, ModItems.FOOLS_GOLD_RAW, RecipeCategory.MISC, ModBlocks.FOOLS_GOLD_RAW_BLOCK, "block");
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.FOOLS_GOLD_INGOT, RecipeCategory.MISC, ModBlocks.FOOLS_GOLD_BLOCK);
@@ -103,11 +106,19 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 0.15f, 200, "fools_gold");
         offerBlasting(exporter, List.of(ModItems.FOOLS_GOLD_RAW), RecipeCategory.MISC, ModItems.FOOLS_GOLD_INGOT,
                 0.15f, 100, "fools_gold");
+        offerSmelting(exporter, List.of(ModItems.RAW_SILVER), RecipeCategory.MISC, ModItems.SILVER_INGOT,
+                0.15f, 200, "silver");
+        offerBlasting(exporter, List.of(ModItems.RAW_SILVER), RecipeCategory.MISC, ModItems.SILVER_INGOT,
+                0.15f, 100, "silver");
 
         offerSmelting(exporter, List.of(ModBlocks.FOOLS_GOLD_RAW_BLOCK), RecipeCategory.MISC, ModBlocks.FOOLS_GOLD_BLOCK,
                 0.15f, 200, "fools_gold_block");
         offerBlasting(exporter, List.of(ModBlocks.FOOLS_GOLD_RAW_BLOCK), RecipeCategory.MISC, ModBlocks.FOOLS_GOLD_BLOCK,
                 0.15f, 100, "fools_gold_block");
+        offerSmelting(exporter, List.of(ModBlocks.RAW_SILVER_BLOCK), RecipeCategory.MISC, ModBlocks.SILVER_BLOCK,
+                0.15f, 200, "silver_block");
+        offerBlasting(exporter, List.of(ModBlocks.RAW_SILVER_BLOCK), RecipeCategory.MISC, ModBlocks.SILVER_BLOCK,
+                0.15f, 100, "silver_block");
 
         offerSmelting(exporter, List.of(ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK), RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_BLOCK,
                 0.15f, 200, "glimmerstone_block");
@@ -1629,13 +1640,13 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GLIMMERSTONE_COBBLESTONE_STAIR_BLOCK)));
 
         // Glimmerstone Stairs
-//        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_STAIR_BLOCK, 4)
-//                .pattern("I  ")
-//                .pattern("II ")
-//                .pattern("III")
-//                .input('I', ModItems.GLIMMERSTONE_ITEM)
-//                .criterion("has_ingot", conditionsFromItem(ModItems.GLIMMERSTONE_ITEM))
-//                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GLIMMERSTONE_STAIR_BLOCK)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_STAIR_BLOCK, 4)
+                .pattern("I  ")
+                .pattern("II ")
+                .pattern("III")
+                .input('I', ModItems.GLIMMERSTONE_ITEM)
+                .criterion("has_ingot", conditionsFromItem(ModItems.GLIMMERSTONE_ITEM))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GLIMMERSTONE_STAIR_BLOCK)));
 
         // Glimmerstone Bricks Stairs
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_BRICKS_STAIR_BLOCK, 4)
@@ -1655,11 +1666,11 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GLIMMERSTONE_COBBLESTONE_SLAB_BLOCK)));
 
         // Glimmerstone Slab
-//        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_SLAB_BLOCK, 6)
-//                .pattern("III")
-//                .input('I', ModItems.GLIMMERSTONE_ITEM)
-//                .criterion("has_ingot", conditionsFromItem(ModItems.GLIMMERSTONE_ITEM))
-//                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GLIMMERSTONE_SLAB_BLOCK)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_SLAB_BLOCK, 6)
+                .pattern("III")
+                .input('I', ModItems.GLIMMERSTONE_ITEM)
+                .criterion("has_ingot", conditionsFromItem(ModItems.GLIMMERSTONE_ITEM))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GLIMMERSTONE_SLAB_BLOCK)));
 
         // Glimmerstone Bricks Slab
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_BRICKS_SLAB_BLOCK, 6)
@@ -1678,12 +1689,12 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GLIMMERSTONE_COBBLESTONE_WALL_BLOCK)));
 
         // Glimmerstone Wall
-//        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_WALL_BLOCK, 6)
-//                .pattern("III")
-//                .pattern("III")
-//                .input('I', ModItems.GLIMMERSTONE_ITEM)
-//                .criterion("has_ingot", conditionsFromItem(ModItems.GLIMMERSTONE_ITEM))
-//                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GLIMMERSTONE_WALL_BLOCK)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_WALL_BLOCK, 6)
+                .pattern("III")
+                .pattern("III")
+                .input('I', ModItems.GLIMMERSTONE_ITEM)
+                .criterion("has_ingot", conditionsFromItem(ModItems.GLIMMERSTONE_ITEM))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GLIMMERSTONE_WALL_BLOCK)));
 
         // Glimmerstone Bricks Wall
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_BRICKS_WALL_BLOCK, 6)
@@ -1692,6 +1703,25 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('I', ModItems.GLIMMERSTONE_BRICKS_ITEM)
                 .criterion("has_ingot", conditionsFromItem(ModItems.GLIMMERSTONE_BRICKS_ITEM))
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GLIMMERSTONE_BRICKS_WALL_BLOCK)));
+
+//Pillar / Engraved
+
+        // Glimmerstone Pillar
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_PILLAR_BLOCK, 1)
+                .pattern("I")
+                .pattern("I")
+                .input('I', ModItems.GLIMMERSTONE_SLAB_ITEM)
+                .criterion("has_slab", conditionsFromItem(ModItems.GLIMMERSTONE_SLAB_ITEM))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GLIMMERSTONE_PILLAR_BLOCK)));
+
+        // Glimmerstone Engraved
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_ENGRAVED_BLOCK, 1)
+                .pattern("I")
+                .pattern("I")
+                .input('I', ModItems.GLIMMERSTONE_BRICKS_SLAB_ITEM)
+                .criterion("has_slab", conditionsFromItem(ModItems.GLIMMERSTONE_BRICKS_SLAB_ITEM))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GLIMMERSTONE_ENGRAVED_BLOCK)));
+
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.GAMEBOARD_ITEM)
                 .pattern("B W")
@@ -1898,28 +1928,6 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 }
             }
         }
-
-//        // Lava Recipes
-//        dyeToLavaBucket.forEach((color, bucketItem) -> {
-//            ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, bucketItem)
-//                    .input(Items.LAVA_BUCKET)
-//                    .input(Items.BUCKET)
-//                    .input(dyeItems.get(color))
-//                    .criterion("has_lava_bucket", conditionsFromItem(Items.LAVA_BUCKET))
-//                    .criterion("has_dye", conditionsFromItem(dyeItems.get(color)))
-//                    .offerTo(exporter, new Identifier("dyeableliquids", color + "_lava_bucket"));
-//        });
-//
-//        // Water Recipes
-//        dyeToWaterBucket.forEach((color, bucketItem) -> {
-//            ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, bucketItem)
-//                    .input(Items.WATER_BUCKET)
-//                    .input(Items.BUCKET)
-//                    .input(dyeItems.get(color))
-//                    .criterion("has_water_bucket", conditionsFromItem(Items.WATER_BUCKET))
-//                    .criterion("has_dye", conditionsFromItem(dyeItems.get(color)))
-//                    .offerTo(exporter, new Identifier("dyeableliquids", color + "_water_bucket"));
-//        });
 
         // Lava Bucket Smithing Recipes
         dyeToLavaBucket.forEach((color, bucketItem) -> SmithingTransformRecipeJsonBuilder.create(

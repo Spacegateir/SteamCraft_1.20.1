@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "steamcraft:block/glimmerstone/glimmerstone_engraved_top_block_03",
+    "side": "steamcraft:block/glimmerstone/glimmerstone_engraved_block_03"
+  }
+}

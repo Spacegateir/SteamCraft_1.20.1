@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "#": {
-      "item": "steamcraft:fools_gold_raw"
+      "item": "steamcraft:raw_silver"
     }
   },
   "pattern": [
@@ -12,7 +12,7 @@
     "###"
   ],
   "result": {
-    "item": "steamcraft:fools_gold_raw_block"
+    "item": "steamcraft:raw_silver_item"
   },
   "show_notification": true
 }

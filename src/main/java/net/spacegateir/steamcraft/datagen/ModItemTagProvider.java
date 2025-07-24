@@ -52,6 +52,11 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                     net.minecraft.registry.Registries.ITEM.getKey(),
                     new Identifier("steamcraft", "mould_items")
             );
+
+            public static final TagKey<Item> METAL_ITEMS = TagKey.of(
+                    net.minecraft.registry.Registries.ITEM.getKey(),
+                    new Identifier("steamcraft", "metal_items")
+            );
         }
     }
 
@@ -119,6 +124,16 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.SHIELD_MOULD)
                 .add(ModItems.BUCKET_MOULD)
                 .add(ModItems.BLANK_MOULD);
+
+        getOrCreateTagBuilder(ModTags.Items.METAL_ITEMS)
+                .add(ModItems.SILVER_NUGGET)
+                .add(ModItems.RAW_SILVER)
+                .add(ModItems.RAW_SILVER_ITEM)
+                .add(ModItems.SILVER_INGOT)
+                .add(ModItems.FOOLS_GOLD_SCRAP)
+                .add(ModItems.FOOLS_GOLD_RAW)
+                .add(ModItems.FOOLS_GOLD_RAW_ITEM)
+                .add(ModItems.FOOLS_GOLD_INGOT);
 
 
         // Dynamic seed tag registration

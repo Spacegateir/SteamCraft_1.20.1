@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_ingot": {
+    "has_glimmerstone/glimmerstone_bricks_item": {
       "conditions": {
         "items": [
           {
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:glimmerstone/glimmerstone_bricks_wall_item"
+        "recipe": "steamcraft:glimmerstone/glimmerstone_bricks_wall_item"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_ingot",
+      "has_glimmerstone/glimmerstone_bricks_item",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:glimmerstone/glimmerstone_bricks_wall_item"
+      "steamcraft:glimmerstone/glimmerstone_bricks_wall_item"
     ]
   },
   "sends_telemetry_event": false

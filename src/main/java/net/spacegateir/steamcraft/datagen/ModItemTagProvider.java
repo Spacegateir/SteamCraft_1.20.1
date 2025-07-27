@@ -57,6 +57,11 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                     net.minecraft.registry.Registries.ITEM.getKey(),
                     new Identifier("steamcraft", "metal_items")
             );
+
+            public static final TagKey<Item> NATURAL = TagKey.of(
+                    net.minecraft.registry.Registries.ITEM.getKey(),
+                    new Identifier("steamcraft", "natural")
+            );
         }
     }
 
@@ -134,6 +139,20 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.FOOLS_GOLD_RAW)
                 .add(ModItems.FOOLS_GOLD_RAW_ITEM)
                 .add(ModItems.FOOLS_GOLD_INGOT);
+
+        getOrCreateTagBuilder(ModTags.Items.NATURAL)
+                .add(ModItems.GLIMMERSTONE_ITEM)
+                .add(ModItems.GLIMMERSTONE_COBBLESTONE_ITEM)
+                .add(ModItems.GLIMMERSTONE_BRICKS_ITEM)
+                .add(ModItems.ANCIENT_GRAVEL_ITEM)
+                .add(ModItems.ANCIENT_SAND_ITEM)
+                .add(ModItems.ANCIENT_SILT_ITEM)
+                .add(ModItems.ANCIENT_LOAM_ITEM)
+                .add(ModItems.ANCIENT_MUD_ITEM)
+                .add(ModItems.ANCIENT_CLAY)
+                .add(ModItems.ANCIENT_MOIST_CLAY)
+                .add(ModItems.ANCIENT_CLAY_ITEM)
+                .add(ModItems.ANCIENT_MOIST_CLAY_ITEM);
 
 
         // Dynamic seed tag registration

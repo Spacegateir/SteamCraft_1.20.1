@@ -1,0 +1,22 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "steamcraft:ancient_gravel_item"
+    }
+  ],
+  "processingTime": 250,
+  "results": [
+    {
+      "item": "steamcraft:ancient_sand_item"
+    },
+    {
+      "chance": 0.25,
+      "item": "minecraft:gold_nugget"
+    },
+    {
+      "chance": 0.15,
+      "item": "steamcraft:silver_nugget"
+    }
+  ]
+}

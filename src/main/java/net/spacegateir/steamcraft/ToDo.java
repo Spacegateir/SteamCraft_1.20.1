@@ -42,20 +42,66 @@ public class ToDo {
 
     // TODO
 
+    // aether blocks to be less copy and paste
+    // new clay type with different brick textures making bricks randomize
 
 
 
 
-    //Fix
+
 
 
 
 
     // click CTRL + H
 
+    // Create crafting
+    // stone cutting recipes = mechanical saw
+    // smelting recipes = fan behind lava
+    // smoking recipes = fan behind fire
 
 
 
+
+
+//    PLAN A
+    //  crush = glimmerstone                (glimmerstone cobblestone + raw silver + exp)
+
+    //  crush = glimmerstone cobblestone    (ancient gravel)
+        //  lava = glimmerstone cobblestone (glimmerstone)
+
+    //  crush = ancient gravel              (ancient sand + gold nugget + silver nugget)
+        //  wash = ancient gravel              (ancient loam)
+        //  haunt = ancient gravel             (obsidian)
+        //  mill = ancient gravel              (ancient sand || silver nugget)
+
+    //  crush = ancient sand                (ancient silt)
+        //  lava = ancient sand             (glass)
+        //  mill = ancient sand             (ancient silt)
+
+    //  crush = ancient silt                (ancient silt)
+        //  compact = ancient silt + lava    (tuff)
+        //  lava = ancient silt              (calcite)
+        //  haunt = ancient silt             (dripstone)
+        //  compact = ancient silt + lava + silver nugget + ? =(crimsite, asurine, ochrum, veridium)
+
+//    Plan B
+    //  wash = ancient loam                 (ancient mud)
+        //  haunt = ancient silt             (coal)
+        //  smoke = ancient silt             (coarse dirt)
+        //  lava = ancient silt              (dirt)
+
+    //  smoke = ancient mud                 (ancient clay)
+
+    //  wash = ancient clay                 (ancient moist clay)
+        //  saw = ancient clay                 (ancient clay)
+        //  crush = ancient clay                (red sand)
+        //  mill = ancient clay                 (red sand)
+
+    //  saw = ancient moist clay            (moist clay)
+        //  lava = ancient moist clay           (ancient clay)
+
+    //  deploy || press = moist clay            (moulds)
 
 
 

@@ -1,0 +1,13 @@
+{
+  "type": "create:splashing",
+  "ingredients": [
+    {
+      "item": "steamcraft:ancient_loam_item"
+    }
+  ],
+  "results": [
+    {
+      "item": "steamcraft:ancient_mud_item"
+    }
+  ]
+}

@@ -488,6 +488,25 @@
   "block.steamcraft.glimmerstone.glimmerstone_engraved_block": "Glimmerstone Engraved",
 
 
+  "item.steamcraft.ancient_gravel_item": "Ancient Gravel",
+  "block.steamcraft.ancient_gravel_block": "Ancient Gravel",
+  "item.steamcraft.ancient_mud_item": "Ancient Mud",
+  "block.steamcraft.ancient_mud_block": "Ancient Mud",
+  "item.steamcraft.ancient_clay_item": "Ancient Clay",
+  "block.steamcraft.ancient_clay_block": "Ancient Clay",
+  "item.steamcraft.ancient_moist_clay_item": "Ancient Moist Clay",
+  "block.steamcraft.ancient_moist_clay_block": "Ancient Moist Clay",
+  "item.steamcraft.ancient_sand_item": "Ancient Sand",
+  "block.steamcraft.ancient_sand_block": "Ancient Sand",
+  "item.steamcraft.ancient_silt_item": "Ancient Silt",
+  "block.steamcraft.ancient_silt_block": "Ancient Silt",
+  "item.steamcraft.ancient_loam_item": "Ancient Loam",
+  "block.steamcraft.ancient_loam_block": "Ancient Loam",
+
+  "item.steamcraft.ancient_clay": "Clay",
+  "item.steamcraft.ancient_moist_clay": "Moist Clay",
+
+
 
 
   "block.steamcraft.white_lava_cauldron_block": "White Lava Cauldron",

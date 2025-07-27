@@ -1,0 +1,17 @@
+{
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "item": "steamcraft:ancient_moist_clay"
+    },
+    {
+      "item": "minecraft:netherite_sword"
+    }
+  ],
+  "keepHeldItem": true,
+  "results": [
+    {
+      "item": "steamcraft:sword_mould"
+    }
+  ]
+}

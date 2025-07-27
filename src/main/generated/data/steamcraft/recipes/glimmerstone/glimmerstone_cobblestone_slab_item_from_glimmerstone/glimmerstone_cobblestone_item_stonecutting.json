@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "steamcraft:glimmerstone/glimmerstone_cobblestone_item"
+  },
+  "result": "steamcraft:glimmerstone/glimmerstone_cobblestone_slab_item"
+}

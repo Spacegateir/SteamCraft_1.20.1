@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "blocks",
+  "cookingtime": 100,
+  "experience": 0.15,
+  "group": "clay_block",
+  "ingredient": {
+    "item": "steamcraft:ancient_moist_clay_item"
+  },
+  "result": "steamcraft:ancient_clay_item"
+}

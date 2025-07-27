@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "steamcraft:ancient_moist_clay_item"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "steamcraft:ancient_moist_clay"
+  }
+}

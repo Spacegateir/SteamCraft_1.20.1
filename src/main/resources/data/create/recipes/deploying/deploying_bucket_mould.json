@@ -1,0 +1,17 @@
+{
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "item": "steamcraft:ancient_moist_clay"
+    },
+    {
+      "item": "minecraft:bucket"
+    }
+  ],
+  "keepHeldItem": true,
+  "results": [
+    {
+      "item": "steamcraft:bucket_mould"
+    }
+  ]
+}

@@ -253,7 +253,14 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.GLIMMERSTONE_COBBLESTONE_WALL_BLOCK,
 
                         ModBlocks.GLIMMERSTONE_PILLAR_BLOCK,
-                        ModBlocks.GLIMMERSTONE_ENGRAVED_BLOCK
+                        ModBlocks.GLIMMERSTONE_ENGRAVED_BLOCK,
+
+                        ModBlocks.ANCIENT_GRAVEL_BLOCK,
+                        ModBlocks.ANCIENT_SAND_BLOCK,
+                        ModBlocks.ANCIENT_SILT_BLOCK,
+                        ModBlocks.ANCIENT_LOAM_BLOCK,
+                        ModBlocks.ANCIENT_MUD_BLOCK,
+                        ModBlocks.ANCIENT_CLAY_BLOCK
 
                 );
 
@@ -427,7 +434,15 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         Blocks.MUD,
                         Blocks.MUD_BRICKS,
                         Blocks.MOSS_BLOCK,
-                        Blocks.DIRT_PATH
+                        Blocks.DIRT_PATH,
+
+                        ModBlocks.ANCIENT_GRAVEL_BLOCK,
+                        ModBlocks.ANCIENT_SAND_BLOCK,
+                        ModBlocks.ANCIENT_SILT_BLOCK,
+                        ModBlocks.ANCIENT_LOAM_BLOCK,
+                        ModBlocks.ANCIENT_MUD_BLOCK,
+                        ModBlocks.ANCIENT_CLAY_BLOCK,
+                        ModBlocks.ANCIENT_MOIST_CLAY_BLOCK
                 );
 
         getOrCreateTagBuilder(ModTags.Blocks.SHEARING_MODE)
@@ -673,9 +688,6 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.FOOLS_GOLD_BLOCK
                 );
 
-
-
-
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .addTag(ModTags.Blocks.SKELETON)
                 .addTag(ModTags.Blocks.ARCANE_BLOCKS)
@@ -726,7 +738,15 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.SNOW_BRICKS,
                         ModBlocks.SNOW_BRICKS_CRACKED,
                         ModBlocks.SNOW_TILES,
-                        ModBlocks.SNOW_TILES_CRACKED
+                        ModBlocks.SNOW_TILES_CRACKED,
+
+                        ModBlocks.ANCIENT_GRAVEL_BLOCK,
+                        ModBlocks.ANCIENT_SAND_BLOCK,
+                        ModBlocks.ANCIENT_SILT_BLOCK,
+                        ModBlocks.ANCIENT_LOAM_BLOCK,
+                        ModBlocks.ANCIENT_MUD_BLOCK,
+                        ModBlocks.ANCIENT_CLAY_BLOCK,
+                        ModBlocks.ANCIENT_MOIST_CLAY_BLOCK
 
                 );
 

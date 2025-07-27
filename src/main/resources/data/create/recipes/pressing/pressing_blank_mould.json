@@ -1,0 +1,13 @@
+{
+  "type": "create:pressing",
+  "ingredients": [
+    {
+      "item": "steamcraft:ancient_moist_clay"
+    }
+  ],
+  "results": [
+    {
+      "item": "steamcraft:blank_mould"
+    }
+  ]
+}

@@ -46,6 +46,12 @@
     "steamcraft:glimmerstone/glimmerstone_cobblestone_slab_block",
     "steamcraft:glimmerstone/glimmerstone_cobblestone_wall_block",
     "steamcraft:glimmerstone/glimmerstone_pillar_block",
-    "steamcraft:glimmerstone/glimmerstone_engraved_block"
+    "steamcraft:glimmerstone/glimmerstone_engraved_block",
+    "steamcraft:ancient_gravel_block",
+    "steamcraft:ancient_sand_block",
+    "steamcraft:ancient_silt_block",
+    "steamcraft:ancient_loam_block",
+    "steamcraft:ancient_mud_block",
+    "steamcraft:ancient_clay_block"
   ]
 }

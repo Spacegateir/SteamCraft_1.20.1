@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "cookingtime": 100,
+  "experience": 0.1,
+  "group": "smoked_blocks",
+  "ingredient": {
+    "item": "steamcraft:ancient_loam_item"
+  },
+  "result": "minecraft:coarse_dirt"
+}

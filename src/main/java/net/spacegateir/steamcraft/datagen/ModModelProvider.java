@@ -73,6 +73,14 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SNOW_TILES);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SNOW_TILES_CRACKED);
 
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ANCIENT_GRAVEL_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ANCIENT_MUD_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ANCIENT_CLAY_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ANCIENT_MOIST_CLAY_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ANCIENT_SAND_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ANCIENT_SILT_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ANCIENT_LOAM_BLOCK);
+
         blockStateModelGenerator.registerCrop(ModBlocks.CARNATION_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
         blockStateModelGenerator.registerCrop(ModBlocks.LUSH_CARNATION_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
         blockStateModelGenerator.registerCrop(ModBlocks.THORNED_CARNATION_CROP, ModCropBlock.AGE, 0,1,2,3,4,5,6);
@@ -343,6 +351,9 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.FOOLS_GOLD_LAVA_BUCKET, Models.GENERATED);
         itemModelGenerator.register(ModItems.DIVINITITE_ALLOY_LAVA_BUCKET, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.ANCIENT_CLAY, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ANCIENT_MOIST_CLAY, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.BLANK_MOULD, Models.GENERATED);
         itemModelGenerator.register(ModItems.HELMET_MOULD, Models.GENERATED);

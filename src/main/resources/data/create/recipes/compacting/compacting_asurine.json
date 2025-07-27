@@ -1,0 +1,24 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "steamcraft:ancient_silt_item"
+    },
+    {
+      "item": "steamcraft:ancient_mud_item"
+    },
+    {
+      "item": "steamcraft:silver_nugget"
+    },
+    {
+      "amount": 8100,
+      "fluidTag": "steamcraft:lava_sc",
+      "nbt": {}
+    }
+  ],
+  "results": [
+    {
+      "item": "create:asurine"
+    }
+  ]
+}

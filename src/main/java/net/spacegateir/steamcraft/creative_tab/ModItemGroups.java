@@ -43,6 +43,9 @@ public class ModItemGroups {
                         entries.add(ModItems.OBSCURIUM_CRYSTAL);
                         entries.add(ModItems.DIVINE_IMBUMENT_GEM);
 
+                        entries.add(ModItems.ANCIENT_CLAY);
+                        entries.add(ModItems.ANCIENT_MOIST_CLAY);
+
                         entries.add(ModItems.BLANK_MOULD);
                         entries.add(ModItems.HELMET_MOULD);
                         entries.add(ModItems.CHESTPLATE_MOULD);
@@ -263,6 +266,14 @@ public class ModItemGroups {
 
                         entries.add(ModItems.GLIMMERSTONE_PILLAR_ITEM);
                         entries.add(ModItems.GLIMMERSTONE_ENGRAVED_ITEM);
+
+                        entries.add(ModItems.ANCIENT_GRAVEL_ITEM);
+                        entries.add(ModItems.ANCIENT_SAND_ITEM);
+                        entries.add(ModItems.ANCIENT_SILT_ITEM);
+                        entries.add(ModItems.ANCIENT_LOAM_ITEM);
+                        entries.add(ModItems.ANCIENT_MUD_ITEM);
+                        entries.add(ModItems.ANCIENT_CLAY_ITEM);
+                        entries.add(ModItems.ANCIENT_MOIST_CLAY_ITEM);
 
                         entries.add(ModBlocks.COBBLED_WHITE_CONCRETE);
                         entries.add(ModBlocks.COBBLED_WHITE_CONCRETE_POWDER);

@@ -17,6 +17,7 @@ import net.spacegateir.steamcraft.block.arcane.*;
 import net.spacegateir.steamcraft.block.arcane_specal.*;
 import net.spacegateir.steamcraft.block.cauldronblocks.*;
 import net.spacegateir.steamcraft.block.custom.*;
+import net.spacegateir.steamcraft.block.naturalblocks.*;
 import net.spacegateir.steamcraft.block.path_blocks.*;
 import net.spacegateir.steamcraft.block.traps.*;
 import net.spacegateir.steamcraft.effect.ModEffects;
@@ -1243,6 +1244,34 @@ public class ModBlocks {
     public static final Block GLIMMERSTONE_ENGRAVED_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "glimmerstone/glimmerstone_engraved_block"),
             new GlimmerstoneBlock(FabricBlockSettings.copyOf(Blocks.STONE)));
+
+    public static final Block ANCIENT_GRAVEL_BLOCK = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "ancient_gravel_block"),
+            new ModGravelBlock(FabricBlockSettings.copyOf(Blocks.GRAVEL)));
+
+    public static final Block ANCIENT_MUD_BLOCK = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "ancient_mud_block"),
+            new ModMudBlock(FabricBlockSettings.copyOf(Blocks.MUD)));
+
+    public static final Block ANCIENT_CLAY_BLOCK = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "ancient_clay_block"),
+            new ModClayBlock(FabricBlockSettings.copyOf(Blocks.PACKED_MUD)));
+
+    public static final Block ANCIENT_MOIST_CLAY_BLOCK = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "ancient_moist_clay_block"),
+            new ModClayBlock(FabricBlockSettings.copyOf(Blocks.PACKED_MUD)));
+
+    public static final Block ANCIENT_SAND_BLOCK = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "ancient_sand_block"),
+            new ModSandBlock(0xB8775B, FabricBlockSettings.copyOf(Blocks.SAND)));
+
+    public static final Block ANCIENT_SILT_BLOCK = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "ancient_silt_block"),
+            new ModSiltBlock(FabricBlockSettings.copyOf(Blocks.SAND)));
+
+    public static final Block ANCIENT_LOAM_BLOCK = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "ancient_loam_block"),
+            new ModLoamBlock(FabricBlockSettings.copyOf(Blocks.COARSE_DIRT)));
 
     // Crops
     public static final Block AGAPANTHUS_CROP = registerBlockWithoutBlockItem("agapanthus_crop",

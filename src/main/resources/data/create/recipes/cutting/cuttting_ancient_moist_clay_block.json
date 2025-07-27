@@ -1,0 +1,15 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "item": "steamcraft:ancient_moist_clay_item"
+    }
+  ],
+  "processingTime": 50,
+  "results": [
+    {
+      "item": "steamcraft:ancient_moist_clay",
+      "count": 4
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "cookingtime": 200,
+  "experience": 0.15,
+  "group": "silt_block",
+  "ingredient": {
+    "item": "steamcraft:ancient_silt_item"
+  },
+  "result": "minecraft:calcite"
+}

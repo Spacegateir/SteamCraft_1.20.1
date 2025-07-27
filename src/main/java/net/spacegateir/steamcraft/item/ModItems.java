@@ -634,6 +634,38 @@ public class ModItems {
             new Identifier(Steamcraft.MOD_ID, "glimmerstone/glimmerstone_engraved_item"),
             new BlockItem(ModBlocks.GLIMMERSTONE_ENGRAVED_BLOCK, new FabricItemSettings()));
 
+    public static final Item ANCIENT_GRAVEL_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "ancient_gravel_item"),
+            new BlockItem(ModBlocks.ANCIENT_GRAVEL_BLOCK, new FabricItemSettings()));
+    public static final Item ANCIENT_MUD_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "ancient_mud_item"),
+            new BlockItem(ModBlocks.ANCIENT_MUD_BLOCK, new FabricItemSettings()));
+
+    public static final Item ANCIENT_CLAY_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "ancient_clay_item"),
+            new BlockItem(ModBlocks.ANCIENT_CLAY_BLOCK, new FabricItemSettings()));
+    public static final Item ANCIENT_CLAY = registerItem("ancient_clay",
+            new Item(new FabricItemSettings()));
+
+    public static final Item ANCIENT_MOIST_CLAY_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "ancient_moist_clay_item"),
+            new BlockItem(ModBlocks.ANCIENT_MOIST_CLAY_BLOCK, new FabricItemSettings()));
+    public static final Item ANCIENT_MOIST_CLAY = registerItem("ancient_moist_clay",
+            new Item(new FabricItemSettings()));
+
+    public static final Item ANCIENT_SAND_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "ancient_sand_item"),
+            new BlockItem(ModBlocks.ANCIENT_SAND_BLOCK, new FabricItemSettings()));
+
+    public static final Item ANCIENT_SILT_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "ancient_silt_item"),
+            new BlockItem(ModBlocks.ANCIENT_SILT_BLOCK, new FabricItemSettings()));
+
+    public static final Item ANCIENT_LOAM_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "ancient_loam_item"),
+            new BlockItem(ModBlocks.ANCIENT_LOAM_BLOCK, new FabricItemSettings()));
+
+
 
     // Water
     public static final Item WHITE_WATER_BUCKET = registerDyedWaterBucket(DyeColor.WHITE, ModFluids.STILL_WHITE_WATER);

@@ -1,0 +1,19 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "steamcraft:ancient_gravel_item"
+    }
+  ],
+  "processingTime": 100,
+  "results": [
+    {
+      "chance": 0.50,
+      "item": "steamcraft:ancient_sand_item"
+    },
+    {
+      "chance": 0.50,
+      "item": "steamcraft:silver_nugget"
+    }
+  ]
+}

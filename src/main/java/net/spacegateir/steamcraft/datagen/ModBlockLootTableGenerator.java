@@ -9,10 +9,22 @@ import net.minecraft.item.ItemConvertible;
 import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
 import net.minecraft.loot.condition.LootCondition;
 import net.minecraft.loot.entry.ItemEntry;
+import net.minecraft.predicate.NumberRange;
 import net.minecraft.predicate.StatePredicate;
 import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.block.custom.ModCropBlock;
 import net.spacegateir.steamcraft.item.ModItems;
+import net.minecraft.loot.*;
+import net.minecraft.loot.condition.*;
+import net.minecraft.loot.entry.*;
+import net.minecraft.loot.function.*;
+import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
+import net.minecraft.item.Items;
+import net.minecraft.enchantment.Enchantments;
+import net.minecraft.predicate.item.EnchantmentPredicate;
+import net.minecraft.predicate.item.ItemPredicate;
+import net.minecraft.util.Identifier;
+
 
 public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
     public ModBlockLootTableGenerator(FabricDataOutput dataOutput) {
@@ -21,6 +33,61 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
+
+        Block block = ModBlocks.ANCIENT_GRAVEL_BLOCK;
+        LootPoolEntry.Builder<?> silkTouchEntry = ItemEntry.builder(block)
+                .conditionally(MatchToolLootCondition.builder(
+                        ItemPredicate.Builder.create()
+                                .enchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, NumberRange.IntRange.atLeast(1)))
+                ));
+        LootPoolEntry.Builder<?> flintEntry = ItemEntry.builder(Items.FLINT)
+                .conditionally(TableBonusLootCondition.builder(
+                        Enchantments.FORTUNE,
+                        new float[]{0.1F, 0.14285715F, 0.25F, 1.0F}
+                ))
+                .conditionally(SurvivesExplosionLootCondition.builder());
+        LootPoolEntry.Builder<?> gravelEntry = ItemEntry.builder(ModItems.ANCIENT_GRAVEL_ITEM)
+                .conditionally(SurvivesExplosionLootCondition.builder());
+        this.addDrop(block, LootTable.builder()
+                .pool(LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .with(silkTouchEntry)
+                        .with(flintEntry)
+                        .with(gravelEntry)
+                )
+        );
+        addDrop(ModBlocks.ANCIENT_SAND_BLOCK);
+        addDrop(ModBlocks.ANCIENT_SILT_BLOCK);
+
+        addDrop(ModBlocks.ANCIENT_LOAM_BLOCK,
+                dropsWithSilkTouch(ModBlocks.ANCIENT_LOAM_BLOCK, ItemEntry.builder(Blocks.DIRT))
+        );
+        addDrop(ModBlocks.ANCIENT_MUD_BLOCK);
+        addDrop(ModBlocks.ANCIENT_CLAY_BLOCK,
+                LootTable.builder()
+                        .pool(LootPool.builder()
+                                .rolls(ConstantLootNumberProvider.create(1))
+                                .with(ItemEntry.builder(ModBlocks.ANCIENT_CLAY_BLOCK)
+                                        .conditionally(MatchToolLootCondition.builder(
+                                                ItemPredicate.Builder.create()
+                                                        .enchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, NumberRange.IntRange.atLeast(1))))))
+                                .with(ItemEntry.builder(ModItems.ANCIENT_CLAY)
+                                        .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(4)))
+                                        .conditionally(SurvivesExplosionLootCondition.builder())))
+        );
+        addDrop(ModBlocks.ANCIENT_MOIST_CLAY_BLOCK,
+                LootTable.builder()
+                        .pool(LootPool.builder()
+                                .rolls(ConstantLootNumberProvider.create(1))
+                                .with(ItemEntry.builder(ModBlocks.ANCIENT_MOIST_CLAY_BLOCK)
+                                        .conditionally(MatchToolLootCondition.builder(
+                                                ItemPredicate.Builder.create()
+                                                        .enchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, NumberRange.IntRange.atLeast(1))))))
+                                .with(ItemEntry.builder(ModItems.ANCIENT_MOIST_CLAY)
+                                        .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(4)))
+                                        .conditionally(SurvivesExplosionLootCondition.builder())))
+        );
+
         addDrop(ModBlocks.AETHER_COIL);
         addDrop(ModBlocks.AETHER_COIL_WHITE,
                 dropsWithSilkTouch(ModBlocks.AETHER_COIL_WHITE, ItemEntry.builder(ModBlocks.AETHER_COIL))
@@ -498,6 +565,8 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.GLIMMERSTONE_PILLAR_BLOCK);
         addDrop(ModBlocks.GLIMMERSTONE_ENGRAVED_BLOCK);
+
+
 
         addDrop(ModBlocks.FARMLAND_ENRICHED_BLOCK,
                 dropsWithSilkTouch(Blocks.DIRT, ItemEntry.builder(Blocks.DIRT)));

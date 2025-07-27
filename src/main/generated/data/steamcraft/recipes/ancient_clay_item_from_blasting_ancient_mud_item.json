@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "blocks",
+  "cookingtime": 200,
+  "experience": 0.15,
+  "group": "mud_block",
+  "ingredient": {
+    "item": "steamcraft:ancient_mud_item"
+  },
+  "result": "steamcraft:ancient_clay_item"
+}

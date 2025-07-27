@@ -1,0 +1,14 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "steamcraft:glimmerstone/glimmerstone_cobblestone_item"
+    }
+  ],
+  "processingTime": 250,
+  "results": [
+    {
+      "item": "steamcraft:ancient_gravel_item"
+    }
+  ]
+}

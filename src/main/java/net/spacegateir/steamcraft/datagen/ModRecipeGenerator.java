@@ -9,6 +9,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.tag.ItemTags;
@@ -47,6 +48,33 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion("has_" + Registries.ITEM.getId(result.asItem()).getPath(), conditionsFromItem(result))
                 .offerTo(exporter, new Identifier("steamcraft", Registries.ITEM.getId(base.asItem()).getPath() + "_from_" + idSuffix));
     }
+
+    public static void offerReversible2x2CompactingRecipesWithId(Consumer<RecipeJsonProvider> exporter, RecipeCategory baseCategory, ItemConvertible base,
+                                                              RecipeCategory resultCategory, ItemConvertible result, String idSuffix) {
+
+        ShapedRecipeJsonBuilder.create(resultCategory, result)
+                .pattern("##")
+                .pattern("##")
+                .input('#', base)
+                .criterion("has_" + Registries.ITEM.getId(base.asItem()).getPath(), conditionsFromItem(base))
+                .offerTo(exporter, new Identifier("steamcraft", Registries.ITEM.getId(result.asItem()).getPath() + "_from_" + idSuffix));
+
+        ShapelessRecipeJsonBuilder.create(baseCategory, base, 4)
+                .input(result)
+                .criterion("has_" + Registries.ITEM.getId(result.asItem()).getPath(), conditionsFromItem(result))
+                .offerTo(exporter, new Identifier("steamcraft", Registries.ITEM.getId(base.asItem()).getPath() + "_from_" + idSuffix));
+    }
+
+    public static void offerStairRecipe(Consumer<RecipeJsonProvider> exporter, RecipeCategory category, ItemConvertible result, ItemConvertible base) {
+        ShapedRecipeJsonBuilder.create(category, result, 4)
+                .pattern("#  ")
+                .pattern("## ")
+                .pattern("###")
+                .input('#', base)
+                .criterion("has_" + Registries.ITEM.getId(base.asItem()).getPath(), conditionsFromItem(base))
+                .offerTo(exporter, new Identifier("steamcraft", Registries.ITEM.getId(result.asItem()).getPath() + "_from_" + Registries.ITEM.getId(base.asItem()).getPath()));
+    }
+
 
     private static void offerAetherCoilRecipe(Consumer<RecipeJsonProvider> exporter, Block coloredCoil, Item dye) {
         for (int coilCount = 1; coilCount <= 8; coilCount++) {
@@ -102,6 +130,9 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.FOOLS_GOLD_INGOT, RecipeCategory.MISC, ModBlocks.FOOLS_GOLD_BLOCK);
         offerReversibleCompactingRecipesWithId(exporter, RecipeCategory.MISC, ModItems.DIVINITITE_ALLOY_INGOT, RecipeCategory.MISC, ModBlocks.DIVINITITE_ALLOY_BLOCK, "block");
 
+        offerReversible2x2CompactingRecipesWithId(exporter, RecipeCategory.MISC, ModItems.ANCIENT_MOIST_CLAY, RecipeCategory.MISC, ModBlocks.ANCIENT_MOIST_CLAY_BLOCK, "moist_clay");
+        offerReversible2x2CompactingRecipesWithId(exporter, RecipeCategory.MISC, ModItems.ANCIENT_CLAY, RecipeCategory.MISC, ModBlocks.ANCIENT_CLAY_BLOCK, "dry_clay");
+
         offerSmelting(exporter, List.of(ModItems.FOOLS_GOLD_RAW), RecipeCategory.MISC, ModItems.FOOLS_GOLD_INGOT,
                 0.15f, 200, "fools_gold");
         offerBlasting(exporter, List.of(ModItems.FOOLS_GOLD_RAW), RecipeCategory.MISC, ModItems.FOOLS_GOLD_INGOT,
@@ -125,6 +156,30 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         offerBlasting(exporter, List.of(ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK), RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_BLOCK,
                 0.15f, 100, "glimmerstone_block");
 
+        offerSmelting(exporter, List.of(ModBlocks.ANCIENT_MOIST_CLAY_BLOCK), RecipeCategory.MISC, ModBlocks.ANCIENT_CLAY_BLOCK,
+                0.15f, 200, "clay_block");
+        offerBlasting(exporter, List.of(ModBlocks.ANCIENT_MOIST_CLAY_BLOCK), RecipeCategory.MISC, ModBlocks.ANCIENT_CLAY_BLOCK,
+                0.15f, 100, "clay_block");
+
+        offerSmelting(exporter, List.of(ModBlocks.ANCIENT_SAND_BLOCK), RecipeCategory.MISC, Blocks.GLASS,
+                0.15f, 200, "sand_block");
+        offerBlasting(exporter, List.of(ModBlocks.ANCIENT_SAND_BLOCK), RecipeCategory.MISC, Blocks.GLASS,
+                0.15f, 100, "sand_block");
+
+        offerSmelting(exporter, List.of(ModItems.ANCIENT_MOIST_CLAY), RecipeCategory.MISC, ModItems.ANCIENT_CLAY,
+                0.15f, 200, "clay");
+        offerBlasting(exporter, List.of(ModItems.ANCIENT_MOIST_CLAY), RecipeCategory.MISC, ModItems.ANCIENT_CLAY,
+                0.15f, 100, "clay");
+
+        offerBlasting(exporter, List.of(ModBlocks.ANCIENT_MUD_BLOCK), RecipeCategory.MISC, ModBlocks.ANCIENT_CLAY_BLOCK,
+                0.15f, 200, "mud_block");
+        offerSmelting(exporter, List.of(ModBlocks.ANCIENT_MUD_BLOCK), RecipeCategory.MISC, Blocks.CLAY,
+                0.15f, 200, "mud_block");
+        offerSmelting(exporter, List.of(ModBlocks.ANCIENT_SILT_BLOCK), RecipeCategory.MISC, Blocks.CALCITE,
+                0.15f, 200, "silt_block");
+        offerSmelting(exporter, List.of(ModBlocks.ANCIENT_LOAM_BLOCK), RecipeCategory.MISC, Blocks.DIRT,
+                0.15f, 200, "loam_block");
+
         offerSmelting(exporter, List.of(Items.LODESTONE), RecipeCategory.MISC, Items.NETHERITE_INGOT,
                 1.00f, 200, "netherite_ingot");
         offerBlasting(exporter, List.of(Items.LODESTONE), RecipeCategory.MISC, Items.NETHERITE_INGOT,
@@ -147,6 +202,121 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 0.10f, 50, "snow_tiles");
         offerBlasting(exporter, List.of(ModBlocks.SNOW_TILES), RecipeCategory.MISC, ModBlocks.SNOW_TILES_CRACKED,
                 0.10f, 50, "snow_tiles");
+
+//Stairs
+
+        offerStairRecipe(exporter, RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_STAIR_BLOCK, ModItems.GLIMMERSTONE_ITEM);
+        offerStairRecipe(exporter, RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_COBBLESTONE_STAIR_BLOCK, ModItems.GLIMMERSTONE_COBBLESTONE_ITEM);
+        offerStairRecipe(exporter, RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_BRICKS_STAIR_BLOCK, ModItems.GLIMMERSTONE_BRICKS_ITEM);
+
+//Slabs
+
+        offerSlabRecipe(exporter, RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_SLAB_BLOCK, ModItems.GLIMMERSTONE_ITEM);
+        offerSlabRecipe(exporter, RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_COBBLESTONE_SLAB_BLOCK, ModItems.GLIMMERSTONE_COBBLESTONE_ITEM);
+        offerSlabRecipe(exporter, RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_BRICKS_SLAB_BLOCK, ModItems.GLIMMERSTONE_BRICKS_ITEM);
+
+//Walls
+
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_WALL_BLOCK, ModItems.GLIMMERSTONE_ITEM);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_COBBLESTONE_WALL_BLOCK, ModItems.GLIMMERSTONE_COBBLESTONE_ITEM);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_BRICKS_WALL_BLOCK, ModItems.GLIMMERSTONE_BRICKS_ITEM);
+
+//smoking
+
+        offerMultipleOptions(exporter, RecipeSerializer.SMOKING, List.of(ModBlocks.ANCIENT_LOAM_BLOCK),
+                RecipeCategory.BUILDING_BLOCKS,Blocks.COARSE_DIRT,0.1F,100,"smoked_blocks","_from_smoking"
+        );
+        offerMultipleOptions(exporter, RecipeSerializer.SMOKING, List.of(ModBlocks.ANCIENT_MUD_BLOCK),
+                RecipeCategory.BUILDING_BLOCKS,ModBlocks.ANCIENT_CLAY_BLOCK,0.1F,100,"smoked_blocks","_from_smoking"
+        );
+
+
+// stone cutting
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_ENGRAVED_BLOCK, ModBlocks.GLIMMERSTONE_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_PILLAR_BLOCK, ModBlocks.GLIMMERSTONE_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK, ModBlocks.GLIMMERSTONE_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_COBBLESTONE_STAIR_BLOCK, ModBlocks.GLIMMERSTONE_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_COBBLESTONE_SLAB_BLOCK, ModBlocks.GLIMMERSTONE_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_COBBLESTONE_WALL_BLOCK, ModBlocks.GLIMMERSTONE_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_BRICKS_BLOCK, ModBlocks.GLIMMERSTONE_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_BRICKS_STAIR_BLOCK, ModBlocks.GLIMMERSTONE_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_BRICKS_SLAB_BLOCK, ModBlocks.GLIMMERSTONE_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_BRICKS_WALL_BLOCK, ModBlocks.GLIMMERSTONE_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_STAIR_BLOCK, ModBlocks.GLIMMERSTONE_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_SLAB_BLOCK, ModBlocks.GLIMMERSTONE_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_WALL_BLOCK, ModBlocks.GLIMMERSTONE_BLOCK);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_ENGRAVED_BLOCK, ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_PILLAR_BLOCK, ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_BLOCK, ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_STAIR_BLOCK, ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_SLAB_BLOCK, ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_WALL_BLOCK, ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_BRICKS_BLOCK, ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_BRICKS_STAIR_BLOCK, ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_BRICKS_SLAB_BLOCK, ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_BRICKS_WALL_BLOCK, ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_COBBLESTONE_STAIR_BLOCK, ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_COBBLESTONE_SLAB_BLOCK, ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_COBBLESTONE_WALL_BLOCK, ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_ENGRAVED_BLOCK, ModBlocks.GLIMMERSTONE_BRICKS_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_PILLAR_BLOCK, ModBlocks.GLIMMERSTONE_BRICKS_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_BLOCK, ModBlocks.GLIMMERSTONE_BRICKS_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_STAIR_BLOCK, ModBlocks.GLIMMERSTONE_BRICKS_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_SLAB_BLOCK, ModBlocks.GLIMMERSTONE_BRICKS_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_WALL_BLOCK, ModBlocks.GLIMMERSTONE_BRICKS_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK, ModBlocks.GLIMMERSTONE_BRICKS_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_COBBLESTONE_STAIR_BLOCK, ModBlocks.GLIMMERSTONE_BRICKS_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_COBBLESTONE_SLAB_BLOCK, ModBlocks.GLIMMERSTONE_BRICKS_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_COBBLESTONE_WALL_BLOCK, ModBlocks.GLIMMERSTONE_BRICKS_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_BRICKS_STAIR_BLOCK, ModBlocks.GLIMMERSTONE_BRICKS_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_BRICKS_SLAB_BLOCK, ModBlocks.GLIMMERSTONE_BRICKS_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_BRICKS_WALL_BLOCK, ModBlocks.GLIMMERSTONE_BRICKS_BLOCK);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_BLOCK, ModBlocks.GLIMMERSTONE_STAIR_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_COBBLESTONE_STAIR_BLOCK, ModBlocks.GLIMMERSTONE_STAIR_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_BRICKS_STAIR_BLOCK, ModBlocks.GLIMMERSTONE_STAIR_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK, ModBlocks.GLIMMERSTONE_COBBLESTONE_STAIR_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_STAIR_BLOCK, ModBlocks.GLIMMERSTONE_COBBLESTONE_STAIR_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_BRICKS_STAIR_BLOCK, ModBlocks.GLIMMERSTONE_COBBLESTONE_STAIR_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_BRICKS_BLOCK, ModBlocks.GLIMMERSTONE_BRICKS_STAIR_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_COBBLESTONE_STAIR_BLOCK, ModBlocks.GLIMMERSTONE_BRICKS_STAIR_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_STAIR_BLOCK, ModBlocks.GLIMMERSTONE_BRICKS_STAIR_BLOCK);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_BLOCK, ModBlocks.GLIMMERSTONE_SLAB_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_COBBLESTONE_SLAB_BLOCK, ModBlocks.GLIMMERSTONE_SLAB_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_BRICKS_SLAB_BLOCK, ModBlocks.GLIMMERSTONE_SLAB_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK, ModBlocks.GLIMMERSTONE_COBBLESTONE_SLAB_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_SLAB_BLOCK, ModBlocks.GLIMMERSTONE_COBBLESTONE_SLAB_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_BRICKS_SLAB_BLOCK, ModBlocks.GLIMMERSTONE_COBBLESTONE_SLAB_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_BRICKS_BLOCK, ModBlocks.GLIMMERSTONE_BRICKS_SLAB_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_COBBLESTONE_SLAB_BLOCK, ModBlocks.GLIMMERSTONE_BRICKS_SLAB_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_SLAB_BLOCK, ModBlocks.GLIMMERSTONE_BRICKS_SLAB_BLOCK);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_BLOCK, ModBlocks.GLIMMERSTONE_WALL_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_COBBLESTONE_WALL_BLOCK, ModBlocks.GLIMMERSTONE_WALL_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_BRICKS_WALL_BLOCK, ModBlocks.GLIMMERSTONE_WALL_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK, ModBlocks.GLIMMERSTONE_COBBLESTONE_WALL_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_WALL_BLOCK, ModBlocks.GLIMMERSTONE_COBBLESTONE_WALL_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_BRICKS_WALL_BLOCK, ModBlocks.GLIMMERSTONE_COBBLESTONE_WALL_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_BRICKS_BLOCK, ModBlocks.GLIMMERSTONE_BRICKS_WALL_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_COBBLESTONE_WALL_BLOCK, ModBlocks.GLIMMERSTONE_BRICKS_WALL_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_WALL_BLOCK, ModBlocks.GLIMMERSTONE_BRICKS_WALL_BLOCK);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_BLOCK, ModBlocks.GLIMMERSTONE_PILLAR_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK, ModBlocks.GLIMMERSTONE_PILLAR_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_BRICKS_BLOCK, ModBlocks.GLIMMERSTONE_PILLAR_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_BLOCK, ModBlocks.GLIMMERSTONE_ENGRAVED_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK, ModBlocks.GLIMMERSTONE_ENGRAVED_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_BRICKS_BLOCK, ModBlocks.GLIMMERSTONE_ENGRAVED_BLOCK);
+
+
+
+
+
+
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SILVER_COIN, 1)
                 .input(ModItems.COPPER_COIN, 9)
@@ -1628,81 +1798,6 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input(ModItems.GLIMMERSTONE_ITEM, 4)
                 .criterion("has_glimmerstone", conditionsFromItem(ModItems.GLIMMERSTONE_ITEM))
                 .offerTo(exporter, new Identifier("steamcraft", "glimmerstone_to_glimmerstone_brick"));
-
-//Stairs
-        // Glimmerstone Cobblestone Stairs
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_COBBLESTONE_STAIR_BLOCK, 4)
-                .pattern("I  ")
-                .pattern("II ")
-                .pattern("III")
-                .input('I', ModItems.GLIMMERSTONE_COBBLESTONE_ITEM)
-                .criterion("has_ingot", conditionsFromItem(ModItems.GLIMMERSTONE_COBBLESTONE_ITEM))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GLIMMERSTONE_COBBLESTONE_STAIR_BLOCK)));
-
-        // Glimmerstone Stairs
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_STAIR_BLOCK, 4)
-                .pattern("I  ")
-                .pattern("II ")
-                .pattern("III")
-                .input('I', ModItems.GLIMMERSTONE_ITEM)
-                .criterion("has_ingot", conditionsFromItem(ModItems.GLIMMERSTONE_ITEM))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GLIMMERSTONE_STAIR_BLOCK)));
-
-        // Glimmerstone Bricks Stairs
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_BRICKS_STAIR_BLOCK, 4)
-                .pattern("I  ")
-                .pattern("II ")
-                .pattern("III")
-                .input('I', ModItems.GLIMMERSTONE_BRICKS_ITEM)
-                .criterion("has_ingot", conditionsFromItem(ModItems.GLIMMERSTONE_BRICKS_ITEM))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GLIMMERSTONE_BRICKS_STAIR_BLOCK)));
-
-//Slabs
-        // Glimmerstone Cobblestone Slab
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_COBBLESTONE_SLAB_BLOCK, 6)
-                .pattern("III")
-                .input('I', ModItems.GLIMMERSTONE_COBBLESTONE_ITEM)
-                .criterion("has_ingot", conditionsFromItem(ModItems.GLIMMERSTONE_COBBLESTONE_ITEM))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GLIMMERSTONE_COBBLESTONE_SLAB_BLOCK)));
-
-        // Glimmerstone Slab
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_SLAB_BLOCK, 6)
-                .pattern("III")
-                .input('I', ModItems.GLIMMERSTONE_ITEM)
-                .criterion("has_ingot", conditionsFromItem(ModItems.GLIMMERSTONE_ITEM))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GLIMMERSTONE_SLAB_BLOCK)));
-
-        // Glimmerstone Bricks Slab
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_BRICKS_SLAB_BLOCK, 6)
-                .pattern("III")
-                .input('I', ModItems.GLIMMERSTONE_BRICKS_ITEM)
-                .criterion("has_ingot", conditionsFromItem(ModItems.GLIMMERSTONE_BRICKS_ITEM))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GLIMMERSTONE_BRICKS_SLAB_BLOCK)));
-
-//Walls
-        // Glimmerstone Cobblestone Wall
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_COBBLESTONE_WALL_BLOCK, 6)
-                .pattern("III")
-                .pattern("III")
-                .input('I', ModItems.GLIMMERSTONE_COBBLESTONE_ITEM)
-                .criterion("has_ingot", conditionsFromItem(ModItems.GLIMMERSTONE_COBBLESTONE_ITEM))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GLIMMERSTONE_COBBLESTONE_WALL_BLOCK)));
-
-        // Glimmerstone Wall
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_WALL_BLOCK, 6)
-                .pattern("III")
-                .pattern("III")
-                .input('I', ModItems.GLIMMERSTONE_ITEM)
-                .criterion("has_ingot", conditionsFromItem(ModItems.GLIMMERSTONE_ITEM))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GLIMMERSTONE_WALL_BLOCK)));
-
-        // Glimmerstone Bricks Wall
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_BRICKS_WALL_BLOCK, 6)
-                .pattern("III")
-                .pattern("III")
-                .input('I', ModItems.GLIMMERSTONE_BRICKS_ITEM)
-                .criterion("has_ingot", conditionsFromItem(ModItems.GLIMMERSTONE_BRICKS_ITEM))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GLIMMERSTONE_BRICKS_WALL_BLOCK)));
 
 //Pillar / Engraved
 

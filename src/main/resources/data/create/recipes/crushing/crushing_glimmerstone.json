@@ -1,0 +1,22 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "steamcraft:glimmerstone/glimmerstone_item"
+    }
+  ],
+  "processingTime": 250,
+  "results": [
+    {
+      "item": "steamcraft:ancient_gravel_item"
+    },
+    {
+      "chance": 0.05,
+      "item": "steamcraft:raw_silver"
+    },
+    {
+      "chance": 0.15,
+      "item": "create:experience_nugget"
+    }
+  ]
+}

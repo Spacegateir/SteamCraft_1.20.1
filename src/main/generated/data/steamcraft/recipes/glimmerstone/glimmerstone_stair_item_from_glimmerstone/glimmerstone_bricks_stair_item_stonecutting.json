@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "steamcraft:glimmerstone/glimmerstone_bricks_stair_item"
+  },
+  "result": "steamcraft:glimmerstone/glimmerstone_stair_item"
+}

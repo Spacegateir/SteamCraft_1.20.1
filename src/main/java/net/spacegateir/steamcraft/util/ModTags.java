@@ -49,6 +49,7 @@ public class ModTags {
     public static class Fluids {
 
         public static final TagKey<Fluid> LAVA_DL = createFluidTag("lava_dl");
+        public static final TagKey<Fluid> LAVA_SC = createFluidTag("lava_sc");
 
         public static final TagKey<Fluid> WHITE_LAVA_DL = createFluidTag("white_lava_dl");
         public static final TagKey<Fluid> ORANGE_LAVA_DL = createFluidTag("orange_lava_dl");
@@ -68,6 +69,7 @@ public class ModTags {
         public static final TagKey<Fluid> BLACK_LAVA_DL = createFluidTag("black_lava_dl");
 
         public static final TagKey<Fluid> WATER_DL = createFluidTag("water_dl");
+        public static final TagKey<Fluid> WATER_SC = createFluidTag("water_sc");
 
         public static final TagKey<Fluid> WHITE_WATER_DL = createFluidTag("white_water_dl");
         public static final TagKey<Fluid> ORANGE_WATER_DL = createFluidTag("orange_water_dl");

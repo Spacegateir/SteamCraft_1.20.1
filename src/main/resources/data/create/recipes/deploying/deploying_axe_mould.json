@@ -1,0 +1,17 @@
+{
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "item": "steamcraft:ancient_moist_clay"
+    },
+    {
+      "item": "minecraft:netherite_axe"
+    }
+  ],
+  "keepHeldItem": true,
+  "results": [
+    {
+      "item": "steamcraft:axe_mould"
+    }
+  ]
+}

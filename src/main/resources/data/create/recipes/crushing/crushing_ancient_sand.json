@@ -1,0 +1,14 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "steamcraft:ancient_sand_item"
+    }
+  ],
+  "processingTime": 250,
+  "results": [
+    {
+      "item": "steamcraft:ancient_silt_item"
+    }
+  ]
+}

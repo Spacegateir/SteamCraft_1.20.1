@@ -1,0 +1,13 @@
+{
+  "type": "create:splashing",
+  "ingredients": [
+    {
+      "item": "steamcraft:ancient_clay_item"
+    }
+  ],
+  "results": [
+    {
+      "item": "steamcraft:ancient_moist_clay_item"
+    }
+  ]
+}

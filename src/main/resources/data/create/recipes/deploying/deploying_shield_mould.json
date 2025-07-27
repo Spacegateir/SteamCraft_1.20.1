@@ -1,0 +1,17 @@
+{
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "item": "steamcraft:ancient_moist_clay"
+    },
+    {
+      "item": "minecraft:shield"
+    }
+  ],
+  "keepHeldItem": true,
+  "results": [
+    {
+      "item": "steamcraft:shield_mould"
+    }
+  ]
+}

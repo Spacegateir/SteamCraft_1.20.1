@@ -2,13 +2,13 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "I": {
+    "#": {
       "item": "steamcraft:glimmerstone/glimmerstone_cobblestone_item"
     }
   },
   "pattern": [
-    "III",
-    "III"
+    "###",
+    "###"
   ],
   "result": {
     "count": 6,

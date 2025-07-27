@@ -1,0 +1,14 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "steamcraft:ancient_sand_item"
+    }
+  ],
+  "processingTime": 100,
+  "results": [
+    {
+      "item": "steamcraft:ancient_silt_item"
+    }
+  ]
+}

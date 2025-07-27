@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_glimmerstone/glimmerstone_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "steamcraft:glimmerstone/glimmerstone_item"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "steamcraft:glimmerstone/glimmerstone_stair_item_from_glimmerstone/glimmerstone_item"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_glimmerstone/glimmerstone_item",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "steamcraft:glimmerstone/glimmerstone_stair_item_from_glimmerstone/glimmerstone_item"
+    ]
+  },
+  "sends_telemetry_event": false
+}

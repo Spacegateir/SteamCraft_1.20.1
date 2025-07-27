@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "steamcraft:glimmerstone/glimmerstone_item",
+    "steamcraft:glimmerstone/glimmerstone_cobblestone_item",
+    "steamcraft:glimmerstone/glimmerstone_bricks_item",
+    "steamcraft:ancient_gravel_item",
+    "steamcraft:ancient_sand_item",
+    "steamcraft:ancient_silt_item",
+    "steamcraft:ancient_loam_item",
+    "steamcraft:ancient_mud_item",
+    "steamcraft:ancient_clay",
+    "steamcraft:ancient_moist_clay",
+    "steamcraft:ancient_clay_item",
+    "steamcraft:ancient_moist_clay_item"
+  ]
+}

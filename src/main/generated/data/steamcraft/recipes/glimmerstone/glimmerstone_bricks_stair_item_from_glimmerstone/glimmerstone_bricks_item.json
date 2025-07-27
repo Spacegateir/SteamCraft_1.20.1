@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "steamcraft:glimmerstone/glimmerstone_bricks_item"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "item": "steamcraft:glimmerstone/glimmerstone_bricks_stair_item"
+  },
+  "show_notification": true
+}

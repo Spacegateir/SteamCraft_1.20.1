@@ -1,0 +1,22 @@
+{
+  "type": "create:mixing",
+  "heatRequirement": "superheated",
+  "ingredients": [
+    {
+      "item": "steamcraft:bucket_mould"
+    },
+    {
+      "item": "minecraft:light_gray_dye"
+    },
+    {
+      "amount": 81000,
+      "fluid": "minecraft:lava"
+    }
+  ],
+  "results": [
+    {
+      "amount": 81000,
+      "fluid": "steamcraft:light_gray_lava"
+    }
+  ]
+}

@@ -4,6 +4,8 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
+import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -14,7 +16,6 @@ import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.spacegateir.steamcraft.Steamcraft;
 import net.spacegateir.steamcraft.block.arcane.*;
-import net.spacegateir.steamcraft.block.arcane_specal.*;
 import net.spacegateir.steamcraft.block.cauldronblocks.*;
 import net.spacegateir.steamcraft.block.custom.*;
 import net.spacegateir.steamcraft.block.naturalblocks.*;
@@ -24,6 +25,7 @@ import net.spacegateir.steamcraft.effect.ModEffects;
 import net.spacegateir.steamcraft.item.ModItems;
 
 import java.util.EnumMap;
+import java.util.function.Function;
 
 
 public class ModBlocks {
@@ -200,80 +202,80 @@ public class ModBlocks {
 
     // Arcane Blocks
 
-    public static final Block ARCANE_ABSORPTION_BLOCK = registerBlock("arcane_absorption_block",
-            new ArcaneAbsorptionBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_ABSORPTION_BLOCK = registerArcaneBlock(StatusEffects.ABSORPTION, signalStrength ->
+            new StatusEffectInstance(StatusEffects.ABSORPTION, signalStrength * 2400 + 2400, signalStrength, false, false));
 
-    public static final Block ARCANE_BAD_OMEN_BLOCK = registerBlock("arcane_bad_omen_block",
-            new ArcaneBadOmenBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_BAD_OMEN_BLOCK = registerArcaneBlock(StatusEffects.BAD_OMEN, signalStrength ->
+            new StatusEffectInstance(StatusEffects.BAD_OMEN, signalStrength * 2400 + 2400, signalStrength, false, false));
 
-    public static final Block ARCANE_BLINDNESS_BLOCK = registerBlock("arcane_blindness_block",
-            new ArcaneBlindnessBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_BLINDNESS_BLOCK = registerArcaneBlock(StatusEffects.BLINDNESS, signalStrength ->
+            new StatusEffectInstance(StatusEffects.BLINDNESS, signalStrength == 0 ? 2400 : signalStrength * 1200 + 1200, signalStrength, false, false));
 
-    public static final Block ARCANE_CONDUIT_BLOCK = registerBlock("arcane_conduit_block",
-            new ArcaneConduitBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_CONDUIT_POWER_BLOCK = registerArcaneBlock(StatusEffects.CONDUIT_POWER, signalStrength ->
+            new StatusEffectInstance(StatusEffects.CONDUIT_POWER, signalStrength * 2400 + 2400, signalStrength, false, false));
 
-    public static final Block ARCANE_DARKNESS_BLOCK = registerBlock("arcane_darkness_block",
-            new ArcaneDarknessBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_DARKNESS_BLOCK = registerArcaneBlock(StatusEffects.DARKNESS, signalStrength ->
+            new StatusEffectInstance(StatusEffects.DARKNESS, signalStrength == 0 ? 2400 : signalStrength * 1200 + 1200, signalStrength, false, false));
 
-    public static final Block ARCANE_DOLPHINS_GRACE_BLOCK = registerBlock("arcane_dolphins_grace_block",
-            new ArcaneDolphinsGraceBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_DOLPHINS_GRACE_BLOCK = registerArcaneBlock(StatusEffects.DOLPHINS_GRACE, signalStrength ->
+            new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE, signalStrength * 2400 + 2400, signalStrength, false, false));
 
-    public static final Block ARCANE_FIRE_RESISTANCE_BLOCK = registerBlock("arcane_fire_resistance_block",
-            new ArcaneFireResistanceBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_FIRE_RESISTANCE_BLOCK = registerArcaneBlock(StatusEffects.FIRE_RESISTANCE, signalStrength ->
+            new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, signalStrength * 2400 + 2400, signalStrength, false, false));
 
-    public static final Block ARCANE_GLOWING_BLOCK = registerBlock("arcane_glowing_block",
-            new ArcaneGlowingBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_GLOWING_BLOCK = registerArcaneBlock(StatusEffects.GLOWING, signalStrength ->
+            new StatusEffectInstance(StatusEffects.GLOWING, signalStrength * 2400 + 2400, signalStrength, false, false));
 
-    public static final Block ARCANE_HASTE_BLOCK = registerBlock("arcane_haste_block",
-            new ArcaneHasteBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_HASTE_BLOCK = registerArcaneBlock(StatusEffects.HASTE, signalStrength ->
+            new StatusEffectInstance(StatusEffects.HASTE, signalStrength * 2400 + 2400, ((signalStrength == 0) ? 0 : 2400 /* TODO amplifier 2400? */) + signalStrength, false, false));
 
-    public static final Block ARCANE_HEALTH_BOOST_BLOCK = registerBlock("arcane_health_boost_block",
-            new ArcaneHealthBoostBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_HEALTH_BOOST_BLOCK = registerArcaneBlock(StatusEffects.HEALTH_BOOST, signalStrength ->
+            new StatusEffectInstance(StatusEffects.HEALTH_BOOST, signalStrength * 1200 + 1200, signalStrength, false, false));
 
-    public static final Block ARCANE_HERO_OF_THE_VILLAGE_BLOCK = registerBlock("arcane_hero_of_the_village_block",
-            new ArcaneHeroOfTheVillageBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_HERO_OF_THE_VILLAGE_BLOCK = registerArcaneBlock(StatusEffects.HERO_OF_THE_VILLAGE, signalStrength ->
+            new StatusEffectInstance(StatusEffects.HERO_OF_THE_VILLAGE, signalStrength * 2400 + 2400, signalStrength, false, false));
 
-    public static final Block ARCANE_INSTANT_DAMAGE_BLOCK = registerBlock("arcane_instant_damage_block",
-            new ArcaneInstantDamageBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_INSTANT_DAMAGE_BLOCK = registerArcaneBlock(StatusEffects.INSTANT_DAMAGE, signalStrength ->
+            new StatusEffectInstance(StatusEffects.INSTANT_DAMAGE, signalStrength == 0 ? 1 : signalStrength * 10 + 10, signalStrength, false, false));
 
-    public static final Block ARCANE_INSTANT_HEALTH_BLOCK = registerBlock("arcane_instant_health_block",
-            new ArcaneInstantHealthBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_INSTANT_HEALTH_BLOCK = registerArcaneBlock(StatusEffects.INSTANT_HEALTH, signalStrength ->
+            new StatusEffectInstance(StatusEffects.INSTANT_HEALTH, signalStrength * 1200 + 1200, signalStrength, false, false));
 
-    public static final Block ARCANE_INVISIBILITY_BLOCK = registerBlock("arcane_invisibility_block",
-            new ArcaneInvisibilityBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_INVISIBILITY_BLOCK = registerArcaneBlock(StatusEffects.INVISIBILITY, signalStrength ->
+            new StatusEffectInstance(StatusEffects.INVISIBILITY, signalStrength * 2400 + 2400, signalStrength, false, false));
 
-    public static final Block ARCANE_JUMP_BOOST_BLOCK = registerBlock("arcane_jump_boost_block",
-            new ArcaneJumpBoostBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_JUMP_BOOST_BLOCK = registerArcaneBlock(StatusEffects.JUMP_BOOST, signalStrength ->
+            new StatusEffectInstance(StatusEffects.JUMP_BOOST, signalStrength * 600 + 600, signalStrength == 0 ? 0 : signalStrength * 2 + 1, false, false));
 
-    public static final Block ARCANE_LEVITATION_BLOCK = registerBlock("arcane_levitation_block",
-            new ArcaneLevitationBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_LEVITATION_BLOCK = registerArcaneBlock(StatusEffects.LEVITATION, signalStrength ->
+            new StatusEffectInstance(StatusEffects.LEVITATION, signalStrength * 600 + 600, signalStrength, false, false));
 
-    public static final Block ARCANE_LUCK_BLOCK = registerBlock("arcane_luck_block",
-            new ArcaneLuckBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_LUCK_BLOCK = registerArcaneBlock(StatusEffects.LUCK, signalStrength ->
+            new StatusEffectInstance(StatusEffects.LUCK, signalStrength * 2400 + 2400, signalStrength, false, false));
 
-    public static final Block ARCANE_MINING_FATIGUE_BLOCK = registerBlock("arcane_mining_fatigue_block",
-            new ArcaneMiningFatigueBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_MINING_FATIGUE_BLOCK = registerArcaneBlock(StatusEffects.MINING_FATIGUE, signalStrength ->
+            new StatusEffectInstance(StatusEffects.MINING_FATIGUE, signalStrength * 2400 + 2400, ((signalStrength == 0) ? 0 : 2400 /* TODO amplifier 2400? */) + signalStrength, false, false));
 
-    public static final Block ARCANE_NEAUSEA_BLOCK = registerBlock("arcane_neausea_block",
-            new ArcaneNeauseaBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_NEAUSEA_BLOCK = registerArcaneBlock(StatusEffects.NAUSEA, signalStrength ->
+            new StatusEffectInstance(StatusEffects.NAUSEA, signalStrength * 2400 + 2400, signalStrength, false, false));
 
-    public static final Block ARCANE_NIGHT_VISION_BLOCK = registerBlock("arcane_night_vision_block",
-            new ArcaneNightVisionBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_NIGHT_VISION_BLOCK = registerArcaneBlock(StatusEffects.NIGHT_VISION, signalStrength ->
+            new StatusEffectInstance(StatusEffects.NIGHT_VISION, signalStrength * 2400 + 2400, signalStrength, false, false));
 
-    public static final Block ARCANE_POISION_BLOCK = registerBlock("arcane_poision_block",
-            new ArcanePoisionBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_POISION_BLOCK = registerArcaneBlock(StatusEffects.POISON, signalStrength ->
+            new StatusEffectInstance(StatusEffects.POISON, signalStrength * 2400 + 2400, signalStrength, false, false));
 
-    public static final Block ARCANE_REGENERATION_BLOCK = registerBlock("arcane_regeneration_block",
-            new ArcaneRegenerationBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_REGENERATION_BLOCK = registerArcaneBlock(StatusEffects.REGENERATION, signalStrength ->
+            new StatusEffectInstance(StatusEffects.REGENERATION, signalStrength * 600 + 600, signalStrength, false, false));
 
-    public static final Block ARCANE_RESISTANCE_BLOCK = registerBlock("arcane_resistance_block",
-            new ArcaneResistanceBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_RESISTANCE_BLOCK = registerArcaneBlock(StatusEffects.RESISTANCE, signalStrength ->
+            new StatusEffectInstance(StatusEffects.RESISTANCE, signalStrength * 2400 + 2400, signalStrength, false, false));
 
-    public static final Block ARCANE_SATUATION_BLOCK = registerBlock("arcane_satuation_block",
-            new ArcaneSatuationBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_SATUATION_BLOCK = registerArcaneBlock(StatusEffects.SATURATION, signalStrength ->
+            new StatusEffectInstance(StatusEffects.SATURATION, signalStrength * 2400 + 2400, signalStrength, false, false));
 
-    public static final Block ARCANE_SLOW_FALL_BLOCK = registerBlock("arcane_slow_fall_block",
-            new ArcaneSlowFallBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_SLOW_FALL_BLOCK = registerArcaneBlock(StatusEffects.SLOW_FALLING, signalStrength ->
+            new StatusEffectInstance(StatusEffects.SLOW_FALLING, signalStrength * 2400 + 2400, signalStrength, false, false));
 
     public static final Block ARCANE_SLOWNESS_BLOCK = registerBlock("arcane_slowness_block",
             new ArcaneSlownessBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
@@ -284,43 +286,42 @@ public class ModBlocks {
     public static final Block ARCANE_STARVING_BLOCK = registerBlock("arcane_starving_block",
             new ArcaneStarvingBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
 
-    public static final Block ARCANE_STRENGTH_BLOCK = registerBlock("arcane_strength_block",
-            new ArcaneStrengthBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_STRENGTH_BLOCK = registerArcaneBlock(StatusEffects.STRENGTH, signalStrength ->
+            new StatusEffectInstance(StatusEffects.STRENGTH, signalStrength * 2400 + 2400, signalStrength, false, false));
 
-    public static final Block ARCANE_UNLUCK_BLOCK = registerBlock("arcane_unluck_block",
-            new ArcaneUnluckBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_UNLUCK_BLOCK = registerArcaneBlock(StatusEffects.UNLUCK, signalStrength ->
+            new StatusEffectInstance(StatusEffects.UNLUCK, signalStrength * 2400 + 2400, signalStrength, false, false));
 
-    public static final Block ARCANE_WATER_BREATHING_BLOCK = registerBlock("arcane_water_breathing_block",
-            new ArcaneWaterBreathingBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_WATER_BREATHING_BLOCK = registerArcaneBlock(StatusEffects.WATER_BREATHING, signalStrength ->
+            new StatusEffectInstance(StatusEffects.WATER_BREATHING, signalStrength * 2400 + 2400, signalStrength, false, false));
 
-    public static final Block ARCANE_WEAKNESS_BLOCK = registerBlock("arcane_weakness_block",
-            new ArcaneWeaknessBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_WEAKNESS_BLOCK = registerArcaneBlock(StatusEffects.WEAKNESS, signalStrength ->
+            new StatusEffectInstance(StatusEffects.WEAKNESS, signalStrength * 2400 + 2400, signalStrength, false, false));
 
-    public static final Block ARCANE_WITHER_BLOCK = registerBlock("arcane_wither_block",
-            new ArcaneWitherBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
-
+    public static final Block ARCANE_WITHER_BLOCK = registerArcaneBlock(StatusEffects.WITHER, signalStrength ->
+            new StatusEffectInstance(StatusEffects.WITHER, signalStrength * 600 + 600, signalStrength, false, false));
 
 
     public static final Block ARCANE_VOID_BLOCK = registerBlock("arcane_void_block",
             new ArcaneVoidBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
 
-    public static final Block ARCANE_CLEAR_NEGATIVE_BLOCK = registerBlock("arcane_clear_negative_block",
-            new ArcaneClearNegativeBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_CLEAR_NEGATIVE_BLOCK = registerArcaneBlock(ModEffects.CLEAR_NEGATIVE_EFFECT, signalStrength ->
+            new StatusEffectInstance(ModEffects.CLEAR_NEGATIVE_EFFECT, 1, 200, false, false));
 
-    public static final Block ARCANE_CLEAR_POSITIVE_BLOCK = registerBlock("arcane_clear_positive_block",
-            new ArcaneClearPositiveBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_CLEAR_POSITIVE_BLOCK = registerArcaneBlock(ModEffects.CLEAR_POSITIVE_EFFECT, signalStrength ->
+            new StatusEffectInstance(ModEffects.CLEAR_POSITIVE_EFFECT, 1, 200, false, false));
 
-    public static final Block ARCANE_CLEAR_NEUTRAL_BLOCK = registerBlock("arcane_clear_neutral_block",
-            new ArcaneClearNeutralBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_CLEAR_NEUTRAL_BLOCK = registerArcaneBlock(ModEffects.CLEAR_NEUTRAL_EFFECT, signalStrength ->
+            new StatusEffectInstance(ModEffects.CLEAR_NEUTRAL_EFFECT, 1, 200, false, false));
 
-    public static final Block ARCANE_DISORIENT_BLOCK = registerBlock("arcane_disorient_block",
-            new ArcaneDisorientBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_DISORIENT_BLOCK = registerArcaneBlock(ModEffects.DISORIENT, signalStrength ->
+            new StatusEffectInstance(ModEffects.DISORIENT, signalStrength * 600 + 600, signalStrength, false, false));
 
-    public static final Block ARCANE_STICKY_FEAT_BLOCK = registerBlock("arcane_sticky_feat_block",
-            new ArcaneStickyFeatBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_STICKY_FEAT_BLOCK = registerArcaneBlock(ModEffects.STICKY_FEAT, signalStrength ->
+            new StatusEffectInstance(ModEffects.STICKY_FEAT, signalStrength * 2400 + 2400, signalStrength, false, false));
 
-    public static final Block ARCANE_FREAKY_BUNNY_BLOCK = registerBlock("arcane_freaky_bunny_block",
-            new ArcanFreakyBunnyBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).allowsSpawning(Blocks::never).resistance(50.0F).hardness(50.0F)));
+    public static final Block ARCANE_FREAKY_BUNNY_BLOCK = registerArcaneBlock(ModEffects.FREAKY_BUNNY, signalStrength ->
+            new StatusEffectInstance(ModEffects.FREAKY_BUNNY, signalStrength * 2400 + 2400, signalStrength, false, false));
 
 
     // Trap Blocks
@@ -1435,7 +1436,16 @@ public class ModBlocks {
 
 
 
-
+    private static Block registerArcaneBlock(StatusEffect effect, Function<Integer, StatusEffectInstance> signalStrengthToEffect) {
+        Identifier id = Registries.STATUS_EFFECT.getId(effect);
+        String path = id != null ? id.getPath() : "unknown";
+        return registerBlock("arcane_" + path + "_block",
+                new ArcaneBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)
+                        .allowsSpawning(Blocks::never)
+                        .resistance(50.0F)
+                        .hardness(50.0F),
+                        signalStrengthToEffect));
+    }
 
     private static Block registerDyedWaterCauldron(DyeColor color) {
         DyedWaterCauldronBlock block = new DyedWaterCauldronBlock(FabricBlockSettings.copyOf(Blocks.WATER_CAULDRON), color);

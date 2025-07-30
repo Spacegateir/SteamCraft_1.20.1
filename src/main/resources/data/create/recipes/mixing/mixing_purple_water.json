@@ -1,0 +1,22 @@
+{
+  "type": "create:mixing",
+  "heatRequirement": "superheated",
+  "ingredients": [
+    {
+      "item": "steamcraft:bucket_mould"
+    },
+    {
+      "item": "minecraft:purple_dye"
+    },
+    {
+      "amount": 81000,
+      "fluid": "minecraft:water"
+    }
+  ],
+  "results": [
+    {
+      "amount": 81000,
+      "fluid": "steamcraft:purple_water"
+    }
+  ]
+}

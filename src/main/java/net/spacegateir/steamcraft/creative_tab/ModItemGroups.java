@@ -187,7 +187,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.ARCANE_ABSORPTION_BLOCK);
                         entries.add(ModBlocks.ARCANE_BAD_OMEN_BLOCK);
                         entries.add(ModBlocks.ARCANE_BLINDNESS_BLOCK);
-                        entries.add(ModBlocks.ARCANE_CONDUIT_BLOCK);
+                        entries.add(ModBlocks.ARCANE_CONDUIT_POWER_BLOCK);
                         entries.add(ModBlocks.ARCANE_DARKNESS_BLOCK);
                         entries.add(ModBlocks.ARCANE_DOLPHINS_GRACE_BLOCK);
                         entries.add(ModBlocks.ARCANE_FIRE_RESISTANCE_BLOCK);

@@ -834,7 +834,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_BLINDNESS_BLOCK)));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_CONDUIT_BLOCK, 1)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_CONDUIT_POWER_BLOCK, 1)
                 .pattern("111")
                 .pattern("232")
                 .pattern("424")
@@ -843,7 +843,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('3', ModItems.DIVINITITE_ALLOY_INGOT)
                 .input('4', Blocks.COPPER_BLOCK)
                 .criterion("has_divinitite_alloy_ingot", conditionsFromItem(ModItems.DIVINITITE_ALLOY_INGOT))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_CONDUIT_BLOCK)));
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ARCANE_CONDUIT_POWER_BLOCK)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_DARKNESS_BLOCK, 1)
                 .pattern("111")
@@ -1388,7 +1388,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .pattern("141")
                 .pattern("131")
                 .input('1', Blocks.BLUE_ICE)
-                .input('2', ModBlocks.ARCANE_CONDUIT_BLOCK)
+                .input('2', ModBlocks.ARCANE_CONDUIT_POWER_BLOCK)
                 .input('3', ModBlocks.ARCANE_SLOWNESS_BLOCK)
                 .input('4', ModBlocks.POWER_PRECISION_BLOCK)
                 .criterion("has_power_precision_block", conditionsFromItem(ModBlocks.POWER_PRECISION_BLOCK))

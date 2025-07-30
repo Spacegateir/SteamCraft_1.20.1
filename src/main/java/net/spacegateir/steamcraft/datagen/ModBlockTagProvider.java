@@ -123,7 +123,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.ARCANE_ABSORPTION_BLOCK,
                         ModBlocks.ARCANE_BAD_OMEN_BLOCK,
                         ModBlocks.ARCANE_BLINDNESS_BLOCK,
-                        ModBlocks.ARCANE_CONDUIT_BLOCK,
+                        ModBlocks.ARCANE_CONDUIT_POWER_BLOCK,
                         ModBlocks.ARCANE_DARKNESS_BLOCK,
                         ModBlocks.ARCANE_DOLPHINS_GRACE_BLOCK,
                         ModBlocks.ARCANE_FIRE_RESISTANCE_BLOCK,

@@ -361,7 +361,7 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.ARCANE_ABSORPTION_BLOCK);
         addDrop(ModBlocks.ARCANE_BAD_OMEN_BLOCK);
         addDrop(ModBlocks.ARCANE_BLINDNESS_BLOCK);
-        addDrop(ModBlocks.ARCANE_CONDUIT_BLOCK);
+        addDrop(ModBlocks.ARCANE_CONDUIT_POWER_BLOCK);
         addDrop(ModBlocks.ARCANE_DARKNESS_BLOCK);
         addDrop(ModBlocks.ARCANE_DOLPHINS_GRACE_BLOCK);
         addDrop(ModBlocks.ARCANE_FIRE_RESISTANCE_BLOCK);

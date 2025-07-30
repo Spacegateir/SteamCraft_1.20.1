@@ -3,13 +3,13 @@
   "category": "misc",
   "key": {
     "1": {
-      "item": "steamcraft:arcane_clear_negative_block"
+      "item": "steamcraft:arcane_clear_negative_effect_block"
     },
     "2": {
-      "item": "steamcraft:arcane_clear_positive_block"
+      "item": "steamcraft:arcane_clear_positive_effect_block"
     },
     "3": {
-      "item": "steamcraft:arcane_clear_neutral_block"
+      "item": "steamcraft:arcane_clear_neutral_effect_block"
     }
   },
   "pattern": [

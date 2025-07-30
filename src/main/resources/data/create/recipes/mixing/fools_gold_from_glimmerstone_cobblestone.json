@@ -1,0 +1,15 @@
+{
+  "type": "create:mixing",
+  "heatRequirement": "superheated",
+  "ingredients": [
+    {
+      "item": "steamcraft:glimmerstone/glimmerstone_cobblestone_item"
+    }
+  ],
+  "results": [
+    {
+      "amount": 810,
+      "fluid": "steamcraft:fools_gold_lava"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "multipart": [
+
+    {"when": { "variant": "0", "up": "true" }, "apply": { "model": "steamcraft:block/mud_bricks_wall_block_post_01" }},
+    {"when": { "variant": "0", "north": "low" }, "apply": { "model": "steamcraft:block/mud_bricks_wall_block_side_01", "uvlock": true }},
+    {"when": { "variant": "0", "east": "low" }, "apply": { "model": "steamcraft:block/mud_bricks_wall_block_side_01", "uvlock": true, "y": 90 }},
+    {"when": { "variant": "0", "south": "low" }, "apply": { "model": "steamcraft:block/mud_bricks_wall_block_side_01", "uvlock": true, "y": 180 }},
+    {"when": { "variant": "0", "west": "low" }, "apply": { "model": "steamcraft:block/mud_bricks_wall_block_side_01", "uvlock": true, "y": 270 }},
+    {"when": { "variant": "0", "north": "tall" }, "apply": { "model": "steamcraft:block/mud_bricks_wall_block_side_tall_01", "uvlock": true }},
+    {"when": { "variant": "0", "east": "tall" }, "apply": { "model": "steamcraft:block/mud_bricks_wall_block_side_tall_01", "uvlock": true, "y": 90 }},
+    {"when": { "variant": "0", "south": "tall" }, "apply": { "model": "steamcraft:block/mud_bricks_wall_block_side_tall_01", "uvlock": true, "y": 180 }},
+    {"when": { "variant": "0", "west": "tall" }, "apply": { "model": "steamcraft:block/mud_bricks_wall_block_side_tall_01", "uvlock": true, "y": 270 }},
+
+    {"when": { "variant": "1", "up": "true" }, "apply": { "model": "steamcraft:block/mud_bricks_wall_block_post_02" }},
+    {"when": { "variant": "1", "north": "low" }, "apply": { "model": "steamcraft:block/mud_bricks_wall_block_side_02", "uvlock": true }},
+    {"when": { "variant": "1", "east": "low" }, "apply": { "model": "steamcraft:block/mud_bricks_wall_block_side_02", "uvlock": true, "y": 90 }},
+    {"when": { "variant": "1", "south": "low" }, "apply": { "model": "steamcraft:block/mud_bricks_wall_block_side_02", "uvlock": true, "y": 180 }},
+    {"when": { "variant": "1", "west": "low" }, "apply": { "model": "steamcraft:block/mud_bricks_wall_block_side_02", "uvlock": true, "y": 270 }},
+    {"when": { "variant": "1", "north": "tall" }, "apply": { "model": "steamcraft:block/mud_bricks_wall_block_side_tall_02", "uvlock": true }},
+    {"when": { "variant": "1", "east": "tall" }, "apply": { "model": "steamcraft:block/mud_bricks_wall_block_side_tall_02", "uvlock": true, "y": 90 }},
+    {"when": { "variant": "1", "south": "tall" }, "apply": { "model": "steamcraft:block/mud_bricks_wall_block_side_tall_02", "uvlock": true, "y": 180 }},
+    {"when": { "variant": "1", "west": "tall" }, "apply": { "model": "steamcraft:block/mud_bricks_wall_block_side_tall_02", "uvlock": true, "y": 270 }},
+
+    {"when": { "variant": "2", "up": "true" }, "apply": { "model": "steamcraft:block/mud_bricks_wall_block_post_03" }},
+    {"when": { "variant": "2", "north": "low" }, "apply": { "model": "steamcraft:block/mud_bricks_wall_block_side_03", "uvlock": true }},
+    {"when": { "variant": "2", "east": "low" }, "apply": { "model": "steamcraft:block/mud_bricks_wall_block_side_03", "uvlock": true, "y": 90 }},
+    {"when": { "variant": "2", "south": "low" }, "apply": { "model": "steamcraft:block/mud_bricks_wall_block_side_03", "uvlock": true, "y": 180 }},
+    {"when": { "variant": "2", "west": "low" }, "apply": { "model": "steamcraft:block/mud_bricks_wall_block_side_03", "uvlock": true, "y": 270 }},
+    {"when": { "variant": "2", "north": "tall" }, "apply": { "model": "steamcraft:block/mud_bricks_wall_block_side_tall_03", "uvlock": true }},
+    {"when": { "variant": "2", "east": "tall" }, "apply": { "model": "steamcraft:block/mud_bricks_wall_block_side_tall_03", "uvlock": true, "y": 90 }},
+    {"when": { "variant": "2", "south": "tall" }, "apply": { "model": "steamcraft:block/mud_bricks_wall_block_side_tall_03", "uvlock": true, "y": 180 }},
+    {"when": { "variant": "2", "west": "tall" }, "apply": { "model": "steamcraft:block/mud_bricks_wall_block_side_tall_03", "uvlock": true, "y": 270 }},
+
+    {"when": { "variant": "3", "up": "true" }, "apply": { "model": "steamcraft:block/mud_bricks_wall_block_post_04" }},
+    {"when": { "variant": "3", "north": "low" }, "apply": { "model": "steamcraft:block/mud_bricks_wall_block_side_04", "uvlock": true }},
+    {"when": { "variant": "3", "east": "low" }, "apply": { "model": "steamcraft:block/mud_bricks_wall_block_side_04", "uvlock": true, "y": 90 }},
+    {"when": { "variant": "3", "south": "low" }, "apply": { "model": "steamcraft:block/mud_bricks_wall_block_side_04", "uvlock": true, "y": 180 }},
+    {"when": { "variant": "3", "west": "low" }, "apply": { "model": "steamcraft:block/mud_bricks_wall_block_side_04", "uvlock": true, "y": 270 }},
+    {"when": { "variant": "3", "north": "tall" }, "apply": { "model": "steamcraft:block/mud_bricks_wall_block_side_tall_04", "uvlock": true }},
+    {"when": { "variant": "3", "east": "tall" }, "apply": { "model": "steamcraft:block/mud_bricks_wall_block_side_tall_04", "uvlock": true, "y": 90 }},
+    {"when": { "variant": "3", "south": "tall" }, "apply": { "model": "steamcraft:block/mud_bricks_wall_block_side_tall_04", "uvlock": true, "y": 180 }},
+    {"when": { "variant": "3", "west": "tall" }, "apply": { "model": "steamcraft:block/mud_bricks_wall_block_side_tall_04", "uvlock": true, "y": 270 }}
+
+  ]
+}

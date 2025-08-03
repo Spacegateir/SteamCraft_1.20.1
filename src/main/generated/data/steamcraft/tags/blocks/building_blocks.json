@@ -52,6 +52,14 @@
     "steamcraft:ancient_silt_block",
     "steamcraft:ancient_loam_block",
     "steamcraft:ancient_mud_block",
-    "steamcraft:ancient_clay_block"
+    "steamcraft:ancient_clay_block",
+    "steamcraft:kiln_burnt_bricks_block_01",
+    "steamcraft:kiln_burnt_bricks_stair_block",
+    "steamcraft:kiln_burnt_bricks_slab_block",
+    "steamcraft:kiln_burnt_bricks_wall_block",
+    "steamcraft:mud_bricks_block_01",
+    "steamcraft:mud_bricks_stair_block",
+    "steamcraft:mud_bricks_slab_block",
+    "steamcraft:mud_bricks_wall_block"
   ]
 }

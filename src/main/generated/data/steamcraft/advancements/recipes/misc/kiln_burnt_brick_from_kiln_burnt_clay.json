@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_ancient_moist_clay_item": {
+    "has_kiln_burnt_bricks_item_01": {
       "conditions": {
         "items": [
           {
             "items": [
-              "steamcraft:ancient_moist_clay_item"
+              "steamcraft:kiln_burnt_bricks_item_01"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:ancient_clay_item_from_blasting_ancient_moist_clay_item"
+        "recipe": "steamcraft:kiln_burnt_brick_from_kiln_burnt_clay"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_ancient_moist_clay_item",
+      "has_kiln_burnt_bricks_item_01",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:ancient_clay_item_from_blasting_ancient_moist_clay_item"
+      "steamcraft:kiln_burnt_brick_from_kiln_burnt_clay"
     ]
   },
   "sends_telemetry_event": false

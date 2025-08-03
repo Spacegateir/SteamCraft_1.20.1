@@ -132,6 +132,8 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
 
         offerReversible2x2CompactingRecipesWithId(exporter, RecipeCategory.MISC, ModItems.ANCIENT_MOIST_CLAY, RecipeCategory.MISC, ModBlocks.ANCIENT_MOIST_CLAY_BLOCK, "moist_clay");
         offerReversible2x2CompactingRecipesWithId(exporter, RecipeCategory.MISC, ModItems.ANCIENT_CLAY, RecipeCategory.MISC, ModBlocks.ANCIENT_CLAY_BLOCK, "dry_clay");
+        offerReversible2x2CompactingRecipesWithId(exporter, RecipeCategory.MISC, ModItems.MUD_BRICK, RecipeCategory.MISC, ModBlocks.MUD_BRICKS_BLOCK, "mud_clay");
+        offerReversible2x2CompactingRecipesWithId(exporter, RecipeCategory.MISC, ModItems.KILN_BURNT_BRICK, RecipeCategory.MISC, ModBlocks.KILN_BURNT_BRICKS_BLOCK, "kiln_burnt_clay");
 
         offerSmelting(exporter, List.of(ModItems.FOOLS_GOLD_RAW), RecipeCategory.MISC, ModItems.FOOLS_GOLD_INGOT,
                 0.15f, 200, "fools_gold");
@@ -156,10 +158,15 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         offerBlasting(exporter, List.of(ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK), RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_BLOCK,
                 0.15f, 100, "glimmerstone_block");
 
+        offerBlasting(exporter, List.of(ModBlocks.ANCIENT_MOIST_CLAY_BLOCK), RecipeCategory.MISC, ModBlocks.KILN_BURNT_BRICKS_BLOCK,
+                0.15f, 100, "kiln_block");
+
+        offerBlasting(exporter, List.of(ModItems.ANCIENT_MOIST_CLAY), RecipeCategory.MISC, ModItems.KILN_BURNT_BRICK,
+                0.15f, 100, "kiln_block");
+
         offerSmelting(exporter, List.of(ModBlocks.ANCIENT_MOIST_CLAY_BLOCK), RecipeCategory.MISC, ModBlocks.ANCIENT_CLAY_BLOCK,
                 0.15f, 200, "clay_block");
-        offerBlasting(exporter, List.of(ModBlocks.ANCIENT_MOIST_CLAY_BLOCK), RecipeCategory.MISC, ModBlocks.ANCIENT_CLAY_BLOCK,
-                0.15f, 100, "clay_block");
+
 
         offerSmelting(exporter, List.of(ModBlocks.ANCIENT_SAND_BLOCK), RecipeCategory.MISC, Blocks.GLASS,
                 0.15f, 200, "sand_block");
@@ -168,8 +175,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
 
         offerSmelting(exporter, List.of(ModItems.ANCIENT_MOIST_CLAY), RecipeCategory.MISC, ModItems.ANCIENT_CLAY,
                 0.15f, 200, "clay");
-        offerBlasting(exporter, List.of(ModItems.ANCIENT_MOIST_CLAY), RecipeCategory.MISC, ModItems.ANCIENT_CLAY,
-                0.15f, 100, "clay");
+
 
         offerBlasting(exporter, List.of(ModBlocks.ANCIENT_MUD_BLOCK), RecipeCategory.MISC, ModBlocks.ANCIENT_CLAY_BLOCK,
                 0.15f, 200, "mud_block");
@@ -186,48 +192,60 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 1.00f, 100, "netherite_ingot");
 
         offerSmelting(exporter, List.of(ModBlocks.PACKED_ICE_BRICKS), RecipeCategory.MISC, ModBlocks.PACKED_ICE_BRICKS_CRACKED,
-                0.10f, 50, "packed_ice_bricks");
+                0.15f, 50, "packed_ice_bricks");
         offerBlasting(exporter, List.of(ModBlocks.PACKED_ICE_BRICKS), RecipeCategory.MISC, ModBlocks.PACKED_ICE_BRICKS_CRACKED,
-                0.10f, 50, "packed_ice_bricks");
+                0.15f, 50, "packed_ice_bricks");
         offerSmelting(exporter, List.of(ModBlocks.PACKED_ICE_TILES), RecipeCategory.MISC, ModBlocks.PACKED_ICE_TILES_CRACKED,
-                0.10f, 50, "packed_ice_tiles");
+                0.15f, 50, "packed_ice_tiles");
         offerBlasting(exporter, List.of(ModBlocks.PACKED_ICE_TILES), RecipeCategory.MISC, ModBlocks.PACKED_ICE_TILES_CRACKED,
-                0.10f, 50, "packed_ice_tiles");
+                0.15f, 50, "packed_ice_tiles");
 
         offerSmelting(exporter, List.of(ModBlocks.SNOW_BRICKS), RecipeCategory.MISC, ModBlocks.SNOW_BRICKS_CRACKED,
-                0.10f, 50, "snow_bricks");
+                0.15f, 50, "snow_bricks");
         offerBlasting(exporter, List.of(ModBlocks.SNOW_BRICKS), RecipeCategory.MISC, ModBlocks.SNOW_BRICKS_CRACKED,
-                0.10f, 50, "snow_bricks");
+                0.15f, 50, "snow_bricks");
         offerSmelting(exporter, List.of(ModBlocks.SNOW_TILES), RecipeCategory.MISC, ModBlocks.SNOW_TILES_CRACKED,
-                0.10f, 50, "snow_tiles");
+                0.15f, 50, "snow_tiles");
         offerBlasting(exporter, List.of(ModBlocks.SNOW_TILES), RecipeCategory.MISC, ModBlocks.SNOW_TILES_CRACKED,
-                0.10f, 50, "snow_tiles");
+                0.15f, 50, "snow_tiles");
 
 //Stairs
 
         offerStairRecipe(exporter, RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_STAIR_BLOCK, ModItems.GLIMMERSTONE_ITEM);
         offerStairRecipe(exporter, RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_COBBLESTONE_STAIR_BLOCK, ModItems.GLIMMERSTONE_COBBLESTONE_ITEM);
         offerStairRecipe(exporter, RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_BRICKS_STAIR_BLOCK, ModItems.GLIMMERSTONE_BRICKS_ITEM);
+        offerStairRecipe(exporter, RecipeCategory.MISC, ModBlocks.MUD_BRICKS_STAIR_BLOCK, ModItems.MUD_BRICKS_STAIR_ITEM);
+        offerStairRecipe(exporter, RecipeCategory.MISC, ModBlocks.KILN_BURNT_BRICKS_STAIR_BLOCK, ModItems.KILN_BURNT_BRICKS_STAIR_ITEM);
 
 //Slabs
 
         offerSlabRecipe(exporter, RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_SLAB_BLOCK, ModItems.GLIMMERSTONE_ITEM);
         offerSlabRecipe(exporter, RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_COBBLESTONE_SLAB_BLOCK, ModItems.GLIMMERSTONE_COBBLESTONE_ITEM);
         offerSlabRecipe(exporter, RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_BRICKS_SLAB_BLOCK, ModItems.GLIMMERSTONE_BRICKS_ITEM);
+        offerSlabRecipe(exporter, RecipeCategory.MISC, ModBlocks.MUD_BRICKS_SLAB_BLOCK, ModItems.MUD_BRICKS_ITEM);
+        offerSlabRecipe(exporter, RecipeCategory.MISC, ModBlocks.KILN_BURNT_BRICKS_SLAB_BLOCK, ModItems.KILN_BURNT_BRICKS_ITEM);
 
 //Walls
 
         offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_WALL_BLOCK, ModItems.GLIMMERSTONE_ITEM);
         offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_COBBLESTONE_WALL_BLOCK, ModItems.GLIMMERSTONE_COBBLESTONE_ITEM);
         offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.GLIMMERSTONE_BRICKS_WALL_BLOCK, ModItems.GLIMMERSTONE_BRICKS_ITEM);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.MUD_BRICKS_WALL_BLOCK, ModItems.MUD_BRICKS_ITEM);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.KILN_BURNT_BRICKS_WALL_BLOCK, ModItems.KILN_BURNT_BRICKS_ITEM);
 
 //smoking
 
         offerMultipleOptions(exporter, RecipeSerializer.SMOKING, List.of(ModBlocks.ANCIENT_LOAM_BLOCK),
-                RecipeCategory.BUILDING_BLOCKS,Blocks.COARSE_DIRT,0.1F,100,"smoked_blocks","_from_smoking"
+                RecipeCategory.BUILDING_BLOCKS,Blocks.COARSE_DIRT,0.15f,100,"smoked_blocks","_from_smoking"
         );
         offerMultipleOptions(exporter, RecipeSerializer.SMOKING, List.of(ModBlocks.ANCIENT_MUD_BLOCK),
-                RecipeCategory.BUILDING_BLOCKS,ModBlocks.ANCIENT_CLAY_BLOCK,0.1F,100,"smoked_blocks","_from_smoking"
+                RecipeCategory.BUILDING_BLOCKS,ModBlocks.ANCIENT_CLAY_BLOCK,0.15f,100,"smoked_blocks","_from_smoking"
+        );
+        offerMultipleOptions(exporter, RecipeSerializer.SMOKING, List.of(ModItems.ANCIENT_MOIST_CLAY),
+                RecipeCategory.BUILDING_BLOCKS,ModItems.MUD_BRICK,0.15f,100,"smoked_blocks","_from_smoking"
+        );
+        offerMultipleOptions(exporter, RecipeSerializer.SMOKING, List.of(ModBlocks.ANCIENT_MOIST_CLAY_BLOCK),
+                RecipeCategory.BUILDING_BLOCKS,ModBlocks.MUD_BRICKS_BLOCK,0.15f,100,"smoked_blocks","_from_smoking"
         );
 
 
@@ -311,6 +329,22 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_BLOCK, ModBlocks.GLIMMERSTONE_ENGRAVED_BLOCK);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_COBBLESTONE_BLOCK, ModBlocks.GLIMMERSTONE_ENGRAVED_BLOCK);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLIMMERSTONE_BRICKS_BLOCK, ModBlocks.GLIMMERSTONE_ENGRAVED_BLOCK);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.KILN_BURNT_BRICKS_BLOCK, ModBlocks.MUD_BRICKS_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.KILN_BURNT_BRICKS_STAIR_BLOCK, ModBlocks.MUD_BRICKS_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.KILN_BURNT_BRICKS_SLAB_BLOCK, ModBlocks.MUD_BRICKS_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.KILN_BURNT_BRICKS_WALL_BLOCK, ModBlocks.MUD_BRICKS_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MUD_BRICKS_STAIR_BLOCK, ModBlocks.MUD_BRICKS_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MUD_BRICKS_SLAB_BLOCK, ModBlocks.MUD_BRICKS_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MUD_BRICKS_WALL_BLOCK, ModBlocks.MUD_BRICKS_BLOCK);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MUD_BRICKS_BLOCK, ModBlocks.KILN_BURNT_BRICKS_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MUD_BRICKS_STAIR_BLOCK, ModBlocks.KILN_BURNT_BRICKS_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MUD_BRICKS_SLAB_BLOCK, ModBlocks.KILN_BURNT_BRICKS_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MUD_BRICKS_WALL_BLOCK, ModBlocks.KILN_BURNT_BRICKS_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.KILN_BURNT_BRICKS_STAIR_BLOCK, ModBlocks.KILN_BURNT_BRICKS_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.KILN_BURNT_BRICKS_SLAB_BLOCK, ModBlocks.KILN_BURNT_BRICKS_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.KILN_BURNT_BRICKS_WALL_BLOCK, ModBlocks.KILN_BURNT_BRICKS_BLOCK);
 
 
 

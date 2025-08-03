@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "steamcraft:kiln_burnt_brick"
+    }
+  },
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "result": {
+    "item": "steamcraft:kiln_burnt_bricks_item_01"
+  },
+  "show_notification": true
+}

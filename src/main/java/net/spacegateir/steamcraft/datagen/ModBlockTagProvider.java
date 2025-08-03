@@ -260,7 +260,16 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.ANCIENT_SILT_BLOCK,
                         ModBlocks.ANCIENT_LOAM_BLOCK,
                         ModBlocks.ANCIENT_MUD_BLOCK,
-                        ModBlocks.ANCIENT_CLAY_BLOCK
+                        ModBlocks.ANCIENT_CLAY_BLOCK,
+
+                        ModBlocks.KILN_BURNT_BRICKS_BLOCK,
+                        ModBlocks.KILN_BURNT_BRICKS_STAIR_BLOCK,
+                        ModBlocks.KILN_BURNT_BRICKS_SLAB_BLOCK,
+                        ModBlocks.KILN_BURNT_BRICKS_WALL_BLOCK,
+                        ModBlocks.MUD_BRICKS_BLOCK,
+                        ModBlocks.MUD_BRICKS_STAIR_BLOCK,
+                        ModBlocks.MUD_BRICKS_SLAB_BLOCK,
+                        ModBlocks.MUD_BRICKS_WALL_BLOCK
 
                 );
 
@@ -819,7 +828,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
                 .add(ModBlocks.GLIMMERSTONE_WALL_BLOCK)
                 .add(ModBlocks.GLIMMERSTONE_COBBLESTONE_WALL_BLOCK)
-                .add(ModBlocks.GLIMMERSTONE_BRICKS_WALL_BLOCK);
+                .add(ModBlocks.GLIMMERSTONE_BRICKS_WALL_BLOCK)
+                .add(ModBlocks.MUD_BRICKS_WALL_BLOCK)
+                .add(ModBlocks.KILN_BURNT_BRICKS_WALL_BLOCK);
 
         getOrCreateTagBuilder(TagKey.of(RegistryKeys.BLOCK, new Identifier("fabric", "needs_tool_level_4")))
                 .addTag(ModTags.Blocks.ARCANE_BLOCKS)

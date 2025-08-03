@@ -53,6 +53,21 @@
     "switch_state=46": { "model": "minecraft:block/quartz_block" },
     "switch_state=47": { "model": "minecraft:block/smooth_sandstone" },
     "switch_state=48": { "model": "minecraft:block/chiseled_stone_bricks" },
-    "switch_state=49": { "model": "minecraft:block/nether_bricks" }
+    "switch_state=49": { "model": "minecraft:block/nether_bricks" },
+
+    "switch_state=50": { "model": "steamcraft:block/glimmerstone/glimmerstone_block_03/glimmerstone_block_03" },
+    "switch_state=51": { "model": "steamcraft:block/glimmerstone/glimmerstone_block_03/glimmerstone_cobblestone_block_03" },
+    "switch_state=52": { "model": "steamcraft:block/glimmerstone/glimmerstone_block_03/glimmerstone_bricks_block_03" },
+    "switch_state=53": { "model": "steamcraft:block/glimmerstone/glimmerstone_block_03/glimmerstone_pillar_block_03" },
+    "switch_state=54": { "model": "steamcraft:block/glimmerstone/glimmerstone_block_03/glimmerstone_engraved_block_03" },
+    "switch_state=55": { "model": "steamcraft:block/ancient_gravel_block" },
+    "switch_state=56": { "model": "steamcraft:block/ancient_sand_block" },
+    "switch_state=57": { "model": "steamcraft:block/ancient_silt_block" },
+    "switch_state=58": { "model": "steamcraft:block/ancient_loam_block" },
+    "switch_state=59": { "model": "steamcraft:block/ancient_mud_block" },
+    "switch_state=60": { "model": "steamcraft:block/ancient_clay_block" },
+    "switch_state=61": { "model": "steamcraft:block/ancient_moist_clay_block" },
+    "switch_state=62": { "model": "steamcraft:block/mud_bricks_block_01" },
+    "switch_state=63": { "model": "steamcraft:block/kiln_burnt_bricks_block_01" }
   }
 }

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "steamcraft:block/kiln_burnt_bricks_block_03",
+    "side": "steamcraft:block/kiln_burnt_bricks_block_03",
+    "top": "steamcraft:block/kiln_burnt_bricks_block_03"
+  }
+}

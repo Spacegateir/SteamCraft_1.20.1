@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "variant=0": { "model": "steamcraft:block/kiln_burnt_bricks_block_01" },
+    "variant=1": { "model": "steamcraft:block/kiln_burnt_bricks_block_02" },
+    "variant=2": { "model": "steamcraft:block/kiln_burnt_bricks_block_03" },
+    "variant=3": { "model": "steamcraft:block/kiln_burnt_bricks_block_04" }
+  }
+}

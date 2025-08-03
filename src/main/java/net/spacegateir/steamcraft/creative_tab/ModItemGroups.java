@@ -45,6 +45,8 @@ public class ModItemGroups {
 
                         entries.add(ModItems.ANCIENT_CLAY);
                         entries.add(ModItems.ANCIENT_MOIST_CLAY);
+                        entries.add(ModItems.MUD_BRICK);
+                        entries.add(ModItems.KILN_BURNT_BRICK);
 
                         entries.add(ModItems.BLANK_MOULD);
                         entries.add(ModItems.HELMET_MOULD);
@@ -274,6 +276,14 @@ public class ModItemGroups {
                         entries.add(ModItems.ANCIENT_MUD_ITEM);
                         entries.add(ModItems.ANCIENT_CLAY_ITEM);
                         entries.add(ModItems.ANCIENT_MOIST_CLAY_ITEM);
+                        entries.add(ModItems.MUD_BRICKS_ITEM);
+                        entries.add(ModItems.MUD_BRICKS_STAIR_ITEM);
+                        entries.add(ModItems.MUD_BRICKS_SLAB_ITEM);
+                        entries.add(ModItems.MUD_BRICKS_WALL_ITEM);
+                        entries.add(ModItems.KILN_BURNT_BRICKS_ITEM);
+                        entries.add(ModItems.KILN_BURNT_BRICKS_STAIR_ITEM);
+                        entries.add(ModItems.KILN_BURNT_BRICKS_SLAB_ITEM);
+                        entries.add(ModItems.KILN_BURNT_BRICKS_WALL_ITEM);
 
                         entries.add(ModBlocks.COBBLED_WHITE_CONCRETE);
                         entries.add(ModBlocks.COBBLED_WHITE_CONCRETE_POWDER);

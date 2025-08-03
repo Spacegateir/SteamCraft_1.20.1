@@ -29,7 +29,7 @@ import java.util.List;
 public class TrapConcealerItem extends Item {
 
     // Array of model names (linked to switch_state values)
-    private static final String[] MODEL_NAMES = {
+    private static final String[] MODEL_NAMES = new String[]{
             "arcane base block #0",
             "stone #1",
             "deepslate #2",
@@ -79,7 +79,22 @@ public class TrapConcealerItem extends Item {
             "quartz block #46",
             "smooth sandstone #47",
             "chiseled stone bricks #48",
-            "nether bricks #49"
+            "nether bricks #49",
+
+            "glimmerstone #50",
+            "glimmerstone cobblestone #51",
+            "glimmerstone bricks #52",
+            "glimmerstone pillar#53",
+            "glimmerstone engraved #54",
+            "ancient gravel #55",
+            "ancient sand #56",
+            "ancient silt #57",
+            "ancient loam #58",
+            "ancient mud #59",
+            "ancient clay #60",
+            "ancient moist clay #61",
+            "mud bricks  #62",
+            "kiln burnt bricks #63"
     };
 
     public TrapConcealerItem(Settings settings) {

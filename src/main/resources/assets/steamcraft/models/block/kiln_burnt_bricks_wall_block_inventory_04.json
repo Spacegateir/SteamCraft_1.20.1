@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "steamcraft:block/kiln_burnt_bricks_block_04"
+  }
+}

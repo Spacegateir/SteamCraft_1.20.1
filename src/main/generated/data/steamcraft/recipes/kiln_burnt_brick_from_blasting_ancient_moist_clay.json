@@ -3,9 +3,9 @@
   "category": "misc",
   "cookingtime": 100,
   "experience": 0.15,
-  "group": "clay",
+  "group": "kiln_block",
   "ingredient": {
     "item": "steamcraft:ancient_moist_clay"
   },
-  "result": "steamcraft:ancient_clay"
+  "result": "steamcraft:kiln_burnt_brick"
 }

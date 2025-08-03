@@ -665,6 +665,36 @@ public class ModItems {
             new Identifier(Steamcraft.MOD_ID, "ancient_loam_item"),
             new BlockItem(ModBlocks.ANCIENT_LOAM_BLOCK, new FabricItemSettings()));
 
+    public static final Item MUD_BRICKS_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "mud_bricks_item_01"),
+            new BlockItem(ModBlocks.MUD_BRICKS_BLOCK, new FabricItemSettings()));
+    public static final Item MUD_BRICK = registerItem("mud_brick",
+            new Item(new FabricItemSettings()));
+    public static final Item MUD_BRICKS_STAIR_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "mud_bricks_stair_item"),
+            new BlockItem(ModBlocks.MUD_BRICKS_STAIR_BLOCK, new FabricItemSettings()));
+    public static final Item MUD_BRICKS_SLAB_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "mud_bricks_slab_item"),
+            new BlockItem(ModBlocks.MUD_BRICKS_SLAB_BLOCK, new FabricItemSettings()));
+    public static final Item MUD_BRICKS_WALL_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "mud_bricks_wall_item"),
+            new BlockItem(ModBlocks.MUD_BRICKS_WALL_BLOCK, new FabricItemSettings()));
+
+    public static final Item KILN_BURNT_BRICKS_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "kiln_burnt_bricks_item_01"),
+            new BlockItem(ModBlocks.KILN_BURNT_BRICKS_BLOCK, new FabricItemSettings()));
+    public static final Item KILN_BURNT_BRICK = registerItem("kiln_burnt_brick",
+            new Item(new FabricItemSettings()));
+    public static final Item KILN_BURNT_BRICKS_STAIR_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "kiln_burnt_bricks_stair_item"),
+            new BlockItem(ModBlocks.KILN_BURNT_BRICKS_STAIR_BLOCK, new FabricItemSettings()));
+    public static final Item KILN_BURNT_BRICKS_SLAB_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "kiln_burnt_bricks_slab_item"),
+            new BlockItem(ModBlocks.KILN_BURNT_BRICKS_SLAB_BLOCK, new FabricItemSettings()));
+    public static final Item KILN_BURNT_BRICKS_WALL_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "kiln_burnt_bricks_wall_item"),
+            new BlockItem(ModBlocks.KILN_BURNT_BRICKS_WALL_BLOCK, new FabricItemSettings()));
+
 
 
     // Water

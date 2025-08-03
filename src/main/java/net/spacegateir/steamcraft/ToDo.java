@@ -42,14 +42,6 @@ public class ToDo {
 
     // TODO
 
-    // aether blocks to be less copy and paste
-    // new clay type with different brick textures making bricks randomize
-
-
-
-
-
-
 
 
 
@@ -58,6 +50,7 @@ public class ToDo {
     // Create crafting
     // stone cutting recipes = mechanical saw
     // smelting recipes = fan behind lava
+    // blasting recipes = fan behind lava
     // smoking recipes = fan behind fire
 
 

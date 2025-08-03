@@ -356,7 +356,7 @@
   "item.steamcraft.trowel": "Trowel",
   "item.steamcraft.mortar_and_pestle": "Mortar and Pestle",
   "block.steamcraft.mortar_and_pestle_block": "Mortar and Pestle",
-  "item.steamcraft.trap_concealer": "Trap Conealer",
+  "item.steamcraft.trap_concealer": "Trap Concealer",
   "item.steamcraft.core_of_changing": "Core of Changing",
 
   "block.steamcraft.power_precision_block_0": "Power Precision Block",
@@ -503,8 +503,21 @@
   "item.steamcraft.ancient_loam_item": "Ancient Loam",
   "block.steamcraft.ancient_loam_block": "Ancient Loam",
 
+  "item.steamcraft.mud_bricks_item_01": "Mud Bricks Block",
+  "block.steamcraft.mud_bricks_block_01": "Mud Bricks Block",
+  "block.steamcraft.mud_bricks_stair_block": "Mud Bricks Stair",
+  "block.steamcraft.mud_bricks_slab_block": "Mud Bricks Slab",
+  "block.steamcraft.mud_bricks_wall_block": "Mud Bricks Wall",
+  "item.steamcraft.kiln_burnt_bricks_item_01": "Kiln Burnt Bricks Block",
+  "block.steamcraft.kiln_burnt_bricks_block_01": "Kiln Burnt Bricks Block",
+  "block.steamcraft.kiln_burnt_bricks_stair_block": "Kiln Burnt Bricks Stair",
+  "block.steamcraft.kiln_burnt_bricks_slab_block": "Kiln Burnt Bricks Slab",
+  "block.steamcraft.kiln_burnt_bricks_wall_block": "Kiln Burnt Bricks Wall",
+
   "item.steamcraft.ancient_clay": "Clay",
   "item.steamcraft.ancient_moist_clay": "Moist Clay",
+  "item.steamcraft.mud_brick": "Mud Brick",
+  "item.steamcraft.kiln_burnt_brick": "Kiln Burnt Brick",
 
 
 

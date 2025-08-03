@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_mud_bricks_item_01": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "steamcraft:mud_bricks_item_01"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:mud_bricks_stair_item_from_mud_bricks_item_01_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_mud_bricks_item_01",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:mud_bricks_stair_item_from_mud_bricks_item_01_stonecutting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

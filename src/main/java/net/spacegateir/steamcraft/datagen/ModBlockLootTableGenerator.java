@@ -88,6 +88,15 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
                                         .conditionally(SurvivesExplosionLootCondition.builder())))
         );
 
+        addDrop(ModBlocks.MUD_BRICKS_BLOCK);
+        addDrop(ModBlocks.MUD_BRICKS_STAIR_BLOCK);
+        addDrop(ModBlocks.MUD_BRICKS_SLAB_BLOCK);
+        addDrop(ModBlocks.MUD_BRICKS_WALL_BLOCK);
+        addDrop(ModBlocks.KILN_BURNT_BRICKS_BLOCK);
+        addDrop(ModBlocks.KILN_BURNT_BRICKS_STAIR_BLOCK);
+        addDrop(ModBlocks.KILN_BURNT_BRICKS_SLAB_BLOCK);
+        addDrop(ModBlocks.KILN_BURNT_BRICKS_WALL_BLOCK);
+
         addDrop(ModBlocks.AETHER_COIL);
         addDrop(ModBlocks.AETHER_COIL_WHITE,
                 dropsWithSilkTouch(ModBlocks.AETHER_COIL_WHITE, ItemEntry.builder(ModBlocks.AETHER_COIL))

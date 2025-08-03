@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "steamcraft:kiln_burnt_bricks_item_01"
+  },
+  "result": "steamcraft:mud_bricks_item_01"
+}

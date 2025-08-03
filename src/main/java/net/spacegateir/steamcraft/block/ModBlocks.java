@@ -1274,6 +1274,32 @@ public class ModBlocks {
             new Identifier(Steamcraft.MOD_ID, "ancient_loam_block"),
             new ModLoamBlock(FabricBlockSettings.copyOf(Blocks.COARSE_DIRT)));
 
+    public static final Block MUD_BRICKS_BLOCK = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "mud_bricks_block_01"),
+            new VariantBlock(FabricBlockSettings.copyOf(Blocks.BRICKS)));
+    public static final Block MUD_BRICKS_STAIR_BLOCK = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "mud_bricks_stair_block"),
+            new VariantStairsBlock(ModBlocks.GLIMMERSTONE_BRICKS_BLOCK.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+    public static final Block MUD_BRICKS_SLAB_BLOCK = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "mud_bricks_slab_block"),
+            new VariantSlabBlock(FabricBlockSettings.copyOf(Blocks.BRICKS)));
+    public static final Block MUD_BRICKS_WALL_BLOCK = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "mud_bricks_wall_block"),
+            new VariantWallBlock(FabricBlockSettings.copyOf(Blocks.BRICKS)));
+
+    public static final Block KILN_BURNT_BRICKS_BLOCK = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "kiln_burnt_bricks_block_01"),
+            new VariantBlock(FabricBlockSettings.copyOf(Blocks.BRICKS)));
+    public static final Block KILN_BURNT_BRICKS_STAIR_BLOCK = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "kiln_burnt_bricks_stair_block"),
+            new VariantStairsBlock(ModBlocks.KILN_BURNT_BRICKS_BLOCK.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+    public static final Block KILN_BURNT_BRICKS_SLAB_BLOCK = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "kiln_burnt_bricks_slab_block"),
+            new VariantSlabBlock(FabricBlockSettings.copyOf(Blocks.BRICKS)));
+    public static final Block KILN_BURNT_BRICKS_WALL_BLOCK = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "kiln_burnt_bricks_wall_block"),
+            new VariantWallBlock(FabricBlockSettings.copyOf(Blocks.BRICKS)));
+
     // Crops
     public static final Block AGAPANTHUS_CROP = registerBlockWithoutBlockItem("agapanthus_crop",
             new ModCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT),false));

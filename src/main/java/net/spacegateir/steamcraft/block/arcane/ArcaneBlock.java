@@ -14,7 +14,7 @@ import java.util.function.Function;
 
 public class ArcaneBlock extends Block {
 
-    public static final IntProperty SWITCH_STATE = IntProperty.of("switch_state", 0, 49);
+    public static final IntProperty SWITCH_STATE = IntProperty.of("switch_state", 0, 63);
 
     private final Function<Integer, StatusEffectInstance> signalStrengthToEffect;
 

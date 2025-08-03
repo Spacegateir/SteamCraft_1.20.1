@@ -12,8 +12,8 @@
       "item": "steamcraft:ancient_sand_item"
     },
     {
-      "chance": 0.50,
-      "item": "steamcraft:silver_nugget"
+      "chance": 0.25,
+      "item": "steamcraft:raw_silver"
     }
   ]
 }

@@ -273,7 +273,13 @@ public class ModItemGroups {
                         entries.add(ModItems.ANCIENT_SAND_ITEM);
                         entries.add(ModItems.ANCIENT_SILT_ITEM);
                         entries.add(ModItems.ANCIENT_LOAM_ITEM);
+
+                        entries.add(ModItems.ANCIENT_WET_MUD_ITEM);
+                        entries.add(ModItems.ANCIENT_SLIGHTYLY_WET_MUD_ITEM);
                         entries.add(ModItems.ANCIENT_MUD_ITEM);
+                        entries.add(ModItems.ANCIENT_SLIGHTYLY_DRY_MUD_ITEM);
+                        entries.add(ModItems.ANCIENT_DRY_MUD_ITEM);
+
                         entries.add(ModItems.ANCIENT_CLAY_ITEM);
                         entries.add(ModItems.ANCIENT_MOIST_CLAY_ITEM);
                         entries.add(ModItems.MUD_BRICKS_ITEM);

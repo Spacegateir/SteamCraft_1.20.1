@@ -10,8 +10,13 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.util.Identifier;
 import net.spacegateir.steamcraft.Steamcraft;
 import net.spacegateir.steamcraft.block.ModBlocks;
+import net.spacegateir.steamcraft.block.custom.ReactiveMudBlock;
 import net.spacegateir.steamcraft.item.ModItems;
 import net.spacegateir.steamcraft.potion.ModPotions;
+
+import java.util.Map;
+
+import static net.spacegateir.steamcraft.block.ModBlocks.*;
 
 public class ModRegistries {
     public static void registerModStuff() {
@@ -20,6 +25,7 @@ public class ModRegistries {
         registerPotionRecipes();
         registerModCompostables();
         registerFuels();
+        initializeMudLevelTransitions();
     }
 
     private static void registerFuels() {
@@ -199,6 +205,17 @@ public class ModRegistries {
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_LUSH_AGAPANTHUS_FLOWER_ITEM, 0.8F);
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GLOW_LUSH_BLUE_COSMOS_FLOWER_ITEM, 0.8F);
     }
+
+    public static void initializeMudLevelTransitions() {
+        ReactiveMudBlock.initMudTransitions(Map.of(
+                MudLevel.WET, ANCIENT_WET_MUD,
+                MudLevel.SLIGHTLY_WET, ANCIENT_SLIGHTLY_WET_MUD,
+                MudLevel.NORMAL, ANCIENT_MUD_BLOCK,
+                MudLevel.SLIGHTLY_DRY, ANCIENT_SLIGHTLY_DRY_MUD,
+                MudLevel.DRY, ANCIENT_DRY_MUD
+        ));
+    }
+
 }
 
 

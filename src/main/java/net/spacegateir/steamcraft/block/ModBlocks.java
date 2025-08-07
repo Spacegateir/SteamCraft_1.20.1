@@ -23,8 +23,10 @@ import net.spacegateir.steamcraft.block.path_blocks.*;
 import net.spacegateir.steamcraft.block.traps.*;
 import net.spacegateir.steamcraft.effect.ModEffects;
 import net.spacegateir.steamcraft.item.ModItems;
+import net.spacegateir.steamcraft.util.MudLevel;
 
 import java.util.EnumMap;
+import java.util.Map;
 import java.util.function.Function;
 
 
@@ -1250,9 +1252,32 @@ public class ModBlocks {
             new Identifier(Steamcraft.MOD_ID, "ancient_gravel_block"),
             new ModGravelBlock(FabricBlockSettings.copyOf(Blocks.GRAVEL)));
 
+    public static final Block ANCIENT_WET_MUD = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "ancient_wet_mud"),
+            new ReactiveMudBlock(FabricBlockSettings.copyOf(Blocks.DIRT)
+                    .nonOpaque().ticksRandomly().velocityMultiplier(0.50F)
+                    .strength(1.0f).sounds(BlockSoundGroup.INTENTIONALLY_EMPTY), MudLevel.WET));
+
+    public static final Block ANCIENT_SLIGHTLY_WET_MUD = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "ancient_slightly_wet_mud"),
+            new ReactiveMudBlock(FabricBlockSettings.copyOf(Blocks.DIRT).ticksRandomly()
+                    .velocityMultiplier(0.75F).strength(1.0f), MudLevel.SLIGHTLY_WET));
+
     public static final Block ANCIENT_MUD_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "ancient_mud_block"),
-            new ModMudBlock(FabricBlockSettings.copyOf(Blocks.MUD)));
+            new ReactiveMudBlock(FabricBlockSettings.copyOf(Blocks.DIRT)
+                    .ticksRandomly().strength(1.0f), MudLevel.NORMAL));
+
+    public static final Block ANCIENT_SLIGHTLY_DRY_MUD = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "ancient_slightly_dry_mud"),
+            new ReactiveMudBlock(FabricBlockSettings.copyOf(Blocks.DIRT)
+                    .ticksRandomly().velocityMultiplier(1.15F).strength(1.0f), MudLevel.SLIGHTLY_DRY));
+
+    public static final Block ANCIENT_DRY_MUD = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "ancient_dry_mud"),
+            new ReactiveMudBlock(FabricBlockSettings.copyOf(Blocks.DIRT)
+                    .ticksRandomly().velocityMultiplier(1.30F).strength(1.0f), MudLevel.DRY));
+
 
     public static final Block ANCIENT_CLAY_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "ancient_clay_block"),
@@ -1564,6 +1589,7 @@ public class ModBlocks {
         ModCropData.register(LUSH_VIOLET_CROP, ModItems.LUSH_VIOLET_SEED, ModItems.LUSH_VIOLET_FLOWER_ITEM);
         ModCropData.register(THORNED_VIOLET_CROP, ModItems.THORNED_VIOLET_SEED, ModItems.THORNED_VIOLET_FLOWER_ITEM);
     }
+
 
 
     public static void registerModBlocks() {

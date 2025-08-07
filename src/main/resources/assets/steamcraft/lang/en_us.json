@@ -490,8 +490,18 @@
 
   "item.steamcraft.ancient_gravel_item": "Ancient Gravel",
   "block.steamcraft.ancient_gravel_block": "Ancient Gravel",
-  "item.steamcraft.ancient_mud_item": "Ancient Mud",
-  "block.steamcraft.ancient_mud_block": "Ancient Mud",
+
+  "item.steamcraft.ancient_wet_mud_item": "Wet Mud",
+  "block.steamcraft.ancient_wet_mud": "Wet Mud",
+  "item.steamcraft.ancient_slightly_wet_mud_item": "Slightly Wet Mud",
+  "block.steamcraft.ancient_slightly_wet_mud": "Slightly Wet Mud",
+  "item.steamcraft.ancient_mud_item": "Mud",
+  "block.steamcraft.ancient_mud_block": "Mud",
+  "item.steamcraft.ancient_slightly_dry_mud_item": "Slightly Dry Mud",
+  "block.steamcraft.ancient_slightly_dry_mud": "Slightly Dry Mud",
+  "item.steamcraft.ancient_dry_mud_item": "Dry Mud",
+  "block.steamcraft.ancient_dry_mud": "Dry Mud",
+
   "item.steamcraft.ancient_clay_item": "Ancient Clay",
   "block.steamcraft.ancient_clay_block": "Ancient Clay",
   "item.steamcraft.ancient_moist_clay_item": "Ancient Moist Clay",

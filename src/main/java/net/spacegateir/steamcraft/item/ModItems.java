@@ -637,9 +637,26 @@ public class ModItems {
     public static final Item ANCIENT_GRAVEL_ITEM = Registry.register(Registries.ITEM,
             new Identifier(Steamcraft.MOD_ID, "ancient_gravel_item"),
             new BlockItem(ModBlocks.ANCIENT_GRAVEL_BLOCK, new FabricItemSettings()));
+
+    public static final Item ANCIENT_WET_MUD_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "ancient_wet_mud_item"),
+            new BlockItem(ModBlocks.ANCIENT_WET_MUD, new FabricItemSettings()));
+
+    public static final Item ANCIENT_SLIGHTYLY_WET_MUD_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "ancient_slightly_wet_mud_item"),
+            new BlockItem(ModBlocks.ANCIENT_SLIGHTLY_WET_MUD, new FabricItemSettings()));
+
     public static final Item ANCIENT_MUD_ITEM = Registry.register(Registries.ITEM,
             new Identifier(Steamcraft.MOD_ID, "ancient_mud_item"),
             new BlockItem(ModBlocks.ANCIENT_MUD_BLOCK, new FabricItemSettings()));
+
+    public static final Item ANCIENT_SLIGHTYLY_DRY_MUD_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "ancient_dry_mud_item"),
+            new BlockItem(ModBlocks.ANCIENT_SLIGHTLY_DRY_MUD, new FabricItemSettings()));
+
+    public static final Item ANCIENT_DRY_MUD_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "ancient_slightly_dry_mud_item"),
+            new BlockItem(ModBlocks.ANCIENT_DRY_MUD, new FabricItemSettings()));
 
     public static final Item ANCIENT_CLAY_ITEM = Registry.register(Registries.ITEM,
             new Identifier(Steamcraft.MOD_ID, "ancient_clay_item"),

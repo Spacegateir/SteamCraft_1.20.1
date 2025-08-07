@@ -259,7 +259,6 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.ANCIENT_SAND_BLOCK,
                         ModBlocks.ANCIENT_SILT_BLOCK,
                         ModBlocks.ANCIENT_LOAM_BLOCK,
-                        ModBlocks.ANCIENT_MUD_BLOCK,
                         ModBlocks.ANCIENT_CLAY_BLOCK,
 
                         ModBlocks.KILN_BURNT_BRICKS_BLOCK,
@@ -299,6 +298,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(ModTags.Blocks.SOIL_PATH_BLOCKS)
                 .add(
+                        ModBlocks.ANCIENT_WET_MUD,
+                        ModBlocks.ANCIENT_SLIGHTLY_WET_MUD,
+                        ModBlocks.ANCIENT_MUD_BLOCK,
+                        ModBlocks.ANCIENT_SLIGHTLY_DRY_MUD,
+                        ModBlocks.ANCIENT_DRY_MUD,
 
                         ModBlocks.CLAY_PATH,
                         ModBlocks.COARSE_DIRT_PATH,
@@ -449,7 +453,6 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.ANCIENT_SAND_BLOCK,
                         ModBlocks.ANCIENT_SILT_BLOCK,
                         ModBlocks.ANCIENT_LOAM_BLOCK,
-                        ModBlocks.ANCIENT_MUD_BLOCK,
                         ModBlocks.ANCIENT_CLAY_BLOCK,
                         ModBlocks.ANCIENT_MOIST_CLAY_BLOCK
                 );

@@ -74,7 +74,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SNOW_TILES_CRACKED);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ANCIENT_GRAVEL_BLOCK);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ANCIENT_MUD_BLOCK);
+//        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ANCIENT_MUD_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ANCIENT_CLAY_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ANCIENT_MOIST_CLAY_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ANCIENT_SAND_BLOCK);

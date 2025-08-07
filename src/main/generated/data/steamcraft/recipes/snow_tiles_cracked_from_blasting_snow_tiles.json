@@ -2,7 +2,7 @@
   "type": "minecraft:blasting",
   "category": "blocks",
   "cookingtime": 50,
-  "experience": 0.1,
+  "experience": 0.15,
   "group": "snow_tiles",
   "ingredient": {
     "item": "steamcraft:snow_tiles"

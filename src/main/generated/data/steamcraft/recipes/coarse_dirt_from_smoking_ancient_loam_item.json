@@ -2,7 +2,7 @@
   "type": "minecraft:smoking",
   "category": "food",
   "cookingtime": 100,
-  "experience": 0.1,
+  "experience": 0.15,
   "group": "smoked_blocks",
   "ingredient": {
     "item": "steamcraft:ancient_loam_item"

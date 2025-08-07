@@ -62,7 +62,21 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.ANCIENT_LOAM_BLOCK,
                 dropsWithSilkTouch(ModBlocks.ANCIENT_LOAM_BLOCK, ItemEntry.builder(Blocks.DIRT))
         );
+
         addDrop(ModBlocks.ANCIENT_MUD_BLOCK);
+        addDrop(ModBlocks.ANCIENT_WET_MUD,
+                dropsWithSilkTouch(ModBlocks.ANCIENT_WET_MUD, ItemEntry.builder(ModBlocks.ANCIENT_MUD_BLOCK))
+        );
+        addDrop(ModBlocks.ANCIENT_SLIGHTLY_WET_MUD,
+                dropsWithSilkTouch(ModBlocks.ANCIENT_SLIGHTLY_WET_MUD, ItemEntry.builder(ModBlocks.ANCIENT_MUD_BLOCK))
+        );
+        addDrop(ModBlocks.ANCIENT_SLIGHTLY_DRY_MUD,
+                dropsWithSilkTouch(ModBlocks.ANCIENT_SLIGHTLY_DRY_MUD, ItemEntry.builder(ModBlocks.ANCIENT_MUD_BLOCK))
+        );
+        addDrop(ModBlocks.ANCIENT_DRY_MUD,
+                dropsWithSilkTouch(ModBlocks.ANCIENT_DRY_MUD, ItemEntry.builder(ModBlocks.ANCIENT_MUD_BLOCK))
+        );
+
         addDrop(ModBlocks.ANCIENT_CLAY_BLOCK,
                 LootTable.builder()
                         .pool(LootPool.builder()

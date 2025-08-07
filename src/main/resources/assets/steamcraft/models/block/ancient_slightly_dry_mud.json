@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "steamcraft:block/ancient_slightly_dry_mud"
+  }
+}

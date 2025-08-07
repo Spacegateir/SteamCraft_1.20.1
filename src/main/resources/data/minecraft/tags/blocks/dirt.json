@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "steamcraft:ancient_wet_mud",
+    "steamcraft:ancient_slightly_wet_mud",
+    "steamcraft:ancient_mud_block",
+    "steamcraft:ancient_slightly_dry_mud",
+    "steamcraft:ancient_dry_mud"
+  ]
+}

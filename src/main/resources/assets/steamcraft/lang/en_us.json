@@ -792,6 +792,62 @@
   "block.steamcraft.pan": "Pan",
 
 
+  "block.steamcraft.mineral_deposit_active_block": "Mineral Deposit",
+  "block.steamcraft.mineral_deposit_inactive_block": "Depleted Mineral Deposit",
+  "item.steamcraft.mineral_deposit_active_block": "Mineral Deposit",
+  "item.steamcraft.mineral_deposit_inactive_block": "Depleted Mineral Deposit",
+
+  "block.steamcraft.mineral_deposit_active_clay": "Mineral Deposit Clay",
+  "block.steamcraft.mineral_deposit_inactive_clay": "Depleted Clay",
+  "item.steamcraft.mineral_deposit_active_clay": "Mineral Deposit Clay",
+  "item.steamcraft.mineral_deposit_inactive_clay": "Depleted Clay",
+
+  "block.steamcraft.mineral_deposit_active_coal": "Mineral Deposit Coal",
+  "block.steamcraft.mineral_deposit_inactive_coal": "Depleted Coal",
+  "item.steamcraft.mineral_deposit_active_coal": "Mineral Deposit Coal",
+  "item.steamcraft.mineral_deposit_inactive_coal": "Depleted Coal",
+
+  "block.steamcraft.mineral_deposit_active_iron": "Mineral Deposit Iron",
+  "block.steamcraft.mineral_deposit_inactive_iron": "Depleted Iron",
+  "item.steamcraft.mineral_deposit_active_iron": "Mineral Deposit Iron",
+  "item.steamcraft.mineral_deposit_inactive_iron": "Depleted Iron",
+
+  "block.steamcraft.mineral_deposit_active_copper": "Mineral Deposit Copper",
+  "block.steamcraft.mineral_deposit_inactive_copper": "Depleted Copper",
+  "item.steamcraft.mineral_deposit_active_copper": "Mineral Deposit Copper",
+  "item.steamcraft.mineral_deposit_inactive_copper": "Depleted Copper",
+
+  "block.steamcraft.mineral_deposit_active_silver": "Mineral Deposit Silver",
+  "block.steamcraft.mineral_deposit_inactive_silver": "Depleted Silver",
+  "item.steamcraft.mineral_deposit_active_silver": "Mineral Deposit Silver",
+  "item.steamcraft.mineral_deposit_inactive_silver": "Depleted Silver",
+
+  "block.steamcraft.mineral_deposit_active_redstone": "Mineral Deposit Redstone",
+  "block.steamcraft.mineral_deposit_inactive_redstone": "Depleted Redstone",
+  "item.steamcraft.mineral_deposit_active_redstone": "Mineral Deposit Redstone",
+  "item.steamcraft.mineral_deposit_inactive_redstone": "Depleted Redstone",
+
+  "block.steamcraft.mineral_deposit_active_lapis": "Mineral Deposit Lapis",
+  "block.steamcraft.mineral_deposit_inactive_lapis": "Depleted Lapis",
+  "item.steamcraft.mineral_deposit_active_lapis": "Mineral Deposit Lapis",
+  "item.steamcraft.mineral_deposit_inactive_lapis": "Depleted Lapis",
+
+  "block.steamcraft.mineral_deposit_active_gold": "Mineral Deposit Gold",
+  "block.steamcraft.mineral_deposit_inactive_gold": "Depleted Gold",
+  "item.steamcraft.mineral_deposit_active_gold": "Mineral Deposit Gold",
+  "item.steamcraft.mineral_deposit_inactive_gold": "Depleted Gold",
+
+  "block.steamcraft.mineral_deposit_active_netherite": "Mineral Deposit Netherite",
+  "block.steamcraft.mineral_deposit_inactive_netherite": "Depleted Netherite",
+  "item.steamcraft.mineral_deposit_active_netherite": "Mineral Deposit Netherite",
+  "item.steamcraft.mineral_deposit_inactive_netherite": "Depleted Netherite",
+
+  "block.steamcraft.mineral_deposit_active_gem": "Mineral Deposit Gem",
+  "block.steamcraft.mineral_deposit_inactive_gem": "Depleted Gem",
+  "item.steamcraft.mineral_deposit_active_gem": "Mineral Deposit Gem",
+  "item.steamcraft.mineral_deposit_inactive_gem": "Depleted Gem",
+
+
 
 
 

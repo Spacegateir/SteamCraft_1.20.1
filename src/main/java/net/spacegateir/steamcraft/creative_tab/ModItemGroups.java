@@ -1,7 +1,10 @@
 package net.spacegateir.steamcraft.creative_tab;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.block.Block;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemGroups;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -11,6 +14,10 @@ import net.minecraft.util.Identifier;
 import net.spacegateir.steamcraft.Steamcraft;
 import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.item.ModItems;
+import net.spacegateir.steamcraft.util.MineralType;
+
+import java.util.List;
+import java.util.Map;
 
 public class ModItemGroups {
     public static final ItemGroup STEAMCRAFT = Registry.register(Registries.ITEM_GROUP,
@@ -226,6 +233,29 @@ public class ModItemGroups {
                         entries.add(ModBlocks.ARCANE_DISORIENT_BLOCK);
                         entries.add(ModBlocks.ARCANE_STICKY_FEAT_BLOCK);
                         entries.add(ModBlocks.ARCANE_FREAKY_BUNNY_BLOCK);
+
+//                        entries.add(ModItems.MINERAL_DEPOSIT_INACTIVE_ITEM);
+//                        entries.add(ModItems.MINERAL_DEPOSIT_ACTIVE_ITEM);
+//                        entries.add(ModItems.MINERAL_DEPOSIT_INACTIVE_CLAY_ITEM);
+                        entries.add(ModItems.MINERAL_DEPOSIT_ACTIVE_CLAY_ITEM);
+//                        entries.add(ModItems.MINERAL_DEPOSIT_INACTIVE_COAL_ITEM);
+                        entries.add(ModItems.MINERAL_DEPOSIT_ACTIVE_COAL_ITEM);
+//                        entries.add(ModItems.MINERAL_DEPOSIT_INACTIVE_IRON_ITEM);
+                        entries.add(ModItems.MINERAL_DEPOSIT_ACTIVE_IRON_ITEM);
+//                        entries.add(ModItems.MINERAL_DEPOSIT_INACTIVE_COPPER_ITEM);
+                        entries.add(ModItems.MINERAL_DEPOSIT_ACTIVE_COPPER_ITEM);
+//                        entries.add(ModItems.MINERAL_DEPOSIT_INACTIVE_SILVER_ITEM);
+                        entries.add(ModItems.MINERAL_DEPOSIT_ACTIVE_SILVER_ITEM);
+//                        entries.add(ModItems.MINERAL_DEPOSIT_INACTIVE_REDSTONE_ITEM);
+                        entries.add(ModItems.MINERAL_DEPOSIT_ACTIVE_REDSTONE_ITEM);
+//                        entries.add(ModItems.MINERAL_DEPOSIT_INACTIVE_LAPIS_ITEM);
+                        entries.add(ModItems.MINERAL_DEPOSIT_ACTIVE_LAPIS_ITEM);
+//                        entries.add(ModItems.MINERAL_DEPOSIT_INACTIVE_GOLD_ITEM);
+                        entries.add(ModItems.MINERAL_DEPOSIT_ACTIVE_GOLD_ITEM);
+//                        entries.add(ModItems.MINERAL_DEPOSIT_INACTIVE_NETHERITE_ITEM);
+                        entries.add(ModItems.MINERAL_DEPOSIT_ACTIVE_NETHERITE_ITEM);
+//                        entries.add(ModItems.MINERAL_DEPOSIT_INACTIVE_GEM_ITEM);
+                        entries.add(ModItems.MINERAL_DEPOSIT_ACTIVE_GEM_ITEM);
 
                         entries.add(ModBlocks.POWER_PRECISION_BLOCK);
 
@@ -513,8 +543,6 @@ public class ModItemGroups {
                         entries.add(ModItems.THORNED_AGAPANTHUS_SEED);
                         entries.add(ModItems.THORNED_BLUE_COSMOS_SEED);
                         entries.add(ModItems.THORNED_SNOW_DROP_SEED);
-
-
 
                         entries.add(ModItems.WHITE_WATER_BUCKET);
                         entries.add(ModItems.LIGHT_GRAY_WATER_BUCKET);

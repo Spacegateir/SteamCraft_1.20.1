@@ -22,6 +22,7 @@ import java.lang.reflect.Field;
 import java.util.EnumMap;
 
 import static net.minecraft.util.Rarity.RARE;
+import static net.spacegateir.steamcraft.block.ModBlocks.*;
 
 public class ModItems {
 
@@ -875,6 +876,141 @@ public class ModItems {
     public static final Item GAMEBOARD_ITEM = Registry.register(Registries.ITEM,
             new Identifier(Steamcraft.MOD_ID, "gameboard_item"),
             new BlockItem(ModBlocks.GAMEBOARD_BLOCK, new FabricItemSettings()));
+
+
+
+
+    public static final Item MINERAL_DEPOSIT_INACTIVE_ITEM = Registry.register(
+            Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_inactive_block"),
+            new BlockItem(MINERAL_DEPOSIT_INACTIVE_BLOCK, new FabricItemSettings())
+    );
+
+    public static final Item MINERAL_DEPOSIT_ACTIVE_ITEM = Registry.register(
+            Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_active_block"),
+            new BlockItem(MINERAL_DEPOSIT_ACTIVE_BLOCK, new FabricItemSettings())
+    );
+
+    public static final Item MINERAL_DEPOSIT_INACTIVE_CLAY_ITEM = Registry.register(
+            Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_inactive_clay"),
+            new BlockItem(MINERAL_DEPOSIT_INACTIVE_CLAY, new FabricItemSettings())
+    );
+
+    public static final Item MINERAL_DEPOSIT_ACTIVE_CLAY_ITEM = Registry.register(
+            Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_active_clay"),
+            new BlockItem(MINERAL_DEPOSIT_ACTIVE_CLAY, new FabricItemSettings())
+    );
+
+    public static final Item MINERAL_DEPOSIT_INACTIVE_COAL_ITEM = Registry.register(
+            Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_inactive_coal"),
+            new BlockItem(MINERAL_DEPOSIT_INACTIVE_COAL, new FabricItemSettings())
+    );
+
+    public static final Item MINERAL_DEPOSIT_ACTIVE_COAL_ITEM = Registry.register(
+            Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_active_coal"),
+            new BlockItem(MINERAL_DEPOSIT_ACTIVE_COAL, new FabricItemSettings())
+    );
+
+    public static final Item MINERAL_DEPOSIT_INACTIVE_IRON_ITEM = Registry.register(
+            Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_inactive_iron"),
+            new BlockItem(MINERAL_DEPOSIT_INACTIVE_IRON, new FabricItemSettings())
+    );
+
+    public static final Item MINERAL_DEPOSIT_ACTIVE_IRON_ITEM = Registry.register(
+            Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_active_iron"),
+            new BlockItem(MINERAL_DEPOSIT_ACTIVE_IRON, new FabricItemSettings())
+    );
+
+    public static final Item MINERAL_DEPOSIT_INACTIVE_COPPER_ITEM = Registry.register(
+            Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_inactive_copper"),
+            new BlockItem(MINERAL_DEPOSIT_INACTIVE_COPPER, new FabricItemSettings())
+    );
+
+    public static final Item MINERAL_DEPOSIT_ACTIVE_COPPER_ITEM = Registry.register(
+            Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_active_copper"),
+            new BlockItem(MINERAL_DEPOSIT_ACTIVE_COPPER, new FabricItemSettings())
+    );
+
+    public static final Item MINERAL_DEPOSIT_INACTIVE_SILVER_ITEM = Registry.register(
+            Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_inactive_silver"),
+            new BlockItem(MINERAL_DEPOSIT_INACTIVE_SILVER, new FabricItemSettings())
+    );
+
+    public static final Item MINERAL_DEPOSIT_ACTIVE_SILVER_ITEM = Registry.register(
+            Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_active_silver"),
+            new BlockItem(MINERAL_DEPOSIT_ACTIVE_SILVER, new FabricItemSettings())
+    );
+
+    public static final Item MINERAL_DEPOSIT_INACTIVE_REDSTONE_ITEM = Registry.register(
+            Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_inactive_redstone"),
+            new BlockItem(MINERAL_DEPOSIT_INACTIVE_REDSTONE, new FabricItemSettings())
+    );
+
+    public static final Item MINERAL_DEPOSIT_ACTIVE_REDSTONE_ITEM = Registry.register(
+            Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_active_redstone"),
+            new BlockItem(MINERAL_DEPOSIT_ACTIVE_REDSTONE, new FabricItemSettings())
+    );
+
+    public static final Item MINERAL_DEPOSIT_INACTIVE_LAPIS_ITEM = Registry.register(
+            Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_inactive_lapis"),
+            new BlockItem(MINERAL_DEPOSIT_INACTIVE_LAPIS, new FabricItemSettings())
+    );
+
+    public static final Item MINERAL_DEPOSIT_ACTIVE_LAPIS_ITEM = Registry.register(
+            Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_active_lapis"),
+            new BlockItem(MINERAL_DEPOSIT_ACTIVE_LAPIS, new FabricItemSettings())
+    );
+
+    public static final Item MINERAL_DEPOSIT_INACTIVE_GOLD_ITEM = Registry.register(
+            Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_inactive_gold"),
+            new BlockItem(MINERAL_DEPOSIT_INACTIVE_GOLD, new FabricItemSettings())
+    );
+
+    public static final Item MINERAL_DEPOSIT_ACTIVE_GOLD_ITEM = Registry.register(
+            Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_active_gold"),
+            new BlockItem(MINERAL_DEPOSIT_ACTIVE_GOLD, new FabricItemSettings())
+    );
+
+    public static final Item MINERAL_DEPOSIT_INACTIVE_NETHERITE_ITEM = Registry.register(
+            Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_inactive_netherite"),
+            new BlockItem(MINERAL_DEPOSIT_INACTIVE_NETHERITE, new FabricItemSettings())
+    );
+
+    public static final Item MINERAL_DEPOSIT_ACTIVE_NETHERITE_ITEM = Registry.register(
+            Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_active_netherite"),
+            new BlockItem(MINERAL_DEPOSIT_ACTIVE_NETHERITE, new FabricItemSettings())
+    );
+
+    public static final Item MINERAL_DEPOSIT_INACTIVE_GEM_ITEM = Registry.register(
+            Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_inactive_gem"),
+            new BlockItem(MINERAL_DEPOSIT_INACTIVE_GEM, new FabricItemSettings())
+    );
+
+    public static final Item MINERAL_DEPOSIT_ACTIVE_GEM_ITEM = Registry.register(
+            Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_active_gem"),
+            new BlockItem(MINERAL_DEPOSIT_ACTIVE_GEM, new FabricItemSettings())
+    );
 
 
 

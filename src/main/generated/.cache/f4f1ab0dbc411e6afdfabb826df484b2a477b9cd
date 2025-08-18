@@ -1,27 +1,29 @@
-// 1.20.1	2025-08-07T13:31:53.0775173	Steamcraft/Tags for minecraft:block
+// 1.20.1	2025-08-10T18:26:18.3554727	Steamcraft/Tags for minecraft:block
 f76c0d01b04f8653dbbec0b86752411924d5e961 data\steamcraft\tags\blocks\pickaxe_efficient.json
 7f221d1cca8f2c75c21e69fd9a5dee4e767af125 data\steamcraft\tags\blocks\pickaxe_mining_mode.json
 4dfb77df55c4b28d07428ea63ceb0ac9c54177d5 data\steamcraft\tags\blocks\decoration_blocks.json
 d9f6699a42e58d619ded7f2655645822c262392e data\minecraft\tags\blocks\mineable\axe.json
 5eabe78f698f7462e5e1226462b8164c4b9c2589 data\minecraft\tags\blocks\mineable\hoe.json
 4c56e1710058d2526a01b8fac9e141633cf26bfd data\steamcraft\tags\blocks\flower_crops.json
+43f0b90ff7cb5d3ae3f0904fd6adb5234a410e53 data\steamcraft\tags\blocks\mineral_deposit.json
 2a500bd70842bf5056a967989cfbed87d1f2892f data\steamcraft\tags\blocks\path_blocks.json
 5d9d453340e4ca4d7127043b5e30f9762bec11e9 data\steamcraft\tags\blocks\metals.json
-d542d7eedf0704b1ab47a7b82aa844c19ab2ebeb data\fabric\tags\blocks\needs_tool_level_4.json
+2bf5e1f168e1501f5cd82c54fb6eca0df55989a1 data\fabric\tags\blocks\needs_tool_level_4.json
 1cfbd8e7c87e1a89307cd8ced7d8c3b969f8e7e4 data\minecraft\tags\blocks\walls.json
-b8f4f482300d8b06cda8bd8b511bfe6378002475 data\minecraft\tags\blocks\needs_iron_tool.json
+77d0b75b9d0c303922edeb01cd56e1f27f6c49f8 data\minecraft\tags\blocks\needs_iron_tool.json
 00c49feec829069c78d8ade9054514fe5734343d data\minecraft\tags\blocks\mineable\shovel.json
 7c41b51c32066fff65f94b96eb2c9b3f9bfc3f70 data\steamcraft\tags\blocks\aether_blocks.json
-1b4141870d87a81a7cd0eae033d598ce68307156 data\minecraft\tags\blocks\mineable\pickaxe.json
+9f28c3a74ab2c1e21867776ea6056a919e64567b data\minecraft\tags\blocks\mineable\pickaxe.json
 88053cef51def974d65c8a11909e9eaa262faa8d data\steamcraft\tags\blocks\hoe_tilling_mode.json
 fa19d22072770a74e8be0f17bf08a69d378dddd4 data\steamcraft\tags\blocks\skeleton.json
 216505d2670b9ba7cc21a8908e4ddd908481ad55 data\steamcraft\tags\blocks\shearing_mode.json
 06b82a69e2ade71441425961ec34c7920b3c10ab data\steamcraft\tags\blocks\trophy_blocks.json
+30ac53475dc676899932c41046811d0314a64608 data\steamcraft\tags\blocks\mineral_inactive_deposit.json
 f1c08382579ef22bf5ff0abb0514741336400f80 data\steamcraft\tags\blocks\axe_strippable.json
 fd98d0a53654e2bbea1803472c30cb88e82e980d data\steamcraft\tags\blocks\traps.json
 cb1c0d4aad2e9265e8586eb02c1866a947e3d009 data\steamcraft\tags\blocks\shovel_digging_mode.json
 17d88c917fe83a94d05b8ab5f534fc69fceabcb1 data\steamcraft\tags\blocks\arcane_blocks.json
 7b9c2cf9015e0c979158f70bd24816fd5574eab7 data\fabric\tags\blocks\needs_tool_level_5.json
 4b32487d5e2f1e8253dcadced8f9a35eb792f5cc data\steamcraft\tags\blocks\building_blocks.json
-5e673da1dd9411346ff91f731902475921ed2526 data\steamcraft\tags\blocks\pickaxe_ores.json
+e65f0a40ad5a9e1a32d5278b6e10ceab3370e558 data\steamcraft\tags\blocks\pickaxe_ores.json
 bc5647903e90eba00b08567f614a476961e99388 data\minecraft\tags\blocks\cauldrons.json

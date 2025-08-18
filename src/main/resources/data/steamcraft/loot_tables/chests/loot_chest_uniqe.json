@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 2,
+      "entries": [
+        { "type": "item", "name": "steamcraft:core_of_changing", "weight": 3 },
+        { "type": "item", "name": "steamcraft:mortar_and_pestle", "weight": 1 }
+      ]
+    }
+  ]
+}

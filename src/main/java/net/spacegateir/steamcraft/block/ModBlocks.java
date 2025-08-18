@@ -23,10 +23,10 @@ import net.spacegateir.steamcraft.block.path_blocks.*;
 import net.spacegateir.steamcraft.block.traps.*;
 import net.spacegateir.steamcraft.effect.ModEffects;
 import net.spacegateir.steamcraft.item.ModItems;
+import net.spacegateir.steamcraft.util.MineralType;
 import net.spacegateir.steamcraft.util.MudLevel;
 
 import java.util.EnumMap;
-import java.util.Map;
 import java.util.function.Function;
 
 
@@ -34,6 +34,7 @@ public class ModBlocks {
 
     public static final EnumMap<DyeColor, Block> COLOR_TO_LAVA_CAULDRON = new EnumMap<>(DyeColor.class);
     public static final EnumMap<DyeColor, Block> COLOR_TO_WATER_CAULDRON = new EnumMap<>(DyeColor.class);
+
 
     public static final Block TEST_BLOCK = registerBlock("test_block",
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
@@ -1281,7 +1282,7 @@ public class ModBlocks {
 
     public static final Block ANCIENT_CLAY_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "ancient_clay_block"),
-            new ModClayBlock(FabricBlockSettings.copyOf(Blocks.PACKED_MUD)));
+            new ModClayBlock(FabricBlockSettings.copyOf(Blocks.CLAY)));
 
     public static final Block ANCIENT_MOIST_CLAY_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "ancient_moist_clay_block"),
@@ -1477,13 +1478,269 @@ public class ModBlocks {
     public static final Block EARTH_SPIKE_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "earth_spike_block"),
             new EarthSpikeBlock(FabricBlockSettings.copyOf(Blocks.BEDROCK)
-                    .nonOpaque().solid().noCollision().pistonBehavior(PistonBehavior.DESTROY).strength(-1.0F, -1.0F)
+                    .nonOpaque().solid().noCollision().pistonBehavior(PistonBehavior.BLOCK).strength(-1.0F, -1.0F)
                     .dropsNothing().allowsSpawning(Blocks::never)));
     public static final Block EARTH_WALL_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "earth_wall_block"),
             new EarthWallBlock(FabricBlockSettings.copyOf(Blocks.BEDROCK)
-                    .nonOpaque().solid().noCollision().pistonBehavior(PistonBehavior.DESTROY).strength(-1.0F, -1.0F)
+                    .nonOpaque().solid().noCollision().pistonBehavior(PistonBehavior.BLOCK).strength(-1.0F, -1.0F)
                     .dropsNothing().allowsSpawning(Blocks::never)));
+
+    public static final Block MINERAL_DEPOSIT_ACTIVE_BLOCK = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_active_block"),
+            new MineralDepositActiveBlock(FabricBlockSettings.copyOf(Blocks.STONE)
+                    .nonOpaque()
+                    .solid()
+                    .pistonBehavior(PistonBehavior.BLOCK)
+                    .strength(3.0F, 3600000.0F)
+                    .allowsSpawning(Blocks::never)
+                    .ticksRandomly(), MineralType.DEFAULT));
+
+    public static final Block MINERAL_DEPOSIT_INACTIVE_BLOCK = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_inactive_block"),
+            new MineralDepositInactiveBlock(FabricBlockSettings.copyOf(Blocks.BEDROCK)
+                    .nonOpaque()
+                    .solid()
+                    .pistonBehavior(PistonBehavior.BLOCK)
+                    .strength(-1.0F, 3600000.0F)
+                    .dropsNothing()
+                    .allowsSpawning(Blocks::never)
+                    .ticksRandomly(), MineralType.DEFAULT));
+
+    public static final Block MINERAL_DEPOSIT_ACTIVE_CLAY = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_active_clay"),
+            new MineralDepositActiveBlock(FabricBlockSettings.copyOf(ModBlocks.ANCIENT_CLAY_BLOCK)
+                    .nonOpaque()
+                    .solid()
+                    .pistonBehavior(PistonBehavior.BLOCK)
+                    .strength(1.25F, 3600000.0F)
+                    .allowsSpawning(Blocks::never)
+                    .ticksRandomly(), MineralType.CLAY));
+
+    public static final Block MINERAL_DEPOSIT_INACTIVE_CLAY = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_inactive_clay"),
+            new MineralDepositInactiveBlock(FabricBlockSettings.copyOf(Blocks.BEDROCK)
+                    .nonOpaque()
+                    .solid()
+                    .pistonBehavior(PistonBehavior.BLOCK)
+                    .strength(-1.0F, 3600000.0F)
+                    .dropsNothing()
+                    .allowsSpawning(Blocks::never)
+                    .ticksRandomly(), MineralType.CLAY));
+
+    public static final Block MINERAL_DEPOSIT_ACTIVE_COAL = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_active_coal"),
+            new MineralDepositActiveBlock(FabricBlockSettings.copyOf(Blocks.COAL_ORE)
+                    .nonOpaque()
+                    .solid()
+                    .pistonBehavior(PistonBehavior.BLOCK)
+                    .strength(4.5F, 3600000.0F)
+                    .allowsSpawning(Blocks::never)
+                    .ticksRandomly(), MineralType.COAL));
+
+    public static final Block MINERAL_DEPOSIT_INACTIVE_COAL = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_inactive_coal"),
+            new MineralDepositInactiveBlock(FabricBlockSettings.copyOf(Blocks.BEDROCK)
+                    .nonOpaque()
+                    .solid()
+                    .pistonBehavior(PistonBehavior.BLOCK)
+                    .strength(-1.0F, 3600000.0F)
+                    .dropsNothing()
+                    .allowsSpawning(Blocks::never)
+                    .ticksRandomly(), MineralType.COAL));
+
+    public static final Block MINERAL_DEPOSIT_ACTIVE_IRON = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_active_iron"),
+            new MineralDepositActiveBlock(FabricBlockSettings.copyOf(Blocks.IRON_ORE)
+                    .nonOpaque()
+                    .solid()
+                    .pistonBehavior(PistonBehavior.BLOCK)
+                    .strength(4.5F, 3600000.0F)
+                    .allowsSpawning(Blocks::never)
+                    .ticksRandomly(), MineralType.IRON));
+
+    public static final Block MINERAL_DEPOSIT_INACTIVE_IRON = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_inactive_iron"),
+            new MineralDepositInactiveBlock(FabricBlockSettings.copyOf(Blocks.BEDROCK)
+                    .nonOpaque()
+                    .solid()
+                    .pistonBehavior(PistonBehavior.BLOCK)
+                    .strength(-1.0F, 3600000.0F)
+                    .dropsNothing()
+                    .allowsSpawning(Blocks::never)
+                    .ticksRandomly(), MineralType.IRON));
+
+    public static final Block MINERAL_DEPOSIT_ACTIVE_COPPER = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_active_copper"),
+            new MineralDepositActiveBlock(FabricBlockSettings.copyOf(Blocks.COPPER_ORE)
+                    .nonOpaque()
+                    .solid()
+                    .pistonBehavior(PistonBehavior.BLOCK)
+                    .strength(4.5F, 3600000.0F)
+                    .allowsSpawning(Blocks::never)
+                    .ticksRandomly(), MineralType.COPPER));
+
+    public static final Block MINERAL_DEPOSIT_INACTIVE_COPPER = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_inactive_copper"),
+            new MineralDepositInactiveBlock(FabricBlockSettings.copyOf(Blocks.BEDROCK)
+                    .nonOpaque()
+                    .solid()
+                    .pistonBehavior(PistonBehavior.BLOCK)
+                    .strength(-1.0F, 3600000.0F)
+                    .dropsNothing()
+                    .allowsSpawning(Blocks::never)
+                    .ticksRandomly(), MineralType.COPPER));
+
+    public static final Block MINERAL_DEPOSIT_ACTIVE_SILVER = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_active_silver"),
+            new MineralDepositActiveBlock(FabricBlockSettings.copyOf(ModBlocks.SILVER_BLOCK)
+                    .nonOpaque()
+                    .solid()
+                    .pistonBehavior(PistonBehavior.BLOCK)
+                    .strength(4.5F, 3600000.0F)
+                    .allowsSpawning(Blocks::never)
+                    .ticksRandomly(), MineralType.SILVER));
+
+    public static final Block MINERAL_DEPOSIT_INACTIVE_SILVER = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_inactive_silver"),
+            new MineralDepositInactiveBlock(FabricBlockSettings.copyOf(Blocks.BEDROCK)
+                    .nonOpaque()
+                    .solid()
+                    .pistonBehavior(PistonBehavior.BLOCK)
+                    .strength(-1.0F, 3600000.0F)
+                    .dropsNothing()
+                    .allowsSpawning(Blocks::never)
+                    .ticksRandomly(), MineralType.SILVER));
+
+    public static final Block MINERAL_DEPOSIT_ACTIVE_REDSTONE = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_active_redstone"),
+            new MineralDepositActiveBlock(FabricBlockSettings.copyOf(Blocks.LAPIS_ORE)
+                    .nonOpaque()
+                    .solid()
+                    .pistonBehavior(PistonBehavior.BLOCK)
+                    .strength(4.5F, 3600000.0F)
+                    .allowsSpawning(Blocks::never)
+                    .ticksRandomly(), MineralType.REDSTONE));
+
+    public static final Block MINERAL_DEPOSIT_INACTIVE_REDSTONE = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_inactive_redstone"),
+            new MineralDepositInactiveBlock(FabricBlockSettings.copyOf(Blocks.BEDROCK)
+                    .nonOpaque()
+                    .solid()
+                    .pistonBehavior(PistonBehavior.BLOCK)
+                    .strength(-1.0F, 3600000.0F)
+                    .dropsNothing()
+                    .allowsSpawning(Blocks::never)
+                    .ticksRandomly(), MineralType.REDSTONE));
+
+    public static final Block MINERAL_DEPOSIT_ACTIVE_LAPIS = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_active_lapis"),
+            new MineralDepositActiveBlock(FabricBlockSettings.copyOf(Blocks.LAPIS_ORE)
+                    .nonOpaque()
+                    .solid()
+                    .pistonBehavior(PistonBehavior.BLOCK)
+                    .strength(4.5F, 3600000.0F)
+                    .allowsSpawning(Blocks::never)
+                    .ticksRandomly(), MineralType.LAPIS));
+
+    public static final Block MINERAL_DEPOSIT_INACTIVE_LAPIS = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_inactive_lapis"),
+            new MineralDepositInactiveBlock(FabricBlockSettings.copyOf(Blocks.BEDROCK)
+                    .nonOpaque()
+                    .solid()
+                    .pistonBehavior(PistonBehavior.BLOCK)
+                    .strength(-1.0F, 3600000.0F)
+                    .dropsNothing()
+                    .allowsSpawning(Blocks::never)
+                    .ticksRandomly(), MineralType.LAPIS));
+
+    public static final Block MINERAL_DEPOSIT_ACTIVE_GOLD = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_active_gold"),
+            new MineralDepositActiveBlock(FabricBlockSettings.copyOf(Blocks.GOLD_ORE)
+                    .nonOpaque()
+                    .solid()
+                    .pistonBehavior(PistonBehavior.BLOCK)
+                    .strength(4.5F, 3600000.0F)
+                    .allowsSpawning(Blocks::never)
+                    .ticksRandomly(), MineralType.GOLD));
+
+    public static final Block MINERAL_DEPOSIT_INACTIVE_GOLD = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_inactive_gold"),
+            new MineralDepositInactiveBlock(FabricBlockSettings.copyOf(Blocks.BEDROCK)
+                    .nonOpaque()
+                    .solid()
+                    .pistonBehavior(PistonBehavior.BLOCK)
+                    .strength(-1.0F, 3600000.0F)
+                    .dropsNothing()
+                    .allowsSpawning(Blocks::never)
+                    .ticksRandomly(), MineralType.GOLD));
+
+    public static final Block MINERAL_DEPOSIT_ACTIVE_NETHERITE = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_active_netherite"),
+            new MineralDepositActiveBlock(FabricBlockSettings.copyOf(Blocks.ANCIENT_DEBRIS)
+                    .nonOpaque()
+                    .solid()
+                    .pistonBehavior(PistonBehavior.BLOCK)
+                    .strength(30.0F, 3600000.0F)
+                    .allowsSpawning(Blocks::never)
+                    .ticksRandomly(), MineralType.NETHERITE));
+
+    public static final Block MINERAL_DEPOSIT_INACTIVE_NETHERITE = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_inactive_netherite"),
+            new MineralDepositInactiveBlock(FabricBlockSettings.copyOf(Blocks.BEDROCK)
+                    .nonOpaque()
+                    .solid()
+                    .pistonBehavior(PistonBehavior.BLOCK)
+                    .strength(-1.0F, 3600000.0F)
+                    .dropsNothing()
+                    .allowsSpawning(Blocks::never)
+                    .ticksRandomly(), MineralType.NETHERITE));
+
+    public static final Block MINERAL_DEPOSIT_ACTIVE_GEM = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_active_gem"),
+            new MineralDepositActiveBlock(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE)
+                    .nonOpaque()
+                    .solid()
+                    .pistonBehavior(PistonBehavior.BLOCK)
+                    .strength(4.5F, 3600000.0F)
+                    .allowsSpawning(Blocks::never)
+                    .ticksRandomly(), MineralType.GEM));
+
+    public static final Block MINERAL_DEPOSIT_INACTIVE_GEM = Registry.register(Registries.BLOCK,
+            new Identifier(Steamcraft.MOD_ID, "mineral_deposit_inactive_gem"),
+            new MineralDepositInactiveBlock(FabricBlockSettings.copyOf(Blocks.BEDROCK)
+                    .nonOpaque()
+                    .solid()
+                    .pistonBehavior(PistonBehavior.BLOCK)
+                    .strength(-1.0F, 3600000.0F)
+                    .dropsNothing()
+                    .allowsSpawning(Blocks::never)
+                    .ticksRandomly(), MineralType.GEM));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -12,7 +12,6 @@ public class ToDo {
 
     // create dimensions (earth copy, void, waterworld, skulk, overworld neather type, sky dimension)
 
-    // loot chests (common, rare legendary) witch will drop everywhere and have great items in it like god sword
 
     // Building Blocks
     // ICE, SNOW, SCULK (Bricks, Large Brick, pillar, engraved)
@@ -35,12 +34,24 @@ public class ToDo {
     //    Loot items
     //	  Loot boxes (common, uncommon, rare, legendary, unique).
 
-    // Make a infident clay block to mine like it runescape
+    // Trap Ideas
+    // -    Cracking ice that beaks ones to show cracks when walked
+    // on repairs after some times pases but if walked on again it disapears and you fall threw
 
 
 
 
     // TODO
+
+    // loot chests (common, rare legendary) witch will drop everywhere and have great items in it like god sword
+
+    // water log the mineral deposits
+
+    // make a bedrock block that looks nice for the dungon walls
+
+    // a block you can place items on for display similar to a table cloth if possible make it have different textures when it connects to itself
+    // clay turntable block machine so players can craft like the sawmill, but it has a craft timer like a furnace (clay to decoration blocks)
+    // furnace to do the same as the clay turntable but with metals and moulds
 
 
 
@@ -52,6 +63,7 @@ public class ToDo {
     // smelting recipes = fan behind lava
     // blasting recipes = fan behind lava
     // smoking recipes = fan behind fire
+    // .pistonBehavior(PistonBehavior.BLOCK) on a block will stop the create mine cart contraption picking it up.
 
 
 

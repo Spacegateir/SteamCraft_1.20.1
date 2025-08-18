@@ -95,6 +95,14 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                     RegistryKeys.BLOCK,
                     new Identifier("steamcraft", "metals")
             );
+            public static final TagKey<Block> MINERAL_DEPOSIT = TagKey.of(
+                    RegistryKeys.BLOCK,
+                    new Identifier("steamcraft", "mineral_deposit")
+            );
+            public static final TagKey<Block> MINERAL_INACTIVE_DEPOSIT = TagKey.of(
+                    RegistryKeys.BLOCK,
+                    new Identifier("steamcraft", "mineral_inactive_deposit")
+            );
         }
     }
 
@@ -647,6 +655,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 );
 
         getOrCreateTagBuilder(ModTags.Blocks.PICKAXE_ORES)
+
+                .addTag(ModTags.Blocks.MINERAL_DEPOSIT)
+
                 .add(
                         Blocks.ANDESITE,
                         Blocks.GRANITE,
@@ -709,6 +720,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .addTag(ModTags.Blocks.STONE_PATH_BLOCKS)
                 .addTag(ModTags.Blocks.TROPHY_BLOCKS)
                 .addTag(ModTags.Blocks.DECORATION_BLOCKS)
+                .addTag(ModTags.Blocks.MINERAL_DEPOSIT)
 
                 .add(
 
@@ -781,6 +793,42 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
                 );
 
+
+        getOrCreateTagBuilder(ModTags.Blocks.MINERAL_DEPOSIT)
+                .add(
+
+                        ModBlocks.MINERAL_DEPOSIT_ACTIVE_BLOCK,
+                        ModBlocks.MINERAL_DEPOSIT_ACTIVE_CLAY,
+                        ModBlocks.MINERAL_DEPOSIT_ACTIVE_COAL,
+                        ModBlocks.MINERAL_DEPOSIT_ACTIVE_IRON,
+                        ModBlocks.MINERAL_DEPOSIT_ACTIVE_COPPER,
+                        ModBlocks.MINERAL_DEPOSIT_ACTIVE_SILVER,
+                        ModBlocks.MINERAL_DEPOSIT_ACTIVE_REDSTONE,
+                        ModBlocks.MINERAL_DEPOSIT_ACTIVE_LAPIS,
+                        ModBlocks.MINERAL_DEPOSIT_ACTIVE_GOLD,
+                        ModBlocks.MINERAL_DEPOSIT_ACTIVE_NETHERITE,
+                        ModBlocks.MINERAL_DEPOSIT_ACTIVE_GEM
+
+                );
+
+
+        getOrCreateTagBuilder(ModTags.Blocks.MINERAL_INACTIVE_DEPOSIT)
+                .add(
+
+                        ModBlocks.MINERAL_DEPOSIT_INACTIVE_BLOCK,
+                        ModBlocks.MINERAL_DEPOSIT_INACTIVE_CLAY,
+                        ModBlocks.MINERAL_DEPOSIT_INACTIVE_COAL,
+                        ModBlocks.MINERAL_DEPOSIT_INACTIVE_IRON,
+                        ModBlocks.MINERAL_DEPOSIT_INACTIVE_COPPER,
+                        ModBlocks.MINERAL_DEPOSIT_INACTIVE_SILVER,
+                        ModBlocks.MINERAL_DEPOSIT_INACTIVE_REDSTONE,
+                        ModBlocks.MINERAL_DEPOSIT_INACTIVE_LAPIS,
+                        ModBlocks.MINERAL_DEPOSIT_INACTIVE_GOLD,
+                        ModBlocks.MINERAL_DEPOSIT_INACTIVE_NETHERITE,
+                        ModBlocks.MINERAL_DEPOSIT_INACTIVE_GEM
+
+                );
+
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(
                         ModBlocks.AETHER_COIL,
@@ -822,6 +870,12 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.GLIMMERSTONE_ENGRAVED_BLOCK,
                         ModBlocks.GLIMMERSTONE_PILLAR_BLOCK,
 
+                        ModBlocks.MINERAL_DEPOSIT_ACTIVE_SILVER,
+                        ModBlocks.MINERAL_DEPOSIT_ACTIVE_REDSTONE,
+                        ModBlocks.MINERAL_DEPOSIT_ACTIVE_LAPIS,
+                        ModBlocks.MINERAL_DEPOSIT_ACTIVE_GOLD,
+                        ModBlocks.MINERAL_DEPOSIT_ACTIVE_GEM,
+
                         ModBlocks.POWER_PRECISION_BLOCK
 
                 );
@@ -841,6 +895,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
                 .add(
                         ModBlocks.DIVINITITE_ALLOY_BLOCK,
+                        ModBlocks.MINERAL_DEPOSIT_ACTIVE_NETHERITE,
                         Blocks.BUDDING_AMETHYST
 
                 );

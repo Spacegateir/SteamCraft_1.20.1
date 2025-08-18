@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "steamcraft:mineral_deposit_active_block",
+    "steamcraft:mineral_deposit_active_clay",
+    "steamcraft:mineral_deposit_active_coal",
+    "steamcraft:mineral_deposit_active_iron",
+    "steamcraft:mineral_deposit_active_copper",
+    "steamcraft:mineral_deposit_active_silver",
+    "steamcraft:mineral_deposit_active_redstone",
+    "steamcraft:mineral_deposit_active_lapis",
+    "steamcraft:mineral_deposit_active_gold",
+    "steamcraft:mineral_deposit_active_netherite",
+    "steamcraft:mineral_deposit_active_gem"
+  ]
+}

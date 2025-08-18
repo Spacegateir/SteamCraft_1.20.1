@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "half=lower": { "model": "steamcraft:block/mineral_deposit_inactive_silver_lower" },
+    "half=upper": { "model": "steamcraft:block/mineral_deposit_inactive_silver_upper" }
+  }
+}

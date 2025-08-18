@@ -2,6 +2,7 @@ package net.spacegateir.steamcraft.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.Item;
@@ -9,6 +10,7 @@ import net.minecraft.item.ItemConvertible;
 import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
 import net.minecraft.loot.condition.LootCondition;
 import net.minecraft.loot.entry.ItemEntry;
+import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.predicate.NumberRange;
 import net.minecraft.predicate.StatePredicate;
 import net.spacegateir.steamcraft.block.ModBlocks;
@@ -34,6 +36,115 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
     @Override
     public void generate() {
 
+        Block sblock = ModBlocks.MINERAL_DEPOSIT_ACTIVE_GEM;
+        LootPoolEntry.Builder<?> gemAmethystEntry = ItemEntry.builder(Items.AMETHYST_SHARD)
+                .conditionally(TableBonusLootCondition.builder(
+                        Enchantments.FORTUNE,
+                        new float[]{1.0F, 0.75F, 0.50F, 0.25F}
+                ));
+        LootPoolEntry.Builder<?> gemEmeraldEntry = ItemEntry.builder(Items.EMERALD)
+                .conditionally(TableBonusLootCondition.builder(
+                        Enchantments.FORTUNE,
+                        new float[]{0.50F, 0.75F, 0.75F, 1.0F}
+                ));
+        LootPoolEntry.Builder<?> gemDiamondEntry = ItemEntry.builder(Items.DIAMOND)
+                .conditionally(TableBonusLootCondition.builder(
+                        Enchantments.FORTUNE,
+                        new float[]{0.25F, 0.50F, 0.75F, 1.0F}
+                ))
+                .conditionally(SurvivesExplosionLootCondition.builder());
+        LootPoolEntry.Builder<?> gemDefultExplosionEntry = ItemEntry.builder(Items.AMETHYST_SHARD)
+                .conditionally(SurvivesExplosionLootCondition.builder());
+        this.addDrop(sblock, LootTable.builder()
+                .pool(LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .with(gemDefultExplosionEntry)
+                        .with(gemAmethystEntry)
+                        .with(gemEmeraldEntry)
+                        .with(gemDiamondEntry)
+                )
+        );addDrop(ModBlocks.MINERAL_DEPOSIT_ACTIVE_CLAY, LootTable.builder()
+                .pool(LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .with(ItemEntry.builder(ModItems.ANCIENT_CLAY)
+                                .apply(ApplyBonusLootFunction.oreDrops(Enchantments.FORTUNE))
+                        )
+                )
+        );
+
+        addDrop(ModBlocks.MINERAL_DEPOSIT_ACTIVE_COAL, LootTable.builder()
+                .pool(LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .with(ItemEntry.builder(Items.COAL)
+                                .apply(ApplyBonusLootFunction.oreDrops(Enchantments.FORTUNE))
+                        )
+                )
+        );
+
+        addDrop(ModBlocks.MINERAL_DEPOSIT_ACTIVE_IRON, LootTable.builder()
+                .pool(LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .with(ItemEntry.builder(Items.RAW_IRON)
+                                .apply(ApplyBonusLootFunction.oreDrops(Enchantments.FORTUNE))
+                        )
+                )
+        );
+
+        addDrop(ModBlocks.MINERAL_DEPOSIT_ACTIVE_COPPER, LootTable.builder()
+                .pool(LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .with(ItemEntry.builder(Items.RAW_COPPER)
+                                .apply(ApplyBonusLootFunction.oreDrops(Enchantments.FORTUNE))
+                        )
+                )
+        );
+
+        addDrop(ModBlocks.MINERAL_DEPOSIT_ACTIVE_SILVER, LootTable.builder()
+                .pool(LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .with(ItemEntry.builder(ModItems.RAW_SILVER)
+                                .apply(ApplyBonusLootFunction.oreDrops(Enchantments.FORTUNE))
+                        )
+                )
+        );
+
+        addDrop(ModBlocks.MINERAL_DEPOSIT_ACTIVE_REDSTONE, LootTable.builder()
+                .pool(LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .with(ItemEntry.builder(Items.REDSTONE)
+                                .apply(ApplyBonusLootFunction.oreDrops(Enchantments.FORTUNE))
+                        )
+                )
+        );
+
+        addDrop(ModBlocks.MINERAL_DEPOSIT_ACTIVE_LAPIS, LootTable.builder()
+                .pool(LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .with(ItemEntry.builder(Items.LAPIS_LAZULI)
+                                .apply(ApplyBonusLootFunction.oreDrops(Enchantments.FORTUNE))
+                        )
+                )
+        );
+
+        addDrop(ModBlocks.MINERAL_DEPOSIT_ACTIVE_GOLD, LootTable.builder()
+                .pool(LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .with(ItemEntry.builder(Items.RAW_GOLD)
+                                .apply(ApplyBonusLootFunction.oreDrops(Enchantments.FORTUNE))
+                        )
+                )
+        );
+
+        addDrop(ModBlocks.MINERAL_DEPOSIT_ACTIVE_NETHERITE, LootTable.builder()
+                .pool(LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .with(ItemEntry.builder(Items.NETHERITE_SCRAP)
+                                .apply(ApplyBonusLootFunction.oreDrops(Enchantments.FORTUNE))
+                        )
+                )
+        );
+
+
         Block block = ModBlocks.ANCIENT_GRAVEL_BLOCK;
         LootPoolEntry.Builder<?> silkTouchEntry = ItemEntry.builder(block)
                 .conditionally(MatchToolLootCondition.builder(
@@ -56,8 +167,14 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
                         .with(gravelEntry)
                 )
         );
+
         addDrop(ModBlocks.ANCIENT_SAND_BLOCK);
         addDrop(ModBlocks.ANCIENT_SILT_BLOCK);
+
+
+
+
+
 
         addDrop(ModBlocks.ANCIENT_LOAM_BLOCK,
                 dropsWithSilkTouch(ModBlocks.ANCIENT_LOAM_BLOCK, ItemEntry.builder(Blocks.DIRT))
@@ -609,7 +726,7 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
 
     }
 
-        // Auto-generated crop drops
+    // Auto-generated crop drops
         private void registerAllCropDrops() {
             registerCropDrop(ModBlocks.CARNATION_CROP, ModItems.CARNATION_FLOWER_ITEM, ModItems.CARNATION_SEED);
             registerCropDrop(ModBlocks.LUSH_CARNATION_CROP, ModItems.LUSH_CARNATION_FLOWER_ITEM, ModItems.LUSH_CARNATION_SEED);

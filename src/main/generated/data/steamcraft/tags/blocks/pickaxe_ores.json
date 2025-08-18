@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "#steamcraft:mineral_deposit",
     "minecraft:andesite",
     "minecraft:granite",
     "minecraft:diorite",

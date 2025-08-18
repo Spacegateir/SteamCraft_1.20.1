@@ -34,6 +34,11 @@
     "steamcraft:glimmerstone/glimmerstone_bricks_wall_block",
     "steamcraft:glimmerstone/glimmerstone_engraved_block",
     "steamcraft:glimmerstone/glimmerstone_pillar_block",
+    "steamcraft:mineral_deposit_active_silver",
+    "steamcraft:mineral_deposit_active_redstone",
+    "steamcraft:mineral_deposit_active_lapis",
+    "steamcraft:mineral_deposit_active_gold",
+    "steamcraft:mineral_deposit_active_gem",
     "steamcraft:power_precision_block_0"
   ]
 }

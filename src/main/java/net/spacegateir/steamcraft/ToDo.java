@@ -47,7 +47,7 @@ public class ToDo {
 
     // water log the mineral deposits
 
-    // make a bedrock block that looks nice for the dungon walls
+    // make a bedrock block that looks nice for the dungeon walls
 
     // a block you can place items on for display similar to a table cloth if possible make it have different textures when it connects to itself
     // clay turntable block machine so players can craft like the sawmill, but it has a craft timer like a furnace (clay to decoration blocks)
@@ -64,6 +64,12 @@ public class ToDo {
     // blasting recipes = fan behind lava
     // smoking recipes = fan behind fire
     // .pistonBehavior(PistonBehavior.BLOCK) on a block will stop the create mine cart contraption picking it up.
+
+    //setblock ~ ~ ~ chest{LootTable:"steamcraft:chests/loot_chest_common"}
+    //setblock ~ ~ ~ chest{LootTable:"steamcraft:chests/loot_chest_uncommon"}
+    //setblock ~ ~ ~ chest{LootTable:"steamcraft:chests/loot_chest_rare"}
+    //setblock ~ ~ ~ chest{LootTable:"steamcraft:chests/loot_chest_legandary"}
+    //setblock ~ ~ ~ chest{LootTable:"steamcraft:chests/loot_chest_uniqe"}
 
 
 

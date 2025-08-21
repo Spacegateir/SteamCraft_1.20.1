@@ -11,7 +11,7 @@ public class ModBlockEntities {
 
     public static final BlockEntityType<SmokeBlockEntity> SMOKE_BLOCK_ENTITY =
             Registry.register(
-                    Registries.BLOCK_ENTITY_TYPE, // this is valid in 1.19.x and earlier
+                    Registries.BLOCK_ENTITY_TYPE,
                     new Identifier(Steamcraft.MOD_ID, "smoke_block_entity"),
                     BlockEntityType.Builder.create(SmokeBlockEntity::new, ModBlocks.SMOKE_BLOCK).build(null)
             );

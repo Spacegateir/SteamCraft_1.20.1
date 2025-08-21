@@ -1744,6 +1744,8 @@ public class ModBlocks {
 
 
 
+
+
     private static Block registerArcaneBlock(StatusEffect effect, Function<Integer, StatusEffectInstance> signalStrengthToEffect) {
         Identifier id = Registries.STATUS_EFFECT.getId(effect);
         String path = id != null ? id.getPath() : "unknown";

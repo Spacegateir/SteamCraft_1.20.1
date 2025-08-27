@@ -235,6 +235,7 @@ public class ModItems {
     public static final Item WINGED_SANDALS = registerItem("winged_sandals",
             new WingedSandalsCosmeticItem(ModArmorMaterials.UNBREAKING, ArmorItem.Type.BOOTS, new FabricItemSettings()));
 
+
     public static final Item TEST_ITEM_BLOCK = Registry.register(Registries.ITEM,
             new Identifier(Steamcraft.MOD_ID, "test_item_block"),
             new BlockItem(ModBlocks.TEST_BLOCK_ITEM, new FabricItemSettings()));
@@ -1011,11 +1012,6 @@ public class ModItems {
             new Identifier(Steamcraft.MOD_ID, "mineral_deposit_active_gem"),
             new BlockItem(MINERAL_DEPOSIT_ACTIVE_GEM, new FabricItemSettings())
     );
-
-
-
-
-
 
 
 

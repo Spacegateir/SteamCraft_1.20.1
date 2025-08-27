@@ -17,11 +17,13 @@ public class SmokeBlockItem extends BlockItem {
     }
 
     @Override
-    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+    public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
         if (Screen.hasShiftDown()) {
-            tooltip.add(Text.translatable("tooltip.steamcraft.smoke_block.tooltip.shift_1"));
+            tooltip.add(Text.literal("§eSmoke Block§r may be invisible but to generate smoke its pretty cool!"));
+            tooltip.add(Text.literal("§eRight Click§r on the §eSmoke Block§r to change between 3 modes "));
+            tooltip.add(Text.literal("If §eSmoke Block§r is on Hay Block double the height if on Packed Ice half the height "));
         } else {
-            tooltip.add(Text.translatable("tooltip.steamcraft.smoke_block.tooltip"));
+            tooltip.add(Text.literal("Press §eSHIFT§r for more Information"));
         }
     }
 }

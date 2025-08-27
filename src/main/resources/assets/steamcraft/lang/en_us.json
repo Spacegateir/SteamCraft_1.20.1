@@ -945,9 +945,6 @@
   "tooltip.steamcraft.obscurium_crystal.tooltip.shift": "Right Click on §8Aether Coil Black§r to Open a Portal!",
   "tooltip.steamcraft.obscurium_crystal.tooltip": "Press §eSHIFT§r for more Information",
 
-  "tooltip.steamcraft.smoke_block.tooltip.shift_1": "§eSmoke Block§r may be invisible but to generate smoke its pretty cool!",
-  "tooltip.steamcraft.smoke_block.tooltip": "Press §eSHIFT§r for more Information",
-
   "tooltip.steamcraft.teleport_trap.tooltip.shift_1": "§eStand on Teleporter§r Relocate to nearest §eGold Block§r in 50 Blocks §eFirst§r",
   "tooltip.steamcraft.teleport_trap.tooltip.shift_2": "§eStand on Teleporter§r Relocate to nearest §eArcane Disorient Block§r in 50 Blocks §eSecond§r",
   "tooltip.steamcraft.teleport_trap.tooltip.shift_3": "§eStand on Teleporter§r Relocate to nearest §eStone§r in 50 Blocks §eThird§r",

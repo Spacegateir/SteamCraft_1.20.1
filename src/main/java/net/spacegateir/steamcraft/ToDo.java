@@ -43,7 +43,9 @@ public class ToDo {
 
     // TODO
 
-    // loot chests (common, rare legendary) witch will drop everywhere and have great items in it like god sword
+    // make trinkets for every slot 10/13 slots (cant use gecko lib)
+
+    // loot chests (unique) has (trinkets and artifacts "god sword")
 
     // water log the mineral deposits
 
@@ -53,8 +55,11 @@ public class ToDo {
     // clay turntable block machine so players can craft like the sawmill, but it has a craft timer like a furnace (clay to decoration blocks)
     // furnace to do the same as the clay turntable but with metals and moulds
 
+    // smoke block adjustable height
 
 
+
+//------------------------------------------------------------------------------------
 
     // click CTRL + H
 

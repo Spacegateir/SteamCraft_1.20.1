@@ -1,5 +1,6 @@
 package net.spacegateir.steamcraft;
 
+import dev.emi.trinkets.api.client.TrinketRendererRegistry;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
@@ -31,15 +32,6 @@ public class SteamcraftClient implements ClientModInitializer {
         // Particles
 
         ParticleFactoryRegistry.getInstance().register(ModParticles.EARTH_SPIKE_PARTICLE, EarthSpikeParticles.Factory::new);
-
-
-        ClientTickEvents.END_CLIENT_TICK.register(client -> {
-            if (client.player != null) {
-                ItemStack boots = client.player.getInventory().getArmorStack(0);
-                if (boots.getItem() instanceof WingedSandalsCosmeticItem) {
-                    ((WingedSandalsCosmeticItem) boots.getItem()).handleMovement(client.player);
-                }
-            }
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SKELETON_HEAD, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SKELETON_ARM, RenderLayer.getCutout());
@@ -456,12 +448,17 @@ public class SteamcraftClient implements ClientModInitializer {
             BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), ModFluids.STILL_DIVINITITE_ALLOY_LAVA, ModFluids.FLOWING_DIVINITITE_ALLOY_LAVA);
 
 
+        // Register the Trinket renderer ONCE here
+//        TrinketRendererRegistry.registerRenderer(ModItems.RUNNING_SHOES, new ShoesTrinketRenderer());
 
-
-
-
-
-
+        // Tick handler only handles movement, NOT renderer registration
+        ClientTickEvents.END_CLIENT_TICK.register(client -> {
+            if (client.player != null) {
+                ItemStack boots = client.player.getInventory().getArmorStack(0);
+                if (boots.getItem() instanceof WingedSandalsCosmeticItem winged) {
+                    winged.handleMovement(client.player);
+                }
+            }
         });
     }
 }

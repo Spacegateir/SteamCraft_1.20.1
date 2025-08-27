@@ -1,15 +1,17 @@
 {
 	"schemaVersion": 1,
 	"id": "steamcraft",
-	"version": "${version}",
+	"version": "${0.5}",
 	"name": "Steamcraft",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Adds Various new powerful tools for creating better dungeons and other improvements to minecraft",
 	"authors": [
-		"SpaceGateir"
+		"SpaceGateir",
+		"DaveyDeckard"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://www.curseforge.com/minecraft/mc-mods/steamcraft",
+		"sources": "https://github.com/Spacegateir/SteamCraft_1.20.1",
+		"issues": "https://github.com/Spacegateir/SteamCraft_1.20.1/issues"
 	},
 	"license": "MIT",
 	"icon": "assets/steamcraft/icon.png",
@@ -36,7 +38,8 @@
 		"minecraft": "~1.20.1",
 		"java": ">=17",
 		"fabric-api": "*",
-		"geckolib": ">=4.7.1.2"
+		"geckolib": ">=4.7.1.2",
+		"trinkets": "3.7.2"
 	},
 	"suggests": {
 		"another-mod": "*"

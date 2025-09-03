@@ -46,6 +46,8 @@ public class Steamcraft implements ModInitializer {
 		ModPotions.registerPotions();
 		ModParticles.registerParticles();
 
+		ModEntityAttributes.registerAttributes();
+
 		ModRegistries.registerModStuff();
 		ModCustomTrades.registerCustomTrades();
 		ModLootTableModifiers.modifyLootTables();
@@ -62,6 +64,7 @@ public class Steamcraft implements ModInitializer {
 
 		AxeBlockBreakHandler.register();
 		AxeBlockStripHandler.register();
+
 
 
 

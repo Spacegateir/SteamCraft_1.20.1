@@ -17,6 +17,7 @@ import net.spacegateir.steamcraft.item.armor.*;
 import net.spacegateir.steamcraft.item.custom.*;
 import net.spacegateir.steamcraft.TestTools.Tools.TestParticlesItem;
 import net.spacegateir.steamcraft.item.tools.*;
+import net.spacegateir.steamcraft.item.trinkets.item.AthleteShoesItem;
 
 import java.lang.reflect.Field;
 import java.util.EnumMap;
@@ -234,6 +235,12 @@ public class ModItems {
 
     public static final Item WINGED_SANDALS = registerItem("winged_sandals",
             new WingedSandalsCosmeticItem(ModArmorMaterials.UNBREAKING, ArmorItem.Type.BOOTS, new FabricItemSettings()));
+
+    //Trinkets
+
+    public static final Item ATHLETE_SHOES = registerItem("athlete_shoes",
+            new AthleteShoesItem(new FabricItemSettings().maxCount(1)));
+
 
 
     public static final Item TEST_ITEM_BLOCK = Registry.register(Registries.ITEM,

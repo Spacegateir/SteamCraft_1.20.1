@@ -44,6 +44,9 @@ public class ToDo {
     // TODO
 
     // make trinkets for every slot 10/13 slots (cant use gecko lib)
+        // running shoes
+        // crown (hero of the village)
+        // magic bag (new ender storage)
 
     // loot chests (unique) has (trinkets and artifacts "god sword")
 

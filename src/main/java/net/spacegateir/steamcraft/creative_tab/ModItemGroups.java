@@ -36,7 +36,8 @@ public class ModItemGroups {
 //                        entries.add(ModItems.EARTH_WALL_ITEM);
 //                        entries.add(ModItems.FARMLAND_ENRICHED_ITEM);
 
-//                        entries.add(ModItems.RUNNING_SHOES);
+                        entries.add(ModItems.ATHLETE_SHOES);
+
                         entries.add(ModItems.TROWEL);
                         entries.add(ModItems.PATTERN_RECOMPILER);
                         entries.add(ModItems.TRAP_CONCEALER);

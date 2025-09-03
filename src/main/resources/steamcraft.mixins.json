@@ -7,7 +7,11 @@
 		"CelestialArmorPlayerEntityMixin",
 		"ShieldPlayerEntityMixin",
 		"PlayerDamageMixin",
-		"SheepEntityMixin"
+		"SheepEntityMixin",
+
+		"trinkets.PlayerEntityAttributesMixin",
+		"trinkets.PlayerJumpMixin",
+		"trinkets.PlayerStepMixin"
 
 	],
 	"injectors": {

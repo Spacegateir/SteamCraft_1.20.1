@@ -6,6 +6,7 @@
   "item.steamcraft.gold_coin": "Gold Coin",
 
   "item.steamcraft.winged_sandals": "Winged Sandals",
+  "item.steamcraft.athlete_shoes": "Athlete Shoes",
 
   "item.steamcraft.blank_mould": "Blank Mould",
   "item.steamcraft.helmet_mould": "Helmet Mould",
@@ -853,6 +854,8 @@
 
 
 
+  "attribute.name.generic.movement_jump": "Jump Height",
+  "attribute.name.generic.movement_step": "Step Height",
 
   "effect.steamcraft.celestial_gearforged_effect": "Celestial Gearforged",
   "effect.steamcraft.sticky_feat": "Sticky Feat",

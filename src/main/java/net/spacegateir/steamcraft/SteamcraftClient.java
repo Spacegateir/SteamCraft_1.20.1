@@ -13,7 +13,10 @@ import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.client.ToolInputHandler;
 import net.spacegateir.steamcraft.event.renderers.SmokeBlockRenderer;
 import net.spacegateir.steamcraft.fluid.ModFluids;
+import net.spacegateir.steamcraft.item.ModItems;
 import net.spacegateir.steamcraft.item.armor.WingedSandalsCosmeticItem;
+import net.spacegateir.steamcraft.item.trinkets.renderer.AthleteShoesTrinketRenderer;
+import net.spacegateir.steamcraft.item.trinkets.renderer.TrinketRenderRegistry;
 import net.spacegateir.steamcraft.particle.EarthSpikeParticles;
 import net.spacegateir.steamcraft.particle.ModParticles;
 import net.spacegateir.steamcraft.util.ModClient;
@@ -448,8 +451,13 @@ public class SteamcraftClient implements ClientModInitializer {
             BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), ModFluids.STILL_DIVINITITE_ALLOY_LAVA, ModFluids.FLOWING_DIVINITITE_ALLOY_LAVA);
 
 
-        // Register the Trinket renderer ONCE here
-//        TrinketRendererRegistry.registerRenderer(ModItems.RUNNING_SHOES, new ShoesTrinketRenderer());
+        // Register the Trinket renderer and 3d model textures
+        TrinketRenderRegistry.register(ModItems.ATHLETE_SHOES, "textures/entity/athlete_shoes.png");
+        TrinketRendererRegistry.registerRenderer(ModItems.ATHLETE_SHOES, new AthleteShoesTrinketRenderer());
+
+
+
+
 
         // Tick handler only handles movement, NOT renderer registration
         ClientTickEvents.END_CLIENT_TICK.register(client -> {

@@ -17,7 +17,7 @@ public abstract class PlayerStepMixin {
                 .getAttributeValue(ModEntityAttributes.GENERIC_MOVEMENT_STEP);
 
         ((LivingEntity)(Object)this).setStepHeight(
-                ((PlayerEntity)(Object)this).isSneaking() ? 0.6F : 1.0F + (float) stepLevel
+                ((PlayerEntity)(Object)this).isSneaking() ? 0.6F : (float) stepLevel
         );
     }
 }

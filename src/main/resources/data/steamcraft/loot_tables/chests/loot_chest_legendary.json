@@ -363,12 +363,7 @@
           "functions": [
             { "function": "minecraft:enchant_with_levels", "levels": 30, "treasure": true }
           ]
-        }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
+        },
         {
           "type": "minecraft:item",
           "name": "minecraft:diamond_pickaxe",
@@ -376,7 +371,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Enchantments:[{id:\"minecraft:efficiency\",lvl:6s},{id:\"minecraft:unbreaking\",lvl:4s},{id:\"minecraft:fortune\",lvl:4s}]}"
+              "tag": "{display:{Name:'{\"text\":\"§3Steve\\'s Lost Pickaxe§r\",\"italic\":false}',Lore:['{\"text\":\"Some claim his tools still wander, seeking their master...\",\"color\":\"dark_gray\",\"italic\":true}']},Enchantments:[{id:\"minecraft:efficiency\",lvl:6s},{id:\"minecraft:unbreaking\",lvl:4s},{id:\"minecraft:fortune\",lvl:4s}]}"
             }
           ]
         },
@@ -387,7 +382,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Enchantments:[{id:\"minecraft:efficiency\",lvl:6s},{id:\"minecraft:unbreaking\",lvl:4s}]}"
+              "tag": "{display:{Name:'{\"text\":\"§3Steve\\'s Lost Shovel§r\",\"italic\":false}',Lore:['{\"text\":\"Legends say Steve dug too deep...\",\"color\":\"dark_gray\",\"italic\":true}']},Enchantments:[{id:\"minecraft:efficiency\",lvl:6s},{id:\"minecraft:unbreaking\",lvl:4s}]}"
             }
           ]
         },
@@ -398,7 +393,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Enchantments:[{id:\"minecraft:efficiency\",lvl:6s},{id:\"minecraft:unbreaking\",lvl:4s},{id:\"minecraft:sharpness\",lvl:5s},{id:\"minecraft:looting\",lvl:4s}]}"
+              "tag": "{display:{Name:'{\"text\":\"§3Steve\\'s Lost Axe§r\",\"italic\":false}',Lore:['{\"text\":\"Every strike echoes the memory of its fallen wielder...\",\"color\":\"dark_gray\",\"italic\":true}']},\nEnchantments:[{id:\"minecraft:efficiency\",lvl:6s},{id:\"minecraft:unbreaking\",lvl:4s},{id:\"minecraft:sharpness\",lvl:5s},{id:\"minecraft:looting\",lvl:4s}]}"
             }
           ]
         },
@@ -409,7 +404,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Enchantments:[{id:\"minecraft:efficiency\",lvl:6s},{id:\"minecraft:unbreaking\",lvl:4s},{id:\"minecraft:fortune\",lvl:4s}]}"
+              "tag": "{display:{Name:'{\"text\":\"§3Steve\\'s Lost Hoe§r\",\"italic\":false}',Lore:['{\"text\":\"Dust clings to the handle, untouched for ages...\",\"color\":\"dark_gray\",\"italic\":true}']},Enchantments:[{id:\"minecraft:efficiency\",lvl:6s},{id:\"minecraft:unbreaking\",lvl:4s},{id:\"minecraft:fortune\",lvl:4s}]}"
             }
           ]
         },
@@ -420,7 +415,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Enchantments:[{id:\"minecraft:power\",lvl:6s},{id:\"minecraft:unbreaking\",lvl:4s},{id:\"minecraft:infinity\",lvl:1s},{id:\"minecraft:mending\",lvl:1s},{id:\"minecraft:flame\",lvl:1s},{id:\"minecraft:punch\",lvl:3s}]}"
+              "tag": "{display:{Name:'{\"text\":\"§3Steve\\'s Lost Bow§r\",\"italic\":false}',Lore:['{\"text\":\"His tools surfaced… but Steve never did...\",\"color\":\"dark_gray\",\"italic\":true}']},Enchantments:[{id:\"minecraft:power\",lvl:6s},{id:\"minecraft:unbreaking\",lvl:4s},{id:\"minecraft:infinity\",lvl:1s},{id:\"minecraft:mending\",lvl:1s},{id:\"minecraft:flame\",lvl:1s},{id:\"minecraft:punch\",lvl:3s}]}"
             }
           ]
         },
@@ -431,7 +426,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Enchantments:[{id:\"minecraft:luck_of_the_sea\",lvl:4s},{id:\"minecraft:lure\",lvl:4s},{id:\"minecraft:unbreaking\",lvl:4s},{id:\"minecraft:mending\",lvl:1s}]}"
+              "tag": "{display:{Name:'{\"text\":\"§3Steve\\'s Lost Fishing Rod§r\",\"italic\":false}',Lore:['{\"text\":\"Etched with the silence of his last breath...\",\"color\":\"dark_gray\",\"italic\":true}']},\nEnchantments:[{id:\"minecraft:luck_of_the_sea\",lvl:4s},{id:\"minecraft:lure\",lvl:4s},{id:\"minecraft:unbreaking\",lvl:4s},{id:\"minecraft:mending\",lvl:1s}]}"
             }
           ]
         },
@@ -442,7 +437,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Enchantments:[{id:\"minecraft:sharpness\",lvl:5s},{id:\"minecraft:bane_of_arthropods\",lvl:5s},{id:\"minecraft:smite\",lvl:5s},{id:\"minecraft:sweeping_edge\",lvl:4s}]}"
+              "tag": "{display:{Name:'{\"text\":\"§3Steve\\'s Lost Sword§r\",\"italic\":false}',Lore:['{\"text\":\"The dungeon does not release what it consumes...\",\"color\":\"dark_gray\",\"italic\":true}']},\nEnchantments:[{id:\"minecraft:sharpness\",lvl:5s},{id:\"minecraft:bane_of_arthropods\",lvl:5s},{id:\"minecraft:smite\",lvl:5s},{id:\"minecraft:sweeping_edge\",lvl:4s}]}"
             }
           ]
         },
@@ -453,7 +448,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Enchantments:[{id:\"minecraft:protection\",lvl:5s},{id:\"minecraft:fire_protection\",lvl:5s},{id:\"minecraft:blast_protection\",lvl:5s},{id:\"minecraft:projectile_protection\",lvl:5s}]}"
+              "tag": "{display:{Name:'{\"text\":\"§3Steve\\'s Lost Helmet§r\",\"italic\":false}',Lore:['{\"text\":\"They say he mined a block that should’ve stayed buried...\",\"color\":\"dark_gray\",\"italic\":true}']},\nEnchantments:[{id:\"minecraft:protection\",lvl:5s},{id:\"minecraft:fire_protection\",lvl:5s},{id:\"minecraft:blast_protection\",lvl:5s},{id:\"minecraft:projectile_protection\",lvl:5s}]}"
 
             }
           ]
@@ -461,11 +456,11 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:diamond_chestplate",
-          "weight": 1,
+          "weight": 10,
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Enchantments:[{id:\"minecraft:protection\",lvl:5s},{id:\"minecraft:fire_protection\",lvl:5s},{id:\"minecraft:blast_protection\",lvl:5s},{id:\"minecraft:projectile_protection\",lvl:5s}]}"
+              "tag": "{display:{Name:'{\"text\":\"§3Steve\\'s Lost Chestplate§r\",\"italic\":false}',Lore:['{\"text\":\"Legends say Steve’s heart stopped beating beneath the earth...\",\"color\":\"dark_gray\",\"italic\":true}']},Enchantments:[{id:\"minecraft:protection\",lvl:5s},{id:\"minecraft:fire_protection\",lvl:5s},{id:\"minecraft:blast_protection\",lvl:5s},{id:\"minecraft:projectile_protection\",lvl:5s}]}"
 
             }
           ]
@@ -473,11 +468,11 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:diamond_leggings",
-          "weight": 1,
+          "weight": 10,
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Enchantments:[{id:\"minecraft:protection\",lvl:5s},{id:\"minecraft:fire_protection\",lvl:5s},{id:\"minecraft:blast_protection\",lvl:5s},{id:\"minecraft:projectile_protection\",lvl:5s}]}"
+              "tag": "{display:{Name:'{\"text\":\"§3Steve\\'s Lost Leggings§r\",\"italic\":false}',Lore:['{\"text\":\"Steve’s last steps are stitched into the seams...\",\"color\":\"dark_gray\",\"italic\":true}']},Enchantments:[{id:\"minecraft:protection\",lvl:5s},{id:\"minecraft:fire_protection\",lvl:5s},{id:\"minecraft:blast_protection\",lvl:5s},{id:\"minecraft:projectile_protection\",lvl:5s}]}"
 
             }
           ]
@@ -489,7 +484,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Enchantments:[{id:\"minecraft:protection\",lvl:5s},{id:\"minecraft:fire_protection\",lvl:5s},{id:\"minecraft:blast_protection\",lvl:5s},{id:\"minecraft:projectile_protection\",lvl:5s}]}"
+              "tag": "{display:{Name:'{\"text\":\"§3Steve\\'s Lost Boots§r\",\"italic\":false}',Lore:['{\"text\":\"The deeper Steve went, the less he was seen again...\",\"color\":\"dark_gray\",\"italic\":true}']},Enchantments:[{id:\"minecraft:protection\",lvl:5s},{id:\"minecraft:fire_protection\",lvl:5s},{id:\"minecraft:blast_protection\",lvl:5s},{id:\"minecraft:projectile_protection\",lvl:5s}]}"
 
             }
           ]

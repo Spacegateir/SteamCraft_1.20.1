@@ -39,12 +39,12 @@ public class ToDo {
     // on repairs after some times pases but if walked on again it disapears and you fall threw
 
 
-
+//----------------------------------------------------------------------------------------------------------------------
 
     // TODO
 
     // make trinkets for every slot 10/13 slots (cant use gecko lib)
-        // running shoes
+        // athlete shoes
         // crown (hero of the village)
         // magic bag (new ender storage)
 
@@ -58,11 +58,10 @@ public class ToDo {
     // clay turntable block machine so players can craft like the sawmill, but it has a craft timer like a furnace (clay to decoration blocks)
     // furnace to do the same as the clay turntable but with metals and moulds
 
-    // smoke block adjustable height
 
 
 
-//------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------
 
     // click CTRL + H
 
@@ -76,11 +75,13 @@ public class ToDo {
     //setblock ~ ~ ~ chest{LootTable:"steamcraft:chests/loot_chest_common"}
     //setblock ~ ~ ~ chest{LootTable:"steamcraft:chests/loot_chest_uncommon"}
     //setblock ~ ~ ~ chest{LootTable:"steamcraft:chests/loot_chest_rare"}
-    //setblock ~ ~ ~ chest{LootTable:"steamcraft:chests/loot_chest_legandary"}
-    //setblock ~ ~ ~ chest{LootTable:"steamcraft:chests/loot_chest_uniqe"}
+    //setblock ~ ~ ~ chest{LootTable:"steamcraft:chests/loot_chest_legendary"}
+    //setblock ~ ~ ~ chest{LootTable:"steamcraft:chests/loot_chest_unique"}
 
+    //give @p minecraft:suspicious_sand[minecraft:block_entity_data={id:"minecraft:brushable_block",LootTable:"minecraft:archaeology/desert_pyramid"}]
+    //give @p minecraft:suspicious_gravel[minecraft:block_entity_data={id:"minecraft:brushable_block",LootTable:"minecraft:archaeology/desert_pyramid"}]
 
-
+//----------------------------------------------------------------------------------------------------------------------
 
 
 //    PLAN A

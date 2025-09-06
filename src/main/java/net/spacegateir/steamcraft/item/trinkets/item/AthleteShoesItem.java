@@ -70,20 +70,4 @@ public class AthleteShoesItem extends TrinketItem {
 
         return modifiers;
     }
-
-//    @Override
-//    public void onEquip(ItemStack stack, SlotReference slot, LivingEntity entity) {
-//        if (entity instanceof PlayerEntity player) {
-//            player.setStepHeight(1.0F); // allow stepping up 1 block
-//        }
-//        super.onEquip(stack, slot, entity);
-//    }
-//
-//    @Override
-//    public void onUnequip(ItemStack stack, SlotReference slot, LivingEntity entity) {
-//        if (entity instanceof PlayerEntity player) {
-//            player.setStepHeight(0.6F); // reset to vanilla default
-//        }
-//        super.onUnequip(stack, slot, entity);
-//    }
 }

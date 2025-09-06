@@ -22,6 +22,7 @@ import net.spacegateir.steamcraft.item.trinkets.item.AthleteShoesItem;
 import java.lang.reflect.Field;
 import java.util.EnumMap;
 
+import static net.minecraft.util.Rarity.EPIC;
 import static net.minecraft.util.Rarity.RARE;
 import static net.spacegateir.steamcraft.block.ModBlocks.*;
 
@@ -239,7 +240,7 @@ public class ModItems {
     //Trinkets
 
     public static final Item ATHLETE_SHOES = registerItem("athlete_shoes",
-            new AthleteShoesItem(new FabricItemSettings().maxCount(1)));
+            new AthleteShoesItem(new FabricItemSettings().maxCount(1).rarity(EPIC)));
 
 
 

@@ -44,9 +44,14 @@ public class ToDo {
     // TODO
 
     // make trinkets for every slot 10/13 slots (cant use gecko lib)
-        // athlete shoes
         // crown (hero of the village)
         // magic bag (new ender storage)
+        // goggles (resistance against blindness)
+        // miners hat (that give increase to mining speed)
+        // back slot ( something that give slow falling)
+        // necklace (gives small health regen)
+        // quiver (gives user reduce bow draw time and knock back)
+        // anklet (something that dose damage similar to thorns)
 
     // loot chests (unique) has (trinkets and artifacts "god sword")
 

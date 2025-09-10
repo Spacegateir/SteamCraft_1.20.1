@@ -17,6 +17,11 @@ public class ModEntityAttributes {
             "generic.movement_step", new ClampedEntityAttribute("attribute.name.generic.movement_step",
                     0.0D, 0.0D,1024.0D).setTracked(true)
     );
+    public static final EntityAttribute GENERIC_VILLAGER_DISCOUNT = register(
+            "generic.villager_discount", new ClampedEntityAttribute("attribute.name.generic.villager_discount",
+                    0.0D, 0.0D,1024.0D).setTracked(true)
+    );
+
 
 
 
@@ -25,6 +30,7 @@ public class ModEntityAttributes {
     public static void addPlayerAttributes(DefaultAttributeContainer.Builder builder) {
         builder.add(GENERIC_MOVEMENT_JUMP, 0.0D);
         builder.add(GENERIC_MOVEMENT_STEP, 0.0D);
+        builder.add(GENERIC_VILLAGER_DISCOUNT, 0.0D);
     }
 
     private static EntityAttribute register(String id, EntityAttribute attribute) {

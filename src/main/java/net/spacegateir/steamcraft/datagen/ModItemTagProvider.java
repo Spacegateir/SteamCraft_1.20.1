@@ -62,6 +62,11 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                     net.minecraft.registry.Registries.ITEM.getKey(),
                     new Identifier("steamcraft", "natural")
             );
+
+            public static final TagKey<Item> TRINKETS = TagKey.of(
+                    net.minecraft.registry.Registries.ITEM.getKey(),
+                    new Identifier("steamcraft", "trinkets")
+            );
         }
     }
 
@@ -153,6 +158,10 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.ANCIENT_MOIST_CLAY)
                 .add(ModItems.ANCIENT_CLAY_ITEM)
                 .add(ModItems.ANCIENT_MOIST_CLAY_ITEM);
+
+        getOrCreateTagBuilder(ModTags.Items.TRINKETS)
+                .add(ModItems.ATHLETE_SHOES)
+                .add(ModItems.CROWN_OF_FATE);
 
 
         // Dynamic seed tag registration

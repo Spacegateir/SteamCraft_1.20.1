@@ -37,6 +37,8 @@ public class ModItemGroups {
 //                        entries.add(ModItems.FARMLAND_ENRICHED_ITEM);
 
                         entries.add(ModItems.ATHLETE_SHOES);
+                        entries.add(ModItems.CROWN_OF_FATE);
+                        entries.add(ModItems.CROWN_OF_FATE_ITEM);
 
                         entries.add(ModItems.TROWEL);
                         entries.add(ModItems.PATTERN_RECOMPILER);

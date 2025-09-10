@@ -738,6 +738,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.PAN,
                         ModBlocks.POT,
 
+                        ModBlocks.CROWN_OF_FATE_BLOCK,
+
                         ModBlocks.PACKED_ICE_BRICKS,
                         ModBlocks.PACKED_ICE_BRICKS_CRACKED,
                         ModBlocks.PACKED_ICE_TILES,

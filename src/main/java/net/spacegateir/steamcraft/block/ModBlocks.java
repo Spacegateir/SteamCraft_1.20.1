@@ -1717,6 +1717,10 @@ public class ModBlocks {
                     .allowsSpawning(Blocks::never)
                     .ticksRandomly(), MineralType.GEM));
 
+    public static final Block CROWN_OF_FATE_BLOCK = registerBlock("crown_of_fate_block",
+            new CrownOfFateBlock(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK).nonOpaque().strength(0.5F)));
+
+
 
 
 

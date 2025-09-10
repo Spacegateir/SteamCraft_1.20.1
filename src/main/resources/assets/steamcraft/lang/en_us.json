@@ -7,6 +7,8 @@
 
   "item.steamcraft.winged_sandals": "Winged Sandals",
   "item.steamcraft.athlete_shoes": "Athlete Shoes",
+  "item.steamcraft.crown_of_fate": "Crown of Fate",
+  "block.steamcraft.crown_of_fate_block": "Crown of Fate",
 
   "item.steamcraft.blank_mould": "Blank Mould",
   "item.steamcraft.helmet_mould": "Helmet Mould",
@@ -856,6 +858,7 @@
 
   "attribute.name.generic.movement_jump": "Jump Height",
   "attribute.name.generic.movement_step": "Step Height",
+  "attribute.name.generic.villager_discount": "Villager Discount",
 
   "effect.steamcraft.celestial_gearforged_effect": "Celestial Gearforged",
   "effect.steamcraft.sticky_feat": "Sticky Feat",

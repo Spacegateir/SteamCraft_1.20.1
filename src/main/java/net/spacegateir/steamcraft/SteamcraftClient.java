@@ -16,6 +16,7 @@ import net.spacegateir.steamcraft.fluid.ModFluids;
 import net.spacegateir.steamcraft.item.ModItems;
 import net.spacegateir.steamcraft.item.armor.WingedSandalsCosmeticItem;
 import net.spacegateir.steamcraft.item.trinkets.renderer.AthleteShoesTrinketRenderer;
+import net.spacegateir.steamcraft.item.trinkets.renderer.CrownOfFateTrinketRenderer;
 import net.spacegateir.steamcraft.item.trinkets.renderer.TrinketRenderRegistry;
 import net.spacegateir.steamcraft.particle.EarthSpikeParticles;
 import net.spacegateir.steamcraft.particle.ModParticles;
@@ -450,10 +451,13 @@ public class SteamcraftClient implements ClientModInitializer {
             BlockRenderLayerMap.INSTANCE.putBlock(ModFluids.DIVINITITE_ALLOY_LAVA_BLOCK, RenderLayer.getTranslucent());
             BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), ModFluids.STILL_DIVINITITE_ALLOY_LAVA, ModFluids.FLOWING_DIVINITITE_ALLOY_LAVA);
 
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CROWN_OF_FATE_BLOCK, RenderLayer.getCutout());
 
         // Register the Trinket renderer and 3d model textures
         TrinketRenderRegistry.register(ModItems.ATHLETE_SHOES, "textures/entity/athlete_shoes.png");
         TrinketRendererRegistry.registerRenderer(ModItems.ATHLETE_SHOES, new AthleteShoesTrinketRenderer());
+        TrinketRenderRegistry.register(ModItems.CROWN_OF_FATE, "textures/entity/crown_of_fate.png");
+        TrinketRendererRegistry.registerRenderer(ModItems.CROWN_OF_FATE, new CrownOfFateTrinketRenderer());
 
 
 

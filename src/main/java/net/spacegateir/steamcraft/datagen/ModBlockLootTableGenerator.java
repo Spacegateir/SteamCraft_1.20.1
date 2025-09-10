@@ -2,7 +2,6 @@ package net.spacegateir.steamcraft.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
-import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.Item;
@@ -10,7 +9,6 @@ import net.minecraft.item.ItemConvertible;
 import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
 import net.minecraft.loot.condition.LootCondition;
 import net.minecraft.loot.entry.ItemEntry;
-import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.predicate.NumberRange;
 import net.minecraft.predicate.StatePredicate;
 import net.spacegateir.steamcraft.block.ModBlocks;
@@ -706,8 +704,6 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.GLIMMERSTONE_PILLAR_BLOCK);
         addDrop(ModBlocks.GLIMMERSTONE_ENGRAVED_BLOCK);
 
-
-
         addDrop(ModBlocks.FARMLAND_ENRICHED_BLOCK,
                 dropsWithSilkTouch(Blocks.DIRT, ItemEntry.builder(Blocks.DIRT)));
 
@@ -723,6 +719,9 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.COPPER_TROPHY_BLOCK);
         addDrop(ModBlocks.SILVER_TROPHY_BLOCK);
         addDrop(ModBlocks.GOLD_TROPHY_BLOCK);
+
+        addDrop(ModBlocks.CROWN_OF_FATE_BLOCK,
+                dropsWithSilkTouch(ModBlocks.CROWN_OF_FATE_BLOCK, ItemEntry.builder(ModItems.CROWN_OF_FATE)));
 
     }
 

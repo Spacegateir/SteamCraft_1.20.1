@@ -18,6 +18,7 @@ import net.spacegateir.steamcraft.item.custom.*;
 import net.spacegateir.steamcraft.TestTools.Tools.TestParticlesItem;
 import net.spacegateir.steamcraft.item.tools.*;
 import net.spacegateir.steamcraft.item.trinkets.item.AthleteShoesItem;
+import net.spacegateir.steamcraft.item.trinkets.item.CrownOfFateItem;
 
 import java.lang.reflect.Field;
 import java.util.EnumMap;
@@ -242,6 +243,11 @@ public class ModItems {
     public static final Item ATHLETE_SHOES = registerItem("athlete_shoes",
             new AthleteShoesItem(new FabricItemSettings().maxCount(1).rarity(EPIC)));
 
+    public static final Item CROWN_OF_FATE = registerItem("crown_of_fate",
+            new CrownOfFateItem(new FabricItemSettings().maxCount(1).rarity(EPIC)));
+    public static final Item CROWN_OF_FATE_ITEM = Registry.register(Registries.ITEM,
+            new Identifier(Steamcraft.MOD_ID, "crown_of_fate_item"),
+            new BlockItem(ModBlocks.CROWN_OF_FATE_BLOCK, new FabricItemSettings().rarity(EPIC)));
 
 
     public static final Item TEST_ITEM_BLOCK = Registry.register(Registries.ITEM,

@@ -1,4 +1,4 @@
-package net.spacegateir.steamcraft.item.trinkets.renderer;
+package net.spacegateir.steamcraft.item.trinkets.renderer_handlers;
 
 import net.minecraft.util.Identifier;
 import net.minecraft.item.Item;

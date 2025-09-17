@@ -43,8 +43,9 @@ public class ToDo {
 
     // TODO
 
+    // ERROR THE BUG THAT DELEATS THE MAGIC BAG INVENTORY WHEN THE GAME IS REBOOTED (test on a server the player id changes every reboot on dev server)
+
     // make trinkets for every slot 10/13 slots (cant use gecko lib)
-        // crown (hero of the village)
         // magic bag (new ender storage)
         // goggles (resistance against blindness)
         // miners hat (that give increase to mining speed)
@@ -52,6 +53,8 @@ public class ToDo {
         // necklace (gives small health regen)
         // quiver (gives user reduce bow draw time and knock back)
         // anklet (something that dose damage similar to thorns)
+
+        // Rings of power (has abilities to repel specific mobs, has buffs) (only need 1 render and a png for each ring making the others invisible)
 
     // loot chests (unique) has (trinkets and artifacts "god sword")
 
@@ -67,6 +70,10 @@ public class ToDo {
 
 
 //----------------------------------------------------------------------------------------------------------------------
+
+    // TODO
+    // FIXME
+    // ERROR Settings → Editor → TODO → + Add Pattern (to create or change colours on text)
 
     // click CTRL + H
 

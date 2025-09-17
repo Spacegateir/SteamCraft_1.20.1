@@ -38,7 +38,8 @@ public class ModItemGroups {
 
                         entries.add(ModItems.ATHLETE_SHOES);
                         entries.add(ModItems.CROWN_OF_FATE);
-                        entries.add(ModItems.CROWN_OF_FATE_ITEM);
+//                        entries.add(ModItems.CROWN_OF_FATE_ITEM);
+                        entries.add(ModItems.MAGIC_BAG);
 
                         entries.add(ModItems.TROWEL);
                         entries.add(ModItems.PATTERN_RECOMPILER);

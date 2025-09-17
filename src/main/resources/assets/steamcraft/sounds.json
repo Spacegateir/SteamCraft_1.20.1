@@ -1,0 +1,20 @@
+{
+  "zipper": {
+    "subtitle": "sounds.steamcraft.zipper",
+    "sounds": [
+      "steamcraft:zipper"
+    ]
+  },
+  "zipper_fast": {
+    "subtitle": "sounds.steamcraft.zipper_fast",
+    "sounds": [
+      "steamcraft:zipper_fast"
+    ]
+  },
+  "zipper_slow": {
+    "subtitle": "sounds.steamcraft.zipper_slow",
+    "sounds": [
+      "steamcraft:zipper_slow"
+    ]
+  }
+}

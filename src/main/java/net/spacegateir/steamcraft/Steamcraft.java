@@ -2,6 +2,7 @@ package net.spacegateir.steamcraft;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.spacegateir.steamcraft.block.ModBlockEntities;
 import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.creative_tab.ModItemGroups;
@@ -12,10 +13,12 @@ import net.spacegateir.steamcraft.event.AxeBlockStripHandler;
 import net.spacegateir.steamcraft.fluid.ModFluids;
 import net.spacegateir.steamcraft.item.ModItems;
 import net.spacegateir.steamcraft.item.ModRewardItems;
+import net.spacegateir.steamcraft.item.trinkets.item.MagicBagItem;
 import net.spacegateir.steamcraft.network.ModPackets;
 import net.spacegateir.steamcraft.network.ModServerPackets;
 import net.spacegateir.steamcraft.particle.ModParticles;
 import net.spacegateir.steamcraft.potion.ModPotions;
+import net.spacegateir.steamcraft.sound.ModSounds;
 import net.spacegateir.steamcraft.util.*;
 import net.spacegateir.steamcraft.world.gen.ModWorldGeneration;
 import org.slf4j.Logger;
@@ -36,6 +39,7 @@ public class Steamcraft implements ModInitializer {
 		ModItems.registerModItems();
 		ModFluids.registerFluids();
 		ModRewardItems.registerModRewardItems();
+		ModSounds.registerSounds();
 
 		ModBlockEntities.registerAll();
 
@@ -65,13 +69,9 @@ public class Steamcraft implements ModInitializer {
 		AxeBlockBreakHandler.register();
 		AxeBlockStripHandler.register();
 
-
-
-
-
-
-
-
+		ServerPlayNetworking.registerGlobalReceiver(MagicBagItem.OPEN_PACKET_ID, (server, player, handler, buf, responseSender) -> {
+			server.execute(() -> MagicBagItem.openBag(player));
+		});
 
 
 

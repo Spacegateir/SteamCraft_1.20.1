@@ -44,13 +44,13 @@ public class AthleteShoesItem extends TrinketItem {
                     )
             );
 
-            // +2 jump Height
+            // +3 jump Height
             modifiers.put(
                     ModEntityAttributes.GENERIC_MOVEMENT_JUMP,
                     new EntityAttributeModifier(
                             JUMP_BOOST_UUID,
                             "Running Shoes jump boost",
-                            2.0,
+                            3.0,
                             EntityAttributeModifier.Operation.ADDITION
                     )
             );

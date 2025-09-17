@@ -1,4 +1,4 @@
-package net.spacegateir.steamcraft.item.trinkets.renderer;
+package net.spacegateir.steamcraft.item.trinkets.renderer_handlers;
 
 import dev.emi.trinkets.api.SlotReference;
 import dev.emi.trinkets.api.client.TrinketRenderer;
@@ -14,7 +14,7 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
-import net.spacegateir.steamcraft.item.trinkets.renderer.TrinketRenderRegistry.TrinketRenderData;
+import net.spacegateir.steamcraft.item.trinkets.renderer_handlers.TrinketRenderRegistry.TrinketRenderData;
 
 public class CrownOfFateTrinketRenderer implements TrinketRenderer {
 

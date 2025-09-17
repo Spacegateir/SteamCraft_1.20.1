@@ -9,6 +9,7 @@
   "item.steamcraft.athlete_shoes": "Athlete Shoes",
   "item.steamcraft.crown_of_fate": "Crown of Fate",
   "block.steamcraft.crown_of_fate_block": "Crown of Fate",
+  "item.steamcraft.magic_bag": "Magic Bag",
 
   "item.steamcraft.blank_mould": "Blank Mould",
   "item.steamcraft.helmet_mould": "Helmet Mould",
@@ -854,7 +855,10 @@
 
 
 
+  "container.magic_bag": "Magic Bag",
 
+  "category.steamcraft": "SteamCraft",
+  "key.steamcraft.magic_bag": "Magic Bag",
 
   "attribute.name.generic.movement_jump": "Jump Height",
   "attribute.name.generic.movement_step": "Step Height",
@@ -960,6 +964,9 @@
   "tooltip.steamcraft.trowel.tooltip.shift_1": "§eRight Click§r on some block will make some Fancy Pathways",
   "tooltip.steamcraft.trowel.tooltip": "Press §eSHIFT§r for more Information",
 
+  "sounds.steamcraft.zipper": "zipper",
+  "sounds.steamcraft.zipper_fast": "zipper Fast",
+  "sounds.steamcraft.zipper_slow": "zipper Slow",
 
   "block.customportalapi.customportalblock": "SteamCraft Dimensions"
 

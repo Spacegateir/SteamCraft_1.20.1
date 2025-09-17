@@ -11,6 +11,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.Util;
 import net.spacegateir.steamcraft.Steamcraft;
+import net.spacegateir.steamcraft.TestTools.Tools.TestsoundItem;
 import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.fluid.ModFluids;
 import net.spacegateir.steamcraft.item.armor.*;
@@ -19,6 +20,7 @@ import net.spacegateir.steamcraft.TestTools.Tools.TestParticlesItem;
 import net.spacegateir.steamcraft.item.tools.*;
 import net.spacegateir.steamcraft.item.trinkets.item.AthleteShoesItem;
 import net.spacegateir.steamcraft.item.trinkets.item.CrownOfFateItem;
+import net.spacegateir.steamcraft.item.trinkets.item.MagicBagItem;
 
 import java.lang.reflect.Field;
 import java.util.EnumMap;
@@ -52,7 +54,7 @@ public class ModItems {
     });
 
     public static final Item TEST_ITEM = registerItem("test_item",
-            new TestParticlesItem(new FabricItemSettings()));
+            new TestsoundItem(new FabricItemSettings()));
 
     public static final Item COPPER_COIN = registerItem("copper_coin",
             new GlintItem(new FabricItemSettings().rarity(Rarity.UNCOMMON)));
@@ -248,6 +250,9 @@ public class ModItems {
     public static final Item CROWN_OF_FATE_ITEM = Registry.register(Registries.ITEM,
             new Identifier(Steamcraft.MOD_ID, "crown_of_fate_item"),
             new BlockItem(ModBlocks.CROWN_OF_FATE_BLOCK, new FabricItemSettings().rarity(EPIC)));
+
+    public static final Item MAGIC_BAG = registerItem("magic_bag",
+            new MagicBagItem(new FabricItemSettings().maxCount(1).rarity(EPIC)));
 
 
     public static final Item TEST_ITEM_BLOCK = Registry.register(Registries.ITEM,

@@ -10,14 +10,14 @@ import net.minecraft.client.render.RenderLayer;
 import net.minecraft.item.ItemStack;
 import net.spacegateir.steamcraft.block.ModBlockEntities;
 import net.spacegateir.steamcraft.block.ModBlocks;
+import net.spacegateir.steamcraft.client.Keybinds;
+import net.spacegateir.steamcraft.client.MagicBagKeyHandler;
 import net.spacegateir.steamcraft.client.ToolInputHandler;
 import net.spacegateir.steamcraft.event.renderers.SmokeBlockRenderer;
 import net.spacegateir.steamcraft.fluid.ModFluids;
 import net.spacegateir.steamcraft.item.ModItems;
 import net.spacegateir.steamcraft.item.armor.WingedSandalsCosmeticItem;
-import net.spacegateir.steamcraft.item.trinkets.renderer.AthleteShoesTrinketRenderer;
-import net.spacegateir.steamcraft.item.trinkets.renderer.CrownOfFateTrinketRenderer;
-import net.spacegateir.steamcraft.item.trinkets.renderer.TrinketRenderRegistry;
+import net.spacegateir.steamcraft.item.trinkets.renderer_handlers.*;
 import net.spacegateir.steamcraft.particle.EarthSpikeParticles;
 import net.spacegateir.steamcraft.particle.ModParticles;
 import net.spacegateir.steamcraft.util.ModClient;
@@ -30,6 +30,10 @@ public class SteamcraftClient implements ClientModInitializer {
         ModClient.registerFluidRenderers();
         ModModelPredicateProviderRegistry.registerModelPredicates();
         ToolInputHandler.register();
+
+        Keybinds.registerKeybinds();
+        MagicBagKeyHandler.register();
+
 
         BlockEntityRendererRegistry.register(ModBlockEntities.SMOKE_BLOCK_ENTITY, SmokeBlockRenderer::new);
 
@@ -458,6 +462,8 @@ public class SteamcraftClient implements ClientModInitializer {
         TrinketRendererRegistry.registerRenderer(ModItems.ATHLETE_SHOES, new AthleteShoesTrinketRenderer());
         TrinketRenderRegistry.register(ModItems.CROWN_OF_FATE, "textures/entity/crown_of_fate.png");
         TrinketRendererRegistry.registerRenderer(ModItems.CROWN_OF_FATE, new CrownOfFateTrinketRenderer());
+        TrinketRenderRegistry.register(ModItems.MAGIC_BAG, "textures/entity/magic_bag.png");
+        TrinketRendererRegistry.registerRenderer(ModItems.MAGIC_BAG, new MagicBagTrinketRenderer());
 
 
 

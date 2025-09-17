@@ -2,8 +2,8 @@ package net.spacegateir.steamcraft.mixin.trinkets;
 
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.world.World;
 import net.spacegateir.steamcraft.util.ModEntityAttributes;
 import org.spongepowered.asm.mixin.Mixin;
@@ -18,29 +18,36 @@ public abstract class PlayerJumpMixin extends LivingEntity {
         super(entityType, world);
     }
 
-    @Inject(method = "jump", at = @At("HEAD"), cancellable = true)
-    private void modifyJumpHeight(CallbackInfo ci) {
+    @Inject(method = "jump", at = @At("TAIL"))
+    private void addExtraJumpHeight(CallbackInfo ci) {
         if (this.isSneaking()) {
             return;
         }
 
-        double jumpStrength = this.getAttributeValue(ModEntityAttributes.GENERIC_MOVEMENT_JUMP);
+        double levels = this.getAttributeValue(ModEntityAttributes.GENERIC_MOVEMENT_JUMP);
 
-        // Add Jump Boost potion if present
-        int jumpBoost = this.hasStatusEffect(StatusEffects.JUMP_BOOST)
-                ? this.getStatusEffect(StatusEffects.JUMP_BOOST).getAmplifier() + 1
-                : 0;
+        if (levels > 0) {
+            int jumpBoost = this.hasStatusEffect(StatusEffects.JUMP_BOOST)
+                    ? this.getStatusEffect(StatusEffects.JUMP_BOOST).getAmplifier() + 1
+                    : 0;
 
-        // Each jump boost level = +1 block
-        double totalHeight = jumpStrength + jumpBoost;
+            double totalExtraBlocks = levels + jumpBoost;
 
-        // Convert blocks to Y velocity
-        double jumpVelocity = Math.sqrt(2 * 0.08 * totalHeight) * 1.05;
+            double currentVelocity = this.getVelocity().y;
 
-        this.setVelocity(this.getVelocity().x, jumpVelocity, this.getVelocity().z);
-        this.velocityDirty = true;
+            double extraVelocity = Math.sqrt(2 * 0.1 * totalExtraBlocks) - currentVelocity;
 
-        ci.cancel(); // cancel vanilla jump
+            this.setVelocity(
+                    this.getVelocity().x,
+                    currentVelocity + extraVelocity,
+                    this.getVelocity().z
+            );
+            this.velocityDirty = true;
+        }
     }
-}
 
+
+
+
+
+}

@@ -1,0 +1,14 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "steamcraft:item/magic_bag_closed"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "open": 1
+      },
+      "model": "steamcraft:item/magic_bag_open"
+    }
+  ]
+}

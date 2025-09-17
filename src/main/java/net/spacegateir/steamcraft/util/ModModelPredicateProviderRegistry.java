@@ -14,6 +14,7 @@ public class ModModelPredicateProviderRegistry {
 
         registerCustomShield(ModItems.FOOLS_GOLD_SHIELD);
         registerCustomShield(ModItems.CELESTIAL_GEARFORGED_SHIELD);
+        registerCustomBag(ModItems.MAGIC_BAG);
     }
 
     private static void registerCustomShield(Item item) {
@@ -24,4 +25,14 @@ public class ModModelPredicateProviderRegistry {
                         entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0F : 0.0F
         );
     }
+
+    private static void registerCustomBag(Item item) {
+        ModelPredicateProviderRegistry.register(
+                item,
+                new Identifier("open"),
+                (stack, world, entity, seed) ->
+                        stack.hasNbt() && stack.getNbt().getBoolean("Open") ? 1.0f : 0.0f
+        );
+    }
+
 }

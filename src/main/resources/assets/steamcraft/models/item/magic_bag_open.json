@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "steamcraft:item/magic_bag_open"
+  }
+}

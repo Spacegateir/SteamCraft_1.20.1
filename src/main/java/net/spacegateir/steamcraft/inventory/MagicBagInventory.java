@@ -7,41 +7,35 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtList;
 
 public class MagicBagInventory extends SimpleInventory {
-
     public MagicBagInventory() {
-        super(54);
+        super(54); // 9x6 slots
     }
 
-    @Override
-    public int getMaxCountPerStack() {
-        return 64;
-    }
-
-    public void readNbtList(NbtList nbtList) {
-        for (int i = 0; i < this.size(); ++i) {
+    public void readNbtList(NbtList list) {
+        for (int i = 0; i < this.size(); i++) {
             this.setStack(i, ItemStack.EMPTY);
         }
-        for (int i = 0; i < nbtList.size(); ++i) {
-            NbtCompound nbtCompound = nbtList.getCompound(i);
-            int slot = nbtCompound.getByte("Slot") & 255;
+        for (int i = 0; i < list.size(); i++) {
+            NbtCompound tag = list.getCompound(i);
+            int slot = tag.getByte("Slot") & 255;
             if (slot >= 0 && slot < this.size()) {
-                this.setStack(slot, ItemStack.fromNbt(nbtCompound));
+                this.setStack(slot, ItemStack.fromNbt(tag));
             }
         }
     }
 
     public NbtList toNbtList() {
-        NbtList nbtList = new NbtList();
-        for (int i = 0; i < this.size(); ++i) {
+        NbtList list = new NbtList();
+        for (int i = 0; i < this.size(); i++) {
             ItemStack stack = this.getStack(i);
             if (!stack.isEmpty()) {
-                NbtCompound nbt = new NbtCompound();
-                nbt.putByte("Slot", (byte) i);
-                stack.writeNbt(nbt);
-                nbtList.add(nbt);
+                NbtCompound tag = new NbtCompound();
+                tag.putByte("Slot", (byte)i);
+                stack.writeNbt(tag);
+                list.add(tag);
             }
         }
-        return nbtList;
+        return list;
     }
 
     @Override

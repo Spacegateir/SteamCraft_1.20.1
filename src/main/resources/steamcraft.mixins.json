@@ -12,7 +12,8 @@
 		"trinkets.PlayerEntityAttributesMixin",
 		"trinkets.PlayerJumpMixin",
 		"trinkets.PlayerStepMixin",
-		"trinkets.TradeOfferMixin"
+		"trinkets.TradeOfferMixin",
+		"trinkets.PlayerMagicBagMixin"
 
 	],
 	"injectors": {

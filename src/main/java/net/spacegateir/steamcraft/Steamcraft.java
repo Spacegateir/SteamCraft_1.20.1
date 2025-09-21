@@ -14,6 +14,7 @@ import net.spacegateir.steamcraft.fluid.ModFluids;
 import net.spacegateir.steamcraft.item.ModItems;
 import net.spacegateir.steamcraft.item.ModRewardItems;
 import net.spacegateir.steamcraft.item.trinkets.item.MagicBagItem;
+import net.spacegateir.steamcraft.util.ModEvents;
 import net.spacegateir.steamcraft.network.ModPackets;
 import net.spacegateir.steamcraft.network.ModServerPackets;
 import net.spacegateir.steamcraft.particle.ModParticles;
@@ -42,6 +43,8 @@ public class Steamcraft implements ModInitializer {
 		ModSounds.registerSounds();
 
 		ModBlockEntities.registerAll();
+
+		ModEvents.register();
 
 		ModItemGroups.registerItemGroups();
 		ModItemRewardsGroups.registerItemGroups();

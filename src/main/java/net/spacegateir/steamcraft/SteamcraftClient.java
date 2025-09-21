@@ -465,6 +465,25 @@ public class SteamcraftClient implements ClientModInitializer {
         TrinketRenderRegistry.register(ModItems.MAGIC_BAG, "textures/entity/magic_bag.png");
         TrinketRendererRegistry.registerRenderer(ModItems.MAGIC_BAG, new MagicBagTrinketRenderer());
 
+        TrinketRenderRegistry.register(ModItems.BRACELET, "textures/entity/bracelet.png");
+        TrinketRendererRegistry.registerRenderer(ModItems.BRACELET, new BraceletTrinketRenderer());
+        TrinketRenderRegistry.register(ModItems.BRACELET_DIAMOND, "textures/entity/bracelet_diamond.png");
+        TrinketRendererRegistry.registerRenderer(ModItems.BRACELET_DIAMOND, new BraceletTrinketRenderer());
+        TrinketRenderRegistry.register(ModItems.BRACELET_EMERALD, "textures/entity/bracelet_emerald.png");
+        TrinketRendererRegistry.registerRenderer(ModItems.BRACELET_EMERALD, new BraceletTrinketRenderer());
+        TrinketRenderRegistry.register(ModItems.BRACELET_AMETHYST, "textures/entity/bracelet_amethyst.png");
+        TrinketRendererRegistry.registerRenderer(ModItems.BRACELET_AMETHYST, new BraceletTrinketRenderer());
+        TrinketRenderRegistry.register(ModItems.BRACELET_RUBY, "textures/entity/bracelet_ruby.png");
+        TrinketRendererRegistry.registerRenderer(ModItems.BRACELET_RUBY, new BraceletTrinketRenderer());
+        TrinketRenderRegistry.register(ModItems.BRACELET_SAPPHIRE, "textures/entity/bracelet_sapphire.png");
+        TrinketRendererRegistry.registerRenderer(ModItems.BRACELET_SAPPHIRE, new BraceletTrinketRenderer());
+        TrinketRenderRegistry.register(ModItems.BRACELET_ONYX, "textures/entity/bracelet_onyx.png");
+        TrinketRendererRegistry.registerRenderer(ModItems.BRACELET_ONYX, new BraceletTrinketRenderer());
+        TrinketRenderRegistry.register(ModItems.BRACELET_JADE, "textures/entity/bracelet_jade.png");
+        TrinketRendererRegistry.registerRenderer(ModItems.BRACELET_JADE, new BraceletTrinketRenderer());
+        TrinketRenderRegistry.register(ModItems.BRACELET_TOPAZ, "textures/entity/bracelet_topaz.png");
+        TrinketRendererRegistry.registerRenderer(ModItems.BRACELET_TOPAZ, new BraceletTrinketRenderer());
+
 
 
 

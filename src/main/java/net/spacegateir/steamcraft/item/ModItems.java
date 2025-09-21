@@ -19,6 +19,7 @@ import net.spacegateir.steamcraft.item.custom.*;
 import net.spacegateir.steamcraft.TestTools.Tools.TestParticlesItem;
 import net.spacegateir.steamcraft.item.tools.*;
 import net.spacegateir.steamcraft.item.trinkets.item.AthleteShoesItem;
+import net.spacegateir.steamcraft.item.trinkets.item.BraceletTrinketItem;
 import net.spacegateir.steamcraft.item.trinkets.item.CrownOfFateItem;
 import net.spacegateir.steamcraft.item.trinkets.item.MagicBagItem;
 
@@ -253,6 +254,25 @@ public class ModItems {
 
     public static final Item MAGIC_BAG = registerItem("magic_bag",
             new MagicBagItem(new FabricItemSettings().maxCount(1).rarity(EPIC)));
+
+    public static final Item BRACELET = registerItem("bracelet",
+            new Item(new FabricItemSettings().maxCount(1).rarity(EPIC)));
+    public static final Item BRACELET_DIAMOND = registerItem("bracelet_diamond",
+            new BraceletTrinketItem(new FabricItemSettings().maxCount(1).rarity(EPIC)));
+    public static final Item BRACELET_EMERALD = registerItem("bracelet_emerald",
+            new BraceletTrinketItem(new FabricItemSettings().maxCount(1).rarity(EPIC)));
+    public static final Item BRACELET_AMETHYST = registerItem("bracelet_amethyst",
+            new BraceletTrinketItem(new FabricItemSettings().maxCount(1).rarity(EPIC)));
+    public static final Item BRACELET_RUBY = registerItem("bracelet_ruby",
+            new BraceletTrinketItem(new FabricItemSettings().maxCount(1).rarity(EPIC)));
+    public static final Item BRACELET_SAPPHIRE = registerItem("bracelet_sapphire",
+            new BraceletTrinketItem(new FabricItemSettings().maxCount(1).rarity(EPIC)));
+    public static final Item BRACELET_ONYX = registerItem("bracelet_onyx",
+            new BraceletTrinketItem(new FabricItemSettings().maxCount(1).rarity(EPIC)));
+    public static final Item BRACELET_JADE = registerItem("bracelet_jade",
+            new BraceletTrinketItem(new FabricItemSettings().maxCount(1).rarity(EPIC)));
+    public static final Item BRACELET_TOPAZ = registerItem("bracelet_topaz",
+            new BraceletTrinketItem(new FabricItemSettings().maxCount(1).rarity(EPIC)));
 
 
     public static final Item TEST_ITEM_BLOCK = Registry.register(Registries.ITEM,

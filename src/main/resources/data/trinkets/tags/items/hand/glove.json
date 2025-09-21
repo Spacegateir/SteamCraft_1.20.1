@@ -1,5 +1,14 @@
 {
   "replace": false,
   "values": [
+    "steamcraft:bracelet",
+    "steamcraft:bracelet_diamond",
+    "steamcraft:bracelet_emerald",
+    "steamcraft:bracelet_amethyst",
+    "steamcraft:bracelet_ruby",
+    "steamcraft:bracelet_sapphire",
+    "steamcraft:bracelet_onyx",
+    "steamcraft:bracelet_jade",
+    "steamcraft:bracelet_topaz"
   ]
 }

@@ -36,11 +36,6 @@ public class ModItemGroups {
 //                        entries.add(ModItems.EARTH_WALL_ITEM);
 //                        entries.add(ModItems.FARMLAND_ENRICHED_ITEM);
 
-                        entries.add(ModItems.ATHLETE_SHOES);
-                        entries.add(ModItems.CROWN_OF_FATE);
-//                        entries.add(ModItems.CROWN_OF_FATE_ITEM);
-                        entries.add(ModItems.MAGIC_BAG);
-
                         entries.add(ModItems.TROWEL);
                         entries.add(ModItems.PATTERN_RECOMPILER);
                         entries.add(ModItems.TRAP_CONCEALER);
@@ -75,6 +70,20 @@ public class ModItemGroups {
                         entries.add(ModItems.BUCKET_MOULD);
 
                         entries.add(ModItems.WINGED_SANDALS);
+                        entries.add(ModItems.ATHLETE_SHOES);
+                        entries.add(ModItems.CROWN_OF_FATE);
+//                        entries.add(ModItems.CROWN_OF_FATE_ITEM);
+                        entries.add(ModItems.MAGIC_BAG);
+
+                        entries.add(ModItems.BRACELET);
+                        entries.add(ModItems.BRACELET_DIAMOND);
+                        entries.add(ModItems.BRACELET_EMERALD);
+                        entries.add(ModItems.BRACELET_AMETHYST);
+                        entries.add(ModItems.BRACELET_RUBY);
+                        entries.add(ModItems.BRACELET_SAPPHIRE);
+                        entries.add(ModItems.BRACELET_ONYX);
+                        entries.add(ModItems.BRACELET_JADE);
+                        entries.add(ModItems.BRACELET_TOPAZ);
 
                         entries.add(ModItems.SILVER_NUGGET);
                         entries.add(ModItems.FOOLS_GOLD_SCRAP);

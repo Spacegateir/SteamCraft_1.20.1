@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "steamcraft:ruby",
+    "steamcraft:sapphire",
+    "steamcraft:onyx",
+    "steamcraft:jade",
+    "steamcraft:topaz"
+  ]
+}

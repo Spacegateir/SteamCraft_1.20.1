@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "steamcraft:bracelet"
+    },
+    "G": {
+      "item": "steamcraft:onyx"
+    }
+  },
+  "pattern": [
+    "G ",
+    " #"
+  ],
+  "result": {
+    "item": "steamcraft:bracelet_onyx"
+  },
+  "show_notification": true
+}

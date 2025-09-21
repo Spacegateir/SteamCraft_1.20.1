@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "steamcraft:bracelet"
+    },
+    "G": {
+      "item": "steamcraft:topaz"
+    }
+  },
+  "pattern": [
+    "G ",
+    " #"
+  ],
+  "result": {
+    "item": "steamcraft:bracelet_topaz"
+  },
+  "show_notification": true
+}

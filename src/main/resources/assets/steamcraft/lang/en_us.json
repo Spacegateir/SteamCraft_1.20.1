@@ -20,7 +20,6 @@
   "item.steamcraft.bracelet_jade": "Jade Bracelet",
   "item.steamcraft.bracelet_topaz": "Topaz Bracelet",
 
-
 "item.steamcraft.blank_mould": "Blank Mould",
   "item.steamcraft.helmet_mould": "Helmet Mould",
   "item.steamcraft.chestplate_mould": "Chestplate Mould",
@@ -43,6 +42,12 @@
   "item.steamcraft.luminite_spark": "Luminite Spark",
   "item.steamcraft.obscurium_crystal": "Obscurium Crystal",
   "item.steamcraft.divine_imbument_gem": "Divine Imbument Gem",
+
+  "item.steamcraft.ruby": "Ruby",
+  "item.steamcraft.sapphire": "Sapphire",
+  "item.steamcraft.onyx": "Onyx",
+  "item.steamcraft.jade": "Jade",
+  "item.steamcraft.topaz": "Topaz",
 
   "item.steamcraft.silver_nugget": "Silver Nugget",
   "item.steamcraft.fools_gold_scrap": "Fools Gold Scrap",

@@ -99,6 +99,24 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         }
     }
 
+    public static void offerBraceletRecipe(
+            Consumer<RecipeJsonProvider> exporter, RecipeCategory category, ItemConvertible result, ItemConvertible braceletBase, ItemConvertible gem
+    ) {
+        ShapedRecipeJsonBuilder.create(category, result, 1)
+                .pattern("G ")
+                .pattern(" #")
+                .input('#', braceletBase)
+                .input('G', gem)
+                .criterion("has_" + Registries.ITEM.getId(gem.asItem()).getPath(),
+                        conditionsFromItem(gem))
+                .offerTo(exporter, new Identifier(
+                        "steamcraft",
+                        Registries.ITEM.getId(result.asItem()).getPath() + "_from_" +
+                                Registries.ITEM.getId(gem.asItem()).getPath()
+                ));
+    }
+
+
     private void registerSingleFlowerToSeed(Consumer<RecipeJsonProvider> exporter, String baseName, String prefix, String fieldPrefix) {
         String path = prefix + baseName + "_to_seed";
         Identifier id = new Identifier(Steamcraft.MOD_ID, path);
@@ -346,7 +364,14 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.KILN_BURNT_BRICKS_SLAB_BLOCK, ModBlocks.KILN_BURNT_BRICKS_BLOCK);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.KILN_BURNT_BRICKS_WALL_BLOCK, ModBlocks.KILN_BURNT_BRICKS_BLOCK);
 
-
+        offerBraceletRecipe(exporter, RecipeCategory.MISC, ModItems.BRACELET_DIAMOND, ModItems.BRACELET, Items.DIAMOND);
+        offerBraceletRecipe(exporter, RecipeCategory.MISC, ModItems.BRACELET_EMERALD, ModItems.BRACELET, Items.EMERALD);
+        offerBraceletRecipe(exporter, RecipeCategory.MISC, ModItems.BRACELET_AMETHYST, ModItems.BRACELET, Items.AMETHYST_SHARD);
+        offerBraceletRecipe(exporter, RecipeCategory.MISC, ModItems.BRACELET_RUBY, ModItems.BRACELET, ModItems.RUBY);
+        offerBraceletRecipe(exporter, RecipeCategory.MISC, ModItems.BRACELET_SAPPHIRE, ModItems.BRACELET, ModItems.SAPPHIRE);
+        offerBraceletRecipe(exporter, RecipeCategory.MISC, ModItems.BRACELET_ONYX, ModItems.BRACELET, ModItems.ONYX);
+        offerBraceletRecipe(exporter, RecipeCategory.MISC, ModItems.BRACELET_JADE, ModItems.BRACELET, ModItems.JADE);
+        offerBraceletRecipe(exporter, RecipeCategory.MISC, ModItems.BRACELET_TOPAZ, ModItems.BRACELET, ModItems.TOPAZ);
 
 
 

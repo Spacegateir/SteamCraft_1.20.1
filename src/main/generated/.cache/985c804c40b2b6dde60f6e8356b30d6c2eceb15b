@@ -1,5 +1,6 @@
-// 1.20.1	2025-09-18T21:30:34.5874732	Steamcraft/Tags for minecraft:item
+// 1.20.1	2025-09-21T18:44:35.772374	Steamcraft/Tags for minecraft:item
 525773fd7f749de1e52ee4c535579d10cb68fdad data\steamcraft\tags\items\trophy_items.json
+5e3cc1420287963101282d26852b000858fef525 data\steamcraft\tags\items\gems.json
 b0e57bc4b6b05f7077e1199842d9bf841f30ebd0 data\steamcraft\tags\items\natural.json
 5611bdee72aa98809af515cd5c3433b972a0151b data\steamcraft\tags\items\mould_items.json
 4a6797984ab9586a91b75e2eac074faf7887c696 data\steamcraft\tags\items\ancient_gems.json

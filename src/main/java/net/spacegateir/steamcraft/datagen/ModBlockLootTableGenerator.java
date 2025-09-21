@@ -23,7 +23,6 @@ import net.minecraft.item.Items;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.predicate.item.EnchantmentPredicate;
 import net.minecraft.predicate.item.ItemPredicate;
-import net.minecraft.util.Identifier;
 
 
 public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
@@ -38,20 +37,45 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
         LootPoolEntry.Builder<?> gemAmethystEntry = ItemEntry.builder(Items.AMETHYST_SHARD)
                 .conditionally(TableBonusLootCondition.builder(
                         Enchantments.FORTUNE,
-                        new float[]{1.0F, 0.75F, 0.50F, 0.25F}
+                        new float[]{0.50F, 0.75F, 0.50F, 0.0F}
                 ));
         LootPoolEntry.Builder<?> gemEmeraldEntry = ItemEntry.builder(Items.EMERALD)
                 .conditionally(TableBonusLootCondition.builder(
                         Enchantments.FORTUNE,
-                        new float[]{0.50F, 0.75F, 0.75F, 1.0F}
+                        new float[]{1.0F, 0.75F, 0.50F, 0.25F}
                 ));
         LootPoolEntry.Builder<?> gemDiamondEntry = ItemEntry.builder(Items.DIAMOND)
                 .conditionally(TableBonusLootCondition.builder(
                         Enchantments.FORTUNE,
-                        new float[]{0.25F, 0.50F, 0.75F, 1.0F}
+                        new float[]{0.25F, 0.0F, 1.0F, 0.75F}
+                ));
+        LootPoolEntry.Builder<?> gemRubyEntry = ItemEntry.builder(ModItems.RUBY)
+                .conditionally(TableBonusLootCondition.builder(
+                        Enchantments.FORTUNE,
+                        new float[]{0.1F, 0.75F, 0.50F, 0.25F}
+                ));
+        LootPoolEntry.Builder<?> gemSapphireEntry = ItemEntry.builder(ModItems.SAPPHIRE)
+                .conditionally(TableBonusLootCondition.builder(
+                        Enchantments.FORTUNE,
+                        new float[]{0.1F, 0.75F, 0.50F, 0.25F}
+                ));
+        LootPoolEntry.Builder<?> gemOnyxEntry = ItemEntry.builder(ModItems.ONYX)
+                .conditionally(TableBonusLootCondition.builder(
+                        Enchantments.FORTUNE,
+                        new float[]{0.1F, 0.0F, 0.0F, 0.50F}
+                ));
+        LootPoolEntry.Builder<?> gemJadeEntry = ItemEntry.builder(ModItems.JADE)
+                .conditionally(TableBonusLootCondition.builder(
+                        Enchantments.FORTUNE,
+                        new float[]{0.25F, 0.5F, 0.50F, 0.25F}
+                ));
+        LootPoolEntry.Builder<?> gemTopazEntry = ItemEntry.builder(ModItems.TOPAZ)
+                .conditionally(TableBonusLootCondition.builder(
+                        Enchantments.FORTUNE,
+                        new float[]{0.1F, 0.0F, 1.0F, 0.75F}
                 ))
                 .conditionally(SurvivesExplosionLootCondition.builder());
-        LootPoolEntry.Builder<?> gemDefultExplosionEntry = ItemEntry.builder(Items.AMETHYST_SHARD)
+        LootPoolEntry.Builder<?> gemDefultExplosionEntry = ItemEntry.builder(Items.EMERALD)
                 .conditionally(SurvivesExplosionLootCondition.builder());
         this.addDrop(sblock, LootTable.builder()
                 .pool(LootPool.builder()
@@ -60,8 +84,16 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
                         .with(gemAmethystEntry)
                         .with(gemEmeraldEntry)
                         .with(gemDiamondEntry)
+                        .with(gemRubyEntry)
+                        .with(gemSapphireEntry)
+                        .with(gemOnyxEntry)
+                        .with(gemJadeEntry)
+                        .with(gemTopazEntry)
                 )
-        );addDrop(ModBlocks.MINERAL_DEPOSIT_ACTIVE_CLAY, LootTable.builder()
+        );
+
+
+        addDrop(ModBlocks.MINERAL_DEPOSIT_ACTIVE_CLAY, LootTable.builder()
                 .pool(LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .with(ItemEntry.builder(ModItems.ANCIENT_CLAY)

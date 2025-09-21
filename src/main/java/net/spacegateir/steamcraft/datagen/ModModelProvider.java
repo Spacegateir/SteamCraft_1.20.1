@@ -480,14 +480,11 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.TERA_LEGGINGS));
         itemModelGenerator.registerArmor(((ArmorItem) ModRewardItems.TERA_BOOTS));
 
-//        itemModelGenerator.register(ModItems.BRACELET_DIAMOND, Models.GENERATED);
-//        itemModelGenerator.register(ModItems.BRACELET_EMERALD, Models.GENERATED);
-//        itemModelGenerator.register(ModItems.BRACELET_AMETHYST, Models.GENERATED);
-//        itemModelGenerator.register(ModItems.BRACELET_RUBY, Models.GENERATED);
-//        itemModelGenerator.register(ModItems.BRACELET_SAPPHIRE, Models.GENERATED);
-//        itemModelGenerator.register(ModItems.BRACELET_ONYX, Models.GENERATED);
-//        itemModelGenerator.register(ModItems.BRACELET_JADE, Models.GENERATED);
-//        itemModelGenerator.register(ModItems.BRACELET_TOPAZ, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RUBY, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SAPPHIRE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ONYX, Models.GENERATED);
+        itemModelGenerator.register(ModItems.JADE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TOPAZ, Models.GENERATED);
 
 
 

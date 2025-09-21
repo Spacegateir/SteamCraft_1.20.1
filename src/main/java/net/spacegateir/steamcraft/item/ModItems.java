@@ -16,7 +16,6 @@ import net.spacegateir.steamcraft.block.ModBlocks;
 import net.spacegateir.steamcraft.fluid.ModFluids;
 import net.spacegateir.steamcraft.item.armor.*;
 import net.spacegateir.steamcraft.item.custom.*;
-import net.spacegateir.steamcraft.TestTools.Tools.TestParticlesItem;
 import net.spacegateir.steamcraft.item.tools.*;
 import net.spacegateir.steamcraft.item.trinkets.item.AthleteShoesItem;
 import net.spacegateir.steamcraft.item.trinkets.item.BraceletTrinketItem;
@@ -63,6 +62,17 @@ public class ModItems {
             new GlintItem(new FabricItemSettings().rarity(Rarity.UNCOMMON)));
     public static final Item GOLD_COIN = registerItem("gold_coin",
             new GlintItem(new FabricItemSettings().rarity(Rarity.UNCOMMON)));
+
+    public static final Item RUBY = registerItem("ruby",
+            new Item(new FabricItemSettings()));
+    public static final Item SAPPHIRE = registerItem("sapphire",
+            new Item(new FabricItemSettings()));
+    public static final Item ONYX = registerItem("onyx",
+            new Item(new FabricItemSettings()));
+    public static final Item JADE = registerItem("jade",
+            new Item(new FabricItemSettings()));
+    public static final Item TOPAZ = registerItem("topaz",
+            new Item(new FabricItemSettings()));
 
     public static final Item FOOLS_GOLD_SCRAP = registerItem("fools_gold_scrap",
             new Item(new FabricItemSettings().rarity(RARE)));

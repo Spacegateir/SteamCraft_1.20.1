@@ -50,6 +50,12 @@ public class ModItemGroups {
                         entries.add(ModItems.OBSCURIUM_CRYSTAL);
                         entries.add(ModItems.DIVINE_IMBUMENT_GEM);
 
+                        entries.add(ModItems.RUBY);
+                        entries.add(ModItems.SAPPHIRE);
+                        entries.add(ModItems.ONYX);
+                        entries.add(ModItems.JADE);
+                        entries.add(ModItems.TOPAZ);
+
                         entries.add(ModItems.ANCIENT_CLAY);
                         entries.add(ModItems.ANCIENT_MOIST_CLAY);
                         entries.add(ModItems.MUD_BRICK);

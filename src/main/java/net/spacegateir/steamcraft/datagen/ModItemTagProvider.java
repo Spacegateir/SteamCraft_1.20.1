@@ -67,6 +67,11 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                     net.minecraft.registry.Registries.ITEM.getKey(),
                     new Identifier("steamcraft", "trinkets")
             );
+
+            public static final TagKey<Item> GEMS = TagKey.of(
+                    net.minecraft.registry.Registries.ITEM.getKey(),
+                    new Identifier("steamcraft", "gems")
+            );
         }
     }
 
@@ -113,6 +118,13 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.LUMINITE_SPARK.asItem())
                 .add(ModItems.OBSCURIUM_CRYSTAL.asItem())
                 .add(ModItems.DIVINE_IMBUMENT_GEM.asItem());
+
+        getOrCreateTagBuilder(ModTags.Items.GEMS)
+                .add(ModItems.RUBY)
+                .add(ModItems.SAPPHIRE)
+                .add(ModItems.ONYX)
+                .add(ModItems.JADE)
+                .add(ModItems.TOPAZ);
 
         getOrCreateTagBuilder(ModTags.Items.TROPHY_ITEMS)
                 .add(ModRewardItems.GOLD_TROPHY_ITEM)

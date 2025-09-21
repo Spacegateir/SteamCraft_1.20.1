@@ -18,10 +18,10 @@
           "conditions": [
             {
               "chances": [
-                1.0,
+                0.5,
                 0.75,
                 0.5,
-                0.25
+                0.0
               ],
               "condition": "minecraft:table_bonus",
               "enchantment": "minecraft:fortune"
@@ -34,10 +34,10 @@
           "conditions": [
             {
               "chances": [
+                1.0,
+                0.75,
                 0.5,
-                0.75,
-                0.75,
-                1.0
+                0.25
               ],
               "condition": "minecraft:table_bonus",
               "enchantment": "minecraft:fortune"
@@ -50,10 +50,90 @@
           "conditions": [
             {
               "chances": [
-                0.25,
-                0.5,
+                0.1,
+                0.0,
+                1.0,
+                0.75
+              ],
+              "condition": "minecraft:table_bonus",
+              "enchantment": "minecraft:fortune"
+            }
+          ],
+          "name": "minecraft:diamond"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "chances": [
+                0.1,
                 0.75,
-                1.0
+                0.5,
+                0.25
+              ],
+              "condition": "minecraft:table_bonus",
+              "enchantment": "minecraft:fortune"
+            }
+          ],
+          "name": "steamcraft:ruby"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "chances": [
+                0.1,
+                0.75,
+                0.5,
+                0.25
+              ],
+              "condition": "minecraft:table_bonus",
+              "enchantment": "minecraft:fortune"
+            }
+          ],
+          "name": "steamcraft:sapphire"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "chances": [
+                0.1,
+                0.0,
+                0.0,
+                0.5
+              ],
+              "condition": "minecraft:table_bonus",
+              "enchantment": "minecraft:fortune"
+            }
+          ],
+          "name": "steamcraft:onyx"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "chances": [
+                0.75,
+                0.5,
+                0.5,
+                0.25
+              ],
+              "condition": "minecraft:table_bonus",
+              "enchantment": "minecraft:fortune"
+            }
+          ],
+          "name": "steamcraft:jade"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "chances": [
+                0.1,
+                0.0,
+                1.0,
+                0.75
               ],
               "condition": "minecraft:table_bonus",
               "enchantment": "minecraft:fortune"
@@ -62,7 +142,7 @@
               "condition": "minecraft:survives_explosion"
             }
           ],
-          "name": "minecraft:diamond"
+          "name": "steamcraft:topaz"
         }
       ],
       "rolls": 1.0

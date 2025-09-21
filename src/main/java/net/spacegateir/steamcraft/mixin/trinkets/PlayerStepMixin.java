@@ -13,12 +13,20 @@ public abstract class PlayerStepMixin {
 
     @Inject(method = "tick", at = @At("HEAD"))
     private void updateStepHeight(CallbackInfo ci) {
-        double stepLevel = ((LivingEntity)(Object)this)
-                .getAttributeValue(ModEntityAttributes.GENERIC_MOVEMENT_STEP);
+        LivingEntity self = (LivingEntity)(Object)this;
 
-        ((LivingEntity)(Object)this).setStepHeight(
-                ((PlayerEntity)(Object)this).isSneaking() ? 0.6F : (float) stepLevel
-        );
+        double stepLevel = self.getAttributeValue(ModEntityAttributes.GENERIC_MOVEMENT_STEP);
+
+        // Fallback to vanilla default (0.6F) if attribute is not present or 0
+        float baseStep = 0.6F;
+        float finalStep = (float) Math.max(stepLevel, baseStep);
+
+        if (((PlayerEntity)(Object)this).isSneaking()) {
+            self.setStepHeight(baseStep);
+        } else {
+            self.setStepHeight(finalStep);
+        }
     }
+
 }
 

@@ -46,7 +46,6 @@ public class ToDo {
     // ERROR THE BUG THAT DELEATS THE MAGIC BAG INVENTORY WHEN THE GAME IS REBOOTED (test on a server the player id changes every reboot on dev server)
 
     // make trinkets for every slot 10/13 slots (cant use gecko lib)
-        // magic bag (new ender storage)
         // goggles (resistance against blindness)
         // miners hat (that give increase to mining speed)
         // back slot ( something that give slow falling)
@@ -93,6 +92,7 @@ public class ToDo {
     // TODO
     // FIXME
     // ERROR Settings → Editor → TODO → + Add Pattern (to create or change colours on text)
+
 
     // click CTRL + H
 

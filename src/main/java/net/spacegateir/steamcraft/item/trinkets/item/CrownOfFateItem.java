@@ -57,11 +57,11 @@ public class CrownOfFateItem extends TrinketItem {
 
         if (net.minecraft.client.gui.screen.Screen.hasShiftDown()) {
             tooltip.add(net.minecraft.text.Text.literal("§7- §eRoyal Aura:§r"));
-            tooltip.add(net.minecraft.text.Text.literal("   §8• Villager's and Iron Golem's will follow you"));
+//            tooltip.add(net.minecraft.text.Text.literal("   §8• Villager's and Iron Golem's will follow you"));
             tooltip.add(net.minecraft.text.Text.literal("   §8• Stops Raid Mobs from targeting you"));
             tooltip.add(net.minecraft.text.Text.literal("   §8• Forces them to walk away in fear"));
 
-            tooltip.add(net.minecraft.text.Text.literal(""));
+//            tooltip.add(net.minecraft.text.Text.literal(""));
 
             tooltip.add(net.minecraft.text.Text.literal("§7- §eVillager's Favor:§r§7"));
             tooltip.add(net.minecraft.text.Text.literal("   §8• Villager Discount when worn"));
@@ -104,7 +104,7 @@ public class CrownOfFateItem extends TrinketItem {
 
         repelMobs(player, player.getWorld(), REPEL_MOBS);
 
-        attractMobs(player, player.getWorld(), ATTRACTABLE_MOBS);
+//        attractMobs(player, player.getWorld(), ATTRACTABLE_MOBS);
     }
     @SafeVarargs
     private static void repelMobs(PlayerEntity player, World world, Class<? extends MobEntity>... mobClasses) {

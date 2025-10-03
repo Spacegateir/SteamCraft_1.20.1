@@ -44,7 +44,7 @@ public class MagicBagItem extends TrinketItem {
                     user.getBlockPos(),
                     ModSounds.ZIPPER,
                     SoundCategory.PLAYERS,
-                    1.0f,
+                    0.5F,
                     -5.0f
             );
 
@@ -89,7 +89,7 @@ public class MagicBagItem extends TrinketItem {
                 player.getBlockPos(),
                 ModSounds.ZIPPER,
                 SoundCategory.PLAYERS,
-                1.0f,
+                0.5f,
                 -20.0f
         );
     }
@@ -107,7 +107,7 @@ public class MagicBagItem extends TrinketItem {
                 player.getBlockPos(),
                 ModSounds.ZIPPER_SLOW,
                 SoundCategory.PLAYERS,
-                1.0f,
+                0.5f,
                 5.0f
         );
     }

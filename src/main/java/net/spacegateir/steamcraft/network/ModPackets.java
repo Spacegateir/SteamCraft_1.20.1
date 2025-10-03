@@ -43,13 +43,15 @@ public class ModPackets {
                 if (!player.isOnGround() && player.isSneaking()) {
                     if (player.getHungerManager().getFoodLevel() >= 10) {
 
+                        ServerWorld world = (ServerWorld) player.getWorld();
+
                         // Get direction vector
                         Vec3d start = player.getCameraPosVec(1.0F);
                         Vec3d direction = player.getRotationVec(1.0F).normalize();
                         Vec3d end = start.add(direction.multiply(100.0));
 
                         // Raycast to prevent going through blocks or void
-                        HitResult hitResult = player.getWorld().raycast(new RaycastContext(
+                        HitResult hitResult = world.raycast(new RaycastContext(
                                 start,
                                 end,
                                 RaycastContext.ShapeType.COLLIDER,
@@ -60,27 +62,49 @@ public class ModPackets {
                         Vec3d dashTo = hitResult.getPos();
 
                         // Prevent going below world bottom
-                        if (dashTo.y < player.getWorld().getBottomY()) {
-                            dashTo = new Vec3d(dashTo.x, player.getWorld().getBottomY(), dashTo.z);
+                        if (dashTo.y < world.getBottomY()) {
+                            dashTo = new Vec3d(dashTo.x, world.getBottomY(), dashTo.z);
                         }
 
-                        player.requestTeleport(dashTo.x, dashTo.y, dashTo.z);
-
-                        // Play sound to nearby players
-                        List<ServerPlayerEntity> players = ((ServerWorld) player.getWorld()).getPlayers(p ->
-                                p.squaredDistanceTo(player) <= 32 * 32
+                        // --- Play sound & particles at START ---
+                        world.playSound(
+                                null,
+                                player.getBlockPos(),
+                                SoundEvents.ENTITY_LIGHTNING_BOLT_THUNDER,
+                                net.minecraft.sound.SoundCategory.PLAYERS,
+                                3.0F,
+                                1.2F
                         );
-                        for (ServerPlayerEntity p : players) {
-                            p.playSound(SoundEvents.ENTITY_LIGHTNING_BOLT_THUNDER, net.minecraft.sound.SoundCategory.PLAYERS, 3.0F, 1.2F);
-                        }
 
-                        // Spawn particles
                         for (int i = 0; i < 10; i++) {
                             double offsetX = (player.getRandom().nextDouble() - 0.5);
                             double offsetY = player.getRandom().nextDouble();
                             double offsetZ = (player.getRandom().nextDouble() - 0.5);
+                            world.spawnParticles(
+                                    ParticleTypes.CLOUD,
+                                    player.getX() + offsetX, player.getY() + offsetY, player.getZ() + offsetZ,
+                                    1, 0, 0, 0, 0
+                            );
+                        }
 
-                            ((ServerWorld) player.getWorld()).spawnParticles(
+                        // Teleport player
+                        player.requestTeleport(dashTo.x, dashTo.y, dashTo.z);
+
+                        // --- Play sound & particles at END ---
+                        world.playSound(
+                                null,
+                                player.getBlockPos(),
+                                SoundEvents.ENTITY_LIGHTNING_BOLT_THUNDER,
+                                net.minecraft.sound.SoundCategory.PLAYERS,
+                                3.0F,
+                                1.2F
+                        );
+
+                        for (int i = 0; i < 10; i++) {
+                            double offsetX = (player.getRandom().nextDouble() - 0.5);
+                            double offsetY = player.getRandom().nextDouble();
+                            double offsetZ = (player.getRandom().nextDouble() - 0.5);
+                            world.spawnParticles(
                                     ParticleTypes.CLOUD,
                                     dashTo.x + offsetX, dashTo.y + offsetY, dashTo.z + offsetZ,
                                     1, 0, 0, 0, 0
@@ -96,6 +120,7 @@ public class ModPackets {
             });
         });
     }
+
 
 
 }

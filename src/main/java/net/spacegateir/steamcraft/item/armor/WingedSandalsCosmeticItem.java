@@ -24,7 +24,6 @@ import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.minecraft.network.PacketByteBuf;
 import net.spacegateir.steamcraft.network.ModPackets;
 
-
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Supplier;

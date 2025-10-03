@@ -32,8 +32,8 @@ public class BraceletTrinketItem extends TrinketItem {
     public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
         String gemType = getGemType(stack);
         String abilityText = switch (gemType) {
-            case "diamond" -> "Burns all undead";
-            case "emerald" -> "Attracts Animals";
+            case "diamond" -> "Attracts Animals";
+            case "emerald" -> "Attracts Villagers & Iron Golem's";
             case "amethyst" -> "Repels Phantoms";
             case "ruby" -> "Repels Wither Skeletons";
             case "sapphire" -> "Repels Drowned & Guardian";
@@ -57,10 +57,10 @@ public class BraceletTrinketItem extends TrinketItem {
 
         switch (gemType) {
             case "diamond":
-                burnUndead(player, world);
+                attractMobs(player, world, CowEntity.class, SheepEntity.class, PigEntity.class, ChickenEntity.class, RabbitEntity.class, BeeEntity.class);
                 break;
             case "emerald":
-                attractMobs(player, world, CowEntity.class, SheepEntity.class, PigEntity.class, ChickenEntity.class, RabbitEntity.class, BeeEntity.class);
+                attractMobs(player, world, VillagerEntity.class, IronGolemEntity.class);
                 break;
             case "amethyst":
                 repelMobs(player, world, PhantomEntity.class);

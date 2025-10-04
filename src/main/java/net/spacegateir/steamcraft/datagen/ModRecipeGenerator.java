@@ -116,6 +116,39 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 ));
     }
 
+    public static void offerRingRecipe(
+            Consumer<RecipeJsonProvider> exporter, RecipeCategory category, ItemConvertible result, ItemConvertible ringBase, ItemConvertible gem
+    ) {
+        ShapedRecipeJsonBuilder.create(category, result, 1)
+                .pattern("G")
+                .pattern("#")
+                .input('#', ringBase)
+                .input('G', gem)
+                .criterion("has_" + Registries.ITEM.getId(gem.asItem()).getPath(),
+                        conditionsFromItem(gem))
+                .offerTo(exporter, new Identifier(
+                        "steamcraft",
+                        Registries.ITEM.getId(result.asItem()).getPath() + "_from_" +
+                                Registries.ITEM.getId(gem.asItem()).getPath()
+                ));
+    }
+
+    public static void offerNecklaceRecipe(
+            Consumer<RecipeJsonProvider> exporter, RecipeCategory category, ItemConvertible result, ItemConvertible necklaceBase, ItemConvertible gem
+    ) {
+        ShapedRecipeJsonBuilder.create(category, result, 1)
+                .pattern("#")
+                .pattern("G")
+                .input('#', necklaceBase)
+                .input('G', gem)
+                .criterion("has_" + Registries.ITEM.getId(gem.asItem()).getPath(),
+                        conditionsFromItem(gem))
+                .offerTo(exporter, new Identifier(
+                        "steamcraft",
+                        Registries.ITEM.getId(result.asItem()).getPath() + "_from_" +
+                                Registries.ITEM.getId(gem.asItem()).getPath()
+                ));
+    }
 
     private void registerSingleFlowerToSeed(Consumer<RecipeJsonProvider> exporter, String baseName, String prefix, String fieldPrefix) {
         String path = prefix + baseName + "_to_seed";
@@ -372,6 +405,24 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         offerBraceletRecipe(exporter, RecipeCategory.MISC, ModItems.BRACELET_ONYX, ModItems.BRACELET, ModItems.ONYX);
         offerBraceletRecipe(exporter, RecipeCategory.MISC, ModItems.BRACELET_JADE, ModItems.BRACELET, ModItems.JADE);
         offerBraceletRecipe(exporter, RecipeCategory.MISC, ModItems.BRACELET_TOPAZ, ModItems.BRACELET, ModItems.TOPAZ);
+
+        offerRingRecipe(exporter, RecipeCategory.MISC, ModItems.RING_DIAMOND, ModItems.RING, Items.DIAMOND);
+        offerRingRecipe(exporter, RecipeCategory.MISC, ModItems.RING_EMERALD, ModItems.RING, Items.EMERALD);
+        offerRingRecipe(exporter, RecipeCategory.MISC, ModItems.RING_AMETHYST, ModItems.RING, Items.AMETHYST_SHARD);
+        offerRingRecipe(exporter, RecipeCategory.MISC, ModItems.RING_RUBY, ModItems.RING, ModItems.RUBY);
+        offerRingRecipe(exporter, RecipeCategory.MISC, ModItems.RING_SAPPHIRE, ModItems.RING, ModItems.SAPPHIRE);
+        offerRingRecipe(exporter, RecipeCategory.MISC, ModItems.RING_ONYX, ModItems.RING, ModItems.ONYX);
+        offerRingRecipe(exporter, RecipeCategory.MISC, ModItems.RING_JADE, ModItems.RING, ModItems.JADE);
+        offerRingRecipe(exporter, RecipeCategory.MISC, ModItems.RING_TOPAZ, ModItems.RING, ModItems.TOPAZ);
+
+        offerNecklaceRecipe(exporter, RecipeCategory.MISC, ModItems.NECKLACE_DIAMOND, ModItems.NECKLACE, Items.DIAMOND);
+        offerNecklaceRecipe(exporter, RecipeCategory.MISC, ModItems.NECKLACE_EMERALD, ModItems.NECKLACE, Items.EMERALD);
+        offerNecklaceRecipe(exporter, RecipeCategory.MISC, ModItems.NECKLACE_AMETHYST, ModItems.NECKLACE, Items.AMETHYST_SHARD);
+        offerNecklaceRecipe(exporter, RecipeCategory.MISC, ModItems.NECKLACE_RUBY, ModItems.NECKLACE, ModItems.RUBY);
+        offerNecklaceRecipe(exporter, RecipeCategory.MISC, ModItems.NECKLACE_SAPPHIRE, ModItems.NECKLACE, ModItems.SAPPHIRE);
+        offerNecklaceRecipe(exporter, RecipeCategory.MISC, ModItems.NECKLACE_ONYX, ModItems.NECKLACE, ModItems.ONYX);
+        offerNecklaceRecipe(exporter, RecipeCategory.MISC, ModItems.NECKLACE_JADE, ModItems.NECKLACE, ModItems.JADE);
+        offerNecklaceRecipe(exporter, RecipeCategory.MISC, ModItems.NECKLACE_TOPAZ, ModItems.NECKLACE, ModItems.TOPAZ);
 
 
 

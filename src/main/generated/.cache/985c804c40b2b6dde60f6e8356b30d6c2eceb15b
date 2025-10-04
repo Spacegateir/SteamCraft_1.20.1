@@ -1,11 +1,11 @@
-// 1.20.1	2025-09-21T18:44:35.772374	Steamcraft/Tags for minecraft:item
+// 1.20.1	2025-10-03T16:55:12.5328141	Steamcraft/Tags for minecraft:item
 525773fd7f749de1e52ee4c535579d10cb68fdad data\steamcraft\tags\items\trophy_items.json
 5e3cc1420287963101282d26852b000858fef525 data\steamcraft\tags\items\gems.json
 b0e57bc4b6b05f7077e1199842d9bf841f30ebd0 data\steamcraft\tags\items\natural.json
 5611bdee72aa98809af515cd5c3433b972a0151b data\steamcraft\tags\items\mould_items.json
 4a6797984ab9586a91b75e2eac074faf7887c696 data\steamcraft\tags\items\ancient_gems.json
-d070cbfbdafd84b51a8272fc00c0aab83bbf20f7 data\steamcraft\tags\items\trinkets.json
 7c41b51c32066fff65f94b96eb2c9b3f9bfc3f70 data\steamcraft\tags\items\aether_coil.json
 8ae1396d6b277775c9baebb135dcd6ca095a78b4 data\steamcraft\tags\items\flower_seeds.json
+6626cd9613677cf5b003f0328ee8a66def7f9ac7 data\steamcraft\tags\items\artifacts.json
 cebbd345efe39f4c2c8c4ff1b1a4ce47d4e2bcac data\steamcraft\tags\items\metal_items.json
 0b81c025f5f9714213297517704b51a1a76c3338 data\minecraft\tags\items\trimmable_armor.json

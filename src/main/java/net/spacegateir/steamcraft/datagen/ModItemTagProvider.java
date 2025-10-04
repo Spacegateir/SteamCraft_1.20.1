@@ -63,9 +63,9 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                     new Identifier("steamcraft", "natural")
             );
 
-            public static final TagKey<Item> TRINKETS = TagKey.of(
+            public static final TagKey<Item> ARTIFACTS = TagKey.of(
                     net.minecraft.registry.Registries.ITEM.getKey(),
-                    new Identifier("steamcraft", "trinkets")
+                    new Identifier("steamcraft", "artifacts")
             );
 
             public static final TagKey<Item> GEMS = TagKey.of(
@@ -171,9 +171,37 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.ANCIENT_CLAY_ITEM)
                 .add(ModItems.ANCIENT_MOIST_CLAY_ITEM);
 
-        getOrCreateTagBuilder(ModTags.Items.TRINKETS)
+        getOrCreateTagBuilder(ModTags.Items.ARTIFACTS)
                 .add(ModItems.ATHLETE_SHOES)
-                .add(ModItems.CROWN_OF_FATE);
+                .add(ModItems.CROWN_OF_FATE)
+                .add(ModItems.MAGIC_BAG)
+                .add(ModItems.BRACELET)
+                .add(ModItems.BRACELET_DIAMOND)
+                .add(ModItems.BRACELET_EMERALD)
+                .add(ModItems.BRACELET_AMETHYST)
+                .add(ModItems.BRACELET_TOPAZ)
+                .add(ModItems.BRACELET_RUBY)
+                .add(ModItems.BRACELET_SAPPHIRE)
+                .add(ModItems.BRACELET_ONYX)
+                .add(ModItems.BRACELET_JADE)
+                .add(ModItems.RING)
+                .add(ModItems.RING_DIAMOND)
+                .add(ModItems.RING_EMERALD)
+                .add(ModItems.RING_AMETHYST)
+                .add(ModItems.RING_TOPAZ)
+                .add(ModItems.RING_RUBY)
+                .add(ModItems.RING_SAPPHIRE)
+                .add(ModItems.RING_ONYX)
+                .add(ModItems.RING_JADE)
+                .add(ModItems.NECKLACE)
+                .add(ModItems.NECKLACE_DIAMOND)
+                .add(ModItems.NECKLACE_EMERALD)
+                .add(ModItems.NECKLACE_AMETHYST)
+                .add(ModItems.NECKLACE_TOPAZ)
+                .add(ModItems.NECKLACE_RUBY)
+                .add(ModItems.NECKLACE_SAPPHIRE)
+                .add(ModItems.NECKLACE_ONYX)
+                .add(ModItems.NECKLACE_JADE);
 
 
         // Dynamic seed tag registration

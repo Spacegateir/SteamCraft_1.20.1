@@ -53,27 +53,6 @@ public class ToDo {
         // quiver (gives user reduce bow draw time and knock back)
         // anklet (something that dose damage similar to thorns)
 
-        // Power Ring (diamond) = attack (boosts damage)
-        // Power Ring (emerald) = luck + increase exp orb collection range
-        // Power Ring (amethyst) = night vision + inflict darkness when attacking
-        // Power Ring (ruby) = Ignites (apply fire damage to enemies)
-        // Power Ring (sapphire) = water (improves water swim, air ect.)
-        // Power Ring (onyx) = invisibility (when sneaking)
-        // Power Ring (jade) = regen (extra hearts and health regen)
-        // Power Ring (topaz) = poison (inflict poison when attacking)
-
-        // Power necklace (diamond) = defense (damage reduction + knock back resistance)
-        // Power necklace (emerald) = raid immunity (Bad Omen)
-        // Power necklace (amethyst) = darkness + blindness immunity
-        // Power necklace (ruby) = fire + lava immunity
-        // Power necklace (sapphire) = immunity
-        // Power necklace (onyx) = wither  immunity
-        // Power necklace (jade) = hunger immunity
-        // Power necklace (topaz) = poison immunity
-
-
-        // Rings of power (has abilities to repel specific mobs, has buffs) (only need 1 render and a png for each ring making the others invisible)
-
     // loot chests (unique) has (trinkets and artifacts "god sword")
 
     // water log the mineral deposits
@@ -93,7 +72,6 @@ public class ToDo {
     // FIXME
     // ERROR Settings → Editor → TODO → + Add Pattern (to create or change colours on text)
 
-
     // click CTRL + H
 
     // Create crafting
@@ -108,6 +86,12 @@ public class ToDo {
     //setblock ~ ~ ~ chest{LootTable:"steamcraft:chests/loot_chest_rare"}
     //setblock ~ ~ ~ chest{LootTable:"steamcraft:chests/loot_chest_legendary"}
     //setblock ~ ~ ~ chest{LootTable:"steamcraft:chests/loot_chest_unique"}
+
+    //give @p chest{BlockEntityTag:{LootTable:"steamcraft:chests/loot_chest_common"}}
+    //give @p chest{BlockEntityTag:{LootTable:"steamcraft:chests/loot_chest_uncommon"}}
+    //give @p chest{BlockEntityTag:{LootTable:"steamcraft:chests/loot_chest_rare"}}
+    //give @p chest{BlockEntityTag:{LootTable:"steamcraft:chests/loot_chest_legendary"}}
+    //give @p chest{BlockEntityTag:{LootTable:"steamcraft:chests/loot_chest_unique"}}
 
     //give @p minecraft:suspicious_sand[minecraft:block_entity_data={id:"minecraft:brushable_block",LootTable:"minecraft:archaeology/desert_pyramid"}]
     //give @p minecraft:suspicious_gravel[minecraft:block_entity_data={id:"minecraft:brushable_block",LootTable:"minecraft:archaeology/desert_pyramid"}]

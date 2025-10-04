@@ -1,5 +1,14 @@
 {
   "replace": false,
   "values": [
+    "steamcraft:ring",
+    "steamcraft:ring_diamond",
+    "steamcraft:ring_emerald",
+    "steamcraft:ring_amethyst",
+    "steamcraft:ring_ruby",
+    "steamcraft:ring_sapphire",
+    "steamcraft:ring_onyx",
+    "steamcraft:ring_jade",
+    "steamcraft:ring_topaz"
   ]
 }

@@ -484,6 +484,44 @@ public class SteamcraftClient implements ClientModInitializer {
         TrinketRenderRegistry.register(ModItems.BRACELET_TOPAZ, "textures/entity/bracelet_topaz.png");
         TrinketRendererRegistry.registerRenderer(ModItems.BRACELET_TOPAZ, new BraceletTrinketRenderer());
 
+        TrinketRenderRegistry.register(ModItems.RING, "textures/entity/ring.png");
+        TrinketRendererRegistry.registerRenderer(ModItems.RING, new RingTrinketRenderer());
+        TrinketRenderRegistry.register(ModItems.RING_DIAMOND, "textures/entity/ring_diamond.png");
+        TrinketRendererRegistry.registerRenderer(ModItems.RING_DIAMOND, new RingTrinketRenderer());
+        TrinketRenderRegistry.register(ModItems.RING_EMERALD, "textures/entity/ring_emerald.png");
+        TrinketRendererRegistry.registerRenderer(ModItems.RING_EMERALD, new RingTrinketRenderer());
+        TrinketRenderRegistry.register(ModItems.RING_AMETHYST, "textures/entity/ring_amethyst.png");
+        TrinketRendererRegistry.registerRenderer(ModItems.RING_AMETHYST, new RingTrinketRenderer());
+        TrinketRenderRegistry.register(ModItems.RING_RUBY, "textures/entity/ring_ruby.png");
+        TrinketRendererRegistry.registerRenderer(ModItems.RING_RUBY, new RingTrinketRenderer());
+        TrinketRenderRegistry.register(ModItems.RING_SAPPHIRE, "textures/entity/ring_sapphire.png");
+        TrinketRendererRegistry.registerRenderer(ModItems.RING_SAPPHIRE, new RingTrinketRenderer());
+        TrinketRenderRegistry.register(ModItems.RING_ONYX, "textures/entity/ring_onyx.png");
+        TrinketRendererRegistry.registerRenderer(ModItems.RING_ONYX, new RingTrinketRenderer());
+        TrinketRenderRegistry.register(ModItems.RING_JADE, "textures/entity/ring_jade.png");
+        TrinketRendererRegistry.registerRenderer(ModItems.RING_JADE, new RingTrinketRenderer());
+        TrinketRenderRegistry.register(ModItems.RING_TOPAZ, "textures/entity/ring_topaz.png");
+        TrinketRendererRegistry.registerRenderer(ModItems.RING_TOPAZ, new RingTrinketRenderer());
+
+        TrinketRenderRegistry.register(ModItems.NECKLACE, "textures/entity/necklace.png");
+        TrinketRendererRegistry.registerRenderer(ModItems.NECKLACE, new NecklaceTrinketRenderer());
+        TrinketRenderRegistry.register(ModItems.NECKLACE_DIAMOND, "textures/entity/necklace_diamond.png");
+        TrinketRendererRegistry.registerRenderer(ModItems.NECKLACE_DIAMOND, new NecklaceTrinketRenderer());
+        TrinketRenderRegistry.register(ModItems.NECKLACE_EMERALD, "textures/entity/necklace_emerald.png");
+        TrinketRendererRegistry.registerRenderer(ModItems.NECKLACE_EMERALD, new NecklaceTrinketRenderer());
+        TrinketRenderRegistry.register(ModItems.NECKLACE_AMETHYST, "textures/entity/necklace_amethyst.png");
+        TrinketRendererRegistry.registerRenderer(ModItems.NECKLACE_AMETHYST, new NecklaceTrinketRenderer());
+        TrinketRenderRegistry.register(ModItems.NECKLACE_RUBY, "textures/entity/necklace_ruby.png");
+        TrinketRendererRegistry.registerRenderer(ModItems.NECKLACE_RUBY, new NecklaceTrinketRenderer());
+        TrinketRenderRegistry.register(ModItems.NECKLACE_SAPPHIRE, "textures/entity/necklace_sapphire.png");
+        TrinketRendererRegistry.registerRenderer(ModItems.NECKLACE_SAPPHIRE, new NecklaceTrinketRenderer());
+        TrinketRenderRegistry.register(ModItems.NECKLACE_ONYX, "textures/entity/necklace_onyx.png");
+        TrinketRendererRegistry.registerRenderer(ModItems.NECKLACE_ONYX, new NecklaceTrinketRenderer());
+        TrinketRenderRegistry.register(ModItems.NECKLACE_JADE, "textures/entity/necklace_jade.png");
+        TrinketRendererRegistry.registerRenderer(ModItems.NECKLACE_JADE, new NecklaceTrinketRenderer());
+        TrinketRenderRegistry.register(ModItems.NECKLACE_TOPAZ, "textures/entity/necklace_topaz.png");
+        TrinketRendererRegistry.registerRenderer(ModItems.NECKLACE_TOPAZ, new NecklaceTrinketRenderer());
+
 
 
 

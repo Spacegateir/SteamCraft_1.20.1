@@ -11,7 +11,7 @@
               "condition": "minecraft:survives_explosion"
             }
           ],
-          "name": "minecraft:amethyst_shard"
+          "name": "minecraft:emerald"
         },
         {
           "type": "minecraft:item",
@@ -50,7 +50,7 @@
           "conditions": [
             {
               "chances": [
-                0.1,
+                0.25,
                 0.0,
                 1.0,
                 0.75
@@ -114,7 +114,7 @@
           "conditions": [
             {
               "chances": [
-                0.75,
+                0.25,
                 0.5,
                 0.5,
                 0.25

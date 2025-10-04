@@ -17,10 +17,7 @@ import net.spacegateir.steamcraft.fluid.ModFluids;
 import net.spacegateir.steamcraft.item.armor.*;
 import net.spacegateir.steamcraft.item.custom.*;
 import net.spacegateir.steamcraft.item.tools.*;
-import net.spacegateir.steamcraft.item.trinkets.item.AthleteShoesItem;
-import net.spacegateir.steamcraft.item.trinkets.item.BraceletTrinketItem;
-import net.spacegateir.steamcraft.item.trinkets.item.CrownOfFateItem;
-import net.spacegateir.steamcraft.item.trinkets.item.MagicBagItem;
+import net.spacegateir.steamcraft.item.trinkets.item.*;
 
 import java.lang.reflect.Field;
 import java.util.EnumMap;
@@ -283,6 +280,44 @@ public class ModItems {
             new BraceletTrinketItem(new FabricItemSettings().maxCount(1).rarity(EPIC)));
     public static final Item BRACELET_TOPAZ = registerItem("bracelet_topaz",
             new BraceletTrinketItem(new FabricItemSettings().maxCount(1).rarity(EPIC)));
+
+    public static final Item RING = registerItem("ring",
+            new Item(new FabricItemSettings().maxCount(1).rarity(EPIC)));
+    public static final Item RING_DIAMOND = registerItem("ring_diamond",
+            new RingTrinketItem(new FabricItemSettings().maxCount(1).rarity(EPIC)));
+    public static final Item RING_EMERALD = registerItem("ring_emerald",
+            new RingTrinketItem(new FabricItemSettings().maxCount(1).rarity(EPIC)));
+    public static final Item RING_AMETHYST = registerItem("ring_amethyst",
+            new RingTrinketItem(new FabricItemSettings().maxCount(1).rarity(EPIC)));
+    public static final Item RING_RUBY = registerItem("ring_ruby",
+            new RingTrinketItem(new FabricItemSettings().maxCount(1).rarity(EPIC)));
+    public static final Item RING_SAPPHIRE = registerItem("ring_sapphire",
+            new RingTrinketItem(new FabricItemSettings().maxCount(1).rarity(EPIC)));
+    public static final Item RING_ONYX = registerItem("ring_onyx",
+            new RingTrinketItem(new FabricItemSettings().maxCount(1).rarity(EPIC)));
+    public static final Item RING_JADE = registerItem("ring_jade",
+            new RingTrinketItem(new FabricItemSettings().maxCount(1).rarity(EPIC)));
+    public static final Item RING_TOPAZ = registerItem("ring_topaz",
+            new RingTrinketItem(new FabricItemSettings().maxCount(1).rarity(EPIC)));
+
+    public static final Item NECKLACE = registerItem("necklace",
+            new Item(new FabricItemSettings().maxCount(1).rarity(EPIC)));
+    public static final Item NECKLACE_DIAMOND = registerItem("necklace_diamond",
+            new NecklaceTrinketItem(new FabricItemSettings().maxCount(1).rarity(EPIC)));
+    public static final Item NECKLACE_EMERALD = registerItem("necklace_emerald",
+            new NecklaceTrinketItem(new FabricItemSettings().maxCount(1).rarity(EPIC)));
+    public static final Item NECKLACE_AMETHYST = registerItem("necklace_amethyst",
+            new NecklaceTrinketItem(new FabricItemSettings().maxCount(1).rarity(EPIC)));
+    public static final Item NECKLACE_RUBY = registerItem("necklace_ruby",
+            new NecklaceTrinketItem(new FabricItemSettings().maxCount(1).rarity(EPIC)));
+    public static final Item NECKLACE_SAPPHIRE = registerItem("necklace_sapphire",
+            new NecklaceTrinketItem(new FabricItemSettings().maxCount(1).rarity(EPIC)));
+    public static final Item NECKLACE_ONYX = registerItem("necklace_onyx",
+            new NecklaceTrinketItem(new FabricItemSettings().maxCount(1).rarity(EPIC)));
+    public static final Item NECKLACE_JADE = registerItem("necklace_jade",
+            new NecklaceTrinketItem(new FabricItemSettings().maxCount(1).rarity(EPIC)));
+    public static final Item NECKLACE_TOPAZ = registerItem("necklace_topaz",
+            new NecklaceTrinketItem(new FabricItemSettings().maxCount(1).rarity(EPIC)));
 
 
     public static final Item TEST_ITEM_BLOCK = Registry.register(Registries.ITEM,

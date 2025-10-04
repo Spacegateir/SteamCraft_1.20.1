@@ -486,6 +486,26 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.JADE, Models.GENERATED);
         itemModelGenerator.register(ModItems.TOPAZ, Models.GENERATED);
 
+        itemModelGenerator.register(ModItems.RING, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RING_DIAMOND, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RING_EMERALD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RING_AMETHYST, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RING_RUBY, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RING_SAPPHIRE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RING_ONYX, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RING_JADE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RING_TOPAZ, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.NECKLACE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.NECKLACE_DIAMOND, Models.GENERATED);
+        itemModelGenerator.register(ModItems.NECKLACE_EMERALD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.NECKLACE_AMETHYST, Models.GENERATED);
+        itemModelGenerator.register(ModItems.NECKLACE_RUBY, Models.GENERATED);
+        itemModelGenerator.register(ModItems.NECKLACE_SAPPHIRE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.NECKLACE_ONYX, Models.GENERATED);
+        itemModelGenerator.register(ModItems.NECKLACE_JADE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.NECKLACE_TOPAZ, Models.GENERATED);
+
 
 
 

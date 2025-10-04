@@ -91,6 +91,26 @@ public class ModItemGroups {
                         entries.add(ModItems.BRACELET_JADE);
                         entries.add(ModItems.BRACELET_TOPAZ);
 
+                        entries.add(ModItems.RING);
+                        entries.add(ModItems.RING_DIAMOND);
+                        entries.add(ModItems.RING_EMERALD);
+                        entries.add(ModItems.RING_AMETHYST);
+                        entries.add(ModItems.RING_RUBY);
+                        entries.add(ModItems.RING_SAPPHIRE);
+                        entries.add(ModItems.RING_ONYX);
+                        entries.add(ModItems.RING_JADE);
+                        entries.add(ModItems.RING_TOPAZ);
+
+                        entries.add(ModItems.NECKLACE);
+                        entries.add(ModItems.NECKLACE_DIAMOND);
+                        entries.add(ModItems.NECKLACE_EMERALD);
+                        entries.add(ModItems.NECKLACE_AMETHYST);
+                        entries.add(ModItems.NECKLACE_RUBY);
+                        entries.add(ModItems.NECKLACE_SAPPHIRE);
+                        entries.add(ModItems.NECKLACE_ONYX);
+                        entries.add(ModItems.NECKLACE_JADE);
+                        entries.add(ModItems.NECKLACE_TOPAZ);
+
                         entries.add(ModItems.SILVER_NUGGET);
                         entries.add(ModItems.FOOLS_GOLD_SCRAP);
                         entries.add(ModItems.RAW_SILVER);

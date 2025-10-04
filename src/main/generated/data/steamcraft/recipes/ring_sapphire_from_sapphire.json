@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "steamcraft:ring"
+    },
+    "G": {
+      "item": "steamcraft:sapphire"
+    }
+  },
+  "pattern": [
+    "G",
+    "#"
+  ],
+  "result": {
+    "item": "steamcraft:ring_sapphire"
+  },
+  "show_notification": true
+}

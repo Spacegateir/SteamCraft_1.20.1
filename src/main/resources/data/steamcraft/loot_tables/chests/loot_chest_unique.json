@@ -7,7 +7,9 @@
         { "type": "item", "name": "steamcraft:athlete_shoes", "weight": 1 },
         { "type": "item", "name": "steamcraft:crown_of_fate", "weight": 1 },
         { "type": "item", "name": "steamcraft:magic_bag", "weight": 1 },
-        { "type": "item", "name": "steamcraft:bracelet", "weight": 1 }
+        { "type": "item", "name": "steamcraft:bracelet", "weight": 1 },
+        { "type": "item", "name": "steamcraft:ring", "weight": 1 },
+        { "type": "item", "name": "steamcraft:necklace", "weight": 1 }
       ]
     }
   ]

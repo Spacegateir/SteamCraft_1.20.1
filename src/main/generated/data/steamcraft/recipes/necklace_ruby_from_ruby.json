@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "steamcraft:necklace"
+    },
+    "G": {
+      "item": "steamcraft:ruby"
+    }
+  },
+  "pattern": [
+    "#",
+    "G"
+  ],
+  "result": {
+    "item": "steamcraft:necklace_ruby"
+  },
+  "show_notification": true
+}

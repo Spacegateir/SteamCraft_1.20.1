@@ -14,7 +14,8 @@
 		"trinkets.PlayerStepMixin",
 		"trinkets.TradeOfferMixin",
 		"trinkets.PlayerMagicBagMixin",
-		"trinkets.ServerPlayerMagicBagCopyMixin"
+		"trinkets.ServerPlayerMagicBagCopyMixin",
+		"trinkets.DamageReduceLivingEntityMixin"
 
 	],
 	"injectors": {

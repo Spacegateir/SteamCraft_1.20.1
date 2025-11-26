@@ -245,6 +245,9 @@ public class ModItems {
     public static final Item CELESTIAL_GEARFORGED_SWORD = registerItem("celestial_gearforged_sword",
             new CelestialGearforgedSwordItem(ModToolMaterials.CELESTIAL_GEARFORGED, 15, -3.0F, new FabricItemSettings().fireproof()));
 
+    public static final Item HAND_DRILL = registerItem("hand_drill",
+            new BedrockBreakerPickaxeItem(ModToolMaterials.HAND_DRILL, 0, 0.0F, new FabricItemSettings().rarity(EPIC)));
+
     public static final Item WINGED_SANDALS = registerItem("winged_sandals",
             new WingedSandalsCosmeticItem(ModArmorMaterials.UNBREAKING, ArmorItem.Type.BOOTS, new FabricItemSettings()));
 

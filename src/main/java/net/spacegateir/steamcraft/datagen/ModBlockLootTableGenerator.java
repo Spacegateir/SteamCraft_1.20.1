@@ -201,11 +201,6 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.ANCIENT_SAND_BLOCK);
         addDrop(ModBlocks.ANCIENT_SILT_BLOCK);
 
-
-
-
-
-
         addDrop(ModBlocks.ANCIENT_LOAM_BLOCK,
                 dropsWithSilkTouch(ModBlocks.ANCIENT_LOAM_BLOCK, ItemEntry.builder(Blocks.DIRT))
         );

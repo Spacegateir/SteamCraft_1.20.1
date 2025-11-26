@@ -139,6 +139,8 @@
   "item.steamcraft.celestial_gearforged_sword": "§6Celestial Gearforged Broad Sword§r",
   "item.steamcraft.celestial_gearforged_shield": "§6Celestial Gearforged Shield§r",
 
+  "item.steamcraft.hand_drill": "Hand Drill",
+
   "item.steamcraft.loot_chest": "Loot Chest",
 
   "item.steamcraft.wolf_fury_loot_chest": "Wolf Fury Loot Chest",
@@ -274,6 +276,7 @@
 
   "block.steamcraft.test_block_item": "Test BlockItem",
 
+  "block.steamcraft.dungeon_wall": "Dungeon Wall",
   "block.steamcraft.smoke_block": "Smoke Block",
   "block.steamcraft.earth_spike_block": "Earth Spike",
   "item.steamcraft.earth_spike_item": "Earth Spike",

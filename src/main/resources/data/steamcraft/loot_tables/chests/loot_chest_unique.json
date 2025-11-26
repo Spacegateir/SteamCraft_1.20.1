@@ -4,6 +4,7 @@
     {
       "rolls": 27,
       "entries": [
+        { "type": "item", "name": "steamcraft:hand_drill", "weight": 1 },
         { "type": "item", "name": "steamcraft:athlete_shoes", "weight": 1 },
         { "type": "item", "name": "steamcraft:crown_of_fate", "weight": 1 },
         { "type": "item", "name": "steamcraft:magic_bag", "weight": 1 },

@@ -10,6 +10,8 @@ import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
 
+    HAND_DRILL(MiningLevels.WOOD, 10, 9.0F, 0.0F, 5, () -> Ingredient.ofItems(Items.IRON_INGOT)),
+
     FOOLS_GOLD(MiningLevels.NETHERITE, 2531, 9.0F, 4.0F, 30, () -> Ingredient.ofItems(ModItems.FOOLS_GOLD_INGOT)),
 
     CELESTIAL_GEARFORGED(5, -1, 12.0F, 4.0F, 1000, () -> Ingredient.ofItems(ModItems.DIVINITITE_ALLOY_INGOT));

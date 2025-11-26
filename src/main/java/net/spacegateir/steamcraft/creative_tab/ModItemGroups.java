@@ -28,6 +28,8 @@ public class ModItemGroups {
                         //Items
 //                        entries.add(ModItems.TEST_ITEM);
 
+                        entries.add(ModBlocks.DUNGEON_WALL);
+
 //                        entries.add(ModItems.COPPER_COIN);
 //                        entries.add(ModItems.SILVER_COIN);
 //                        entries.add(ModItems.GOLD_COIN);
@@ -39,6 +41,7 @@ public class ModItemGroups {
                         entries.add(ModItems.TROWEL);
                         entries.add(ModItems.PATTERN_RECOMPILER);
                         entries.add(ModItems.TRAP_CONCEALER);
+                        entries.add(ModItems.HAND_DRILL);
                         entries.add(ModItems.MORTAR_AND_PESTLE);
                         entries.add(ModItems.CORE_OF_CHANGING);
 

@@ -53,11 +53,17 @@ public class ToDo {
         // quiver (gives user reduce bow draw time and knock back)
         // anklet (something that dose damage similar to thorns)
 
+        // Compass Item that teleports you back to your spawn within a 1000 block range (also points to your spawn point)
+        // Rocket boots that allow you to hold jump to gain height for 2 seconds
+
+
     // loot chests (unique) has (trinkets and artifacts "god sword")
 
     // water log the mineral deposits
 
     // make a bedrock block that looks nice for the dungeon walls
+
+    // effect that makes people around you in a radius glow if they have the invisible effect
 
     // a block you can place items on for display similar to a table cloth if possible make it have different textures when it connects to itself
     // clay turntable block machine so players can craft like the sawmill, but it has a craft timer like a furnace (clay to decoration blocks)

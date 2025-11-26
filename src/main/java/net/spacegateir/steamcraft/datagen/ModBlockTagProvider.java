@@ -727,6 +727,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         Blocks.BUDDING_AMETHYST,
                         Blocks.SPAWNER,
                         Blocks.REINFORCED_DEEPSLATE,
+                        Blocks.BEDROCK,
+                        ModBlocks.DUNGEON_WALL,
 
                         ModBlocks.FOOLS_GOLD_BLOCK,
                         ModBlocks.FOOLS_GOLD_RAW_BLOCK,

@@ -30,7 +30,8 @@ import java.util.EnumMap;
 import java.util.function.Function;
 
 
-public class ModBlocks {
+public class
+ModBlocks {
 
     public static final EnumMap<DyeColor, Block> COLOR_TO_LAVA_CAULDRON = new EnumMap<>(DyeColor.class);
     public static final EnumMap<DyeColor, Block> COLOR_TO_WATER_CAULDRON = new EnumMap<>(DyeColor.class);
@@ -1485,6 +1486,9 @@ public class ModBlocks {
             new EarthWallBlock(FabricBlockSettings.copyOf(Blocks.BEDROCK)
                     .nonOpaque().solid().noCollision().pistonBehavior(PistonBehavior.BLOCK).strength(-1.0F, -1.0F)
                     .dropsNothing().allowsSpawning(Blocks::never)));
+
+    public static final Block DUNGEON_WALL = registerBlock("dungeon_wall",
+            new Block(FabricBlockSettings.copyOf(Blocks.BEDROCK)));
 
     public static final Block MINERAL_DEPOSIT_ACTIVE_BLOCK = Registry.register(Registries.BLOCK,
             new Identifier(Steamcraft.MOD_ID, "mineral_deposit_active_block"),
